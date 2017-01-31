@@ -1,6 +1,6 @@
 # Juhta.NET
 
-Content under construction.
+**(This content under construction.)**
 
 Juhta.NET is an open source, general purpose app framework built on the top of .NET Core.
 
