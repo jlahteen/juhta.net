@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <DocumentationFile>..\..\Docs\Juhta.Net.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Juha Lähteenmäki</Authors>
+    <Description>This library contains the core types, classes and interfaces of Juhta.NET.</Description>
+    <Copyright>Juha Lähteenmäki</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/license.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jlahteen/juhta.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jlahteen/juhta.net</RepositoryUrl>
+    <Company />
+    <ProductName>Juhta.NET</ProductName>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="1.6" />
+  </ItemGroup>
+</Project>

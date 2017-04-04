@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+
+  This source code may be used, modified and distributed under the terms of
+  the MIT license. Please refer to the LICENSE.txt file for details.
+-->
+
+<xs:schema
+  elementFormDefault="qualified"
+  targetNamespace="http://schemas.juhta.net/root-2017-03-23.xsd"
+  xmlns="http://schemas.juhta.net/root-2017-03-23.xsd"
+  xmlns:common="http://schemas.juhta.net/common-2017-03-23.xsd"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xsd:import
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    namespace="http://schemas.juhta.net/common-2017-03-23.xsd"/>
+  
+  <!-- Define the root element -->
+  <xs:element name="Juhta.Net" type="Juhta.NetType"/>
+  
+  <!-- Define Juhta.NetType -->
+  <xs:complexType name="Juhta.NetType">
+    <xs:sequence>
+      <xs:element name="libraryManager" type="libraryManagerType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define libraryManagerType -->
+  <xs:complexType name="libraryManagerType">
+    <xs:sequence>
+      <xs:element name="libraries" type="librariesType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define librariesType -->
+  <xs:complexType name="librariesType">
+    <xs:sequence>
+      <xs:element name="library" type="libraryType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define libraryType -->
+  <xs:complexType name="libraryType">
+    <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
+    <xs:attribute name="libraryHandleClass" type="common:classNameType" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>
