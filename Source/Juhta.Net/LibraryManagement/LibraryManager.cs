@@ -221,7 +221,7 @@ namespace Juhta.Net.LibraryManagement
                 if (closableLibrary == null)
                     return;
 
-                else if (!closableLibrary.Close())
+                else if (!closableLibrary.CloseLibrary())
                     Logger.LogWarning(LibraryMessages.Warning017, libraryHandle.LibraryFileName);
             }
 
@@ -282,7 +282,7 @@ namespace Juhta.Net.LibraryManagement
                             config = LoadAndValidateConfigFile(configurableLibrary, configFilePath);
 
                             // Initialize the library
-                            configurableLibrary.Initialize(config);
+                            configurableLibrary.InitializeLibrary(config);
                         }
 
                         else if (requiresConfigFile)
@@ -291,7 +291,7 @@ namespace Juhta.Net.LibraryManagement
 
                         else
                             // There is no configuration file but the library is also initializable, initialize it
-                            ((IInitializableLibrary)libraryHandle).Initialize();
+                            ((IInitializableLibrary)libraryHandle).InitializeLibrary();
 
                         // Add the library to the list of dynamically configurable libraries if necessary
                         if (libraryHandle is IDynamicallyConfigurableLibrary)
@@ -303,7 +303,7 @@ namespace Juhta.Net.LibraryManagement
                     }
                     else
                         // The library is only initializable, initialize it
-                        ((IInitializableLibrary)libraryHandle).Initialize();
+                        ((IInitializableLibrary)libraryHandle).InitializeLibrary();
                 }
             }
 

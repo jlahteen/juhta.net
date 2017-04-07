@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using System;
 using System.Xml;
 
@@ -68,14 +69,12 @@ namespace Juhta.Net.Extensions
         /// <param name="childName">Specifies a name for the child node.</param>
         /// <param name="childInnerText">Specifies an inner text for the child node. Can be null.</param>
         /// <param name="attributeNames">A string array specifying names for the attributes to be added to the child
-        /// node.</param>
+        /// node. Can be null.</param>
         /// <param name="attributeValues">A string array specifying values for the attributes to be added to the child
-        /// node.</param>
+        /// node. This parameter will be ignored if <paramref name="attributeNames"/> is null.</param>
         /// <returns>Returns the appended child node.</returns>
-        /// <remarks>
-        /// The lengths of <paramref name="attrNames"/> and <paramref name="attrValues"/> must match. The array
-        /// attrNames can be null in which case the array attrValues will also be ignored.
-        /// </remarks>
+        /// <remarks>The lengths of the arrays <paramref name="attributeNames"/> and <paramref name="attributeValues"/>
+        /// must match.</remarks>
         public static XmlNode AppendChild(this XmlNode node, string childName, string childInnerText, string[] attributeNames, string[] attributeValues)
         {
             XmlNode child;
@@ -88,6 +87,13 @@ namespace Juhta.Net.Extensions
                 child.InnerText = childInnerText;
 
             if (attributeNames != null)
+            {
+                if (attributeValues == null)
+                    throw new ArgumentNullException(CommonMessages.Error001.FormatMessage("attributeValues"));
+
+                else if (attributeNames.Length != attributeValues.Length)
+                    throw new ArgumentException(CommonMessages.Error013.FormatMessage("attributeNames", "attributeValues"));
+
                 for (i = 0; i < attributeNames.Length; i++)
                 {
                     attribute = node.OwnerDocument.CreateAttribute(attributeNames[i]);
@@ -95,6 +101,7 @@ namespace Juhta.Net.Extensions
 
                     child.Attributes.Append(attribute);
                 }
+            }
 
             node.AppendChild(child);
 

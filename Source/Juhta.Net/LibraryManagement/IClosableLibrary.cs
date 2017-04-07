@@ -30,7 +30,7 @@ namespace Juhta.Net.LibraryManagement
         /// <para>This method will be called even if the initialization process of the library has failed. This means
         /// that the method should prepare for such situation where the library is only partly initialized.</para>
         /// </remarks>
-        bool Close();
+        bool CloseLibrary();
 
         #endregion
     }

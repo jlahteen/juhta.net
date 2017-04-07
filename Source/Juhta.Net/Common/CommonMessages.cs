@@ -80,6 +80,11 @@ namespace Juhta.Net.Common
         /// </summary>
         public static readonly ErrorMessage Error012 = MessageFactory.CreateErrorMessage("Static method '{0}' of the class '{1}' cannot be executed because the current state of the class doesn't allow it.");
 
+        /// <summary>
+        /// The lenghts of the arrays '{0}' and '{1}' do not match.
+        /// </summary>
+        public static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("The lenghts of the arrays '{0}' and '{1}' do not match.");
+
         #endregion
 
         #region Private Properties

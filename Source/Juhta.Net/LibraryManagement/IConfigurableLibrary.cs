@@ -32,7 +32,7 @@ namespace Juhta.Net.LibraryManagement
         /// Initializes the library based on a specified configuration.
         /// </summary>
         /// <param name="config">Specifies an XmlDocument object containing a configuration for the library.</param>
-        void Initialize(XmlDocument config);
+        void InitializeLibrary(XmlDocument config);
 
         #endregion
 

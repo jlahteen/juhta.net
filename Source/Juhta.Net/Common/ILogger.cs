@@ -10,6 +10,9 @@ using System;
 
 namespace Juhta.Net.Common
 {
+    /// <summary>
+    /// Defines an interface for the loggers to be used with the framework.
+    /// </summary>
     public interface ILogger
     {
         #region Methods

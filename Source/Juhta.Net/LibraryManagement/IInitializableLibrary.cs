@@ -19,10 +19,10 @@ namespace Juhta.Net.LibraryManagement
         #region Methods
 
         /// <summary>
-        /// Initializes this library, that is, performs required startup operations to make library services properly
+        /// Initializes the library, that is, performs required startup operations to make library services properly
         /// available.
         /// </summary>
-        void Initialize();
+        void InitializeLibrary();
 
         #endregion
     }
