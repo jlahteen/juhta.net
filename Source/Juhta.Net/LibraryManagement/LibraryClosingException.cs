@@ -11,7 +11,7 @@ using System;
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// This exception will be thrown when an error occurs in a closing of a library instance.
+    /// This exception will be thrown when an error occurs in closing of a library.
     /// </summary>
     public class LibraryClosingException : Exception
     {

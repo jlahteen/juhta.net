@@ -11,7 +11,7 @@ using System;
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// This exception will be thrown when an error occurs in an initialization of a library instance.
+    /// This exception will be thrown when an error occurs in initialization of a library.
     /// </summary>
     public class LibraryInitializationException : Exception
     {
