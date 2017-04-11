@@ -799,6 +799,152 @@
             format items.</param>
             <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
         </member>
+        <member name="T:Juhta.Net.Common.FileLogger">
+            <summary>
+            Defines a logger class that writes log events to a file.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. The path can be relative or absolute. Can be null in
+            which case the default log file path will be used.</param>
+            <remarks>
+            <para>The default log file will be written to the current user's temp folder with the process name.</para>
+            <para>If the log file already exists, new rows will be appended to the end of the file.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(Juhta.Net.Common.AlertMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(Juhta.Net.Common.InformationMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(Juhta.Net.Common.WarningMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.c_logTitleFormat">
+            <summary>
+            Defines the log title format.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.c_tabSize">
+            <summary>
+            Defines the tab size for the log event messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.m_logFilePath">
+            <summary>
+            Specifies the log file path. The path can be relative or absolute.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.m_logTitle">
+            <summary>
+            Specifies the log title. The value null means that the title has been written to the log.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.m_processId">
+            <summary>
+            Specifies the ID of the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.FileLogger.m_processName">
+            <summary>
+            Specifies the name of the process.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Common.ILogger">
             <summary>
             Defines an interface for the loggers to be used with the framework.
