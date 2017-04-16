@@ -67,19 +67,36 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Initializes the framework based on the configuration in the current directory.
+        /// Initializes the framework.
         /// </summary>
+        /// <remarks>Log events will be written to the current user's temp directory and the configuration files are
+        /// assumed to locate in the binary directory.</remarks>
         public static void InitializeFramework()
         {
-            InitializeFramework(null);
+            InitializeFramework(null, null);
         }
 
         /// <summary>
-        /// Initializes the framework based on the configuration in a specified directory.
+        /// Initializes the framework.
         /// </summary>
-        /// <param name="configDirectory">Specifies a directory for configuration files. Can be null in which case the
-        /// current directory will be used as the configuration directory.</param>
-        public static void InitializeFramework(string configDirectory)
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies somehow an invalid log file.</param>
+        /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        public static void InitializeFramework(string logFilePath)
+        {
+            InitializeFramework(logFilePath, null);
+        }
+
+        /// <summary>
+        /// Initializes the framework.
+        /// </summary>
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies somehow an invalid log file.</param>
+        /// <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
+        /// which case the configuration files are assumed to locate in the binary directory.</param>
+        public static void InitializeFramework(string logFilePath, string configDirectory)
         {
             XmlDocument config;
             XmlNamespaceManager namespaceManager;
@@ -90,12 +107,15 @@ namespace Juhta.Net
 
             try
             {
+                // Create a logger instance
+                Logger.SetLogger(new FileLogger(logFilePath));
+
                 // Set the binary directory
                 s_binDirectory = Assembly.GetExecutingAssembly().GetDirectory();
 
-                // Use the current directory as the configuration directory if necessary
+                // Use the binary directory as the configuration directory if necessary
                 if (String.IsNullOrEmpty(configDirectory))
-                    configDirectory = Environment.CurrentDirectory;
+                    configDirectory = s_binDirectory;
 
                 // Set the configuration directory
 

@@ -21,9 +21,6 @@ namespace Juhta.Net.Common
     /// </summary>
     public class FileLogger : ILogger
     {
-        #region Static Constructor
-        #endregion
-
         #region Public Constructors
 
         /// <summary>
@@ -35,7 +32,8 @@ namespace Juhta.Net.Common
         /// Initializes a new instance.
         /// </summary>
         /// <param name="logFilePath">Specifies a log file path. The path can be relative or absolute. Can be null in
-        /// which case the default log file path will be used.</param>
+        /// which case the default log file path will be used. The default value will also be used if
+        /// <paramref name="logFilePath"/> specifies somehow an invalid log file path.</param>
         /// <remarks>
         /// <para>The default log file will be written to the current user's temp folder with the process name.</para>
         /// <para>If the log file already exists, new rows will be appended to the end of the file.</para>
@@ -53,7 +51,7 @@ namespace Juhta.Net.Common
             m_logTitle = String.Format(c_logTitleFormat, m_processName, m_processId);
 
             if (m_logFilePath == null)
-                m_logFilePath = Path.GetTempPath() + m_processName + ".log";
+                m_logFilePath = GetDefaultLogFilePath();
         }
 
         #endregion
@@ -215,94 +213,83 @@ namespace Juhta.Net.Common
         #endregion
 
         #region Public Properties
-        #endregion
 
-        #region Public Indexers
-        #endregion
+        /// <summary>
+        /// See <see cref="ILogger.IsThreadSafe"/>.
+        /// </summary>
+        /// <remarks>This logger is not thread-safe, we let the static <see cref="Logger"/> class to take care of the
+        /// synchronization.</remarks>
+        public bool IsThreadSafe
+        {
+            get {return(false);}
+        }
 
-        #region Public Events
-        #endregion
-
-        #region Public Exception Classes
-        #endregion
-
-        #region Public Types
-        #endregion
-
-        #region Public Constants
-        #endregion
-
-        #region Protected Constructors
-        #endregion
-
-        #region Protected Methods
-        #endregion
-
-        #region Protected Properties
-        #endregion
-
-        #region Protected Indexers
-        #endregion
-
-        #region Protected Events
-        #endregion
-
-        #region Protected Exception Classes
-        #endregion
-
-        #region Protected Types
-        #endregion
-
-        #region Protected Constants
-        #endregion
-
-        #region Protected Fields
-        #endregion
-
-        #region Internal Constructors
-        #endregion
-
-        #region Internal Methods
-        #endregion
-
-        #region Internal Properties
-        #endregion
-
-        #region Internal Indexers
-        #endregion
-
-        #region Internal Events
-        #endregion
-
-        #region Internal Exception Classes
-        #endregion
-
-        #region Internal Types
-        #endregion
-
-        #region Internal Constants
-        #endregion
-
-        #region Private Constructors
         #endregion
 
         #region Private Methods
 
-        private void WriteLogEvent(DiagnosticMessageType messageType, string messageId, string messageFormat, params object[] args)
+        /// <summary>
+        /// Writes the title to the log file if such has not yet been written.
+        /// </summary>
+        /// <remarks>This method will also change the log file to its default value if the title cannot be written to
+        /// the original log file.</remarks>
+        private void EnsureLogTitle()
         {
-            Utf8FileWriter logFile = new Utf8FileWriter(m_logFilePath, FileMode.Append);
-            StringBuilder logEventInfo = new StringBuilder();
-            string message;
+            // Return if the title has already been written to the log file
+            if (m_logTitle == null)
+                return;
 
             try
             {
-                if (m_logTitle != null)
-                {
-                    logFile.WriteLine();
+                WriteLogTitle();
 
-                    logFile.WriteLine(m_logTitle);
-                }
+                m_logTitle = null;
 
+                return;
+            }
+
+            catch
+            {
+                // It seems that we have some trouble with the original log file
+                // Change the log file to its default value
+                m_logFilePath = GetDefaultLogFilePath();
+            }
+
+            WriteLogTitle();
+
+            m_logTitle = null;
+        }
+
+        /// <summary>
+        /// Gets the default log file path.
+        /// </summary>
+        /// <returns>Returns the default log file path.</returns>
+        private string GetDefaultLogFilePath()
+        {
+            return(Path.GetTempPath() + m_processName + ".log");
+        }
+
+        /// <summary>
+        /// Writes a log event to the underlying log file.
+        /// </summary>
+        /// <param name="messageType">Specifies a message type.</param>
+        /// <param name="messageId">Specifies a message ID.</param>
+        /// <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
+        /// <param name="args">Specifies an array of format objects corresponding the format items in
+        /// <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
+        private void WriteLogEvent(DiagnosticMessageType messageType, string messageId, string messageFormat, params object[] args)
+        {
+            Utf8FileWriter logFile = null;
+            StringBuilder logEventInfo = new StringBuilder();
+            string message;
+
+            // Make sure that the title will be written to the log file
+            EnsureLogTitle();
+
+            logFile = new Utf8FileWriter(m_logFilePath, FileMode.Append);
+
+            try
+            {
                 if (messageType == DiagnosticMessageType.Alert)
                     logEventInfo.Append("!");
 
@@ -320,7 +307,7 @@ namespace Juhta.Net.Common
                 if (messageId != null)
                     logEventInfo.AppendFormat("'{0}' ", messageId);
 
-                logEventInfo.AppendFormat("in {0} ({1}.{2}:", m_processName, m_processId, Thread.CurrentThread.ManagedThreadId);
+                logEventInfo.AppendFormat("in {0} ({1}.{2}):", m_processName, m_processId, Thread.CurrentThread.ManagedThreadId);
 
                 logFile.WriteLine();
 
@@ -342,21 +329,26 @@ namespace Juhta.Net.Common
             }
         }
 
-        #endregion
+        /// <summary>
+        /// Writes the title to the underlying log file.
+        /// </summary>
+        private void WriteLogTitle()
+        {
+            Utf8FileWriter logFile = new Utf8FileWriter(m_logFilePath, FileMode.Append);
 
-        #region Private Properties
-        #endregion
+            try
+            {
+                logFile.WriteLine();
 
-        #region Private Indexers
-        #endregion
+                logFile.WriteLine(m_logTitle);
+            }
 
-        #region Private Events
-        #endregion
+            finally
+            {
+                logFile.Close();
+            }
+        }
 
-        #region Private Exception Classes
-        #endregion
-
-        #region Private Types
         #endregion
 
         #region Private Constants
@@ -367,7 +359,7 @@ namespace Juhta.Net.Common
         private const string c_logTitleFormat = "* PROCESS LOG {0} ({1}) *";
 
         /// <summary>
-        /// Defines the tab size for the log event messages.
+        /// Defines the tab size for the log event message lines.
         /// </summary>
         private const int c_tabSize = 2;
 
@@ -381,7 +373,7 @@ namespace Juhta.Net.Common
         private string m_logFilePath;
 
         /// <summary>
-        /// Specifies the log title. The value null means that the title has been written to the log.
+        /// Specifies the log title. The value null means that the title has been written to the log file.
         /// </summary>
         private string m_logTitle;
 
@@ -396,9 +388,5 @@ namespace Juhta.Net.Common
         private string m_processName;
 
         #endregion
-
-        public bool IsThreadSafe => throw new NotImplementedException();
-
-
     }
 }

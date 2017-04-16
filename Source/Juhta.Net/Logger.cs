@@ -15,8 +15,12 @@ namespace Juhta.Net
     /// Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="ILogger"/>
     /// instance.
     /// </summary>
-    /// <remarks>This class is also capable to serialize concurrent access to non-thread-safe <see cref="ILogger"/>
-    /// instances. In other words, this class is thread-safe excluding the <see cref="SetLogger(ILogger)"/> method.</remarks>
+    /// <remarks>
+    /// <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="ILogger"/>
+    /// instances. In other words, this class is thread-safe excluding the <see cref="SetLogger(ILogger)"/> method.</para>
+    /// <para>All exceptions thrown by the underlying <see cref="ILogger"/> instance will be caught without handling,
+    /// so no exceptions will be thrown by the class.</para>
+    /// </remarks>
     public static class Logger
     {
         #region Static Constructor
@@ -38,17 +42,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogAlert(AlertMessage message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogAlert(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogAlert(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogAlert(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -57,17 +66,22 @@ namespace Juhta.Net
         /// <param name="message"></param>
         public static void LogAlert(string message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogAlert(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogAlert(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogAlert(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -75,17 +89,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogAlert(AlertMessage message, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogAlert(message, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogAlert(message, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogAlert(message, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -93,17 +112,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogAlert(string messageFormat, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogAlert(messageFormat, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogAlert(messageFormat, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogAlert(messageFormat, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -111,17 +135,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogError(ErrorMessage message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogError(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogError(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogError(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -129,17 +158,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogError(Exception exception)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogError(exception);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogError(exception);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogError(exception);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -147,17 +181,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogError(string message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogError(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogError(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogError(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -165,17 +204,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogError(ErrorMessage message, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogError(message, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogError(message, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogError(message, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -183,17 +227,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogError(string messageFormat, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogError(messageFormat, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogError(messageFormat, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogError(messageFormat, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -201,17 +250,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogEvent(DiagnosticMessage message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogEvent(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogEvent(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogEvent(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -219,17 +273,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogEvent(DiagnosticMessage message, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogEvent(message, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogEvent(message, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogEvent(message, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -237,17 +296,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogInformation(InformationMessage message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogInformation(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogInformation(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogInformation(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -255,17 +319,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogInformation(string message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogInformation(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogInformation(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogInformation(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -273,17 +342,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogInformation(InformationMessage message, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogInformation(message, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogInformation(message, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogInformation(message, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -291,17 +365,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogInformation(string messageFormat, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogInformation(messageFormat, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogInformation(messageFormat, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogInformation(messageFormat, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -309,17 +388,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogWarning(string message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogWarning(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogWarning(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogWarning(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -327,17 +411,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogWarning(WarningMessage message)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogWarning(message);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogWarning(message);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogWarning(message);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -345,17 +434,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogWarning(string messageFormat, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogWarning(messageFormat, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogWarning(messageFormat, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogWarning(messageFormat, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>
@@ -363,17 +457,22 @@ namespace Juhta.Net
         /// </summary>
         public static void LogWarning(WarningMessage message, params object[] args)
         {
-            if (s_logger == null)
-                return;
+            try
+            {
+                if (s_logger == null)
+                    return;
 
-            else if (s_logger.IsThreadSafe)
-                s_logger.LogWarning(message, args);
-
-            else
-                lock(s_syncLock)
-                {
+                else if (s_logger.IsThreadSafe)
                     s_logger.LogWarning(message, args);
-                }
+
+                else
+                    lock (s_syncLock)
+                    {
+                        s_logger.LogWarning(message, args);
+                    }
+            }
+
+            catch {}
         }
 
         /// <summary>

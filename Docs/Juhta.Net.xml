@@ -814,7 +814,8 @@
             Initializes a new instance.
             </summary>
             <param name="logFilePath">Specifies a log file path. The path can be relative or absolute. Can be null in
-            which case the default log file path will be used.</param>
+            which case the default log file path will be used. The default value will also be used if
+            <paramref name="logFilePath"/> specifies somehow an invalid log file path.</param>
             <remarks>
             <para>The default log file will be written to the current user's temp folder with the process name.</para>
             <para>If the log file already exists, new rows will be appended to the end of the file.</para>
@@ -915,6 +916,41 @@
             See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])"/>.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Common.FileLogger.IsThreadSafe">
+            <summary>
+            See <see cref="P:Juhta.Net.Common.ILogger.IsThreadSafe"/>.
+            </summary>
+            <remarks>This logger is not thread-safe, we let the static <see cref="T:Juhta.Net.Logger"/> class to take care of the
+            synchronization.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.EnsureLogTitle">
+            <summary>
+            Writes the title to the log file if such has not yet been written.
+            </summary>
+            <remarks>This method will also change the log file to its default value if the title cannot be written to
+            the original log file.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.GetDefaultLogFilePath">
+            <summary>
+            Gets the default log file path.
+            </summary>
+            <returns>Returns the default log file path.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.String,System.String,System.Object[])">
+            <summary>
+            Writes a log event to the underlying log file.
+            </summary>
+            <param name="messageType">Specifies a message type.</param>
+            <param name="messageId">Specifies a message ID.</param>
+            <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
+            <param name="args">Specifies an array of format objects corresponding the format items in
+            <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.WriteLogTitle">
+            <summary>
+            Writes the title to the underlying log file.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Common.FileLogger.c_logTitleFormat">
             <summary>
             Defines the log title format.
@@ -922,7 +958,7 @@
         </member>
         <member name="F:Juhta.Net.Common.FileLogger.c_tabSize">
             <summary>
-            Defines the tab size for the log event messages.
+            Defines the tab size for the log event message lines.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.FileLogger.m_logFilePath">
@@ -932,7 +968,7 @@
         </member>
         <member name="F:Juhta.Net.Common.FileLogger.m_logTitle">
             <summary>
-            Specifies the log title. The value null means that the title has been written to the log.
+            Specifies the log title. The value null means that the title has been written to the log file.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.FileLogger.m_processId">
@@ -3207,8 +3243,12 @@
             Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
             instance.
             </summary>
-            <remarks>This class is also capable to serialize concurrent access to non-thread-safe <see cref="T:Juhta.Net.Common.ILogger"/>
-            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)"/> method.</remarks>
+            <remarks>
+            <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="T:Juhta.Net.Common.ILogger"/>
+            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)"/> method.</para>
+            <para>All exceptions thrown by the underlying <see cref="T:Juhta.Net.Common.ILogger"/> instance will be caught without handling,
+            so no exceptions will be thrown by the class.</para>
+            </remarks>
         </member>
         <member name="M:Juhta.Net.Logger.#cctor">
             <summary>
@@ -3339,15 +3379,29 @@
         </member>
         <member name="M:Juhta.Net.Startup.InitializeFramework">
             <summary>
-            Initializes the framework based on the configuration in the current directory.
+            Initializes the framework.
             </summary>
+            <remarks>Log events will be written to the current user's temp directory and the configuration files are
+            assumed to locate in the binary directory.</remarks>
         </member>
         <member name="M:Juhta.Net.Startup.InitializeFramework(System.String)">
             <summary>
-            Initializes the framework based on the configuration in a specified directory.
+            Initializes the framework.
             </summary>
-            <param name="configDirectory">Specifies a directory for configuration files. Can be null in which case the
-            current directory will be used as the configuration directory.</param>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies somehow an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.InitializeFramework(System.String,System.String)">
+            <summary>
+            Initializes the framework.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies somehow an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
+            which case the configuration files are assumed to locate in the binary directory.</param>
         </member>
         <member name="P:Juhta.Net.Startup.BinDirectory">
             <summary>
