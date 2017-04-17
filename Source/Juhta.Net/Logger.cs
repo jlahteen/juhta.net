@@ -51,7 +51,7 @@ namespace Juhta.Net
                     s_logger.LogAlert(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogAlert(message);
                     }
@@ -75,7 +75,7 @@ namespace Juhta.Net
                     s_logger.LogAlert(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogAlert(message);
                     }
@@ -98,7 +98,7 @@ namespace Juhta.Net
                     s_logger.LogAlert(message, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogAlert(message, args);
                     }
@@ -121,7 +121,7 @@ namespace Juhta.Net
                     s_logger.LogAlert(messageFormat, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogAlert(messageFormat, args);
                     }
@@ -144,7 +144,7 @@ namespace Juhta.Net
                     s_logger.LogError(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogError(message);
                     }
@@ -167,7 +167,7 @@ namespace Juhta.Net
                     s_logger.LogError(exception);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogError(exception);
                     }
@@ -190,7 +190,7 @@ namespace Juhta.Net
                     s_logger.LogError(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogError(message);
                     }
@@ -213,7 +213,7 @@ namespace Juhta.Net
                     s_logger.LogError(message, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogError(message, args);
                     }
@@ -236,7 +236,7 @@ namespace Juhta.Net
                     s_logger.LogError(messageFormat, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogError(messageFormat, args);
                     }
@@ -259,7 +259,7 @@ namespace Juhta.Net
                     s_logger.LogEvent(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogEvent(message);
                     }
@@ -282,7 +282,7 @@ namespace Juhta.Net
                     s_logger.LogEvent(message, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogEvent(message, args);
                     }
@@ -305,7 +305,7 @@ namespace Juhta.Net
                     s_logger.LogInformation(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogInformation(message);
                     }
@@ -328,7 +328,7 @@ namespace Juhta.Net
                     s_logger.LogInformation(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogInformation(message);
                     }
@@ -351,7 +351,7 @@ namespace Juhta.Net
                     s_logger.LogInformation(message, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogInformation(message, args);
                     }
@@ -374,7 +374,7 @@ namespace Juhta.Net
                     s_logger.LogInformation(messageFormat, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogInformation(messageFormat, args);
                     }
@@ -397,7 +397,7 @@ namespace Juhta.Net
                     s_logger.LogWarning(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogWarning(message);
                     }
@@ -420,7 +420,7 @@ namespace Juhta.Net
                     s_logger.LogWarning(message);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogWarning(message);
                     }
@@ -443,7 +443,7 @@ namespace Juhta.Net
                     s_logger.LogWarning(messageFormat, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogWarning(messageFormat, args);
                     }
@@ -466,7 +466,7 @@ namespace Juhta.Net
                     s_logger.LogWarning(message, args);
 
                 else
-                    lock (s_syncLock)
+                    lock(s_syncLock)
                     {
                         s_logger.LogWarning(message, args);
                     }
@@ -494,7 +494,7 @@ namespace Juhta.Net
         private static ILogger s_logger;
 
         /// <summary>
-        /// Specifies a synchronization object to serialize access to non-thread-safe logger instances.
+        /// Specifies a synchronization object for serializing access to non-thread-safe logger instances.
         /// </summary>
         private static object s_syncLock;
 

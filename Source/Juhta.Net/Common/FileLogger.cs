@@ -317,7 +317,10 @@ namespace Juhta.Net.Common
 
                 logFile.IndentLevel = 1;
 
-                message = String.Format(messageFormat, args);
+                if (args != null)
+                    message = String.Format(messageFormat, args);
+                else
+                    message = messageFormat;
 
                 foreach (string line in Regex.Split(message, "\r\n|\r|\n"))
                     logFile.WriteLine(line);

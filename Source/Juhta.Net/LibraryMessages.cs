@@ -16,6 +16,15 @@ namespace Juhta.Net
     /// </summary>
     internal static class LibraryMessages
     {
+        #region Private Properties
+
+        /// <summary>
+        /// Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+        /// </summary>
+        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.RootLibraryMessages, typeof(LibraryMessages).Namespace);
+
+        #endregion
+
         #region Internal Properties
 
         /// <summary>
@@ -320,15 +329,6 @@ namespace Juhta.Net
         /// Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
         /// </summary>
         internal static readonly ErrorMessage Error055 = MessageFactory.CreateErrorMessage("Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.");
-
-        #endregion
-
-        #region Private Properties
-
-        /// <summary>
-        /// Gets the DiagnosticMessageFactory instance for creating root level messages.
-        /// </summary>
-        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.RootLibraryMessages, typeof(LibraryMessages).Namespace);
 
         #endregion
     }

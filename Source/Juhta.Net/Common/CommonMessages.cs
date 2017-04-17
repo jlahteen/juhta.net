@@ -15,6 +15,15 @@ namespace Juhta.Net.Common
     /// </summary>
     public static class CommonMessages
     {
+        #region Private Properties
+
+        /// <summary>
+        /// Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+        /// </summary>
+        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.CommonMessages, typeof(CommonMessages).Namespace);
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -84,15 +93,6 @@ namespace Juhta.Net.Common
         /// The lenghts of the arrays '{0}' and '{1}' do not match.
         /// </summary>
         public static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("The lenghts of the arrays '{0}' and '{1}' do not match.");
-
-        #endregion
-
-        #region Private Properties
-
-        /// <summary>
-        /// Gets the DiagnosticMessageFactory instance for creating diagnotics messages.
-        /// </summary>
-        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.CommonMessages, typeof(CommonMessages).Namespace);
 
         #endregion
     }

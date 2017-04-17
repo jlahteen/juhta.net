@@ -359,6 +359,11 @@
             A static class that defines the common diagnostic messages.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.MessageFactory">
+            <summary>
+            Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error001">
             <summary>
             Value of the parameter '{0}' cannot be null.
@@ -425,11 +430,6 @@
         <member name="F:Juhta.Net.Common.CommonMessages.Error013">
             <summary>
             The lenghts of the arrays '{0}' and '{1}' do not match.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.CommonMessages.MessageFactory">
-            <summary>
-            Gets the DiagnosticMessageFactory instance for creating diagnotics messages.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.ConfigException">
@@ -2930,6 +2930,11 @@
             A static class that defines the diagnostic messages for this library.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryMessages.MessageFactory">
+            <summary>
+            Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.LibraryMessages.Error001">
             <summary>
             Library '{0}' requires a configuration file '{1}' but there is no such file in the configuration directory
@@ -3233,11 +3238,6 @@
             Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryMessages.MessageFactory">
-            <summary>
-            Gets the DiagnosticMessageFactory instance for creating root level messages.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Logger">
             <summary>
             Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
@@ -3364,7 +3364,7 @@
         </member>
         <member name="F:Juhta.Net.Logger.s_syncLock">
             <summary>
-            Specifies a synchronization object to serialize access to non-thread-safe logger instances.
+            Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
         <member name="T:Juhta.Net.Startup">
