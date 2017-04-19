@@ -24,21 +24,21 @@
   <!-- Define Juhta.NetType -->
   <xs:complexType name="Juhta.NetType">
     <xs:sequence>
-      <xs:element name="libraryManager" type="libraryManagerType"/>
-    </xs:sequence>
-  </xs:complexType>
-  
-  <!-- Define libraryManagerType -->
-  <xs:complexType name="libraryManagerType">
-    <xs:sequence>
-      <xs:element name="libraries" type="librariesType"/>
+      <xs:element name="startup" type="startupType"/>
     </xs:sequence>
   </xs:complexType>
   
   <!-- Define librariesType -->
   <xs:complexType name="librariesType">
     <xs:sequence>
-      <xs:element name="library" type="libraryType" maxOccurs="unbounded"/>
+      <xs:element name="library" type="libraryType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define startupType -->
+  <xs:complexType name="startupType">
+    <xs:sequence>
+      <xs:element name="libraries" type="librariesType"/>
     </xs:sequence>
   </xs:complexType>
   

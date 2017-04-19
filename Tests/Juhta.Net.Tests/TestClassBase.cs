@@ -35,6 +35,18 @@ namespace Tests
                     Assert.AreEqual<string>(expectedLines[i], actualLines[i]);
         }
 
+        protected static void DeleteConfigFiles(string configDirectory)
+        {
+            foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
+                File.Delete(configFile);
+        }
+
+        protected static void DeleteLogFiles(string logDirectory)
+        {
+            foreach (string configFile in Directory.GetFiles(logDirectory, "*.log"))
+                File.Delete(configFile);
+        }
+
         protected bool HasTimeoutExceeded()
         {
             return(m_stopwatch.Elapsed.TotalSeconds > m_timeout);
@@ -59,19 +71,18 @@ namespace Tests
             return(xmlLog);
         }
 
-        protected static string SetCurrentConfig(string configSubDirectory, string configFilePrefix)
+        protected static string SetCurrentConfig(string configSubDirectory, string configFilePrefix, string configDirectory = c_currentConfigDirectory)
         {
             FileInfo fileInfo;
 
-            foreach (string configFile in Directory.GetFiles(c_currentConfigDirectory))
-                File.Delete(configFile);
+            DeleteConfigFiles(configDirectory);
 
             if (configSubDirectory != null)
             {
-                foreach (string configFile in Directory.GetFiles(c_configFilesDirectory + "\\" + configSubDirectory, configFilePrefix + "*.config"))
-                    File.Copy(configFile, String.Format("{0}\\{1}", c_currentConfigDirectory, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
+                foreach (string configFile in Directory.GetFiles(c_configFilesRootDirectory + "\\" + configSubDirectory, configFilePrefix + "*.config"))
+                    File.Copy(configFile, String.Format("{0}\\{1}", configDirectory, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
 
-                foreach (string configFile in Directory.GetFiles(c_currentConfigDirectory))
+                foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
                 {
                     fileInfo = new FileInfo(configFile);
 
@@ -95,11 +106,11 @@ namespace Tests
 
         #region Protected Constants
 
-        protected const string c_configFilesDirectory = "..\\..\\..\\Tests\\Config\\ConfigFiles";
+        protected const string c_configFilesRootDirectory = "..\\..\\..\\..\\Config";
 
-        protected const string c_currentConfigDirectory = "..\\..\\..\\Tests\\Config\\CurrentConfig";
+        protected const string c_currentConfigDirectory =   "..\\..\\..\\..\\Config\\Current";
 
-        protected const string c_logDirectory = "..\\..\\..\\Tests\\LogDirectory";
+        protected const string c_logDirectory =             "..\\..\\..\\..\\Logs";
 
         #endregion
 
