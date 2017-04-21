@@ -16,11 +16,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Common\CommonConfig.xsd" />
-    <None Remove="RootConfig.xsd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Common\CommonConfig.xsd" />
-    <EmbeddedResource Include="RootConfig.xsd" />
+    <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="1.6" />

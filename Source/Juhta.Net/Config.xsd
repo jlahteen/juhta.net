@@ -9,14 +9,14 @@
 
 <xs:schema
   elementFormDefault="qualified"
-  targetNamespace="http://schemas.juhta.net/root-2017-03-23.xsd"
-  xmlns="http://schemas.juhta.net/root-2017-03-23.xsd"
-  xmlns:common="http://schemas.juhta.net/common-2017-03-23.xsd"
+  targetNamespace="http://schemas.juhta.net/root-v1.xsd"
+  xmlns="http://schemas.juhta.net/root-v1.xsd"
+  xmlns:common="http://schemas.juhta.net/common-v1.xsd"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
   <xsd:import
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    namespace="http://schemas.juhta.net/common-2017-03-23.xsd"/>
+    namespace="http://schemas.juhta.net/common-v1.xsd"/>
   
   <!-- Define the root element -->
   <xs:element name="Juhta.Net" type="Juhta.NetType"/>

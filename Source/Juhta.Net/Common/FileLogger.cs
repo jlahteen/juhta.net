@@ -103,7 +103,11 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(Exception exception)
         {
-            WriteLogEvent(DiagnosticMessageType.Error, null, exception.ToString(), null);
+            string messageId;
+
+            DiagnosticMessage.TryGetMessageId(exception.Message, out messageId);
+
+            WriteLogEvent(DiagnosticMessageType.Error, messageId, exception.ToString(), null);
         }
 
         /// <summary>

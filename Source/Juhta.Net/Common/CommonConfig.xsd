@@ -9,8 +9,8 @@
 
 <xs:schema
   elementFormDefault="qualified"
-  targetNamespace="http://schemas.juhta.net/common-2017-03-23.xsd"
-  xmlns="http://schemas.juhta.net/common-2017-03-23.xsd"
+  targetNamespace="http://schemas.juhta.net/common-v1.xsd"
+  xmlns="http://schemas.juhta.net/common-v1.xsd"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
   <!-- Define assemblyClassFileUriType -->

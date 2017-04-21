@@ -107,12 +107,12 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Defines the file name of the root configuration XML schema.
         /// </summary>
-        private const string c_rootConfigFileName = "RootConfig.xsd";
+        private const string c_rootConfigFileName = "Config.xsd";
 
         /// <summary>
         /// Defines the version of the root configuration XML schema.
         /// </summary>
-        private const string c_rootConfigVersion = "2017-03-23";
+        private const string c_rootConfigVersion = "v1";
 
         /// <summary>
         /// Defines the root XML namespace for the configuration schemas of the framework libraries.

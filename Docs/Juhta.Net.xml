@@ -3415,6 +3415,11 @@
             the framework is not initialized.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Startup.IsFrameworkInitialized">
+            <summary>
+            Returns true if the framework has been initialized, otherwise false.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.Startup.LoadAndValidateRootConfig">
             <summary>
             Loads and validates the root configuration file.

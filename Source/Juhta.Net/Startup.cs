@@ -182,6 +182,14 @@ namespace Juhta.Net
             get {return(s_configDirectory);}
         }
 
+        /// <summary>
+        /// Returns true if the framework has been initialized, otherwise false.
+        /// </summary>
+        public static bool IsFrameworkInitialized
+        {
+            get {return(s_frameworkState > FrameworkState.Uninitialized);}
+        }
+
         #endregion
 
         #region Private Methods

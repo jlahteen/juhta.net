@@ -1,13 +1,13 @@
 ﻿
-using Juhta.Net;
 using Juhta.Net.Extensions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace Juhta.Net.Tests
 {
     public abstract class TestClassBase
     {
@@ -47,6 +47,39 @@ namespace Tests
                 File.Delete(configFile);
         }
 
+        protected static string GetDefaultLogDirectory()
+        {
+            string defaultLogDirectory;
+
+            defaultLogDirectory = Path.GetTempPath();
+
+            if (!Directory.Exists(defaultLogDirectory))
+                Directory.CreateDirectory(defaultLogDirectory);
+
+            return(defaultLogDirectory);
+        }
+
+        protected static string GetDefaultLogFile()
+        {
+            string logFilePath;
+
+            logFilePath = GetDefaultLogDirectory() + Process.GetCurrentProcess().ProcessName + ".log";
+
+            return(logFilePath);
+        }
+
+        protected static string GetTestLogDirectory()
+        {
+            string testLogDirectory;
+
+            testLogDirectory = Path.GetTempPath() + FrameworkInfo.FrameworkName + " Test Logs" + Path.DirectorySeparatorChar;
+
+            if (!Directory.Exists(testLogDirectory))
+                Directory.CreateDirectory(testLogDirectory);
+
+            return(testLogDirectory);
+        }
+
         protected bool HasTimeoutExceeded()
         {
             return(m_stopwatch.Elapsed.TotalSeconds > m_timeout);
@@ -54,12 +87,12 @@ namespace Tests
 
         protected void InitializeFramework()
         {
-            Startup.InitializeFramework(SetCurrentConfig(null, null));
+            Startup.InitializeFramework(SetConfigFiles(null, null));
         }
 
-        protected void InitializeFramework(string configSubDirectory, string configFilePrefix)
+        protected void InitializeFramework(string configLoadDirectory, string configFilePrefix)
         {
-            Startup.InitializeFramework(SetCurrentConfig(configSubDirectory, configFilePrefix));
+            Startup.InitializeFramework(SetConfigFiles(configLoadDirectory, configFilePrefix));
         }
 
         protected static XmlDocument ReadXmlLog(string logFileName)
@@ -71,15 +104,15 @@ namespace Tests
             return(xmlLog);
         }
 
-        protected static string SetCurrentConfig(string configSubDirectory, string configFilePrefix, string configDirectory = c_currentConfigDirectory)
+        protected static string SetConfigFiles(string configLoadDirectory, string configFilePrefix, string configDirectory = c_configDirectory)
         {
             FileInfo fileInfo;
 
             DeleteConfigFiles(configDirectory);
 
-            if (configSubDirectory != null)
+            if (configLoadDirectory != null)
             {
-                foreach (string configFile in Directory.GetFiles(c_configFilesRootDirectory + "\\" + configSubDirectory, configFilePrefix + "*.config"))
+                foreach (string configFile in Directory.GetFiles(c_configFilesRootDirectory + "\\" + configLoadDirectory, configFilePrefix + "*.config"))
                     File.Copy(configFile, String.Format("{0}\\{1}", configDirectory, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
 
                 foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
@@ -90,7 +123,7 @@ namespace Tests
                 }
             }
 
-            return(c_currentConfigDirectory);
+            return(c_configDirectory);
         }
 
         protected void SetTimeout(int timeout)
@@ -108,9 +141,9 @@ namespace Tests
 
         protected const string c_configFilesRootDirectory = "..\\..\\..\\..\\Config";
 
-        protected const string c_currentConfigDirectory =   "..\\..\\..\\..\\Config\\Current";
+        protected const string c_configDirectory = "..\\..\\..\\..\\Config\\Current";
 
-        protected const string c_logDirectory =             "..\\..\\..\\..\\Logs";
+        protected const string c_logDirectory = "..\\..\\..\\..\\Logs";
 
         #endregion
 
