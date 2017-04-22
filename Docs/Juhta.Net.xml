@@ -1880,7 +1880,6 @@
             </summary>
             <param name="assembly">Specifies the current assembly.</param>
             <returns>Returns the directory of the current assembly without an ending directory separator.</returns>
-            <remarks>The directory separator is '/' in the returned value.</remarks>
         </member>
         <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)">
             <summary>

@@ -111,16 +111,13 @@ namespace Juhta.Net.Extensions
         /// </summary>
         /// <param name="assembly">Specifies the current assembly.</param>
         /// <returns>Returns the directory of the current assembly without an ending directory separator.</returns>
-        /// <remarks>The directory separator is '/' in the returned value.</remarks>
         public static string GetDirectory(this Assembly assembly)
         {
             string directory;
 
             directory = Path.GetDirectoryName(assembly.ManifestModule.FullyQualifiedName);
 
-            directory = directory.Replace('\\', '/');
-
-            return(directory.TrimEnd('/'));
+            return(directory.TrimEnd(Path.DirectorySeparatorChar));
         }
 
         /// <summary>
