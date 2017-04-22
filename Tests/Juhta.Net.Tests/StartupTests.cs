@@ -10,7 +10,7 @@ namespace Juhta.Net.Tests
     [TestClass]
     public class StartupTests : TestClassBase
     {
-        #region Test Initialization Methods
+        #region Test Setup Methods
 
         [TestCleanup]
         public void TestCleanup()
@@ -82,8 +82,6 @@ namespace Juhta.Net.Tests
         [ExpectedException(typeof(InvalidConfigFileException))]
         public void InitializeFramework_InvalidConfig_ShouldThrowException()
         {
-            string logFileContent;
-
             SetConfigFiles("Root", "InvalidConfig_", ".");
 
             try
@@ -93,9 +91,7 @@ namespace Juhta.Net.Tests
 
             catch
             {
-                logFileContent = File.ReadAllText(GetDefaultLogFile());
-
-                Assert.IsTrue(logFileContent.Contains("ERROR 'Juhta.Net.Error10002'"));
+                AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10002'");
 
                 throw;
             }

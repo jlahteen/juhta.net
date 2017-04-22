@@ -24,6 +24,16 @@ namespace Juhta.Net.Tests
 
         #region Protected Methods
 
+        protected void AssertDefaultLogFileContent(params string[] messageExcerpts)
+        {
+            string logFileContent;
+
+            logFileContent = File.ReadAllText(GetDefaultLogFile());
+
+            foreach (string messageExcerpt in messageExcerpts)
+                Assert.IsTrue(logFileContent.Contains(messageExcerpt));
+        }
+
         protected static void AssertLines(string[] expectedLines, string[] actualLines)
         {
             Assert.AreEqual<int>(expectedLines.Length, actualLines.Length);
@@ -39,6 +49,13 @@ namespace Juhta.Net.Tests
         {
             foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
                 File.Delete(configFile);
+        }
+
+        protected static void DeleteConfigFilesAll()
+        {
+            DeleteConfigFiles(".");
+
+            DeleteConfigFiles(c_configDirectory);
         }
 
         protected static void DeleteLogFiles(string logDirectory)
@@ -87,7 +104,7 @@ namespace Juhta.Net.Tests
 
         protected void InitializeFramework()
         {
-            Startup.InitializeFramework(SetConfigFiles(null, null));
+            Startup.InitializeFramework();
         }
 
         protected void InitializeFramework(string configLoadDirectory, string configFilePrefix)

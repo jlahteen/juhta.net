@@ -6,9 +6,9 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using System;
 using System.Xml;
-using Juhta.Net.Common;
 
 namespace Juhta.Net.LibraryManagement
 {

@@ -6,7 +6,6 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using System;
 using System.Xml;
 using System.Xml.Schema;
 

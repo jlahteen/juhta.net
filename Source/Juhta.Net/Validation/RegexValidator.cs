@@ -6,10 +6,10 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Juhta.Net.Common;
 
 namespace Juhta.Net.Validation
 {
