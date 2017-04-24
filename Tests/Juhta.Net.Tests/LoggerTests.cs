@@ -79,9 +79,9 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void LogError_Exception_ShouldReturn()
         {
-            Logger.LogError(new Exception("This is an error message 'Error #5'."));
+            Logger.LogError(new Exception("This is an error message 'Error #5'.", new ArgumentException("This is an inner exception.")));
 
-            AssertDefaultLogFileContent("This is an error message 'Error #5'.");
+            AssertDefaultLogFileContent("This is an error message 'Error #5'.", "This is an inner exception.");
         }
 
         [TestMethod]

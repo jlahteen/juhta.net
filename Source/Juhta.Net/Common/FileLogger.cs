@@ -292,6 +292,10 @@ namespace Juhta.Net.Common
 
             logFile = new Utf8FileWriter(m_logFilePath, FileMode.Append);
 
+            logFile.TabSize = c_tabSize;
+
+            logFile.IndentLevel++;
+
             try
             {
                 if (messageType == DiagnosticMessageType.Alert)
@@ -317,9 +321,7 @@ namespace Juhta.Net.Common
 
                 logFile.WriteLine(logEventInfo.ToString());
 
-                logFile.TabSize = c_tabSize;
-
-                logFile.IndentLevel = 1;
+                logFile.IndentLevel++;
 
                 if (args != null)
                     message = String.Format(messageFormat, args);
