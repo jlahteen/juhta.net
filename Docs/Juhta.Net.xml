@@ -1447,6 +1447,43 @@
             Specifies a SymmetricAlgorithm object that performs actual encryption and decryption operations.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Common.TimestampFactory">
+            <summary>
+            Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
+            Time (UTC). This class is thread-safe.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.TimestampFactory.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.TimestampFactory.GetUniqueTimestamp">
+            <summary>
+            Gets a 21-digit unique timestamp.
+            </summary>
+            <returns>Returns the unique timestamp that was given to the calling thread.</returns>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_created">
+            <summary>
+            Specifies the time when this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_lastTimestamp">
+            <summary>
+            Specifies the last timestamp that was returned from this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_stopwatch">
+            <summary>
+            Measures the elapsed time since this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_syncLock">
+            <summary>
+            Specifies a synchronization object for serializing concurrent access.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Common.DiagnosticMessageIdBase">
             <summary>
             An enumeration that defines the diagnostic message ID bases used in the framework libraries.
