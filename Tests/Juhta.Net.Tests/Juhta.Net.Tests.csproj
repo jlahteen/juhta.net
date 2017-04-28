@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Source\Juhta.Net\Juhta.Net.csproj" />
+    <ProjectReference Include="..\AppXLibrary\AppXLibrary.csproj" />
   </ItemGroup>
 
 </Project>

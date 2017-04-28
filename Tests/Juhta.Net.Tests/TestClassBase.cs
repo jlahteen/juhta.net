@@ -11,6 +11,19 @@ namespace Juhta.Net.Tests
 {
     public abstract class TestClassBase
     {
+        #region Static Constructor
+
+        static TestClassBase()
+        {
+            s_configFilesRootDirectory = "..\\..\\..\\..\\Config".Replace('\\', Path.DirectorySeparatorChar);
+
+            s_configDirectory = "..\\..\\..\\..\\Config\\Current".Replace('\\', Path.DirectorySeparatorChar);
+
+            s_logDirectory = "..\\..\\..\\..\\Logs".Replace('\\', Path.DirectorySeparatorChar);
+        }
+
+        #endregion
+
         #region Public Properties
 
         public TestContext TestContext
@@ -55,7 +68,7 @@ namespace Juhta.Net.Tests
         {
             DeleteConfigFiles(".");
 
-            DeleteConfigFiles(c_configDirectory);
+            DeleteConfigFiles(s_configDirectory);
         }
 
         protected static void DeleteLogFiles(string logDirectory)
@@ -116,21 +129,24 @@ namespace Juhta.Net.Tests
         {
             XmlDocument xmlLog = new XmlDocument();
 
-            xmlLog.Load(c_logDirectory + "\\"  + logFileName);
+            xmlLog.Load(s_logDirectory + Path.DirectorySeparatorChar  + logFileName);
 
             return(xmlLog);
         }
 
-        protected static string SetConfigFiles(string configLoadDirectory, string configFilePrefix, string configDirectory = c_configDirectory)
+        protected static string SetConfigFiles(string configLoadDirectory, string configFilePrefix, string configDirectory = null)
         {
             FileInfo fileInfo;
+
+            if (configDirectory == null)
+                configDirectory = s_configDirectory;
 
             DeleteConfigFiles(configDirectory);
 
             if (configLoadDirectory != null)
             {
-                foreach (string configFile in Directory.GetFiles(c_configFilesRootDirectory + "\\" + configLoadDirectory, configFilePrefix + "*.config"))
-                    File.Copy(configFile, String.Format("{0}\\{1}", configDirectory, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
+                foreach (string configFile in Directory.GetFiles(s_configFilesRootDirectory + Path.DirectorySeparatorChar + configLoadDirectory, configFilePrefix + "*.config"))
+                    File.Copy(configFile, String.Format("{0}{1}{2}", configDirectory, Path.DirectorySeparatorChar, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
 
                 foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
                 {
@@ -140,7 +156,7 @@ namespace Juhta.Net.Tests
                 }
             }
 
-            return(c_configDirectory);
+            return(s_configDirectory);
         }
 
         protected void SetTimeout(int timeout)
@@ -154,19 +170,19 @@ namespace Juhta.Net.Tests
 
         #endregion
 
-        #region Protected Constants
+        #region Protected Fields
 
-        protected const string c_configFilesRootDirectory = "..\\..\\..\\..\\Config";
+        protected static string s_configFilesRootDirectory;
 
-        protected const string c_configDirectory = "..\\..\\..\\..\\Config\\Current";
+        protected static string s_configDirectory;
 
-        protected const string c_logDirectory = "..\\..\\..\\..\\Logs";
+        protected static string s_logDirectory;
 
         #endregion
 
         #region Private Fields
 
-        private System.Diagnostics.Stopwatch m_stopwatch;
+        private Stopwatch m_stopwatch;
 
         private TestContext m_testContextInstance;
 

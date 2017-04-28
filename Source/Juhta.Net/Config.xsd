@@ -45,7 +45,7 @@
   <!-- Define libraryType -->
   <xs:complexType name="libraryType">
     <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
-    <xs:attribute name="libraryHandleClass" type="common:classNameType" use="required"/>
+    <xs:attribute name="libraryHandleClass" type="common:classNameType" use="optional"/>
   </xs:complexType>
   
 </xs:schema>

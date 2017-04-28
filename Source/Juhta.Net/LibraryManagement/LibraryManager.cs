@@ -272,7 +272,7 @@ namespace Juhta.Net.LibraryManagement
 
                         configurableLibrary = (IConfigurableLibrary)libraryHandle;
 
-                        configFilePath = Startup.ConfigDirectory + "\\" + configurableLibrary.ConfigFileName;
+                        configFilePath = Startup.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
 
                         if (File.Exists(configFilePath))
                         {

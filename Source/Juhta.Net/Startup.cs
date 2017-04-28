@@ -118,10 +118,7 @@ namespace Juhta.Net
                     configDirectory = s_binDirectory;
 
                 // Set the configuration directory
-
-                s_configDirectory = configDirectory.Replace('\\', '/');
-
-                s_configDirectory = s_configDirectory.TrimEnd('/');
+                s_configDirectory = configDirectory.TrimEnd(Path.DirectorySeparatorChar);
 
                 // Perform the initialization if necessary
 

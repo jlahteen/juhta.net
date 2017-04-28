@@ -138,12 +138,12 @@ namespace Juhta.Net.LibraryManagement
 
             libraryFileName = libraryNode.GetAttribute("libraryFileName");
 
-            if (!File.Exists(Startup.BinDirectory + "/" + libraryFileName))
+            if (!File.Exists(Startup.BinDirectory + Path.DirectorySeparatorChar + libraryFileName))
                 throw new FileNotFoundException(LibraryMessages.Error022.FormatMessage(libraryFileName, Startup.BinDirectory));
 
             libraryHandleClass = libraryNode.GetAttribute("libraryHandleClass", ".LibraryHandle");
 
-            return(ObjectFactory.CreateInstance<ILibraryHandle>(Startup.BinDirectory + "/" + libraryFileName, libraryHandleClass));
+            return(ObjectFactory.CreateInstance<ILibraryHandle>(Startup.BinDirectory + Path.DirectorySeparatorChar + libraryFileName, libraryHandleClass));
         }
 
         #endregion
