@@ -12,38 +12,30 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically
-    /// changed at the runtime by modifying the configuration file of the library.
+    /// changed at the runtime by modifying the configuration of the library.
     /// </summary>
     public interface IDynamicLibrary
     {
-        #region Methods
+        #region Properties
 
         /// <summary>
-        /// Gets a lock object that manages concurrent access to the configuration state of the library.
+        /// Gets or sets the current state of the library.
         /// </summary>
-        /// <returns>Returns a ReaderWriterLockSlim object managing concurrent access to the configuration state of the
-        /// library.</returns>
-        ReaderWriterLockSlim GetConfigStateLock();
-
-        /// <summary>
-        /// Gets the current configuration state of the library.
-        /// </summary>
-        /// <returns>Returns an IConfigState object containing the current configuration state of the library.</returns>
-        IConfigState GetCurrentConfigState();
-
-        /// <summary>
-        /// Sets a specified configuration state as the current configuration state of the library.
-        /// </summary>
-        /// <param name="configState">Specifies an IConfigState object.</param>
         /// <remarks>
-        /// <para>This method is expected not to throw exceptions. The method should be implemented by using just
-        /// assignments from the properties of the specified IConfigState object to the fields of the corresponding
-        /// library classes. However, if the implementation of this method contains error-prone functionality, in case
-        /// of an error the method is responsible for leaving the library in a consistent state in order to allow the
-        /// process to continue running.</para>
-        /// <para>The method can assume that the specified IConfigState object is initialized.</para>
+        /// <para>The setter can assume that the specified <see cref="ILibraryState"/> object is initialized.</para>
+        /// <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
+        /// assignments from the properties of the specified <see cref="ILibraryState"/> object to the properties of
+        /// the corresponding library classes. However, if the implementation of the setter contains error-prone
+        /// functionality, in case of an error the setter is responsible for leaving the library in a consistent state
+        /// in order to allow the process to continue running.</para>
         /// </remarks>
-        void SetConfigState(IConfigState configState);
+        ILibraryState LibraryState {get; set;}
+
+        /// <summary>
+        /// Gets a <see cref="ReaderWriterLockSlim"/> object managing concurrent access to the current state of the
+        /// library.
+        /// </summary>
+        ReaderWriterLockSlim LibraryStateLock {get;}
 
         #endregion
     }

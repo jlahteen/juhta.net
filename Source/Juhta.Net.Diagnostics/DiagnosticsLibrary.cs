@@ -16,7 +16,7 @@ namespace Juhta.Net.Diagnostics
     /// <summary>
     /// A class that represents Diagnostics Library, which is a built-in library.
     /// </summary>
-    internal class DiagnosticsLibrary : BuiltInLibrary, IInitializableLibrary, IDynamicallyConfigurableLibrary, IDynamicallyInitializableLibrary, IClosableLibrary
+    internal class DiagnosticsLibrary : BuiltInLibrary, IInitializableLibrary, IDynamicallyCustomXmlConfigurableLibrary, IDynamicallyInitializableLibrary, IClosableLibrary
     {
         #region Public Constructors
 
@@ -49,7 +49,7 @@ namespace Juhta.Net.Diagnostics
         }
 
         /// <summary>
-        /// See <see cref="IDynamicallyConfigurableLibrary.CreateConfigState"/>.
+        /// See <see cref="IDynamicallyCustomXmlConfigurableLibrary.CreateConfigState"/>.
         /// </summary>
         public IConfigState CreateConfigState(XmlDocument config)
         {

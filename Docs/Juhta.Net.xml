@@ -2644,11 +2644,22 @@
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
             <summary>
-            Defines an interface for configurable libraries. A library is configurable if it requires specific startup
+            Defines a base interface for configurable libraries. A library is configurable if it requires specific startup
             operations and those operations can be configured.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IConfigurableLibrary.GetConfigSchemas">
+        <member name="P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName">
+            <summary>
+            Gets the name of the configuration file.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary">
+            <summary>
+            Defines an interface for custom XML configurable libraries. A library is custom XML configurable if it is
+            configurable and the configuration is done by a custom XML configuration.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas">
             <summary>
             Gets the XML schemas that the configuration file of the library must conform to.
             </summary>
@@ -2656,35 +2667,30 @@
             <remarks>The return value null indicates that the configuration of the library is not XML schema
             controlled.</remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)">
             <summary>
-            Initializes the library based on a specified configuration.
+            Initializes the library based on a specified XML configuration.
             </summary>
-            <param name="config">Specifies an XmlDocument object containing a configuration for the library.</param>
+            <param name="config">Specifies an XmlDocument object containing an XML configuration for the library.</param>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName">
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary">
             <summary>
-            Gets the name of the configuration file for the library.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.IDynamicallyConfigurableLibrary">
-            <summary>
-            Defines an interface for dynamically configurable libraries. A library is dynamically configurable, if it is
-            configurable and its configuration can be changed at the runtime.
+            Defines an interface for dynamically custom XML configurable libraries. A library is dynamically custom XML
+            configurable, if it is dynamic, custom XML configurable and its configuration can be changed at the runtime.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicallyConfigurableLibrary.CreateConfigState(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary.CreateConfigState(System.Xml.XmlDocument)">
             <summary>
             Creates a configuration state based on an XML document containing a configuration for the library.
             </summary>
-            <param name="config">Specifies an XmlDocument object containing a configuration for the library.</param>
-            <returns>Returns an IConfigState object containing a configuration state created based on the specified
+            <param name="config">Specifies an XmlDocument object containing an XML configuration for the library.</param>
+            <returns>Returns an IConfigState object containing the configuration state created based on the specified
             XmlDocument object.</returns>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary">
             <summary>
             Defines an interface for dynamically initializable libraries. A library is dynamically initializable, if it is
-            configurable and its configuration can be initialized at the runtime.
+            dynamic and its configuration can be initialized at the runtime.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary.CreateDefaultConfigState">
@@ -2700,32 +2706,23 @@
             changed at the runtime by modifying the configuration file of the library.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicLibrary.GetConfigStateLock">
+        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.ConfigState">
             <summary>
-            Gets a lock object that manages concurrent access to the configuration state of the library.
+            Gets or sets the current configuration state of the library.
             </summary>
-            <returns>Returns a ReaderWriterLockSlim object managing concurrent access to the configuration state of the
-            library.</returns>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicLibrary.GetCurrentConfigState">
-            <summary>
-            Gets the current configuration state of the library.
-            </summary>
-            <returns>Returns an IConfigState object containing the current configuration state of the library.</returns>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicLibrary.SetConfigState(Juhta.Net.LibraryManagement.IConfigState)">
-            <summary>
-            Sets a specified configuration state as the current configuration state of the library.
-            </summary>
-            <param name="configState">Specifies an IConfigState object.</param>
             <remarks>
-            <para>This method is expected not to throw exceptions. The method should be implemented by using just
+            <para>The setter can assume that the specified IConfigState object is initialized.</para>
+            <para>The setter is expected not to throw exceptions. The setter should be implemented by using just
             assignments from the properties of the specified IConfigState object to the fields of the corresponding
-            library classes. However, if the implementation of this method contains error-prone functionality, in case
-            of an error the method is responsible for leaving the library in a consistent state in order to allow the
+            library classes. However, if the implementation of the setter contains error-prone functionality, in case
+            of an error the setter is responsible for leaving the library in a consistent state in order to allow the
             process to continue running.</para>
-            <para>The method can assume that the specified IConfigState object is initialized.</para>
             </remarks>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.ConfigStateLock">
+            <summary>
+            Gets a ReaderWriterLockSlim object managing concurrent access to the configuration state of the library.
+            </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IInitializableLibrary">
             <summary>
@@ -2888,7 +2885,7 @@
             <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing a new configuration for the
             library. Can be null in which case the default configuration will be used.</param>
             <remarks>If <paramref name="config"/> is null, <paramref name="library"/> must implement the
-            <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary"/> interface, otherwise <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyConfigurableLibrary"/>
+            <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary"/> interface, otherwise <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary"/>
             must be implemented.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ClearLibraryCollections">
@@ -2917,11 +2914,11 @@
             <returns>Returns true if the library specified by the library handle is already initialized, otherwise
             false.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateConfigFile(Juhta.Net.LibraryManagement.IConfigurableLibrary,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateConfigFile(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
             <summary>
-            Loads and validates a configuration file againts the XML schema(s) of a configurable library.
+            Loads and validates a configuration file againts the XML schema(s) of a custom XML configurable library.
             </summary>
-            <param name="configurableLibrary">Specifies an <see cref="T:Juhta.Net.LibraryManagement.IConfigurableLibrary"/> object.</param>
+            <param name="library">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary"/> object.</param>
             <param name="configFile">Specifies the name or path of a configuration file.</param>
             <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated configuration.</returns>
         </member>

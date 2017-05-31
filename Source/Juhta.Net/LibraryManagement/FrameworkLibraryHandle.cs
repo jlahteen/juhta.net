@@ -57,12 +57,6 @@ namespace Juhta.Net.LibraryManagement
         #region Protected Fields
 
         /// <summary>
-        /// Specifies a <see cref="ConfigStateFactoryBase"/> object for creating <see cref="IConfigState"/> objects for
-        /// the framework library determined by this <see cref="FrameworkLibraryHandle"/> instance.
-        /// </summary>
-        protected ConfigStateFactoryBase m_configStateFactory;
-
-        /// <summary>
         /// Specifies a lock object for managing concurrent access to the configuration state of the framework library
         /// determined by this <see cref="FrameworkLibraryHandle"/> instance.
         /// </summary>

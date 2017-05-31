@@ -10,7 +10,7 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for initializable libraries. A library is initializable if it requires specific startup
-    /// operations.
+    /// operations and those operations don't need any configuration.
     /// </summary>
     public interface IInitializableLibrary
     {
