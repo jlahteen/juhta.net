@@ -306,35 +306,6 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// TODO
-        /// </summary>
-        /// <param name="library"></param>
-        private void InitializeLibraryState(IDynamicInitializableLibrary library)
-        {
-            ILibraryState newlibraryState, currentLibraryState;
-
-            newlibraryState = library.CreateDefaultLibraryState();
-
-            newlibraryState.Initialize();
-
-            library.LibraryStateLock.EnterWriteLock();
-
-            currentLibraryState = library.LibraryState;
-
-            if (library is IDynamicStartableProcessesLibrary)
-                ((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState);
-
-            currentLibraryState.Close();
-
-            if (library is IDynamicStartableProcessesLibrary)
-                ((IDynamicStartableProcessesLibrary)library).StartProcesses(newlibraryState);
-
-            library.LibraryState = newlibraryState;
-
-            library.LibraryStateLock.ExitWriteLock();
-        }
-
-        /// <summary>
         /// Checks whether the library specified by a library handle is already initialized.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
@@ -441,29 +412,103 @@ namespace Juhta.Net.LibraryManagement
         /// <param name="e">Specifies event arguments.</param>
         private void OnConfigFileDeleted(object source, FileSystemEventArgs e)
         {
-            IDynamicallyInitializableLibrary library;
+            List<IDynamicLibrary> dynamicLibraries;
+            ILibraryState libraryState;
 
             try
             {
-                // Check that there is a dynamically initializable library corresponding to the deleted configuration
-                // file
+                // Get the dynamic libraries associated with the deleted configuration file
 
-                if (!m_dynamicallyInitializableLibraries.TryGetValue(e.Name, out library))
+                if (!m_dynamicLibraries.TryGetValue(e.Name, out dynamicLibraries))
                 {
                     Logger.LogWarning(LibraryMessages.Warning011, e.FullPath);
 
                     return;
                 }
 
-                // Change the configuration state of the library
-                ChangeConfigState(library, null);
+                // Initialize the associated dynamic libraries
 
-                Logger.LogInformation(LibraryMessages.Information012, e.FullPath);
+                foreach (IDynamicLibrary library in dynamicLibraries)
+
+                    try
+                    {
+                        libraryState = CreateDefaultLibraryState(library);
+
+                        UpdateLibraryState(library, libraryState);
+
+                        Logger.LogInformation(LibraryMessages.Information012, e.FullPath, ((ILibraryHandle)library).LibraryFileName);
+                    }
+
+                    catch (Exception ex)
+                    {
+                        Logger.LogError(LibraryMessages.Error056, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                    }
             }
 
             catch (Exception ex)
             {
                 Logger.LogError(LibraryMessages.Error013, e.FullPath, ex);
+            }
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="library"></param>
+        /// <param name="newlibraryState"></param>
+        private void UpdateLibraryState(IDynamicLibrary library, ILibraryState newlibraryState)
+        {
+            ILibraryState currentLibraryState;
+
+            try
+            {
+                newlibraryState.Initialize();
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                return;
+            }
+
+            try
+            {
+                library.LibraryStateLock.EnterWriteLock();
+
+                currentLibraryState = library.LibraryState;
+
+                try
+                {
+                    if (library is IDynamicStartableProcessesLibrary)
+                        ((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState);
+
+                    currentLibraryState.Close();
+                }
+
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                try
+                {
+                    if (library is IDynamicStartableProcessesLibrary)
+                        ((IDynamicStartableProcessesLibrary)library).StartProcesses(newlibraryState);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                library.LibraryState = newlibraryState;
+            }
+
+            finally
+            {
+                library.LibraryStateLock.ExitWriteLock();
             }
         }
 

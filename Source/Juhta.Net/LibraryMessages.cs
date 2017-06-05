@@ -86,23 +86,22 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created, but an attempt to set the new configuration into effect failed due to the following exception: {1}");
 
         /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was deleted, but the configuration
-        /// initialization cannot be done, because there is no dynamically initializable library associated with this
-        /// configuration file.
+        /// Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
+        /// because there were no dynamic libraries associated with this configuration file.
         /// </summary>
-        internal static readonly WarningMessage Warning011 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted, but the configuration initialization cannot be done, because there is no dynamically initializable library associated with this configuration file.");
+        internal static readonly WarningMessage Warning011 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed because there were no dynamic libraries associated with this configuration file.");
 
         /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was deleted. The configuration of the
-        /// corresponding library was initialized successfully.
+        /// Library Manager detected that the configuration file '{0}' was deleted, and the state of the associated
+        /// dynamic library '{1}' was initialized successfully.
         /// </summary>
-        internal static readonly InformationMessage Information012 = MessageFactory.CreateInformationMessage("Library Manager detected that the configuration file '{0}' was deleted. The configuration of the corresponding library was initialized successfully.");
+        internal static readonly InformationMessage Information012 = MessageFactory.CreateInformationMessage("Library Manager detected that the configuration file '{0}' was deleted, and the state of the associated dynamic library '{1}' was initialized successfully.");
 
         /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was deleted, but an attempt to initialize the
-        /// configuration of the corresponding library failed due to the following exception: {1}
+        /// Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
+        /// when the states of the dynamic libraries were being initialized: {1}
         /// </summary>
-        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an attempt to initialize the configuration of the corresponding library failed due to the following exception: {1}");
+        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the dynamic libraries were being initialized: {1}");
 
         /// <summary>
         /// A reference to the plug-in library '{0}' cannot be stored because in the PlugInLibraries class there is no
@@ -328,6 +327,12 @@ namespace Juhta.Net
         /// Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
         /// </summary>
         internal static readonly ErrorMessage Error055 = MessageFactory.CreateErrorMessage("Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+        /// dynamic library '{1}' could not be initialized: {2}
+        /// </summary>
+        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized: {2}");
 
         #endregion
     }
