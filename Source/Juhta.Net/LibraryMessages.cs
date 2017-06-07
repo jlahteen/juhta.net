@@ -330,9 +330,17 @@ namespace Juhta.Net
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
-        /// dynamic library '{1}' could not be initialized: {2}
+        /// dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related
+        /// exception was: {2}
         /// </summary>
-        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized: {2}");
+        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related exception was: {2}");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+        /// dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
+        /// should reconfigure the library and possibly restart the process. The related exception was: {2}
+        /// </summary>
+        internal static readonly ErrorMessage Error057 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You should reconfigure the library and possibly restart the process. The related exception was: {2}");
 
         #endregion
     }

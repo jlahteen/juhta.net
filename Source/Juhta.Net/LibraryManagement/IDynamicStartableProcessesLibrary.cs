@@ -9,7 +9,7 @@
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// Defines an interface for dynamic startable processes library. A library is a dynamic startable processes
+    /// Defines an interface for dynamic startable processes libraries. A library is a dynamic startable processes
     /// library if it contains at least one process that has to be started prior to the library's services can be used
     /// and those processes can be started and stopped at the runtime.
     /// </summary>

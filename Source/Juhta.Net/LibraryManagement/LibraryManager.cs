@@ -224,6 +224,26 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="library"></param>
+        /// <returns></returns>
+        private ILibraryState CreateDefaultLibraryState(IDynamicLibrary library)
+        {
+            IDynamicInitializableLibrary library2 = library as IDynamicInitializableLibrary;
+            ILibraryState libraryState;
+
+            if (library2 == null)
+                throw new Exception();
+
+            libraryState = library2.CreateDefaultLibraryState();
+
+            libraryState.Initialize();
+
+            return(libraryState);
+        }
+
+        /// <summary>
         /// Initializes the library specified by a library handle.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
@@ -429,11 +449,21 @@ namespace Juhta.Net.LibraryManagement
                 // Initialize the associated dynamic libraries
 
                 foreach (IDynamicLibrary library in dynamicLibraries)
-
+                {
                     try
                     {
                         libraryState = CreateDefaultLibraryState(library);
+                    }
 
+                    catch (Exception ex)
+                    {
+                        Logger.LogError(LibraryMessages.Error056, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+
+                        continue;
+                    }
+
+                    try
+                    {
                         UpdateLibraryState(library, libraryState);
 
                         Logger.LogInformation(LibraryMessages.Information012, e.FullPath, ((ILibraryHandle)library).LibraryFileName);
@@ -441,8 +471,9 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error056, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                        Logger.LogError(LibraryMessages.Error057, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
                     }
+                }
             }
 
             catch (Exception ex)
@@ -460,6 +491,8 @@ namespace Juhta.Net.LibraryManagement
         {
             ILibraryState currentLibraryState;
 
+            // Try to initialize the new library state
+
             try
             {
                 newlibraryState.Initialize();
@@ -467,22 +500,33 @@ namespace Juhta.Net.LibraryManagement
 
             catch (Exception ex)
             {
-                Logger.LogError(ex);
-
-                return;
+                throw new Exception(LibraryMessages.Error001.FormatMessage(), ex);
             }
+
+            library.LibraryStateLock.EnterWriteLock();
 
             try
             {
-                library.LibraryStateLock.EnterWriteLock();
-
                 currentLibraryState = library.LibraryState;
+
+                // Try to stop the startable processes in the current library state if necessary
 
                 try
                 {
                     if (library is IDynamicStartableProcessesLibrary)
                         ((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState);
+                }
 
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                // Try to close the current library
+
+                try
+                {
                     currentLibraryState.Close();
                 }
 
