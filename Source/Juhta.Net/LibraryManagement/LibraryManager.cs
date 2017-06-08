@@ -224,17 +224,20 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// TODO
+        /// Creates the default library state for a specified dynamic library.
         /// </summary>
-        /// <param name="library"></param>
-        /// <returns></returns>
+        /// <param name="library">Specifies a dynamic library.</param>
+        /// <returns>Returns a library state object that holds the default state for the specified library.</returns>
+        /// <remarks>The default library state will be returned as initialized.</remarks>
         private ILibraryState CreateDefaultLibraryState(IDynamicLibrary library)
         {
-            IDynamicInitializableLibrary library2 = library as IDynamicInitializableLibrary;
+            IDynamicInitializableLibrary library2;
             ILibraryState libraryState;
 
-            if (library2 == null)
-                throw new Exception();
+            if (!(library is IDynamicInitializableLibrary))
+                throw new LibraryStateException(LibraryMessages.Error058.FormatMessage(((ILibraryHandle)library).LibraryFileName, typeof(IDynamicInitializableLibrary).FullName));
+
+            library2 = (IDynamicInitializableLibrary)library;
 
             libraryState = library2.CreateDefaultLibraryState();
 
@@ -483,26 +486,15 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// TODO
+        /// Updates the state of a specified dynamic library.
         /// </summary>
-        /// <param name="library"></param>
-        /// <param name="newlibraryState"></param>
-        private void UpdateLibraryState(IDynamicLibrary library, ILibraryState newlibraryState)
+        /// <param name="library">Specifies a dynamic library.</param>
+        /// <param name="newLibraryState">Specifies a new library state.</param>
+        private void UpdateLibraryState(IDynamicLibrary library, ILibraryState newLibraryState)
         {
             ILibraryState currentLibraryState;
 
-            // Try to initialize the new library state
-
-            try
-            {
-                newlibraryState.Initialize();
-            }
-
-            catch (Exception ex)
-            {
-                throw new Exception(LibraryMessages.Error001.FormatMessage(), ex);
-            }
-
+            // Acquire a write lock to the library state
             library.LibraryStateLock.EnterWriteLock();
 
             try
@@ -517,41 +509,52 @@ namespace Juhta.Net.LibraryManagement
                         ((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState);
                 }
 
-                catch (Exception)
+                catch (Exception ex)
                 {
-
-                    throw;
+                    throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
                 }
 
-                // Try to close the current library
+                // Try to close the current library state
 
                 try
                 {
                     currentLibraryState.Close();
                 }
 
-                catch (Exception)
+                catch (Exception ex)
                 {
-
-                    throw;
+                    throw new LibraryStateException(LibraryMessages.Error060.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
                 }
+
+                // Try to start the startable processes in the new library state if necessary
 
                 try
                 {
                     if (library is IDynamicStartableProcessesLibrary)
-                        ((IDynamicStartableProcessesLibrary)library).StartProcesses(newlibraryState);
+                        ((IDynamicStartableProcessesLibrary)library).StartProcesses(newLibraryState);
                 }
-                catch (Exception)
+
+                catch (Exception ex)
                 {
-
-                    throw;
+                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
                 }
 
-                library.LibraryState = newlibraryState;
+                // Finally, set the new library state
+
+                try
+                {
+                    library.LibraryState = newLibraryState;
+                }
+
+                catch (Exception ex)
+                {
+                    throw new LibraryStateException(LibraryMessages.Error062.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
+                }
             }
 
             finally
             {
+                // Release the write lock to the library state
                 library.LibraryStateLock.ExitWriteLock();
             }
         }

@@ -7,17 +7,32 @@
 //
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// TODO
+    /// This exception will be thrown in case of library state related errors.
     /// </summary>
     public class LibraryStateException : Exception
     {
+        #region Public Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        public LibraryStateException(string message) : base(message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="innerException">Specifies an inner exception that is the actual cause for the library state
+        /// error.</param>
+        public LibraryStateException(string message, Exception innerException) : base(message, innerException)
+        {}
+
+        #endregion
     }
 }

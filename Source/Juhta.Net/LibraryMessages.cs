@@ -99,9 +99,11 @@ namespace Juhta.Net
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
-        /// when the states of the dynamic libraries were being initialized: {1}
+        /// when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
+        /// is currently unstable. You should restore the configuration file and possibly restart the process. The
+        /// related exception was: {1}
         /// </summary>
-        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the dynamic libraries were being initialized: {1}");
+        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
 
         /// <summary>
         /// A reference to the plug-in library '{0}' cannot be stored because in the PlugInLibraries class there is no
@@ -338,9 +340,35 @@ namespace Juhta.Net
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
         /// dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
-        /// should reconfigure the library and possibly restart the process. The related exception was: {2}
+        /// should restore the configuration file and possibly restart the process. The related exception was: {2}
         /// </summary>
-        internal static readonly ErrorMessage Error057 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You should reconfigure the library and possibly restart the process. The related exception was: {2}");
+        internal static readonly ErrorMessage Error057 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {2}");
+
+        /// <summary>
+        /// Default library state could not be created because the library '{0}' does not support the required
+        /// interface ('{1}').
+        /// </summary>
+        internal static readonly ErrorMessage Error058 = MessageFactory.CreateErrorMessage("Default library state could not be created because the library '{0}' does not support the required interface ('{1}').");
+
+        /// <summary>
+        /// Startable processes in the current state of the library '{0}' could not be stopped.
+        /// </summary>
+        internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Startable processes in the current state of the library '{0}' could not be stopped.");
+
+        /// <summary>
+        /// Current state of the library '{0}' could not be closed.
+        /// </summary>
+        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Current state of the library '{0}' could not be closed.");
+
+        /// <summary>
+        /// Startable processes in the new state of the library '{0}' could not be started.
+        /// </summary>
+        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Startable processes in the new state of the library '{0}' could not be started.");
+
+        /// <summary>
+        /// New state of the library '{0}' could not be set.
+        /// </summary>
+        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("New state of the library '{0}' could not be set.");
 
         #endregion
     }
