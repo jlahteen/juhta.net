@@ -33,9 +33,10 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error001 = MessageFactory.CreateErrorMessage("Library '{0}' requires a configuration file '{1}' but there is no such file in the configuration directory '{2}'.");
 
         /// <summary>
-        /// Configuration file '{0}' does not conform to the configuration XML schema(s) of the library '{1}'.
+        /// XML configuration file '{0}' does not conform to the configuration schema(s) of the custom XML configurable
+        /// library '{1}'.
         /// </summary>
-        internal static readonly ErrorMessage Error002 = MessageFactory.CreateErrorMessage("Configuration file '{0}' does not conform to the configuration XML schema(s) of the library '{1}'.");
+        internal static readonly ErrorMessage Error002 = MessageFactory.CreateErrorMessage("XML configuration file '{0}' does not conform to the configuration schema(s) of the custom XML configurable library '{1}'.");
 
         /// <summary>
         /// Initialization of the library '{0}' failed.
@@ -369,6 +370,47 @@ namespace Juhta.Net
         /// New state of the library '{0}' could not be set.
         /// </summary>
         internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("New state of the library '{0}' could not be set.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
+        /// performed because there were no dynamic libraries associated with this configuration file.
+        /// </summary>
+        internal static readonly WarningMessage Warning063 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+        /// associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The
+        /// related exception was: {2}
+        /// </summary>
+        internal static readonly ErrorMessage Error064 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The related exception was: {2}");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed, and the state of the
+        /// associated dynamic library '{1}' was updated successfully.
+        /// </summary>
+        internal static readonly InformationMessage Information065 = MessageFactory.CreateInformationMessage("Library Manager detected that the configuration file '{0}' was created or changed, and the state of the associated dynamic library '{1}' was updated successfully.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+        /// associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently
+        /// unstable. You should restore the configuration file and possibly restart the process. The related exception
+        /// was: {2}
+        /// </summary>
+        internal static readonly ErrorMessage Error066 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {2}");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error
+        /// occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the
+        /// process is currently unstable. You should restore the configuration file and possibly restart the process.
+        /// The related exception was: {1}
+        /// </summary>
+        internal static readonly ErrorMessage Error067 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
+
+        /// <summary>
+        /// Library state can not be created for the library '{0}', because the library doesn't implement any of the
+        /// required dynamic library interfaces.
+        /// </summary>
+        internal static readonly ErrorMessage Error068 = MessageFactory.CreateErrorMessage("Library state can not be created for the library '{0}', because the library doesn't implement any of the required dynamic library interfaces.");
 
         #endregion
     }
