@@ -407,10 +407,16 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error067 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
 
         /// <summary>
-        /// Library state can not be created for the library '{0}', because the library doesn't implement any of the
+        /// Library state cannot be created for the library '{0}', because the library doesn't implement any of the
         /// required dynamic library interfaces.
         /// </summary>
-        internal static readonly ErrorMessage Error068 = MessageFactory.CreateErrorMessage("Library state can not be created for the library '{0}', because the library doesn't implement any of the required dynamic library interfaces.");
+        internal static readonly ErrorMessage Error068 = MessageFactory.CreateErrorMessage("Library state cannot be created for the library '{0}', because the library doesn't implement any of the required dynamic library interfaces.");
+
+        /// <summary>
+        /// Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't
+        /// implement any of the required configurable library interfaces.
+        /// </summary>
+        internal static readonly ErrorMessage Error069 = MessageFactory.CreateErrorMessage("Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't implement any of the required configurable library interfaces.");
 
         #endregion
     }

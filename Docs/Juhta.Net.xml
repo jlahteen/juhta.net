@@ -2476,91 +2476,6 @@
             indexed by the configuration file name.
             </summary>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.ConfigStateBase">
-            <summary>
-            Defines an abstract base class for configuration state classes.
-            </summary>
-            <seealso cref="T:Juhta.Net.LibraryManagement.IConfigState"/>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ConfigStateBase.Close">
-            <summary>
-            See <see cref="M:Juhta.Net.LibraryManagement.IConfigState.Close"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ConfigStateBase.Initialize">
-            <summary>
-            See <see cref="M:Juhta.Net.LibraryManagement.IConfigState.Initialize"/>.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.LibraryManagement.ConfigStateBase.IsInitialized">
-            <summary>
-            See <see cref="P:Juhta.Net.LibraryManagement.IConfigState.IsInitialized"/>.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.ConfigStateBase.m_isInitialized">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.LibraryManagement.ConfigStateBase.IsInitialized"/> property.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.ConfigStateFactoryBase">
-            <summary>
-            Defines an abstract base class for such factory classes that create configuration state objects, which
-            implement the <see cref="T:Juhta.Net.LibraryManagement.IConfigState"/> interface.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.CreateConfigState(System.Xml.XmlDocument,System.Boolean)">
-            <summary>
-            Creates an IConfigState object based on an XML document containing a library configuration.
-            </summary>
-            <param name="config">Specifies an XmlDocument object.</param>
-            <param name="initialize">If true, the created IConfigState object will be initialized prior to the return
-            of the method.</param>
-            <returns>Returns an IConfigState object created based on the specified XML document.</returns>
-            <remarks>This method is overridable, and the default implementation always throws a <see cref="T:System.NotSupportedException"/>
-            exception.</remarks>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.CreateDefaultConfigState(System.Boolean)">
-            <summary>
-            Creates an IConfigState object containing the default configuration state for the library.
-            </summary>
-            <param name="initialize">If true, the created IConfigState object will be initialized prior to the return
-            of the method.</param>
-            <returns>Returns an IConfigState object containing the default configuration state for the library.</returns>
-            <remarks>This method is overridable, and the default implementation always throws a <see cref="T:System.NotSupportedException"/>
-            exception.</remarks>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.m_config">
-            <summary>
-            Specifies an XmlDocument object containing a library configuration. The current configuration state object
-            will be constructed based on this XmlDocument object.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.m_namespaceManager">
-            <summary>
-            Specifies an XmlNamespaceManager object to use when querying nodes from the current XmlDocument object.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.ConfigStateFactoryBase`1">
-            <summary>
-            Defines an abstract generic class that extends the <see cref="T:Juhta.Net.LibraryManagement.ConfigStateFactoryBase"/> class such that the
-            exact type of configuration state objects to create can be specified with a type parameter.
-            </summary>
-            <typeparam name="TConfigState">Specifies the type of configuration state objects to create.</typeparam>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ConfigStateFactoryBase`1.ResetFactoryState(`0,System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
-            <summary>
-            Resets the state of the instance.
-            </summary>
-            <param name="configState">Specifies a value for the <see cref="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase`1.m_configState"/> field.</param>
-            <param name="config">Specifies a value for the <see cref="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.m_config"/> field.</param>
-            <param name="namespaceManager">Specifies a value for the <see cref="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase.m_namespaceManager"/>
-            field.</param>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.ConfigStateFactoryBase`1.m_configState">
-            <summary>
-            Specifies the configuration state object that is currently being constructed.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle">
             <summary>
             Defines an abstract base class for framework library handles.
@@ -2581,12 +2496,6 @@
             <param name="config">Specifies a <see cref="T:System.Xml.XmlDocument"/> object containing a library configuration.</param>
             <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
             <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object.</returns>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.m_configStateFactory">
-            <summary>
-            Specifies a <see cref="T:Juhta.Net.LibraryManagement.ConfigStateFactoryBase"/> object for creating <see cref="T:Juhta.Net.LibraryManagement.IConfigState"/> objects for
-            the framework library determined by this <see cref="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle"/> instance.
-            </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.m_configStateLock">
             <summary>
@@ -2614,38 +2523,10 @@
             that the method should prepare for such situation where the library is only partly initialized.</para>
             </remarks>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.IConfigState">
-            <summary>
-            Defines an interface for classes that represent such state of a library that is determined by the configuration
-            of the library. Typically, a configuration state of a library is a collection of reference-type or value-type
-            objects created or set based on the configuration of the library.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IConfigState.Close">
-            <summary>
-            Closes the configuration state specified by this IConfigState instance.
-            </summary>
-            <remarks>Closing a configuration state means performing all necessary closing and cleanup actions on the
-            objects comprising the configuration state.</remarks>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IConfigState.Initialize">
-            <summary>
-            Initializes the configuration state specified by this IConfigState instance.
-            </summary>
-            <remarks>Initializing a configuration state means performing all necessary actions on the objects
-            comprising the configuration state such that the objects are ready to be set as the effective configuration
-            state without any further operations.</remarks>
-        </member>
-        <member name="P:Juhta.Net.LibraryManagement.IConfigState.IsInitialized">
-            <summary>
-            Returns true if the <see cref="M:Juhta.Net.LibraryManagement.IConfigState.Initialize"/> method has been called on this IConfigState instance,
-            otherwise false.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
             <summary>
             Defines a base interface for configurable libraries. A library is configurable if it requires specific startup
-            operations and those operations can be configured.
+            operations and those operations need configuration.
             </summary>
         </member>
         <member name="P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName">
@@ -2661,9 +2542,9 @@
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas">
             <summary>
-            Gets the XML schemas that the configuration file of the library must conform to.
+            Gets the XML schemas to which configuration files must conform.
             </summary>
-            <returns>Returns an array of XmlSchema objects.</returns>
+            <returns>Returns an array of <see cref="T:System.Xml.Schema.XmlSchema"/> objects.</returns>
             <remarks>The return value null indicates that the configuration of the library is not XML schema
             controlled.</remarks>
         </member>
@@ -2671,63 +2552,85 @@
             <summary>
             Initializes the library based on a specified XML configuration.
             </summary>
-            <param name="config">Specifies an XmlDocument object containing an XML configuration for the library.</param>
+            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing an XML configuration for the
+            library.</param>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary">
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary">
             <summary>
-            Defines an interface for dynamically custom XML configurable libraries. A library is dynamically custom XML
-            configurable, if it is dynamic, custom XML configurable and its configuration can be changed at the runtime.
+            Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
+            configurable library if it is custom XML configurable and its configuration can be changed at the runtime.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary.CreateConfigState(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState(System.Xml.XmlDocument)">
             <summary>
-            Creates a configuration state based on an XML document containing a configuration for the library.
+            Creates a library state based on an XML document containing a configuration for the library.
             </summary>
-            <param name="config">Specifies an XmlDocument object containing an XML configuration for the library.</param>
-            <returns>Returns an IConfigState object containing the configuration state created based on the specified
-            XmlDocument object.</returns>
+            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing an XML configuration for the
+            library.</param>
+            <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object containing the library state created based on the
+            specified <see cref="T:System.Xml.XmlDocument"/> object.</returns>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary">
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary">
             <summary>
-            Defines an interface for dynamically initializable libraries. A library is dynamically initializable, if it is
-            dynamic and its configuration can be initialized at the runtime.
+            Defines an interface for dynamic initializable libraries. A library is a dynamic initializable library if it is
+            initializable, configurable and its configuration can be initialized at the runtime.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary.CreateDefaultConfigState">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState">
             <summary>
-            Creates the default configuration state for the library.
+            Creates the default state for the library.
             </summary>
-            <returns>Returns an IConfigState object containing the default configuration state for the library.
+            <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object containing the default state for the library.
             </returns>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicLibrary">
             <summary>
             Defines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically
-            changed at the runtime by modifying the configuration file of the library.
+            changed at the runtime by modifying the configuration of the library.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.ConfigState">
+        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState">
             <summary>
-            Gets or sets the current configuration state of the library.
+            Gets or sets the current state of the library.
             </summary>
             <remarks>
-            <para>The setter can assume that the specified IConfigState object is initialized.</para>
-            <para>The setter is expected not to throw exceptions. The setter should be implemented by using just
-            assignments from the properties of the specified IConfigState object to the fields of the corresponding
-            library classes. However, if the implementation of the setter contains error-prone functionality, in case
-            of an error the setter is responsible for leaving the library in a consistent state in order to allow the
-            process to continue running.</para>
+            <para>The setter can assume that the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object is initialized.</para>
+            <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
+            assignments from the properties of the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object to the properties of
+            the corresponding library classes. However, if the implementation of the setter contains error-prone
+            functionality, in case of an error the setter is responsible for leaving the library in a consistent state
+            in order to allow the process to continue running.</para>
             </remarks>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.ConfigStateLock">
+        <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock">
             <summary>
-            Gets a ReaderWriterLockSlim object managing concurrent access to the configuration state of the library.
+            Gets a <see cref="T:System.Threading.ReaderWriterLockSlim"/> object managing concurrent access to the current state of the
+            library.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary">
+            <summary>
+            Defines an interface for dynamic startable processes libraries. A library is a dynamic startable processes
+            library if it contains at least one process that has to be started prior to the library's services can be used
+            and those processes can be started and stopped at the runtime.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Starts the processes in the specified library state.
+            </summary>
+            <param name="libraryState">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StopProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Stops the processes in the specified library state.
+            </summary>
+            <param name="libraryState">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</param>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IInitializableLibrary">
             <summary>
             Defines an interface for initializable libraries. A library is initializable if it requires specific startup
-            operations.
+            operations and those operations don't need any configuration.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary">
@@ -2745,6 +2648,49 @@
         <member name="P:Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName">
             <summary>
             Gets the file name of the library.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.ILibraryState">
+            <summary>
+            Defines an interface for classes that represent the state of a library. Typically, a library state is an
+            aggregate object containing a collection of reference-type or value-type objects created based on the
+            configuration of the library.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ILibraryState.Close">
+            <summary>
+            Closes the library state.
+            </summary>
+            <remarks>Closing a libary state means performing all necessary closing and cleanup actions on the objects
+            comprising the library state.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ILibraryState.Initialize">
+            <summary>
+            Initializes the library state.
+            </summary>
+            <remarks>Initializing a library state means performing all necessary startup actions on the objects
+            comprising the library state so that the objects are ready to be set as the effective library state.</remarks>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.ILibraryState.IsInitialized">
+            <summary>
+            Returns true if the library state is initialized, that is, the <see cref="M:Juhta.Net.LibraryManagement.ILibraryState.Initialize"/> method has been
+            called on this <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance, otherwise false.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.IStartableProcessesLibrary">
+            <summary>
+            Defines an interface for startable processes libraries. A library is a startable processes library if it
+            contains at least one process that has to be started prior to the library's services can be used.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IStartableProcessesLibrary.StartProcesses">
+            <summary>
+            Starts the library processes.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IStartableProcessesLibrary.StopProcesses">
+            <summary>
+            Stops the library processes.
             </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.LibraryClosingException">
@@ -2831,6 +2777,12 @@
             This exception will be thrown when an error occurs in initialization of a library.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
@@ -2877,17 +2829,6 @@
             Stops the asynchronous watching of configuration file changes.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ChangeConfigState(Juhta.Net.LibraryManagement.IDynamicLibrary,System.Xml.XmlDocument)">
-            <summary>
-            Changes the configuration state of a specified dynamic library.
-            </summary>
-            <param name="library">Specifies an <see cref="T:Juhta.Net.LibraryManagement.IDynamicLibrary"/> instance.</param>
-            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing a new configuration for the
-            library. Can be null in which case the default configuration will be used.</param>
-            <remarks>If <paramref name="config"/> is null, <paramref name="library"/> must implement the
-            <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyInitializableLibrary"/> interface, otherwise <see cref="T:Juhta.Net.LibraryManagement.IDynamicallyCustomXmlConfigurableLibrary"/>
-            must be implemented.</remarks>
-        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ClearLibraryCollections">
             <summary>
             Clears all library collections of the class.
@@ -2899,6 +2840,37 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
             <remarks>Nothing will be done if the specified library is not closable.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
+            <summary>
+            Creates the default library state for a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <returns>Returns a library state object that holds the default state for the specified library.</returns>
+            <remarks>The default library state will be returned as initialized.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateCustomXmlConfigurableLibraryState(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Creates a library state for a dynamic custom XML configurable library based on an XML configuration file.
+            </summary>
+            <param name="library">Specifies a dynamic custom XML configurable library.</param>
+            <param name="configFileName">Specifies an XML configuration file name.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,System.String)">
+            <summary>
+            Creates a library state for a dynamic library based on a configuration file.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="configFileName">Specifies a configuration file name.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a custom XML configurable library based on an XML configuration.
+            </summary>
+            <param name="library">Specifies a custom XML configurable library.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
@@ -2914,15 +2886,16 @@
             <returns>Returns true if the library specified by the library handle is already initialized, otherwise
             false.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateConfigFile(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateCustomXmlConfigFile(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
             <summary>
-            Loads and validates a configuration file againts the XML schema(s) of a custom XML configurable library.
+            Loads and validates an XML configuration file againts the XML schema(s) of a custom XML configurable
+            library.
             </summary>
             <param name="library">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary"/> object.</param>
-            <param name="configFile">Specifies the name or path of a configuration file.</param>
-            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated configuration.</returns>
+            <param name="configFileName">Specifies an XML configuration file name.</param>
+            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated XML configuration.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.OnConfigFileChanged(System.Object,System.IO.FileSystemEventArgs)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.OnConfigFileCreatedOrChanged(System.Object,System.IO.FileSystemEventArgs)">
             <summary>
             Defines a event handler that will be fired when a configuration file is changed or created.
             </summary>
@@ -2936,27 +2909,46 @@
             <param name="source">Specifies an event source.</param>
             <param name="e">Specifies event arguments.</param>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.UpdateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Updates the state of a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="newLibraryState">Specifies a new library state.</param>
+        </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_configFileWatcher">
             <summary>
             A ConfigFileWatcher object that watches configuration file changes in the configuration directory.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicallyConfigurableLibraries">
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicLibraries">
             <summary>
-            Specifies the collection of IDynamicallyConfigurableLibrary objects (having configuration file names as key
-            values).
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicallyInitializableLibraries">
-            <summary>
-            Specifies the collection of IDynamicallyInitializableLibrary objects (having configuration file names as
-            key values).
+            Specifies the collection of the dynamic libraries with configuration file names as key values.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_libraryHandles">
             <summary>
             Specifies the stack of the initialized libraries.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.LibraryStateException">
+            <summary>
+            This exception will be thrown in case of library state related errors.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception that is the actual cause for the library state
+            error.</param>
         </member>
         <member name="T:Juhta.Net.LibraryMessages">
             <summary>
@@ -2976,7 +2968,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error002">
             <summary>
-            Configuration file '{0}' does not conform to the configuration XML schema(s) of the library '{1}'.
+            XML configuration file '{0}' does not conform to the configuration schema(s) of the custom XML configurable
+            library '{1}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error003">
@@ -3029,21 +3022,22 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning011">
             <summary>
-            Library Manager detected that the configuration file '{0}' was deleted, but the configuration
-            initialization cannot be done, because there is no dynamically initializable library associated with this
-            configuration file.
+            Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
+            because there were no dynamic libraries associated with this configuration file.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Information012">
             <summary>
-            Library Manager detected that the configuration file '{0}' was deleted. The configuration of the
-            corresponding library was initialized successfully.
+            Library Manager detected that the configuration file '{0}' was deleted, and the state of the associated
+            dynamic library '{1}' was initialized successfully.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error013">
             <summary>
-            Library Manager detected that the configuration file '{0}' was deleted, but an attempt to initialize the
-            configuration of the corresponding library failed due to the following exception: {1}
+            Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
+            when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
+            is currently unstable. You should restore the configuration file and possibly restart the process. The
+            related exception was: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error014">
@@ -3269,6 +3263,93 @@
         <member name="F:Juhta.Net.LibraryMessages.Error055">
             <summary>
             Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error056">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+            dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related
+            exception was: {2}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error057">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+            dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
+            should restore the configuration file and possibly restart the process. The related exception was: {2}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error058">
+            <summary>
+            Default library state could not be created because the library '{0}' does not support the required
+            interface ('{1}').
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error059">
+            <summary>
+            Startable processes in the current state of the library '{0}' could not be stopped.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error060">
+            <summary>
+            Current state of the library '{0}' could not be closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error061">
+            <summary>
+            Startable processes in the new state of the library '{0}' could not be started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error062">
+            <summary>
+            New state of the library '{0}' could not be set.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning063">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
+            performed because there were no dynamic libraries associated with this configuration file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error064">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+            associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The
+            related exception was: {2}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Information065">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, and the state of the
+            associated dynamic library '{1}' was updated successfully.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error066">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+            associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently
+            unstable. You should restore the configuration file and possibly restart the process. The related exception
+            was: {2}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error067">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error
+            occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the
+            process is currently unstable. You should restore the configuration file and possibly restart the process.
+            The related exception was: {1}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error068">
+            <summary>
+            Library state cannot be created for the library '{0}', because the library doesn't implement any of the
+            required dynamic library interfaces.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error069">
+            <summary>
+            Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't
+            implement any of the required configurable library interfaces.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">

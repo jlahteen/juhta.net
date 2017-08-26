@@ -21,6 +21,13 @@ namespace Juhta.Net.LibraryManagement
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
+        public LibraryInitializationException(string message) : base(message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
         /// <param name="innerException">Specifies an inner exception that is the actual cause for the library
         /// initialization error.</param>
         public LibraryInitializationException(string message, Exception innerException) : base(message, innerException)

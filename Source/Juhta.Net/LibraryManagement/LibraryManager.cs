@@ -219,15 +219,29 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Initializes a custom XML configurable library based on an XML configuration.
+        /// </summary>
+        /// <param name="library">Specifies a custom XML configurable library.</param>
+        /// <param name="configFilePath">Specifies an XML configuration file path.</param>
+        private void InitializeCustomXmlConfigurableLibrary(ICustomXmlConfigurableLibrary library, string configFilePath)
+        {
+            XmlDocument config;
+
+            config = LoadAndValidateCustomXmlConfigFile(library, configFilePath);
+
+            library.InitializeLibrary(config);
+        }
+
+        /// <summary>
         /// Initializes the library specified by a library handle.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
         private void InitializeLibrary(ILibraryHandle libraryHandle)
         {
             bool requiresConfigFile;
-            ICustomXmlConfigurableLibrary customXmlConfigurableLibrary;
+            IConfigurableLibrary configurableLibrary;
             string configFilePath;
-            XmlDocument config;
+            List<IDynamicLibrary> dynamicLibraries;
 
             try
             {
@@ -248,45 +262,57 @@ namespace Juhta.Net.LibraryManagement
 
                 // Initialize the library if necessary
 
-                if (libraryHandle is IInitializableLibrary || libraryHandle is ICustomXmlConfigurableLibrary)
+                if (libraryHandle is IInitializableLibrary || libraryHandle is IConfigurableLibrary)
                 {
                     // Check if the library requires a configuration file
                     requiresConfigFile = !(libraryHandle is IInitializableLibrary);
 
-                    if (libraryHandle is ICustomXmlConfigurableLibrary)
+                    if (libraryHandle is IConfigurableLibrary)
                     {
-                        // The library is custom XML configurable
+                        // The library is configurable
 
-                        customXmlConfigurableLibrary = (ICustomXmlConfigurableLibrary)libraryHandle;
+                        configurableLibrary = (IConfigurableLibrary)libraryHandle;
 
-                        configFilePath = Startup.ConfigDirectory + Path.DirectorySeparatorChar + customXmlConfigurableLibrary.ConfigFileName;
+                        configFilePath = Startup.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
 
                         if (File.Exists(configFilePath))
                         {
                             // A configuration file exists for the library
 
-                            // Load and validate the configuration file
-                            config = LoadAndValidateCustomXmlConfigFile(customXmlConfigurableLibrary, configFilePath);
+                            // Initialize the library based on the configuration file
 
-                            // Initialize the library
-                            customXmlConfigurableLibrary.InitializeLibrary(config);
+                            if (libraryHandle is ICustomXmlConfigurableLibrary)
+                                InitializeCustomXmlConfigurableLibrary((ICustomXmlConfigurableLibrary)libraryHandle, configFilePath);
+
+                            // Add other configurable library types here
+                            // ...
+
+                            // Any of the required configurable library interfaces wasn't found
+                            else
+                                throw new LibraryInitializationException(LibraryMessages.Error069.FormatMessage(libraryHandle.LibraryFileName, configFilePath));
                         }
 
                         else if (requiresConfigFile)
                             // The library requires a configuration file but such doesn't exist
-                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, customXmlConfigurableLibrary.ConfigFileName, Startup.ConfigDirectory));
+                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, Startup.ConfigDirectory));
 
                         else
-                            // There is no configuration file but the library is also initializable, initialize it
+                            // There is no configuration file but the library is also initializable, so just initialize it
                             ((IInitializableLibrary)libraryHandle).InitializeLibrary();
 
-                        // Add the library to the list of dynamically configurable libraries if necessary
-                        if (libraryHandle is IDynamicallyCustomXmlConfigurableLibrary)
-                            m_dynamicallyConfigurableLibraries.Add(customXmlConfigurableLibrary.ConfigFileName, (IDynamicallyCustomXmlConfigurableLibrary)libraryHandle);
+                        // Add the library to the list of dynamic libraries if necessary
 
-                        // Add the library to the list of dynamically initializable libraries if necessary
-                        if (libraryHandle is IDynamicallyInitializableLibrary)
-                            m_dynamicallyInitializableLibraries.Add(customXmlConfigurableLibrary.ConfigFileName, (IDynamicallyInitializableLibrary)libraryHandle);
+                        if (libraryHandle is IDynamicLibrary)
+                        {
+                            if (!m_dynamicLibraries.TryGetValue(configurableLibrary.ConfigFileName, out dynamicLibraries))
+                            {
+                                dynamicLibraries = new List<IDynamicLibrary>();
+
+                                m_dynamicLibraries.Add(configurableLibrary.ConfigFileName, dynamicLibraries);
+                            }
+
+                            dynamicLibraries.Add((IDynamicLibrary)libraryHandle);
+                        }
                     }
                     else
                         // The library is only initializable, initialize it
