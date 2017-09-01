@@ -418,6 +418,35 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error069 = MessageFactory.CreateErrorMessage("Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't implement any of the required configurable library interfaces.");
 
+        /// <summary>
+        /// An error occurred when the processes of the library '{0}' were being started.
+        /// </summary>
+        internal static readonly ErrorMessage Error070 = MessageFactory.CreateErrorMessage("An error occurred when the processes of the library '{0}' were being started.");
+
+        /// <summary>
+        /// An error occurred when the processes of the library '{0}' were being stopped.
+        /// </summary>
+        internal static readonly ErrorMessage Error071 = MessageFactory.CreateErrorMessage("An error occurred when the processes of the library '{0}' were being stopped.");
+
+        /// <summary>
+        /// At least one error occurred when the startable processes of the library '{0}' were stopped. All resources
+        /// and services of these processes may not have been completely released or shutted down.
+        /// </summary>
+        internal static readonly WarningMessage Warning072 = MessageFactory.CreateWarningMessage("At least one error occurred when the startable processes of the library '{0}' were stopped. All resources and services of these processes may not have been completely released or shutted down.");
+
+        /// <summary>
+        /// At least one error occurred when the startable processes in the current state of the library '{0}' were
+        /// stopped. All resources and services of these processes may not have been completely released or shutted
+        /// down.
+        /// </summary>
+        internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the startable processes in the current state of the library '{0}' were stopped. All resources and services of these processes may not have been completely released or shutted down.");
+
+        /// <summary>
+        /// An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
+        /// processes: {1}
+        /// </summary>
+        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable processes: {1}");
+
         #endregion
     }
 }

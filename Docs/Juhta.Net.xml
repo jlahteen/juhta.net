@@ -2520,7 +2520,7 @@
             logged and the closing process is continued for the rest of the closing actions. In other words, the method
             should close the library as completely as possible.</para>
             <para>This method will be called even if the initialization process of the library has failed. This means
-            that the method should prepare for such situation where the library is only partly initialized.</para>
+            that the method should prepare for such situation where the library is only partially initialized.</para>
             </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
@@ -2626,6 +2626,16 @@
             Stops the processes in the specified library state.
             </summary>
             <param name="libraryState">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</param>
+            <returns>Returns true if the processes in the library state were stopped without errors, or false if at
+            least one error occurred in the stopping process.</returns>
+            <remarks>
+            <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
+            logged and the stopping process is continued for the rest of the processes. In other words, the method
+            should stop the processes as completely as possible.</para>
+            <para>This method will be called even if the <see cref="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)"/> method has failed. This means
+            that the method should prepare for such situation where the processes have not been started at all or
+            started only partially.</para>
+            </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IInitializableLibrary">
             <summary>
@@ -2692,6 +2702,16 @@
             <summary>
             Stops the library processes.
             </summary>
+            <returns>Returns true if the library processes were stopped without errors, or false if at least one error
+            occurred in the stopping process.</returns>
+            <remarks>
+            <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
+            logged and the stopping process is continued for the rest of the processes. In other words, the method
+            should stop the processes as completely as possible.</para>
+            <para>This method will be called even if the initialization process of the library has failed. This means
+            that the method should prepare for such situation where the library processes have not been started at all
+            or started only partially.</para>
+            </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.LibraryClosingException">
             <summary>
@@ -2839,7 +2859,6 @@
             Closes a specified library.
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
-            <remarks>Nothing will be done if the specified library is not closable.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
             <summary>
@@ -2864,6 +2883,13 @@
             <param name="library">Specifies a dynamic library.</param>
             <param name="configFileName">Specifies a configuration file name.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.GetLibraryFileName(System.Object)">
+            <summary>
+            Gets the file name of a library specified by a library interface.
+            </summary>
+            <param name="libraryInterface">Specifies a library interface object.</param>
+            <returns>Returns the file name of the library specified by the given library interface object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
             <summary>
@@ -3350,6 +3376,35 @@
             <summary>
             Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't
             implement any of the required configurable library interfaces.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error070">
+            <summary>
+            An error occurred when the processes of the library '{0}' were being started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error071">
+            <summary>
+            An error occurred when the processes of the library '{0}' were being stopped.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning072">
+            <summary>
+            At least one error occurred when the startable processes of the library '{0}' were stopped. All resources
+            and services of these processes may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning073">
+            <summary>
+            At least one error occurred when the startable processes in the current state of the library '{0}' were
+            stopped. All resources and services of these processes may not have been completely released or shutted
+            down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error074">
+            <summary>
+            An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
+            processes: {1}
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">

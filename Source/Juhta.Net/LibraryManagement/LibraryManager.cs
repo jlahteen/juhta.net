@@ -138,13 +138,22 @@ namespace Juhta.Net.LibraryManagement
         /// Closes a specified library.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
-        /// <remarks>Nothing will be done if the specified library is not closable.</remarks>
         private static void CloseLibrary(ILibraryHandle libraryHandle)
         {
+            IStartableProcessesLibrary startableProcessesLibrary;
             IClosableLibrary closableLibrary;
 
             try
             {
+                // Stop the library processes if necessary
+
+                startableProcessesLibrary = libraryHandle as IStartableProcessesLibrary;
+
+                if (startableProcessesLibrary != null && !startableProcessesLibrary.StopProcesses())
+                    Logger.LogWarning(LibraryMessages.Warning072, libraryHandle.LibraryFileName);
+
+                // Close the library
+
                 closableLibrary = libraryHandle as IClosableLibrary;
 
                 if (closableLibrary == null)
@@ -172,7 +181,7 @@ namespace Juhta.Net.LibraryManagement
             ILibraryState libraryState;
 
             if (!(library is IDynamicInitializableLibrary))
-                throw new LibraryStateException(LibraryMessages.Error058.FormatMessage(((ILibraryHandle)library).LibraryFileName, typeof(IDynamicInitializableLibrary).FullName));
+                throw new LibraryStateException(LibraryMessages.Error058.FormatMessage(GetLibraryFileName(library), typeof(IDynamicInitializableLibrary).FullName));
 
             library2 = (IDynamicInitializableLibrary)library;
 
@@ -215,7 +224,17 @@ namespace Juhta.Net.LibraryManagement
 
             // Any of the required dynamic library interfaces wasn't found
             else
-                throw new LibraryStateException(LibraryMessages.Error068.FormatMessage(((ILibraryHandle)library).LibraryFileName));
+                throw new LibraryStateException(LibraryMessages.Error068.FormatMessage(GetLibraryFileName(library)));
+        }
+
+        /// <summary>
+        /// Gets the file name of a library specified by a library interface.
+        /// </summary>
+        /// <param name="libraryInterface">Specifies a library interface object.</param>
+        /// <returns>Returns the file name of the library specified by the given library interface object.</returns>
+        private static string GetLibraryFileName(object libraryInterface)
+        {
+            return(((ILibraryHandle)libraryInterface).LibraryFileName);
         }
 
         /// <summary>
@@ -318,6 +337,20 @@ namespace Juhta.Net.LibraryManagement
                         // The library is only initializable, initialize it
                         ((IInitializableLibrary)libraryHandle).InitializeLibrary();
                 }
+
+                // Start the library processes if necessary
+
+                if (libraryHandle is IStartableProcessesLibrary)
+
+                    try
+                    {
+                        ((IStartableProcessesLibrary)libraryHandle).StartProcesses();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new LibraryInitializationException(LibraryMessages.Error070.FormatMessage(libraryHandle.LibraryFileName), ex);
+                    }
             }
 
             catch (Exception ex)
@@ -380,7 +413,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (XmlSchemaValidationException ex)
             {
-                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, ((ILibraryHandle)library).LibraryFileName), ex);
+                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, GetLibraryFileName(library)), ex);
             }
         }
 
@@ -416,7 +449,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error064, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                        Logger.LogError(LibraryMessages.Error064, e.FullPath, GetLibraryFileName(library), ex);
 
                         continue;
                     }
@@ -425,12 +458,12 @@ namespace Juhta.Net.LibraryManagement
                     {
                         UpdateLibraryState(library, libraryState);
 
-                        Logger.LogInformation(LibraryMessages.Information065, e.FullPath, ((ILibraryHandle)library).LibraryFileName);
+                        Logger.LogInformation(LibraryMessages.Information065, e.FullPath, GetLibraryFileName(library));
                     }
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error066, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                        Logger.LogError(LibraryMessages.Error066, e.FullPath, GetLibraryFileName(library), ex);
                     }
                 }
             }
@@ -473,7 +506,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error056, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                        Logger.LogError(LibraryMessages.Error056, e.FullPath, GetLibraryFileName(library), ex);
 
                         continue;
                     }
@@ -482,12 +515,12 @@ namespace Juhta.Net.LibraryManagement
                     {
                         UpdateLibraryState(library, libraryState);
 
-                        Logger.LogInformation(LibraryMessages.Information012, e.FullPath, ((ILibraryHandle)library).LibraryFileName);
+                        Logger.LogInformation(LibraryMessages.Information012, e.FullPath, GetLibraryFileName(library));
                     }
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error057, e.FullPath, ((ILibraryHandle)library).LibraryFileName, ex);
+                        Logger.LogError(LibraryMessages.Error057, e.FullPath, GetLibraryFileName(library), ex);
                     }
                 }
             }
@@ -519,12 +552,13 @@ namespace Juhta.Net.LibraryManagement
                 try
                 {
                     if (library is IDynamicStartableProcessesLibrary)
-                        ((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState);
+                        if (!((IDynamicStartableProcessesLibrary)library).StopProcesses(currentLibraryState))
+                            Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(GetLibraryFileName(library)));
                 }
 
                 catch (Exception ex)
                 {
-                    throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
+                    throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(GetLibraryFileName(library), ex));
                 }
 
                 // Try to close the current library state
@@ -536,7 +570,7 @@ namespace Juhta.Net.LibraryManagement
 
                 catch (Exception ex)
                 {
-                    throw new LibraryStateException(LibraryMessages.Error060.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
+                    throw new LibraryStateException(LibraryMessages.Error060.FormatMessage(GetLibraryFileName(library), ex));
                 }
 
                 // Try to start the startable processes in the new library state if necessary
@@ -549,7 +583,19 @@ namespace Juhta.Net.LibraryManagement
 
                 catch (Exception ex)
                 {
-                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
+                    // Try to roll back what was possibly accomplished
+
+                    try
+                    {
+                        ((IDynamicStartableProcessesLibrary)library).StopProcesses(newLibraryState);
+                    }
+
+                    catch (Exception ex2)
+                    {
+                        Logger.LogError(LibraryMessages.Error074.FormatMessage(GetLibraryFileName(library), ex2));
+                    }
+
+                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(GetLibraryFileName(library), ex));
                 }
 
                 // Finally, set the new library state
@@ -561,7 +607,7 @@ namespace Juhta.Net.LibraryManagement
 
                 catch (Exception ex)
                 {
-                    throw new LibraryStateException(LibraryMessages.Error062.FormatMessage(((ILibraryHandle)library).LibraryFileName, ex));
+                    throw new LibraryStateException(LibraryMessages.Error062.FormatMessage(GetLibraryFileName(library), ex));
                 }
             }
 

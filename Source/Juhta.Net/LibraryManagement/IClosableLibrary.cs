@@ -26,7 +26,7 @@ namespace Juhta.Net.LibraryManagement
         /// logged and the closing process is continued for the rest of the closing actions. In other words, the method
         /// should close the library as completely as possible.</para>
         /// <para>This method will be called even if the initialization process of the library has failed. This means
-        /// that the method should prepare for such situation where the library is only partly initialized.</para>
+        /// that the method should prepare for such situation where the library is only partially initialized.</para>
         /// </remarks>
         bool CloseLibrary();
 

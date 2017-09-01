@@ -27,7 +27,17 @@ namespace Juhta.Net.LibraryManagement
         /// Stops the processes in the specified library state.
         /// </summary>
         /// <param name="libraryState">Specifies an <see cref="ILibraryState"/> object.</param>
-        void StopProcesses(ILibraryState libraryState);
+        /// <returns>Returns true if the processes in the library state were stopped without errors, or false if at
+        /// least one error occurred in the stopping process.</returns>
+        /// <remarks>
+        /// <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
+        /// logged and the stopping process is continued for the rest of the processes. In other words, the method
+        /// should stop the processes as completely as possible.</para>
+        /// <para>This method will be called even if the <see cref="StartProcesses"/> method has failed. This means
+        /// that the method should prepare for such situation where the processes have not been started at all or
+        /// started only partially.</para>
+        /// </remarks>
+        bool StopProcesses(ILibraryState libraryState);
 
         #endregion
     }
