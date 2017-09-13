@@ -2520,7 +2520,8 @@
             logged and the closing process is continued for the rest of the closing actions. In other words, the method
             should close the library as completely as possible.</para>
             <para>This method will be called even if the initialization process of the library has failed. This means
-            that the method should prepare for such situation where the library is only partially initialized.</para>
+            that the method should prepare for such situation where the library is not initialized at all or
+            initialized only partially.</para>
             </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
@@ -2582,7 +2583,7 @@
         <member name="T:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary">
             <summary>
             Defines an interface for dynamic initializable libraries. A library is a dynamic initializable library if it is
-            initializable, configurable and its configuration can be initialized at the runtime.
+            dynamic and its state can be initialized at the runtime.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState">
@@ -2595,7 +2596,7 @@
         <member name="T:Juhta.Net.LibraryManagement.IDynamicLibrary">
             <summary>
             Defines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically
-            changed at the runtime by modifying the configuration of the library.
+            changed at the runtime e.g. by modifying the configuration of the library.
             </summary>
         </member>
         <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState">
@@ -2617,20 +2618,19 @@
             library.
             </summary>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary">
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicStartableLibrary">
             <summary>
-            Defines an interface for dynamic startable processes libraries. A library is a dynamic startable processes
-            library if it contains at least one process that has to be started prior to the library's services can be used
-            and those processes can be started and stopped at the runtime.
+            Defines an interface for dynamic startable libraries. A library is a dynamic startable library if it is dynamic
+            and contains at least one process that has to be started prior to the library's services can be used.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
             Starts the processes in the specified library state.
             </summary>
             <param name="libraryState">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StopProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicStartableLibrary.StopProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
             Stops the processes in the specified library state.
             </summary>
@@ -2641,21 +2641,21 @@
             <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
             logged and the stopping process is continued for the rest of the processes. In other words, the method
             should stop the processes as completely as possible.</para>
-            <para>This method will be called even if the <see cref="M:Juhta.Net.LibraryManagement.IDynamicStartableProcessesLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)"/> method has failed. This means
+            <para>This method will be called even if the <see cref="M:Juhta.Net.LibraryManagement.IDynamicStartableLibrary.StartProcesses(Juhta.Net.LibraryManagement.ILibraryState)"/> method has failed. This means
             that the method should prepare for such situation where the processes have not been started at all or
             started only partially.</para>
             </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IInitializableLibrary">
             <summary>
-            Defines an interface for initializable libraries. A library is initializable if it requires specific startup
+            Defines an interface for initializable libraries. A library is initializable if it requires initialization
             operations and those operations don't need any configuration.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary">
             <summary>
-            Initializes the library, that is, performs required startup operations to make library services properly
-            available.
+            Initializes the library, that is, performs required initialization operations to make library services
+            properly available.
             </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ILibraryHandle">
@@ -2696,18 +2696,18 @@
             called on this <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance, otherwise false.
             </summary>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.IStartableProcessesLibrary">
+        <member name="T:Juhta.Net.LibraryManagement.IStartableLibrary">
             <summary>
-            Defines an interface for startable processes libraries. A library is a startable processes library if it
-            contains at least one process that has to be started prior to the library's services can be used.
+            Defines an interface for startable libraries. A library is a startable library if it contains at least one
+            process that has to be started prior to the library's services can be used.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IStartableProcessesLibrary.StartProcesses">
+        <member name="M:Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses">
             <summary>
             Starts the library processes.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IStartableProcessesLibrary.StopProcesses">
+        <member name="M:Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses">
             <summary>
             Stops the library processes.
             </summary>

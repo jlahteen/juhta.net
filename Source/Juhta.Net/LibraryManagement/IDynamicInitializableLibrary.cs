@@ -10,9 +10,9 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for dynamic initializable libraries. A library is a dynamic initializable library if it is
-    /// initializable, configurable and its configuration can be initialized at the runtime.
+    /// dynamic and its state can be initialized at the runtime.
     /// </summary>
-    public interface IDynamicInitializableLibrary : IInitializableLibrary, IConfigurableLibrary, IDynamicLibrary
+    public interface IDynamicInitializableLibrary : IDynamicLibrary
     {
         #region Methods
 

@@ -12,7 +12,7 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically
-    /// changed at the runtime by modifying the configuration of the library.
+    /// changed at the runtime e.g. by modifying the configuration of the library.
     /// </summary>
     public interface IDynamicLibrary
     {
