@@ -196,13 +196,13 @@ namespace Juhta.Net.LibraryManagement
         /// Creates a library state for a dynamic custom XML configurable library based on an XML configuration file.
         /// </summary>
         /// <param name="library">Specifies a dynamic custom XML configurable library.</param>
-        /// <param name="configFileName">Specifies an XML configuration file name.</param>
+        /// <param name="configFilePath">Specifies an XML configuration file path.</param>
         /// <returns>Returns the created <see cref="ILibraryState"/> object.</returns>
-        private ILibraryState CreateCustomXmlConfigurableLibraryState(IDynamicCustomXmlConfigurableLibrary library, string configFileName)
+        private ILibraryState CreateCustomXmlConfigurableLibraryState(IDynamicCustomXmlConfigurableLibrary library, string configFilePath)
         {
             XmlDocument config;
 
-            config = LoadAndValidateCustomXmlConfigFile(library, configFileName);
+            config = LoadAndValidateCustomXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
             return(library.CreateLibraryState(config));
         }
@@ -211,13 +211,13 @@ namespace Juhta.Net.LibraryManagement
         /// Creates a library state for a dynamic library based on a configuration file.
         /// </summary>
         /// <param name="library">Specifies a dynamic library.</param>
-        /// <param name="configFileName">Specifies a configuration file name.</param>
+        /// <param name="configFilePath">Specifies a configuration file path.</param>
         /// <returns>Returns the created <see cref="ILibraryState"/> object.</returns>
-        private ILibraryState CreateLibraryState(IDynamicLibrary library, string configFileName)
+        private ILibraryState CreateLibraryState(IDynamicLibrary library, string configFilePath)
         {
             // Case dynamic custom XML configurable library
             if (library is IDynamicCustomXmlConfigurableLibrary)
-                return(CreateCustomXmlConfigurableLibraryState((IDynamicCustomXmlConfigurableLibrary)library, configFileName));
+                return(CreateCustomXmlConfigurableLibraryState((IDynamicCustomXmlConfigurableLibrary)library, configFilePath));
 
             // Add other dynamic library types here
             // ...
@@ -246,9 +246,19 @@ namespace Juhta.Net.LibraryManagement
         {
             XmlDocument config;
 
-            config = LoadAndValidateCustomXmlConfigFile(library, configFilePath);
+            config = LoadAndValidateCustomXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
             library.InitializeLibrary(config);
+        }
+
+        /// <summary>
+        /// Initializes a dynamic custom XML configurable library based on an XML configuration.
+        /// </summary>
+        /// <param name="library">Specifies a dynamic custom XML configurable library.</param>
+        /// <param name="configFilePath">Specifies an XML configuration file path.</param>
+        private void InitializeDynamicCustomXmlConfigurableLibrary(IDynamicCustomXmlConfigurableLibrary library, string configFilePath)
+        {
+            library.LibraryState = CreateCustomXmlConfigurableLibraryState(library, configFilePath);
         }
 
         /// <summary>
@@ -300,7 +310,10 @@ namespace Juhta.Net.LibraryManagement
 
                             // Initialize the library based on the configuration file
 
-                            if (libraryHandle is ICustomXmlConfigurableLibrary)
+                            if (libraryHandle is IDynamicCustomXmlConfigurableLibrary)
+                                InitializeDynamicCustomXmlConfigurableLibrary((IDynamicCustomXmlConfigurableLibrary)libraryHandle, configFilePath);
+
+                            else if (libraryHandle is ICustomXmlConfigurableLibrary)
                                 InitializeCustomXmlConfigurableLibrary((ICustomXmlConfigurableLibrary)libraryHandle, configFilePath);
 
                             // Add other configurable library types here
@@ -377,26 +390,23 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Loads and validates an XML configuration file againts the XML schema(s) of a custom XML configurable
-        /// library.
+        /// Loads and validates an XML configuration file againts XML schemas.
         /// </summary>
-        /// <param name="library">Specifies an <see cref="ICustomXmlConfigurableLibrary"/> object.</param>
-        /// <param name="configFileName">Specifies an XML configuration file name.</param>
+        /// <param name="configFilePath">Specifies an XML configuration file path.</param>
+        /// <param name="configSchemas">Specifies an array of XML schemas. Can be null in which case the validation
+        /// will be ignored.</param>
+        /// <param name="libraryFileName">Specifies the file name of a library to which the XML schemas relate.</param>
         /// <returns>Returns an <see cref="XmlDocument"/> object containing the validated XML configuration.</returns>
-        private static XmlDocument LoadAndValidateCustomXmlConfigFile(ICustomXmlConfigurableLibrary library, string configFileName)
+        private static XmlDocument LoadAndValidateCustomXmlConfigFile(string configFilePath, XmlSchema[] configSchemas, string libraryFileName)
         {
             XmlDocument config;
-            string configFilePath;
-            XmlSchema[] configSchemas;
             XmlValidator validator;
 
             config = new XmlDocument();
 
-            configFilePath = Startup.ConfigDirectory + Path.DirectorySeparatorChar + configFileName;
-
             config.Load(configFilePath);
 
-            if ((configSchemas = library.GetConfigSchemas()) == null)
+            if (configSchemas == null)
                 return(config);
 
             try
@@ -413,7 +423,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (XmlSchemaValidationException ex)
             {
-                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, GetLibraryFileName(library)), ex);
+                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, libraryFileName), ex);
             }
         }
 
@@ -444,7 +454,7 @@ namespace Juhta.Net.LibraryManagement
                 {
                     try
                     {
-                        libraryState = CreateLibraryState(library, e.Name);
+                        libraryState = CreateLibraryState(library, e.FullPath);
                     }
 
                     catch (Exception ex)

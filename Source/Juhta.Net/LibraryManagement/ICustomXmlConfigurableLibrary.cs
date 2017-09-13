@@ -13,7 +13,7 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for custom XML configurable libraries. A library is custom XML configurable if it is
-    /// configurable and the configuration is done by a custom XML configuration.
+    /// configurable and the configuration is done with a custom XML configuration.
     /// </summary>
     public interface ICustomXmlConfigurableLibrary : IConfigurableLibrary
     {
@@ -23,8 +23,8 @@ namespace Juhta.Net.LibraryManagement
         /// Gets the XML schemas to which configuration files must conform.
         /// </summary>
         /// <returns>Returns an array of <see cref="XmlSchema"/> objects.</returns>
-        /// <remarks>The return value null indicates that the configuration of the library is not XML schema
-        /// controlled.</remarks>
+        /// <remarks>The return value null indicates that the configuration of the library is not controlled by XML
+        /// schemas.</remarks>
         XmlSchema[] GetConfigSchemas();
 
         /// <summary>

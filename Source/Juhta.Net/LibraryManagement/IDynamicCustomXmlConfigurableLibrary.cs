@@ -7,14 +7,16 @@
 //
 
 using System.Xml;
+using System.Xml.Schema;
 
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
-    /// configurable library if it is custom XML configurable and its configuration can be changed at the runtime.
+    /// configurable library if it is dynamic, configurable and the configuration is done with a custom XML
+    /// configuration.
     /// </summary>
-    public interface IDynamicCustomXmlConfigurableLibrary : ICustomXmlConfigurableLibrary, IDynamicLibrary
+    public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibrary
     {
         #region Methods
 
@@ -26,6 +28,14 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns an <see cref="ILibraryState"/> object containing the library state created based on the
         /// specified <see cref="XmlDocument"/> object.</returns>
         ILibraryState CreateLibraryState(XmlDocument config);
+
+        /// <summary>
+        /// Gets the XML schemas to which configuration files must conform.
+        /// </summary>
+        /// <returns>Returns an array of <see cref="XmlSchema"/> objects.</returns>
+        /// <remarks>The return value null indicates that the configuration of the library is not controlled by XML
+        /// schemas.</remarks>
+        XmlSchema[] GetConfigSchemas();
 
         #endregion
     }

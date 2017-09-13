@@ -2537,7 +2537,7 @@
         <member name="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary">
             <summary>
             Defines an interface for custom XML configurable libraries. A library is custom XML configurable if it is
-            configurable and the configuration is done by a custom XML configuration.
+            configurable and the configuration is done with a custom XML configuration.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas">
@@ -2545,8 +2545,8 @@
             Gets the XML schemas to which configuration files must conform.
             </summary>
             <returns>Returns an array of <see cref="T:System.Xml.Schema.XmlSchema"/> objects.</returns>
-            <remarks>The return value null indicates that the configuration of the library is not XML schema
-            controlled.</remarks>
+            <remarks>The return value null indicates that the configuration of the library is not controlled by XML
+            schemas.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)">
             <summary>
@@ -2558,7 +2558,8 @@
         <member name="T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary">
             <summary>
             Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
-            configurable library if it is custom XML configurable and its configuration can be changed at the runtime.
+            configurable library if it is dynamic, configurable and the configuration is done with a custom XML
+            configuration.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState(System.Xml.XmlDocument)">
@@ -2569,6 +2570,14 @@
             library.</param>
             <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object containing the library state created based on the
             specified <see cref="T:System.Xml.XmlDocument"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas">
+            <summary>
+            Gets the XML schemas to which configuration files must conform.
+            </summary>
+            <returns>Returns an array of <see cref="T:System.Xml.Schema.XmlSchema"/> objects.</returns>
+            <remarks>The return value null indicates that the configuration of the library is not controlled by XML
+            schemas.</remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary">
             <summary>
@@ -2873,7 +2882,7 @@
             Creates a library state for a dynamic custom XML configurable library based on an XML configuration file.
             </summary>
             <param name="library">Specifies a dynamic custom XML configurable library.</param>
-            <param name="configFileName">Specifies an XML configuration file name.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,System.String)">
@@ -2881,7 +2890,7 @@
             Creates a library state for a dynamic library based on a configuration file.
             </summary>
             <param name="library">Specifies a dynamic library.</param>
-            <param name="configFileName">Specifies a configuration file name.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.GetLibraryFileName(System.Object)">
@@ -2898,6 +2907,13 @@
             <param name="library">Specifies a custom XML configurable library.</param>
             <param name="configFilePath">Specifies an XML configuration file path.</param>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeDynamicCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a dynamic custom XML configurable library based on an XML configuration.
+            </summary>
+            <param name="library">Specifies a dynamic custom XML configurable library.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
             Initializes the library specified by a library handle.
@@ -2912,13 +2928,14 @@
             <returns>Returns true if the library specified by the library handle is already initialized, otherwise
             false.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateCustomXmlConfigFile(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateCustomXmlConfigFile(System.String,System.Xml.Schema.XmlSchema[],System.String)">
             <summary>
-            Loads and validates an XML configuration file againts the XML schema(s) of a custom XML configurable
-            library.
+            Loads and validates an XML configuration file againts XML schemas.
             </summary>
-            <param name="library">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary"/> object.</param>
-            <param name="configFileName">Specifies an XML configuration file name.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+            <param name="configSchemas">Specifies an array of XML schemas. Can be null in which case the validation
+            will be ignored.</param>
+            <param name="libraryFileName">Specifies the file name of a library to which the XML schemas relate.</param>
             <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated XML configuration.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.OnConfigFileCreatedOrChanged(System.Object,System.IO.FileSystemEventArgs)">
