@@ -3402,13 +3402,13 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error071">
             <summary>
-            An error occurred when the processes of the library '{0}' were being stopped.
+            An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning072">
             <summary>
-            At least one error occurred when the startable processes of the library '{0}' were stopped. All resources
-            and services of these processes may not have been completely released or shutted down.
+            At least one error occurred when the processes of the library '{0}' were being stopped. All resources and
+            services of these processes may not have been completely released or shutted down.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning073">

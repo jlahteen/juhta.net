@@ -151,7 +151,15 @@ namespace Juhta.Net.LibraryManagement
 
                 if (startableLibrary != null && !startableLibrary.StopProcesses())
                     Logger.LogWarning(LibraryMessages.Warning072, libraryHandle.LibraryFileName);
+            }
 
+            catch (Exception ex)
+            {
+                Logger.LogError(LibraryMessages.Error071.FormatMessage(libraryHandle.LibraryFileName, ex));
+            }
+
+            try
+            {
                 // Close the library
 
                 closableLibrary = libraryHandle as IClosableLibrary;

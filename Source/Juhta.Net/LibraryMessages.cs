@@ -424,15 +424,15 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error070 = MessageFactory.CreateErrorMessage("An error occurred when the processes of the library '{0}' were being started.");
 
         /// <summary>
-        /// An error occurred when the processes of the library '{0}' were being stopped.
+        /// An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}
         /// </summary>
-        internal static readonly ErrorMessage Error071 = MessageFactory.CreateErrorMessage("An error occurred when the processes of the library '{0}' were being stopped.");
+        internal static readonly ErrorMessage Error071 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}");
 
         /// <summary>
-        /// At least one error occurred when the startable processes of the library '{0}' were stopped. All resources
-        /// and services of these processes may not have been completely released or shutted down.
+        /// At least one error occurred when the processes of the library '{0}' were being stopped. All resources and
+        /// services of these processes may not have been completely released or shutted down.
         /// </summary>
-        internal static readonly WarningMessage Warning072 = MessageFactory.CreateWarningMessage("At least one error occurred when the startable processes of the library '{0}' were stopped. All resources and services of these processes may not have been completely released or shutted down.");
+        internal static readonly WarningMessage Warning072 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes of the library '{0}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         /// <summary>
         /// At least one error occurred when the startable processes in the current state of the library '{0}' were
