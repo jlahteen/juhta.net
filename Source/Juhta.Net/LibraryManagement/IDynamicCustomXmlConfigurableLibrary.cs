@@ -6,7 +6,6 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using System.Xml;
 using System.Xml.Schema;
 
 namespace Juhta.Net.LibraryManagement
@@ -21,13 +20,10 @@ namespace Juhta.Net.LibraryManagement
         #region Methods
 
         /// <summary>
-        /// Creates a library state based on an XML document containing a configuration for the library.
+        /// Creates an uninitialized custom XML configurable library state.
         /// </summary>
-        /// <param name="config">Specifies an <see cref="XmlDocument"/> object containing an XML configuration for the
-        /// library.</param>
-        /// <returns>Returns an <see cref="ILibraryState"/> object containing the library state created based on the
-        /// specified <see cref="XmlDocument"/> object.</returns>
-        ILibraryState CreateLibraryState(XmlDocument config);
+        /// <returns>Returns an uninitialized <see cref="ICustomXmlConfigurableLibraryState"/> object.</returns>
+        ICustomXmlConfigurableLibraryState CreateLibraryState();
 
         /// <summary>
         /// Gets the XML schemas to which configuration files must conform.

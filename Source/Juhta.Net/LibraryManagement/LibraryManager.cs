@@ -201,31 +201,37 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Creates a library state for a dynamic custom XML configurable library based on an XML configuration file.
+        /// Creates an initialized library state for a dynamic custom XML configurable library based on an XML
+        /// configuration file.
         /// </summary>
         /// <param name="library">Specifies a dynamic custom XML configurable library.</param>
         /// <param name="configFilePath">Specifies an XML configuration file path.</param>
-        /// <returns>Returns the created <see cref="ILibraryState"/> object.</returns>
-        private ILibraryState CreateCustomXmlConfigurableLibraryState(IDynamicCustomXmlConfigurableLibrary library, string configFilePath)
+        /// <returns>Returns the created and initialized <see cref="ILibraryState"/> object.</returns>
+        private ILibraryState CreateLibraryState(IDynamicCustomXmlConfigurableLibrary library, string configFilePath)
         {
             XmlDocument config;
+            ICustomXmlConfigurableLibraryState libraryState;
 
-            config = LoadAndValidateCustomXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
+            config = LoadAndValidateXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
-            return(library.CreateLibraryState(config));
+            libraryState = library.CreateLibraryState();
+
+            libraryState.Initialize(config);
+
+            return(libraryState);
         }
 
         /// <summary>
-        /// Creates a library state for a dynamic library based on a configuration file.
+        /// Creates an initialized library state for a dynamic library based on a configuration file.
         /// </summary>
         /// <param name="library">Specifies a dynamic library.</param>
         /// <param name="configFilePath">Specifies a configuration file path.</param>
-        /// <returns>Returns the created <see cref="ILibraryState"/> object.</returns>
+        /// <returns>Returns the created and initialized <see cref="ILibraryState"/> object.</returns>
         private ILibraryState CreateLibraryState(IDynamicLibrary library, string configFilePath)
         {
             // Case dynamic custom XML configurable library
             if (library is IDynamicCustomXmlConfigurableLibrary)
-                return(CreateCustomXmlConfigurableLibraryState((IDynamicCustomXmlConfigurableLibrary)library, configFilePath));
+                return(CreateLibraryState((IDynamicCustomXmlConfigurableLibrary)library, configFilePath));
 
             // Add other dynamic library types here
             // ...
@@ -254,7 +260,7 @@ namespace Juhta.Net.LibraryManagement
         {
             XmlDocument config;
 
-            config = LoadAndValidateCustomXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
+            config = LoadAndValidateXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
             library.InitializeLibrary(config);
         }
@@ -266,7 +272,7 @@ namespace Juhta.Net.LibraryManagement
         /// <param name="configFilePath">Specifies an XML configuration file path.</param>
         private void InitializeDynamicCustomXmlConfigurableLibrary(IDynamicCustomXmlConfigurableLibrary library, string configFilePath)
         {
-            library.LibraryState = CreateCustomXmlConfigurableLibraryState(library, configFilePath);
+            library.LibraryState = CreateLibraryState(library, configFilePath);
         }
 
         /// <summary>
@@ -405,7 +411,7 @@ namespace Juhta.Net.LibraryManagement
         /// will be ignored.</param>
         /// <param name="libraryFileName">Specifies the file name of a library to which the XML schemas relate.</param>
         /// <returns>Returns an <see cref="XmlDocument"/> object containing the validated XML configuration.</returns>
-        private static XmlDocument LoadAndValidateCustomXmlConfigFile(string configFilePath, XmlSchema[] configSchemas, string libraryFileName)
+        private static XmlDocument LoadAndValidateXmlConfigFile(string configFilePath, XmlSchema[] configSchemas, string libraryFileName)
         {
             XmlDocument config;
             XmlValidator validator;

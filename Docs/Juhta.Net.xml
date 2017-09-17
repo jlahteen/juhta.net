@@ -2524,6 +2524,18 @@
             initialized only partially.</para>
             </remarks>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.IClosableLibraryState">
+            <summary>
+            Defines an interface for closable library states.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IClosableLibraryState.Close">
+            <summary>
+            Closes the library state.
+            </summary>
+            <remarks>Closing a library state means performing all necessary closing and cleanup actions on the objects
+            comprising the library state.</remarks>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
             <summary>
             Defines a base interface for configurable libraries. A library is configurable if it requires specific startup
@@ -2556,6 +2568,21 @@
             <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing an XML configuration for the
             library.</param>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState">
+            <summary>
+            Defines an interface for custom XML configurable library states.
+            </summary>
+            <remarks>Custom XML configurable library states relate to dynamic custom XML configurable libraries.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize(System.Xml.XmlDocument)">
+            <summary>
+            Initializes the library state based on a specified XML configuration.
+            </summary>
+            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing an XML configuration for the
+            library state.</param>
+            <remarks>Initializing a library state means performing all necessary actions on the objects comprising the
+            library state so that the state is ready to be set as the effective library state.</remarks>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary">
             <summary>
             Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
@@ -2563,14 +2590,11 @@
             configuration.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState">
             <summary>
-            Creates a library state based on an XML document containing a configuration for the library.
+            Creates an uninitialized custom XML configurable library state.
             </summary>
-            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing an XML configuration for the
-            library.</param>
-            <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object containing the library state created based on the
-            specified <see cref="T:System.Xml.XmlDocument"/> object.</returns>
+            <returns>Returns an uninitialized <see cref="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState"/> object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas">
             <summary>
@@ -2675,13 +2699,6 @@
             aggregate object containing a collection of reference-type or value-type objects created based on the
             configuration of the library.
             </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ILibraryState.Close">
-            <summary>
-            Closes the library state.
-            </summary>
-            <remarks>Closing a libary state means performing all necessary closing and cleanup actions on the objects
-            comprising the library state.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ILibraryState.Initialize">
             <summary>
@@ -2877,21 +2894,22 @@
             <returns>Returns a library state object that holds the default state for the specified library.</returns>
             <remarks>The default library state will be returned as initialized.</remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateCustomXmlConfigurableLibraryState(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
             <summary>
-            Creates a library state for a dynamic custom XML configurable library based on an XML configuration file.
+            Creates an initialized library state for a dynamic custom XML configurable library based on an XML
+            configuration file.
             </summary>
             <param name="library">Specifies a dynamic custom XML configurable library.</param>
             <param name="configFilePath">Specifies an XML configuration file path.</param>
-            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,System.String)">
             <summary>
-            Creates a library state for a dynamic library based on a configuration file.
+            Creates an initialized library state for a dynamic library based on a configuration file.
             </summary>
             <param name="library">Specifies a dynamic library.</param>
             <param name="configFilePath">Specifies a configuration file path.</param>
-            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.GetLibraryFileName(System.Object)">
             <summary>
@@ -2928,7 +2946,7 @@
             <returns>Returns true if the library specified by the library handle is already initialized, otherwise
             false.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateCustomXmlConfigFile(System.String,System.Xml.Schema.XmlSchema[],System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadAndValidateXmlConfigFile(System.String,System.Xml.Schema.XmlSchema[],System.String)">
             <summary>
             Loads and validates an XML configuration file againts XML schemas.
             </summary>
