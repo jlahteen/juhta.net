@@ -16,8 +16,7 @@ namespace Juhta.Net.LibraryManagement
         #region Methods
 
         /// <summary>
-        /// Closes the library, that is, performs required closing actions to release and shutdown the library
-        /// resources and services gracefully.
+        /// Closes the library, that is, performs required closing actions to release the library resources gracefully.
         /// </summary>
         /// <returns>Returns true if the library was closed without errors, or false if at least one error occurred in
         /// the closing process.</returns>

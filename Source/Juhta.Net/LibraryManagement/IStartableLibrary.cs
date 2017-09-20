@@ -10,7 +10,7 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for startable libraries. A library is a startable library if it contains at least one
-    /// process that has to be started prior to the library's services can be used.
+    /// process that has to be started prior to the library services can be used.
     /// </summary>
     interface IStartableLibrary
     {
@@ -29,7 +29,7 @@ namespace Juhta.Net.LibraryManagement
         /// <remarks>
         /// <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
         /// logged and the stopping process is continued for the rest of the processes. In other words, the method
-        /// should stop the processes as completely as possible.</para>
+        /// should stop the library processes as completely as possible.</para>
         /// <para>This method will be called even if the initialization process of the library has failed. This means
         /// that the method should prepare for such situation where the library processes have not been started at all
         /// or started only partially.</para>

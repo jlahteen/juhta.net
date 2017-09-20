@@ -186,7 +186,7 @@ namespace Juhta.Net.LibraryManagement
         private ILibraryState CreateDefaultLibraryState(IDynamicLibrary library)
         {
             IDynamicInitializableLibrary library2;
-            ILibraryState libraryState;
+            IDefaultLibraryState libraryState;
 
             if (!(library is IDynamicInitializableLibrary))
                 throw new LibraryStateException(LibraryMessages.Error058.FormatMessage(GetLibraryFileName(library), typeof(IDynamicInitializableLibrary).FullName));
@@ -214,7 +214,7 @@ namespace Juhta.Net.LibraryManagement
 
             config = LoadAndValidateXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
-            libraryState = library.CreateLibraryState();
+            libraryState = library.CreateCustomXmlConfigurableLibraryState();
 
             libraryState.Initialize(config);
 

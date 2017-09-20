@@ -23,7 +23,7 @@ namespace Juhta.Net.LibraryManagement
         /// Creates an uninitialized custom XML configurable library state.
         /// </summary>
         /// <returns>Returns an uninitialized <see cref="ICustomXmlConfigurableLibraryState"/> object.</returns>
-        ICustomXmlConfigurableLibraryState CreateLibraryState();
+        ICustomXmlConfigurableLibraryState CreateCustomXmlConfigurableLibraryState();
 
         /// <summary>
         /// Gets the XML schemas to which configuration files must conform.

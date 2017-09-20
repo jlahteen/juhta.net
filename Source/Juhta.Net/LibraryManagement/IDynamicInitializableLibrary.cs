@@ -19,9 +19,9 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Creates the default state for the library.
         /// </summary>
-        /// <returns>Returns an <see cref="ILibraryState"/> object containing the default state for the library.
+        /// <returns>Returns an <see cref="IDefaultLibraryState"/> object containing the default state for the library.
         /// </returns>
-        ILibraryState CreateDefaultLibraryState();
+        IDefaultLibraryState CreateDefaultLibraryState();
 
         #endregion
     }
