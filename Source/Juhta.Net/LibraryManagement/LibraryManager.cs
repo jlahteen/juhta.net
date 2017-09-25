@@ -178,6 +178,38 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Closes a library state if necessary.
+        /// </summary>
+        /// <param name="libraryState">Specifies a library state. Can be null.</param>
+        /// <param name="warningMessage">Specifies a warning message for the operation.</param>
+        /// <param name="errorMessage">Specifies an error message for the operation.</param>
+        /// <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
+        private void CloseLibraryState(ILibraryState libraryState, WarningMessage warningMessage, ErrorMessage errorMessage)
+        {
+            IClosableLibraryState closableLibraryState;
+
+            if (libraryState == null)
+                return;
+
+            closableLibraryState = libraryState as IClosableLibraryState;
+
+            if (closableLibraryState == null)
+                // There is nothing to close
+                return;
+
+            try
+            {
+                if (!closableLibraryState.Close())
+                    Logger.LogWarning(warningMessage.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle)));
+            }
+
+            catch (Exception ex)
+            {
+                throw new LibraryStateException(errorMessage.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+            }
+        }
+
+        /// <summary>
         /// Creates the default library state for a specified dynamic library.
         /// </summary>
         /// <param name="library">Specifies a dynamic library.</param>
@@ -556,6 +588,61 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Starts the processes in a library state if necessary.
+        /// </summary>
+        /// <param name="libraryState">Specifies a library state.</param>
+        private void StartLibraryStateProcesses(ILibraryState libraryState)
+        {
+            IStartableLibraryState startableLibraryState = libraryState as IStartableLibraryState;
+
+            if (startableLibraryState == null)
+                // There is nothing to start
+                return;
+
+            try
+            {
+                startableLibraryState.StartProcesses();
+            }
+
+            catch (Exception ex)
+            {
+                throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+            }
+        }
+
+        /// <summary>
+        /// Stops the processes in a library state if necessary.
+        /// </summary>
+        /// <param name="libraryState">Specifies a library state. Can be null.</param>
+        /// <param name="warningMessage">Specifies a warning message for the operation.</param>
+        /// <param name="errorMessage">Specifies an error message for the operation.</param>
+        /// <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
+        private void StopLibraryStateProcesses(ILibraryState libraryState, WarningMessage warningMessage, ErrorMessage errorMessage)
+        {
+            IStartableLibraryState startableLibraryState;
+
+            if (libraryState == null)
+                return;
+
+            startableLibraryState = libraryState as IStartableLibraryState;
+
+            if (startableLibraryState == null)
+                // There is nothing to stop
+                return;
+
+            try
+            {
+                if (!startableLibraryState.StopProcesses())
+                    Logger.LogWarning(warningMessage.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle)));
+            }
+
+            catch (Exception ex)
+            {
+                throw new LibraryStateException(errorMessage.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+            }
+        }
+
+        /// <summary>
         /// Updates the state of a specified dynamic library.
         /// </summary>
         /// <param name="library">Specifies a dynamic library.</param>
@@ -572,24 +659,14 @@ namespace Juhta.Net.LibraryManagement
                 currentLibraryState = library.LibraryState;
 
                 // Try to stop the processes in the current library state if necessary
-
-                try
-                {
-                    if (library is IDynamicStartableLibrary)
-                        if (!((IDynamicStartableLibrary)library).StopProcesses(currentLibraryState))
-                            Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(GetLibraryFileName(library)));
-                }
-
-                catch (Exception ex)
-                {
-                    throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(GetLibraryFileName(library), ex));
-                }
+                StopLibraryStateProcesses(currentLibraryState, LibraryMessages.Warning073, LibraryMessages.Error059);
 
                 // Try to close the current library state
 
                 try
                 {
-                    currentLibraryState.Close();
+                    // TODO
+                    //currentLibraryState.Close();
                 }
 
                 catch (Exception ex)

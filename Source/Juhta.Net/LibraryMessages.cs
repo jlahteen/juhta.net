@@ -352,9 +352,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error058 = MessageFactory.CreateErrorMessage("Default library state could not be created because the library '{0}' does not support the required interface ('{1}').");
 
         /// <summary>
-        /// Startable processes in the current state of the library '{0}' could not be stopped.
+        /// Processes in the current state of the library '{0}' could not be stopped.
         /// </summary>
-        internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Startable processes in the current state of the library '{0}' could not be stopped.");
+        internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the current state of the library '{0}' could not be stopped.");
 
         /// <summary>
         /// Current state of the library '{0}' could not be closed.
@@ -362,9 +362,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Current state of the library '{0}' could not be closed.");
 
         /// <summary>
-        /// Startable processes in the new state of the library '{0}' could not be started.
+        /// Processes in the new state of the library '{0}' could not be started.
         /// </summary>
-        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Startable processes in the new state of the library '{0}' could not be started.");
+        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the new state of the library '{0}' could not be started.");
 
         /// <summary>
         /// New state of the library '{0}' could not be set.
@@ -435,11 +435,10 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning072 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes of the library '{0}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         /// <summary>
-        /// At least one error occurred when the startable processes in the current state of the library '{0}' were
-        /// stopped. All resources and services of these processes may not have been completely released or shutted
-        /// down.
+        /// At least one error occurred when the processes in the current state of the library '{0}' were stopped. All
+        /// resources and services of these processes may not have been completely released or shutted down.
         /// </summary>
-        internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the startable processes in the current state of the library '{0}' were stopped. All resources and services of these processes may not have been completely released or shutted down.");
+        internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the current state of the library '{0}' were stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         /// <summary>
         /// An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable

@@ -2510,8 +2510,7 @@
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IClosableLibrary.CloseLibrary">
             <summary>
-            Closes the library, that is, performs required closing actions to release and shutdown the library
-            resources and services gracefully.
+            Closes the library, that is, performs required closing actions to release the library resources gracefully.
             </summary>
             <returns>Returns true if the library was closed without errors, or false if at least one error occurred in
             the closing process.</returns>
@@ -2526,15 +2525,25 @@
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IClosableLibraryState">
             <summary>
-            Defines an interface for closable library states.
+            Defines an interface for closable library states. A library state is closable if it requires specific closing
+            actions.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IClosableLibraryState.Close">
             <summary>
-            Closes the library state.
+            Closes the library state, that is, performs required closing actions to release the library state resources
+            gracefully.
             </summary>
-            <remarks>Closing a library state means performing all necessary closing and cleanup actions on the objects
-            comprising the library state.</remarks>
+            <returns>Returns true if the library state was closed without errors, or false if at least one error
+            occurred in the closing process.</returns>
+            <remarks>
+            <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
+            logged and the closing process is continued for the rest of the closing actions. In other words, the method
+            should close the library state as completely as possible.</para>
+            <para>This method will be called even if the initialization process of the library state has failed. This
+            means that the method should prepare for such situation where the library state is not initialized at all
+            or initialized only partially.</para>
+            </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
             <summary>
@@ -2583,6 +2592,22 @@
             <remarks>Initializing a library state means performing all necessary actions on the objects comprising the
             library state so that the state is ready to be set as the effective library state.</remarks>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.IDefaultLibraryState">
+            <summary>
+            Defines an interface for default library states.
+            </summary>
+            <remarks>Default library states relate to dynamic initializable libraries.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize">
+            <summary>
+            Initializes the library state.
+            </summary>
+            <remarks>
+            <para>Initializing a library state means performing all necessary actions on the objects comprising the
+            library state so that the state is ready to be set as the effective library state.</para>
+            <para>Default library states don't require any configuration for initialization.</para>
+            </remarks>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary">
             <summary>
             Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
@@ -2590,7 +2615,7 @@
             configuration.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateCustomXmlConfigurableLibraryState">
             <summary>
             Creates an uninitialized custom XML configurable library state.
             </summary>
@@ -2614,7 +2639,7 @@
             <summary>
             Creates the default state for the library.
             </summary>
-            <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object containing the default state for the library.
+            <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.IDefaultLibraryState"/> object containing the default state for the library.
             </returns>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicLibrary">
@@ -2695,28 +2720,20 @@
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ILibraryState">
             <summary>
-            Defines an interface for classes that represent the state of a library. Typically, a library state is an
+            Defines a base interface for classes that represent the state of a library. Typically, a library state is an
             aggregate object containing a collection of reference-type or value-type objects created based on the
             configuration of the library.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.ILibraryState.Initialize">
+        <member name="P:Juhta.Net.LibraryManagement.ILibraryState.LibraryHandle">
             <summary>
-            Initializes the library state.
-            </summary>
-            <remarks>Initializing a library state means performing all necessary startup actions on the objects
-            comprising the library state so that the objects are ready to be set as the effective library state.</remarks>
-        </member>
-        <member name="P:Juhta.Net.LibraryManagement.ILibraryState.IsInitialized">
-            <summary>
-            Returns true if the library state is initialized, that is, the <see cref="M:Juhta.Net.LibraryManagement.ILibraryState.Initialize"/> method has been
-            called on this <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance, otherwise false.
+            Gets the handle of the library that owns this library state.
             </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IStartableLibrary">
             <summary>
             Defines an interface for startable libraries. A library is a startable library if it contains at least one
-            process that has to be started prior to the library's services can be used.
+            process that has to be started prior to the library services can be used.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses">
@@ -2733,10 +2750,36 @@
             <remarks>
             <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
             logged and the stopping process is continued for the rest of the processes. In other words, the method
-            should stop the processes as completely as possible.</para>
+            should stop the library processes as completely as possible.</para>
             <para>This method will be called even if the initialization process of the library has failed. This means
             that the method should prepare for such situation where the library processes have not been started at all
             or started only partially.</para>
+            </remarks>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.IStartableLibraryState">
+            <summary>
+            Defines an interface for startable library states. A library state is a startable if it contains at least one
+            process that has to be started prior to the library state services can be used.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IStartableLibraryState.StartProcesses">
+            <summary>
+            Starts the library state processes.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IStartableLibraryState.StopProcesses">
+            <summary>
+            Stops the library state processes.
+            </summary>
+            <returns>Returns true if the library state processes were stopped without errors, or false if at least one
+            error occurred in the stopping process.</returns>
+            <remarks>
+            <para>This method should not throw exceptions. It is recommended that, in case of an error, the error is
+            logged and the stopping process is continued for the rest of the processes. In other words, the method
+            should stop the library state processes as completely as possible.</para>
+            <para>This method will be called even if the initialization process of the library state has failed. This
+            means that the method should prepare for such situation where the library state processes have not been
+            started at all or started only partially.</para>
             </remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.LibraryClosingException">
@@ -2886,6 +2929,15 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Common.WarningMessage,Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            Closes a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state. Can be null.</param>
+            <param name="warningMessage">Specifies a warning message for the operation.</param>
+            <param name="errorMessage">Specifies an error message for the operation.</param>
+            <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
             <summary>
             Creates the default library state for a specified dynamic library.
@@ -2969,6 +3021,21 @@
             </summary>
             <param name="source">Specifies an event source.</param>
             <param name="e">Specifies event arguments.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Starts the processes in a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Common.WarningMessage,Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            Stops the processes in a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state. Can be null.</param>
+            <param name="warningMessage">Specifies a warning message for the operation.</param>
+            <param name="errorMessage">Specifies an error message for the operation.</param>
+            <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.UpdateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
@@ -3348,7 +3415,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error059">
             <summary>
-            Startable processes in the current state of the library '{0}' could not be stopped.
+            Processes in the current state of the library '{0}' could not be stopped.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error060">
@@ -3358,7 +3425,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error061">
             <summary>
-            Startable processes in the new state of the library '{0}' could not be started.
+            Processes in the new state of the library '{0}' could not be started.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error062">
@@ -3431,9 +3498,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning073">
             <summary>
-            At least one error occurred when the startable processes in the current state of the library '{0}' were
-            stopped. All resources and services of these processes may not have been completely released or shutted
-            down.
+            At least one error occurred when the processes in the current state of the library '{0}' were stopped. All
+            resources and services of these processes may not have been completely released or shutted down.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error074">

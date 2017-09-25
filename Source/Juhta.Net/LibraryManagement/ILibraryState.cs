@@ -14,5 +14,14 @@ namespace Juhta.Net.LibraryManagement
     /// configuration of the library.
     /// </summary>
     public interface ILibraryState
-    {}
+    {
+        #region Properties
+
+        /// <summary>
+        /// Gets the handle of the library that owns this library state.
+        /// </summary>
+        ILibraryHandle LibraryHandle {get;}
+
+        #endregion
+    }
 }
