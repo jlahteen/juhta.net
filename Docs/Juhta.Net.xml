@@ -2923,20 +2923,23 @@
             Clears all library collections of the class.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseDynamicLibrary(Juhta.Net.LibraryManagement.IDynamicLibrary)">
+            <summary>
+            Closes a specified dynamic library.
+            </summary>
+            <param name="library"></param>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
-            Closes a specified library.
+            Closes a specified non-dynamic library.
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Common.WarningMessage,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
             Closes a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
-            <param name="warningMessage">Specifies a warning message for the operation.</param>
-            <param name="errorMessage">Specifies an error message for the operation.</param>
-            <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
             <summary>
@@ -3022,20 +3025,24 @@
             <param name="source">Specifies an event source.</param>
             <param name="e">Specifies event arguments.</param>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryProcesses(Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Starts the processes of a specified non-dynamic library if necessary.
+            </summary>
+            <param name="libraryHandle">Specifies a library handle.</param>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
             Starts the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Common.WarningMessage,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,System.Boolean)">
             <summary>
             Stops the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
-            <param name="warningMessage">Specifies a warning message for the operation.</param>
-            <param name="errorMessage">Specifies an error message for the operation.</param>
-            <remarks>Warning and error message must contain a placeholder for a library file name.</remarks>
+            <param name="dynamicOperation">Specifies whether the operation is dynamic.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.UpdateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
@@ -3107,7 +3114,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error004">
             <summary>
-            Closing of the library '{0}' failed.
+            An unexpected error occurred when the library '{0}' was being closed: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning005">
@@ -3415,7 +3422,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error059">
             <summary>
-            Processes in the current state of the library '{0}' could not be stopped.
+            Processes in the current state of the library '{0}' could not be completely stopped. Dynamic operation
+            cannot be continued.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error060">
@@ -3482,7 +3490,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error070">
             <summary>
-            An error occurred when the processes of the library '{0}' were being started.
+            Processes of the library '{0}' could not be started.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error071">
@@ -3498,14 +3506,32 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning073">
             <summary>
-            At least one error occurred when the processes in the current state of the library '{0}' were stopped. All
-            resources and services of these processes may not have been completely released or shutted down.
+            At least one error occurred when the processes in the current state of the library '{0}' were being
+            stopped. All resources and services of these processes may not have been completely released or shutted
+            down.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error074">
             <summary>
             An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
             processes: {1}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error075">
+            <summary>
+            An unexpected error occurred when the processes in the current state of the library '{0}' were being
+            stopped: {1}
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning076">
+            <summary>
+            At least one error occurred when the current state of the library '{0}' was closed. All resources and
+            services of this library may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error077">
+            <summary>
+            An unexpected error occurred when the current state of the library '{0}' was closed: {1}
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">
