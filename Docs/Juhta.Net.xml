@@ -2782,19 +2782,6 @@
             started at all or started only partially.</para>
             </remarks>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.LibraryClosingException">
-            <summary>
-            This exception will be thrown when an error occurs in closing of a library.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryClosingException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an inner exception that is the actual cause for the library closing
-            error.</param>
-        </member>
         <member name="T:Juhta.Net.LibraryManagement.LibraryHandle">
             <summary>
             Defines an abstract base class for library handle classes.
