@@ -63,7 +63,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogAlert(AlertMessage message)
         {
-            WriteLogEvent(DiagnosticMessageType.Alert, message.Id, message.Message, null);
+            WriteLogEvent(DiagnosticMessageType.Alert, message.Id, null, message.Message, null);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogAlert(string message)
         {
-            WriteLogEvent(DiagnosticMessageType.Alert, null, message, null);
+            WriteLogEvent(DiagnosticMessageType.Alert, null, null, message, null);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogAlert(AlertMessage message, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Alert, message.Id, message.Message, args);
+            WriteLogEvent(DiagnosticMessageType.Alert, message.Id, null, message.Message, args);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogAlert(string messageFormat, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Alert, null, messageFormat, args);
+            WriteLogEvent(DiagnosticMessageType.Alert, null, null, messageFormat, args);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(ErrorMessage message)
         {
-            WriteLogEvent(DiagnosticMessageType.Error, message.Id, message.Message, null);
+            WriteLogEvent(DiagnosticMessageType.Error, message.Id, null, message.Message, null);
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Juhta.Net.Common
 
             DiagnosticMessage.TryGetMessageId(exception.Message, out messageId);
 
-            WriteLogEvent(DiagnosticMessageType.Error, messageId, exception.ToString(), null);
+            WriteLogEvent(DiagnosticMessageType.Error, messageId, exception, null, null);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(string message)
         {
-            WriteLogEvent(DiagnosticMessageType.Error, null, message, null);
+            WriteLogEvent(DiagnosticMessageType.Error, null, null, message, null);
         }
 
         /// <summary>
@@ -123,7 +123,23 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(ErrorMessage message, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Error, message.Id, message.Message, args);
+            WriteLogEvent(DiagnosticMessageType.Error, message.Id, null, message.Message, args);
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, ErrorMessage)"/>.
+        /// </summary>
+        public void LogError(Exception exception, ErrorMessage message)
+        {
+            WriteLogEvent(DiagnosticMessageType.Error, message.Id, exception, message.Message, null);
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, string)"/>.
+        /// </summary>
+        public void LogError(Exception exception, string message)
+        {
+            WriteLogEvent(DiagnosticMessageType.Error, null, exception, message, null);
         }
 
         /// <summary>
@@ -131,7 +147,23 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(string messageFormat, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Error, null, messageFormat, args);
+            WriteLogEvent(DiagnosticMessageType.Error, null, null, messageFormat, args);
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, ErrorMessage, object[])"/>.
+        /// </summary>
+        public void LogError(Exception exception, ErrorMessage message, params object[] args)
+        {
+            WriteLogEvent(DiagnosticMessageType.Error, message.Id, exception, message.Message, args);
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, string, object[])"/>.
+        /// </summary>
+        public void LogError(Exception exception, string messageFormat, params object[] args)
+        {
+            WriteLogEvent(DiagnosticMessageType.Error, null, exception, messageFormat, args);
         }
 
         /// <summary>
@@ -139,7 +171,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogEvent(DiagnosticMessage message)
         {
-            WriteLogEvent(message.Type, message.Id, message.Message, null);
+            WriteLogEvent(message.Type, message.Id, null, message.Message, null);
         }
 
         /// <summary>
@@ -147,7 +179,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogEvent(DiagnosticMessage message, params object[] args)
         {
-            WriteLogEvent(message.Type, message.Id, message.Message, args);
+            WriteLogEvent(message.Type, message.Id, null, message.Message, args);
         }
 
         /// <summary>
@@ -155,7 +187,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogInformation(InformationMessage message)
         {
-            WriteLogEvent(DiagnosticMessageType.Information, message.Id, message.Message, null);
+            WriteLogEvent(DiagnosticMessageType.Information, message.Id, null, message.Message, null);
         }
 
         /// <summary>
@@ -163,7 +195,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogInformation(string message)
         {
-            WriteLogEvent(DiagnosticMessageType.Information, null, message, null);
+            WriteLogEvent(DiagnosticMessageType.Information, null, null, message, null);
         }
 
         /// <summary>
@@ -171,7 +203,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogInformation(InformationMessage message, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Information, message.Id, message.Message, args);
+            WriteLogEvent(DiagnosticMessageType.Information, message.Id, null, message.Message, args);
         }
 
         /// <summary>
@@ -179,7 +211,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogInformation(string messageFormat, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Information, null, messageFormat, args);
+            WriteLogEvent(DiagnosticMessageType.Information, null, null, messageFormat, args);
         }
 
         /// <summary>
@@ -187,7 +219,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogWarning(string message)
         {
-            WriteLogEvent(DiagnosticMessageType.Warning, null, message, null);
+            WriteLogEvent(DiagnosticMessageType.Warning, null, null, message, null);
         }
 
         /// <summary>
@@ -195,7 +227,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogWarning(WarningMessage message)
         {
-            WriteLogEvent(DiagnosticMessageType.Warning, message.Id, message.Message, null);
+            WriteLogEvent(DiagnosticMessageType.Warning, message.Id, null, message.Message, null);
         }
 
         /// <summary>
@@ -203,7 +235,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogWarning(string messageFormat, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Warning, null, messageFormat, args);
+            WriteLogEvent(DiagnosticMessageType.Warning, null, null, messageFormat, args);
         }
 
         /// <summary>
@@ -211,7 +243,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogWarning(WarningMessage message, params object[] args)
         {
-            WriteLogEvent(DiagnosticMessageType.Warning, message.Id, message.Message, args);
+            WriteLogEvent(DiagnosticMessageType.Warning, message.Id, null, message.Message, args);
         }
 
         #endregion
@@ -278,10 +310,11 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <param name="messageType">Specifies a message type.</param>
         /// <param name="messageId">Specifies a message ID.</param>
+        /// <param name="exception">Specifies an Exception object.</param>
         /// <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
         /// <param name="args">Specifies an array of format objects corresponding the format items in
         /// <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
-        private void WriteLogEvent(DiagnosticMessageType messageType, string messageId, string messageFormat, params object[] args)
+        private void WriteLogEvent(DiagnosticMessageType messageType, string messageId, Exception exception, string messageFormat, params object[] args)
         {
             Utf8FileWriter logFile = null;
             StringBuilder logEventInfo = new StringBuilder();
@@ -327,6 +360,14 @@ namespace Juhta.Net.Common
                     message = String.Format(messageFormat, args);
                 else
                     message = messageFormat;
+
+                if (exception != null)
+                {
+                    if (message != null)
+                        message += " ---> ";
+
+                    message += exception.ToString();
+                }
 
                 foreach (string line in Regex.Split(message, "\r\n|\r|\n"))
                     logFile.WriteLine(line);

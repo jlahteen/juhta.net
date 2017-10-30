@@ -75,12 +75,45 @@ namespace Juhta.Net.Common
         void LogError(ErrorMessage message, params object[] args);
 
         /// <summary>
+        /// Logs an error event consisting of an error message and exception.
+        /// </summary>
+        /// <param name="exception">Specifies an Exception object.</param>
+        /// <param name="message">Specifies an ErrorMessage object.</param>
+        void LogError(Exception exception, ErrorMessage message);
+
+        /// <summary>
+        /// Logs an error event consisting of an error message and exception.
+        /// </summary>
+        /// <param name="exception">Specifies an Exception object.</param>
+        /// <param name="message">Specifies an error message.</param>
+        void LogError(Exception exception, string message);
+
+        /// <summary>
         /// Logs an error event.
         /// </summary>
         /// <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
         /// <param name="args">Specifies an object array containing zero or more objects to format. These objects must
         /// correspond to the format items in <paramref name="messageFormat"/>.</param>
         void LogError(string messageFormat, params object[] args);
+
+        /// <summary>
+        /// Logs an error event consisting of an error message and exception.
+        /// </summary>
+        /// <param name="exception">Specifies an Exception object.</param>
+        /// <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
+        /// items.</param>
+        /// <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+        /// correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        void LogError(Exception exception, ErrorMessage message, params object[] args);
+
+        /// <summary>
+        /// Logs an error event consisting of an error message and exception.
+        /// </summary>
+        /// <param name="exception">Specifies an Exception object.</param>
+        /// <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
+        /// <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+        /// correspond to the format items in <paramref name="messageFormat"/>.</param>
+        void LogError(Exception exception, string messageFormat, params object[] args);
 
         /// <summary>
         /// Logs a diagnostic event.

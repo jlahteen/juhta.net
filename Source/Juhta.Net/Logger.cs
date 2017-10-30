@@ -223,6 +223,52 @@ namespace Juhta.Net
         }
 
         /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, ErrorMessage)"/>.
+        /// </summary>
+        public static void LogError(Exception exception, ErrorMessage message)
+        {
+            try
+            {
+                if (s_logger == null)
+                    return;
+
+                else if (s_logger.IsThreadSafe)
+                    s_logger.LogError(exception, message);
+
+                else
+                    lock(s_syncLock)
+                    {
+                        s_logger.LogError(exception, message);
+                    }
+            }
+
+            catch {}
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, string)"/>.
+        /// </summary>
+        public static void LogError(Exception exception, string message)
+        {
+            try
+            {
+                if (s_logger == null)
+                    return;
+
+                else if (s_logger.IsThreadSafe)
+                    s_logger.LogError(exception, message);
+
+                else
+                    lock(s_syncLock)
+                    {
+                        s_logger.LogError(exception, message);
+                    }
+            }
+
+            catch {}
+        }
+
+        /// <summary>
         /// See <see cref="ILogger.LogError(string, object[])"/>.
         /// </summary>
         public static void LogError(string messageFormat, params object[] args)
@@ -239,6 +285,52 @@ namespace Juhta.Net
                     lock(s_syncLock)
                     {
                         s_logger.LogError(messageFormat, args);
+                    }
+            }
+
+            catch {}
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, ErrorMessage, object[])"/>.
+        /// </summary>
+        public static void LogError(Exception exception, ErrorMessage message, params object[] args)
+        {
+            try
+            {
+                if (s_logger == null)
+                    return;
+
+                else if (s_logger.IsThreadSafe)
+                    s_logger.LogError(exception, message, args);
+
+                else
+                    lock(s_syncLock)
+                    {
+                        s_logger.LogError(exception, message, args);
+                    }
+            }
+
+            catch {}
+        }
+
+        /// <summary>
+        /// See <see cref="ILogger.LogError(Exception, string, object[])"/>.
+        /// </summary>
+        public static void LogError(Exception exception, string messageFormat, params object[] args)
+        {
+            try
+            {
+                if (s_logger == null)
+                    return;
+
+                else if (s_logger.IsThreadSafe)
+                    s_logger.LogError(exception, messageFormat, args);
+
+                else
+                    lock(s_syncLock)
+                    {
+                        s_logger.LogError(exception, messageFormat, args);
                     }
             }
 
