@@ -132,6 +132,85 @@ namespace Juhta.Net.LibraryManagement
         #region Private Methods
 
         /// <summary>
+        /// Changes the state of a specified dynamic library.
+        /// </summary>
+        /// <param name="library">Specifies a dynamic library.</param>
+        /// <param name="newLibraryState">Specifies a new library state.</param>
+        /// <returns>The return value true indicates a successful operation. The return value false means that the
+        /// operation failed but the current library state was successfully restored as the effective library state.</returns>
+        private bool ChangeLibraryState(IDynamicLibrary library, ILibraryState newLibraryState)
+        {
+            ILibraryState currentLibraryState;
+
+            // Acquire a write lock to the library state
+            library.LibraryStateLock.EnterWriteLock();
+
+            try
+            {
+                currentLibraryState = library.LibraryState;
+
+                // Try to stop the processes in the current library state if necessary
+
+                try
+                {
+                    StopLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, true);
+                }
+
+                catch
+                {
+                    // Failed to stop the processes in the current library state
+
+                    // We must continue running with the current library state
+
+                    // Close the new library state
+                    CloseLibraryState(newLibraryState, LibraryStateInstanceType.New);
+
+                    // Rethrow the exception
+                    throw;
+                }
+
+                // Try to start the processes in the new library state if necessary
+
+                try
+                {
+                    StartLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, true);
+                }
+
+                catch (Exception ex)
+                {
+                    // Failed to start the processes in the new library state
+
+                    // Try to restore the current library state
+
+                    if (TryToRestoreCurrentLibraryState(library, currentLibraryState, newLibraryState))
+                    {
+                        Logger.LogError(ex);
+
+                        return (false);
+                    }
+                    else
+                        throw;
+                }
+
+                // Set the new library state
+                library.LibraryState = newLibraryState;
+            }
+
+            finally
+            {
+                // Release the write lock to the library state
+                library.LibraryStateLock.ExitWriteLock();
+            }
+
+            // The operation was successful
+
+            // Close the current library state
+            CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current);
+
+            return (true);
+        }
+
+        /// <summary>
         /// Clears all library collections of the class.
         /// </summary>
         private void ClearLibraryCollections()
@@ -155,9 +234,9 @@ namespace Juhta.Net.LibraryManagement
             {
                 libraryState = library.LibraryState;
 
-                StopLibraryStateProcesses(libraryState, false);
+                StopLibraryStateProcesses(libraryState, LibraryStateInstanceType.Current, false);
 
-                CloseLibraryState(libraryState);
+                CloseLibraryState(libraryState, LibraryStateInstanceType.Current);
 
                 library.LibraryState = null;
             }
@@ -215,7 +294,8 @@ namespace Juhta.Net.LibraryManagement
         /// Closes a library state if necessary.
         /// </summary>
         /// <param name="libraryState">Specifies a library state. Can be null.</param>
-        private void CloseLibraryState(ILibraryState libraryState)
+        /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+        private void CloseLibraryState(ILibraryState libraryState, LibraryStateInstanceType instanceType)
         {
             IClosableLibraryState closableLibraryState;
 
@@ -231,12 +311,12 @@ namespace Juhta.Net.LibraryManagement
             try
             {
                 if (!closableLibraryState.Close())
-                    Logger.LogWarning(LibraryMessages.Warning076.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle)));
+                    Logger.LogWarning(LibraryMessages.Warning076.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
             }
 
             catch (Exception ex)
             {
-                Logger.LogError(LibraryMessages.Error077.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+                Logger.LogError(ex, LibraryMessages.Error077, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
             }
         }
 
@@ -431,7 +511,7 @@ namespace Juhta.Net.LibraryManagement
                 // Start the library processes if necessary
 
                 if (libraryHandle is IDynamicLibrary)
-                    StartLibraryStateProcesses(((IDynamicLibrary)libraryHandle).LibraryState);
+                    StartLibraryStateProcesses(((IDynamicLibrary)libraryHandle).LibraryState, LibraryStateInstanceType.New, true);
                 else
                     StartLibraryProcesses(libraryHandle);
             }
@@ -536,9 +616,10 @@ namespace Juhta.Net.LibraryManagement
 
                     try
                     {
-                        UpdateLibraryState(library, libraryState);
-
-                        Logger.LogInformation(LibraryMessages.Information065, e.FullPath, GetLibraryFileName(library));
+                        if (ChangeLibraryState(library, libraryState))
+                            Logger.LogInformation(LibraryMessages.Information065, e.FullPath, GetLibraryFileName(library));
+                        else
+                            Logger.LogWarning(LibraryMessages.Warning078, e.FullPath, GetLibraryFileName(library));
                     }
 
                     catch (Exception ex)
@@ -593,9 +674,10 @@ namespace Juhta.Net.LibraryManagement
 
                     try
                     {
-                        UpdateLibraryState(library, libraryState);
-
-                        Logger.LogInformation(LibraryMessages.Information012, e.FullPath, GetLibraryFileName(library));
+                        if (ChangeLibraryState(library, libraryState))
+                            Logger.LogInformation(LibraryMessages.Information012, e.FullPath, GetLibraryFileName(library));
+                        else
+                            Logger.LogWarning(LibraryMessages.Warning079, e.FullPath, GetLibraryFileName(library));
                     }
 
                     catch (Exception ex)
@@ -638,22 +720,35 @@ namespace Juhta.Net.LibraryManagement
         /// Starts the processes in a library state if necessary.
         /// </summary>
         /// <param name="libraryState">Specifies a library state.</param>
-        private void StartLibraryStateProcesses(ILibraryState libraryState)
+        /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+        /// <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+        /// <returns>Returns true if the operation succeeded, otherwise false.</returns>
+        /// <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
+        private bool StartLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions)
         {
             IStartableLibraryState startableLibraryState = libraryState as IStartableLibraryState;
 
             if (startableLibraryState == null)
                 // There is nothing to start
-                return;
+                return(true);
 
             try
             {
                 startableLibraryState.StartProcesses();
+
+                return(true);
             }
 
             catch (Exception ex)
             {
-                throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+                if (throwExceptions)
+                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle), ex));
+                else
+                {
+                    Logger.LogError(ex, LibraryMessages.Error061, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
+
+                    return(false);
+                }
             }
         }
 
@@ -661,115 +756,106 @@ namespace Juhta.Net.LibraryManagement
         /// Stops the processes in a library state if necessary.
         /// </summary>
         /// <param name="libraryState">Specifies a library state. Can be null.</param>
-        /// <param name="dynamicOperation">Specifies whether the operation is dynamic.</param>
-        private void StopLibraryStateProcesses(ILibraryState libraryState, bool dynamicOperation)
+        /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+        /// <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+        /// <returns>Returns true if the operation succeeded, otherwise false.</returns>
+        /// <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
+        private bool StopLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions)
         {
             IStartableLibraryState startableLibraryState;
 
             if (libraryState == null)
-                return;
+                return(true);
 
             startableLibraryState = libraryState as IStartableLibraryState;
 
             if (startableLibraryState == null)
                 // There is nothing to stop
-                return;
+                return(true);
 
             try
             {
                 if (!startableLibraryState.StopProcesses())
-                    if (dynamicOperation)
-                        throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle)));
+                    if (throwExceptions)
+                        throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
                     else
-                        Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle)));
+                    {
+                        Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
+
+                        return(false);
+                    }
+
+                return(true);
             }
 
             catch (Exception ex)
             {
-                if (dynamicOperation)
-                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+                if (throwExceptions)
+                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle), ex));
                 else
-                    Logger.LogError(LibraryMessages.Error075.FormatMessage(GetLibraryFileName(libraryState.LibraryHandle), ex));
+                {
+                    Logger.LogError(ex, LibraryMessages.Error075, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
+
+                    return(false);
+                }
             }
         }
 
         /// <summary>
-        /// Updates the state of a specified dynamic library.
+        /// Tries to restore the current state to a specified dynamic library.
         /// </summary>
         /// <param name="library">Specifies a dynamic library.</param>
+        /// <param name="currentLibraryState">Specifies the current library state.</param>
         /// <param name="newLibraryState">Specifies a new library state.</param>
-        private void UpdateLibraryState(IDynamicLibrary library, ILibraryState newLibraryState)
+        /// <returns>Returns true, if the restore operation was successful, otherwise false.</returns>
+        private bool TryToRestoreCurrentLibraryState(IDynamicLibrary library, ILibraryState currentLibraryState, ILibraryState newLibraryState)
         {
-            ILibraryState currentLibraryState;
-
-            // Acquire a write lock to the library state
-            library.LibraryStateLock.EnterWriteLock();
-
-            try
+            if (StopLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, false))
             {
-                currentLibraryState = library.LibraryState;
+                // We managed to stop the possibly started processes in the new library state, so we pick the current library state
 
-                try
-                {
-                    // Try to stop the processes in the current library state if necessary
-                    StopLibraryStateProcesses(currentLibraryState, true);
-                }
+                // Set the library's state to the current one
+                library.LibraryState = currentLibraryState;
 
-                catch
-                {
-                    // Failed to stop the processes in the current library state
+                // Close the new library state
+                CloseLibraryState(newLibraryState, LibraryStateInstanceType.New);
 
-                    // Close the new state
-                    CloseLibraryState(currentLibraryState);
-
-                    // Rethrow the exception
-                    throw;
-                }
-
-                // Try to start the processes in the new library state if necessary
-
-                try
-                {
-                    StartLibraryStateProcesses(newLibraryState);
-                }
-
-                catch (Exception ex)
-                {
-                    // Try to roll back what was possibly accomplished
-
-                    //TryToRestoreCurrentState(currentLibraryState, newLibraryState);
-
-                    try
-                    {
-                        ((IDynamicStartableLibrary)library).StopProcesses(newLibraryState);
-                    }
-
-                    catch (Exception ex2)
-                    {
-                        Logger.LogError(LibraryMessages.Error074.FormatMessage(GetLibraryFileName(library), ex2));
-                    }
-
-                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(GetLibraryFileName(library), ex));
-                }
-
-                // Finally, set the new library state
-
-                try
-                {
-                    library.LibraryState = newLibraryState;
-                }
-
-                catch (Exception ex)
-                {
-                    throw new LibraryStateException(LibraryMessages.Error062.FormatMessage(GetLibraryFileName(library), ex));
-                }
+                // Try to (re)start the processes in the current library state
+                return(StartLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, false));
             }
-
-            finally
+            else
             {
-                // Release the write lock to the library state
-                library.LibraryStateLock.ExitWriteLock();
+                // We couldn't be able to stop the possibly started processes in the new library state, so we must stick with the new one
+
+                // Set the library's state to the new one
+                library.LibraryState = newLibraryState;
+
+                // Close the current library state
+                CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current);
+
+                return(false);
             }
+        }
+
+        #endregion
+
+        #region Private Types
+
+        /// <summary>
+        /// Defines an enumeration for the logical instance types of <see cref="ILibraryState"/> objects. These types
+        /// are used in dynamic library state changes.
+        /// </summary>
+        private enum LibraryStateInstanceType
+        {
+            /// <summary>
+            /// Represents a new state for a dynamic library.
+            /// </summary>
+            New,
+
+            /// <summary>
+            /// Represents the current state of a dynamic library.
+            /// </summary>
+            Current
         }
 
         #endregion

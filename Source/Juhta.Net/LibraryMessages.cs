@@ -352,10 +352,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error058 = MessageFactory.CreateErrorMessage("Default library state could not be created because the library '{0}' does not support the required interface ('{1}').");
 
         /// <summary>
-        /// Processes in the current state of the library '{0}' could not be completely stopped. Dynamic operation
-        /// cannot be continued.
+        /// Processes in the {0} state of the library '{1}' could not be completely stopped.
         /// </summary>
-        internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the current state of the library '{0}' could not be completely stopped. Dynamic operation cannot be continued.");
+        internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be completely stopped.");
 
         /// <summary>
         /// Current state of the library '{0}' could not be closed.
@@ -363,9 +362,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Current state of the library '{0}' could not be closed.");
 
         /// <summary>
-        /// Processes in the new state of the library '{0}' could not be started.
+        /// Processes in the {0} state of the library '{1}' could not be started.
         /// </summary>
-        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the new state of the library '{0}' could not be started.");
+        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
 
         /// <summary>
         /// New state of the library '{0}' could not be set.
@@ -436,11 +435,10 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning072 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes of the library '{0}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         /// <summary>
-        /// At least one error occurred when the processes in the current state of the library '{0}' were being
-        /// stopped. All resources and services of these processes may not have been completely released or shutted
-        /// down.
+        /// At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped.
+        /// All resources and services of these processes may not have been completely released or shutted down.
         /// </summary>
-        internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the current state of the library '{0}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
+        internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         /// <summary>
         /// An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
@@ -449,21 +447,33 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable processes: {1}");
 
         /// <summary>
-        /// An unexpected error occurred when the processes in the current state of the library '{0}' were being
-        /// stopped: {1}
+        /// An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
         /// </summary>
-        internal static readonly ErrorMessage Error075 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes in the current state of the library '{0}' were being stopped: {1}");
+        internal static readonly ErrorMessage Error075 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.");
 
         /// <summary>
-        /// At least one error occurred when the current state of the library '{0}' was closed. All resources and
-        /// services of this library may not have been completely released or shutted down.
+        /// At least one error occurred when the {0} state of the library '{1}' was closed. All resources and services
+        /// of this library may not have been completely released or shutted down.
         /// </summary>
-        internal static readonly WarningMessage Warning076 = MessageFactory.CreateWarningMessage("At least one error occurred when the current state of the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.");
+        internal static readonly WarningMessage Warning076 = MessageFactory.CreateWarningMessage("At least one error occurred when the {0} state of the library '{1}' was closed. All resources and services of this library may not have been completely released or shutted down.");
 
         /// <summary>
-        /// An unexpected error occurred when the current state of the library '{0}' was closed: {1}
+        /// An unexpected error occurred when the {0} state of the library '{1}' was being closed.
         /// </summary>
-        internal static readonly ErrorMessage Error077 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the current state of the library '{0}' was closed: {1}");
+        internal static readonly ErrorMessage Error077 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the {0} state of the library '{1}' was being closed.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was created or changed but the state of the
+        /// associated dynamic library '{1}' could not be updated. NOTE: The library continues running with the current
+        /// state.
+        /// </summary>
+        internal static readonly WarningMessage Warning078 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was created or changed but the state of the associated dynamic library '{1}' could not be updated. NOTE: The library continues running with the current state.");
+
+        /// <summary>
+        /// Library Manager detected that the configuration file '{0}' was deleted but the state of the associated
+        /// dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
+        /// </summary>
+        internal static readonly WarningMessage Warning079 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.");
 
         #endregion
     }

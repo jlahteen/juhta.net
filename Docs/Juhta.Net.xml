@@ -861,9 +861,29 @@
             See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)"/>.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.Common.FileLogger.LogError(System.String,System.Object[])">
             <summary>
             See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Common.FileLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
@@ -936,12 +956,13 @@
             </summary>
             <returns>Returns the default log file path.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.String,System.String,System.Object[])">
+        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.String,System.Exception,System.String,System.Object[])">
             <summary>
             Writes a log event to the underlying log file.
             </summary>
             <param name="messageType">Specifies a message type.</param>
             <param name="messageId">Specifies a message ID.</param>
+            <param name="exception">Specifies an Exception object.</param>
             <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
             <param name="args">Specifies an array of format objects corresponding the format items in
             <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
@@ -1043,10 +1064,43 @@
             <param name="args">Specifies an object array containing zero or more objects to format. These objects must
             correspond to the format items in the Message property of <paramref name="message"/>.</param>
         </member>
+        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an ErrorMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])">
             <summary>
             Logs an error event.
             </summary>
+            <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
+            items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
             <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
             <param name="args">Specifies an object array containing zero or more objects to format. These objects must
             correspond to the format items in <paramref name="messageFormat"/>.</param>
@@ -2905,6 +2959,15 @@
             Stops the asynchronous watching of configuration file changes.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ChangeLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Changes the state of a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="newLibraryState">Specifies a new library state.</param>
+            <returns>The return value true indicates a successful operation. The return value false means that the
+            operation failed but the current library state was successfully restored as the effective library state.</returns>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ClearLibraryCollections">
             <summary>
             Clears all library collections of the class.
@@ -2922,11 +2985,12 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType)">
             <summary>
             Closes a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
             <summary>
@@ -3018,25 +3082,50 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean)">
             <summary>
             Starts the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <returns>Returns true if the operation succeeded, otherwise false.</returns>
+            <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,System.Boolean)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean)">
             <summary>
             Stops the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
-            <param name="dynamicOperation">Specifies whether the operation is dynamic.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <returns>Returns true if the operation succeeded, otherwise false.</returns>
+            <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.UpdateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.TryToRestoreCurrentLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.ILibraryState)">
             <summary>
-            Updates the state of a specified dynamic library.
+            Tries to restore the current state to a specified dynamic library.
             </summary>
             <param name="library">Specifies a dynamic library.</param>
+            <param name="currentLibraryState">Specifies the current library state.</param>
             <param name="newLibraryState">Specifies a new library state.</param>
+            <returns>Returns true, if the restore operation was successful, otherwise false.</returns>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType">
+            <summary>
+            Defines an enumeration for the logical instance types of <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> objects. These types
+            are used in dynamic library state changes.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType.New">
+            <summary>
+            Represents a new state for a dynamic library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType.Current">
+            <summary>
+            Represents the current state of a dynamic library.
+            </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_configFileWatcher">
             <summary>
@@ -3409,8 +3498,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error059">
             <summary>
-            Processes in the current state of the library '{0}' could not be completely stopped. Dynamic operation
-            cannot be continued.
+            Processes in the {0} state of the library '{1}' could not be completely stopped.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error060">
@@ -3420,7 +3508,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error061">
             <summary>
-            Processes in the new state of the library '{0}' could not be started.
+            Processes in the {0} state of the library '{1}' could not be started.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error062">
@@ -3493,9 +3581,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning073">
             <summary>
-            At least one error occurred when the processes in the current state of the library '{0}' were being
-            stopped. All resources and services of these processes may not have been completely released or shutted
-            down.
+            At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped.
+            All resources and services of these processes may not have been completely released or shutted down.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error074">
@@ -3506,19 +3593,31 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error075">
             <summary>
-            An unexpected error occurred when the processes in the current state of the library '{0}' were being
-            stopped: {1}
+            An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning076">
             <summary>
-            At least one error occurred when the current state of the library '{0}' was closed. All resources and
-            services of this library may not have been completely released or shutted down.
+            At least one error occurred when the {0} state of the library '{1}' was closed. All resources and services
+            of this library may not have been completely released or shutted down.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error077">
             <summary>
-            An unexpected error occurred when the current state of the library '{0}' was closed: {1}
+            An unexpected error occurred when the {0} state of the library '{1}' was being closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning078">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed but the state of the
+            associated dynamic library '{1}' could not be updated. NOTE: The library continues running with the current
+            state.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Warning079">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted but the state of the associated
+            dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">
@@ -3579,9 +3678,29 @@
             See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)"/>.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.Logger.LogError(System.String,System.Object[])">
             <summary>
             See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
