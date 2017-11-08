@@ -586,6 +586,7 @@ namespace Juhta.Net.LibraryManagement
         {
             List<IDynamicLibrary> dynamicLibraries;
             ILibraryState libraryState;
+            bool alert = false;
 
             try
             {
@@ -611,6 +612,8 @@ namespace Juhta.Net.LibraryManagement
                     {
                         Logger.LogError(LibraryMessages.Error064, e.FullPath, GetLibraryFileName(library), ex);
 
+                        alert = true;
+
                         continue;
                     }
 
@@ -619,12 +622,18 @@ namespace Juhta.Net.LibraryManagement
                         if (ChangeLibraryState(library, libraryState))
                             Logger.LogInformation(LibraryMessages.Information065, e.FullPath, GetLibraryFileName(library));
                         else
+                        {
                             Logger.LogWarning(LibraryMessages.Warning078, e.FullPath, GetLibraryFileName(library));
+
+                            alert = true;
+                        }
                     }
 
                     catch (Exception ex)
                     {
                         Logger.LogError(LibraryMessages.Error066, e.FullPath, GetLibraryFileName(library), ex);
+
+                        alert = true;
                     }
                 }
             }
@@ -632,7 +641,12 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 Logger.LogError(LibraryMessages.Error067, e.FullPath, ex);
+
+                alert = true;
             }
+
+            if (alert)
+                Logger.LogAlert(LibraryMessages.Alert005);
         }
 
         /// <summary>
@@ -644,6 +658,7 @@ namespace Juhta.Net.LibraryManagement
         {
             List<IDynamicLibrary> dynamicLibraries;
             ILibraryState libraryState;
+            bool alert = false;
 
             try
             {
@@ -669,6 +684,8 @@ namespace Juhta.Net.LibraryManagement
                     {
                         Logger.LogError(LibraryMessages.Error056, e.FullPath, GetLibraryFileName(library), ex);
 
+                        alert = true;
+
                         continue;
                     }
 
@@ -677,12 +694,18 @@ namespace Juhta.Net.LibraryManagement
                         if (ChangeLibraryState(library, libraryState))
                             Logger.LogInformation(LibraryMessages.Information012, e.FullPath, GetLibraryFileName(library));
                         else
+                        {
                             Logger.LogWarning(LibraryMessages.Warning079, e.FullPath, GetLibraryFileName(library));
+
+                            alert = true;
+                        }
                     }
 
                     catch (Exception ex)
                     {
                         Logger.LogError(LibraryMessages.Error057, e.FullPath, GetLibraryFileName(library), ex);
+
+                        alert = true;
                     }
                 }
             }
@@ -690,7 +713,12 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 Logger.LogError(LibraryMessages.Error013, e.FullPath, ex);
+
+                alert = true;
             }
+
+            if (alert)
+                Logger.LogAlert(LibraryMessages.Alert005);
         }
 
         /// <summary>
