@@ -3193,42 +3193,11 @@
             An unexpected error occurred when the library '{0}' was being closed: {1}
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryMessages.Warning005">
+        <member name="F:Juhta.Net.LibraryMessages.Alert005">
             <summary>
-            Library Manager detected that the configuration file '{0}' was updated, but the updated configuration
-            cannot be set into effect, because there is no dynamically configurable library associated with this
-            configuration file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Information006">
-            <summary>
-            Library Manager detected that the configuration file '{0}' was updated. The updated configuration was set
-            into effect successfully.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error007">
-            <summary>
-            Library Manager detected that the configuration file '{0}' was updated, but an attempt to set the updated
-            configuration into effect failed due to the following exception: {1}
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Warning008">
-            <summary>
-            Library Manager detected that the configuration file '{0}' was created, but the new configuration cannot be
-            set into effect, because there is no dynamically configurable library associated with this configuration
-            file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Information009">
-            <summary>
-            Library Manager detected that the configuration file '{0}' was created. The new configuration was set into
-            effect successfully.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error010">
-            <summary>
-            Library Manager detected that the configuration file '{0}' was created, but an attempt to set the new
-            configuration into effect failed due to the following exception: {1}
+            Library Manager detected changes in the configuration but failed to update the states of the associated
+            dynamic libraries. The state of the process may be unstable. Please refer to the log events for more
+            information.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning011">
@@ -3249,24 +3218,6 @@
             when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
             is currently unstable. You should restore the configuration file and possibly restart the process. The
             related exception was: {1}
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error014">
-            <summary>
-            A reference to the plug-in library '{0}' cannot be stored because in the PlugInLibraries class there is no
-            field for it.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Alert015">
-            <summary>
-            An unexpected error occurred when a configuration state was dynamically set to the library '{0}'. This
-            might cause some instability in the process, and therefore restarting the process should be considered. The
-            error occurred was: {1}
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error016">
-            <summary>
-            An error occurred when the replaced configuration state of the library '{0}' was closed: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -3501,19 +3452,9 @@
             Processes in the {0} state of the library '{1}' could not be completely stopped.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error060">
-            <summary>
-            Current state of the library '{0}' could not be closed.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.LibraryMessages.Error061">
             <summary>
             Processes in the {0} state of the library '{1}' could not be started.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error062">
-            <summary>
-            New state of the library '{0}' could not be set.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning063">
@@ -3583,12 +3524,6 @@
             <summary>
             At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped.
             All resources and services of these processes may not have been completely released or shutted down.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error074">
-            <summary>
-            An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
-            processes: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error075">

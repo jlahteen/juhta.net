@@ -49,42 +49,21 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error004 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the library '{0}' was being closed: {1}");
 
         /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was updated, but the updated configuration
-        /// cannot be set into effect, because there is no dynamically configurable library associated with this
-        /// configuration file.
+        /// Library Manager detected changes in the configuration but failed to update the states of the associated
+        /// dynamic libraries. The state of the process may be unstable. Please refer to the log events for more
+        /// information.
         /// </summary>
-        internal static readonly WarningMessage Warning005 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was updated, but the updated configuration cannot be set into effect, because there is no dynamically configurable library associated with this configuration file.");
+        internal static readonly AlertMessage Alert005 = MessageFactory.CreateAlertMessage("Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information.");
 
-        /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was updated. The updated configuration was set
-        /// into effect successfully.
-        /// </summary>
-        internal static readonly InformationMessage Information006 = MessageFactory.CreateInformationMessage("Library Manager detected that the configuration file '{0}' was updated. The updated configuration was set into effect successfully.");
+        // NOTE: Message ID 6 is free
 
-        /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was updated, but an attempt to set the updated
-        /// configuration into effect failed due to the following exception: {1}
-        /// </summary>
-        internal static readonly ErrorMessage Error007 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was updated, but an attempt to set the updated configuration into effect failed due to the following exception: {1}");
+        // NOTE: Message ID 7 is free
 
-        /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was created, but the new configuration cannot be
-        /// set into effect, because there is no dynamically configurable library associated with this configuration
-        /// file.
-        /// </summary>
-        internal static readonly WarningMessage Warning008 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was created, but the new configuration cannot be set into effect, because there is no dynamically configurable library associated with this configuration file.");
+        // NOTE: Message ID 8 is free
 
-        /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was created. The new configuration was set into
-        /// effect successfully.
-        /// </summary>
-        internal static readonly InformationMessage Information009 = MessageFactory.CreateInformationMessage("Library Manager detected that the configuration file '{0}' was created. The new configuration was set into effect successfully.");
+        // NOTE: Message ID 9 is free
 
-        /// <summary>
-        /// Library Manager detected that the configuration file '{0}' was created, but an attempt to set the new
-        /// configuration into effect failed due to the following exception: {1}
-        /// </summary>
-        internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created, but an attempt to set the new configuration into effect failed due to the following exception: {1}");
+        // NOTE: Message ID 10 is free
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
@@ -106,23 +85,11 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
 
-        /// <summary>
-        /// A reference to the plug-in library '{0}' cannot be stored because in the PlugInLibraries class there is no
-        /// field for it.
-        /// </summary>
-        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("A reference to the plug-in library '{0}' cannot be stored because in the PlugInLibraries class there is no field for it.");
+        // NOTE: Message ID 14 is free
 
-        /// <summary>
-        /// An unexpected error occurred when a configuration state was dynamically set to the library '{0}'. This
-        /// might cause some instability in the process, and therefore restarting the process should be considered. The
-        /// error occurred was: {1}
-        /// </summary>
-        internal static readonly AlertMessage Alert015 = MessageFactory.CreateAlertMessage("An unexpected error occurred when a configuration state was dynamically set to the library '{0}'. This might cause some instability in the process, and therefore restarting the process should be considered. The error occurred was: {1}");
+        // NOTE: Message ID 15 is free
 
-        /// <summary>
-        /// An error occurred when the replaced configuration state of the library '{0}' was closed: {1}
-        /// </summary>
-        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("An error occurred when the replaced configuration state of the library '{0}' was closed: {1}");
+        // NOTE: Message ID 16 is free
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library
@@ -356,20 +323,14 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be completely stopped.");
 
-        /// <summary>
-        /// Current state of the library '{0}' could not be closed.
-        /// </summary>
-        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Current state of the library '{0}' could not be closed.");
+        // NOTE: Message ID 60 is free
 
         /// <summary>
         /// Processes in the {0} state of the library '{1}' could not be started.
         /// </summary>
         internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
 
-        /// <summary>
-        /// New state of the library '{0}' could not be set.
-        /// </summary>
-        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("New state of the library '{0}' could not be set.");
+        // NOTE: Message ID 62 is free
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
@@ -440,11 +401,7 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
-        /// <summary>
-        /// An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable
-        /// processes: {1}
-        /// </summary>
-        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the new state of the library '{0}' was rolled back for the startable processes: {1}");
+        // NOTE: Message ID 74 is free
 
         /// <summary>
         /// An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
