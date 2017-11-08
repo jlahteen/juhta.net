@@ -156,7 +156,7 @@ namespace Juhta.Net.LibraryManagement
             {
                 // An error occurred when a pending configuration file event was being created
 
-                Logger.LogError(LibraryMessages.Error019, e.Name, ex);
+                Logger.LogError(ex, LibraryMessages.Error019, e.Name);
 
                 Logger.LogWarning(LibraryMessages.Warning020, e.Name);
             }
@@ -213,7 +213,7 @@ namespace Juhta.Net.LibraryManagement
             {
                 // An error occurred when a pending configuration file event was being raised
 
-                Logger.LogError(LibraryMessages.Error021, configFileName, ex);
+                Logger.LogError(ex, LibraryMessages.Error021, configFileName);
 
                 Logger.LogWarning(LibraryMessages.Warning020, configFileName);
             }

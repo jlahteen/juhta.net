@@ -268,7 +268,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (Exception ex)
             {
-                Logger.LogError(LibraryMessages.Error071.FormatMessage(libraryHandle.LibraryFileName, ex));
+                Logger.LogError(ex, LibraryMessages.Error071, libraryHandle.LibraryFileName);
             }
 
             try
@@ -286,7 +286,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (Exception ex)
             {
-                Logger.LogError(LibraryMessages.Error004.FormatMessage(libraryHandle.LibraryFileName), ex);
+                Logger.LogError(ex, LibraryMessages.Error004, libraryHandle.LibraryFileName);
             }
         }
 
@@ -610,7 +610,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error064, e.FullPath, GetLibraryFileName(library), ex);
+                        Logger.LogError(ex, LibraryMessages.Error064, e.FullPath, GetLibraryFileName(library));
 
                         alert = true;
 
@@ -631,7 +631,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error066, e.FullPath, GetLibraryFileName(library), ex);
+                        Logger.LogError(ex, LibraryMessages.Error066, e.FullPath, GetLibraryFileName(library));
 
                         alert = true;
                     }
@@ -640,7 +640,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (Exception ex)
             {
-                Logger.LogError(LibraryMessages.Error067, e.FullPath, ex);
+                Logger.LogError(ex, LibraryMessages.Error067, e.FullPath);
 
                 alert = true;
             }
@@ -682,7 +682,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error056, e.FullPath, GetLibraryFileName(library), ex);
+                        Logger.LogError(ex, LibraryMessages.Error056, e.FullPath, GetLibraryFileName(library));
 
                         alert = true;
 
@@ -703,7 +703,7 @@ namespace Juhta.Net.LibraryManagement
 
                     catch (Exception ex)
                     {
-                        Logger.LogError(LibraryMessages.Error057, e.FullPath, GetLibraryFileName(library), ex);
+                        Logger.LogError(ex, LibraryMessages.Error057, e.FullPath, GetLibraryFileName(library));
 
                         alert = true;
                     }
@@ -712,7 +712,7 @@ namespace Juhta.Net.LibraryManagement
 
             catch (Exception ex)
             {
-                Logger.LogError(LibraryMessages.Error013, e.FullPath, ex);
+                Logger.LogError(ex, LibraryMessages.Error013, e.FullPath);
 
                 alert = true;
             }

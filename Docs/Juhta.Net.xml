@@ -3190,7 +3190,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error004">
             <summary>
-            An unexpected error occurred when the library '{0}' was being closed: {1}
+            An unexpected error occurred when the library '{0}' was being closed.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Alert005">
@@ -3216,8 +3216,7 @@
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
             when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
-            is currently unstable. You should restore the configuration file and possibly restart the process. The
-            related exception was: {1}
+            is currently unstable. You should restore the configuration file and possibly restart the process.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -3228,13 +3227,13 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error018">
             <summary>
-            An unexpected error occurred in the closing process of {0}: {1}
+            An unexpected error occurred in the closing process of {0}.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error019">
             <summary>
             An error occurred when a pending configuration file event was being created for the configuration file
-            '{0}': {1}
+            '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning020">
@@ -3245,7 +3244,7 @@
         <member name="F:Juhta.Net.LibraryMessages.Error021">
             <summary>
             An error occurred when a pending configuration file event related to the configuration file '{0}' was being
-            raised: {1}
+            raised.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error022">
@@ -3430,15 +3429,14 @@
         <member name="F:Juhta.Net.LibraryMessages.Error056">
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
-            dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related
-            exception was: {2}
+            dynamic library '{1}' could not be initialized. The state of the library was left unmodified.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error057">
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
             dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
-            should restore the configuration file and possibly restart the process. The related exception was: {2}
+            should restore the configuration file and possibly restart the process.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error058">
@@ -3466,8 +3464,7 @@
         <member name="F:Juhta.Net.LibraryMessages.Error064">
             <summary>
             Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
-            associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The
-            related exception was: {2}
+            associated dynamic library '{1}' could not be updated. The state of the library was left unmodified.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Information065">
@@ -3480,8 +3477,7 @@
             <summary>
             Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
             associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently
-            unstable. You should restore the configuration file and possibly restart the process. The related exception
-            was: {2}
+            unstable. You should restore the configuration file and possibly restart the process.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error067">
@@ -3489,7 +3485,6 @@
             Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error
             occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the
             process is currently unstable. You should restore the configuration file and possibly restart the process.
-            The related exception was: {1}
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error068">
@@ -3511,7 +3506,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error071">
             <summary>
-            An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}
+            An unexpected error occurred when the processes of the library '{0}' were being stopped.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning072">

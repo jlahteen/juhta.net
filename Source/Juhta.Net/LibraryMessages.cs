@@ -44,9 +44,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error003 = MessageFactory.CreateErrorMessage("Initialization of the library '{0}' failed.");
 
         /// <summary>
-        /// An unexpected error occurred when the library '{0}' was being closed: {1}
+        /// An unexpected error occurred when the library '{0}' was being closed.
         /// </summary>
-        internal static readonly ErrorMessage Error004 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the library '{0}' was being closed: {1}");
+        internal static readonly ErrorMessage Error004 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the library '{0}' was being closed.");
 
         /// <summary>
         /// Library Manager detected changes in the configuration but failed to update the states of the associated
@@ -80,10 +80,9 @@ namespace Juhta.Net
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
         /// when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
-        /// is currently unstable. You should restore the configuration file and possibly restart the process. The
-        /// related exception was: {1}
+        /// is currently unstable. You should restore the configuration file and possibly restart the process.
         /// </summary>
-        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
+        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process.");
 
         // NOTE: Message ID 14 is free
 
@@ -98,15 +97,15 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning017 = MessageFactory.CreateWarningMessage("At least one error occurred when the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.");
 
         /// <summary>
-        /// An unexpected error occurred in the closing process of {0}: {1}
+        /// An unexpected error occurred in the closing process of {0}.
         /// </summary>
-        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred in the closing process of {0}: {1}");
+        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred in the closing process of {0}.");
 
         /// <summary>
         /// An error occurred when a pending configuration file event was being created for the configuration file
-        /// '{0}': {1}
+        /// '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error019 = MessageFactory.CreateErrorMessage("An error occurred when a pending configuration file event was being created for the configuration file '{0}': {1}");
+        internal static readonly ErrorMessage Error019 = MessageFactory.CreateErrorMessage("An error occurred when a pending configuration file event was being created for the configuration file '{0}'.");
 
         /// <summary>
         /// Dynamic configuration changes related to the configuration file '{0}' will probably not come into effect.
@@ -115,9 +114,9 @@ namespace Juhta.Net
 
         /// <summary>
         /// An error occurred when a pending configuration file event related to the configuration file '{0}' was being
-        /// raised: {1}
+        /// raised.
         /// </summary>
-        internal static readonly ErrorMessage Error021 = MessageFactory.CreateErrorMessage("An error occurred when a pending configuration file event related to the configuration file '{0}' was being raised: {1}");
+        internal static readonly ErrorMessage Error021 = MessageFactory.CreateErrorMessage("An error occurred when a pending configuration file event related to the configuration file '{0}' was being raised.");
 
         /// <summary>
         /// Library '{0}' does not exist in the directory '{1}'.
@@ -300,17 +299,16 @@ namespace Juhta.Net
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
-        /// dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related
-        /// exception was: {2}
+        /// dynamic library '{1}' could not be initialized. The state of the library was left unmodified.
         /// </summary>
-        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. The state of the library was left unmodified. The related exception was: {2}");
+        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. The state of the library was left unmodified.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
         /// dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
-        /// should restore the configuration file and possibly restart the process. The related exception was: {2}
+        /// should restore the configuration file and possibly restart the process.
         /// </summary>
-        internal static readonly ErrorMessage Error057 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {2}");
+        internal static readonly ErrorMessage Error057 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.");
 
         /// <summary>
         /// Default library state could not be created because the library '{0}' does not support the required
@@ -340,10 +338,9 @@ namespace Juhta.Net
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
-        /// associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The
-        /// related exception was: {2}
+        /// associated dynamic library '{1}' could not be updated. The state of the library was left unmodified.
         /// </summary>
-        internal static readonly ErrorMessage Error064 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. The state of the library was left unmodified. The related exception was: {2}");
+        internal static readonly ErrorMessage Error064 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. The state of the library was left unmodified.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, and the state of the
@@ -354,18 +351,16 @@ namespace Juhta.Net
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
         /// associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently
-        /// unstable. You should restore the configuration file and possibly restart the process. The related exception
-        /// was: {2}
+        /// unstable. You should restore the configuration file and possibly restart the process.
         /// </summary>
-        internal static readonly ErrorMessage Error066 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {2}");
+        internal static readonly ErrorMessage Error066 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but the state of the associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error
         /// occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the
         /// process is currently unstable. You should restore the configuration file and possibly restart the process.
-        /// The related exception was: {1}
         /// </summary>
-        internal static readonly ErrorMessage Error067 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process. The related exception was: {1}");
+        internal static readonly ErrorMessage Error067 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process.");
 
         /// <summary>
         /// Library state cannot be created for the library '{0}', because the library doesn't implement any of the
@@ -385,9 +380,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error070 = MessageFactory.CreateErrorMessage("Processes of the library '{0}' could not be started.");
 
         /// <summary>
-        /// An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}
+        /// An unexpected error occurred when the processes of the library '{0}' were being stopped.
         /// </summary>
-        internal static readonly ErrorMessage Error071 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes of the library '{0}' were being stopped: {1}");
+        internal static readonly ErrorMessage Error071 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes of the library '{0}' were being stopped.");
 
         /// <summary>
         /// At least one error occurred when the processes of the library '{0}' were being stopped. All resources and

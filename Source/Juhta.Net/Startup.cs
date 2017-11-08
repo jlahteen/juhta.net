@@ -48,7 +48,7 @@ namespace Juhta.Net
             catch (Exception ex)
             {
                 // We don't expect exceptions but such occurred anyway
-                Logger.LogError(LibraryMessages.Error018, FrameworkInfo.FrameworkName, ex);
+                Logger.LogError(ex, LibraryMessages.Error018, FrameworkInfo.FrameworkName);
             }
 
             finally
