@@ -13,7 +13,7 @@ namespace Juhta.Net.Tests
         [TestCleanup]
         public void TestCleanup()
         {
-            Startup.CloseFramework();
+            Startup.CloseApp();
         }
 
         [TestInitialize]
@@ -21,7 +21,7 @@ namespace Juhta.Net.Tests
         {
             DeleteConfigFilesAll();
 
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         #endregion

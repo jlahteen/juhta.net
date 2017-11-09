@@ -18,20 +18,20 @@ using System.Xml.Schema;
 namespace Juhta.Net
 {
     /// <summary>
-    /// A static class that provides methods for initializing and closing the framework.
+    /// A static class that provides methods for initializing and closing the application.
     /// </summary>
     public static class Startup
     {
         #region Public Methods
 
         /// <summary>
-        /// Closes the framework.
+        /// Closes the application by closing all initialized libraries.
         /// </summary>
-        public static void CloseFramework()
+        public static void CloseApp()
         {
-            // Check the state of the framework
-            if (s_frameworkState == FrameworkState.Uninitialized)
-                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("CloseFramework", typeof(Startup)));
+            // Check the state of the application
+            if (s_appState == AppState.Uninitialized)
+                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("CloseApp", typeof(Startup)));
 
             try
             {
@@ -48,13 +48,13 @@ namespace Juhta.Net
             catch (Exception ex)
             {
                 // We don't expect exceptions but such occurred anyway
-                Logger.LogError(ex, LibraryMessages.Error018, FrameworkInfo.FrameworkName);
+                Logger.LogError(ex, LibraryMessages.Error018);
             }
 
             finally
             {
-                // Update the state of the framework
-                s_frameworkState = FrameworkState.Uninitialized;
+                // Update the state of the application
+                s_appState = AppState.Uninitialized;
 
                 // Reset the rest of the static fields
 
@@ -67,43 +67,43 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Initializes the framework.
+        /// Initializes the application by initializing all configured libraries.
         /// </summary>
         /// <remarks>Log events will be written to the current user's temp directory and the configuration files are
         /// assumed to locate in the binary directory.</remarks>
-        public static void InitializeFramework()
+        public static void InitializeApp()
         {
-            InitializeFramework(null, null);
+            InitializeApp(null, null);
         }
 
         /// <summary>
-        /// Initializes the framework.
+        /// Initializes the application by initializing all configured libraries.
         /// </summary>
         /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
         /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
         /// specifies somehow an invalid log file.</param>
         /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
-        public static void InitializeFramework(string logFilePath)
+        public static void InitializeApp(string logFilePath)
         {
-            InitializeFramework(logFilePath, null);
+            InitializeApp(logFilePath, null);
         }
 
         /// <summary>
-        /// Initializes the framework.
+        /// Initializes the application by initializing all configured libraries.
         /// </summary>
         /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
         /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
         /// specifies somehow an invalid log file.</param>
         /// <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
         /// which case the configuration files are assumed to locate in the binary directory.</param>
-        public static void InitializeFramework(string logFilePath, string configDirectory)
+        public static void InitializeApp(string logFilePath, string configDirectory)
         {
             XmlDocument config;
             XmlNamespaceManager namespaceManager;
 
-            // Check the current state of the framework
-            if (s_frameworkState > FrameworkState.Uninitialized)
-                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("InitializeFramework", typeof(Startup)));
+            // Check the current state of the application
+            if (s_appState > AppState.Uninitialized)
+                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("InitializeApp", typeof(Startup)));
 
             try
             {
@@ -140,17 +140,20 @@ namespace Juhta.Net
                     s_libraryManager.StartConfigFileWatching();
                 }
 
-                // Update the state of the framework
-                s_frameworkState = FrameworkState.Initialized;
+                // Update the state of the application
+                s_appState = AppState.Initialized;
             }
 
             catch (Exception ex)
             {
                 // Log the exception
-                Logger.LogError(ex);
+                Logger.LogError(ex, LibraryMessages.Error006);
 
-                // Update the state of the framework
-                s_frameworkState = FrameworkState.PartlyInitialized;
+                // Log an alert
+                Logger.LogAlert(LibraryMessages.Alert007);
+
+                // Update the state of the application
+                s_appState = AppState.PartlyInitialized;
 
                 // Rethrow the exception
                 throw;
@@ -163,7 +166,7 @@ namespace Juhta.Net
 
         /// <summary>
         /// Gets the binary directory for the framework and application libraries. The return value is null if the
-        /// framework is not initialized.
+        /// application is not initialized.
         /// </summary>
         public static string BinDirectory
         {
@@ -172,7 +175,7 @@ namespace Juhta.Net
 
         /// <summary>
         /// Gets the configuration directory for the framework and application libraries. The return value is null if
-        /// the framework is not initialized.
+        /// the application is not initialized.
         /// </summary>
         public static string ConfigDirectory
         {
@@ -180,11 +183,11 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Returns true if the framework has been initialized, otherwise false.
+        /// Returns true if the application has been initialized, otherwise false.
         /// </summary>
-        public static bool IsFrameworkInitialized
+        public static bool IsAppInitialized
         {
-            get {return(s_frameworkState > FrameworkState.Uninitialized);}
+            get {return(s_appState > AppState.Uninitialized);}
         }
 
         #endregion
@@ -235,23 +238,23 @@ namespace Juhta.Net
         #region Private Types
 
         /// <summary>
-        /// Defines an enumeration for the states of the framework.
+        /// Defines an enumeration for the states of the application.
         /// </summary>
-        private enum FrameworkState
+        private enum AppState
         {
             /// <summary>
-            /// The framework is uninitialized.
+            /// The application is uninitialized.
             /// </summary>
             Uninitialized,
 
             /// <summary>
-            /// The framework is only partly initialized, that is, the initialization has not been completed due to an
-            /// error.
+            /// The application is only partly initialized, that is, the initialization has not been completed due to
+            /// an error.
             /// </summary>
             PartlyInitialized,
 
             /// <summary>
-            /// The framework has been successfully initialized.
+            /// The application has been successfully initialized.
             /// </summary>
             Initialized
         }
@@ -259,6 +262,11 @@ namespace Juhta.Net
         #endregion
 
         #region Private Fields
+
+        /// <summary>
+        /// Specifies the current state of the application.
+        /// </summary>
+        private static AppState s_appState;
 
         /// <summary>
         /// Stores the <see cref="BinDirectory"/> property.
@@ -271,12 +279,7 @@ namespace Juhta.Net
         private static string s_configDirectory;
 
         /// <summary>
-        /// Specifies the current state of the framework.
-        /// </summary>
-        private static FrameworkState s_frameworkState;
-
-        /// <summary>
-        /// Specifies the <see cref="LibraryManager"/> instance that was created when the framework was initialized.
+        /// Specifies the <see cref="LibraryManager"/> instance that was created when the application was initialized.
         /// </summary>
         private static LibraryManager s_libraryManager;
 

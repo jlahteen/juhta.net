@@ -55,9 +55,15 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly AlertMessage Alert005 = MessageFactory.CreateAlertMessage("Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information.");
 
-        // NOTE: Message ID 6 is free
+        /// <summary>
+        /// An error occurred when the application was being started.
+        /// </summary>
+        internal static readonly ErrorMessage Error006 = MessageFactory.CreateErrorMessage("An error occurred when the application was being started.");
 
-        // NOTE: Message ID 7 is free
+        /// <summary>
+        /// Application failed to start. Please refer to the log events for more information.
+        /// </summary>
+        internal static readonly AlertMessage Alert007 = MessageFactory.CreateAlertMessage("Application failed to start. Please refer to the log events for more information.");
 
         // NOTE: Message ID 8 is free
 
@@ -97,9 +103,9 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning017 = MessageFactory.CreateWarningMessage("At least one error occurred when the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.");
 
         /// <summary>
-        /// An unexpected error occurred in the closing process of {0}.
+        /// An unexpected error occurred when the application was being closed.
         /// </summary>
-        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred in the closing process of {0}.");
+        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the application was being closed.");
 
         /// <summary>
         /// An error occurred when a pending configuration file event was being created for the configuration file

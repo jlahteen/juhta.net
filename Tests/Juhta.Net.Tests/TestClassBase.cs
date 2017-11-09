@@ -117,12 +117,12 @@ namespace Juhta.Net.Tests
 
         protected void InitializeFramework()
         {
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         protected void InitializeFramework(string configLoadDirectory, string configFilePrefix)
         {
-            Startup.InitializeFramework(SetConfigFiles(configLoadDirectory, configFilePrefix));
+            Startup.InitializeApp(SetConfigFiles(configLoadDirectory, configFilePrefix));
         }
 
         protected static XmlDocument ReadXmlLog(string logFileName)

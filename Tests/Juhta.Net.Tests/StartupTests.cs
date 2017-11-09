@@ -17,8 +17,8 @@ namespace Juhta.Net.Tests
         [TestCleanup]
         public void TestCleanup()
         {
-            if (Startup.IsFrameworkInitialized)
-                Startup.CloseFramework();
+            if (Startup.IsAppInitialized)
+                Startup.CloseApp();
         }
 
         [TestInitialize]
@@ -45,16 +45,16 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void CloseFramework_FrameworkInitialized_ShouldReturn()
         {
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
 
-            Startup.CloseFramework();
+            Startup.CloseApp();
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
         public void CloseFramework_FrameworkNotInitialized_ShouldThrowInvalidOperationException()
         {
-            Startup.CloseFramework();
+            Startup.CloseApp();
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace Juhta.Net.Tests
         {
             SetConfigFiles("Root", "BrokenConfig_", ".");
 
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         [TestMethod]
@@ -73,9 +73,9 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "ClosableLibrary_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
-            Startup.CloseFramework();
+            Startup.CloseApp();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -85,7 +85,7 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void InitializeFramework_ConfigDirectoryGiven_NoConfigFiles_ShouldReturn()
         {
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
         }
 
         [TestMethod]
@@ -93,7 +93,7 @@ namespace Juhta.Net.Tests
         {
             SetConfigFiles("Root", "SimpleConfig_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
         }
 
         [TestMethod]
@@ -103,13 +103,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "ConfigurableAndClosableLibrary_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Startup.CloseFramework();
+            Startup.CloseApp();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -123,13 +123,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "ConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Startup.CloseFramework();
+            Startup.CloseApp();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -145,13 +145,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "ConfigurableAndClosableLibrary_CloseLibraryThrowsException_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Startup.CloseFramework();
+            Startup.CloseApp();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -167,7 +167,7 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "ConfigurableLibrary_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(473473383, libraryConfig.GetIntSetting());
 
@@ -184,7 +184,7 @@ namespace Juhta.Net.Tests
 
             try
             {
-                Startup.InitializeFramework(null, s_configDirectory);
+                Startup.InitializeApp(null, s_configDirectory);
             }
 
             catch
@@ -202,7 +202,7 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "InitializableLibrary_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(89473537, libraryConfig.GetIntSetting());
 
@@ -216,7 +216,7 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "InitializableLibrary_LibraryHandleClassNamespaceMissing_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(89473537, libraryConfig.GetIntSetting());
 
@@ -230,7 +230,7 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "InitializableLibrary_NoLibraryHandleClassSpecified_");
 
-            Startup.InitializeFramework(null, s_configDirectory);
+            Startup.InitializeApp(null, s_configDirectory);
 
             Assert.AreEqual<int>(121213, libraryConfig.GetIntSetting());
 
@@ -245,7 +245,7 @@ namespace Juhta.Net.Tests
 
             try
             {
-                Startup.InitializeFramework();
+                Startup.InitializeApp();
             }
 
             catch
@@ -259,7 +259,7 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void InitializeFramework_LogEventOutputToDefaultLogFile_ShouldReturn()
         {
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
 
             Logger.LogInformation("This event should produce a log file.");
 
@@ -273,7 +273,7 @@ namespace Juhta.Net.Tests
 
             logFilePath = GetTestLogDirectory() + "AppX.log";
 
-            Startup.InitializeFramework(logFilePath);
+            Startup.InitializeApp(logFilePath);
 
             Logger.LogInformation("This event should produce a log file.");
 
@@ -283,7 +283,7 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void InitializeFramework_NoParameters_NoConfigFiles_ShouldReturn()
         {
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         [TestMethod]
@@ -291,16 +291,16 @@ namespace Juhta.Net.Tests
         {
             SetConfigFiles("Root", "SimpleConfig_", ".");
 
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
         public void InitializeFramework_TwoSubsequentCalls_ShouldThrowInvalidOperationException()
         {
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
 
-            Startup.InitializeFramework();
+            Startup.InitializeApp();
         }
 
         #endregion
