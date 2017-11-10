@@ -21,10 +21,18 @@
   <!-- Define the root element -->
   <xs:element name="Juhta.Net" type="Juhta.NetType"/>
   
+  <!-- Define applicationType -->
+  <xs:complexType name="applicationType">
+    <xs:sequence>
+      <xs:element name="libraries" type="librariesType"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="optional"/>
+  </xs:complexType>
+  
   <!-- Define Juhta.NetType -->
   <xs:complexType name="Juhta.NetType">
     <xs:sequence>
-      <xs:element name="startup" type="startupType"/>
+      <xs:element name="application" type="applicationType"/>
     </xs:sequence>
   </xs:complexType>
   
@@ -32,13 +40,6 @@
   <xs:complexType name="librariesType">
     <xs:sequence>
       <xs:element name="library" type="libraryType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  
-  <!-- Define startupType -->
-  <xs:complexType name="startupType">
-    <xs:sequence>
-      <xs:element name="libraries" type="librariesType"/>
     </xs:sequence>
   </xs:complexType>
   

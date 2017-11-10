@@ -56,14 +56,14 @@ namespace Juhta.Net
         internal static readonly AlertMessage Alert005 = MessageFactory.CreateAlertMessage("Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information.");
 
         /// <summary>
-        /// An error occurred when the application was being started.
+        /// An error occurred when the application '{0}' was being started.
         /// </summary>
-        internal static readonly ErrorMessage Error006 = MessageFactory.CreateErrorMessage("An error occurred when the application was being started.");
+        internal static readonly ErrorMessage Error006 = MessageFactory.CreateErrorMessage("An error occurred when the application '{0}' was being started.");
 
         /// <summary>
-        /// Application failed to start. Please refer to the log events for more information.
+        /// Application '{0}' failed to start. Please refer to the log events for more information.
         /// </summary>
-        internal static readonly AlertMessage Alert007 = MessageFactory.CreateAlertMessage("Application failed to start. Please refer to the log events for more information.");
+        internal static readonly AlertMessage Alert007 = MessageFactory.CreateAlertMessage("Application '{0}' failed to start. Please refer to the log events for more information.");
 
         // NOTE: Message ID 8 is free
 
@@ -103,9 +103,9 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning017 = MessageFactory.CreateWarningMessage("At least one error occurred when the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.");
 
         /// <summary>
-        /// An unexpected error occurred when the application was being closed.
+        /// An unexpected error occurred when the application '{0}' was being closed.
         /// </summary>
-        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the application was being closed.");
+        internal static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the application '{0}' was being closed.");
 
         /// <summary>
         /// An error occurred when a pending configuration file event was being created for the configuration file

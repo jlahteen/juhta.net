@@ -4,6 +4,125 @@
         <name>Juhta.Net</name>
     </assembly>
     <members>
+        <member name="T:Juhta.Net.Application">
+            <summary>
+            A static class that provides methods for initializing and closing the application.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.Close">
+            <summary>
+            Closes the application.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.Initialize">
+            <summary>
+            Initializes the application.
+            </summary>
+            <remarks>Log events will be written to the current user's temp directory and the configuration files are
+            assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.Initialize(System.String)">
+            <summary>
+            Initializes the application.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies somehow an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.Initialize(System.String,System.String)">
+            <summary>
+            Initializes the application.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies somehow an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
+            which case the configuration files are assumed to locate in the binary directory.</param>
+        </member>
+        <member name="P:Juhta.Net.Application.BinDirectory">
+            <summary>
+            Gets the binary directory for the framework and application libraries. The return value is null if the
+            application is not initialized.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Application.ConfigDirectory">
+            <summary>
+            Gets the configuration directory for the framework and application libraries. The return value is null if
+            the application is not initialized.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Application.IsInitialized">
+            <summary>
+            Returns true if the application has been initialized, otherwise false.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Application.Name">
+            <summary>
+            Gets the name of the application.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.InitializeName(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
+            <summary>
+            Initializes the name of the application based on a specified configuration.
+            </summary>
+            <param name="rootConfig">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration.</param>
+            <param name="namespaceManager">Specifies an <see cref="T:System.Xml.XmlNamespaceManager"/> object for selecting nodes in
+            <paramref name="rootConfig"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Application.LoadAndValidateRootConfig">
+            <summary>
+            Loads and validates the root configuration file.
+            </summary>
+            <returns>Returns a <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration. If there is no root
+            configuration file, the return value is null.</returns>
+        </member>
+        <member name="T:Juhta.Net.Application.State">
+            <summary>
+            Defines an enumeration for the states of the application.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.State.Uninitialized">
+            <summary>
+            The application is uninitialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.State.PartlyInitialized">
+            <summary>
+            The application is only partly initialized, that is, the initialization has not been completed due to
+            an error.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.State.Initialized">
+            <summary>
+            The application has been successfully initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.s_binDirectory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Application.BinDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.s_configDirectory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Application.ConfigDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.s_libraryManager">
+            <summary>
+            Specifies the <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance that was created when the application was initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.s_name">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Application.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.s_state">
+            <summary>
+            Specifies the current state of the application.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Common.AlertMessage">
             <summary>
             Defines a class for alert messages.
@@ -3202,12 +3321,12 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error006">
             <summary>
-            An error occurred when the application was being started.
+            An error occurred when the application '{0}' was being started.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Alert007">
             <summary>
-            Application failed to start. Please refer to the log events for more information.
+            Application '{0}' failed to start. Please refer to the log events for more information.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning011">
@@ -3237,7 +3356,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error018">
             <summary>
-            An unexpected error occurred when the application was being closed.
+            An unexpected error occurred when the application '{0}' was being closed.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error019">
@@ -3707,107 +3826,6 @@
         <member name="F:Juhta.Net.Logger.s_syncLock">
             <summary>
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Startup">
-            <summary>
-            A static class that provides methods for initializing and closing the application.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Startup.CloseApp">
-            <summary>
-            Closes the application by closing all initialized libraries.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Startup.InitializeApp">
-            <summary>
-            Initializes the application by initializing all configured libraries.
-            </summary>
-            <remarks>Log events will be written to the current user's temp directory and the configuration files are
-            assumed to locate in the binary directory.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Startup.InitializeApp(System.String)">
-            <summary>
-            Initializes the application by initializing all configured libraries.
-            </summary>
-            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-            specifies somehow an invalid log file.</param>
-            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Startup.InitializeApp(System.String,System.String)">
-            <summary>
-            Initializes the application by initializing all configured libraries.
-            </summary>
-            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-            specifies somehow an invalid log file.</param>
-            <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
-            which case the configuration files are assumed to locate in the binary directory.</param>
-        </member>
-        <member name="P:Juhta.Net.Startup.BinDirectory">
-            <summary>
-            Gets the binary directory for the framework and application libraries. The return value is null if the
-            application is not initialized.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Startup.ConfigDirectory">
-            <summary>
-            Gets the configuration directory for the framework and application libraries. The return value is null if
-            the application is not initialized.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Startup.IsAppInitialized">
-            <summary>
-            Returns true if the application has been initialized, otherwise false.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Startup.LoadAndValidateRootConfig">
-            <summary>
-            Loads and validates the root configuration file.
-            </summary>
-            <returns>Returns a <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration. If there is no root
-            configuration file, the return value is null.</returns>
-        </member>
-        <member name="T:Juhta.Net.Startup.AppState">
-            <summary>
-            Defines an enumeration for the states of the application.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.AppState.Uninitialized">
-            <summary>
-            The application is uninitialized.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.AppState.PartlyInitialized">
-            <summary>
-            The application is only partly initialized, that is, the initialization has not been completed due to
-            an error.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.AppState.Initialized">
-            <summary>
-            The application has been successfully initialized.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.s_appState">
-            <summary>
-            Specifies the current state of the application.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.s_binDirectory">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Startup.BinDirectory"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.s_configDirectory">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Startup.ConfigDirectory"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.s_libraryManager">
-            <summary>
-            Specifies the <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance that was created when the application was initialized.
             </summary>
         </member>
         <member name="T:Juhta.Net.Validation.IStringValidator">

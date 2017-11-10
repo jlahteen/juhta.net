@@ -39,7 +39,7 @@ namespace Juhta.Net
         /// </summary>
         public static string RootNamespace
         {
-            get {return(typeof(Startup).Namespace);}
+            get {return(typeof(FrameworkInfo).Namespace);}
         }
 
         #endregion
