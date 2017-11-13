@@ -6,8 +6,35 @@
     <members>
         <member name="T:Juhta.Net.Application">
             <summary>
-            A static class that provides methods for initializing and closing the application.
+            A class that represents an application built on the top of the framework. The class provides basic information
+            about the application and methods for initializing and closing the application.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+            assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+            case the configuration files are assumed to locate in the binary directory.</param>
         </member>
         <member name="M:Juhta.Net.Application.Close">
             <summary>
@@ -18,27 +45,6 @@
             <summary>
             Initializes the application.
             </summary>
-            <remarks>Log events will be written to the current user's temp directory and the configuration files are
-            assumed to locate in the binary directory.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Application.Initialize(System.String)">
-            <summary>
-            Initializes the application.
-            </summary>
-            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-            specifies somehow an invalid log file.</param>
-            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Application.Initialize(System.String,System.String)">
-            <summary>
-            Initializes the application.
-            </summary>
-            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-            specifies somehow an invalid log file.</param>
-            <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
-            which case the configuration files are assumed to locate in the binary directory.</param>
         </member>
         <member name="P:Juhta.Net.Application.BinDirectory">
             <summary>
@@ -98,27 +104,27 @@
             The application has been successfully initialized.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Application.s_binDirectory">
+        <member name="F:Juhta.Net.Application.m_binDirectory">
             <summary>
             Stores the <see cref="P:Juhta.Net.Application.BinDirectory"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Application.s_configDirectory">
+        <member name="F:Juhta.Net.Application.m_configDirectory">
             <summary>
             Stores the <see cref="P:Juhta.Net.Application.ConfigDirectory"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Application.s_libraryManager">
+        <member name="F:Juhta.Net.Application.m_libraryManager">
             <summary>
             Specifies the <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance that was created when the application was initialized.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Application.s_name">
+        <member name="F:Juhta.Net.Application.m_name">
             <summary>
             Stores the <see cref="P:Juhta.Net.Application.Name"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Application.s_state">
+        <member name="F:Juhta.Net.Application.m_state">
             <summary>
             Specifies the current state of the application.
             </summary>
@@ -1567,6 +1573,12 @@
             <summary>
             Specifies a regular expression for validating absolute or relative file paths.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.Singleton`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="T:Juhta.Net.Common.SymmetricCipher">
             <summary>

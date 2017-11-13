@@ -111,7 +111,7 @@ namespace Juhta.Net.LibraryManagement
             m_configFileWatcher.ConfigFileDeleted += OnConfigFileDeleted;
 
             // Start watching configuration file changes
-            m_configFileWatcher.StartWatching(Application.ConfigDirectory);
+            m_configFileWatcher.StartWatching(Application.Instance.ConfigDirectory);
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Juhta.Net.LibraryManagement
 
                         configurableLibrary = (IConfigurableLibrary)libraryHandle;
 
-                        configFilePath = Application.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
+                        configFilePath = Application.Instance.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
 
                         if (File.Exists(configFilePath))
                         {
@@ -483,7 +483,7 @@ namespace Juhta.Net.LibraryManagement
 
                         else if (requiresConfigFile)
                             // The library requires a configuration file but such doesn't exist
-                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, Application.ConfigDirectory));
+                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, Application.Instance.ConfigDirectory));
 
                         else
                             // There is no configuration file but the library is also initializable, so just initialize it

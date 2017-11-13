@@ -19,108 +19,118 @@ using System.Xml.Schema;
 namespace Juhta.Net
 {
     /// <summary>
-    /// A static class that provides methods for initializing and closing the application.
+    /// A class that represents an application built on the top of the framework. The class provides basic information
+    /// about the application and methods for initializing and closing the application.
     /// </summary>
-    public static class Application
+    public class Application : Singleton<Application>
     {
+        #region Public Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+        /// assumed to locate in the binary directory.</remarks>
+        public Application() : this(null, null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies an invalid log file.</param>
+        /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        public Application(string logFilePath) : this(logFilePath, null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies an invalid log file.</param>
+        /// <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+        /// case the configuration files are assumed to locate in the binary directory.</param>
+        public Application(string logFilePath, string configDirectory)
+        {
+            // Set the singleton instance
+            SetInstance(this);
+
+            // Create a logger instance
+            Logger.SetLogger(new FileLogger(logFilePath));
+
+            // Set the binary directory
+            m_binDirectory = Assembly.GetExecutingAssembly().GetDirectory();
+
+            // Use the binary directory as the configuration directory if necessary
+            if (String.IsNullOrEmpty(configDirectory))
+                configDirectory = m_binDirectory;
+
+            // Set the configuration directory
+            m_configDirectory = configDirectory.TrimEnd(Path.DirectorySeparatorChar);
+        }
+
+        #endregion
+
         #region Public Methods
 
         /// <summary>
         /// Closes the application.
         /// </summary>
-        public static void Close()
+        public void Close()
         {
             // Check the state of the application
-            if (s_state == State.Uninitialized)
+            if (m_state == State.Uninitialized)
                 throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Close", typeof(Application)));
 
             try
             {
-                if (s_libraryManager != null)
+                if (m_libraryManager != null)
                 {
                     // Stop watching configuration file changes
-                    s_libraryManager.StopConfigFileWatching();
+                    m_libraryManager.StopConfigFileWatching();
 
                     // Close the libraries
-                    s_libraryManager.CloseLibraries();
+                    m_libraryManager.CloseLibraries();
                 }
             }
 
             catch (Exception ex)
             {
                 // We don't expect exceptions but such occurred anyway
-                Logger.LogError(ex, LibraryMessages.Error018, Application.Name);
+                Logger.LogError(ex, LibraryMessages.Error018, this.Name);
             }
 
             finally
             {
                 // Update the state of the application
-                s_state = State.Uninitialized;
+                m_state = State.Uninitialized;
 
                 // Reset the rest of the static fields
 
-                s_binDirectory = null;
+                m_binDirectory = null;
 
-                s_configDirectory = null;
+                m_configDirectory = null;
 
-                s_libraryManager = null;
+                m_libraryManager = null;
             }
         }
 
         /// <summary>
         /// Initializes the application.
         /// </summary>
-        /// <remarks>Log events will be written to the current user's temp directory and the configuration files are
-        /// assumed to locate in the binary directory.</remarks>
-        public static void Initialize()
-        {
-            Initialize(null, null);
-        }
-
-        /// <summary>
-        /// Initializes the application.
-        /// </summary>
-        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-        /// specifies somehow an invalid log file.</param>
-        /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
-        public static void Initialize(string logFilePath)
-        {
-            Initialize(logFilePath, null);
-        }
-
-        /// <summary>
-        /// Initializes the application.
-        /// </summary>
-        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
-        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
-        /// specifies somehow an invalid log file.</param>
-        /// <param name="configDirectory">Specifies a directory to search for the configuration files. Can be null in
-        /// which case the configuration files are assumed to locate in the binary directory.</param>
-        public static void Initialize(string logFilePath, string configDirectory)
+        public void Initialize()
         {
             XmlDocument rootConfig;
             XmlNamespaceManager namespaceManager;
 
             // Check the current state of the application
-            if (s_state > State.Uninitialized)
+            if (m_state > State.Uninitialized)
                 throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Initialize", typeof(Application)));
 
             try
             {
-                // Create a logger instance
-                Logger.SetLogger(new FileLogger(logFilePath));
-
-                // Set the binary directory
-                s_binDirectory = Assembly.GetExecutingAssembly().GetDirectory();
-
-                // Use the binary directory as the configuration directory if necessary
-                if (String.IsNullOrEmpty(configDirectory))
-                    configDirectory = s_binDirectory;
-
-                // Set the configuration directory
-                s_configDirectory = configDirectory.TrimEnd(Path.DirectorySeparatorChar);
-
                 // Perform the initialization if necessary
 
                 if ((rootConfig = LoadAndValidateRootConfig()) != null)
@@ -136,28 +146,28 @@ namespace Juhta.Net
 
                     // Initialize the libraries
 
-                    s_libraryManager = new LibraryManager();
+                    m_libraryManager = new LibraryManager();
 
-                    s_libraryManager.InitializeLibraries(rootConfig, namespaceManager);
+                    m_libraryManager.InitializeLibraries(rootConfig, namespaceManager);
 
                     // Start watching configuration file changes
-                    s_libraryManager.StartConfigFileWatching();
+                    m_libraryManager.StartConfigFileWatching();
                 }
 
                 // Update the state of the application
-                s_state = State.Initialized;
+                m_state = State.Initialized;
             }
 
             catch (Exception ex)
             {
                 // Log the exception
-                Logger.LogError(ex, LibraryMessages.Error006, Application.Name);
+                Logger.LogError(ex, LibraryMessages.Error006, this.Name);
 
                 // Log an alert
-                Logger.LogAlert(LibraryMessages.Alert007, Application.Name);
+                Logger.LogAlert(LibraryMessages.Alert007, this.Name);
 
                 // Update the state of the application
-                s_state = State.PartlyInitialized;
+                m_state = State.PartlyInitialized;
 
                 // Rethrow the exception
                 throw;
@@ -172,39 +182,39 @@ namespace Juhta.Net
         /// Gets the binary directory for the framework and application libraries. The return value is null if the
         /// application is not initialized.
         /// </summary>
-        public static string BinDirectory
+        public string BinDirectory
         {
-            get {return(s_binDirectory);}
+            get {return(m_binDirectory);}
         }
 
         /// <summary>
         /// Gets the configuration directory for the framework and application libraries. The return value is null if
         /// the application is not initialized.
         /// </summary>
-        public static string ConfigDirectory
+        public string ConfigDirectory
         {
-            get {return(s_configDirectory);}
+            get {return(m_configDirectory);}
         }
 
         /// <summary>
         /// Returns true if the application has been initialized, otherwise false.
         /// </summary>
-        public static bool IsInitialized
+        public bool IsInitialized
         {
-            get {return(s_state > State.Uninitialized);}
+            get {return(m_state > State.Uninitialized);}
         }
 
         /// <summary>
         /// Gets the name of the application.
         /// </summary>
-        public static string Name
+        public string Name
         {
             get
             {
-                if (s_name == null)
-                    s_name = Path.GetFileName(Process.GetCurrentProcess().MainModule.FileName);
+                if (m_name == null)
+                    m_name = Path.GetFileName(Process.GetCurrentProcess().MainModule.FileName);
 
-                return(s_name);
+                return(m_name);
             }
         }
 
@@ -218,14 +228,14 @@ namespace Juhta.Net
         /// <param name="rootConfig">Specifies an <see cref="XmlDocument"/> object containing the root configuration.</param>
         /// <param name="namespaceManager">Specifies an <see cref="XmlNamespaceManager"/> object for selecting nodes in
         /// <paramref name="rootConfig"/>.</param>
-        private static void InitializeName(XmlDocument rootConfig, XmlNamespaceManager namespaceManager)
+        private void InitializeName(XmlDocument rootConfig, XmlNamespaceManager namespaceManager)
         {
             XmlNode applicationNode = rootConfig.SelectSingleNode("//ns:application", namespaceManager);
 
             if (applicationNode.HasAttribute("name"))
-                s_name = applicationNode.GetAttribute("name");
+                m_name = applicationNode.GetAttribute("name");
             else
-                s_name = Application.Name;
+                m_name = this.Name;
         }
 
         /// <summary>
@@ -233,13 +243,13 @@ namespace Juhta.Net
         /// </summary>
         /// <returns>Returns a <see cref="XmlDocument"/> object containing the root configuration. If there is no root
         /// configuration file, the return value is null.</returns>
-        private static XmlDocument LoadAndValidateRootConfig()
+        private XmlDocument LoadAndValidateRootConfig()
         {
             string configFilePath;
             XmlDocument config = null;
             XmlValidator validator;
 
-            configFilePath = String.Format("{0}/{1}.config", s_configDirectory, FrameworkInfo.RootNamespace);
+            configFilePath = String.Format("{0}/{1}.config", m_configDirectory, FrameworkInfo.RootNamespace);
 
             if (!File.Exists(configFilePath))
                 return(null);
@@ -300,27 +310,27 @@ namespace Juhta.Net
         /// <summary>
         /// Stores the <see cref="BinDirectory"/> property.
         /// </summary>
-        private static string s_binDirectory;
+        private string m_binDirectory;
 
         /// <summary>
         /// Stores the <see cref="ConfigDirectory"/> property.
         /// </summary>
-        private static string s_configDirectory;
+        private string m_configDirectory;
 
         /// <summary>
         /// Specifies the <see cref="LibraryManager"/> instance that was created when the application was initialized.
         /// </summary>
-        private static LibraryManager s_libraryManager;
+        private LibraryManager m_libraryManager;
 
         /// <summary>
         /// Stores the <see cref="Name"/> property.
         /// </summary>
-        private static string s_name;
+        private string m_name;
 
         /// <summary>
         /// Specifies the current state of the application.
         /// </summary>
-        private static State s_state;
+        private State m_state;
 
         #endregion
     }
