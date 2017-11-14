@@ -1,20 +1,26 @@
 ﻿
+//
+// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+//
+// This source code may be used, modified and distributed under the terms of
+// the MIT license. Please refer to the LICENSE.txt file for details.
+//
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// 
+    /// Defines an abstract base class singleton classes.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Specifies a type to make as singleton.</typeparam>
     public abstract class Singleton<T>
     {
         #region Static Constructor
 
+        /// <summary>
+        /// Initializes the class.
+        /// </summary>
         static Singleton()
         {
             s_syncLock = new object();
@@ -24,22 +30,35 @@ namespace Juhta.Net.Common
 
         #region Public Properties
 
+        /// <summary>
+        /// Gets the singleton instance of <typeparamref name="T"/>.
+        /// </summary>
         public static T Instance
         {
-            get { return (s_instance); }
+            get
+            {
+                lock(s_syncLock)
+                {
+                    return(s_instance);
+                }
+            }
         }
 
         #endregion
 
-        #region Protected Constructors
+        #region Protected Methods
 
-
+        /// <summary>
+        /// Sets the singleton instance.
+        /// </summary>
+        /// <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
+        /// instance.</param>
         protected void SetInstance(T instance)
         {
-            lock (s_syncLock)
+            lock(s_syncLock)
             {
                 if (s_instance != null)
-                    throw new ArgumentException("Only one instance is allowed.");
+                    throw new ArgumentException(CommonMessages.Error014.FormatMessage(typeof(T).FullName));
 
                 s_instance = instance;
             }
@@ -49,8 +68,14 @@ namespace Juhta.Net.Common
 
         #region Private Fields
 
+        /// <summary>
+        /// Stores the <see cref="Instance"/> property.
+        /// </summary>
         protected static T s_instance;
 
+        /// <summary>
+        /// Specifies a synchronization object for accessing the singleton instance.
+        /// </summary>
         private static object s_syncLock;
 
         #endregion

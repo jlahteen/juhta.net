@@ -92,6 +92,11 @@ namespace Juhta.Net.Common
         /// </summary>
         public static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("The lenghts of the arrays '{0}' and '{1}' do not match.");
 
+        /// <summary>
+        /// Only one instance of the singleton class '{0}' is allowed to be created.
+        /// </summary>
+        public static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Only one instance of the singleton class '{0}' is allowed to be created.");
+
         #endregion
     }
 }
