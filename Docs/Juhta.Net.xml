@@ -3121,10 +3121,11 @@
             of libraries including initialization, dynamic configuration changes and closing.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.#ctor">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.#ctor(Juhta.Net.Application)">
             <summary>
             Initializes a new instance.
             </summary>
+            <param name="application">Specifies an <see cref="T:Juhta.Net.Application"/> object that will own the instance.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraries">
             <summary>
@@ -3321,9 +3322,15 @@
             Represents the current state of a dynamic library.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_application">
+            <summary>
+            Specifies the <see cref="T:Juhta.Net.Application"/> object that owns this <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_configFileWatcher">
             <summary>
-            A ConfigFileWatcher object that watches configuration file changes in the configuration directory.
+            A <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> object that watches configuration file changes in the configuration
+            directory.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicLibraries">

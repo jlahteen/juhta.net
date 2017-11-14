@@ -27,8 +27,11 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public LibraryManager()
+        /// <param name="application">Specifies an <see cref="Application"/> object that will own the instance.</param>
+        public LibraryManager(Application application)
         {
+            m_application = application;
+
             m_dynamicLibraries = new Dictionary<string, List<IDynamicLibrary>>();
 
             m_libraryHandles = new Stack<ILibraryHandle>();
@@ -111,7 +114,7 @@ namespace Juhta.Net.LibraryManagement
             m_configFileWatcher.ConfigFileDeleted += OnConfigFileDeleted;
 
             // Start watching configuration file changes
-            m_configFileWatcher.StartWatching(Application.Instance.ConfigDirectory);
+            m_configFileWatcher.StartWatching(m_application.ConfigDirectory);
         }
 
         /// <summary>
@@ -459,7 +462,7 @@ namespace Juhta.Net.LibraryManagement
 
                         configurableLibrary = (IConfigurableLibrary)libraryHandle;
 
-                        configFilePath = Application.Instance.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
+                        configFilePath = m_application.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
 
                         if (File.Exists(configFilePath))
                         {
@@ -483,7 +486,7 @@ namespace Juhta.Net.LibraryManagement
 
                         else if (requiresConfigFile)
                             // The library requires a configuration file but such doesn't exist
-                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, Application.Instance.ConfigDirectory));
+                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, m_application.ConfigDirectory));
 
                         else
                             // There is no configuration file but the library is also initializable, so just initialize it
@@ -891,7 +894,13 @@ namespace Juhta.Net.LibraryManagement
         #region Private Fields
 
         /// <summary>
-        /// A ConfigFileWatcher object that watches configuration file changes in the configuration directory.
+        /// Specifies the <see cref="Application"/> object that owns this <see cref="LibraryManager"/> instance.
+        /// </summary>
+        private Application m_application;
+
+        /// <summary>
+        /// A <see cref="ConfigFileWatcher"/> object that watches configuration file changes in the configuration
+        /// directory.
         /// </summary>
         private ConfigFileWatcher m_configFileWatcher;
 

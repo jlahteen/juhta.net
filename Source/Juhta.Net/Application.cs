@@ -155,7 +155,7 @@ namespace Juhta.Net
 
                     // Initialize the libraries
 
-                    m_libraryManager = new LibraryManager();
+                    m_libraryManager = new LibraryManager(this);
 
                     m_libraryManager.InitializeLibraries(rootConfig, namespaceManager);
 
