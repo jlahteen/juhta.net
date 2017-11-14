@@ -41,10 +41,41 @@
             Closes the application.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Application.CloseInstance">
+            <summary>
+            Closes the possibly created singleton <see cref="T:Juhta.Net.Application"/> instance.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.Application.Initialize">
             <summary>
             Initializes the application.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.InitializeInstance">
+            <summary>
+            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            </summary>
+            <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+            assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.InitializeInstance(System.String)">
+            <summary>
+            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Application.InitializeInstance(System.String,System.String)">
+            <summary>
+            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+            case the configuration files are assumed to locate in the binary directory.</param>
         </member>
         <member name="P:Juhta.Net.Application.BinDirectory">
             <summary>
@@ -555,6 +586,11 @@
         <member name="F:Juhta.Net.Common.CommonMessages.Error013">
             <summary>
             The lenghts of the arrays '{0}' and '{1}' do not match.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.Error014">
+            <summary>
+            Only one instance of the singleton class '{0}' is allowed to be created.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.ConfigException">
@@ -1576,9 +1612,36 @@
         </member>
         <member name="T:Juhta.Net.Common.Singleton`1">
             <summary>
-            
+            Defines an abstract base class singleton classes.
             </summary>
-            <typeparam name="T"></typeparam>
+            <typeparam name="T">Specifies a type to make as singleton.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.#cctor">
+            <summary>
+            Initializes the class.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.Singleton`1.Instance">
+            <summary>
+            Gets the singleton instance of <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.SetInstance(`0)">
+            <summary>
+            Sets the singleton instance.
+            </summary>
+            <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
+            instance.</param>
+        </member>
+        <member name="F:Juhta.Net.Common.Singleton`1.s_instance">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.Singleton`1.Instance"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Singleton`1.s_syncLock">
+            <summary>
+            Specifies a synchronization object for accessing the singleton instance.
+            </summary>
         </member>
         <member name="T:Juhta.Net.Common.SymmetricCipher">
             <summary>

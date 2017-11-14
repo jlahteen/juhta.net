@@ -118,6 +118,15 @@ namespace Juhta.Net
         }
 
         /// <summary>
+        /// Closes the possibly created singleton <see cref="Application"/> instance.
+        /// </summary>
+        public static void CloseInstance()
+        {
+            if (Application.Instance != null)
+                Application.Instance.Close();
+        }
+
+        /// <summary>
         /// Initializes the application.
         /// </summary>
         public void Initialize()
@@ -172,6 +181,43 @@ namespace Juhta.Net
                 // Rethrow the exception
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// </summary>
+        /// <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+        /// assumed to locate in the binary directory.</remarks>
+        public static void InitializeInstance()
+        {
+            InitializeInstance(null, null);
+        }
+
+        /// <summary>
+        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// </summary>
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies an invalid log file.</param>
+        /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        public static void InitializeInstance(string logFilePath)
+        {
+            InitializeInstance(logFilePath, null);
+        }
+
+        /// <summary>
+        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// </summary>
+        /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+        /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+        /// specifies an invalid log file.</param>
+        /// <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+        /// case the configuration files are assumed to locate in the binary directory.</param>
+        public static void InitializeInstance(string logFilePath, string configDirectory)
+        {
+            Application application = new Application(logFilePath, configDirectory);
+
+            application.Initialize();
         }
 
         #endregion
