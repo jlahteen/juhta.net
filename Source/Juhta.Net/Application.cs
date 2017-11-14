@@ -125,8 +125,14 @@ namespace Juhta.Net
         /// </summary>
         public static void CloseInstance()
         {
-            if (Application.Instance != null)
+            if (Application.Instance == null)
+                return;
+
+            else if (Application.Instance.IsInitialized)
                 Application.Instance.Close();
+
+            else
+                Application.Instance.ClearSingletonInstance();
         }
 
         /// <summary>
