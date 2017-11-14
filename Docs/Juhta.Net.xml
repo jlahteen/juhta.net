@@ -1626,7 +1626,12 @@
             Gets the singleton instance of <typeparamref name="T"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Common.Singleton`1.SetInstance(`0)">
+        <member name="M:Juhta.Net.Common.Singleton`1.ClearSingletonInstance">
+            <summary>
+            Clears the singleton instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)">
             <summary>
             Sets the singleton instance.
             </summary>

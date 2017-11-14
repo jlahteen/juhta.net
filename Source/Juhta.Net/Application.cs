@@ -55,7 +55,7 @@ namespace Juhta.Net
         public Application(string logFilePath, string configDirectory)
         {
             // Set the singleton instance
-            SetInstance(this);
+            SetSingletonInstance(this);
 
             // Create a logger instance
             Logger.SetLogger(new FileLogger(logFilePath));
@@ -94,6 +94,9 @@ namespace Juhta.Net
                     // Close the libraries
                     m_libraryManager.CloseLibraries();
                 }
+
+                // Clear the singleton instance
+                ClearSingletonInstance();
             }
 
             catch (Exception ex)
