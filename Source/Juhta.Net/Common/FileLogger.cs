@@ -103,11 +103,7 @@ namespace Juhta.Net.Common
         /// </summary>
         public void LogError(Exception exception)
         {
-            string messageId;
-
-            DiagnosticMessage.TryGetMessageId(exception.Message, out messageId);
-
-            WriteLogEvent(DiagnosticMessageType.Error, messageId, exception, null, null);
+            WriteLogEvent(DiagnosticMessageType.Error, null, exception, null, null);
         }
 
         /// <summary>
@@ -318,7 +314,7 @@ namespace Juhta.Net.Common
         {
             Utf8FileWriter logFile = null;
             StringBuilder logEventInfo = new StringBuilder();
-            string message;
+            string messageId2, message;
 
             // Make sure that the title will be written to the log file
             EnsureLogTitle();
@@ -344,6 +340,9 @@ namespace Juhta.Net.Common
                     logEventInfo.Append("X");
 
                 logEventInfo.AppendFormat(" {0} {1} ", DateTime.Now.ToTimestamp('T', true, true), messageType.ToString().ToUpper());
+
+                if (exception != null && DiagnosticMessage.TryGetMessageId(exception, out messageId2))
+                    messageId = messageId2;
 
                 if (messageId != null)
                     logEventInfo.AppendFormat("'{0}' ", messageId);

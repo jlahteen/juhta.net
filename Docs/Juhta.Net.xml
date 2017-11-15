@@ -778,16 +778,30 @@
             <returns>Returns the stored message without any formatting.</returns>
             <remarks>Use this method instead of <see cref="M:Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])"/> when the message contains no format items.</remarks>
         </member>
+        <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)">
+            <summary>
+            Tries to get an ID for the message of a specified exception.
+            </summary>
+            <param name="exception">Specifies an exception.</param>
+            <param name="messageId">If the function returns true, returns the ID of the message of the specified
+            exception, otherwise returns null.</param>
+            <returns>Returns true if an ID was found for the message of the specified exception, otherwise returns
+            false.</returns>
+            <remarks>
+            <para>If the specified exception contains inner exceptions, the innermost exception with a found ID match
+            is decisive (root cause exception).</para>
+            <para>Searching will be done in the last formatted messages for the current thread.</para>
+            </remarks>
+        </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)">
             <summary>
-            Searches the last formatted messages for the current thread, and checks whether a specified message matches
-            one of them.
+            Tries to get an ID for a specified message.
             </summary>
-            <param name="message">Specifies a message to search.</param>
+            <param name="message">Specifies a message.</param>
             <param name="messageId">If the function returns true, returns the ID of the specified message, otherwise
             returns null.</param>
-            <returns>Returns true if the specified message was found among the last formatted messages for the current
-            thread and the associated DiagnosticMessage object has a non-null ID.</returns>
+            <returns>Returns true if an ID was found for the specified message, otherwise returns false.</returns>
+            <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
         </member>
         <member name="P:Juhta.Net.Common.DiagnosticMessage.Id">
             <summary>
@@ -3416,6 +3430,21 @@
             Application '{0}' failed to start. Please refer to the log events for more information.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error008">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error009">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error010">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning011">
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
@@ -3433,6 +3462,21 @@
             Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
             when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
             is currently unstable. You should restore the configuration file and possibly restart the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error014">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error015">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error016">
+            <summary>
+            Free for the future use.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -3666,9 +3710,19 @@
             Processes in the {0} state of the library '{1}' could not be completely stopped.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error060">
+            <summary>
+            Free for the future use.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.LibraryMessages.Error061">
             <summary>
             Processes in the {0} state of the library '{1}' could not be started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error062">
+            <summary>
+            Free for the future use.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning063">
@@ -3735,6 +3789,11 @@
             <summary>
             At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped.
             All resources and services of these processes may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error074">
+            <summary>
+            Free for the future use.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error075">

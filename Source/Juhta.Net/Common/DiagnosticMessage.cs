@@ -111,14 +111,43 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Searches the last formatted messages for the current thread, and checks whether a specified message matches
-        /// one of them.
+        /// Tries to get an ID for the message of a specified exception.
         /// </summary>
-        /// <param name="message">Specifies a message to search.</param>
+        /// <param name="exception">Specifies an exception.</param>
+        /// <param name="messageId">If the function returns true, returns the ID of the message of the specified
+        /// exception, otherwise returns null.</param>
+        /// <returns>Returns true if an ID was found for the message of the specified exception, otherwise returns
+        /// false.</returns>
+        /// <remarks>
+        /// <para>If the specified exception contains inner exceptions, the innermost exception with a found ID match
+        /// is decisive (root cause exception).</para>
+        /// <para>Searching will be done in the last formatted messages for the current thread.</para>
+        /// </remarks>
+        public static bool TryGetMessageId(Exception exception, out string messageId)
+        {
+            string messageId2;
+
+            messageId = null;
+
+            while (exception != null)
+            {
+                if (TryGetMessageId(exception.Message, out messageId2))
+                    messageId = messageId2;
+
+                exception = exception.InnerException;
+            }
+
+            return(messageId != null);
+        }
+
+        /// <summary>
+        /// Tries to get an ID for a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message.</param>
         /// <param name="messageId">If the function returns true, returns the ID of the specified message, otherwise
         /// returns null.</param>
-        /// <returns>Returns true if the specified message was found among the last formatted messages for the current
-        /// thread and the associated DiagnosticMessage object has a non-null ID.</returns>
+        /// <returns>Returns true if an ID was found for the specified message, otherwise returns false.</returns>
+        /// <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
         public static bool TryGetMessageId(string message, out string messageId)
         {
             messageId = null;

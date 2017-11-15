@@ -67,9 +67,24 @@ namespace Juhta.Net
 
         // NOTE: Message ID 8 is free
 
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error008 = MessageFactory.CreateErrorMessage("Free for the future use.");
+
         // NOTE: Message ID 9 is free
 
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Free for the future use.");
+
         // NOTE: Message ID 10 is free
+
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Free for the future use.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
@@ -92,9 +107,24 @@ namespace Juhta.Net
 
         // NOTE: Message ID 14 is free
 
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Free for the future use.");
+
         // NOTE: Message ID 15 is free
 
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Free for the future use.");
+
         // NOTE: Message ID 16 is free
+
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("Free for the future use.");
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library
@@ -330,11 +360,21 @@ namespace Juhta.Net
         // NOTE: Message ID 60 is free
 
         /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Free for the future use.");
+
+        /// <summary>
         /// Processes in the {0} state of the library '{1}' could not be started.
         /// </summary>
         internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
 
         // NOTE: Message ID 62 is free
+
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("Free for the future use.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
@@ -403,6 +443,11 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
         // NOTE: Message ID 74 is free
+
+        /// <summary>
+        /// Free for the future use.
+        /// </summary>
+        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("Free for the future use.");
 
         /// <summary>
         /// An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
