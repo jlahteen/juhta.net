@@ -7,11 +7,11 @@ using System.Xml.Schema;
 
 namespace AppXLibrary
 {
-    public class ConfigurableLibrary : AppLibraryHandle, IConfigurableLibrary
+    public class CustomXmlConfigurableLibrary : AppLibraryHandle, ICustomXmlConfigurableLibrary
     {
         #region Public Constructors
 
-        public ConfigurableLibrary() : base("AppXLibrary.dll")
+        public CustomXmlConfigurableLibrary() : base("AppXLibrary.dll")
         {}
 
         #endregion

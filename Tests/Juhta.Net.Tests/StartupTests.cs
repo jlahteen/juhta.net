@@ -17,8 +17,7 @@ namespace Juhta.Net.Tests
         [TestCleanup]
         public void TestCleanup()
         {
-            if (Application.IsInitialized)
-                Application.Close();
+            Application.CloseInstance();
         }
 
         [TestInitialize]
@@ -43,39 +42,41 @@ namespace Juhta.Net.Tests
         #region Test Methods
 
         [TestMethod]
-        public void CloseFramework_FrameworkInitialized_ShouldReturn()
+        public void Close_ApplicationInitialized_ShouldReturn()
         {
-            Application.Initialize();
+            Application.InitializeInstance();
 
-            Application.Close();
+            Application.Instance.Close();
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void CloseFramework_FrameworkNotInitialized_ShouldThrowInvalidOperationException()
+        public void Close_ApplicationNotInitialized_ShouldThrowInvalidOperationException()
         {
-            Application.Close();
+            Application application = new Application();
+
+            application.Close();
         }
 
         [TestMethod]
         [ExpectedException(typeof(XmlException))]
-        public void InitializeFramework_BrokenConfig_ShouldThrowXmlException()
+        public void Initialize_BrokenConfig_ShouldThrowXmlException()
         {
             SetConfigFiles("Root", "BrokenConfig_", ".");
 
-            Application.Initialize();
+            Application.InitializeInstance();
         }
 
         [TestMethod]
-        public void InitializeFramework_ClosableLibrary_ShouldReturn()
+        public void Initialize_ClosableLibrary_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
             SetConfigFiles("Root", "ClosableLibrary_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
-            Application.Close();
+            Application.Instance.Close();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -83,33 +84,33 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigDirectoryGiven_NoConfigFiles_ShouldReturn()
+        public void Initialize_ConfigDirectoryGiven_NoConfigFiles_ShouldReturn()
         {
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigDirectoryGiven_SimpleConfig_ShouldReturn()
+        public void Initialize_ConfigDirectoryGiven_SimpleConfig_ShouldReturn()
         {
             SetConfigFiles("Root", "SimpleConfig_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigurableAndClosableLibrary_ShouldReturn()
+        public void Initialize_CustomXmlConfigurableAndClosableLibrary_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ConfigurableAndClosableLibrary_");
+            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Application.Close();
+            Application.Instance.Close();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -117,19 +118,19 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_ShouldReturn()
+        public void Initialize_CustomXmlConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_");
+            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Application.Close();
+            Application.Instance.Close();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
@@ -139,35 +140,35 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigurableAndClosableLibrary_CloseLibraryThrowsException_ShouldReturn()
+        public void Initialize_CustomXmlConfigurableAndClosableLibrary_CloseLibraryThrowsException_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ConfigurableAndClosableLibrary_CloseLibraryThrowsException_");
+            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryThrowsException_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(457473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is another configured StringSetting value.", libraryConfig.GetStringSetting());
 
-            Application.Close();
+            Application.Instance.Close();
 
             Assert.AreEqual<int>(Int32.MaxValue, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10004'", "LibraryClosingException", "Closing of the library 'AppXLibrary.dll' failed.", "Something went wrong in the closing of AppXLibrary.");
+            AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10004'", "An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
         }
 
         [TestMethod]
-        public void InitializeFramework_ConfigurableLibrary_ShouldReturn()
+        public void Initialize_CustomXmlConfigurableLibrary_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ConfigurableLibrary_");
+            SetConfigFiles("Root", "CustomXmlConfigurableLibrary_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(473473383, libraryConfig.GetIntSetting());
 
@@ -176,15 +177,15 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(LibraryInitializationException))]
-        public void InitializeFramework_ConfigurableLibrary_InvalidConfigValue_ShouldThrowLibraryInitializationException()
+        public void Initialize_CustomXmlConfigurableLibrary_InvalidConfigValue_ShouldThrowLibraryInitializationException()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ConfigurableLibrary_InvalidConfigValue_");
+            SetConfigFiles("Root", "CustomXmlConfigurableLibrary_InvalidConfigValue_");
 
             try
             {
-                Application.Initialize(null, s_configDirectory);
+                Application.InitializeInstance(null, s_configDirectory);
             }
 
             catch
@@ -196,13 +197,13 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_InitializableLibrary_ShouldReturn()
+        public void Initialize_InitializableLibrary_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
             SetConfigFiles("Root", "InitializableLibrary_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(89473537, libraryConfig.GetIntSetting());
 
@@ -210,13 +211,13 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_InitializableLibrary_LibraryHandleClassNamespaceMissing_ShouldReturn()
+        public void Initialize_InitializableLibrary_LibraryHandleClassNamespaceMissing_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
             SetConfigFiles("Root", "InitializableLibrary_LibraryHandleClassNamespaceMissing_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(89473537, libraryConfig.GetIntSetting());
 
@@ -224,13 +225,13 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_InitializableLibrary_NoLibraryHandleClassSpecified_ShouldReturn()
+        public void Initialize_InitializableLibrary_NoLibraryHandleClassSpecified_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
             SetConfigFiles("Root", "InitializableLibrary_NoLibraryHandleClassSpecified_");
 
-            Application.Initialize(null, s_configDirectory);
+            Application.InitializeInstance(null, s_configDirectory);
 
             Assert.AreEqual<int>(121213, libraryConfig.GetIntSetting());
 
@@ -239,13 +240,13 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidConfigFileException))]
-        public void InitializeFramework_InvalidConfig_ShouldThrowException()
+        public void Initialize_InvalidConfig_ShouldThrowException()
         {
             SetConfigFiles("Root", "InvalidConfig_", ".");
 
             try
             {
-                Application.Initialize();
+                Application.InitializeInstance();
             }
 
             catch
@@ -257,9 +258,9 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_LogEventOutputToDefaultLogFile_ShouldReturn()
+        public void Initialize_LogEventOutputToDefaultLogFile_ShouldReturn()
         {
-            Application.Initialize();
+            Application.InitializeInstance();
 
             Logger.LogInformation("This event should produce a log file.");
 
@@ -267,13 +268,13 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_LogEventOutputToSpecifiedLogFile_ShouldReturn()
+        public void Initialize_LogEventOutputToSpecifiedLogFile_ShouldReturn()
         {
             string logFilePath;
 
             logFilePath = GetTestLogDirectory() + "AppX.log";
 
-            Application.Initialize(logFilePath);
+            Application.InitializeInstance(logFilePath, null);
 
             Logger.LogInformation("This event should produce a log file.");
 
@@ -281,26 +282,28 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void InitializeFramework_NoParameters_NoConfigFiles_ShouldReturn()
+        public void Initialize_NoParameters_NoConfigFiles_ShouldReturn()
         {
-            Application.Initialize();
+            Application.InitializeInstance();
         }
 
         [TestMethod]
-        public void InitializeFramework_NoParameters_SimplyConfig_ShouldReturn()
+        public void Initialize_NoParameters_SimplyConfig_ShouldReturn()
         {
             SetConfigFiles("Root", "SimpleConfig_", ".");
 
-            Application.Initialize();
+            Application.InitializeInstance();
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void InitializeFramework_TwoSubsequentCalls_ShouldThrowInvalidOperationException()
+        public void Initialize_TwoSubsequentCalls_ShouldThrowInvalidOperationException()
         {
-            Application.Initialize();
+            Application application = new Application();
 
-            Application.Initialize();
+            application.Initialize();
+
+            application.Initialize();
         }
 
         #endregion

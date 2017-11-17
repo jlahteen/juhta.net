@@ -115,16 +115,6 @@ namespace Juhta.Net.Tests
             return(m_stopwatch.Elapsed.TotalSeconds > m_timeout);
         }
 
-        protected void InitializeFramework()
-        {
-            Application.Initialize();
-        }
-
-        protected void InitializeFramework(string configLoadDirectory, string configFilePrefix)
-        {
-            Application.Initialize(SetConfigFiles(configLoadDirectory, configFilePrefix));
-        }
-
         protected static XmlDocument ReadXmlLog(string logFileName)
         {
             XmlDocument xmlLog = new XmlDocument();

@@ -4,7 +4,7 @@ using System;
 
 namespace AppXLibrary
 {
-    public class ConfigurableAndClosableLibrary : ConfigurableLibrary, IClosableLibrary
+    public class CustomXmlConfigurableAndClosableLibrary : CustomXmlConfigurableLibrary, IClosableLibrary
     {
         #region Public Methods
 
