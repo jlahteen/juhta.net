@@ -60,6 +60,9 @@ namespace Juhta.Net.Tests
 
         protected static void DeleteConfigFiles(string configDirectory)
         {
+            if (!Directory.Exists(configDirectory))
+                return;
+
             foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
                 File.Delete(configFile);
         }
@@ -129,7 +132,12 @@ namespace Juhta.Net.Tests
             FileInfo fileInfo;
 
             if (configDirectory == null)
+            {
                 configDirectory = s_configDirectory;
+
+                if (!Directory.Exists(configDirectory))
+                    Directory.CreateDirectory(configDirectory);
+            }
 
             DeleteConfigFiles(configDirectory);
 
