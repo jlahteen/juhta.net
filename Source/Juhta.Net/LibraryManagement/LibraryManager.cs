@@ -88,7 +88,7 @@ namespace Juhta.Net.LibraryManagement
             ILibraryHandle libraryHandle;
 
             // Select the libraries XML node
-            librariesNode = rootConfig.SelectSingleNode("//ns:libraries", namespaceManager);
+            librariesNode = rootConfig.SelectSingleNode("//ns:application/ns:startup/ns:libraries", namespaceManager);
 
             // Initialize the libraries listed in the libraries XML node
 

@@ -136,12 +136,12 @@ namespace Juhta.Net.LibraryManagement
         {
             string libraryFileName, libraryHandleClass;
 
-            libraryFileName = libraryNode.GetAttribute("libraryFileName");
+            libraryFileName = libraryNode.GetAttribute("fileName");
 
             if (!File.Exists(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + libraryFileName))
                 throw new FileNotFoundException(LibraryMessages.Error022.FormatMessage(libraryFileName, Application.Instance.BinDirectory));
 
-            libraryHandleClass = libraryNode.GetAttribute("libraryHandleClass", ".LibraryHandle");
+            libraryHandleClass = libraryNode.GetAttribute("handleClass", ".LibraryHandle");
 
             return(ObjectFactory.CreateInstance<ILibraryHandle>(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + libraryFileName, libraryHandleClass));
         }
