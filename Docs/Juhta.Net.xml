@@ -2642,12 +2642,12 @@
             Gets the root namespace of the framework.
             </summary>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.AppLibraryHandle">
+        <member name="T:Juhta.Net.LibraryManagement.ApplicationLibraryHandle">
             <summary>
             Defines an abstract base class for application library handles.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.AppLibraryHandle.#ctor(System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.ApplicationLibraryHandle.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>

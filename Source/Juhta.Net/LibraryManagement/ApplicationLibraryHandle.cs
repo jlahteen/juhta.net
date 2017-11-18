@@ -11,7 +11,7 @@ namespace Juhta.Net.LibraryManagement
     /// <summary>
     /// Defines an abstract base class for application library handles.
     /// </summary>
-    public abstract class AppLibraryHandle : LibraryHandle
+    public abstract class ApplicationLibraryHandle : LibraryHandle
     {
         #region Protected Constructors
 
@@ -20,7 +20,7 @@ namespace Juhta.Net.LibraryManagement
         /// </summary>
         /// <param name="libraryFileName">Specifies a value for the <see cref="LibraryHandle.LibraryFileName"/>
         /// property.</param>
-        protected AppLibraryHandle(string libraryFileName) : base(libraryFileName)
+        protected ApplicationLibraryHandle(string libraryFileName) : base(libraryFileName)
         {}
 
         #endregion

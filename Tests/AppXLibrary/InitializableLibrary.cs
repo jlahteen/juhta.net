@@ -3,7 +3,7 @@ using Juhta.Net.LibraryManagement;
 
 namespace AppXLibrary
 {
-    public class InitializableLibrary : AppLibraryHandle, IInitializableLibrary
+    public class InitializableLibrary : ApplicationLibraryHandle, IInitializableLibrary
     {
         #region Public Constructors
 
