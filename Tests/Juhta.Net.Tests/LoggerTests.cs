@@ -21,7 +21,7 @@ namespace Juhta.Net.Tests
         {
             DeleteConfigFilesAll();
 
-            Application.InitializeInstance();
+            Application.StartInstance();
         }
 
         #endregion

@@ -38,7 +38,7 @@
         </member>
         <member name="M:Juhta.Net.Application.Close">
             <summary>
-            Closes the application.
+            Closes the application by closing all configured startup libraries and the core of the framework.
             </summary>
         </member>
         <member name="M:Juhta.Net.Application.CloseInstance">
@@ -46,30 +46,30 @@
             Closes the possibly created singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Application.Initialize">
+        <member name="M:Juhta.Net.Application.Start">
             <summary>
-            Initializes the application.
+            Starts the application by initializing the core of the framework and all configured startup libraries.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Application.InitializeInstance">
+        <member name="M:Juhta.Net.Application.StartInstance">
             <summary>
-            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
             <remarks>Log events will be written to the current user's temp directory, and the configuration files are
             assumed to locate in the binary directory.</remarks>
         </member>
-        <member name="M:Juhta.Net.Application.InitializeInstance(System.String)">
+        <member name="M:Juhta.Net.Application.StartInstance(System.String)">
             <summary>
-            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
             <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
             to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
             specifies an invalid log file.</param>
             <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
         </member>
-        <member name="M:Juhta.Net.Application.InitializeInstance(System.String,System.String)">
+        <member name="M:Juhta.Net.Application.StartInstance(System.String,System.String)">
             <summary>
-            Creates and initializes a new singleton <see cref="T:Juhta.Net.Application"/> instance.
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
             <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
             to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>

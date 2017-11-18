@@ -76,7 +76,7 @@ namespace Juhta.Net
         #region Public Methods
 
         /// <summary>
-        /// Closes the application.
+        /// Closes the application by closing all configured startup libraries and the core of the framework.
         /// </summary>
         public void Close()
         {
@@ -136,16 +136,16 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Initializes the application.
+        /// Starts the application by initializing the core of the framework and all configured startup libraries.
         /// </summary>
-        public void Initialize()
+        public void Start()
         {
             XmlDocument rootConfig;
             XmlNamespaceManager namespaceManager;
 
             // Check the current state of the application
             if (m_state > State.Uninitialized)
-                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Initialize", typeof(Application)));
+                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Start", typeof(Application)));
 
             try
             {
@@ -193,40 +193,40 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// Creates and starts a new singleton <see cref="Application"/> instance.
         /// </summary>
         /// <remarks>Log events will be written to the current user's temp directory, and the configuration files are
         /// assumed to locate in the binary directory.</remarks>
-        public static void InitializeInstance()
+        public static void StartInstance()
         {
-            InitializeInstance(null, null);
+            StartInstance(null, null);
         }
 
         /// <summary>
-        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// Creates and starts a new singleton <see cref="Application"/> instance.
         /// </summary>
         /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
         /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
         /// specifies an invalid log file.</param>
         /// <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
-        public static void InitializeInstance(string logFilePath)
+        public static void StartInstance(string logFilePath)
         {
-            InitializeInstance(logFilePath, null);
+            StartInstance(logFilePath, null);
         }
 
         /// <summary>
-        /// Creates and initializes a new singleton <see cref="Application"/> instance.
+        /// Creates and starts a new singleton <see cref="Application"/> instance.
         /// </summary>
         /// <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
         /// to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
         /// specifies an invalid log file.</param>
         /// <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
         /// case the configuration files are assumed to locate in the binary directory.</param>
-        public static void InitializeInstance(string logFilePath, string configDirectory)
+        public static void StartInstance(string logFilePath, string configDirectory)
         {
             Application application = new Application(logFilePath, configDirectory);
 
-            application.Initialize();
+            application.Start();
         }
 
         #endregion
