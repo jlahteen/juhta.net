@@ -12,7 +12,7 @@ namespace Juhta.Net.LibraryManagement
     /// Defines an interface for startable libraries. A library is a startable library if it contains at least one
     /// process that has to be started prior to the library services can be used.
     /// </summary>
-    interface IStartableLibrary
+    public interface IStartableLibrary
     {
         #region Methods
 

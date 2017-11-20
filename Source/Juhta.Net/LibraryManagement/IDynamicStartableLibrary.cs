@@ -12,7 +12,7 @@ namespace Juhta.Net.LibraryManagement
     /// Defines an interface for dynamic startable libraries. A library is a dynamic startable library if it is dynamic
     /// and contains at least one process that has to be started prior to the library's services can be used.
     /// </summary>
-    interface IDynamicStartableLibrary : IDynamicLibrary
+    public interface IDynamicStartableLibrary : IDynamicLibrary
     {
         #region Methods
 

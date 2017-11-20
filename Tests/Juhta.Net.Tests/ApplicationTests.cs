@@ -41,6 +41,8 @@ namespace Juhta.Net.Tests
 
             if (File.Exists(defaultLogFile))
                 File.Delete(defaultLogFile);
+
+            AppXLibrary.StartableLibrary.Reset();
         }
 
         #endregion
@@ -62,6 +64,42 @@ namespace Juhta.Net.Tests
             Application application = new Application();
 
             application.Close();
+        }
+
+        [TestMethod]
+        public void Close_StartableLibrary_StopProcessesReturnsFalse_ShouldReturn()
+        {
+            SetConfigFiles("Root", "StartableLibrary_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+
+            AppXLibrary.StartableLibrary.StopProcessesReturnValue = false;
+
+            Application.Instance.Close();
+
+            Assert.AreEqual<bool>(false, AppXLibrary.StartableLibrary.IsStarted);
+
+            AssertDefaultLogFileContent("Juhta.Net.Warning10072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
+        }
+
+        [TestMethod]
+        public void Close_StartableLibrary_StopProcessesThrowsException_ShouldReturn()
+        {
+            SetConfigFiles("Root", "StartableLibrary_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+
+            AppXLibrary.StartableLibrary.StopProcessesException = new Exception("This is an injected exception.");
+
+            Application.Instance.Close();
+
+            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+
+            AssertDefaultLogFileContent("Juhta.Net.Error10071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
         }
 
         [TestMethod]
@@ -318,6 +356,20 @@ namespace Juhta.Net.Tests
             SetConfigFiles("Root", "SimpleConfig_", ".");
 
             Application.StartInstance();
+        }
+
+        [TestMethod]
+        public void Start_StartableLibrary_ShouldReturn()
+        {
+            SetConfigFiles("Root", "StartableLibrary_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+
+            Application.Instance.Close();
+
+            Assert.AreEqual<bool>(false, AppXLibrary.StartableLibrary.IsStarted);
         }
 
         [TestMethod]
