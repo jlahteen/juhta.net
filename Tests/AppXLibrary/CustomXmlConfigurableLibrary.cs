@@ -14,6 +14,9 @@ namespace AppXLibrary
         public CustomXmlConfigurableLibrary() : base("AppXLibrary.dll")
         {}
 
+        public CustomXmlConfigurableLibrary(string libraryFileName) : base(libraryFileName)
+        {}
+
         #endregion
 
         #region Public Methods
@@ -27,7 +30,7 @@ namespace AppXLibrary
             return(new XmlSchema[]{configSchema});
         }
 
-        public void InitializeLibrary(XmlDocument config)
+        public virtual void InitializeLibrary(XmlDocument config)
         {
             XmlNamespaceManager namespaceManager = new XmlNamespaceManager(config.NameTable);
             XmlNode node;
@@ -55,6 +58,12 @@ namespace AppXLibrary
             if (LibraryConfig.IntSetting == 1234567)
                 throw new InvalidConfigValueException("IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
         }
+
+        #endregion
+
+        #region Public Properties
+
+        public override string ConfigFileName => "AppXLibrary.config";
 
         #endregion
     }

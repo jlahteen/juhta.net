@@ -1,7 +1,7 @@
 ﻿
 namespace AppXLibrary
 {
-    public class LibraryConfig
+    public class LibraryConfig : ILibraryConfig
     {
         #region Public Methods
 
@@ -12,7 +12,7 @@ namespace AppXLibrary
 
         public string GetStringSetting()
         {
-            return (LibraryConfig.StringSetting);
+            return(LibraryConfig.StringSetting);
         }
 
         #endregion

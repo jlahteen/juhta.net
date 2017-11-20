@@ -14,10 +14,16 @@ namespace Juhta.Net.Tests
     {
         #region Test Setup Methods
 
+        [ClassCleanup]
+        public static void ClassCleanup()
+        {}
+
         [TestCleanup]
         public void TestCleanup()
         {
             Application.CloseInstance();
+
+            DeleteConfigFiles(s_configDirectory);
         }
 
         [TestInitialize]
@@ -173,6 +179,25 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<int>(473473383, libraryConfig.GetIntSetting());
 
             Assert.AreEqual<string>("This is the configured StringSetting value.", libraryConfig.GetStringSetting());
+        }
+
+        [TestMethod]
+        public void Start_CustomXmlConfigurableLibrary100_ShouldReturn()
+        {
+            ILibraryConfig libraryConfig;
+
+            SetConfigFiles("Root", "CustomXmlConfigurableLibrary100_");
+
+            AppXLibrary.Cloning.Clone.BuildCopies(100);
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                libraryConfig = ObjectFactory.CreateInstance<ILibraryConfig>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.LibraryConfig");
+
+                Assert.AreEqual<string>($"This is the configured StringSetting value._{i:000}", libraryConfig.GetStringSetting());
+            }
         }
 
         [TestMethod]

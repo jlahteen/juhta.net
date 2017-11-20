@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Cloning\Source.txt" />
     <None Remove="Config.xsd" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Cloning\Source.txt" />
     <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>
 
