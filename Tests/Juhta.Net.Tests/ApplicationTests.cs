@@ -239,6 +239,20 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableLibrary_ShouldReturn()
+        {
+            string currentGreeting;
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            currentGreeting = AppXLibrary.DynamicCustomXmlConfigurable.GreetingService.GetGreeting();
+
+            Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(LibraryInitializationException))]
         public void Start_CustomXmlConfigurableLibrary_InvalidConfigValue_ShouldThrowLibraryInitializationException()
         {

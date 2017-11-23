@@ -604,12 +604,12 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error015">
             <summary>
-            Property '{0}' of the class '{1}' cannot be executed because the instance has been disposed.
+            Property '{0}' of an instance of the class '{1}' cannot be executed because the instance has been disposed.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error016">
             <summary>
-            Method '{0}' of the class '{1}' cannot be executed because the instance has been disposed.
+            Method '{0}' of an instance of the class '{1}' cannot be executed because the instance has been disposed.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.ConfigException">
