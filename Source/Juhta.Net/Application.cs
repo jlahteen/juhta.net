@@ -136,6 +136,20 @@ namespace Juhta.Net
         }
 
         /// <summary>
+        /// Creates an instance of <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> corresponding to
+        /// specified dynamic library type and library state type.
+        /// </summary>
+        /// <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+        /// <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+        /// <returns>Returns the created <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> instance.</returns>
+        public DynamicLibraryContext<TDynamicLibrary, TLibraryState> CreateDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
+            where TDynamicLibrary : IDynamicLibrary
+            where TLibraryState : ILibraryState
+        {
+            return(m_libraryManager.CreateDynamicLibraryContext<TDynamicLibrary, TLibraryState>());
+        }
+
+        /// <summary>
         /// Starts the application by initializing the core of the framework and all configured startup libraries.
         /// </summary>
         public void Start()

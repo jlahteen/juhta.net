@@ -32,7 +32,9 @@ namespace Juhta.Net.LibraryManagement
         {
             m_application = application;
 
-            m_dynamicLibraries = new Dictionary<string, List<IDynamicLibrary>>();
+            m_dynamicLibrariesByConfigFileName = new Dictionary<string, List<IDynamicLibrary>>();
+
+            m_dynamicLibrariesByType = new Dictionary<string, IDynamicLibrary>();
 
             m_libraryHandles = new Stack<ILibraryHandle>();
         }
@@ -74,6 +76,25 @@ namespace Juhta.Net.LibraryManagement
 
             // Clear all library collections stored by this class
             ClearLibraryCollections();
+        }
+
+        /// <summary>
+        /// Creates an instance of <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> corresponding to
+        /// specified dynamic library type and library state type.
+        /// </summary>
+        /// <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+        /// <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+        /// <returns>Returns the created <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> instance.</returns>
+        public DynamicLibraryContext<TDynamicLibrary, TLibraryState> CreateDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
+            where TDynamicLibrary : IDynamicLibrary
+            where TLibraryState : ILibraryState
+        {
+            IDynamicLibrary dynamicLibrary;
+
+            if (m_dynamicLibrariesByType.TryGetValue(typeof(TDynamicLibrary).FullName, out dynamicLibrary))
+                return(new DynamicLibraryContext<TDynamicLibrary, TLibraryState>((TDynamicLibrary)dynamicLibrary));
+            else
+                throw new KeyNotFoundException(LibraryMessages.Error008.FormatMessage(typeof(TDynamicLibrary).FullName));
         }
 
         /// <summary>
@@ -218,7 +239,9 @@ namespace Juhta.Net.LibraryManagement
         /// </summary>
         private void ClearLibraryCollections()
         {
-            m_dynamicLibraries.Clear();
+            m_dynamicLibrariesByConfigFileName.Clear();
+
+            m_dynamicLibrariesByType.Clear();
 
             m_libraryHandles.Clear();
         }
@@ -496,12 +519,14 @@ namespace Juhta.Net.LibraryManagement
 
                         if (libraryHandle is IDynamicLibrary)
                         {
-                            if (!m_dynamicLibraries.TryGetValue(configurableLibrary.ConfigFileName, out dynamicLibraries))
+                            if (!m_dynamicLibrariesByConfigFileName.TryGetValue(configurableLibrary.ConfigFileName, out dynamicLibraries))
                             {
                                 dynamicLibraries = new List<IDynamicLibrary>();
 
-                                m_dynamicLibraries.Add(configurableLibrary.ConfigFileName, dynamicLibraries);
+                                m_dynamicLibrariesByConfigFileName.Add(configurableLibrary.ConfigFileName, dynamicLibraries);
                             }
+
+                            m_dynamicLibrariesByType.Add(libraryHandle.GetType().FullName, (IDynamicLibrary)libraryHandle);
 
                             dynamicLibraries.Add((IDynamicLibrary)libraryHandle);
                         }
@@ -595,7 +620,7 @@ namespace Juhta.Net.LibraryManagement
             {
                 // Get the dynamic libraries associated with the created or changed configuration file
 
-                if (!m_dynamicLibraries.TryGetValue(e.Name, out dynamicLibraries))
+                if (!m_dynamicLibrariesByConfigFileName.TryGetValue(e.Name, out dynamicLibraries))
                 {
                     Logger.LogWarning(LibraryMessages.Warning063, e.FullPath);
 
@@ -667,7 +692,7 @@ namespace Juhta.Net.LibraryManagement
             {
                 // Get the dynamic libraries associated with the deleted configuration file
 
-                if (!m_dynamicLibraries.TryGetValue(e.Name, out dynamicLibraries))
+                if (!m_dynamicLibrariesByConfigFileName.TryGetValue(e.Name, out dynamicLibraries))
                 {
                     Logger.LogWarning(LibraryMessages.Warning011, e.FullPath);
 
@@ -905,9 +930,14 @@ namespace Juhta.Net.LibraryManagement
         private ConfigFileWatcher m_configFileWatcher;
 
         /// <summary>
-        /// Specifies the collection of the dynamic libraries with configuration file names as key values.
+        /// Specifies the collection of the dynamic libraries indexed by configuration file name.
         /// </summary>
-        private Dictionary<string, List<IDynamicLibrary>> m_dynamicLibraries;
+        private Dictionary<string, List<IDynamicLibrary>> m_dynamicLibrariesByConfigFileName;
+
+        /// <summary>
+        /// Specifies the collection of the dynamic libraries indexed by type.
+        /// </summary>
+        private Dictionary<string, IDynamicLibrary> m_dynamicLibrariesByType;
 
         /// <summary>
         /// Specifies the stack of the initialized libraries.

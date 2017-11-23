@@ -46,6 +46,15 @@
             Closes the possibly created singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Application.CreateDynamicLibraryContext``2">
+            <summary>
+            Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> corresponding to
+            specified dynamic library type and library state type.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> instance.</returns>
+        </member>
         <member name="M:Juhta.Net.Application.Start">
             <summary>
             Starts the application by initializing the core of the framework and all configured startup libraries.
@@ -591,6 +600,16 @@
         <member name="F:Juhta.Net.Common.CommonMessages.Error014">
             <summary>
             Only one instance of the singleton class '{0}' is allowed to be created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.Error015">
+            <summary>
+            Property '{0}' of the class '{1}' cannot be executed because the instance has been disposed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.Error016">
+            <summary>
+            Method '{0}' of the class '{1}' cannot be executed because the instance has been disposed.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.ConfigException">
@@ -2743,6 +2762,52 @@
             indexed by the configuration file name.
             </summary>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2">
+            <summary>
+            Defines a class that simplifies the implementation of dynamic library services. The class acquires a read-lock
+            to the state of the dynamic library and provides access both to the handle and state of the library. In other
+            words, the class saves a developer of a dynamic library from storing the instances of the current handle and
+            state within the library.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose">
+            <summary>
+            Disposes the instance, that is, releases the acquired read-lock to the state of the library.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary">
+            <summary>
+            Gets the dynamic library instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState">
+            <summary>
+            Gets the library state instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.#ctor(`0)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="dynamicLibrary">Specifies a dynamic library instance to be associated with the context.</param>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.m_disposed">
+            <summary>
+            Specifies whether this instance has been disposed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.m_dynamicLibrary">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.m_libraryState">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState"/> property.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle">
             <summary>
             Defines an abstract base class for framework library handles.
@@ -3155,6 +3220,15 @@
             <para>This method will be called by the framework manager when the framework is closed.</para>
             </remarks>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDynamicLibraryContext``2">
+            <summary>
+            Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> corresponding to
+            specified dynamic library type and library state type.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> instance.</returns>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibraries(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
             <summary>
             Initializes the libraries listed in a specified root configuration.
@@ -3352,9 +3426,14 @@
             directory.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicLibraries">
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicLibrariesByConfigFileName">
             <summary>
-            Specifies the collection of the dynamic libraries with configuration file names as key values.
+            Specifies the collection of the dynamic libraries indexed by configuration file name.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_dynamicLibrariesByType">
+            <summary>
+            Specifies the collection of the dynamic libraries indexed by type.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_libraryHandles">
@@ -3432,7 +3511,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error008">
             <summary>
-            Free for the future use.
+            Dynamic library context could not be created because no dynamic library was found with the type '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error009">

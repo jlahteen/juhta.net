@@ -65,12 +65,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly AlertMessage Alert007 = MessageFactory.CreateAlertMessage("Application '{0}' failed to start. Please refer to the log events for more information.");
 
-        // NOTE: Message ID 8 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Dynamic library context could not be created because no dynamic library was found with the type '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error008 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error008 = MessageFactory.CreateErrorMessage("Dynamic library context could not be created because no dynamic library was found with the type '{0}'.");
 
         // NOTE: Message ID 9 is free
 
