@@ -115,7 +115,7 @@ namespace Juhta.Net.LibraryManagement
 
             foreach (XmlNode libraryNode in librariesNode)
             {
-                libraryHandle = LibraryHandle.CreateInstance(libraryNode);
+                libraryHandle = LibraryHandleBase.CreateInstance(libraryNode);
 
                 InitializeLibrary(libraryHandle);
             }

@@ -19,12 +19,13 @@ namespace Juhta.Net.LibraryManagement
     /// <summary>
     /// Defines an abstract base class for library handle classes.
     /// </summary>
-    public abstract class LibraryHandle : ILibraryHandle
+    public abstract class LibraryHandleBase : ILibraryHandle
     {
         #region Public Properties
 
         /// <summary>
-        /// Gets the configuration file name of the library that this <see cref="LibraryHandle"/> instance represents.
+        /// Gets the configuration file name of the library that this <see cref="LibraryHandleBase"/> instance
+        /// represents.
         /// </summary>
         public virtual string ConfigFileName
         {
@@ -40,7 +41,7 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Gets the root namespace of the library that this <see cref="LibraryHandle"/> instance represents.
+        /// Gets the root namespace of the library that this <see cref="LibraryHandleBase"/> instance represents.
         /// </summary>
         public virtual string LibraryRootNamespace
         {
@@ -55,7 +56,7 @@ namespace Juhta.Net.LibraryManagement
         /// Initializes a new instance.
         /// </summary>
         /// <param name="libraryFileName">Specifies a value for the <see cref="LibraryFileName"/> property.</param>
-        protected LibraryHandle(string libraryFileName)
+        protected LibraryHandleBase(string libraryFileName)
         {
             m_libraryFileName = libraryFileName;
         }

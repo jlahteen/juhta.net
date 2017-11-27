@@ -15,14 +15,14 @@ namespace Juhta.Net.LibraryManagement
     /// <summary>
     /// Defines an abstract base class for framework library handles.
     /// </summary>
-    public abstract class FrameworkLibraryHandle : LibraryHandle
+    public abstract class FrameworkLibraryHandle : LibraryHandleBase
     {
         #region Protected Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="libraryFileName">Specifies a value for the <see cref="LibraryHandle.LibraryFileName"/>
+        /// <param name="libraryFileName">Specifies a value for the <see cref="LibraryHandleBase.LibraryFileName"/>
         /// property.</param>
         protected FrameworkLibraryHandle(string libraryFileName) : base(libraryFileName)
         {}

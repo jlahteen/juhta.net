@@ -2670,7 +2670,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryFileName"/>
+            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/>
             property.</param>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ConfigFileWatcher">
@@ -2817,7 +2817,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryFileName"/>
+            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/>
             property.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.CreateNamespaceManager(System.Xml.XmlDocument,System.String)">
@@ -3114,39 +3114,40 @@
             started at all or started only partially.</para>
             </remarks>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.LibraryHandle">
+        <member name="T:Juhta.Net.LibraryManagement.LibraryHandleBase">
             <summary>
             Defines an abstract base class for library handle classes.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.LibraryHandle.ConfigFileName">
+        <member name="P:Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName">
             <summary>
-            Gets the configuration file name of the library that this <see cref="T:Juhta.Net.LibraryManagement.LibraryHandle"/> instance represents.
+            Gets the configuration file name of the library that this <see cref="T:Juhta.Net.LibraryManagement.LibraryHandleBase"/> instance
+            represents.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryFileName">
+        <member name="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName">
             <summary>
             See <see cref="P:Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryRootNamespace">
+        <member name="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace">
             <summary>
-            Gets the root namespace of the library that this <see cref="T:Juhta.Net.LibraryManagement.LibraryHandle"/> instance represents.
+            Gets the root namespace of the library that this <see cref="T:Juhta.Net.LibraryManagement.LibraryHandleBase"/> instance represents.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandle.#ctor(System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryFileName"/> property.</param>
+            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/> property.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandle.GetCommonConfigSchema">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema">
             <summary>
             Gets the embedded schema for the common configuration.
             </summary>
             <returns>Returns the embedded schema for the common configuration.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandle.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)">
             <summary>
             Gets an embedded configuration schema plus the common configuration schema.
             </summary>
@@ -3157,7 +3158,7 @@
             <returns>Returns an array containing two schemas, the specified embedded configuration schema and the
             common configuration schema.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandle.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)">
             <summary>
             Gets an embedded configuration schema.
             </summary>
@@ -3168,12 +3169,12 @@
             <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
             specified file namespace and name.</returns>
         </member>
-        <member name="F:Juhta.Net.LibraryManagement.LibraryHandle.m_libraryFileName">
+        <member name="F:Juhta.Net.LibraryManagement.LibraryHandleBase.m_libraryFileName">
             <summary>
-            Stores the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandle.LibraryFileName"/> property.
+            Stores the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/> property.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandle.CreateInstance(System.Xml.XmlNode)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.CreateInstance(System.Xml.XmlNode)">
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> based on a specified library XML node.
             </summary>
