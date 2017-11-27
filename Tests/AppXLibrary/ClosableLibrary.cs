@@ -4,7 +4,7 @@ using System;
 
 namespace AppXLibrary
 {
-    public class ClosableLibrary : ApplicationLibraryHandle, IClosableLibrary
+    public class ClosableLibrary : LibraryHandleBase, IClosableLibrary
     {
         #region Public Constructors
 

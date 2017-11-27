@@ -7,7 +7,7 @@ using System.Xml.Schema;
 
 namespace AppXLibrary
 {
-    public class CustomXmlConfigurableLibrary : ApplicationLibraryHandle, ICustomXmlConfigurableLibrary
+    public class CustomXmlConfigurableLibrary : LibraryHandleBase, ICustomXmlConfigurableLibrary
     {
         #region Public Constructors
 

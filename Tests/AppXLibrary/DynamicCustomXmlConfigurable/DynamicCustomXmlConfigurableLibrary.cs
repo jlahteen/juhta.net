@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {
-    public class DynamicCustomXmlConfigurableLibrary : ApplicationLibraryHandle, IDynamicCustomXmlConfigurableLibrary
+    public class DynamicCustomXmlConfigurableLibrary : LibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
     {
         #region Public Constructors
 

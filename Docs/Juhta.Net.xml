@@ -2661,18 +2661,6 @@
             Gets the root namespace of the framework.
             </summary>
         </member>
-        <member name="T:Juhta.Net.LibraryManagement.ApplicationLibraryHandle">
-            <summary>
-            Defines an abstract base class for application library handles.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.ApplicationLibraryHandle.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/>
-            property.</param>
-        </member>
         <member name="T:Juhta.Net.LibraryManagement.ConfigFileWatcher">
             <summary>
             Defines a class that watches configuration file changes. This class raises an appropriate event every time a

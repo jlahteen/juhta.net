@@ -80,7 +80,7 @@ namespace AppXLibraryXXX
         #endregion
     }
 
-    public class LibraryHandle : ApplicationLibraryHandle, IInitializableLibrary
+    public class LibraryHandle : LibraryHandleBase, IInitializableLibrary
     {
         #region Public Constructors
 
