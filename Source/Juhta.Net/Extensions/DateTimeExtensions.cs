@@ -83,7 +83,7 @@ namespace Juhta.Net.Extensions
 
             if (addUtcOffset)
             {
-                utcOffset = TimeZone.CurrentTimeZone.GetUtcOffset(dateTime);
+                utcOffset = TimeZoneInfo.Local.GetUtcOffset(dateTime);
 
                 timestamp += String.Format("{0:+00;-00}:{1:00;00}", utcOffset.Hours, utcOffset.Minutes);
             }
