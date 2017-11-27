@@ -65,6 +65,8 @@ namespace AppXLibrary.Cloning
 
             referenceAssemblies.Add("Juhta.Net.dll");
 
+            referenceAssemblies.Add("netstandard.dll");
+
             referenceAssemblies.Add(Assembly.GetExecutingAssembly().ManifestModule.FullyQualifiedName);
 
             return(referenceAssemblies.ToArray());

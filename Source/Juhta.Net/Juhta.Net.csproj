@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <DocumentationFile>..\..\Docs\Juhta.Net.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Juha Lähteenmäki</Authors>
@@ -20,8 +20,5 @@
   <ItemGroup>
     <EmbeddedResource Include="Common\CommonConfig.xsd" />
     <EmbeddedResource Include="Config.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
 </Project>

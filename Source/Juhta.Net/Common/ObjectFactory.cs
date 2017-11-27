@@ -10,7 +10,6 @@ using Juhta.Net.Extensions;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Runtime.Remoting;
 using System.Xml;
 
 namespace Juhta.Net.Common
@@ -117,14 +116,10 @@ namespace Juhta.Net.Common
         /// <returns>Returns the created instance casted to the requested type.</returns>
         public static T CreateInstance<T>(string assemblyFile, string className, params object[] parameters)
         {
-            ObjectHandle objectHandle;
-
             if (className[0] == '.')
                 className = Path.GetFileNameWithoutExtension(assemblyFile) + className;
 
-            objectHandle = Activator.CreateInstanceFrom(assemblyFile, className, false, BindingFlags.CreateInstance, null, parameters, null, null);
-
-            return((T)(objectHandle.Unwrap()));
+            return(CreateInstance<T>(Assembly.LoadFrom(assemblyFile), className, parameters));
         }
 
         /// <summary>
