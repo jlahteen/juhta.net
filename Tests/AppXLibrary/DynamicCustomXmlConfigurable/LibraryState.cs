@@ -4,11 +4,11 @@ using System.Xml;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {
-    public class CustomXmlConfigurableLibraryState : ICustomXmlConfigurableLibraryState
+    public class LibraryState : ICustomXmlConfigurableLibraryState
     {
         #region Public Constructors
 
-        public CustomXmlConfigurableLibraryState(ILibraryHandle libraryHandle)
+        public LibraryState(ILibraryHandle libraryHandle)
         {
             this.LibraryHandle = libraryHandle;
         }

@@ -4,14 +4,14 @@ using System.Xml.Schema;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {
-    public class DynamicCustomXmlConfigurableLibrary : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
+    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
     {
         #region Public Constructors
 
-        public DynamicCustomXmlConfigurableLibrary() : this("AppXLibrary.dll")
+        public LibraryHandle() : this("AppXLibrary.dll")
         {}
 
-        public DynamicCustomXmlConfigurableLibrary(string libraryFileName) : base(libraryFileName)
+        public LibraryHandle(string libraryFileName) : base(libraryFileName)
         {}
 
         #endregion
@@ -29,7 +29,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
 
         public ICustomXmlConfigurableLibraryState CreateCustomXmlConfigurableLibraryState()
         {
-            return(new CustomXmlConfigurableLibraryState(this));
+            return(new LibraryState(this));
         }
 
         #endregion
