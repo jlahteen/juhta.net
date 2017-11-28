@@ -2796,6 +2796,38 @@
             Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState"/> property.
             </summary>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase">
+            <summary>
+            Defines an abstract base class for dynamic library handles.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState">
+            <summary>
+            See <see cref="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState"/>.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock">
+            <summary>
+            See <see cref="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/>
+            property.</param>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.m_libraryState">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.m_libraryStateLock">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock"/> property.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle">
             <summary>
             Defines an abstract base class for framework library handles.
@@ -2976,9 +3008,9 @@
             <para>The setter can assume that the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object is initialized.</para>
             <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
             assignments from the properties of the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object to the properties of
-            the corresponding library classes. However, if the implementation of the setter contains error-prone
-            functionality, in case of an error the setter is responsible for leaving the library in a consistent state
-            in order to allow the process to continue running.</para>
+            the corresponding library classes.</para>
+            <para>A recommended design pattern is that a library state object is an aggregate object for the objects
+            comprising the library state.</para>
             </remarks>
         </member>
         <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock">

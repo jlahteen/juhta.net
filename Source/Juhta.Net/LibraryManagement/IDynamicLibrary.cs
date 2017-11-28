@@ -25,9 +25,9 @@ namespace Juhta.Net.LibraryManagement
         /// <para>The setter can assume that the specified <see cref="ILibraryState"/> object is initialized.</para>
         /// <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
         /// assignments from the properties of the specified <see cref="ILibraryState"/> object to the properties of
-        /// the corresponding library classes. However, if the implementation of the setter contains error-prone
-        /// functionality, in case of an error the setter is responsible for leaving the library in a consistent state
-        /// in order to allow the process to continue running.</para>
+        /// the corresponding library classes.</para>
+        /// <para>A recommended design pattern is that a library state object is an aggregate object for the objects
+        /// comprising the library state.</para>
         /// </remarks>
         ILibraryState LibraryState {get; set;}
 
