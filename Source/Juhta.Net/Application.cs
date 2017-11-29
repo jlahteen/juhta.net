@@ -310,7 +310,7 @@ namespace Juhta.Net
         /// <summary>
         /// Loads and validates the root configuration file.
         /// </summary>
-        /// <returns>Returns a <see cref="XmlDocument"/> object containing the root configuration. If there is no root
+        /// <returns>Returns an <see cref="XmlDocument"/> object containing the root configuration. If there is no root
         /// configuration file, the return value is null.</returns>
         private XmlDocument LoadAndValidateRootConfig()
         {
