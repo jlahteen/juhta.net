@@ -165,6 +165,7 @@ namespace Juhta.Net.LibraryManagement
         private bool ChangeLibraryState(IDynamicLibrary library, ILibraryState newLibraryState)
         {
             ILibraryState currentLibraryState;
+            string libraryFileName = GetLibraryFileName(library);
 
             // Acquire a write lock to the library state
             library.LibraryStateLock.EnterWriteLock();
@@ -177,7 +178,7 @@ namespace Juhta.Net.LibraryManagement
 
                 try
                 {
-                    StopLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, true);
+                    StopLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, true, libraryFileName);
                 }
 
                 catch
@@ -187,7 +188,7 @@ namespace Juhta.Net.LibraryManagement
                     // We must continue running with the current library state
 
                     // Close the new library state
-                    CloseLibraryState(newLibraryState, LibraryStateInstanceType.New);
+                    CloseLibraryState(newLibraryState, LibraryStateInstanceType.New, libraryFileName);
 
                     // Rethrow the exception
                     throw;
@@ -197,7 +198,7 @@ namespace Juhta.Net.LibraryManagement
 
                 try
                 {
-                    StartLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, true);
+                    StartLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, true, libraryFileName);
                 }
 
                 catch (Exception ex)
@@ -229,7 +230,7 @@ namespace Juhta.Net.LibraryManagement
             // The operation was successful
 
             // Close the current library state
-            CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current);
+            CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current, libraryFileName);
 
             return (true);
         }
@@ -253,6 +254,7 @@ namespace Juhta.Net.LibraryManagement
         private void CloseDynamicLibrary(IDynamicLibrary library)
         {
             ILibraryState libraryState;
+            string libraryFileName = GetLibraryFileName(library);
 
             library.LibraryStateLock.EnterWriteLock();
 
@@ -260,9 +262,9 @@ namespace Juhta.Net.LibraryManagement
             {
                 libraryState = library.LibraryState;
 
-                StopLibraryStateProcesses(libraryState, LibraryStateInstanceType.Current, false);
+                StopLibraryStateProcesses(libraryState, LibraryStateInstanceType.Current, false, libraryFileName);
 
-                CloseLibraryState(libraryState, LibraryStateInstanceType.Current);
+                CloseLibraryState(libraryState, LibraryStateInstanceType.Current, libraryFileName);
 
                 library.LibraryState = null;
             }
@@ -321,7 +323,8 @@ namespace Juhta.Net.LibraryManagement
         /// </summary>
         /// <param name="libraryState">Specifies a library state. Can be null.</param>
         /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
-        private void CloseLibraryState(ILibraryState libraryState, LibraryStateInstanceType instanceType)
+        /// <param name="libraryFileName">Specifies a library file name for error messages.</param>
+        private void CloseLibraryState(ILibraryState libraryState, LibraryStateInstanceType instanceType, string libraryFileName)
         {
             IClosableLibraryState closableLibraryState;
 
@@ -337,12 +340,12 @@ namespace Juhta.Net.LibraryManagement
             try
             {
                 if (!closableLibraryState.Close())
-                    Logger.LogWarning(LibraryMessages.Warning076.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
+                    Logger.LogWarning(LibraryMessages.Warning076.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
             }
 
             catch (Exception ex)
             {
-                Logger.LogError(ex, LibraryMessages.Error077, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
+                Logger.LogError(ex, LibraryMessages.Error077, instanceType.ToString().ToLower(), libraryFileName);
             }
         }
 
@@ -417,7 +420,17 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns the file name of the library specified by the given library interface object.</returns>
         private static string GetLibraryFileName(object libraryInterface)
         {
-            return(((ILibraryHandle)libraryInterface).LibraryFileName);
+            try
+            {
+                return(((ILibraryHandle)libraryInterface).LibraryFileName);
+            }
+
+            catch
+            {
+                // We don't expect this to happen but just in case because we don't want to jeopardize the ongoing
+                // library operation
+                return("<unknown>");
+            }
         }
 
         /// <summary>
@@ -539,7 +552,7 @@ namespace Juhta.Net.LibraryManagement
                 // Start the library processes if necessary
 
                 if (libraryHandle is IDynamicLibrary)
-                    StartLibraryStateProcesses(((IDynamicLibrary)libraryHandle).LibraryState, LibraryStateInstanceType.New, true);
+                    StartLibraryStateProcesses(((IDynamicLibrary)libraryHandle).LibraryState, LibraryStateInstanceType.New, true, libraryHandle.LibraryFileName);
                 else
                     StartLibraryProcesses(libraryHandle);
             }
@@ -778,9 +791,10 @@ namespace Juhta.Net.LibraryManagement
         /// <param name="libraryState">Specifies a library state.</param>
         /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
         /// <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+        /// <param name="libraryFileName">Specifies a library file name for error messages.</param>
         /// <returns>Returns true if the operation succeeded, otherwise false.</returns>
         /// <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
-        private bool StartLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions)
+        private bool StartLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions, string libraryFileName)
         {
             IStartableLibraryState startableLibraryState = libraryState as IStartableLibraryState;
 
@@ -798,10 +812,10 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 if (throwExceptions)
-                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle), ex));
+                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(instanceType.ToString().ToLower(), libraryFileName, ex));
                 else
                 {
-                    Logger.LogError(ex, LibraryMessages.Error061, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
+                    Logger.LogError(ex, LibraryMessages.Error061, instanceType.ToString().ToLower(), libraryFileName);
 
                     return(false);
                 }
@@ -814,9 +828,10 @@ namespace Juhta.Net.LibraryManagement
         /// <param name="libraryState">Specifies a library state. Can be null.</param>
         /// <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
         /// <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+        /// <param name="libraryFileName">Specifies a library file name for error messages.</param>
         /// <returns>Returns true if the operation succeeded, otherwise false.</returns>
         /// <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
-        private bool StopLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions)
+        private bool StopLibraryStateProcesses(ILibraryState libraryState, LibraryStateInstanceType instanceType, bool throwExceptions, string libraryFileName)
         {
             IStartableLibraryState startableLibraryState;
 
@@ -833,10 +848,10 @@ namespace Juhta.Net.LibraryManagement
             {
                 if (!startableLibraryState.StopProcesses())
                     if (throwExceptions)
-                        throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
+                        throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
                     else
                     {
-                        Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle)));
+                        Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
 
                         return(false);
                     }
@@ -847,10 +862,10 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 if (throwExceptions)
-                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle), ex));
+                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(instanceType.ToString().ToLower(), libraryFileName, ex));
                 else
                 {
-                    Logger.LogError(ex, LibraryMessages.Error075, instanceType.ToString().ToLower(), GetLibraryFileName(libraryState.LibraryHandle));
+                    Logger.LogError(ex, LibraryMessages.Error075, instanceType.ToString().ToLower(), libraryFileName);
 
                     return(false);
                 }
@@ -866,7 +881,9 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns true, if the restore operation was successful, otherwise false.</returns>
         private bool TryToRestoreCurrentLibraryState(IDynamicLibrary library, ILibraryState currentLibraryState, ILibraryState newLibraryState)
         {
-            if (StopLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, false))
+            string libraryFileName = GetLibraryFileName(library);
+
+            if (StopLibraryStateProcesses(newLibraryState, LibraryStateInstanceType.New, false, libraryFileName))
             {
                 // We managed to stop the possibly started processes in the new library state, so we pick the current library state
 
@@ -874,10 +891,10 @@ namespace Juhta.Net.LibraryManagement
                 library.LibraryState = currentLibraryState;
 
                 // Close the new library state
-                CloseLibraryState(newLibraryState, LibraryStateInstanceType.New);
+                CloseLibraryState(newLibraryState, LibraryStateInstanceType.New, libraryFileName);
 
                 // Try to (re)start the processes in the current library state
-                return(StartLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, false));
+                return(StartLibraryStateProcesses(currentLibraryState, LibraryStateInstanceType.Current, false, libraryFileName));
             }
             else
             {
@@ -887,7 +904,7 @@ namespace Juhta.Net.LibraryManagement
                 library.LibraryState = newLibraryState;
 
                 // Close the current library state
-                CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current);
+                CloseLibraryState(currentLibraryState, LibraryStateInstanceType.Current, libraryFileName);
 
                 return(false);
             }

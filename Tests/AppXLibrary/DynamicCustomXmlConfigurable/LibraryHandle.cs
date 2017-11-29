@@ -29,7 +29,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
 
         public ICustomXmlConfigurableLibraryState CreateCustomXmlConfigurableLibraryState()
         {
-            return(new LibraryState(this));
+            return(new LibraryState());
         }
 
         #endregion

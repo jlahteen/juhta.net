@@ -120,7 +120,7 @@
             <summary>
             Loads and validates the root configuration file.
             </summary>
-            <returns>Returns a <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration. If there is no root
+            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration. If there is no root
             configuration file, the return value is null.</returns>
         </member>
         <member name="T:Juhta.Net.Application.State">
@@ -3060,11 +3060,6 @@
             configuration of the library.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.ILibraryState.LibraryHandle">
-            <summary>
-            Gets the handle of the library that owns this library state.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.LibraryManagement.IStartableLibrary">
             <summary>
             Defines an interface for startable libraries. A library is a startable library if it contains at least one
@@ -3277,12 +3272,13 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.String)">
             <summary>
             Closes a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
             <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
             <summary>
@@ -3374,23 +3370,25 @@
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean,System.String)">
             <summary>
             Starts the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state.</param>
             <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
             <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
             <returns>Returns true if the operation succeeded, otherwise false.</returns>
             <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.LibraryManager.LibraryStateInstanceType,System.Boolean,System.String)">
             <summary>
             Stops the processes in a library state if necessary.
             </summary>
             <param name="libraryState">Specifies a library state. Can be null.</param>
             <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
             <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
             <returns>Returns true if the operation succeeded, otherwise false.</returns>
             <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
         </member>
