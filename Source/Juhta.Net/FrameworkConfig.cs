@@ -6,15 +6,38 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-namespace Juhta.Net.Common
+using System.Xml;
+
+namespace Juhta.Net
 {
     /// <summary>
-    /// A static class providing common methods and properties related to the configuration XML schemas of the
-    /// framework libraries.
+    /// A static class providing common methods and properties related to configuration files of the framework
+    /// libraries.
     /// </summary>
-    public static class ConfigSchemaInfo
+    public static class FrameworkConfig
     {
         #region Public Methods
+
+        /// <summary>
+        /// Creates an <see cref="XmlNamespaceManager"/> object corresponding to a specified framework library, XML
+        /// configuration and schema version.
+        /// </summary>
+        /// <param name="libraryFileName">Specifies a framework library file name.</param>
+        /// <param name="config">Specifies an <see cref="XmlDocument"/> object containing a library configuration.</param>
+        /// <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
+        /// <returns>Returns the created <see cref="XmlNamespaceManager"/> object.</returns>
+        public static XmlNamespaceManager CreateNamespaceManager(string libraryFileName, XmlDocument config, string schemaVersion)
+        {
+            XmlNamespaceManager namespaceManager;
+
+            namespaceManager = new XmlNamespaceManager(config.NameTable);
+
+            namespaceManager.AddNamespace("ns", FrameworkConfig.GetLibraryConfigXmlns(libraryFileName, schemaVersion));
+
+            namespaceManager.AddNamespace("common", FrameworkConfig.GetLibraryConfigXmlns("Common", schemaVersion));
+
+            return(namespaceManager);
+        }
 
         /// <summary>
         /// Gets the configuration schema namespace for a framework library.
@@ -22,7 +45,7 @@ namespace Juhta.Net.Common
         /// <param name="libraryFileName">Specifies a framework library file name.</param>
         /// <param name="schemaVersion">Specifies a schema version.</param>
         /// <returns>Returns the configuration schema namespace for the specified framework library.</returns>
-        public static string GetFrameworkLibraryConfigXmlns(string libraryFileName, string schemaVersion)
+        public static string GetLibraryConfigXmlns(string libraryFileName, string schemaVersion)
         {
             string libraryPart, xmlns;
 
@@ -36,7 +59,7 @@ namespace Juhta.Net.Common
 
             libraryPart = libraryPart.Replace('.', '-');
 
-            xmlns = ConfigSchemaInfo.RootXmlns + libraryPart + "-" + schemaVersion + ".xsd";
+            xmlns = FrameworkConfig.RootXmlns + libraryPart + "-" + schemaVersion + ".xsd";
 
             return(xmlns);
         }

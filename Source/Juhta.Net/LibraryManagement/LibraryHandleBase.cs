@@ -71,7 +71,7 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns the embedded schema for the common configuration.</returns>
         protected XmlSchema GetCommonConfigSchema()
         {
-            return(GetEmbeddedConfigSchema(Assembly.GetExecutingAssembly(), ConfigSchemaInfo.CommonConfigFileNamespace, ConfigSchemaInfo.CommonConfigFileName));
+            return(GetEmbeddedConfigSchema(Assembly.GetExecutingAssembly(), FrameworkConfig.CommonConfigFileNamespace, FrameworkConfig.CommonConfigFileName));
         }
 
         /// <summary>

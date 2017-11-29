@@ -625,70 +625,6 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="T:Juhta.Net.Common.ConfigSchemaInfo">
-            <summary>
-            A static class providing common methods and properties related to the configuration XML schemas of the
-            framework libraries.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ConfigSchemaInfo.GetFrameworkLibraryConfigXmlns(System.String,System.String)">
-            <summary>
-            Gets the configuration schema namespace for a framework library.
-            </summary>
-            <param name="libraryFileName">Specifies a framework library file name.</param>
-            <param name="schemaVersion">Specifies a schema version.</param>
-            <returns>Returns the configuration schema namespace for the specified framework library.</returns>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.CommonConfigFileName">
-            <summary>
-            Gets the file name of the common configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.CommonConfigFileNamespace">
-            <summary>
-            Gets the file namespace of the common configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.RootConfigFileName">
-            <summary>
-            Gets the file name of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.RootConfigFileNamespace">
-            <summary>
-            Gets the file namespace of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.RootConfigVersion">
-            <summary>
-            Gets the version of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.ConfigSchemaInfo.RootXmlns">
-            <summary>
-            Gets the root XML namespace for the configuration schemas of the framework libraries.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ConfigSchemaInfo.c_commonConfigFileName">
-            <summary>
-            Defines the file name of the common configuration XML schema.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ConfigSchemaInfo.c_rootConfigFileName">
-            <summary>
-            Defines the file name of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ConfigSchemaInfo.c_rootConfigVersion">
-            <summary>
-            Defines the version of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ConfigSchemaInfo.c_rootXmlns">
-            <summary>
-            Defines the root XML namespace for the configuration schemas of the framework libraries.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Common.ConsumerThread`1">
             <summary>
             Defines an abstract base class for consumer threads. The class provides a thread-safe method for putting
@@ -2641,6 +2577,80 @@
             <returns>Returns the default value of the attribute or null if the complex type or the attribute has not
             been defined in the schema.</returns>
         </member>
+        <member name="T:Juhta.Net.FrameworkConfig">
+            <summary>
+            A static class providing common methods and properties related to configuration files of the framework
+            libraries.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)">
+            <summary>
+            Creates an <see cref="T:System.Xml.XmlNamespaceManager"/> object corresponding to a specified framework library, XML
+            configuration and schema version.
+            </summary>
+            <param name="libraryFileName">Specifies a framework library file name.</param>
+            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing a library configuration.</param>
+            <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
+            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)">
+            <summary>
+            Gets the configuration schema namespace for a framework library.
+            </summary>
+            <param name="libraryFileName">Specifies a framework library file name.</param>
+            <param name="schemaVersion">Specifies a schema version.</param>
+            <returns>Returns the configuration schema namespace for the specified framework library.</returns>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigFileName">
+            <summary>
+            Gets the file name of the common configuration XML schema.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigFileNamespace">
+            <summary>
+            Gets the file namespace of the common configuration XML schema.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.RootConfigFileName">
+            <summary>
+            Gets the file name of the root configuration XML schema.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.RootConfigFileNamespace">
+            <summary>
+            Gets the file namespace of the root configuration XML schema.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.RootConfigVersion">
+            <summary>
+            Gets the version of the root configuration XML schema.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.FrameworkConfig.RootXmlns">
+            <summary>
+            Gets the root XML namespace for the configuration schemas of the framework libraries.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.FrameworkConfig.c_commonConfigFileName">
+            <summary>
+            Defines the file name of the common configuration XML schema.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigFileName">
+            <summary>
+            Defines the file name of the root configuration XML schema.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigVersion">
+            <summary>
+            Defines the version of the root configuration XML schema.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.FrameworkConfig.c_rootXmlns">
+            <summary>
+            Defines the root XML namespace for the configuration schemas of the framework libraries.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.FrameworkInfo">
             <summary>
             A static class that provides read-only information about the framework.
@@ -2826,33 +2836,6 @@
         <member name="F:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.m_libraryStateLock">
             <summary>
             Stores the <see cref="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock"/> property.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle">
-            <summary>
-            Defines an abstract base class for framework library handles.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/>
-            property.</param>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.CreateNamespaceManager(System.Xml.XmlDocument,System.String)">
-            <summary>
-            Creates a <see cref="T:System.Xml.XmlNamespaceManager"/> object for an XML configuration of the library represented by
-            this <see cref="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle"/> instance.
-            </summary>
-            <param name="config">Specifies a <see cref="T:System.Xml.XmlDocument"/> object containing a library configuration.</param>
-            <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
-            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object.</returns>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.FrameworkLibraryHandle.m_configStateLock">
-            <summary>
-            Specifies a lock object for managing concurrent access to the configuration state of the framework library
-            determined by this <see cref="T:Juhta.Net.LibraryManagement.FrameworkLibraryHandle"/> instance.
             </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IClosableLibrary">

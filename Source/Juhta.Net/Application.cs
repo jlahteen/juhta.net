@@ -171,7 +171,7 @@ namespace Juhta.Net
 
                     namespaceManager = new XmlNamespaceManager(rootConfig.NameTable);
 
-                    namespaceManager.AddNamespace("ns", String.Format("{0}root-{1}.xsd", ConfigSchemaInfo.RootXmlns, ConfigSchemaInfo.RootConfigVersion));
+                    namespaceManager.AddNamespace("ns", String.Format("{0}root-{1}.xsd", FrameworkConfig.RootXmlns, FrameworkConfig.RootConfigVersion));
 
                     // Initialize the name of the application
                     InitializeName(rootConfig, namespaceManager);
@@ -329,9 +329,9 @@ namespace Juhta.Net
 
             validator = new XmlValidator();
 
-            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(ConfigSchemaInfo.RootConfigFileName, ConfigSchemaInfo.RootConfigFileNamespace));
+            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.RootConfigFileName, FrameworkConfig.RootConfigFileNamespace));
 
-            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(ConfigSchemaInfo.CommonConfigFileName, ConfigSchemaInfo.CommonConfigFileNamespace));
+            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.CommonConfigFileName, FrameworkConfig.CommonConfigFileNamespace));
 
             try
             {
