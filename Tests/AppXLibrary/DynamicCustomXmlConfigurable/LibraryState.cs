@@ -4,9 +4,14 @@ using System.Xml;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {
-    public class LibraryState : ICustomXmlConfigurableLibraryState
+    public class LibraryState : ICustomXmlConfigurableLibraryState, IDefaultLibraryState
     {
         #region Public Methods
+
+        public void Initialize()
+        {
+            this.CurrentGreeting = "Hello there, what's up?";
+        }
 
         public void Initialize(XmlDocument config)
         {

@@ -11,8 +11,14 @@
 
   <xs:complexType name="settingsType">
     <xs:sequence>
-      <xs:element name="currentGreeting" type="xs:string"/>
+      <xs:element name="currentGreeting" type="greetingType"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="greetingType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
  
 </xs:schema>

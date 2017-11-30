@@ -4,7 +4,7 @@ using System.Xml.Schema;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {
-    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
+    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary, IDynamicInitializableLibrary
     {
         #region Public Constructors
 
@@ -18,6 +18,16 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
 
         #region Public Methods
 
+        public IDefaultLibraryState CreateDefaultLibraryState()
+        {
+            return(new LibraryState());
+        }
+
+        public ICustomXmlConfigurableLibraryState CreateLibraryState()
+        {
+            return(new LibraryState());
+        }
+
         public XmlSchema[] GetConfigSchemas()
         {
             XmlSchema configSchema;
@@ -25,11 +35,6 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
             configSchema = base.GetEmbeddedConfigSchema(System.Reflection.Assembly.GetExecutingAssembly(), "AppXLibrary.DynamicCustomXmlConfigurable", "Config.xsd");
 
             return(new XmlSchema[]{configSchema});
-        }
-
-        public ICustomXmlConfigurableLibraryState CreateLibraryState()
-        {
-            return(new LibraryState());
         }
 
         #endregion
