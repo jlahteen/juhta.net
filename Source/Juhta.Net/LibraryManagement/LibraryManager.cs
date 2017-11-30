@@ -386,7 +386,7 @@ namespace Juhta.Net.LibraryManagement
 
             config = LoadAndValidateXmlConfigFile(configFilePath, library.GetConfigSchemas(), GetLibraryFileName(library));
 
-            libraryState = library.CreateCustomXmlConfigurableLibraryState();
+            libraryState = library.CreateLibraryState();
 
             libraryState.Initialize(config);
 

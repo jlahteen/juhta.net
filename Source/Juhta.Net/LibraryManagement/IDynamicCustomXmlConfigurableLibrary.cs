@@ -20,10 +20,10 @@ namespace Juhta.Net.LibraryManagement
         #region Methods
 
         /// <summary>
-        /// Creates an uninitialized custom XML configurable library state.
+        /// Creates an uninitialized library state.
         /// </summary>
         /// <returns>Returns an uninitialized <see cref="ICustomXmlConfigurableLibraryState"/> object.</returns>
-        ICustomXmlConfigurableLibraryState CreateCustomXmlConfigurableLibraryState();
+        ICustomXmlConfigurableLibraryState CreateLibraryState();
 
         /// <summary>
         /// Gets the XML schemas to which configuration files must conform.

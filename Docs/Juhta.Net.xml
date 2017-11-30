@@ -2950,9 +2950,9 @@
             configuration.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateCustomXmlConfigurableLibraryState">
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState">
             <summary>
-            Creates an uninitialized custom XML configurable library state.
+            Creates an uninitialized library state.
             </summary>
             <returns>Returns an uninitialized <see cref="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState"/> object.</returns>
         </member>

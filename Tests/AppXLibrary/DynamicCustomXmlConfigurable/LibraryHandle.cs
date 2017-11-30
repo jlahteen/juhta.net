@@ -27,7 +27,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
             return(new XmlSchema[]{configSchema});
         }
 
-        public ICustomXmlConfigurableLibraryState CreateCustomXmlConfigurableLibraryState()
+        public ICustomXmlConfigurableLibraryState CreateLibraryState()
         {
             return(new LibraryState());
         }
