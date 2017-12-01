@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Config"
+    targetNamespace="http://tempuri.org/Config.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Config.xsd"
+    xmlns:mstns="http://tempuri.org/Config.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  
+  <xs:element name="settings" type="settingsType"/>
+
+  <xs:complexType name="settingsType">
+    <xs:sequence>
+      <xs:element name="stopProcessesReturnValue" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="stopProcessesThrowException" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+ 
+</xs:schema>

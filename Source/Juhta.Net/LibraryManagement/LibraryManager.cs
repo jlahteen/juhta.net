@@ -340,7 +340,7 @@ namespace Juhta.Net.LibraryManagement
             try
             {
                 if (!closableLibraryState.Close())
-                    Logger.LogWarning(LibraryMessages.Warning076.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
+                    Logger.LogWarning(LibraryMessages.Warning076, instanceType.ToString().ToLower(), libraryFileName);
             }
 
             catch (Exception ex)
@@ -474,7 +474,7 @@ namespace Juhta.Net.LibraryManagement
 
                 if (IsLibraryInitialized(libraryHandle))
                 {
-                    Logger.LogWarning(LibraryMessages.Warning023.FormatMessage(libraryHandle.LibraryFileName));
+                    Logger.LogWarning(LibraryMessages.Warning023, libraryHandle.LibraryFileName);
 
                     return;
                 }
@@ -851,7 +851,7 @@ namespace Juhta.Net.LibraryManagement
                         throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
                     else
                     {
-                        Logger.LogWarning(LibraryMessages.Warning073.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
+                        Logger.LogWarning(LibraryMessages.Warning073, instanceType.ToString().ToLower(), libraryFileName);
 
                         return(false);
                     }

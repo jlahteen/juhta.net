@@ -283,6 +283,47 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableLibrary_ConfigFileDeletionAndCreation_ShouldReturn()
+        {
+            string currentGreeting;
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            currentGreeting = AppXLibrary.DynamicCustomXmlConfigurable.GreetingService.GetGreeting();
+
+            Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
+
+            File.Delete(appXConfigFilePath);
+
+            Thread.Sleep(2000);
+
+            currentGreeting = AppXLibrary.DynamicCustomXmlConfigurable.GreetingService.GetGreeting();
+
+            Assert.AreEqual<string>("Hello there, what's up?", currentGreeting);
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+
+            Thread.Sleep(2000);
+
+            currentGreeting = AppXLibrary.DynamicCustomXmlConfigurable.GreetingService.GetGreeting();
+
+            Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
+
+            AssertDefaultLogFileContent(
+                "INFORMATION 'Juhta.Net.Info10012'",
+                "Library Manager detected that the configuration file",
+                "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully.",
+                "INFORMATION 'Juhta.Net.Info10065'",
+                "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully.",
+                "WARNING 'Juhta.Net.Warning10063'",
+                "Juhta.Net.config' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file."
+            );
+        }
+
+        [TestMethod]
         public void Start_DynamicCustomXmlConfigurableLibrary_InvalidConfigChange_ShouldReturn()
         {
             XmlDocument appXConfig = new XmlDocument();
@@ -382,6 +423,33 @@ namespace Juhta.Net.Tests
                 "WARNING 'Juhta.Net.Warning10011'",
                 "Library Manager detected that the configuration file",
                 "Unknown.config' was deleted, but no actions were performed because there were no dynamic libraries associated with this configuration file."
+            );
+        }
+
+        [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<bool>(true, AppXLibrary.DynamicCustomXmlConfigurableAndStartable.LibraryProcessInfo.IsStarted);
+        }
+
+        [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable_StopProcessesReturnsFalse_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_StopProcessesReturnsFalse_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<bool>(true, AppXLibrary.DynamicCustomXmlConfigurableAndStartable.LibraryProcessInfo.IsStarted);
+
+            Application.CloseInstance();
+
+            AssertDefaultLogFileContent(
+                "WARNING 'Juhta.Net.Warning10073'",
+                "At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
             );
         }
 

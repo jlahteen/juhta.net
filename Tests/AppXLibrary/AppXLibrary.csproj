@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Cloning\Source.txt" />
+    <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Config.xsd" />
     <EmbeddedResource Include="DynamicCustomXmlConfigurable\Config.xsd" />
     <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>
