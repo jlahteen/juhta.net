@@ -2,6 +2,7 @@
 using Juhta.Net.LibraryManagement;
 using System;
 using System.Xml;
+using Juhta.Net.Extensions;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 {
@@ -30,13 +31,18 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
                 m_stopProcessessThrowException = Convert.ToBoolean(node.InnerText);
             else
                 m_stopProcessessThrowException = false;
+
+            node = config.SelectSingleNode("/ns:settings/ns:replaceService", namespaceManager);
+
+            if (node == null)
+                this.ReplaceProcess = new ReplaceProcess();
+            else
+                this.ReplaceProcess = new ReplaceProcess(node.GetAttribute("search"), node.GetAttribute("replace"));
         }
 
         public void StartProcesses()
         {
-            this.LibraryProcess = new LibraryProcess();
-
-            this.LibraryProcess.Start();
+            this.ReplaceProcess.Start();
         }
 
         public bool StopProcesses()
@@ -44,9 +50,10 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
             if (m_stopProcessessThrowException)
                 throw new Exception("Processes could not be stopped.");
 
-            this.LibraryProcess.Stop();
+            this.ReplaceProcess.Stop();
 
-            this.LibraryProcess = null;
+            if (m_stopProcessesReturnValue)
+                this.ReplaceProcess = null;
 
             return(m_stopProcessesReturnValue);
         }
@@ -55,7 +62,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 
         #region Public Properties
 
-        public LibraryProcess LibraryProcess {get; set;}
+        public ReplaceProcess ReplaceProcess {get; set;}
 
         #endregion
 

@@ -3,9 +3,31 @@ using System;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 {
-    public class LibraryProcess
+    public class ReplaceProcess
     {
+        #region Public Constructors
+
+        public ReplaceProcess() : this("a", "A")
+        {}
+
+        public ReplaceProcess(string search, string replace)
+        {
+            m_search = search;
+
+            m_replace = replace;
+        }
+
+        #endregion
+
         #region Public Methods
+
+        public string Replace(string s)
+        {
+            if (!m_started)
+                throw new InvalidOperationException();
+
+            return(s.Replace(m_search, m_replace));
+        }
 
         public void Start()
         {
@@ -35,6 +57,10 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
         #endregion
 
         #region Private Fields
+
+        private string m_replace;
+
+        private string m_search;
 
         private bool m_started;
 

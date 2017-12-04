@@ -3,7 +3,7 @@ using Juhta.Net;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 {
-    public static class LibraryProcessInfo
+    public static class ReplaceProcessInfo
     {
         #region Public Properties
 
@@ -13,7 +13,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
             {
                 using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
                 {
-                    return(context.LibraryState.LibraryProcess.IsStarted);
+                    return(context.LibraryState.ReplaceProcess.IsStarted);
                 }
             }
         }

@@ -862,7 +862,7 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 if (throwExceptions)
-                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(instanceType.ToString().ToLower(), libraryFileName, ex));
+                    throw new LibraryStateException(LibraryMessages.Error075.FormatMessage(instanceType.ToString().ToLower(), libraryFileName), ex);
                 else
                 {
                     Logger.LogError(ex, LibraryMessages.Error075, instanceType.ToString().ToLower(), libraryFileName);
