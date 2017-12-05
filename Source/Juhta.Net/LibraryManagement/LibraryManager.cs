@@ -211,7 +211,7 @@ namespace Juhta.Net.LibraryManagement
                     {
                         Logger.LogError(ex);
 
-                        return (false);
+                        return(false);
                     }
                     else
                         throw;
@@ -812,7 +812,7 @@ namespace Juhta.Net.LibraryManagement
             catch (Exception ex)
             {
                 if (throwExceptions)
-                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(instanceType.ToString().ToLower(), libraryFileName, ex));
+                    throw new LibraryStateException(LibraryMessages.Error061.FormatMessage(instanceType.ToString().ToLower(), libraryFileName), ex);
                 else
                 {
                     Logger.LogError(ex, LibraryMessages.Error061, instanceType.ToString().ToLower(), libraryFileName);

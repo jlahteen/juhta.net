@@ -7,11 +7,13 @@
   <ItemGroup>
     <None Remove="Cloning\Source.txt" />
     <None Remove="Config.xsd" />
+    <None Remove="DynamicCustomXmlConfigurableAndStartable\Source.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Cloning\Source.txt" />
     <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Config.xsd" />
+    <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Source.txt" />
     <EmbeddedResource Include="DynamicCustomXmlConfigurable\Config.xsd" />
     <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>

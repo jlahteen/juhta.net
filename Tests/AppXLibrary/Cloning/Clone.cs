@@ -12,17 +12,17 @@ namespace AppXLibrary.Cloning
     {
         #region Public Methods
 
-        public static void BuildCopies(int count)
+        public static void BuildCopies(int count, string embeddedSourceFileNamespace)
         {
             for (int i = 1; i <= count; i++)
-                BuildCopy(i);
+                BuildCopy(i, embeddedSourceFileNamespace);
         }
 
         #endregion
 
         #region Private Methods
 
-        private static void BuildCopy(int copy)
+        private static void BuildCopy(int copy, string embeddedSourceFileNamespace)
         {
             CompilerParameters compilerParameters = new CompilerParameters(GetReferenceAssemblies());
             string sourceCode;
@@ -38,7 +38,7 @@ namespace AppXLibrary.Cloning
 
             compilerParameters.OutputAssembly = String.Format("AppXLibrary{0}.dll", copy);
 
-            sourceCode = Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile("Source.txt");
+            sourceCode = Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile("Source.txt", embeddedSourceFileNamespace);
 
             sourceCode = sourceCode.Replace("XXX", copy.ToString());
 

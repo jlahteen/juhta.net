@@ -1,5 +1,6 @@
 
 using AppXLibrary;
+using AppXLibrary.DynamicCustomXmlConfigurableAndStartable;
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Juhta.Net.LibraryManagement;
@@ -228,7 +229,7 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "CustomXmlConfigurableLibrary100_");
 
-            AppXLibrary.Cloning.Clone.BuildCopies(100);
+            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.Cloning");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -441,6 +442,7 @@ namespace Juhta.Net.Tests
         public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChange_ShouldReturn()
         {
             string s;
+            ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
@@ -448,7 +450,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+            s = replaceService.Replace("Ho-Ho-Ho");
 
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
@@ -460,7 +462,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+            s = replaceService.Replace("Ho-Ho-Ho");
 
             Assert.AreEqual<string>("Zz-Zz-Zz", s);
 
@@ -472,10 +474,50 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_ShouldReturn()
+        {
+            string s;
+            ReplaceService replaceService = new ReplaceService();
+            XmlDocument appXConfig = new XmlDocument();
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            s = replaceService.Replace("Ho-Ho-Ho");
+
+            Assert.AreEqual<string>("Yo-Yo-Yo", s);
+
+            appXConfig.Load(appXConfigFilePath);
+
+            appXConfig.DocumentElement.LastChild.SetAttribute("replace", "XYZ");
+
+            appXConfig.Save(appXConfigFilePath);
+
+            Thread.Sleep(2000);
+
+            s = replaceService.Replace("Ho-Ho-Ho");
+
+            Assert.AreEqual<string>("Yo-Yo-Yo", s);
+
+            AssertDefaultLogFileContent(
+                "ERROR 'Juhta.Net.Error10061'",
+                "Juhta.Net.LibraryManagement.LibraryStateException: Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
+                "System.InvalidOperationException: Cannot replace with 'XYZ' strings. Please use any other token but not that. Sorry.",
+                "WARNING 'Juhta.Net.Warning10078'",
+                "AppXLibrary.config' was created or changed but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The library continues running with the current state.",
+                "ALERT 'Juhta.Net.Alert10005'",
+                "Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+            );
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
         public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesReturnsFalse_ShouldReturn()
         {
             string s;
+            ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
@@ -483,7 +525,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+            s = replaceService.Replace("Ho-Ho-Ho");
 
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
@@ -497,7 +539,7 @@ namespace Juhta.Net.Tests
 
             try
             {
-                s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+                s = replaceService.Replace("Ho-Ho-Ho");
             }
 
             catch
@@ -505,6 +547,7 @@ namespace Juhta.Net.Tests
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10059'",
                     "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated.",
+                    "NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
                     "An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
                     "Juhta.Net.LibraryManagement.LibraryStateException: Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
                     "ALERT 'Juhta.Net.Alert10005'",
@@ -519,6 +562,7 @@ namespace Juhta.Net.Tests
         public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesThrowsException_ShouldReturn()
         {
             string s;
+            ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
@@ -526,7 +570,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+            s = replaceService.Replace("Ho-Ho-Ho");
 
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
@@ -538,7 +582,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            s = AppXLibrary.DynamicCustomXmlConfigurableAndStartable.ReplaceService.Replace("Ho-Ho-Ho");
+            s = replaceService.Replace("Ho-Ho-Ho");
 
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
@@ -584,6 +628,28 @@ namespace Juhta.Net.Tests
                 "An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
                 "System.Exception: Processes could not be stopped."
             );
+        }
+
+        [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable100_ShouldReturn()
+        {
+            IReplaceService replaceService;
+            string s;
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_");
+
+            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+
+                s = replaceService.Replace("Ho-Ho-Ho");
+
+                Assert.AreEqual<string>($"Yo-Yo-Yo-{i}", s);
+            }
         }
 
         [TestMethod]

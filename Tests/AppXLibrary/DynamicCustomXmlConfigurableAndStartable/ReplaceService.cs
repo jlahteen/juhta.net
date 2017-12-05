@@ -3,11 +3,11 @@ using Juhta.Net;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 {
-    public static class ReplaceService
+    public class ReplaceService : AppXLibrary.DynamicCustomXmlConfigurableAndStartable.IReplaceService
     {
         #region Public Methods
 
-        public static string Replace(string s)
+        public string Replace(string s)
         {
             using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
             {

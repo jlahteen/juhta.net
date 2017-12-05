@@ -1,0 +1,230 @@
+﻿
+using Juhta.Net;
+using Juhta.Net.Extensions;
+using Juhta.Net.LibraryManagement;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Xml;
+using System.Xml.Schema;
+
+namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+{
+    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
+    {
+        #region Public Constructors
+
+        public LibraryHandle() : this("AppXLibraryXXX.dll")
+        {}
+
+        public LibraryHandle(string libraryFileName) : base(libraryFileName)
+        {}
+
+        #endregion
+
+        #region Public Methods
+
+        public ICustomXmlConfigurableLibraryState CreateLibraryState()
+        {
+            return(new LibraryState());
+        }
+
+        public XmlSchema[] GetConfigSchemas()
+        {
+		    Assembly appXLibrary;
+            XmlSchema configSchema;
+
+			appXLibrary = Assembly.LoadFile(Assembly.GetExecutingAssembly().GetDirectory() + Path.DirectorySeparatorChar + "AppXLibrary.dll");
+
+            configSchema = base.GetEmbeddedConfigSchema(appXLibrary, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable", "Config.xsd");
+
+            return(new XmlSchema[]{configSchema});
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public override string ConfigFileName
+		{
+		    get {return("AppXLibrary.config");}
+		}
+
+        #endregion
+    }
+}
+
+namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+{
+    public class LibraryState : ICustomXmlConfigurableLibraryState, IStartableLibraryState
+    {
+        #region Public Methods
+
+        public void Initialize(XmlDocument config)
+        {
+            XmlNode node;
+
+            XmlNamespaceManager namespaceManager = new XmlNamespaceManager(config.NameTable);
+
+            namespaceManager.AddNamespace("ns", "http://tempuri.org/Config.xsd");
+
+            node = config.SelectSingleNode("/ns:settings/ns:stopProcessesReturnValue", namespaceManager);
+
+            if (node != null)
+                m_stopProcessesReturnValue = Convert.ToBoolean(node.InnerText);
+            else
+                m_stopProcessesReturnValue = true;
+
+            node = config.SelectSingleNode("/ns:settings/ns:stopProcessesThrowException", namespaceManager);
+
+            if (node != null)
+                m_stopProcessessThrowException = Convert.ToBoolean(node.InnerText);
+            else
+                m_stopProcessessThrowException = false;
+
+            node = config.SelectSingleNode("/ns:settings/ns:replaceService", namespaceManager);
+
+            if (node == null)
+                this.ReplaceProcess = new ReplaceProcess();
+            else
+                this.ReplaceProcess = new ReplaceProcess(node.GetAttribute("search"), node.GetAttribute("replace"));
+        }
+
+        public void StartProcesses()
+        {
+            this.ReplaceProcess.Start();
+        }
+
+        public bool StopProcesses()
+        {
+            if (m_stopProcessessThrowException)
+                throw new Exception("Processes could not be stopped.");
+
+            this.ReplaceProcess.Stop();
+
+            return(m_stopProcessesReturnValue);
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public ReplaceProcess ReplaceProcess {get; set;}
+
+        #endregion
+
+        #region Private Fields
+
+        private bool m_stopProcessesReturnValue;
+
+        private bool m_stopProcessessThrowException;
+
+        #endregion
+    }
+}
+
+namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+{
+    public class ReplaceProcess
+    {
+        #region Public Constructors
+
+        public ReplaceProcess() : this("a", "A")
+        {}
+
+        public ReplaceProcess(string search, string replace)
+        {
+            m_search = search;
+
+            m_replace = replace;
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public string Replace(string s)
+        {
+            if (!m_started)
+                throw new InvalidOperationException();
+
+            return(s.Replace(m_search, m_replace) + "-XXX");
+        }
+
+        public void Start()
+        {
+            if (m_started)
+                throw new InvalidOperationException();
+
+            if (m_replace == "XYZ")
+                throw new InvalidOperationException("Cannot replace with 'XYZ' strings. Please use any other token but not that. Sorry.");
+
+            m_started = true;
+        }
+
+        public void Stop()
+        {
+            m_started = false;
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public bool IsStarted
+        {
+            get {return(m_started);}
+        }
+
+        #endregion
+
+        #region Private Fields
+
+        private string m_replace;
+
+        private string m_search;
+
+        private bool m_started;
+
+        #endregion
+    }
+}
+
+namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+{
+    public static class ReplaceProcessInfo
+    {
+        #region Public Properties
+
+        public static bool IsStarted
+        {
+            get
+            {
+                using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
+                {
+                    return(context.LibraryState.ReplaceProcess.IsStarted);
+                }
+            }
+        }
+
+        #endregion
+    }
+}
+
+namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+{
+    public class ReplaceService : AppXLibrary.DynamicCustomXmlConfigurableAndStartable.IReplaceService
+    {
+        #region Public Methods
+
+        public string Replace(string s)
+        {
+            using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
+            {
+                return(context.LibraryState.ReplaceProcess.Replace(s));
+            }
+        }
+
+        #endregion
+    }
+}

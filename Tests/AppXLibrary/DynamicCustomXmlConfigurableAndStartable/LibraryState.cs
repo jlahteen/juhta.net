@@ -52,9 +52,6 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 
             this.ReplaceProcess.Stop();
 
-            if (m_stopProcessesReturnValue)
-                this.ReplaceProcess = null;
-
             return(m_stopProcessesReturnValue);
         }
 
