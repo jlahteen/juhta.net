@@ -6,6 +6,7 @@ using Juhta.Net.Extensions;
 using Juhta.Net.LibraryManagement;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Xml;
@@ -474,6 +475,40 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChangeUnderHeavyLoad_ShouldReturn()
+        {
+            Thread[] threads = new Thread[100];
+            StressTestParam[] threadParams = new StressTestParam[100];
+            XmlDocument appXConfig = new XmlDocument();
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 0; i < threads.Length; i++)
+                threadParams[i] = new StressTestParam{Index = i, Value = "<null>"};
+
+            for (int i = 0; i < threads.Length; i++)
+                threads[i] = new Thread(new ParameterizedThreadStart(StressTestMain));
+
+            for (int i = 0; i < threads.Length; i++)
+                threads[i].Start(threadParams[i]);
+
+            appXConfig.Load(appXConfigFilePath);
+
+            appXConfig.DocumentElement.LastChild.SetAttribute("replace", "Zz");
+
+            appXConfig.Save(appXConfigFilePath);
+
+            for (int i = 0; i < threads.Length; i++)
+                threads[i].Join();
+
+            for (int i = 0; i < threads.Length; i++)
+                Assert.AreEqual<string>($"Zz-Zz-Zz-{i}", threadParams[i].Value);
+        }
+
+        [TestMethod]
         public void Start_DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_ShouldReturn()
         {
             string s;
@@ -653,6 +688,65 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicCustomXmlConfigurableAndStartable100_ConfigChange_ShouldReturn()
+        {
+            IReplaceService replaceService;
+            string s;
+            XmlDocument appXConfig = new XmlDocument();
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            int secondsWaited = 0;
+
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_");
+
+            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+
+                s = replaceService.Replace("Ho-Ho-Ho");
+
+                Assert.AreEqual<string>($"Yo-Yo-Yo-{i}", s);
+            }
+
+            appXConfig.Load(appXConfigFilePath);
+
+            appXConfig.DocumentElement.LastChild.SetAttribute("replace", "!#");
+
+            appXConfig.Save(appXConfigFilePath);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+
+                do
+                {
+                    s = replaceService.Replace("Ho-Ho-Ho");
+
+                    if (s == $"Yo-Yo-Yo-{i}")
+                    {
+                        Thread.Sleep(1000);
+
+                        secondsWaited++;
+
+                        Assert.IsTrue(secondsWaited < 10, $"secondsWaited >= 10: i is {i}");
+                    }
+                }
+                while (s == $"Yo-Yo-Yo-{i}");
+
+                Assert.AreEqual<string>($"!#-!#-!#-{i}", s);
+            }
+
+            for (int i = 1; i <= 100; i++)
+                AssertDefaultLogFileContent(
+                    "INFORMATION 'Juhta.Net.Info10065'",
+                    $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary{i}.dll' was updated successfully."
+                );
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(LibraryInitializationException))]
         public void Start_CustomXmlConfigurableLibrary_InvalidConfigValue_ShouldThrowLibraryInitializationException()
         {
@@ -795,6 +889,41 @@ namespace Juhta.Net.Tests
             application.Start();
 
             application.Start();
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void StressTestMain(object paramObj)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            string s;
+            ReplaceService replaceService = new ReplaceService();
+            StressTestParam param = (StressTestParam)paramObj;
+
+            stopwatch.Start();
+
+            do
+                s = replaceService.Replace("Ho-Ho-Ho");
+            while (s == $"Yo-Yo-Yo" && stopwatch.ElapsedMilliseconds <= 15000);
+
+            param.Value = s + "-" + param.Index.ToString();
+        }
+
+        #endregion
+
+        #region Private Types
+
+        private class StressTestParam
+        {
+            #region Public Properties
+
+            public int Index {get; set;}
+
+            public string Value {get; set;}
+
+            #endregion
         }
 
         #endregion
