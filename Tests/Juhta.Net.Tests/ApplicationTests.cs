@@ -230,13 +230,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "CustomXmlConfigurableLibrary100_");
 
-            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.Cloning");
+            AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.Cloning");
 
             Application.StartInstance(null, s_configDirectory);
 
             for (int i = 1; i <= 100; i++)
             {
-                libraryConfig = ObjectFactory.CreateInstance<ILibraryConfig>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.LibraryConfig");
+                libraryConfig = ObjectFactory.CreateInstance<ILibraryConfig>($"AppXLibraryTempA{i}.dll", $"AppXLibraryTempA{i}.LibraryConfig");
 
                 Assert.AreEqual<string>($"This is the configured StringSetting value._{i:000}", libraryConfig.GetStringSetting());
             }
@@ -673,13 +673,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_");
 
-            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+            AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempB", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
 
             Application.StartInstance(null, s_configDirectory);
 
             for (int i = 1; i <= 100; i++)
             {
-                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibraryTempB{i}.dll", $"AppXLibraryTempB{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
 
                 s = replaceService.Replace("Ho-Ho-Ho");
 
@@ -696,15 +696,15 @@ namespace Juhta.Net.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
             int secondsWaited = 0;
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_");
+            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_ConfigChange_");
 
-            AppXLibrary.Cloning.Clone.BuildCopies(100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+            AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempC", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
 
             Application.StartInstance(null, s_configDirectory);
 
             for (int i = 1; i <= 100; i++)
             {
-                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibraryTempC{i}.dll", $"AppXLibraryTempC{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
 
                 s = replaceService.Replace("Ho-Ho-Ho");
 
@@ -719,7 +719,7 @@ namespace Juhta.Net.Tests
 
             for (int i = 1; i <= 100; i++)
             {
-                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibrary{i}.dll", $"AppXLibrary{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
+                replaceService = ObjectFactory.CreateInstance<IReplaceService>($"AppXLibraryTempC{i}.dll", $"AppXLibraryTempC{i}.DynamicCustomXmlConfigurableAndStartable.ReplaceService");
 
                 do
                 {
@@ -742,7 +742,7 @@ namespace Juhta.Net.Tests
             for (int i = 1; i <= 100; i++)
                 AssertDefaultLogFileContent(
                     "INFORMATION 'Juhta.Net.Info10065'",
-                    $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary{i}.dll' was updated successfully."
+                    $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibraryTempC{i}.dll' was updated successfully."
                 );
         }
 

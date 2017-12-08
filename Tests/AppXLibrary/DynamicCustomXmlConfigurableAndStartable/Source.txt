@@ -8,13 +8,13 @@ using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+namespace {{AssemblyFileName}}.DynamicCustomXmlConfigurableAndStartable
 {
     public class LibraryHandle : DynamicLibraryHandleBase, IDynamicCustomXmlConfigurableLibrary
     {
         #region Public Constructors
 
-        public LibraryHandle() : this("AppXLibraryXXX.dll")
+        public LibraryHandle() : this("{{AssemblyFileName}}.dll")
         {}
 
         public LibraryHandle(string libraryFileName) : base(libraryFileName)
@@ -54,7 +54,7 @@ namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
     }
 }
 
-namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+namespace {{AssemblyFileName}}.DynamicCustomXmlConfigurableAndStartable
 {
     public class LibraryState : ICustomXmlConfigurableLibraryState, IStartableLibraryState
     {
@@ -123,7 +123,7 @@ namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
     }
 }
 
-namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+namespace {{AssemblyFileName}}.DynamicCustomXmlConfigurableAndStartable
 {
     public class ReplaceProcess
     {
@@ -148,7 +148,7 @@ namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
             if (!m_started)
                 throw new InvalidOperationException();
 
-            return(s.Replace(m_search, m_replace) + "-XXX");
+            return(s.Replace(m_search, m_replace) + "-{{Copy}}");
         }
 
         public void Start()
@@ -190,7 +190,7 @@ namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
     }
 }
 
-namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+namespace {{AssemblyFileName}}.DynamicCustomXmlConfigurableAndStartable
 {
     public static class ReplaceProcessInfo
     {
@@ -211,7 +211,7 @@ namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
     }
 }
 
-namespace AppXLibraryXXX.DynamicCustomXmlConfigurableAndStartable
+namespace {{AssemblyFileName}}.DynamicCustomXmlConfigurableAndStartable
 {
     public class ReplaceService : AppXLibrary.DynamicCustomXmlConfigurableAndStartable.IReplaceService
     {
