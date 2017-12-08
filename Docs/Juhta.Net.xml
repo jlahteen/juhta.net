@@ -612,6 +612,11 @@
             Method '{0}' of an instance of the class '{1}' cannot be executed because the instance has been disposed.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.Error017">
+            <summary>
+            An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Common.ConfigException">
             <summary>
             This exception will be thrown in a situation where execution cannot be continued for a reason that somehow

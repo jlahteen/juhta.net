@@ -99,7 +99,7 @@
   <!-- Define libraryFileNameType -->
   <xs:simpleType name="libraryFileNameType">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.dll"/>
+      <xs:pattern value="[a-zA-Z0-9_\-]+(\.[a-zA-Z0-9_\-]+)*\.dll"/>
     </xs:restriction>
   </xs:simpleType>
   

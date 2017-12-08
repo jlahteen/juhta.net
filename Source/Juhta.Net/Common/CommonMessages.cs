@@ -107,6 +107,11 @@ namespace Juhta.Net.Common
         /// </summary>
         public static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("Method '{0}' of an instance of the class '{1}' cannot be executed because the instance has been disposed.");
 
+        /// <summary>
+        /// An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.
+        /// </summary>
+        public static readonly ErrorMessage Error017 = MessageFactory.CreateErrorMessage("An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.");
+
         #endregion
     }
 }

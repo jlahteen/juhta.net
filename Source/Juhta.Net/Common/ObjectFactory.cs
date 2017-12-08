@@ -52,10 +52,17 @@ namespace Juhta.Net.Common
         /// <returns>Returns the created instance casted to the requested type.</returns>
         public static T CreateInstance<T>(Assembly assembly, string className, params object[] parameters)
         {
+            object @object;
+
             if (className[0] == '.')
                 className = Path.GetFileNameWithoutExtension(assembly.Location) + className;
 
-            return((T)assembly.CreateInstance(className, false, BindingFlags.CreateInstance, null, parameters, null, null));
+            @object = assembly.CreateInstance(className, false, BindingFlags.CreateInstance, null, parameters, null, null);
+
+            if (@object == null)
+                throw new ArgumentException(CommonMessages.Error017.FormatMessage(className, assembly.Location));
+
+            return((T)@object);
         }
 
         /// <summary>
