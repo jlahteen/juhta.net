@@ -24,6 +24,8 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Stops the library state processes.
         /// </summary>
+        /// <param name="final">Specifies whether this call is the final call on this method. If true, the current
+        /// library state instance is the last instance, and the application is shutting down.</param>
         /// <returns>Returns true if the library state processes were stopped without errors, or false if at least one
         /// error occurred in the stopping process.</returns>
         /// <remarks>
@@ -34,7 +36,7 @@ namespace Juhta.Net.LibraryManagement
         /// means that the method should prepare for such situation where the library state processes have not been
         /// started at all or started only partially.</para>
         /// </remarks>
-        bool StopProcesses();
+        bool StopProcesses(bool final);
 
         #endregion
     }

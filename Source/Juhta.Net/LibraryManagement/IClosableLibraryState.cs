@@ -18,6 +18,8 @@ namespace Juhta.Net.LibraryManagement
         /// Closes the library state, that is, performs required closing actions to release the library state resources
         /// gracefully.
         /// </summary>
+        /// <param name="final">Specifies whether this call is the final call on this method. If true, the current
+        /// library state instance is the last instance, and the application is shutting down.</param>
         /// <returns>Returns true if the library state was closed without errors, or false if at least one error
         /// occurred in the closing process.</returns>
         /// <remarks>
@@ -28,6 +30,6 @@ namespace Juhta.Net.LibraryManagement
         /// means that the method should prepare for such situation where the library state is not initialized at all
         /// or initialized only partially.</para>
         /// </remarks>
-        bool Close();
+        bool Close(bool final);
     }
 }

@@ -45,7 +45,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
             this.ReplaceProcess.Start();
         }
 
-        public bool StopProcesses()
+        public bool StopProcesses(bool final)
         {
             if (m_stopProcessessThrowException)
                 throw new Exception("Processes could not be stopped.");

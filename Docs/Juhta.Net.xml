@@ -2869,11 +2869,13 @@
             actions.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IClosableLibraryState.Close">
+        <member name="M:Juhta.Net.LibraryManagement.IClosableLibraryState.Close(System.Boolean)">
             <summary>
             Closes the library state, that is, performs required closing actions to release the library state resources
             gracefully.
             </summary>
+            <param name="final">Specifies whether this call is the final call on this method. If true, the current
+            library state instance is the last instance, and the application is shutting down.</param>
             <returns>Returns true if the library state was closed without errors, or false if at least one error
             occurred in the closing process.</returns>
             <remarks>
@@ -3074,10 +3076,12 @@
             Starts the library state processes.
             </summary>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.IStartableLibraryState.StopProcesses">
+        <member name="M:Juhta.Net.LibraryManagement.IStartableLibraryState.StopProcesses(System.Boolean)">
             <summary>
             Stops the library state processes.
             </summary>
+            <param name="final">Specifies whether this call is the final call on this method. If true, the current
+            library state instance is the last instance, and the application is shutting down.</param>
             <returns>Returns true if the library state processes were stopped without errors, or false if at least one
             error occurred in the stopping process.</returns>
             <remarks>
@@ -3397,6 +3401,11 @@
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_application">
             <summary>
             Specifies the <see cref="T:Juhta.Net.Application"/> object that owns this <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_closing">
+            <summary>
+            Specifies whether this <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/> instance is closing libraries.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryManager.m_configFileWatcher">

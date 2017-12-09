@@ -56,6 +56,8 @@ namespace Juhta.Net.LibraryManagement
 
             // Close all libraries one by one
 
+            m_closing = true;
+
             while (m_libraryHandles.Count > 0)
             {
                 try
@@ -76,6 +78,8 @@ namespace Juhta.Net.LibraryManagement
 
             // Clear all library collections stored by this class
             ClearLibraryCollections();
+
+            m_closing = false;
         }
 
         /// <summary>
@@ -339,7 +343,7 @@ namespace Juhta.Net.LibraryManagement
 
             try
             {
-                if (!closableLibraryState.Close())
+                if (!closableLibraryState.Close(m_closing))
                     Logger.LogWarning(LibraryMessages.Warning076, instanceType.ToString().ToLower(), libraryFileName);
             }
 
@@ -846,7 +850,7 @@ namespace Juhta.Net.LibraryManagement
 
             try
             {
-                if (!startableLibraryState.StopProcesses())
+                if (!startableLibraryState.StopProcesses(m_closing))
                     if (throwExceptions)
                         throw new LibraryStateException(LibraryMessages.Error059.FormatMessage(instanceType.ToString().ToLower(), libraryFileName));
                     else
@@ -939,6 +943,11 @@ namespace Juhta.Net.LibraryManagement
         /// Specifies the <see cref="Application"/> object that owns this <see cref="LibraryManager"/> instance.
         /// </summary>
         private Application m_application;
+
+        /// <summary>
+        /// Specifies whether this <see cref="LibraryManager"/> instance is closing libraries.
+        /// </summary>
+        private bool m_closing;
 
         /// <summary>
         /// A <see cref="ConfigFileWatcher"/> object that watches configuration file changes in the configuration
