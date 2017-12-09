@@ -15,6 +15,16 @@ namespace Juhta.Net.LibraryManagement
     /// </summary>
     public abstract class DynamicLibraryHandleBase : LibraryHandleBase, IDynamicLibrary
     {
+        #region Public Methods
+
+        /// <summary>
+        /// See <see cref="IDynamicLibrary.GoLive(ILibraryState)"/>.
+        /// </summary>
+        public virtual void GoLive(ILibraryState libraryState)
+        {}
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>

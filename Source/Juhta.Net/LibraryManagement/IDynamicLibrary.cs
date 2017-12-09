@@ -16,19 +16,26 @@ namespace Juhta.Net.LibraryManagement
     /// </summary>
     public interface IDynamicLibrary
     {
+        #region Methods
+
+        /// <summary>
+        /// Goes live with a specified <see cref="ILibraryState"/> instance.
+        /// </summary>
+        /// <param name="libraryState">Specifies an <see cref="ILibraryState"/> instance to go live with.</param>
+        /// <remarks>
+        /// <para>It can be assumed that the specified <see cref="ILibraryState"/> instance is fully initialized.</para>
+        /// <para>This method makes it possible to encapsulate the final steps that are required to set an initialized
+        /// library state as the effective library state.</para>
+        /// </remarks>
+        void GoLive(ILibraryState libraryState);
+
+        #endregion
+
         #region Properties
 
         /// <summary>
         /// Gets or sets the current state of the library.
         /// </summary>
-        /// <remarks>
-        /// <para>The setter can assume that the specified <see cref="ILibraryState"/> object is initialized.</para>
-        /// <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
-        /// assignments from the properties of the specified <see cref="ILibraryState"/> object to the properties of
-        /// the corresponding library classes.</para>
-        /// <para>A recommended design pattern is that a library state object is an aggregate object for the objects
-        /// comprising the library state.</para>
-        /// </remarks>
         ILibraryState LibraryState {get; set;}
 
         /// <summary>

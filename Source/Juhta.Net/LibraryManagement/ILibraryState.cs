@@ -9,9 +9,10 @@
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// Defines a base interface for classes that represent the state of a library. Typically, a library state is an
-    /// aggregate object containing a collection of reference-type or value-type objects created based on the
-    /// configuration of the library.
+    /// Defines a base interface for classes that represent the state of a library. A recommended design pattern is
+    /// that a library state class is an aggregate class for the objects comprising the state of the library. These
+    /// objects are typically reference-type or value-type objects that have been created based on the configuration of
+    /// the library.
     /// </summary>
     public interface ILibraryState
     {}

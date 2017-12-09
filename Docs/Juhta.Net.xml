@@ -2816,6 +2816,11 @@
             Defines an abstract base class for dynamic library handles.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive(Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            See <see cref="M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)"/>.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState">
             <summary>
             See <see cref="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState"/>.
@@ -2990,18 +2995,21 @@
             changed at the runtime e.g. by modifying the configuration of the library.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Goes live with a specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance.
+            </summary>
+            <param name="libraryState">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance to go live with.</param>
+            <remarks>
+            <para>It can be assumed that the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> instance is fully initialized.</para>
+            <para>This method makes it possible to encapsulate the final steps that are required to set an initialized
+            library state as the effective library state.</para>
+            </remarks>
+        </member>
         <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState">
             <summary>
             Gets or sets the current state of the library.
             </summary>
-            <remarks>
-            <para>The setter can assume that the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object is initialized.</para>
-            <para>The setter is expected not to throw exceptions. The setter should be implemented by just using
-            assignments from the properties of the specified <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object to the properties of
-            the corresponding library classes.</para>
-            <para>A recommended design pattern is that a library state object is an aggregate object for the objects
-            comprising the library state.</para>
-            </remarks>
         </member>
         <member name="P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock">
             <summary>
@@ -3034,9 +3042,10 @@
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ILibraryState">
             <summary>
-            Defines a base interface for classes that represent the state of a library. Typically, a library state is an
-            aggregate object containing a collection of reference-type or value-type objects created based on the
-            configuration of the library.
+            Defines a base interface for classes that represent the state of a library. A recommended design pattern is
+            that a library state class is an aggregate class for the objects comprising the state of the library. These
+            objects are typically reference-type or value-type objects that have been created based on the configuration of
+            the library.
             </summary>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IStartableLibrary">

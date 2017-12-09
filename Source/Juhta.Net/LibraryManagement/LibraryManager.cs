@@ -221,6 +221,9 @@ namespace Juhta.Net.LibraryManagement
                         throw;
                 }
 
+                // Go live with the new library state
+                library.GoLive(newLibraryState);
+
                 // Set the new library state
                 library.LibraryState = newLibraryState;
             }
@@ -903,6 +906,9 @@ namespace Juhta.Net.LibraryManagement
             else
             {
                 // We couldn't be able to stop the possibly started processes in the new library state, so we must stick with the new one
+
+                // Go live with the new library state
+                library.GoLive(newLibraryState);
 
                 // Set the library's state to the new one
                 library.LibraryState = newLibraryState;
