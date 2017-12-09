@@ -117,15 +117,6 @@ namespace Juhta.Net.LibraryManagement
 
         #endregion
 
-        #region Protected Fields
-
-        /// <summary>
-        /// Stores the <see cref="LibraryFileName"/> property.
-        /// </summary>
-        protected string m_libraryFileName;
-
-        #endregion
-
         #region Internal Methods
 
         /// <summary>
@@ -146,6 +137,15 @@ namespace Juhta.Net.LibraryManagement
 
             return(ObjectFactory.CreateInstance<ILibraryHandle>(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + libraryFileName, libraryHandleClass));
         }
+
+        #endregion
+
+        #region Private Fields
+
+        /// <summary>
+        /// Stores the <see cref="LibraryFileName"/> property.
+        /// </summary>
+        private string m_libraryFileName;
 
         #endregion
     }

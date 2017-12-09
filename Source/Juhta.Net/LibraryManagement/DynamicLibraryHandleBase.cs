@@ -58,7 +58,7 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Stores the <see cref="LibraryState"/> property.
         /// </summary>
-        private ILibraryState m_libraryState;
+        private volatile ILibraryState m_libraryState;
 
         /// <summary>
         /// Stores the <see cref="LibraryStateLock"/> property.
