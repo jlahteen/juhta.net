@@ -15,7 +15,7 @@
     <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Config.xsd" />
     <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Source.txt" />
     <EmbeddedResource Include="DynamicCustomXmlConfigurable\Config.xsd" />
-    <EmbeddedResource Include="Config.xsd" />
+    <EmbeddedResource Include="CustomXmlConfig\Config.xsd" />
   </ItemGroup>
 
   <ItemGroup>

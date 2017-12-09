@@ -1,9 +1,10 @@
 ﻿
+using AppXLibrary.CustomXmlConfig;
+using AppXLibrary.CustomXmlConfigurable;
 using Juhta.Net.LibraryManagement;
 using System;
-using AppXLibrary.CustomXmlConfigurable;
 
-namespace AppXLibrary
+namespace AppXLibrary.CustomXmlConfigurableAndClosable
 {
     public class CustomXmlConfigurableAndClosableLibrary : CustomXmlConfigurableLibrary, IClosableLibrary
     {

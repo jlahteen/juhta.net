@@ -51,7 +51,7 @@ namespace {{AssemblyFileName}}.CustomXmlConfigurable
         #endregion
     }
 
-    public class LibraryConfig : AppXLibrary.ILibraryConfig
+    public class LibraryConfig : AppXLibrary.CustomXmlConfig.ILibraryConfig
     {
         #region Public Methods
 

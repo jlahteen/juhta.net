@@ -2,7 +2,7 @@
 using Juhta.Net.LibraryManagement;
 using System;
 
-namespace AppXLibrary
+namespace AppXLibrary.Startable
 {
     public class StartableLibrary : ILibraryHandle, IStartableLibrary
     {

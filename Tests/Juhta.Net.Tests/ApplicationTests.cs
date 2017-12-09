@@ -1,5 +1,5 @@
 
-using AppXLibrary;
+using AppXLibrary.CustomXmlConfig;
 using AppXLibrary.DynamicCustomXmlConfigurableAndStartable;
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
@@ -46,7 +46,7 @@ namespace Juhta.Net.Tests
             if (File.Exists(defaultLogFile))
                 File.Delete(defaultLogFile);
 
-            AppXLibrary.StartableLibrary.Reset();
+            AppXLibrary.Startable.StartableLibrary.Reset();
         }
 
         #endregion
@@ -77,13 +77,13 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AppXLibrary.StartableLibrary.StopProcessesReturnValue = false;
+            AppXLibrary.Startable.StartableLibrary.StopProcessesReturnValue = false;
 
             Application.Instance.Close();
 
-            Assert.AreEqual<bool>(false, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(false, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
             AssertDefaultLogFileContent("Juhta.Net.Warning10072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
         }
@@ -95,13 +95,13 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AppXLibrary.StartableLibrary.StopProcessesException = new Exception("This is an injected exception.");
+            AppXLibrary.Startable.StartableLibrary.StopProcessesException = new Exception("This is an injected exception.");
 
             Application.Instance.Close();
 
-            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
             AssertDefaultLogFileContent("Juhta.Net.Error10071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
         }
@@ -873,11 +873,11 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            Assert.AreEqual<bool>(true, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
             Application.Instance.Close();
 
-            Assert.AreEqual<bool>(false, AppXLibrary.StartableLibrary.IsStarted);
+            Assert.AreEqual<bool>(false, AppXLibrary.Startable.StartableLibrary.IsStarted);
         }
 
         [TestMethod]

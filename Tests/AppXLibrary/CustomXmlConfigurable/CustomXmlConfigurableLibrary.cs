@@ -1,4 +1,5 @@
 ﻿
+using AppXLibrary.CustomXmlConfig;
 using Juhta.Net.Common;
 using Juhta.Net.LibraryManagement;
 using System;
@@ -25,7 +26,7 @@ namespace AppXLibrary.CustomXmlConfigurable
         {
             XmlSchema configSchema;
 
-            configSchema = base.GetEmbeddedConfigSchema(System.Reflection.Assembly.GetExecutingAssembly(), "AppXLibrary", "Config.xsd");
+            configSchema = base.GetEmbeddedConfigSchema(System.Reflection.Assembly.GetExecutingAssembly(), "AppXLibrary.CustomXmlConfig", "Config.xsd");
 
             return(new XmlSchema[]{configSchema});
         }

@@ -1,5 +1,5 @@
 ﻿
-namespace AppXLibrary
+namespace AppXLibrary.CustomXmlConfig
 {
     public class LibraryConfig : ILibraryConfig
     {
