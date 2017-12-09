@@ -5,7 +5,7 @@ using System;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace AppXLibrary
+namespace AppXLibrary.CustomXmlConfigurable
 {
     public class CustomXmlConfigurableLibrary : LibraryHandleBase, ICustomXmlConfigurableLibrary
     {

@@ -1,7 +1,7 @@
 ﻿
 using Juhta.Net.LibraryManagement;
 
-namespace AppXLibrary
+namespace AppXLibrary.Initializable
 {
     public class InitializableLibrary : LibraryHandleBase, IInitializableLibrary
     {

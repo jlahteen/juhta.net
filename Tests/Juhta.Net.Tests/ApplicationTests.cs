@@ -230,13 +230,13 @@ namespace Juhta.Net.Tests
 
             SetConfigFiles("Root", "CustomXmlConfigurableLibrary100_");
 
-            AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.Cloning");
+            AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.CustomXmlConfigurable");
 
             Application.StartInstance(null, s_configDirectory);
 
             for (int i = 1; i <= 100; i++)
             {
-                libraryConfig = ObjectFactory.CreateInstance<ILibraryConfig>($"AppXLibraryTempA{i}.dll", $"AppXLibraryTempA{i}.LibraryConfig");
+                libraryConfig = ObjectFactory.CreateInstance<ILibraryConfig>($"AppXLibraryTempA{i}.dll", $"AppXLibraryTempA{i}.CustomXmlConfigurable.LibraryConfig");
 
                 Assert.AreEqual<string>($"This is the configured StringSetting value._{i:000}", libraryConfig.GetStringSetting());
             }

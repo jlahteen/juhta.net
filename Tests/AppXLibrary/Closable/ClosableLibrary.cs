@@ -2,7 +2,7 @@
 using Juhta.Net.LibraryManagement;
 using System;
 
-namespace AppXLibrary
+namespace AppXLibrary.Closable
 {
     public class ClosableLibrary : LibraryHandleBase, IClosableLibrary
     {

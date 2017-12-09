@@ -1,6 +1,7 @@
 ﻿
 using Juhta.Net.LibraryManagement;
 using System;
+using AppXLibrary.CustomXmlConfigurable;
 
 namespace AppXLibrary
 {

@@ -6,9 +6,9 @@ using System.Xml;
 using System.Xml.Schema;
 using AppXLibrary;
 
-namespace {{AssemblyFileName}}
+namespace {{AssemblyFileName}}.CustomXmlConfigurable
 {
-    public class CustomXmlConfigurableLibrary : AppXLibrary.CustomXmlConfigurableLibrary
+    public class CustomXmlConfigurableLibrary : AppXLibrary.CustomXmlConfigurable.CustomXmlConfigurableLibrary
     {
         #region Public Constructors
 
