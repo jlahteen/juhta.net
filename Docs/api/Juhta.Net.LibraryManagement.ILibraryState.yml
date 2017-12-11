@@ -1,0 +1,43 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.ILibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryState
+  id: ILibraryState
+  parent: Juhta.Net.LibraryManagement
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ILibraryState
+  nameWithType: ILibraryState
+  fullName: Juhta.Net.LibraryManagement.ILibraryState
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/ILibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ILibraryState
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ILibraryState.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines a base interface for classes that represent the state of a library. A recommended design pattern is\nthat a library state class is an aggregate class for the objects comprising the state of the library. These\nobjects are typically reference-type or value-type objects that have been created based on the configuration of\nthe library.\n"
+  example: []
+  syntax:
+    content: public interface ILibraryState
+    content.vb: Public Interface ILibraryState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement

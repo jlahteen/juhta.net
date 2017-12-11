@@ -1,0 +1,698 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.ConsumerThread`1
+  commentId: T:Juhta.Net.Common.ConsumerThread`1
+  id: ConsumerThread`1
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.ConsumerThread`1.#ctor
+  - Juhta.Net.Common.ConsumerThread`1.Consume(`0)
+  - Juhta.Net.Common.ConsumerThread`1.ConsumeObject(`0)
+  - Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed(`0,System.Exception)
+  - Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed(System.Exception)
+  - Juhta.Net.Common.ConsumerThread`1.Start
+  - Juhta.Net.Common.ConsumerThread`1.Stop
+  langs:
+  - csharp
+  - vb
+  name: ConsumerThread<T>
+  nameWithType: ConsumerThread<T>
+  fullName: Juhta.Net.Common.ConsumerThread<T>
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ConsumerThread
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 18
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDefines an abstract base class for consumer threads. The class provides a thread-safe method for putting\nobjects into consumption. Incoming objects will be consumed asynchronously with a single worker thread.\n"
+  example: []
+  syntax:
+    content: public abstract class ConsumerThread<T>
+    typeParameters:
+    - id: T
+      description: Specifies the type of objects to consume.
+    content.vb: Public MustInherit Class ConsumerThread(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: ConsumerThread(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T)
+  name.vb: ConsumerThread(Of T)
+- uid: Juhta.Net.Common.ConsumerThread`1.#ctor
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: ConsumerThread()
+  nameWithType: ConsumerThread<T>.ConsumerThread()
+  fullName: Juhta.Net.Common.ConsumerThread<T>.ConsumerThread()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ConsumerThread()
+    content.vb: Public Sub New
+  overload: Juhta.Net.Common.ConsumerThread`1.#ctor*
+  nameWithType.vb: ConsumerThread(Of T).ConsumerThread()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).ConsumerThread()
+- uid: Juhta.Net.Common.ConsumerThread`1.Consume(`0)
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.Consume(`0)
+  id: Consume(`0)
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: Consume(T)
+  nameWithType: ConsumerThread<T>.Consume(T)
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Consume(T)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Consume
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 43
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nConsumes a specified object asynchronously.\n"
+  remarks: "\n<p>This method returns immediately after the specified object has been put into an internal queue to\nwait for asynchronous consumption.</p>\n<p>Multiple threads can access this method concurrently.</p>\n"
+  example: []
+  syntax:
+    content: public void Consume(T object)
+    parameters:
+    - id: object
+      type: '{T}'
+      description: Specifies an object to consume.
+    content.vb: Public Sub Consume(object As T)
+  overload: Juhta.Net.Common.ConsumerThread`1.Consume*
+  nameWithType.vb: ConsumerThread(Of T).Consume(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Consume(T)
+- uid: Juhta.Net.Common.ConsumerThread`1.Start
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.Start
+  id: Start
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ConsumerThread<T>.Start()
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Start
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 57
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nStarts this ConsumerThread instance.\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Juhta.Net.Common.ConsumerThread`1.Start*
+  nameWithType.vb: ConsumerThread(Of T).Start()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Start()
+- uid: Juhta.Net.Common.ConsumerThread`1.Stop
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.Stop
+  id: Stop
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: ConsumerThread<T>.Stop()
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Stop()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Stop
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 70
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nStops this ConsumerThread instance.\n"
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: Juhta.Net.Common.ConsumerThread`1.Stop*
+  nameWithType.vb: ConsumerThread(Of T).Stop()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Stop()
+- uid: Juhta.Net.Common.ConsumerThread`1.ConsumeObject(`0)
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.ConsumeObject(`0)
+  id: ConsumeObject(`0)
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: ConsumeObject(T)
+  nameWithType: ConsumerThread<T>.ConsumeObject(T)
+  fullName: Juhta.Net.Common.ConsumerThread<T>.ConsumeObject(T)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ConsumeObject
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 91
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nConsumes a specified object.\n"
+  example: []
+  syntax:
+    content: protected abstract void ConsumeObject(T object)
+    parameters:
+    - id: object
+      type: '{T}'
+      description: Specifies an object to consume.
+    content.vb: Protected MustOverride Sub ConsumeObject(object As T)
+  overload: Juhta.Net.Common.ConsumerThread`1.ConsumeObject*
+  nameWithType.vb: ConsumerThread(Of T).ConsumeObject(T)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).ConsumeObject(T)
+- uid: Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed(`0,System.Exception)
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed(`0,System.Exception)
+  id: OnConsumeObjectFailed(`0,System.Exception)
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: OnConsumeObjectFailed(T, Exception)
+  nameWithType: ConsumerThread<T>.OnConsumeObjectFailed(T, Exception)
+  fullName: Juhta.Net.Common.ConsumerThread<T>.OnConsumeObjectFailed(T, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: OnConsumeObjectFailed
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 98
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nPerforms necessary actions when an error occurs at the time an object is consumed.\n"
+  example: []
+  syntax:
+    content: protected abstract void OnConsumeObjectFailed(T object, Exception exception)
+    parameters:
+    - id: object
+      type: '{T}'
+      description: Specifies an object whose consumption was failed.
+    - id: exception
+      type: System.Exception
+      description: Specifies the occurred exception.
+    content.vb: Protected MustOverride Sub OnConsumeObjectFailed(object As T, exception As Exception)
+  overload: Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed*
+  nameWithType.vb: ConsumerThread(Of T).OnConsumeObjectFailed(T, Exception)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).OnConsumeObjectFailed(T, System.Exception)
+- uid: Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed(System.Exception)
+  commentId: M:Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed(System.Exception)
+  id: OnWorkerThreadFailed(System.Exception)
+  parent: Juhta.Net.Common.ConsumerThread`1
+  langs:
+  - csharp
+  - vb
+  name: OnWorkerThreadFailed(Exception)
+  nameWithType: ConsumerThread<T>.OnWorkerThreadFailed(Exception)
+  fullName: Juhta.Net.Common.ConsumerThread<T>.OnWorkerThreadFailed(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: OnWorkerThreadFailed
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    startLine: 104
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nPerforms necessary actions when the worker thread is about to exit due to an (unexpected) exception.\n"
+  example: []
+  syntax:
+    content: protected abstract void OnWorkerThreadFailed(Exception exception)
+    parameters:
+    - id: exception
+      type: System.Exception
+      description: Specifies an exception that forces the worker thread to exit.
+    content.vb: Protected MustOverride Sub OnWorkerThreadFailed(exception As Exception)
+  overload: Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed*
+  nameWithType.vb: ConsumerThread(Of T).OnWorkerThreadFailed(Exception)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).OnWorkerThreadFailed(System.Exception)
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.ConsumerThread`1.#ctor*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.#ctor
+  isExternal: false
+  name: ConsumerThread
+  nameWithType: ConsumerThread<T>.ConsumerThread
+  fullName: Juhta.Net.Common.ConsumerThread<T>.ConsumerThread
+  nameWithType.vb: ConsumerThread(Of T).ConsumerThread
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).ConsumerThread
+- uid: Juhta.Net.Common.ConsumerThread`1.Consume*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.Consume
+  isExternal: false
+  name: Consume
+  nameWithType: ConsumerThread<T>.Consume
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Consume
+  nameWithType.vb: ConsumerThread(Of T).Consume
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Consume
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Juhta.Net.Common.ConsumerThread`1.Start*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.Start
+  isExternal: false
+  name: Start
+  nameWithType: ConsumerThread<T>.Start
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Start
+  nameWithType.vb: ConsumerThread(Of T).Start
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Start
+- uid: Juhta.Net.Common.ConsumerThread`1.Stop*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.Stop
+  isExternal: false
+  name: Stop
+  nameWithType: ConsumerThread<T>.Stop
+  fullName: Juhta.Net.Common.ConsumerThread<T>.Stop
+  nameWithType.vb: ConsumerThread(Of T).Stop
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).Stop
+- uid: Juhta.Net.Common.ConsumerThread`1.ConsumeObject*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.ConsumeObject
+  isExternal: false
+  name: ConsumeObject
+  nameWithType: ConsumerThread<T>.ConsumeObject
+  fullName: Juhta.Net.Common.ConsumerThread<T>.ConsumeObject
+  nameWithType.vb: ConsumerThread(Of T).ConsumeObject
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).ConsumeObject
+- uid: Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed
+  isExternal: false
+  name: OnConsumeObjectFailed
+  nameWithType: ConsumerThread<T>.OnConsumeObjectFailed
+  fullName: Juhta.Net.Common.ConsumerThread<T>.OnConsumeObjectFailed
+  nameWithType.vb: ConsumerThread(Of T).OnConsumeObjectFailed
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).OnConsumeObjectFailed
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed*
+  commentId: Overload:Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed
+  isExternal: false
+  name: OnWorkerThreadFailed
+  nameWithType: ConsumerThread<T>.OnWorkerThreadFailed
+  fullName: Juhta.Net.Common.ConsumerThread<T>.OnWorkerThreadFailed
+  nameWithType.vb: ConsumerThread(Of T).OnWorkerThreadFailed
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T).OnWorkerThreadFailed

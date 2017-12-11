@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.ILibraryHandle
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryHandle
+  id: ILibraryHandle
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+  langs:
+  - csharp
+  - vb
+  name: ILibraryHandle
+  nameWithType: ILibraryHandle
+  fullName: Juhta.Net.LibraryManagement.ILibraryHandle
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ILibraryHandle
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for library handle classes. This interface is the core interface for the library\nmanagement performed by <xref href=\"Juhta.Net.LibraryManagement.LibraryManager\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public interface ILibraryHandle
+    content.vb: Public Interface ILibraryHandle
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+  commentId: P:Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+  id: LibraryFileName
+  parent: Juhta.Net.LibraryManagement.ILibraryHandle
+  langs:
+  - csharp
+  - vb
+  name: LibraryFileName
+  nameWithType: ILibraryHandle.LibraryFileName
+  fullName: Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryFileName
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    startLine: 21
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets the file name of the library.\n"
+  example: []
+  syntax:
+    content: string LibraryFileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property LibraryFileName As String
+  overload: Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Juhta.Net.LibraryManagement.LibraryManager
+  commentId: T:Juhta.Net.LibraryManagement.LibraryManager
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName*
+  commentId: Overload:Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+  isExternal: false
+  name: LibraryFileName
+  nameWithType: ILibraryHandle.LibraryFileName
+  fullName: Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

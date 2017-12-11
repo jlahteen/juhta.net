@@ -1,0 +1,686 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.XmlValidator
+  commentId: T:Juhta.Net.Common.XmlValidator
+  id: XmlValidator
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.XmlValidator.#ctor
+  - Juhta.Net.Common.XmlValidator.AddSchema(System.String)
+  - Juhta.Net.Common.XmlValidator.AddSchema(System.Uri)
+  - Juhta.Net.Common.XmlValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  - Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument)
+  - Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.String)
+  - Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  langs:
+  - csharp
+  - vb
+  name: XmlValidator
+  nameWithType: XmlValidator
+  fullName: Juhta.Net.Common.XmlValidator
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: XmlValidator
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 18
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nA wrapper class that makes easier to validate XML documents against XML schemas.\n"
+  example: []
+  syntax:
+    content: public class XmlValidator
+    content.vb: Public Class XmlValidator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Common.XmlValidator.#ctor
+  commentId: M:Juhta.Net.Common.XmlValidator.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: XmlValidator()
+  nameWithType: XmlValidator.XmlValidator()
+  fullName: Juhta.Net.Common.XmlValidator.XmlValidator()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public XmlValidator()
+    content.vb: Public Sub New
+  overload: Juhta.Net.Common.XmlValidator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.XmlValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  commentId: M:Juhta.Net.Common.XmlValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  id: AddSchema(System.Xml.Schema.XmlSchema)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: AddSchema(XmlSchema)
+  nameWithType: XmlValidator.AddSchema(XmlSchema)
+  fullName: Juhta.Net.Common.XmlValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: AddSchema
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 38
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nAdds an XML schema to this validator instance.\n"
+  example: []
+  syntax:
+    content: public void AddSchema(XmlSchema schema)
+    parameters:
+    - id: schema
+      type: System.Xml.Schema.XmlSchema
+      description: Specifies an XmlSchema object.
+    content.vb: Public Sub AddSchema(schema As XmlSchema)
+  overload: Juhta.Net.Common.XmlValidator.AddSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.XmlValidator.AddSchema(System.String)
+  commentId: M:Juhta.Net.Common.XmlValidator.AddSchema(System.String)
+  id: AddSchema(System.String)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: AddSchema(String)
+  nameWithType: XmlValidator.AddSchema(String)
+  fullName: Juhta.Net.Common.XmlValidator.AddSchema(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: AddSchema
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 47
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nAdds an XML schema to this validator instance.\n"
+  example: []
+  syntax:
+    content: public void AddSchema(string schema)
+    parameters:
+    - id: schema
+      type: System.String
+      description: Specifies an XML schema string.
+    content.vb: Public Sub AddSchema(schema As String)
+  overload: Juhta.Net.Common.XmlValidator.AddSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.XmlValidator.AddSchema(System.Uri)
+  commentId: M:Juhta.Net.Common.XmlValidator.AddSchema(System.Uri)
+  id: AddSchema(System.Uri)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: AddSchema(Uri)
+  nameWithType: XmlValidator.AddSchema(Uri)
+  fullName: Juhta.Net.Common.XmlValidator.AddSchema(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: AddSchema
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 56
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nAdds an XML schema to this validator instance.\n"
+  example: []
+  syntax:
+    content: public void AddSchema(Uri schemaUri)
+    parameters:
+    - id: schemaUri
+      type: System.Uri
+      description: Specifies the URI of a schema to be added to the instance.
+    content.vb: Public Sub AddSchema(schemaUri As Uri)
+  overload: Juhta.Net.Common.XmlValidator.AddSchema*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument)
+  commentId: M:Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument)
+  id: Validate(System.Xml.XmlDocument)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(XmlDocument)
+  nameWithType: XmlValidator.Validate(XmlDocument)
+  fullName: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Validate
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 68
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nValidates a specified XML document.\n"
+  remarks: >-
+    If the XML document contains validation errors, the function collects the corresponding exceptions
+
+    to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
+
+    the validation process is finished.
+  example: []
+  syntax:
+    content: public void Validate(XmlDocument document)
+    parameters:
+    - id: document
+      type: System.Xml.XmlDocument
+      description: Specifies an XmlDocument object.
+    content.vb: Public Sub Validate(document As XmlDocument)
+  overload: Juhta.Net.Common.XmlValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.String)
+  commentId: M:Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.String)
+  id: Validate(System.Xml.XmlDocument,System.String)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(XmlDocument, String)
+  nameWithType: XmlValidator.Validate(XmlDocument, String)
+  fullName: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Validate
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 93
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nValidates a specified XML document against a specified XML schema.\n"
+  remarks: >-
+    If the XML document contains validation errors, the function collects the corresponding exceptions
+
+    to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
+
+    the validation process is finished.
+  example: []
+  syntax:
+    content: public static void Validate(XmlDocument document, string schema)
+    parameters:
+    - id: document
+      type: System.Xml.XmlDocument
+      description: Specifies an XmlDocument object.
+    - id: schema
+      type: System.String
+      description: Specifies an XML schema as a string.
+    content.vb: Public Shared Sub Validate(document As XmlDocument, schema As String)
+  overload: Juhta.Net.Common.XmlValidator.Validate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  commentId: M:Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  id: Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  parent: Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(XmlDocument, XmlSchema)
+  nameWithType: XmlValidator.Validate(XmlDocument, XmlSchema)
+  fullName: Juhta.Net.Common.XmlValidator.Validate(System.Xml.XmlDocument, System.Xml.Schema.XmlSchema)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/XmlValidator.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Validate
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/XmlValidator.cs
+    startLine: 110
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nValidates a specified XML document against a specified XML schema.\n"
+  remarks: >-
+    If the XML document contains validation errors, the function collects the corresponding exceptions
+
+    to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
+
+    the validation process is finished.
+  example: []
+  syntax:
+    content: public static void Validate(XmlDocument document, XmlSchema schema)
+    parameters:
+    - id: document
+      type: System.Xml.XmlDocument
+      description: Specifies an XmlDocument object.
+    - id: schema
+      type: System.Xml.Schema.XmlSchema
+      description: Specifies an XmlSchema object.
+    content.vb: Public Shared Sub Validate(document As XmlDocument, schema As XmlSchema)
+  overload: Juhta.Net.Common.XmlValidator.Validate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.XmlValidator.#ctor*
+  commentId: Overload:Juhta.Net.Common.XmlValidator.#ctor
+  isExternal: false
+  name: XmlValidator
+  nameWithType: XmlValidator.XmlValidator
+  fullName: Juhta.Net.Common.XmlValidator.XmlValidator
+- uid: Juhta.Net.Common.XmlValidator.AddSchema*
+  commentId: Overload:Juhta.Net.Common.XmlValidator.AddSchema
+  isExternal: false
+  name: AddSchema
+  nameWithType: XmlValidator.AddSchema
+  fullName: Juhta.Net.Common.XmlValidator.AddSchema
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: false
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Juhta.Net.Common.XmlValidator.Validate*
+  commentId: Overload:Juhta.Net.Common.XmlValidator.Validate
+  isExternal: false
+  name: Validate
+  nameWithType: XmlValidator.Validate
+  fullName: Juhta.Net.Common.XmlValidator.Validate
+- uid: System.Xml.XmlDocument
+  commentId: T:System.Xml.XmlDocument
+  parent: System.Xml
+  isExternal: true
+  name: XmlDocument
+  nameWithType: XmlDocument
+  fullName: System.Xml.XmlDocument
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: false
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml

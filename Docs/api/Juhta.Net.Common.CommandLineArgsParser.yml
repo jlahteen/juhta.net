@@ -1,0 +1,974 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.CommandLineArgsParser
+  commentId: T:Juhta.Net.Common.CommandLineArgsParser
+  id: CommandLineArgsParser
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.CommandLineArgsParser.#ctor(System.String[],System.Nullable{System.Char},System.Nullable{System.Char})
+  - Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+  - Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[])
+  - Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[],System.String)
+  - Juhta.Net.Common.CommandLineArgsParser.GetNextParam
+  - Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String)
+  - Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String,System.String)
+  - Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount
+  - Juhta.Net.Common.CommandLineArgsParser.TryGetOption(System.String,Juhta.Net.Common.CommandLineOption@)
+  - Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArgsParser
+  nameWithType: CommandLineArgsParser
+  fullName: Juhta.Net.Common.CommandLineArgsParser
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CommandLineArgsParser
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 18
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDefines a class for parsing command line arguments.\n"
+  example: []
+  syntax:
+    content: public class CommandLineArgsParser
+    content.vb: Public Class CommandLineArgsParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Common.CommandLineArgsParser.#ctor(System.String[],System.Nullable{System.Char},System.Nullable{System.Char})
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.#ctor(System.String[],System.Nullable{System.Char},System.Nullable{System.Char})
+  id: '#ctor(System.String[],System.Nullable{System.Char},System.Nullable{System.Char})'
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArgsParser(String[], Nullable<Char>, Nullable<Char>)
+  nameWithType: CommandLineArgsParser.CommandLineArgsParser(String[], Nullable<Char>, Nullable<Char>)
+  fullName: Juhta.Net.Common.CommandLineArgsParser.CommandLineArgsParser(System.String[], System.Nullable<System.Char>, System.Nullable<System.Char>)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 30
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public CommandLineArgsParser(string[] args, char ? optionPrefix, char ? optionNameValueSeparator)
+    parameters:
+    - id: args
+      type: System.String[]
+      description: Specifies an array of command line arguments. Can be null.
+    - id: optionPrefix
+      type: System.Nullable{System.Char}
+      description: >-
+        Specifies a prefix for command line options. Can be null in which case all
+
+        arguments are expected to be parameters.
+    - id: optionNameValueSeparator
+      type: System.Nullable{System.Char}
+      description: >-
+        Specifies a separator for name and value parts in command line
+
+        options. Can be null in which case options are not expected to contain any value parts.
+    content.vb: Public Sub New(args As String(), optionPrefix As Char?, optionNameValueSeparator As Char?)
+  overload: Juhta.Net.Common.CommandLineArgsParser.#ctor*
+  nameWithType.vb: CommandLineArgsParser.CommandLineArgsParser(String(), Nullable(Of Char), Nullable(Of Char))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.CommandLineArgsParser.CommandLineArgsParser(System.String(), System.Nullable(Of System.Char), System.Nullable(Of System.Char))
+  name.vb: CommandLineArgsParser(String(), Nullable(Of Char), Nullable(Of Char))
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[])
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[])
+  id: GetExclusiveOption(System.String[])
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: GetExclusiveOption(String[])
+  nameWithType: CommandLineArgsParser.GetExclusiveOption(String[])
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[])
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetExclusiveOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 88
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets and removes a mutually exclusive option from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineOption GetExclusiveOption(string[] optionNames)
+    parameters:
+    - id: optionNames
+      type: System.String[]
+      description: Specifies an array of option names that are treated as mutually exclusive.
+    return:
+      type: Juhta.Net.Common.CommandLineOption
+      description: >-
+        Returns the option from the specified mutually exclusive options that is found among the command
+
+        line arguments. If no option or more than one options are found, an exception will be thrown.
+    content.vb: Public Function GetExclusiveOption(optionNames As String()) As CommandLineOption
+  overload: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption*
+  nameWithType.vb: CommandLineArgsParser.GetExclusiveOption(String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String())
+  name.vb: GetExclusiveOption(String())
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[],System.String)
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[],System.String)
+  id: GetExclusiveOption(System.String[],System.String)
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: GetExclusiveOption(String[], String)
+  nameWithType: CommandLineArgsParser.GetExclusiveOption(String[], String)
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String[], System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetExclusiveOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 101
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets and removes a mutually exclusive option from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineOption GetExclusiveOption(string[] optionNames, string defaultOption)
+    parameters:
+    - id: optionNames
+      type: System.String[]
+      description: Specifies an array of option names that are treated as mutually exclusive.
+    - id: defaultOption
+      type: System.String
+      description: Specifies a default option. Can be null.
+    return:
+      type: Juhta.Net.Common.CommandLineOption
+      description: >-
+        Returns the option from the specified mutually exclusive options that is found among the command
+
+        line arguments. If more than one options are found, an exception will be thrown; in case of no option is
+
+        found, returns the default option if such is given, or throws an exception.
+    content.vb: Public Function GetExclusiveOption(optionNames As String(), defaultOption As String) As CommandLineOption
+  overload: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption*
+  nameWithType.vb: CommandLineArgsParser.GetExclusiveOption(String(), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption(System.String(), System.String)
+  name.vb: GetExclusiveOption(String(), String)
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetNextParam
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.GetNextParam
+  id: GetNextParam
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: GetNextParam()
+  nameWithType: CommandLineArgsParser.GetNextParam()
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetNextParam()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetNextParam
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 138
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets and removes the next parameter from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineParam GetNextParam()
+    return:
+      type: Juhta.Net.Common.CommandLineParam
+      description: >-
+        Returns the next parameter from the command line arguments. If there are no parameters to be
+
+        consumed, an exception will be thrown.
+    content.vb: Public Function GetNextParam As CommandLineParam
+  overload: Juhta.Net.Common.CommandLineArgsParser.GetNextParam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String)
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String)
+  id: GetOption(System.String)
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: GetOption(String)
+  nameWithType: CommandLineArgsParser.GetOption(String)
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 156
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets and removes an option from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineOption GetOption(string optionName)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: Specifies an option name.
+    return:
+      type: Juhta.Net.Common.CommandLineOption
+      description: >-
+        Returns the specified option from the command line arguments. If the option is specified more than
+
+        once, an exception will be thrown as well as when the option is not found.
+    content.vb: Public Function GetOption(optionName As String) As CommandLineOption
+  overload: Juhta.Net.Common.CommandLineArgsParser.GetOption*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String,System.String)
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String,System.String)
+  id: GetOption(System.String,System.String)
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: GetOption(String, String)
+  nameWithType: CommandLineArgsParser.GetOption(String, String)
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetOption(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 168
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets and removes an option from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineOption GetOption(string optionName, string defaultOption)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: Specifies an option name.
+    - id: defaultOption
+      type: System.String
+      description: Specifies a default option. Can be null.
+    return:
+      type: Juhta.Net.Common.CommandLineOption
+      description: >-
+        Returns the specified option from the command line arguments. If the option is specified more than
+
+        once, an exception will be thrown as well as when the option is not found and no default option is given.
+    content.vb: Public Function GetOption(optionName As String, defaultOption As String) As CommandLineOption
+  overload: Juhta.Net.Common.CommandLineArgsParser.GetOption*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.CommandLineArgsParser.TryGetOption(System.String,Juhta.Net.Common.CommandLineOption@)
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.TryGetOption(System.String,Juhta.Net.Common.CommandLineOption@)
+  id: TryGetOption(System.String,Juhta.Net.Common.CommandLineOption@)
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: TryGetOption(String, out CommandLineOption)
+  nameWithType: CommandLineArgsParser.TryGetOption(String, out CommandLineOption)
+  fullName: Juhta.Net.Common.CommandLineArgsParser.TryGetOption(System.String, out Juhta.Net.Common.CommandLineOption)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: TryGetOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 181
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nTries to get and remove an option from the command line arguments.\n"
+  example: []
+  syntax:
+    content: public bool TryGetOption(string optionName, out CommandLineOption option)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: Specifies an option name.
+    - id: option
+      type: Juhta.Net.Common.CommandLineOption
+      description: >-
+        If the function returns true, this parameter returns the specified option from the
+
+        command line arguments, otherwise the return value is null.
+    return:
+      type: System.Boolean
+      description: >-
+        The function returns true if the specified option was found in the command line arguments,
+
+        otherwise the return value is false.
+    content.vb: Public Function TryGetOption(optionName As String, ByRef option As CommandLineOption) As Boolean
+  overload: Juhta.Net.Common.CommandLineArgsParser.TryGetOption*
+  nameWithType.vb: CommandLineArgsParser.TryGetOption(String, ByRef CommandLineOption)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.CommandLineArgsParser.TryGetOption(System.String, ByRef Juhta.Net.Common.CommandLineOption)
+  name.vb: TryGetOption(String, ByRef CommandLineOption)
+- uid: Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed
+  commentId: M:Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed
+  id: VerifyArgsConsumed
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: VerifyArgsConsumed()
+  nameWithType: CommandLineArgsParser.VerifyArgsConsumed()
+  fullName: Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: VerifyArgsConsumed
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 191
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nVerifies that all command line arguments have been consumed. If not, an exception will be thrown.\n"
+  example: []
+  syntax:
+    content: public void VerifyArgsConsumed()
+    content.vb: Public Sub VerifyArgsConsumed
+  overload: Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+  commentId: P:Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+  id: CurrentArgCount
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: CurrentArgCount
+  nameWithType: CommandLineArgsParser.CurrentArgCount
+  fullName: Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CurrentArgCount
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 204
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the number of command line arguments left to be consumed.\n"
+  example: []
+  syntax:
+    content: public int CurrentArgCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CurrentArgCount As Integer
+  overload: Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount
+  commentId: P:Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount
+  id: OriginalArgCount
+  parent: Juhta.Net.Common.CommandLineArgsParser
+  langs:
+  - csharp
+  - vb
+  name: OriginalArgCount
+  nameWithType: CommandLineArgsParser.OriginalArgCount
+  fullName: Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineArgsParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: OriginalArgCount
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgsParser.cs
+    startLine: 212
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the original number of the command line arguments.\n"
+  example: []
+  syntax:
+    content: public int OriginalArgCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property OriginalArgCount As Integer
+  overload: Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.CommandLineArgsParser.#ctor*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.#ctor
+  isExternal: false
+  name: CommandLineArgsParser
+  nameWithType: CommandLineArgsParser.CommandLineArgsParser
+  fullName: Juhta.Net.Common.CommandLineArgsParser.CommandLineArgsParser
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Nullable{System.Char}
+  commentId: T:System.Nullable{System.Char}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Char>
+  nameWithType: Nullable<Char>
+  fullName: System.Nullable<System.Char>
+  nameWithType.vb: Nullable(Of Char)
+  fullName.vb: System.Nullable(Of System.Char)
+  name.vb: Nullable(Of Char)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption
+  isExternal: false
+  name: GetExclusiveOption
+  nameWithType: CommandLineArgsParser.GetExclusiveOption
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetExclusiveOption
+- uid: Juhta.Net.Common.CommandLineOption
+  commentId: T:Juhta.Net.Common.CommandLineOption
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineOption
+  nameWithType: CommandLineOption
+  fullName: Juhta.Net.Common.CommandLineOption
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetNextParam*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.GetNextParam
+  isExternal: false
+  name: GetNextParam
+  nameWithType: CommandLineArgsParser.GetNextParam
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetNextParam
+- uid: Juhta.Net.Common.CommandLineParam
+  commentId: T:Juhta.Net.Common.CommandLineParam
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineParam
+  nameWithType: CommandLineParam
+  fullName: Juhta.Net.Common.CommandLineParam
+- uid: Juhta.Net.Common.CommandLineArgsParser.GetOption*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.GetOption
+  isExternal: false
+  name: GetOption
+  nameWithType: CommandLineArgsParser.GetOption
+  fullName: Juhta.Net.Common.CommandLineArgsParser.GetOption
+- uid: Juhta.Net.Common.CommandLineArgsParser.TryGetOption*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.TryGetOption
+  isExternal: false
+  name: TryGetOption
+  nameWithType: CommandLineArgsParser.TryGetOption
+  fullName: Juhta.Net.Common.CommandLineArgsParser.TryGetOption
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed
+  isExternal: false
+  name: VerifyArgsConsumed
+  nameWithType: CommandLineArgsParser.VerifyArgsConsumed
+  fullName: Juhta.Net.Common.CommandLineArgsParser.VerifyArgsConsumed
+- uid: Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+  isExternal: false
+  name: CurrentArgCount
+  nameWithType: CommandLineArgsParser.CurrentArgCount
+  fullName: Juhta.Net.Common.CommandLineArgsParser.CurrentArgCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount*
+  commentId: Overload:Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount
+  isExternal: false
+  name: OriginalArgCount
+  nameWithType: CommandLineArgsParser.OriginalArgCount
+  fullName: Juhta.Net.Common.CommandLineArgsParser.OriginalArgCount

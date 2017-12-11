@@ -1,0 +1,193 @@
+### YamlMime:TableOfContent
+- uid: Juhta.Net
+  name: Juhta.Net
+  items:
+  - uid: Juhta.Net.Application
+    name: Application
+  - uid: Juhta.Net.FrameworkConfig
+    name: FrameworkConfig
+  - uid: Juhta.Net.FrameworkInfo
+    name: FrameworkInfo
+  - uid: Juhta.Net.Logger
+    name: Logger
+- uid: Juhta.Net.Common
+  name: Juhta.Net.Common
+  items:
+  - uid: Juhta.Net.Common.AlertMessage
+    name: AlertMessage
+  - uid: Juhta.Net.Common.AssemblyClassFileUri
+    name: AssemblyClassFileUri
+  - uid: Juhta.Net.Common.AssemblyClassUri
+    name: AssemblyClassUri
+  - uid: Juhta.Net.Common.AssemblyNotLoadedException
+    name: AssemblyNotLoadedException
+  - uid: Juhta.Net.Common.CommandLineArg
+    name: CommandLineArg
+  - uid: Juhta.Net.Common.CommandLineArgException
+    name: CommandLineArgException
+  - uid: Juhta.Net.Common.CommandLineArgsParser
+    name: CommandLineArgsParser
+  - uid: Juhta.Net.Common.CommandLineOption
+    name: CommandLineOption
+  - uid: Juhta.Net.Common.CommandLineParam
+    name: CommandLineParam
+  - uid: Juhta.Net.Common.CommonMessages
+    name: CommonMessages
+  - uid: Juhta.Net.Common.ConfigException
+    name: ConfigException
+  - uid: Juhta.Net.Common.ConsumerThread`1
+    name: ConsumerThread<T>
+    name.vb: ConsumerThread(Of T)
+  - uid: Juhta.Net.Common.DiagnosticMessage
+    name: DiagnosticMessage
+  - uid: Juhta.Net.Common.DiagnosticMessageFactory
+    name: DiagnosticMessageFactory
+  - uid: Juhta.Net.Common.DiagnosticMessageIdBase
+    name: DiagnosticMessageIdBase
+  - uid: Juhta.Net.Common.DiagnosticMessageType
+    name: DiagnosticMessageType
+  - uid: Juhta.Net.Common.ErrorMessage
+    name: ErrorMessage
+  - uid: Juhta.Net.Common.FileLogger
+    name: FileLogger
+  - uid: Juhta.Net.Common.ILogger
+    name: ILogger
+  - uid: Juhta.Net.Common.InformationMessage
+    name: InformationMessage
+  - uid: Juhta.Net.Common.InterfaceNotSupportedException
+    name: InterfaceNotSupportedException
+  - uid: Juhta.Net.Common.InternalException
+    name: InternalException
+  - uid: Juhta.Net.Common.InvalidConfigFileException
+    name: InvalidConfigFileException
+  - uid: Juhta.Net.Common.InvalidConfigValueException
+    name: InvalidConfigValueException
+  - uid: Juhta.Net.Common.ObjectFactory
+    name: ObjectFactory
+  - uid: Juhta.Net.Common.ObjectQueue`1
+    name: ObjectQueue<T>
+    name.vb: ObjectQueue(Of T)
+  - uid: Juhta.Net.Common.RegularExpressions
+    name: RegularExpressions
+  - uid: Juhta.Net.Common.Singleton`1
+    name: Singleton<T>
+    name.vb: Singleton(Of T)
+  - uid: Juhta.Net.Common.SymmetricCipher
+    name: SymmetricCipher
+  - uid: Juhta.Net.Common.TimestampFactory
+    name: TimestampFactory
+  - uid: Juhta.Net.Common.UnexpectedException
+    name: UnexpectedException
+  - uid: Juhta.Net.Common.UnimplementedCodeBranchException
+    name: UnimplementedCodeBranchException
+  - uid: Juhta.Net.Common.Utf8FileWriter
+    name: Utf8FileWriter
+  - uid: Juhta.Net.Common.WarningMessage
+    name: WarningMessage
+  - uid: Juhta.Net.Common.XmlValidator
+    name: XmlValidator
+- uid: Juhta.Net.Diagnostics
+  name: Juhta.Net.Diagnostics
+  items:
+  - uid: Juhta.Net.Diagnostics.EventLogger
+    name: EventLogger
+  - uid: Juhta.Net.Diagnostics.ITraceWriter
+    name: ITraceWriter
+  - uid: Juhta.Net.Diagnostics.Trace
+    name: Trace
+  - uid: Juhta.Net.Diagnostics.TraceFile
+    name: TraceFile
+- uid: Juhta.Net.Extensions
+  name: Juhta.Net.Extensions
+  items:
+  - uid: Juhta.Net.Extensions.AppDomainExtensions
+    name: AppDomainExtensions
+  - uid: Juhta.Net.Extensions.ArrayExtensions
+    name: ArrayExtensions
+  - uid: Juhta.Net.Extensions.AssemblyExtensions
+    name: AssemblyExtensions
+  - uid: Juhta.Net.Extensions.DateTimeExtensions
+    name: DateTimeExtensions
+  - uid: Juhta.Net.Extensions.EventHandlerExtensions
+    name: EventHandlerExtensions
+  - uid: Juhta.Net.Extensions.FileStreamExtensions
+    name: FileStreamExtensions
+  - uid: Juhta.Net.Extensions.StringExtensions
+    name: StringExtensions
+  - uid: Juhta.Net.Extensions.XmlNodeExtensions
+    name: XmlNodeExtensions
+  - uid: Juhta.Net.Extensions.XmlSchemaExtensions
+    name: XmlSchemaExtensions
+- uid: Juhta.Net.LibraryManagement
+  name: Juhta.Net.LibraryManagement
+  items:
+  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+    name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+    name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  - uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+    name: DynamicLibraryHandleBase
+  - uid: Juhta.Net.LibraryManagement.IClosableLibrary
+    name: IClosableLibrary
+  - uid: Juhta.Net.LibraryManagement.IClosableLibraryState
+    name: IClosableLibraryState
+  - uid: Juhta.Net.LibraryManagement.IConfigurableLibrary
+    name: IConfigurableLibrary
+  - uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+    name: ICustomXmlConfigurableLibrary
+  - uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+    name: ICustomXmlConfigurableLibraryState
+  - uid: Juhta.Net.LibraryManagement.IDefaultLibraryState
+    name: IDefaultLibraryState
+  - uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+    name: IDynamicCustomXmlConfigurableLibrary
+  - uid: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+    name: IDynamicInitializableLibrary
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+    name: IDynamicLibrary
+  - uid: Juhta.Net.LibraryManagement.IInitializableLibrary
+    name: IInitializableLibrary
+  - uid: Juhta.Net.LibraryManagement.ILibraryHandle
+    name: ILibraryHandle
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+  - uid: Juhta.Net.LibraryManagement.IStartableLibrary
+    name: IStartableLibrary
+  - uid: Juhta.Net.LibraryManagement.IStartableLibraryState
+    name: IStartableLibraryState
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase
+    name: LibraryHandleBase
+  - uid: Juhta.Net.LibraryManagement.LibraryInitializationException
+    name: LibraryInitializationException
+  - uid: Juhta.Net.LibraryManagement.LibraryStateException
+    name: LibraryStateException
+- uid: Juhta.Net.Validation
+  name: Juhta.Net.Validation
+  items:
+  - uid: Juhta.Net.Validation.IStringValidator
+    name: IStringValidator
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator<T>
+    name.vb: IValidator(Of T)
+  - uid: Juhta.Net.Validation.RegexValidator
+    name: RegexValidator
+  - uid: Juhta.Net.Validation.RegexValidator.PatternMatchMode
+    name: RegexValidator.PatternMatchMode
+  - uid: Juhta.Net.Validation.ValidationException
+    name: ValidationException
+- uid: Juhta.Net.WebApi.Exceptions
+  name: Juhta.Net.WebApi.Exceptions
+  items:
+  - uid: Juhta.Net.WebApi.Exceptions.BadRequestException
+    name: BadRequestException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientFaultException
+    name: ClientFaultException
+  - uid: Juhta.Net.WebApi.Exceptions.ForbiddenException
+    name: ForbiddenException
+  - uid: Juhta.Net.WebApi.Exceptions.MethodNotAllowedException
+    name: MethodNotAllowedException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerFaultException
+    name: ServerFaultException
+  - uid: Juhta.Net.WebApi.Exceptions.UnauthorizedException
+    name: UnauthorizedException
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiException
+    name: WebApiException

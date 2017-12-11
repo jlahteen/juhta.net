@@ -1,0 +1,1335 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Extensions.StringExtensions
+  commentId: T:Juhta.Net.Extensions.StringExtensions
+  id: StringExtensions
+  parent: Juhta.Net.Extensions
+  children:
+  - Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces(System.String)
+  - Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String)
+  - Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.FromBase64String(System.String)
+  - Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
+  - Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String)
+  - Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String)
+  - Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters(System.String)
+  - Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters(System.String)
+  - Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.Char,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.String,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.Char,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.String,System.StringComparison)
+  - Juhta.Net.Extensions.StringExtensions.ToBase64String(System.String)
+  - Juhta.Net.Extensions.StringExtensions.ToBoolean(System.String)
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Juhta.Net.Extensions.StringExtensions
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: StringExtensions
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nA static class that contains extension methods for the <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public static class StringExtensions
+    content.vb: Public Module StringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces(System.String)
+  id: ContainsWhitespaces(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ContainsWhitespaces(String)
+  nameWithType: StringExtensions.ContainsWhitespaces(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ContainsWhitespaces
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 26
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nChecks whether this string contains white space characters.\n"
+  example: []
+  syntax:
+    content: public static bool ContainsWhitespaces(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.Boolean
+      description: Returns true if this string contains white space characters, otherwise false.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ContainsWhitespaces(s As String) As Boolean
+  overload: Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String)
+  id: EnsureEnd(System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureEnd(String, String)
+  nameWithType: StringExtensions.EnsureEnd(String, String)
+  fullName: Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: EnsureEnd
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 41
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nEnsures this string to end with a specified string.\n"
+  example: []
+  syntax:
+    content: public static string EnsureEnd(this string s, string end)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: end
+      type: System.String
+      description: Specifies a string with which this string is ensured to end with.
+    return:
+      type: System.String
+      description: Returns such copy of this string that ends with <code data-dev-comment-type="paramref" class="paramref">end</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function EnsureEnd(s As String, end As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.EnsureEnd*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String,System.StringComparison)
+  id: EnsureEnd(System.String,System.String,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: EnsureEnd(String, String, StringComparison)
+  nameWithType: StringExtensions.EnsureEnd(String, String, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String, System.String, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: EnsureEnd
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 53
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nEnsures this string to end with a specified string.\n"
+  example: []
+  syntax:
+    content: public static string EnsureEnd(this string s, string end, StringComparison stringComparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: end
+      type: System.String
+      description: Specifies a string with which this string is ensured to end with.
+    - id: stringComparison
+      type: System.StringComparison
+      description: Specifies a StringComparison value.
+    return:
+      type: System.String
+      description: Returns such copy of this string that ends with <code data-dev-comment-type="paramref" class="paramref">end</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function EnsureEnd(s As String, end As String, stringComparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.EnsureEnd*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.FromBase64String(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.FromBase64String(System.String)
+  id: FromBase64String(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: FromBase64String(String)
+  nameWithType: StringExtensions.FromBase64String(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.FromBase64String(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: FromBase64String
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 74
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nConverts this base64 string to its equivalent string.\n"
+  remarks: This method performs string conversions through the UTF-8 encoding.
+  example: []
+  syntax:
+    content: public static string FromBase64String(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.String
+      description: Returns the string representation of this base64 string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function FromBase64String(s As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.FromBase64String*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
+  id: IsMatch(System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsMatch(String, String)
+  nameWithType: StringExtensions.IsMatch(String, String)
+  fullName: Juhta.Net.Extensions.StringExtensions.IsMatch(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IsMatch
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 88
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nChecks whether a specified regular expression matches this string.\n"
+  example: []
+  syntax:
+    content: public static bool IsMatch(this string s, string regex)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: regex
+      type: System.String
+      description: >-
+        Specifies a regular expression. Anchor characters &apos;^&apos; (at the start) and &apos;$&apos; (at the
+
+        end) are not required.
+    return:
+      type: System.Boolean
+      description: Returns true if the specified regular expression matches this string, otherwise false.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsMatch(s As String, regex As String) As Boolean
+  overload: Juhta.Net.Extensions.StringExtensions.IsMatch*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String)
+  id: RemoveEnd(System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveEnd(String, String)
+  nameWithType: StringExtensions.RemoveEnd(String, String)
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: RemoveEnd
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 101
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRemoves a specified end from this string.\n"
+  remarks: This method is case-sensitive.
+  example: []
+  syntax:
+    content: public static string RemoveEnd(this string s, string end)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: end
+      type: System.String
+      description: Specifies a string that will be removed from the end of this string.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string from which the specified end has been removed. If this string
+
+        doesn&apos;t end with the specified end, returns a copy of this string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RemoveEnd(s As String, end As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.RemoveEnd*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String,System.StringComparison)
+  id: RemoveEnd(System.String,System.String,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveEnd(String, String, StringComparison)
+  nameWithType: StringExtensions.RemoveEnd(String, String, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String, System.String, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: RemoveEnd
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 114
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRemoves a specified end from this string.\n"
+  example: []
+  syntax:
+    content: public static string RemoveEnd(this string s, string end, StringComparison stringComparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: end
+      type: System.String
+      description: Specifies a string that will be removed from the end of this string.
+    - id: stringComparison
+      type: System.StringComparison
+      description: Specifies a StringComparison value.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string from which the specified end has been removed. If this string
+
+        doesn&apos;t end with the specified end, returns a copy of this string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RemoveEnd(s As String, end As String, stringComparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.RemoveEnd*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String)
+  id: RemoveStart(System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveStart(String, String)
+  nameWithType: StringExtensions.RemoveStart(String, String)
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: RemoveStart
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 130
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRemoves a specified start from this string.\n"
+  remarks: This method is case-sensitive.
+  example: []
+  syntax:
+    content: public static string RemoveStart(this string s, string start)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: start
+      type: System.String
+      description: Specifies a string that will be removed from the start of this string.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string from which the specified start has been removed. If this string
+
+        doesn&apos;t start with the specified start, returns a copy of this string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RemoveStart(s As String, start As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.RemoveStart*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String,System.StringComparison)
+  id: RemoveStart(System.String,System.String,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveStart(String, String, StringComparison)
+  nameWithType: StringExtensions.RemoveStart(String, String, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String, System.String, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: RemoveStart
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 143
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRemoves a specified start from this string.\n"
+  example: []
+  syntax:
+    content: public static string RemoveStart(this string s, string start, StringComparison stringComparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: start
+      type: System.String
+      description: Specifies a string that will be removed from the start of this string.
+    - id: stringComparison
+      type: System.StringComparison
+      description: Specifies a StringComparison value.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string from which the specified start has been removed. If this string
+
+        doesn&apos;t start with the specified start, returns a copy of this string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RemoveStart(s As String, start As String, stringComparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.RemoveStart*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters(System.String)
+  id: ReplaceHtmlSpecialCharacters(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReplaceHtmlSpecialCharacters(String)
+  nameWithType: StringExtensions.ReplaceHtmlSpecialCharacters(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ReplaceHtmlSpecialCharacters
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 157
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nReplaces all HTML special characters with their corresponding entities in this string.\n"
+  example: []
+  syntax:
+    content: public static string ReplaceHtmlSpecialCharacters(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string where all occurrences of HTML special characters have been
+
+        replaced with their corresponding entities.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ReplaceHtmlSpecialCharacters(s As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters(System.String)
+  id: ReplaceXmlSpecialCharacters(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReplaceXmlSpecialCharacters(String)
+  nameWithType: StringExtensions.ReplaceXmlSpecialCharacters(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ReplaceXmlSpecialCharacters
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 179
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nReplaces all XML special characters with their corresponding entities in this string.\n"
+  example: []
+  syntax:
+    content: public static string ReplaceXmlSpecialCharacters(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.String
+      description: >-
+        Returns such copy of this string where all occurrences of XML special characters have been
+
+        replaced with their corresponding entities.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ReplaceXmlSpecialCharacters(s As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.Char,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.Char,System.StringComparison)
+  id: SubstringAfter(System.String,System.Char,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringAfter(String, Char, StringComparison)
+  nameWithType: StringExtensions.SubstringAfter(String, Char, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String, System.Char, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: SubstringAfter
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 204
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a substring from this string after the first occurrence of a specified character.\n"
+  example: []
+  syntax:
+    content: public static string SubstringAfter(this string s, char value, StringComparison comparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: value
+      type: System.Char
+      description: Specifies a character to find.
+    - id: comparison
+      type: System.StringComparison
+      description: Specifies a comparison mode.
+    return:
+      type: System.String
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">value</code> is found within the current string, returns the substring from the
+
+        current string after the first occurrence of <code data-dev-comment-type="paramref" class="paramref">value</code>. If <code data-dev-comment-type="paramref" class="paramref">value</code> is not
+
+        found, returns the current string; this will be done also when <code data-dev-comment-type="paramref" class="paramref">value</code> is null or empty.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SubstringAfter(s As String, value As Char, comparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.SubstringAfter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.String,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String,System.String,System.StringComparison)
+  id: SubstringAfter(System.String,System.String,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringAfter(String, String, StringComparison)
+  nameWithType: StringExtensions.SubstringAfter(String, String, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringAfter(System.String, System.String, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: SubstringAfter
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 218
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a substring from this string after the first occurrence of a specified string.\n"
+  example: []
+  syntax:
+    content: public static string SubstringAfter(this string s, string value, StringComparison comparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: value
+      type: System.String
+      description: Specifies a string to find.
+    - id: comparison
+      type: System.StringComparison
+      description: Specifies a comparison mode.
+    return:
+      type: System.String
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">value</code> is found within the current string, returns the substring from the
+
+        current string after the first occurrence of <code data-dev-comment-type="paramref" class="paramref">value</code>. If <code data-dev-comment-type="paramref" class="paramref">value</code> is not
+
+        found, returns the current string; this will be done also when <code data-dev-comment-type="paramref" class="paramref">value</code> is null or empty.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SubstringAfter(s As String, value As String, comparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.SubstringAfter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.Char,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.Char,System.StringComparison)
+  id: SubstringBefore(System.String,System.Char,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringBefore(String, Char, StringComparison)
+  nameWithType: StringExtensions.SubstringBefore(String, Char, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String, System.Char, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: SubstringBefore
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 242
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a substring from this string before the first occurrence of a specified character.\n"
+  example: []
+  syntax:
+    content: public static string SubstringBefore(this string s, char value, StringComparison comparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: value
+      type: System.Char
+      description: Specifies a character to find.
+    - id: comparison
+      type: System.StringComparison
+      description: Specifies a comparison mode.
+    return:
+      type: System.String
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">value</code> is found within the current string, returns the substring from the
+
+        current string before the first occurrence of <code data-dev-comment-type="paramref" class="paramref">value</code>. If <code data-dev-comment-type="paramref" class="paramref">value</code> is not
+
+        found, returns the current string; this will be done also when <code data-dev-comment-type="paramref" class="paramref">value</code> is null or empty.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SubstringBefore(s As String, value As Char, comparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.SubstringBefore*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.String,System.StringComparison)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String,System.String,System.StringComparison)
+  id: SubstringBefore(System.String,System.String,System.StringComparison)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: SubstringBefore(String, String, StringComparison)
+  nameWithType: StringExtensions.SubstringBefore(String, String, StringComparison)
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringBefore(System.String, System.String, System.StringComparison)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: SubstringBefore
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 256
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a substring from this string before the first occurrence of a specified string.\n"
+  example: []
+  syntax:
+    content: public static string SubstringBefore(this string s, string value, StringComparison comparison)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    - id: value
+      type: System.String
+      description: Specifies a string to find.
+    - id: comparison
+      type: System.StringComparison
+      description: Specifies a comparison mode.
+    return:
+      type: System.String
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">value</code> is found within the current string, returns the substring from the
+
+        current string before the first occurrence of <code data-dev-comment-type="paramref" class="paramref">value</code>. If <code data-dev-comment-type="paramref" class="paramref">value</code> is not
+
+        found, returns the current string; this will be done also when <code data-dev-comment-type="paramref" class="paramref">value</code> is null or empty.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SubstringBefore(s As String, value As String, comparison As StringComparison) As String
+  overload: Juhta.Net.Extensions.StringExtensions.SubstringBefore*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.ToBase64String(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.ToBase64String(System.String)
+  id: ToBase64String(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToBase64String(String)
+  nameWithType: StringExtensions.ToBase64String(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.ToBase64String(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ToBase64String
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 277
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nConverts this string to its equivalent base64 string.\n"
+  remarks: This method performs base64 string conversions through the UTF-8 encoding.
+  example: []
+  syntax:
+    content: public static string ToBase64String(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.String
+      description: Returns the base64 string representation of this string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToBase64String(s As String) As String
+  overload: Juhta.Net.Extensions.StringExtensions.ToBase64String*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.StringExtensions.ToBoolean(System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.ToBoolean(System.String)
+  id: ToBoolean(System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToBoolean(String)
+  nameWithType: StringExtensions.ToBoolean(String)
+  fullName: Juhta.Net.Extensions.StringExtensions.ToBoolean(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ToBoolean
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    startLine: 292
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nConverts this string to an equivalent <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> value.\n"
+  remarks: >-
+    This method is otherwise equivalent to <xref href="System.Convert.ToBoolean(System.String)" data-throw-if-not-resolved="false"></xref>, but it also
+
+    accepts the values &quot;1&quot; and &quot;0&quot; as valid string representatives for the boolean values True and False,
+
+    respectively.
+  example: []
+  syntax:
+    content: public static bool ToBoolean(this string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies the current string instance.
+    return:
+      type: System.Boolean
+      description: Returns this string as an equivalent <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> value.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToBoolean(s As String) As Boolean
+  overload: Juhta.Net.Extensions.StringExtensions.ToBoolean*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Extensions
+  commentId: N:Juhta.Net.Extensions
+  isExternal: false
+  name: Juhta.Net.Extensions
+  nameWithType: Juhta.Net.Extensions
+  fullName: Juhta.Net.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces
+  isExternal: false
+  name: ContainsWhitespaces
+  nameWithType: StringExtensions.ContainsWhitespaces
+  fullName: Juhta.Net.Extensions.StringExtensions.ContainsWhitespaces
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Juhta.Net.Extensions.StringExtensions.EnsureEnd*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.EnsureEnd
+  isExternal: false
+  name: EnsureEnd
+  nameWithType: StringExtensions.EnsureEnd
+  fullName: Juhta.Net.Extensions.StringExtensions.EnsureEnd
+- uid: System.StringComparison
+  commentId: T:System.StringComparison
+  parent: System
+  isExternal: true
+  name: StringComparison
+  nameWithType: StringComparison
+  fullName: System.StringComparison
+- uid: Juhta.Net.Extensions.StringExtensions.FromBase64String*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.FromBase64String
+  isExternal: false
+  name: FromBase64String
+  nameWithType: StringExtensions.FromBase64String
+  fullName: Juhta.Net.Extensions.StringExtensions.FromBase64String
+- uid: Juhta.Net.Extensions.StringExtensions.IsMatch*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.IsMatch
+  isExternal: false
+  name: IsMatch
+  nameWithType: StringExtensions.IsMatch
+  fullName: Juhta.Net.Extensions.StringExtensions.IsMatch
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveEnd*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.RemoveEnd
+  isExternal: false
+  name: RemoveEnd
+  nameWithType: StringExtensions.RemoveEnd
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveEnd
+- uid: Juhta.Net.Extensions.StringExtensions.RemoveStart*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.RemoveStart
+  isExternal: false
+  name: RemoveStart
+  nameWithType: StringExtensions.RemoveStart
+  fullName: Juhta.Net.Extensions.StringExtensions.RemoveStart
+- uid: Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters
+  isExternal: false
+  name: ReplaceHtmlSpecialCharacters
+  nameWithType: StringExtensions.ReplaceHtmlSpecialCharacters
+  fullName: Juhta.Net.Extensions.StringExtensions.ReplaceHtmlSpecialCharacters
+- uid: Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters
+  isExternal: false
+  name: ReplaceXmlSpecialCharacters
+  nameWithType: StringExtensions.ReplaceXmlSpecialCharacters
+  fullName: Juhta.Net.Extensions.StringExtensions.ReplaceXmlSpecialCharacters
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringAfter*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.SubstringAfter
+  isExternal: false
+  name: SubstringAfter
+  nameWithType: StringExtensions.SubstringAfter
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringAfter
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: Juhta.Net.Extensions.StringExtensions.SubstringBefore*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.SubstringBefore
+  isExternal: false
+  name: SubstringBefore
+  nameWithType: StringExtensions.SubstringBefore
+  fullName: Juhta.Net.Extensions.StringExtensions.SubstringBefore
+- uid: Juhta.Net.Extensions.StringExtensions.ToBase64String*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.ToBase64String
+  isExternal: false
+  name: ToBase64String
+  nameWithType: StringExtensions.ToBase64String
+  fullName: Juhta.Net.Extensions.StringExtensions.ToBase64String
+- uid: System.Convert.ToBoolean(System.String)
+  commentId: M:System.Convert.ToBoolean(System.String)
+- uid: Juhta.Net.Extensions.StringExtensions.ToBoolean*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.ToBoolean
+  isExternal: false
+  name: ToBoolean
+  nameWithType: StringExtensions.ToBoolean
+  fullName: Juhta.Net.Extensions.StringExtensions.ToBoolean

@@ -1,0 +1,1168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.Utf8FileWriter
+  commentId: T:Juhta.Net.Common.Utf8FileWriter
+  id: Utf8FileWriter
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.Utf8FileWriter.#ctor(System.String)
+  - Juhta.Net.Common.Utf8FileWriter.#ctor(System.String,System.IO.FileMode)
+  - Juhta.Net.Common.Utf8FileWriter.Close
+  - Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
+  - Juhta.Net.Common.Utf8FileWriter.FilePath
+  - Juhta.Net.Common.Utf8FileWriter.Flush
+  - Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
+  - Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  - Juhta.Net.Common.Utf8FileWriter.Open
+  - Juhta.Net.Common.Utf8FileWriter.TabSize
+  - Juhta.Net.Common.Utf8FileWriter.Write(System.String)
+  - Juhta.Net.Common.Utf8FileWriter.Write(System.String,System.Object[])
+  - Juhta.Net.Common.Utf8FileWriter.WriteLine
+  - Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)
+  - Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)
+  - Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String,System.Object[])
+  langs:
+  - csharp
+  - vb
+  name: Utf8FileWriter
+  nameWithType: Utf8FileWriter
+  fullName: Juhta.Net.Common.Utf8FileWriter
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Utf8FileWriter
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDefines a writer class for UTF8-encoded files.\n"
+  example: []
+  syntax:
+    content: public class Utf8FileWriter
+    content.vb: Public Class Utf8FileWriter
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Juhta.Net.Diagnostics.TraceFile
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Common.Utf8FileWriter.#ctor(System.String)
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Utf8FileWriter(String)
+  nameWithType: Utf8FileWriter.Utf8FileWriter(String)
+  fullName: Juhta.Net.Common.Utf8FileWriter.Utf8FileWriter(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 26
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public Utf8FileWriter(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: >-
+        Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
+
+        written. If the file already exists, it will be overwritten.
+    content.vb: Public Sub New(filePath As String)
+  overload: Juhta.Net.Common.Utf8FileWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.#ctor(System.String,System.IO.FileMode)
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String,System.IO.FileMode)
+  id: '#ctor(System.String,System.IO.FileMode)'
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Utf8FileWriter(String, FileMode)
+  nameWithType: Utf8FileWriter.Utf8FileWriter(String, FileMode)
+  fullName: Juhta.Net.Common.Utf8FileWriter.Utf8FileWriter(System.String, System.IO.FileMode)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 35
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public Utf8FileWriter(string filePath, FileMode openMode)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: >-
+        Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
+
+        written.
+    - id: openMode
+      type: System.IO.FileMode
+      description: Specifies how the UTF8-encoded file should be opened.
+    content.vb: Public Sub New(filePath As String, openMode As FileMode)
+  overload: Juhta.Net.Common.Utf8FileWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.Close
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Close
+  id: Close
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: Utf8FileWriter.Close()
+  fullName: Juhta.Net.Common.Utf8FileWriter.Close()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Close
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 55
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nFlushes all unwritten data to the underlying UTF8-encoded file, and after that, closes the file.\n"
+  remarks: This method does nothing if the underlying UTF8-encoded file is not open.
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close
+  overload: Juhta.Net.Common.Utf8FileWriter.Close*
+  seealso:
+  - linkId: Juhta.Net.Common.Utf8FileWriter.Open
+    commentId: M:Juhta.Net.Common.Utf8FileWriter.Open
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
+  id: DecreaseIndentLevel
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: DecreaseIndentLevel()
+  nameWithType: Utf8FileWriter.DecreaseIndentLevel()
+  fullName: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: DecreaseIndentLevel
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 72
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDecreases the current indent level by one.\n"
+  example: []
+  syntax:
+    content: public void DecreaseIndentLevel()
+    content.vb: Public Sub DecreaseIndentLevel
+  overload: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.Flush
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Flush
+  id: Flush
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: Utf8FileWriter.Flush()
+  fullName: Juhta.Net.Common.Utf8FileWriter.Flush()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Flush
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 82
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nFlushes all unwritten data to the underlying UTF8-encoded file.\n"
+  remarks: This method does nothing if the underlying UTF8-encoded file is not open.
+  example: []
+  syntax:
+    content: public void Flush()
+    content.vb: Public Sub Flush
+  overload: Juhta.Net.Common.Utf8FileWriter.Flush*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
+  id: IncreaseIndentLevel
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: IncreaseIndentLevel()
+  nameWithType: Utf8FileWriter.IncreaseIndentLevel()
+  fullName: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IncreaseIndentLevel
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 91
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nIncreases the current indent level by one.\n"
+  example: []
+  syntax:
+    content: public void IncreaseIndentLevel()
+    content.vb: Public Sub IncreaseIndentLevel
+  overload: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.Open
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Open
+  id: Open
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Open()
+  nameWithType: Utf8FileWriter.Open()
+  fullName: Juhta.Net.Common.Utf8FileWriter.Open()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Open
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 109
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nOpens the underlying UTF8-encoded file.\n"
+  remarks: "\n<p>This method does nothing if the underlying UTF8-encoded file is already open.</p>\n<p>This method does not necessarily have to be called when writing data to the underlying UTF8-encoded\nfile. If the file is not open, it will be automatically opened and closed in context of each write\noperation. However, recurrent openings and closings of the file might cause some performance loss. To gain\nthe maximum performance, the file should be opened with an explicit call on this method prior to write\noperations. In this case, the file must also be explicitly closed with the <xref href=\"Juhta.Net.Common.Utf8FileWriter.Close\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n"
+  example: []
+  syntax:
+    content: public void Open()
+    content.vb: Public Sub Open
+  overload: Juhta.Net.Common.Utf8FileWriter.Open*
+  seealso:
+  - linkId: Juhta.Net.Common.Utf8FileWriter.Close
+    commentId: M:Juhta.Net.Common.Utf8FileWriter.Close
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.Write(System.String)
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Write(System.String)
+  id: Write(System.String)
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(String)
+  nameWithType: Utf8FileWriter.Write(String)
+  fullName: Juhta.Net.Common.Utf8FileWriter.Write(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Write
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 123
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a specified string to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void Write(string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies a string.
+    content.vb: Public Sub Write(s As String)
+  overload: Juhta.Net.Common.Utf8FileWriter.Write*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.Write(System.String,System.Object[])
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Write(System.String,System.Object[])
+  id: Write(System.String,System.Object[])
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(String, Object[])
+  nameWithType: Utf8FileWriter.Write(String, Object[])
+  fullName: Juhta.Net.Common.Utf8FileWriter.Write(System.String, System.Object[])
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Write
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 134
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a formatted string to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void Write(string format, params object[] args)
+    parameters:
+    - id: format
+      type: System.String
+      description: Specifies a string containing zero or more format items.
+    - id: args
+      type: System.Object[]
+      description: >-
+        Specifies an object array containing zero or more objects to format. These objects must
+
+        correspond to the format items in <code data-dev-comment-type="paramref" class="paramref">format</code>.
+    content.vb: Public Sub Write(format As String, ParamArray args As Object())
+  overload: Juhta.Net.Common.Utf8FileWriter.Write*
+  nameWithType.vb: Utf8FileWriter.Write(String, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.Utf8FileWriter.Write(System.String, System.Object())
+  name.vb: Write(String, Object())
+- uid: Juhta.Net.Common.Utf8FileWriter.WriteLine
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.WriteLine
+  id: WriteLine
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLine()
+  nameWithType: Utf8FileWriter.WriteLine()
+  fullName: Juhta.Net.Common.Utf8FileWriter.WriteLine()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: WriteLine
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 142
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a line terminator to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void WriteLine()
+    content.vb: Public Sub WriteLine
+  overload: Juhta.Net.Common.Utf8FileWriter.WriteLine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)
+  id: WriteLine(System.Int32)
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLine(Int32)
+  nameWithType: Utf8FileWriter.WriteLine(Int32)
+  fullName: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: WriteLine
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 151
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a specified number of line terminators to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void WriteLine(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: Specifies a number of line terminators to write.
+    content.vb: Public Sub WriteLine(count As Integer)
+  overload: Juhta.Net.Common.Utf8FileWriter.WriteLine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)
+  id: WriteLine(System.String)
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLine(String)
+  nameWithType: Utf8FileWriter.WriteLine(String)
+  fullName: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: WriteLine
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 160
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a specified string followed by a line terminator to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void WriteLine(string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: Specifies a string.
+    content.vb: Public Sub WriteLine(s As String)
+  overload: Juhta.Net.Common.Utf8FileWriter.WriteLine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String,System.Object[])
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String,System.Object[])
+  id: WriteLine(System.String,System.Object[])
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLine(String, Object[])
+  nameWithType: Utf8FileWriter.WriteLine(String, Object[])
+  fullName: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String, System.Object[])
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: WriteLine
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 171
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nWrites a formatted string followed by a line terminator to the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public void WriteLine(string format, params object[] args)
+    parameters:
+    - id: format
+      type: System.String
+      description: Specifies a string containing zero or more format items.
+    - id: args
+      type: System.Object[]
+      description: >-
+        Specifies an object array containing zero or more objects to format. These objects must
+
+        correspond to the format items in <code data-dev-comment-type="paramref" class="paramref">format</code>.
+    content.vb: Public Sub WriteLine(format As String, ParamArray args As Object())
+  overload: Juhta.Net.Common.Utf8FileWriter.WriteLine*
+  nameWithType.vb: Utf8FileWriter.WriteLine(String, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String, System.Object())
+  name.vb: WriteLine(String, Object())
+- uid: Juhta.Net.Common.Utf8FileWriter.FilePath
+  commentId: P:Juhta.Net.Common.Utf8FileWriter.FilePath
+  id: FilePath
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: FilePath
+  nameWithType: Utf8FileWriter.FilePath
+  fullName: Juhta.Net.Common.Utf8FileWriter.FilePath
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: FilePath
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 183
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the absolute path of the underlying UTF8-encoded file.\n"
+  example: []
+  syntax:
+    content: public string FilePath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FilePath As String
+  overload: Juhta.Net.Common.Utf8FileWriter.FilePath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  commentId: P:Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  id: IndentLevel
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: IndentLevel
+  nameWithType: Utf8FileWriter.IndentLevel
+  fullName: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IndentLevel
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 194
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets or sets the current indent level.\n"
+  remarks: >-
+    The result of the multiplication of <xref href="Juhta.Net.Common.Utf8FileWriter.IndentLevel" data-throw-if-not-resolved="false"></xref> and <xref href="Juhta.Net.Common.Utf8FileWriter.TabSize" data-throw-if-not-resolved="false"></xref> determines
+
+    the number of space characters to write at the beginning of each new line.
+  example: []
+  syntax:
+    content: public byte IndentLevel { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property IndentLevel As Byte
+  overload: Juhta.Net.Common.Utf8FileWriter.IndentLevel*
+  seealso:
+  - linkId: Juhta.Net.Common.Utf8FileWriter.TabSize
+    commentId: P:Juhta.Net.Common.Utf8FileWriter.TabSize
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.Utf8FileWriter.TabSize
+  commentId: P:Juhta.Net.Common.Utf8FileWriter.TabSize
+  id: TabSize
+  parent: Juhta.Net.Common.Utf8FileWriter
+  langs:
+  - csharp
+  - vb
+  name: TabSize
+  nameWithType: Utf8FileWriter.TabSize
+  fullName: Juhta.Net.Common.Utf8FileWriter.TabSize
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: TabSize
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    startLine: 205
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets or sets the current tab size.\n"
+  example: []
+  syntax:
+    content: public byte TabSize { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property TabSize As Byte
+  overload: Juhta.Net.Common.Utf8FileWriter.TabSize*
+  seealso:
+  - linkId: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+    commentId: P:Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.Utf8FileWriter.#ctor*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.#ctor
+  isExternal: false
+  name: Utf8FileWriter
+  nameWithType: Utf8FileWriter.Utf8FileWriter
+  fullName: Juhta.Net.Common.Utf8FileWriter.Utf8FileWriter
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.IO.FileMode
+  commentId: T:System.IO.FileMode
+  parent: System.IO
+  isExternal: true
+  name: FileMode
+  nameWithType: FileMode
+  fullName: System.IO.FileMode
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: false
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Juhta.Net.Common.Utf8FileWriter.Open
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Open
+  parent: Juhta.Net.Common.Utf8FileWriter
+  isExternal: false
+  name: Open()
+  nameWithType: Utf8FileWriter.Open()
+  fullName: Juhta.Net.Common.Utf8FileWriter.Open()
+  spec.csharp:
+  - uid: Juhta.Net.Common.Utf8FileWriter.Open
+    name: Open
+    nameWithType: Utf8FileWriter.Open
+    fullName: Juhta.Net.Common.Utf8FileWriter.Open
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Common.Utf8FileWriter.Open
+    name: Open
+    nameWithType: Utf8FileWriter.Open
+    fullName: Juhta.Net.Common.Utf8FileWriter.Open
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.Utf8FileWriter.Close*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Close
+  isExternal: false
+  name: Close
+  nameWithType: Utf8FileWriter.Close
+  fullName: Juhta.Net.Common.Utf8FileWriter.Close
+- uid: Juhta.Net.Common.Utf8FileWriter
+  commentId: T:Juhta.Net.Common.Utf8FileWriter
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: Utf8FileWriter
+  nameWithType: Utf8FileWriter
+  fullName: Juhta.Net.Common.Utf8FileWriter
+- uid: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
+  isExternal: false
+  name: DecreaseIndentLevel
+  nameWithType: Utf8FileWriter.DecreaseIndentLevel
+  fullName: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
+- uid: Juhta.Net.Common.Utf8FileWriter.Flush*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Flush
+  isExternal: false
+  name: Flush
+  nameWithType: Utf8FileWriter.Flush
+  fullName: Juhta.Net.Common.Utf8FileWriter.Flush
+- uid: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
+  isExternal: false
+  name: IncreaseIndentLevel
+  nameWithType: Utf8FileWriter.IncreaseIndentLevel
+  fullName: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
+- uid: Juhta.Net.Common.Utf8FileWriter.Close
+  commentId: M:Juhta.Net.Common.Utf8FileWriter.Close
+  parent: Juhta.Net.Common.Utf8FileWriter
+  isExternal: false
+  name: Close()
+  nameWithType: Utf8FileWriter.Close()
+  fullName: Juhta.Net.Common.Utf8FileWriter.Close()
+  spec.csharp:
+  - uid: Juhta.Net.Common.Utf8FileWriter.Close
+    name: Close
+    nameWithType: Utf8FileWriter.Close
+    fullName: Juhta.Net.Common.Utf8FileWriter.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Common.Utf8FileWriter.Close
+    name: Close
+    nameWithType: Utf8FileWriter.Close
+    fullName: Juhta.Net.Common.Utf8FileWriter.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.Utf8FileWriter.Open*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Open
+  isExternal: false
+  name: Open
+  nameWithType: Utf8FileWriter.Open
+  fullName: Juhta.Net.Common.Utf8FileWriter.Open
+- uid: Juhta.Net.Common.Utf8FileWriter.Write*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Write
+  isExternal: false
+  name: Write
+  nameWithType: Utf8FileWriter.Write
+  fullName: Juhta.Net.Common.Utf8FileWriter.Write
+- uid: System.Object[]
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Juhta.Net.Common.Utf8FileWriter.WriteLine*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.WriteLine
+  isExternal: false
+  name: WriteLine
+  nameWithType: Utf8FileWriter.WriteLine
+  fullName: Juhta.Net.Common.Utf8FileWriter.WriteLine
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Juhta.Net.Common.Utf8FileWriter.FilePath*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.FilePath
+  isExternal: false
+  name: FilePath
+  nameWithType: Utf8FileWriter.FilePath
+  fullName: Juhta.Net.Common.Utf8FileWriter.FilePath
+- uid: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  commentId: P:Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  parent: Juhta.Net.Common.Utf8FileWriter
+  isExternal: false
+  name: IndentLevel
+  nameWithType: Utf8FileWriter.IndentLevel
+  fullName: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+- uid: Juhta.Net.Common.Utf8FileWriter.TabSize
+  commentId: P:Juhta.Net.Common.Utf8FileWriter.TabSize
+  parent: Juhta.Net.Common.Utf8FileWriter
+  isExternal: false
+  name: TabSize
+  nameWithType: Utf8FileWriter.TabSize
+  fullName: Juhta.Net.Common.Utf8FileWriter.TabSize
+- uid: Juhta.Net.Common.Utf8FileWriter.IndentLevel*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.IndentLevel
+  isExternal: false
+  name: IndentLevel
+  nameWithType: Utf8FileWriter.IndentLevel
+  fullName: Juhta.Net.Common.Utf8FileWriter.IndentLevel
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: Juhta.Net.Common.Utf8FileWriter.TabSize*
+  commentId: Overload:Juhta.Net.Common.Utf8FileWriter.TabSize
+  isExternal: false
+  name: TabSize
+  nameWithType: Utf8FileWriter.TabSize
+  fullName: Juhta.Net.Common.Utf8FileWriter.TabSize

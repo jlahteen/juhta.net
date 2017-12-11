@@ -1,0 +1,844 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Extensions.AssemblyExtensions
+  commentId: T:Juhta.Net.Extensions.AssemblyExtensions
+  id: AssemblyExtensions
+  parent: Juhta.Net.Extensions
+  children:
+  - Juhta.Net.Extensions.AssemblyExtensions.GetCompany(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetCopyright(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetVersion(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String)
+  - Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AssemblyExtensions
+  nameWithType: AssemblyExtensions
+  fullName: Juhta.Net.Extensions.AssemblyExtensions
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: AssemblyExtensions
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nA static class that contains extension methods for the <xref href=\"System.Reflection.Assembly\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public static class AssemblyExtensions
+    content.vb: Public Module AssemblyExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetCompany(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetCompany(System.Reflection.Assembly)
+  id: GetCompany(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCompany(Assembly)
+  nameWithType: AssemblyExtensions.GetCompany(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetCompany(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetCompany
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 68
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Company attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetCompany(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Company attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetCompany(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetCompany*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetCopyright(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetCopyright(System.Reflection.Assembly)
+  id: GetCopyright(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCopyright(Assembly)
+  nameWithType: AssemblyExtensions.GetCopyright(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetCopyright(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetCopyright
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 83
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Copyright attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetCopyright(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Copyright attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetCopyright(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetCopyright*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
+  id: GetDescription(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDescription(Assembly)
+  nameWithType: AssemblyExtensions.GetDescription(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetDescription
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 98
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Description attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetDescription(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Description attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDescription(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetDescription*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
+  id: GetDirectory(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetDirectory(Assembly)
+  nameWithType: AssemblyExtensions.GetDirectory(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetDirectory
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 113
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the directory of the current assembly.\n"
+  example: []
+  syntax:
+    content: public static string GetDirectory(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the directory of the current assembly without an ending directory separator.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDirectory(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
+  id: GetProduct(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProduct(Assembly)
+  nameWithType: AssemblyExtensions.GetProduct(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetProduct
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 127
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Product attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetProduct(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Product attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetProduct(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetProduct*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
+  id: GetTitle(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTitle(Assembly)
+  nameWithType: AssemblyExtensions.GetTitle(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetTitle
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 142
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Title attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetTitle(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Title attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetTitle(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetTitle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetVersion(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetVersion(System.Reflection.Assembly)
+  id: GetVersion(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetVersion(Assembly)
+  nameWithType: AssemblyExtensions.GetVersion(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetVersion(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetVersion
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 157
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the value of the current assembly&apos;s Version attribute.\n"
+  example: []
+  syntax:
+    content: public static string GetVersion(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the value of the Version attribute, or null, if the attibute was not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVersion(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetVersion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String)
+  id: LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: LoadEmbeddedResourceFile(Assembly, String)
+  nameWithType: AssemblyExtensions.LoadEmbeddedResourceFile(Assembly, String)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: LoadEmbeddedResourceFile
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 177
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nLoads an embedded resource file from the current assembly.\n"
+  remarks: >-
+    This method loads the first resource file whose name matches the specified file name regardless of
+
+    the file namespace.
+  example: []
+  syntax:
+    content: public static string LoadEmbeddedResourceFile(this Assembly assembly, string fileName)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    - id: fileName
+      type: System.String
+      description: Specifies the name of a resource file to be loaded.
+    return:
+      type: System.String
+      description: Returns the contents of the requested resource file.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LoadEmbeddedResourceFile(assembly As Assembly, fileName As String) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String,System.String)
+  id: LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: LoadEmbeddedResourceFile(Assembly, String, String)
+  nameWithType: AssemblyExtensions.LoadEmbeddedResourceFile(Assembly, String, String)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: LoadEmbeddedResourceFile
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 190
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nLoads an embedded resource file from the current assembly.\n"
+  example: []
+  syntax:
+    content: public static string LoadEmbeddedResourceFile(this Assembly assembly, string fileName, string fileNamespace)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    - id: fileName
+      type: System.String
+      description: Specifies the name of a resource file to be loaded.
+    - id: fileNamespace
+      type: System.String
+      description: >-
+        Specifies the namespace of a resource file to be loaded. Can be null in which
+
+        case the method loads the first resource file whose name matches the specified file name.
+    return:
+      type: System.String
+      description: Returns the contents of the requested resource file.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function LoadEmbeddedResourceFile(assembly As Assembly, fileName As String, fileNamespace As String) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: Juhta.Net.Extensions
+  commentId: N:Juhta.Net.Extensions
+  isExternal: false
+  name: Juhta.Net.Extensions
+  nameWithType: Juhta.Net.Extensions
+  fullName: Juhta.Net.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: false
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetCompany*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetCompany
+  isExternal: false
+  name: GetCompany
+  nameWithType: AssemblyExtensions.GetCompany
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetCompany
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetCopyright*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetCopyright
+  isExternal: false
+  name: GetCopyright
+  nameWithType: AssemblyExtensions.GetCopyright
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetCopyright
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetDescription*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetDescription
+  isExternal: false
+  name: GetDescription
+  nameWithType: AssemblyExtensions.GetDescription
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetDescription
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetDirectory
+  isExternal: false
+  name: GetDirectory
+  nameWithType: AssemblyExtensions.GetDirectory
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetProduct*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetProduct
+  isExternal: false
+  name: GetProduct
+  nameWithType: AssemblyExtensions.GetProduct
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetProduct
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetTitle*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetTitle
+  isExternal: false
+  name: GetTitle
+  nameWithType: AssemblyExtensions.GetTitle
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetTitle
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetVersion*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetVersion
+  isExternal: false
+  name: GetVersion
+  nameWithType: AssemblyExtensions.GetVersion
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetVersion
+- uid: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile
+  isExternal: false
+  name: LoadEmbeddedResourceFile
+  nameWithType: AssemblyExtensions.LoadEmbeddedResourceFile
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile

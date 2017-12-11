@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Extensions.XmlSchemaExtensions
+  commentId: T:Juhta.Net.Extensions.XmlSchemaExtensions
+  id: XmlSchemaExtensions
+  parent: Juhta.Net.Extensions
+  children:
+  - Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue(System.Xml.Schema.XmlSchema,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: XmlSchemaExtensions
+  nameWithType: XmlSchemaExtensions
+  fullName: Juhta.Net.Extensions.XmlSchemaExtensions
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: XmlSchemaExtensions
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nA static class that contains extension methods for the <xref href=\"System.Xml.Schema.XmlSchema\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public static class XmlSchemaExtensions
+    content.vb: Public Module XmlSchemaExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue(System.Xml.Schema.XmlSchema,System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue(System.Xml.Schema.XmlSchema,System.String,System.String)
+  id: GetAttributeDefaultValue(System.Xml.Schema.XmlSchema,System.String,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.XmlSchemaExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAttributeDefaultValue(XmlSchema, String, String)
+  nameWithType: XmlSchemaExtensions.GetAttributeDefaultValue(XmlSchema, String, String)
+  fullName: Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue(System.Xml.Schema.XmlSchema, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetAttributeDefaultValue
+    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+    startLine: 28
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets an attribute&apos;s default value from the current XmlSchema instance.\n"
+  example: []
+  syntax:
+    content: public static string GetAttributeDefaultValue(this XmlSchema schema, string complexTypeName, string attributeName)
+    parameters:
+    - id: schema
+      type: System.Xml.Schema.XmlSchema
+      description: Specifies the current XmlSchema object.
+    - id: complexTypeName
+      type: System.String
+      description: Specifies the name of a complex type containing the attribute.
+    - id: attributeName
+      type: System.String
+      description: Specifies an attribute name.
+    return:
+      type: System.String
+      description: >-
+        Returns the default value of the attribute or null if the complex type or the attribute has not
+
+        been defined in the schema.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAttributeDefaultValue(schema As XmlSchema, complexTypeName As String, attributeName As String) As String
+  overload: Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: Juhta.Net.Extensions
+  commentId: N:Juhta.Net.Extensions
+  isExternal: false
+  name: Juhta.Net.Extensions
+  nameWithType: Juhta.Net.Extensions
+  fullName: Juhta.Net.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: false
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue*
+  commentId: Overload:Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue
+  isExternal: false
+  name: GetAttributeDefaultValue
+  nameWithType: XmlSchemaExtensions.GetAttributeDefaultValue
+  fullName: Juhta.Net.Extensions.XmlSchemaExtensions.GetAttributeDefaultValue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

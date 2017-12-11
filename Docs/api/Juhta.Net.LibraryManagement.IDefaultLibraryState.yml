@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IDefaultLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IDefaultLibraryState
+  id: IDefaultLibraryState
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize
+  langs:
+  - csharp
+  - vb
+  name: IDefaultLibraryState
+  nameWithType: IDefaultLibraryState
+  fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IDefaultLibraryState
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for default library states.\n"
+  remarks: Default library states relate to dynamic initializable libraries.
+  example: []
+  syntax:
+    content: 'public interface IDefaultLibraryState : ILibraryState'
+    content.vb: >-
+      Public Interface IDefaultLibraryState
+
+          Inherits ILibraryState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize
+  commentId: M:Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize
+  id: Initialize
+  parent: Juhta.Net.LibraryManagement.IDefaultLibraryState
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: IDefaultLibraryState.Initialize()
+  fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Initialize
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    startLine: 26
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes the library state.\n"
+  remarks: "\n<p>Initializing a library state means performing all necessary actions on the objects comprising the\nlibrary state so that the state is ready to be set as the effective library state.</p>\n<p>Default library states don&apos;t require any configuration for initialization.</p>\n"
+  example: []
+  syntax:
+    content: void Initialize()
+    content.vb: Sub Initialize
+  overload: Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize
+  isExternal: false
+  name: Initialize
+  nameWithType: IDefaultLibraryState.Initialize
+  fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState.Initialize

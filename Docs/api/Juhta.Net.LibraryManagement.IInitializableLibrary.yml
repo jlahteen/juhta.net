@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IInitializableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IInitializableLibrary
+  id: IInitializableLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary
+  langs:
+  - csharp
+  - vb
+  name: IInitializableLibrary
+  nameWithType: IInitializableLibrary
+  fullName: Juhta.Net.LibraryManagement.IInitializableLibrary
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IInitializableLibrary
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for initializable libraries. A library is initializable if it requires initialization\noperations and those operations don&apos;t need any configuration.\n"
+  example: []
+  syntax:
+    content: public interface IInitializableLibrary
+    content.vb: Public Interface IInitializableLibrary
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary
+  commentId: M:Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary
+  id: InitializeLibrary
+  parent: Juhta.Net.LibraryManagement.IInitializableLibrary
+  langs:
+  - csharp
+  - vb
+  name: InitializeLibrary()
+  nameWithType: IInitializableLibrary.InitializeLibrary()
+  fullName: Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: InitializeLibrary
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    startLine: 22
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes the library, that is, performs required initialization operations to make library services\nproperly available.\n"
+  example: []
+  syntax:
+    content: void InitializeLibrary()
+    content.vb: Sub InitializeLibrary
+  overload: Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary*
+  commentId: Overload:Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary
+  isExternal: false
+  name: InitializeLibrary
+  nameWithType: IInitializableLibrary.InitializeLibrary
+  fullName: Juhta.Net.LibraryManagement.IInitializableLibrary.InitializeLibrary

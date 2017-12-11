@@ -1,0 +1,478 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.FrameworkConfig
+  commentId: T:Juhta.Net.FrameworkConfig
+  id: FrameworkConfig
+  parent: Juhta.Net
+  children:
+  - Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+  - Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: FrameworkConfig
+  nameWithType: FrameworkConfig
+  fullName: Juhta.Net.FrameworkConfig
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/FrameworkConfig.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: FrameworkConfig
+    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nA static class providing common methods and properties related to configuration files of the framework\nlibraries.\n"
+  example: []
+  syntax:
+    content: public static class FrameworkConfig
+    content.vb: Public Module FrameworkConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+  commentId: M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+  id: CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+  parent: Juhta.Net.FrameworkConfig
+  langs:
+  - csharp
+  - vb
+  name: CreateNamespaceManager(String, XmlDocument, String)
+  nameWithType: FrameworkConfig.CreateNamespaceManager(String, XmlDocument, String)
+  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String, System.Xml.XmlDocument, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/FrameworkConfig.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateNamespaceManager
+    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
+    startLine: 28
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nCreates an <xref href=\"System.Xml.XmlNamespaceManager\" data-throw-if-not-resolved=\"false\"></xref> object corresponding to a specified framework library, XML\nconfiguration and schema version.\n"
+  example: []
+  syntax:
+    content: public static XmlNamespaceManager CreateNamespaceManager(string libraryFileName, XmlDocument config, string schemaVersion)
+    parameters:
+    - id: libraryFileName
+      type: System.String
+      description: Specifies a framework library file name.
+    - id: config
+      type: System.Xml.XmlDocument
+      description: Specifies an <xref href="System.Xml.XmlDocument" data-throw-if-not-resolved="false"></xref> object containing a library configuration.
+    - id: schemaVersion
+      type: System.String
+      description: Specifies the schema version of the library configuration.
+    return:
+      type: System.Xml.XmlNamespaceManager
+      description: Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: Public Shared Function CreateNamespaceManager(libraryFileName As String, config As XmlDocument, schemaVersion As String) As XmlNamespaceManager
+  overload: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
+  commentId: M:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
+  id: GetLibraryConfigXmlns(System.String,System.String)
+  parent: Juhta.Net.FrameworkConfig
+  langs:
+  - csharp
+  - vb
+  name: GetLibraryConfigXmlns(String, String)
+  nameWithType: FrameworkConfig.GetLibraryConfigXmlns(String, String)
+  fullName: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/FrameworkConfig.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetLibraryConfigXmlns
+    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
+    startLine: 47
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nGets the configuration schema namespace for a framework library.\n"
+  example: []
+  syntax:
+    content: public static string GetLibraryConfigXmlns(string libraryFileName, string schemaVersion)
+    parameters:
+    - id: libraryFileName
+      type: System.String
+      description: Specifies a framework library file name.
+    - id: schemaVersion
+      type: System.String
+      description: Specifies a schema version.
+    return:
+      type: System.String
+      description: Returns the configuration schema namespace for the specified framework library.
+    content.vb: Public Shared Function GetLibraryConfigXmlns(libraryFileName As String, schemaVersion As String) As String
+  overload: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Juhta.Net
+  commentId: N:Juhta.Net
+  isExternal: false
+  name: Juhta.Net
+  nameWithType: Juhta.Net
+  fullName: Juhta.Net
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Xml.XmlNamespaceManager
+  commentId: T:System.Xml.XmlNamespaceManager
+  parent: System.Xml
+  isExternal: true
+  name: XmlNamespaceManager
+  nameWithType: XmlNamespaceManager
+  fullName: System.Xml.XmlNamespaceManager
+- uid: System.Xml.XmlDocument
+  commentId: T:System.Xml.XmlDocument
+  parent: System.Xml
+  isExternal: true
+  name: XmlDocument
+  nameWithType: XmlDocument
+  fullName: System.Xml.XmlDocument
+- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
+  commentId: Overload:Juhta.Net.FrameworkConfig.CreateNamespaceManager
+  isExternal: false
+  name: CreateNamespaceManager
+  nameWithType: FrameworkConfig.CreateNamespaceManager
+  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: false
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml
+- uid: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns*
+  commentId: Overload:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns
+  isExternal: false
+  name: GetLibraryConfigXmlns
+  nameWithType: FrameworkConfig.GetLibraryConfigXmlns
+  fullName: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns

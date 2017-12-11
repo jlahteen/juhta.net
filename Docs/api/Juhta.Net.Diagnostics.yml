@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  id: Juhta.Net.Diagnostics
+  children:
+  - Juhta.Net.Diagnostics.EventLogger
+  - Juhta.Net.Diagnostics.ITraceWriter
+  - Juhta.Net.Diagnostics.Trace
+  - Juhta.Net.Diagnostics.TraceFile
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+  type: Namespace
+  assemblies:
+  - Juhta.Net.Diagnostics
+references:
+- uid: Juhta.Net.Diagnostics.EventLogger
+  commentId: T:Juhta.Net.Diagnostics.EventLogger
+  isExternal: false
+  name: EventLogger
+  nameWithType: EventLogger
+  fullName: Juhta.Net.Diagnostics.EventLogger
+- uid: Juhta.Net.Diagnostics.ITraceWriter
+  commentId: T:Juhta.Net.Diagnostics.ITraceWriter
+  isExternal: false
+  name: ITraceWriter
+  nameWithType: ITraceWriter
+  fullName: Juhta.Net.Diagnostics.ITraceWriter
+- uid: Juhta.Net.Diagnostics.Trace
+  commentId: T:Juhta.Net.Diagnostics.Trace
+  isExternal: false
+  name: Trace
+  nameWithType: Trace
+  fullName: Juhta.Net.Diagnostics.Trace
+- uid: Juhta.Net.Diagnostics.TraceFile
+  commentId: T:Juhta.Net.Diagnostics.TraceFile
+  isExternal: false
+  name: TraceFile
+  nameWithType: TraceFile
+  fullName: Juhta.Net.Diagnostics.TraceFile

@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IClosableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IClosableLibraryState
+  id: IClosableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IClosableLibraryState.Close(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IClosableLibraryState
+  nameWithType: IClosableLibraryState
+  fullName: Juhta.Net.LibraryManagement.IClosableLibraryState
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IClosableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IClosableLibraryState
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IClosableLibraryState.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for closable library states. A library state is closable if it requires specific closing\nactions.\n"
+  example: []
+  syntax:
+    content: public interface IClosableLibraryState
+    content.vb: Public Interface IClosableLibraryState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IClosableLibraryState.Close(System.Boolean)
+  commentId: M:Juhta.Net.LibraryManagement.IClosableLibraryState.Close(System.Boolean)
+  id: Close(System.Boolean)
+  parent: Juhta.Net.LibraryManagement.IClosableLibraryState
+  langs:
+  - csharp
+  - vb
+  name: Close(Boolean)
+  nameWithType: IClosableLibraryState.Close(Boolean)
+  fullName: Juhta.Net.LibraryManagement.IClosableLibraryState.Close(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IClosableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Close
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IClosableLibraryState.cs
+    startLine: 32
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nCloses the library state, that is, performs required closing actions to release the library state resources\ngracefully.\n"
+  remarks: "\n<p>This method should not throw exceptions. It is recommended that, in case of an error, the error is\nlogged and the closing process is continued for the rest of the closing actions. In other words, the method\nshould close the library state as completely as possible.</p>\n<p>This method will be called even if the initialization process of the library state has failed. This\nmeans that the method should prepare for such situation where the library state is not initialized at all\nor initialized only partially.</p>\n"
+  example: []
+  syntax:
+    content: bool Close(bool final)
+    parameters:
+    - id: final
+      type: System.Boolean
+      description: >-
+        Specifies whether this call is the final call on this method. If true, the current
+
+        library state instance is the last instance, and the application is shutting down.
+    return:
+      type: System.Boolean
+      description: >-
+        Returns true if the library state was closed without errors, or false if at least one error
+
+        occurred in the closing process.
+    content.vb: Function Close(final As Boolean) As Boolean
+  overload: Juhta.Net.LibraryManagement.IClosableLibraryState.Close*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IClosableLibraryState.Close*
+  commentId: Overload:Juhta.Net.LibraryManagement.IClosableLibraryState.Close
+  isExternal: false
+  name: Close
+  nameWithType: IClosableLibraryState.Close
+  fullName: Juhta.Net.LibraryManagement.IClosableLibraryState.Close
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

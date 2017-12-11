@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  id: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  - Juhta.Net.LibraryManagement.IClosableLibrary
+  - Juhta.Net.LibraryManagement.IClosableLibraryState
+  - Juhta.Net.LibraryManagement.IConfigurableLibrary
+  - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  - Juhta.Net.LibraryManagement.IDefaultLibraryState
+  - Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  - Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  - Juhta.Net.LibraryManagement.IDynamicLibrary
+  - Juhta.Net.LibraryManagement.IInitializableLibrary
+  - Juhta.Net.LibraryManagement.ILibraryHandle
+  - Juhta.Net.LibraryManagement.ILibraryState
+  - Juhta.Net.LibraryManagement.IStartableLibrary
+  - Juhta.Net.LibraryManagement.IStartableLibraryState
+  - Juhta.Net.LibraryManagement.LibraryHandleBase
+  - Juhta.Net.LibraryManagement.LibraryInitializationException
+  - Juhta.Net.LibraryManagement.LibraryStateException
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+  type: Namespace
+  assemblies:
+  - Juhta.Net
+references:
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  isExternal: false
+  name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+    name: DynamicLibraryContext
+    nameWithType: DynamicLibraryContext
+    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDynamicLibrary
+    nameWithType: TDynamicLibrary
+    fullName: TDynamicLibrary
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TLibraryState
+    nameWithType: TLibraryState
+    fullName: TLibraryState
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+    name: DynamicLibraryContext
+    nameWithType: DynamicLibraryContext
+    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDynamicLibrary
+    nameWithType: TDynamicLibrary
+    fullName: TDynamicLibrary
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TLibraryState
+    nameWithType: TLibraryState
+    fullName: TLibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  isExternal: false
+  name: DynamicLibraryHandleBase
+  nameWithType: DynamicLibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+- uid: Juhta.Net.LibraryManagement.IClosableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IClosableLibrary
+  isExternal: false
+  name: IClosableLibrary
+  nameWithType: IClosableLibrary
+  fullName: Juhta.Net.LibraryManagement.IClosableLibrary
+- uid: Juhta.Net.LibraryManagement.IClosableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IClosableLibraryState
+  isExternal: false
+  name: IClosableLibraryState
+  nameWithType: IClosableLibraryState
+  fullName: Juhta.Net.LibraryManagement.IClosableLibraryState
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibrary
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IConfigurableLibrary
+  nameWithType: IConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  isExternal: false
+  name: ICustomXmlConfigurableLibrary
+  nameWithType: ICustomXmlConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ICustomXmlConfigurableLibraryState
+  nameWithType: ICustomXmlConfigurableLibraryState
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+- uid: Juhta.Net.LibraryManagement.IDefaultLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IDefaultLibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDefaultLibraryState
+  nameWithType: IDefaultLibraryState
+  fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  isExternal: false
+  name: IDynamicCustomXmlConfigurableLibrary
+  nameWithType: IDynamicCustomXmlConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  isExternal: false
+  name: IDynamicInitializableLibrary
+  nameWithType: IDynamicInitializableLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDynamicLibrary
+  nameWithType: IDynamicLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
+- uid: Juhta.Net.LibraryManagement.IInitializableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IInitializableLibrary
+  isExternal: false
+  name: IInitializableLibrary
+  nameWithType: IInitializableLibrary
+  fullName: Juhta.Net.LibraryManagement.IInitializableLibrary
+- uid: Juhta.Net.LibraryManagement.ILibraryHandle
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryHandle
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ILibraryHandle
+  nameWithType: ILibraryHandle
+  fullName: Juhta.Net.LibraryManagement.ILibraryHandle
+- uid: Juhta.Net.LibraryManagement.ILibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ILibraryState
+  nameWithType: ILibraryState
+  fullName: Juhta.Net.LibraryManagement.ILibraryState
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IStartableLibrary
+  isExternal: false
+  name: IStartableLibrary
+  nameWithType: IStartableLibrary
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary
+- uid: Juhta.Net.LibraryManagement.IStartableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IStartableLibraryState
+  isExternal: false
+  name: IStartableLibraryState
+  nameWithType: IStartableLibraryState
+  fullName: Juhta.Net.LibraryManagement.IStartableLibraryState
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase
+  commentId: T:Juhta.Net.LibraryManagement.LibraryHandleBase
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: LibraryHandleBase
+  nameWithType: LibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase
+- uid: Juhta.Net.LibraryManagement.LibraryInitializationException
+  commentId: T:Juhta.Net.LibraryManagement.LibraryInitializationException
+  isExternal: false
+  name: LibraryInitializationException
+  nameWithType: LibraryInitializationException
+  fullName: Juhta.Net.LibraryManagement.LibraryInitializationException
+- uid: Juhta.Net.LibraryManagement.LibraryStateException
+  commentId: T:Juhta.Net.LibraryManagement.LibraryStateException
+  isExternal: false
+  name: LibraryStateException
+  nameWithType: LibraryStateException
+  fullName: Juhta.Net.LibraryManagement.LibraryStateException
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement

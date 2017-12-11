@@ -1,0 +1,601 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.ObjectQueue`1
+  commentId: T:Juhta.Net.Common.ObjectQueue`1
+  id: ObjectQueue`1
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.ObjectQueue`1.#ctor
+  - Juhta.Net.Common.ObjectQueue`1.Close
+  - Juhta.Net.Common.ObjectQueue`1.Count
+  - Juhta.Net.Common.ObjectQueue`1.GetObject
+  - Juhta.Net.Common.ObjectQueue`1.PutObject(`0)
+  langs:
+  - csharp
+  - vb
+  name: ObjectQueue<T>
+  nameWithType: ObjectQueue<T>
+  fullName: Juhta.Net.Common.ObjectQueue<T>
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ObjectQueue
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 20
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nRepresents a first-in, first-out queue for a generic object type. The queue implemented by this class is\nthread-safe, and it also blocks readers in case of an empty queue. This queue has especially been designed to\nact as a work queue in multi-threaded applications.\n"
+  example: []
+  syntax:
+    content: public class ObjectQueue<T>
+    typeParameters:
+    - id: T
+      description: Specifies an object type.
+    content.vb: Public Class ObjectQueue(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: ObjectQueue(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T)
+  name.vb: ObjectQueue(Of T)
+- uid: Juhta.Net.Common.ObjectQueue`1.#ctor
+  commentId: M:Juhta.Net.Common.ObjectQueue`1.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.Common.ObjectQueue`1
+  langs:
+  - csharp
+  - vb
+  name: ObjectQueue()
+  nameWithType: ObjectQueue<T>.ObjectQueue()
+  fullName: Juhta.Net.Common.ObjectQueue<T>.ObjectQueue()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 27
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ObjectQueue()
+    content.vb: Public Sub New
+  overload: Juhta.Net.Common.ObjectQueue`1.#ctor*
+  nameWithType.vb: ObjectQueue(Of T).ObjectQueue()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).ObjectQueue()
+- uid: Juhta.Net.Common.ObjectQueue`1.Close
+  commentId: M:Juhta.Net.Common.ObjectQueue`1.Close
+  id: Close
+  parent: Juhta.Net.Common.ObjectQueue`1
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: ObjectQueue<T>.Close()
+  fullName: Juhta.Net.Common.ObjectQueue<T>.Close()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Close
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 48
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nCloses the object queue specified by this ObjectQueue instance. The operation releases all threads that are\nblocked by the current instance.\n"
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close
+  overload: Juhta.Net.Common.ObjectQueue`1.Close*
+  nameWithType.vb: ObjectQueue(Of T).Close()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).Close()
+- uid: Juhta.Net.Common.ObjectQueue`1.GetObject
+  commentId: M:Juhta.Net.Common.ObjectQueue`1.GetObject
+  id: GetObject
+  parent: Juhta.Net.Common.ObjectQueue`1
+  langs:
+  - csharp
+  - vb
+  name: GetObject()
+  nameWithType: ObjectQueue<T>.GetObject()
+  fullName: Juhta.Net.Common.ObjectQueue<T>.GetObject()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetObject
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 65
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the next object from the object queue specified by this ObjectQueue instance.\n"
+  example: []
+  syntax:
+    content: public T GetObject()
+    return:
+      type: '{T}'
+      description: >-
+        Returns the next instance of <em>T</em> from the queue. The return value is null only, if the queue
+
+        was initially empty and the queue had been closed prior to the call or no object became available before
+
+        the queue was closed during the call.
+    content.vb: Public Function GetObject As T
+  overload: Juhta.Net.Common.ObjectQueue`1.GetObject*
+  nameWithType.vb: ObjectQueue(Of T).GetObject()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).GetObject()
+- uid: Juhta.Net.Common.ObjectQueue`1.PutObject(`0)
+  commentId: M:Juhta.Net.Common.ObjectQueue`1.PutObject(`0)
+  id: PutObject(`0)
+  parent: Juhta.Net.Common.ObjectQueue`1
+  langs:
+  - csharp
+  - vb
+  name: PutObject(T)
+  nameWithType: ObjectQueue<T>.PutObject(T)
+  fullName: Juhta.Net.Common.ObjectQueue<T>.PutObject(T)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: PutObject
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 113
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nPuts an object to the object queue specified by this ObjectQueue instance.\n"
+  example: []
+  syntax:
+    content: public void PutObject(T object)
+    parameters:
+    - id: object
+      type: '{T}'
+      description: Specifies an object.
+    content.vb: Public Sub PutObject(object As T)
+  overload: Juhta.Net.Common.ObjectQueue`1.PutObject*
+  nameWithType.vb: ObjectQueue(Of T).PutObject(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).PutObject(T)
+- uid: Juhta.Net.Common.ObjectQueue`1.Count
+  commentId: P:Juhta.Net.Common.ObjectQueue`1.Count
+  id: Count
+  parent: Juhta.Net.Common.ObjectQueue`1
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ObjectQueue<T>.Count
+  fullName: Juhta.Net.Common.ObjectQueue<T>.Count
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Count
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    startLine: 142
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the number of elements contained in the object queue specified by this ObjectQueue instance.\n"
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: Juhta.Net.Common.ObjectQueue`1.Count*
+  nameWithType.vb: ObjectQueue(Of T).Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).Count
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.ObjectQueue`1.#ctor*
+  commentId: Overload:Juhta.Net.Common.ObjectQueue`1.#ctor
+  isExternal: false
+  name: ObjectQueue
+  nameWithType: ObjectQueue<T>.ObjectQueue
+  fullName: Juhta.Net.Common.ObjectQueue<T>.ObjectQueue
+  nameWithType.vb: ObjectQueue(Of T).ObjectQueue
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).ObjectQueue
+- uid: Juhta.Net.Common.ObjectQueue`1.Close*
+  commentId: Overload:Juhta.Net.Common.ObjectQueue`1.Close
+  isExternal: false
+  name: Close
+  nameWithType: ObjectQueue<T>.Close
+  fullName: Juhta.Net.Common.ObjectQueue<T>.Close
+  nameWithType.vb: ObjectQueue(Of T).Close
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).Close
+- uid: Juhta.Net.Common.ObjectQueue`1.GetObject*
+  commentId: Overload:Juhta.Net.Common.ObjectQueue`1.GetObject
+  isExternal: false
+  name: GetObject
+  nameWithType: ObjectQueue<T>.GetObject
+  fullName: Juhta.Net.Common.ObjectQueue<T>.GetObject
+  nameWithType.vb: ObjectQueue(Of T).GetObject
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).GetObject
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Juhta.Net.Common.ObjectQueue`1.PutObject*
+  commentId: Overload:Juhta.Net.Common.ObjectQueue`1.PutObject
+  isExternal: false
+  name: PutObject
+  nameWithType: ObjectQueue<T>.PutObject
+  fullName: Juhta.Net.Common.ObjectQueue<T>.PutObject
+  nameWithType.vb: ObjectQueue(Of T).PutObject
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).PutObject
+- uid: Juhta.Net.Common.ObjectQueue`1.Count*
+  commentId: Overload:Juhta.Net.Common.ObjectQueue`1.Count
+  isExternal: false
+  name: Count
+  nameWithType: ObjectQueue<T>.Count
+  fullName: Juhta.Net.Common.ObjectQueue<T>.Count
+  nameWithType.vb: ObjectQueue(Of T).Count
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T).Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

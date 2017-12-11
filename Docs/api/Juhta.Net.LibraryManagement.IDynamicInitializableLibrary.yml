@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  id: IDynamicInitializableLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState
+  langs:
+  - csharp
+  - vb
+  name: IDynamicInitializableLibrary
+  nameWithType: IDynamicInitializableLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IDynamicInitializableLibrary
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for dynamic initializable libraries. A library is a dynamic initializable library if it is\ndynamic and its state can be initialized at the runtime.\n"
+  example: []
+  syntax:
+    content: 'public interface IDynamicInitializableLibrary : IDynamicLibrary'
+    content.vb: >-
+      Public Interface IDynamicInitializableLibrary
+
+          Inherits IDynamicLibrary
+  inheritedMembers:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState
+  id: CreateDefaultLibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultLibraryState()
+  nameWithType: IDynamicInitializableLibrary.CreateDefaultLibraryState()
+  fullName: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState()
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateDefaultLibraryState
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nCreates the default state for the library.\n"
+  example: []
+  syntax:
+    content: IDefaultLibraryState CreateDefaultLibraryState()
+    return:
+      type: Juhta.Net.LibraryManagement.IDefaultLibraryState
+      description: >
+        Returns an <xref href="Juhta.Net.LibraryManagement.IDefaultLibraryState" data-throw-if-not-resolved="false"></xref> object containing the default state for the library.
+    content.vb: Function CreateDefaultLibraryState As IDefaultLibraryState
+  overload: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: GoLive(ILibraryState)
+  nameWithType: IDynamicLibrary.GoLive(ILibraryState)
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryState
+  nameWithType: IDynamicLibrary.LibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryStateLock
+  nameWithType: IDynamicLibrary.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDynamicLibrary
+  nameWithType: IDynamicLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
+- uid: Juhta.Net.LibraryManagement.IDefaultLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IDefaultLibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDefaultLibraryState
+  nameWithType: IDefaultLibraryState
+  fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState
+  isExternal: false
+  name: CreateDefaultLibraryState
+  nameWithType: IDynamicInitializableLibrary.CreateDefaultLibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.CreateDefaultLibraryState

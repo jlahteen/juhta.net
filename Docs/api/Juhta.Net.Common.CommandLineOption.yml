@@ -1,0 +1,517 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.CommandLineOption
+  commentId: T:Juhta.Net.Common.CommandLineOption
+  id: CommandLineOption
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.CommandLineOption.Name
+  langs:
+  - csharp
+  - vb
+  name: CommandLineOption
+  nameWithType: CommandLineOption
+  fullName: Juhta.Net.Common.CommandLineOption
+  type: Class
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineOption.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CommandLineOption
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineOption.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDefines a class that represents a command line option. At the command line level, command line options consist\nof a prefix, name and an optional value, which is separated by a name-value separator from the name part.\n"
+  example: []
+  syntax:
+    content: 'public class CommandLineOption : CommandLineArg'
+    content.vb: >-
+      Public Class CommandLineOption
+
+          Inherits CommandLineArg
+  inheritance:
+  - System.Object
+  - Juhta.Net.Common.CommandLineArg
+  inheritedMembers:
+  - Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+  - Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+  - Juhta.Net.Common.CommandLineArg.RawArg
+  - Juhta.Net.Common.CommandLineArg.Value
+  - Juhta.Net.Common.CommandLineArg.m_rawArg
+  - Juhta.Net.Common.CommandLineArg.m_value
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Common.CommandLineOption.Name
+  commentId: P:Juhta.Net.Common.CommandLineOption.Name
+  id: Name
+  parent: Juhta.Net.Common.CommandLineOption
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CommandLineOption.Name
+  fullName: Juhta.Net.Common.CommandLineOption.Name
+  type: Property
+  source:
+    remote:
+      path: Source/Juhta.Net/Common/CommandLineOption.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Name
+    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineOption.cs
+    startLine: 21
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the name of the command line option specified by this CommandLineOption object.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Juhta.Net.Common.CommandLineOption.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.Common.CommandLineArg
+  commentId: T:Juhta.Net.Common.CommandLineArg
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineArg
+  nameWithType: CommandLineArg
+  fullName: Juhta.Net.Common.CommandLineArg
+- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: false
+  name: ValidateValue(IStringValidator)
+  nameWithType: CommandLineArg.ValidateValue(IStringValidator)
+  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+  spec.csharp:
+  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+    name: ValidateValue
+    nameWithType: CommandLineArg.ValidateValue
+    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validation.IStringValidator
+    name: IStringValidator
+    nameWithType: IStringValidator
+    fullName: Juhta.Net.Validation.IStringValidator
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
+    name: ValidateValue
+    nameWithType: CommandLineArg.ValidateValue
+    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validation.IStringValidator
+    name: IStringValidator
+    nameWithType: IStringValidator
+    fullName: Juhta.Net.Validation.IStringValidator
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: true
+  name: ValidateValue(String)
+  nameWithType: CommandLineArg.ValidateValue(String)
+  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+    name: ValidateValue
+    nameWithType: CommandLineArg.ValidateValue
+    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
+    name: ValidateValue
+    nameWithType: CommandLineArg.ValidateValue
+    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.CommandLineArg.RawArg
+  commentId: P:Juhta.Net.Common.CommandLineArg.RawArg
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: false
+  name: RawArg
+  nameWithType: CommandLineArg.RawArg
+  fullName: Juhta.Net.Common.CommandLineArg.RawArg
+- uid: Juhta.Net.Common.CommandLineArg.Value
+  commentId: P:Juhta.Net.Common.CommandLineArg.Value
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: false
+  name: Value
+  nameWithType: CommandLineArg.Value
+  fullName: Juhta.Net.Common.CommandLineArg.Value
+- uid: Juhta.Net.Common.CommandLineArg.m_rawArg
+  commentId: F:Juhta.Net.Common.CommandLineArg.m_rawArg
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: false
+  name: m_rawArg
+  nameWithType: CommandLineArg.m_rawArg
+  fullName: Juhta.Net.Common.CommandLineArg.m_rawArg
+- uid: Juhta.Net.Common.CommandLineArg.m_value
+  commentId: F:Juhta.Net.Common.CommandLineArg.m_value
+  parent: Juhta.Net.Common.CommandLineArg
+  isExternal: false
+  name: m_value
+  nameWithType: CommandLineArg.m_value
+  fullName: Juhta.Net.Common.CommandLineArg.m_value
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.CommandLineOption.Name*
+  commentId: Overload:Juhta.Net.Common.CommandLineOption.Name
+  isExternal: false
+  name: Name
+  nameWithType: CommandLineOption.Name
+  fullName: Juhta.Net.Common.CommandLineOption.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

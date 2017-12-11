@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net
+  commentId: N:Juhta.Net
+  id: Juhta.Net
+  children:
+  - Juhta.Net.Application
+  - Juhta.Net.FrameworkConfig
+  - Juhta.Net.FrameworkInfo
+  - Juhta.Net.Logger
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net
+  nameWithType: Juhta.Net
+  fullName: Juhta.Net
+  type: Namespace
+  assemblies:
+  - Juhta.Net
+references:
+- uid: Juhta.Net.Application
+  commentId: T:Juhta.Net.Application
+  isExternal: false
+  name: Application
+  nameWithType: Application
+  fullName: Juhta.Net.Application
+- uid: Juhta.Net.FrameworkConfig
+  commentId: T:Juhta.Net.FrameworkConfig
+  isExternal: false
+  name: FrameworkConfig
+  nameWithType: FrameworkConfig
+  fullName: Juhta.Net.FrameworkConfig
+- uid: Juhta.Net.FrameworkInfo
+  commentId: T:Juhta.Net.FrameworkInfo
+  isExternal: false
+  name: FrameworkInfo
+  nameWithType: FrameworkInfo
+  fullName: Juhta.Net.FrameworkInfo
+- uid: Juhta.Net.Logger
+  commentId: T:Juhta.Net.Logger
+  isExternal: false
+  name: Logger
+  nameWithType: Logger
+  fullName: Juhta.Net.Logger

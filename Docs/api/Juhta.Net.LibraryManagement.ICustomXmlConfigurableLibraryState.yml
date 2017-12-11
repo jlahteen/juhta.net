@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  id: ICustomXmlConfigurableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize(System.Xml.XmlDocument)
+  langs:
+  - csharp
+  - vb
+  name: ICustomXmlConfigurableLibraryState
+  nameWithType: ICustomXmlConfigurableLibraryState
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  type: Interface
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ICustomXmlConfigurableLibraryState
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for custom XML configurable library states.\n"
+  remarks: Custom XML configurable library states relate to dynamic custom XML configurable libraries.
+  example: []
+  syntax:
+    content: 'public interface ICustomXmlConfigurableLibraryState : ILibraryState'
+    content.vb: >-
+      Public Interface ICustomXmlConfigurableLibraryState
+
+          Inherits ILibraryState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize(System.Xml.XmlDocument)
+  commentId: M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize(System.Xml.XmlDocument)
+  id: Initialize(System.Xml.XmlDocument)
+  parent: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  langs:
+  - csharp
+  - vb
+  name: Initialize(XmlDocument)
+  nameWithType: ICustomXmlConfigurableLibraryState.Initialize(XmlDocument)
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize(System.Xml.XmlDocument)
+  type: Method
+  source:
+    remote:
+      path: Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Initialize
+    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+    startLine: 27
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes the library state based on a specified XML configuration.\n"
+  remarks: >-
+    Initializing a library state means performing all necessary actions on the objects comprising the
+
+    library state so that the state is ready to be set as the effective library state.
+  example: []
+  syntax:
+    content: void Initialize(XmlDocument config)
+    parameters:
+    - id: config
+      type: System.Xml.XmlDocument
+      description: >-
+        Specifies an <xref href="System.Xml.XmlDocument" data-throw-if-not-resolved="false"></xref> object containing an XML configuration for the
+
+        library state.
+    content.vb: Sub Initialize(config As XmlDocument)
+  overload: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: System.Xml.XmlDocument
+  commentId: T:System.Xml.XmlDocument
+  parent: System.Xml
+  isExternal: true
+  name: XmlDocument
+  nameWithType: XmlDocument
+  fullName: System.Xml.XmlDocument
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize*
+  commentId: Overload:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize
+  isExternal: false
+  name: Initialize
+  nameWithType: ICustomXmlConfigurableLibraryState.Initialize
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.Initialize
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: false
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml

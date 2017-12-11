@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  id: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.AlertMessage
+  - Juhta.Net.Common.AssemblyClassFileUri
+  - Juhta.Net.Common.AssemblyClassUri
+  - Juhta.Net.Common.AssemblyNotLoadedException
+  - Juhta.Net.Common.CommandLineArg
+  - Juhta.Net.Common.CommandLineArgException
+  - Juhta.Net.Common.CommandLineArgsParser
+  - Juhta.Net.Common.CommandLineOption
+  - Juhta.Net.Common.CommandLineParam
+  - Juhta.Net.Common.CommonMessages
+  - Juhta.Net.Common.ConfigException
+  - Juhta.Net.Common.ConsumerThread`1
+  - Juhta.Net.Common.DiagnosticMessage
+  - Juhta.Net.Common.DiagnosticMessageFactory
+  - Juhta.Net.Common.DiagnosticMessageIdBase
+  - Juhta.Net.Common.DiagnosticMessageType
+  - Juhta.Net.Common.ErrorMessage
+  - Juhta.Net.Common.FileLogger
+  - Juhta.Net.Common.ILogger
+  - Juhta.Net.Common.InformationMessage
+  - Juhta.Net.Common.InterfaceNotSupportedException
+  - Juhta.Net.Common.InternalException
+  - Juhta.Net.Common.InvalidConfigFileException
+  - Juhta.Net.Common.InvalidConfigValueException
+  - Juhta.Net.Common.ObjectFactory
+  - Juhta.Net.Common.ObjectQueue`1
+  - Juhta.Net.Common.RegularExpressions
+  - Juhta.Net.Common.Singleton`1
+  - Juhta.Net.Common.SymmetricCipher
+  - Juhta.Net.Common.TimestampFactory
+  - Juhta.Net.Common.UnexpectedException
+  - Juhta.Net.Common.UnimplementedCodeBranchException
+  - Juhta.Net.Common.Utf8FileWriter
+  - Juhta.Net.Common.WarningMessage
+  - Juhta.Net.Common.XmlValidator
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+  type: Namespace
+  assemblies:
+  - Juhta.Net
+references:
+- uid: Juhta.Net.Common.AlertMessage
+  commentId: T:Juhta.Net.Common.AlertMessage
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: AlertMessage
+  nameWithType: AlertMessage
+  fullName: Juhta.Net.Common.AlertMessage
+- uid: Juhta.Net.Common.AssemblyClassFileUri
+  commentId: T:Juhta.Net.Common.AssemblyClassFileUri
+  isExternal: false
+  name: AssemblyClassFileUri
+  nameWithType: AssemblyClassFileUri
+  fullName: Juhta.Net.Common.AssemblyClassFileUri
+- uid: Juhta.Net.Common.AssemblyClassUri
+  commentId: T:Juhta.Net.Common.AssemblyClassUri
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: AssemblyClassUri
+  nameWithType: AssemblyClassUri
+  fullName: Juhta.Net.Common.AssemblyClassUri
+- uid: Juhta.Net.Common.AssemblyNotLoadedException
+  commentId: T:Juhta.Net.Common.AssemblyNotLoadedException
+  isExternal: false
+  name: AssemblyNotLoadedException
+  nameWithType: AssemblyNotLoadedException
+  fullName: Juhta.Net.Common.AssemblyNotLoadedException
+- uid: Juhta.Net.Common.CommandLineArg
+  commentId: T:Juhta.Net.Common.CommandLineArg
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineArg
+  nameWithType: CommandLineArg
+  fullName: Juhta.Net.Common.CommandLineArg
+- uid: Juhta.Net.Common.CommandLineArgException
+  commentId: T:Juhta.Net.Common.CommandLineArgException
+  isExternal: false
+  name: CommandLineArgException
+  nameWithType: CommandLineArgException
+  fullName: Juhta.Net.Common.CommandLineArgException
+- uid: Juhta.Net.Common.CommandLineArgsParser
+  commentId: T:Juhta.Net.Common.CommandLineArgsParser
+  isExternal: false
+  name: CommandLineArgsParser
+  nameWithType: CommandLineArgsParser
+  fullName: Juhta.Net.Common.CommandLineArgsParser
+- uid: Juhta.Net.Common.CommandLineOption
+  commentId: T:Juhta.Net.Common.CommandLineOption
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineOption
+  nameWithType: CommandLineOption
+  fullName: Juhta.Net.Common.CommandLineOption
+- uid: Juhta.Net.Common.CommandLineParam
+  commentId: T:Juhta.Net.Common.CommandLineParam
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: CommandLineParam
+  nameWithType: CommandLineParam
+  fullName: Juhta.Net.Common.CommandLineParam
+- uid: Juhta.Net.Common.CommonMessages
+  commentId: T:Juhta.Net.Common.CommonMessages
+  isExternal: false
+  name: CommonMessages
+  nameWithType: CommonMessages
+  fullName: Juhta.Net.Common.CommonMessages
+- uid: Juhta.Net.Common.ConfigException
+  commentId: T:Juhta.Net.Common.ConfigException
+  isExternal: false
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Juhta.Net.Common.ConfigException
+- uid: Juhta.Net.Common.ConsumerThread`1
+  commentId: T:Juhta.Net.Common.ConsumerThread`1
+  isExternal: false
+  name: ConsumerThread<T>
+  nameWithType: ConsumerThread<T>
+  fullName: Juhta.Net.Common.ConsumerThread<T>
+  nameWithType.vb: ConsumerThread(Of T)
+  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T)
+  name.vb: ConsumerThread(Of T)
+  spec.csharp:
+  - uid: Juhta.Net.Common.ConsumerThread`1
+    name: ConsumerThread
+    nameWithType: ConsumerThread
+    fullName: Juhta.Net.Common.ConsumerThread
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Common.ConsumerThread`1
+    name: ConsumerThread
+    nameWithType: ConsumerThread
+    fullName: Juhta.Net.Common.ConsumerThread
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.DiagnosticMessage
+  commentId: T:Juhta.Net.Common.DiagnosticMessage
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: DiagnosticMessage
+  nameWithType: DiagnosticMessage
+  fullName: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Common.DiagnosticMessageFactory
+  commentId: T:Juhta.Net.Common.DiagnosticMessageFactory
+  isExternal: false
+  name: DiagnosticMessageFactory
+  nameWithType: DiagnosticMessageFactory
+  fullName: Juhta.Net.Common.DiagnosticMessageFactory
+- uid: Juhta.Net.Common.ErrorMessage
+  commentId: T:Juhta.Net.Common.ErrorMessage
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: ErrorMessage
+  fullName: Juhta.Net.Common.ErrorMessage
+- uid: Juhta.Net.Common.FileLogger
+  commentId: T:Juhta.Net.Common.FileLogger
+  isExternal: false
+  name: FileLogger
+  nameWithType: FileLogger
+  fullName: Juhta.Net.Common.FileLogger
+- uid: Juhta.Net.Common.ILogger
+  commentId: T:Juhta.Net.Common.ILogger
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Common.InformationMessage
+  commentId: T:Juhta.Net.Common.InformationMessage
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: InformationMessage
+  nameWithType: InformationMessage
+  fullName: Juhta.Net.Common.InformationMessage
+- uid: Juhta.Net.Common.InterfaceNotSupportedException
+  commentId: T:Juhta.Net.Common.InterfaceNotSupportedException
+  isExternal: false
+  name: InterfaceNotSupportedException
+  nameWithType: InterfaceNotSupportedException
+  fullName: Juhta.Net.Common.InterfaceNotSupportedException
+- uid: Juhta.Net.Common.InternalException
+  commentId: T:Juhta.Net.Common.InternalException
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: InternalException
+  nameWithType: InternalException
+  fullName: Juhta.Net.Common.InternalException
+- uid: Juhta.Net.Common.InvalidConfigFileException
+  commentId: T:Juhta.Net.Common.InvalidConfigFileException
+  isExternal: false
+  name: InvalidConfigFileException
+  nameWithType: InvalidConfigFileException
+  fullName: Juhta.Net.Common.InvalidConfigFileException
+- uid: Juhta.Net.Common.InvalidConfigValueException
+  commentId: T:Juhta.Net.Common.InvalidConfigValueException
+  isExternal: false
+  name: InvalidConfigValueException
+  nameWithType: InvalidConfigValueException
+  fullName: Juhta.Net.Common.InvalidConfigValueException
+- uid: Juhta.Net.Common.ObjectFactory
+  commentId: T:Juhta.Net.Common.ObjectFactory
+  isExternal: false
+  name: ObjectFactory
+  nameWithType: ObjectFactory
+  fullName: Juhta.Net.Common.ObjectFactory
+- uid: Juhta.Net.Common.ObjectQueue`1
+  commentId: T:Juhta.Net.Common.ObjectQueue`1
+  isExternal: false
+  name: ObjectQueue<T>
+  nameWithType: ObjectQueue<T>
+  fullName: Juhta.Net.Common.ObjectQueue<T>
+  nameWithType.vb: ObjectQueue(Of T)
+  fullName.vb: Juhta.Net.Common.ObjectQueue(Of T)
+  name.vb: ObjectQueue(Of T)
+  spec.csharp:
+  - uid: Juhta.Net.Common.ObjectQueue`1
+    name: ObjectQueue
+    nameWithType: ObjectQueue
+    fullName: Juhta.Net.Common.ObjectQueue
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Common.ObjectQueue`1
+    name: ObjectQueue
+    nameWithType: ObjectQueue
+    fullName: Juhta.Net.Common.ObjectQueue
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.RegularExpressions
+  commentId: T:Juhta.Net.Common.RegularExpressions
+  isExternal: false
+  name: RegularExpressions
+  nameWithType: RegularExpressions
+  fullName: Juhta.Net.Common.RegularExpressions
+- uid: Juhta.Net.Common.Singleton`1
+  commentId: T:Juhta.Net.Common.Singleton`1
+  isExternal: false
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: Juhta.Net.Common.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: Juhta.Net.Common.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: Juhta.Net.Common.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Juhta.Net.Common.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Common.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Juhta.Net.Common.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Common.SymmetricCipher
+  commentId: T:Juhta.Net.Common.SymmetricCipher
+  isExternal: false
+  name: SymmetricCipher
+  nameWithType: SymmetricCipher
+  fullName: Juhta.Net.Common.SymmetricCipher
+- uid: Juhta.Net.Common.TimestampFactory
+  commentId: T:Juhta.Net.Common.TimestampFactory
+  isExternal: false
+  name: TimestampFactory
+  nameWithType: TimestampFactory
+  fullName: Juhta.Net.Common.TimestampFactory
+- uid: Juhta.Net.Common.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Common.DiagnosticMessageIdBase
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: DiagnosticMessageIdBase
+  nameWithType: DiagnosticMessageIdBase
+  fullName: Juhta.Net.Common.DiagnosticMessageIdBase
+- uid: Juhta.Net.Common.DiagnosticMessageType
+  commentId: T:Juhta.Net.Common.DiagnosticMessageType
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: DiagnosticMessageType
+  nameWithType: DiagnosticMessageType
+  fullName: Juhta.Net.Common.DiagnosticMessageType
+- uid: Juhta.Net.Common.UnexpectedException
+  commentId: T:Juhta.Net.Common.UnexpectedException
+  isExternal: false
+  name: UnexpectedException
+  nameWithType: UnexpectedException
+  fullName: Juhta.Net.Common.UnexpectedException
+- uid: Juhta.Net.Common.UnimplementedCodeBranchException
+  commentId: T:Juhta.Net.Common.UnimplementedCodeBranchException
+  isExternal: false
+  name: UnimplementedCodeBranchException
+  nameWithType: UnimplementedCodeBranchException
+  fullName: Juhta.Net.Common.UnimplementedCodeBranchException
+- uid: Juhta.Net.Common.Utf8FileWriter
+  commentId: T:Juhta.Net.Common.Utf8FileWriter
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: Utf8FileWriter
+  nameWithType: Utf8FileWriter
+  fullName: Juhta.Net.Common.Utf8FileWriter
+- uid: Juhta.Net.Common.WarningMessage
+  commentId: T:Juhta.Net.Common.WarningMessage
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: WarningMessage
+  nameWithType: WarningMessage
+  fullName: Juhta.Net.Common.WarningMessage
+- uid: Juhta.Net.Common.XmlValidator
+  commentId: T:Juhta.Net.Common.XmlValidator
+  isExternal: false
+  name: XmlValidator
+  nameWithType: XmlValidator
+  fullName: Juhta.Net.Common.XmlValidator
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
