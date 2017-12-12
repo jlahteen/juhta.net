@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\Juhta.Net\Juhta.Net.csproj" />
+    <ProjectReference Include="..\..\src\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 
 </Project>
