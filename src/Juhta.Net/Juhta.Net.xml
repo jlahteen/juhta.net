@@ -2152,6 +2152,13 @@
             <param name="assembly">Specifies the current assembly.</param>
             <returns>Returns the value of the Product attribute, or null, if the attibute was not found.</returns>
         </member>
+        <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)">
+            <summary>
+            Gets the product version associated with the current assembly.
+            </summary>
+            <param name="assembly">Specifies the current assembly.</param>
+            <returns>Returns the product version associated with the current assembly.</returns>
+        </member>
         <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)">
             <summary>
             Gets the value of the current assembly's Title attribute.
