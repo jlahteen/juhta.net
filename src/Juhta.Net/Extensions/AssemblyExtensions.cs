@@ -7,6 +7,7 @@
 //
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
@@ -133,6 +134,18 @@ namespace Juhta.Net.Extensions
                 return(productAttribute.Product);
             else
                 return(null);
+        }
+
+        /// <summary>
+        /// Gets the product version associated with the current assembly.
+        /// </summary>
+        /// <param name="assembly">Specifies the current assembly.</param>
+        /// <returns>Returns the product version associated with the current assembly.</returns>
+        public static string GetProductVersion(this Assembly assembly)
+        {
+            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+
+            return(fileVersionInfo.ProductVersion);
         }
 
         /// <summary>
