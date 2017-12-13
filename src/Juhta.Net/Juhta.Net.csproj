@@ -1,18 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <DocumentationFile>..\..\Docs\Juhta.Net.xml</DocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <DocumentationFile>Juhta.Net.xml</DocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Juha Lähteenmäki</Authors>
-    <Description>This library contains the core types, classes and interfaces of Juhta.NET.</Description>
-    <Copyright>Juha Lähteenmäki</Copyright>
+    <Title>Juhta.Net</Title>
+    <Description>Juhta.Net is the core library of Juhta.NET, an open source and general purpose app framework built on the top of .NET Core 2. Juhta.Net contains types, interfaces, classes etc. that are shared between all libraries of Juhta.NET. Juhta.Net is also a standalone library that can be used on its own to boost up app development on .NET Core 2.</Description>
+    <Copyright>Copyright © 2017 Juha Lähteenmäki</Copyright>
     <RepositoryType>Git</RepositoryType>
-    <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/license.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/jlahteen/juhta.net</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/jlahteen/juhta.net/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>http://juhta.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jlahteen/juhta.net</RepositoryUrl>
     <Company />
     <ProductName>Juhta.NET</ProductName>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Title>Juhta.Net</Title>
+    <Product>Juhta.NET</Product>
+    <Version>1.0.0-beta</Version>
+    <PackageTags>dotnetcore</PackageTags>
+    <NeutralLanguage></NeutralLanguage>
+    <PackageReleaseNotes>Beta version, do not use in production. Breaking changes possible.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Common\CommonConfig.xsd" />
