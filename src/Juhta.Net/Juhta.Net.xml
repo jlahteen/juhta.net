@@ -2901,14 +2901,42 @@
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibrary">
             <summary>
+            Defines an interface for such configurable libraries whose configuration is done with a JSON, XML or INI
+            configuration.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Initializes the library based on a specified configuration.
+            </summary>
+            <param name="config">Specifies an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing a configuration for
+            the library.</param>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase">
+            <summary>
             Defines a base interface for configurable libraries. A library is configurable if it requires specific startup
             operations and those operations need configuration.
             </summary>
         </member>
-        <member name="P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName">
+        <member name="P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName">
             <summary>
             Gets the name of the configuration file.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibraryState">
+            <summary>
+            Defines an interface for configurable library states.
+            </summary>
+            <remarks>Configurable library states relate to dynamic configurable libraries.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Initializes the library state based on a specified configuration.
+            </summary>
+            <param name="config">Specifies an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing a configuration for
+            the library state.</param>
+            <remarks>Initializing a library state means performing all necessary actions on the objects comprising the
+            library state so that the state is ready to be set as the effective library state.</remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary">
             <summary>
@@ -2962,6 +2990,18 @@
             <para>Default library states don't require any configuration for initialization.</para>
             </remarks>
         </member>
+        <member name="T:Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary">
+            <summary>
+            Defines an interface for dynamic configurable libraries. A library is a dynamic configurable library if it is
+            dynamic, configurable and the configuration is done with a JSON, XML or INI configuration.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary.CreateLibraryState">
+            <summary>
+            Creates an uninitialized library state.
+            </summary>
+            <returns>Returns an uninitialized <see cref="T:Juhta.Net.LibraryManagement.IConfigurableLibraryState"/> object.</returns>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary">
             <summary>
             Defines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML
@@ -2995,18 +3035,6 @@
             </summary>
             <returns>Returns an <see cref="T:Juhta.Net.LibraryManagement.IDefaultLibraryState"/> object containing the default state for the library.
             </returns>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.IDynamicJsonConfigurableLibrary">
-            <summary>
-            Defines an interface for dynamic JSON configurable libraries. A library is a dynamic JSON configurable library
-            if it is dynamic, configurable and the configuration is done with a JSON configuration.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IDynamicJsonConfigurableLibrary.CreateLibraryState">
-            <summary>
-            Creates an uninitialized library state.
-            </summary>
-            <returns>Returns an uninitialized <see cref="T:Juhta.Net.LibraryManagement.IJsonConfigurableLibraryState"/> object.</returns>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IDynamicLibrary">
             <summary>
@@ -3047,34 +3075,6 @@
             Initializes the library, that is, performs required initialization operations to make library services
             properly available.
             </summary>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.IJsonConfigurableLibrary">
-            <summary>
-            Defines an interface for JSON configurable libraries. A library is JSON configurable if it is configurable and
-            the configuration is done with a JSON configuration.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IJsonConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)">
-            <summary>
-            Initializes the library based on a specified configuration.
-            </summary>
-            <param name="config">Specifies an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing a configuration for
-            the library.</param>
-        </member>
-        <member name="T:Juhta.Net.LibraryManagement.IJsonConfigurableLibraryState">
-            <summary>
-            Defines an interface for JSON configurable library states.
-            </summary>
-            <remarks>JSON configurable library states relate to dynamic JSON configurable libraries.</remarks>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.IJsonConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)">
-            <summary>
-            Initializes the library state based on a specified configuration.
-            </summary>
-            <param name="config">Specifies an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing a configuration for
-            the library state.</param>
-            <remarks>Initializing a library state means performing all necessary actions on the objects comprising the
-            library state so that the state is ready to be set as the effective library state.</remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.ILibraryHandle">
             <summary>
@@ -3325,6 +3325,15 @@
             <returns>Returns a library state object that holds the default state for the specified library.</returns>
             <remarks>The default library state will be returned as initialized.</remarks>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary,System.String)">
+            <summary>
+            Creates an initialized library state for a dynamic configurable library based on a specified configuration
+            file.
+            </summary>
+            <param name="library">Specifies a dynamic configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
             <summary>
             Creates an initialized library state for a dynamic custom XML configurable library based on an XML
@@ -3349,6 +3358,13 @@
             <param name="libraryInterface">Specifies a library interface object.</param>
             <returns>Returns the file name of the library specified by the given library interface object.</returns>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeConfigurableLibrary(Juhta.Net.LibraryManagement.IConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a configurable library based on a specified configuration.
+            </summary>
+            <param name="library">Specifies a configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
             <summary>
             Initializes a custom XML configurable library based on an XML configuration.
@@ -3356,12 +3372,12 @@
             <param name="library">Specifies a custom XML configurable library.</param>
             <param name="configFilePath">Specifies an XML configuration file path.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeJsonConfigurableLibrary(Juhta.Net.LibraryManagement.IJsonConfigurableLibrary,System.String)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeDynamicConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary,System.String)">
             <summary>
-            Initializes a JSON configurable library based on a JSON configuration.
+            Initializes a dynamic configurable library based on a specified configuration.
             </summary>
-            <param name="library">Specifies a JSON configurable library.</param>
-            <param name="configFilePath">Specifies a JSON configuration file path.</param>
+            <param name="library">Specifies a dynamic configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeDynamicCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
             <summary>
@@ -3369,13 +3385,6 @@
             </summary>
             <param name="library">Specifies a dynamic custom XML configurable library.</param>
             <param name="configFilePath">Specifies an XML configuration file path.</param>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeDynamicJsonConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicJsonConfigurableLibrary,System.String)">
-            <summary>
-            Initializes a dynamic JSON configurable library based on a JSON configuration.
-            </summary>
-            <param name="library">Specifies a dynamic JSON configurable library.</param>
-            <param name="configFilePath">Specifies a JSON configuration file path.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
@@ -3400,6 +3409,14 @@
             will be ignored.</param>
             <param name="libraryFileName">Specifies the file name of a library to which the XML schemas relate.</param>
             <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated XML configuration.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadConfigFile(System.String)">
+            <summary>
+            Loads a specified configuration file. The type of the configuration file must be .json, .xml or .ini.
+            </summary>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+            <returns>Returns an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing the settings defined in the
+            specified configuration file.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.OnConfigFileCreatedOrChanged(System.Object,System.IO.FileSystemEventArgs)">
             <summary>
@@ -3574,7 +3591,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error009">
             <summary>
-            Free for the future use.
+            Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml
+            and .ini.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error010">

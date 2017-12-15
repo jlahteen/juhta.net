@@ -70,12 +70,11 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error008 = MessageFactory.CreateErrorMessage("Dynamic library context could not be created because no dynamic library was found with the type '{0}'.");
 
-        // NOTE: Message ID 9 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml
+        /// and .ini.
         /// </summary>
-        internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml and .ini.");
 
         // NOTE: Message ID 10 is free
 

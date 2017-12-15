@@ -380,6 +380,27 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Creates an initialized library state for a dynamic configurable library based on a specified configuration
+        /// file.
+        /// </summary>
+        /// <param name="library">Specifies a dynamic configurable library.</param>
+        /// <param name="configFilePath">Specifies a configuration file path.</param>
+        /// <returns>Returns the created and initialized <see cref="ILibraryState"/> object.</returns>
+        private ILibraryState CreateLibraryState(IDynamicConfigurableLibrary library, string configFilePath)
+        {
+            IConfigurationRoot config;
+            IConfigurableLibraryState libraryState;
+
+            config = LoadConfigFile(configFilePath);
+
+            libraryState = library.CreateLibraryState();
+
+            libraryState.Initialize(config);
+
+            return(libraryState);
+        }
+
+        /// <summary>
         /// Creates an initialized library state for a dynamic custom XML configurable library based on an XML
         /// configuration file.
         /// </summary>
@@ -408,8 +429,12 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns the created and initialized <see cref="ILibraryState"/> object.</returns>
         private ILibraryState CreateLibraryState(IDynamicLibrary library, string configFilePath)
         {
+            // Case dynamic configurable library
+            if (library is IDynamicConfigurableLibrary)
+                return(CreateLibraryState((IDynamicConfigurableLibrary)library, configFilePath));
+
             // Case dynamic custom XML configurable library
-            if (library is IDynamicCustomXmlConfigurableLibrary)
+            else if (library is IDynamicCustomXmlConfigurableLibrary)
                 return(CreateLibraryState((IDynamicCustomXmlConfigurableLibrary)library, configFilePath));
 
             // Add other dynamic library types here
@@ -441,6 +466,20 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Initializes a configurable library based on a specified configuration.
+        /// </summary>
+        /// <param name="library">Specifies a configurable library.</param>
+        /// <param name="configFilePath">Specifies a configuration file path.</param>
+        private void InitializeConfigurableLibrary(IConfigurableLibrary library, string configFilePath)
+        {
+            IConfigurationRoot config;
+
+            config = LoadConfigFile(configFilePath);
+
+            library.InitializeLibrary(config);
+        }
+
+        /// <summary>
         /// Initializes a custom XML configurable library based on an XML configuration.
         /// </summary>
         /// <param name="library">Specifies a custom XML configurable library.</param>
@@ -455,18 +494,13 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Initializes a JSON configurable library based on a JSON configuration.
+        /// Initializes a dynamic configurable library based on a specified configuration.
         /// </summary>
-        /// <param name="library">Specifies a JSON configurable library.</param>
-        /// <param name="configFilePath">Specifies a JSON configuration file path.</param>
-        private void InitializeJsonConfigurableLibrary(IJsonConfigurableLibrary library, string configFilePath)
+        /// <param name="library">Specifies a dynamic configurable library.</param>
+        /// <param name="configFilePath">Specifies a configuration file path.</param>
+        private void InitializeDynamicConfigurableLibrary(IDynamicConfigurableLibrary library, string configFilePath)
         {
-            var configBuilder = new ConfigurationBuilder()
-                .AddJsonFile(configFilePath);
-
-            var config = configBuilder.Build();
-
-            library.InitializeLibrary(config);
+            library.LibraryState = CreateLibraryState(library, configFilePath);
         }
 
         /// <summary>
@@ -480,23 +514,13 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Initializes a dynamic JSON configurable library based on a JSON configuration.
-        /// </summary>
-        /// <param name="library">Specifies a dynamic JSON configurable library.</param>
-        /// <param name="configFilePath">Specifies a JSON configuration file path.</param>
-        private void InitializeDynamicJsonConfigurableLibrary(IDynamicJsonConfigurableLibrary library, string configFilePath)
-        {
-            library.LibraryState = CreateLibraryState(library, configFilePath);
-        }
-
-        /// <summary>
         /// Initializes the library specified by a library handle.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
         private void InitializeLibrary(ILibraryHandle libraryHandle)
         {
             bool requiresConfigFile;
-            IConfigurableLibrary configurableLibrary;
+            IConfigurableLibraryBase configurableLibrary;
             string configFilePath;
             List<IDynamicLibrary> dynamicLibraries;
 
@@ -519,16 +543,16 @@ namespace Juhta.Net.LibraryManagement
 
                 // Initialize the library if necessary
 
-                if (libraryHandle is IInitializableLibrary || libraryHandle is IConfigurableLibrary)
+                if (libraryHandle is IInitializableLibrary || libraryHandle is IConfigurableLibraryBase)
                 {
                     // Check if the library requires a configuration file
                     requiresConfigFile = !(libraryHandle is IInitializableLibrary);
 
-                    if (libraryHandle is IConfigurableLibrary)
+                    if (libraryHandle is IConfigurableLibraryBase)
                     {
                         // The library is configurable
 
-                        configurableLibrary = (IConfigurableLibrary)libraryHandle;
+                        configurableLibrary = (IConfigurableLibraryBase)libraryHandle;
 
                         configFilePath = m_application.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
 
@@ -538,17 +562,17 @@ namespace Juhta.Net.LibraryManagement
 
                             // Initialize the library based on the configuration file
 
-                            if (libraryHandle is IDynamicCustomXmlConfigurableLibrary)
+                            if (libraryHandle is IDynamicConfigurableLibrary)
+                                InitializeDynamicConfigurableLibrary((IDynamicConfigurableLibrary)libraryHandle, configFilePath);
+
+                            else if (libraryHandle is IConfigurableLibrary)
+                                InitializeConfigurableLibrary((IConfigurableLibrary)libraryHandle, configFilePath);
+
+                            else if (libraryHandle is IDynamicCustomXmlConfigurableLibrary)
                                 InitializeDynamicCustomXmlConfigurableLibrary((IDynamicCustomXmlConfigurableLibrary)libraryHandle, configFilePath);
 
                             else if (libraryHandle is ICustomXmlConfigurableLibrary)
                                 InitializeCustomXmlConfigurableLibrary((ICustomXmlConfigurableLibrary)libraryHandle, configFilePath);
-
-                            else if (libraryHandle is IDynamicJsonConfigurableLibrary)
-                                InitializeDynamicJsonConfigurableLibrary((IDynamicJsonConfigurableLibrary)libraryHandle, configFilePath);
-
-                            else if (libraryHandle is IJsonConfigurableLibrary)
-                                InitializeJsonConfigurableLibrary((IJsonConfigurableLibrary)libraryHandle, configFilePath);
 
                             // Add other configurable library types here
                             // ...
@@ -654,6 +678,34 @@ namespace Juhta.Net.LibraryManagement
             {
                 throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, libraryFileName), ex);
             }
+        }
+
+        /// <summary>
+        /// Loads a specified configuration file. The type of the configuration file must be .json, .xml or .ini.
+        /// </summary>
+        /// <param name="configFilePath">Specifies a configuration file path.</param>
+        /// <returns>Returns an <see cref="IConfigurationRoot"/> object containing the settings defined in the
+        /// specified configuration file.</returns>
+        private static IConfigurationRoot LoadConfigFile(string configFilePath)
+        {
+            IConfigurationBuilder configBuilder;
+
+            if (Path.GetExtension(configFilePath).ToLower() == "json")
+                configBuilder = new ConfigurationBuilder()
+                    .AddJsonFile(configFilePath);
+
+            else if (Path.GetExtension(configFilePath).ToLower() == "xml")
+                configBuilder = new ConfigurationBuilder()
+                    .AddXmlFile(configFilePath);
+
+            else if (Path.GetExtension(configFilePath).ToLower() == "ini")
+                configBuilder = new ConfigurationBuilder()
+                    .AddIniFile(configFilePath);
+
+            else
+                throw new ArgumentException(LibraryMessages.Error009.FormatMessage(configFilePath));
+
+            return(configBuilder.Build());
         }
 
         /// <summary>
