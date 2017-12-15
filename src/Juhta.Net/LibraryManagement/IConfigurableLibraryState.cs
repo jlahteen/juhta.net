@@ -11,10 +11,10 @@ using Microsoft.Extensions.Configuration;
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// Defines an interface for JSON configurable library states.
+    /// Defines an interface for configurable library states.
     /// </summary>
-    /// <remarks>JSON configurable library states relate to dynamic JSON configurable libraries.</remarks>
-    public interface IJsonConfigurableLibraryState : ILibraryState
+    /// <remarks>Configurable library states relate to dynamic configurable libraries.</remarks>
+    public interface IConfigurableLibraryState : ILibraryState
     {
         #region Methods
 

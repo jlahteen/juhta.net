@@ -15,7 +15,7 @@ namespace Juhta.Net.LibraryManagement
     /// Defines an interface for custom XML configurable libraries. A library is custom XML configurable if it is
     /// configurable and the configuration is done with a custom XML configuration.
     /// </summary>
-    public interface ICustomXmlConfigurableLibrary : IConfigurableLibrary
+    public interface ICustomXmlConfigurableLibrary : IConfigurableLibraryBase
     {
         #region Methods
 

@@ -15,7 +15,7 @@ namespace Juhta.Net.LibraryManagement
     /// configurable library if it is dynamic, configurable and the configuration is done with a custom XML
     /// configuration.
     /// </summary>
-    public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibrary
+    public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase
     {
         #region Methods
 

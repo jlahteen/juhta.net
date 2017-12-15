@@ -6,20 +6,24 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Microsoft.Extensions.Configuration;
+
 namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
-    /// Defines a base interface for configurable libraries. A library is configurable if it requires specific startup
-    /// operations and those operations need configuration.
+    /// Defines an interface for such configurable libraries whose configuration is done with a JSON, XML or INI
+    /// configuration.
     /// </summary>
-    public interface IConfigurableLibrary
+    public interface IConfigurableLibrary : IConfigurableLibraryBase
     {
-        #region Properties
+        #region Methods
 
         /// <summary>
-        /// Gets the name of the configuration file.
+        /// Initializes the library based on a specified configuration.
         /// </summary>
-        string ConfigFileName {get;}
+        /// <param name="config">Specifies an <see cref="IConfigurationRoot"/> object containing a configuration for
+        /// the library.</param>
+        void InitializeLibrary(IConfigurationRoot config);
 
         #endregion
     }
