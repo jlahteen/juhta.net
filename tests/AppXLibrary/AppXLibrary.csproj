@@ -22,8 +22,4 @@
     <ProjectReference Include="..\..\src\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ConfigurableXml\" />
-  </ItemGroup>
-
 </Project>

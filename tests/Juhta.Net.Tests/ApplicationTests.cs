@@ -176,6 +176,21 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_ConfigurableLibrary_Xml_ShouldReturn()
+        {
+            AppXLibrary.Configurable.StringCache stringCache;
+
+            SetConfigFiles("Root", "ConfigurableLibrary_Xml_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            stringCache = AppXLibrary.Configurable.StringCache.Instance;
+
+            for (int i = 0; i < 10; i++)
+                Assert.AreEqual<string>($"This is String{i}", stringCache.Get($"String{i}"));
+        }
+
+        [TestMethod]
         public void Start_CustomXmlConfigurableAndClosableLibrary_ShouldReturn()
         {
             LibraryConfig libraryConfig = new LibraryConfig();

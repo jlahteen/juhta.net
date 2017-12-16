@@ -1,0 +1,44 @@
+﻿<configuration>
+  <stringCache>
+    <string0>
+      <key>String0</key>
+      <value>This is String0</value>
+    </string0>
+    <string1>
+      <key>String1</key>
+      <value>This is String1</value>
+    </string1>
+    <string2>
+      <key>String2</key>
+      <value>This is String2</value>
+    </string2>
+    <string3>
+      <key>String3</key>
+      <value>This is String3</value>
+    </string3>
+    <string4>
+      <key>String4</key>
+      <value>This is String4</value>
+    </string4>
+    <string5>
+      <key>String5</key>
+      <value>This is String5</value>
+    </string5>
+    <string6>
+      <key>String6</key>
+      <value>This is String6</value>
+    </string6>
+    <string7>
+      <key>String7</key>
+      <value>This is String7</value>
+    </string7>
+    <string8>
+      <key>String8</key>
+      <value>This is String8</value>
+    </string8>
+    <string9>
+      <key>String9</key>
+      <value>This is String9</value>
+    </string9>
+  </stringCache>
+</configuration>
