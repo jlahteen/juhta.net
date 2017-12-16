@@ -690,15 +690,17 @@ namespace Juhta.Net.LibraryManagement
         {
             IConfigurationBuilder configBuilder;
 
-            if (Path.GetExtension(configFilePath).ToLower() == "json")
+            configFilePath = Path.GetFullPath(configFilePath);
+
+            if (Path.GetExtension(configFilePath).ToLower() == ".json")
                 configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(configFilePath);
 
-            else if (Path.GetExtension(configFilePath).ToLower() == "xml")
+            else if (Path.GetExtension(configFilePath).ToLower() == ".xml")
                 configBuilder = new ConfigurationBuilder()
                     .AddXmlFile(configFilePath);
 
-            else if (Path.GetExtension(configFilePath).ToLower() == "ini")
+            else if (Path.GetExtension(configFilePath).ToLower() == ".ini")
                 configBuilder = new ConfigurationBuilder()
                     .AddIniFile(configFilePath);
 

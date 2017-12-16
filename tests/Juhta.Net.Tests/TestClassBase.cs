@@ -65,6 +65,15 @@ namespace Juhta.Net.Tests
 
             foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
                 File.Delete(configFile);
+
+            foreach (string configFile in Directory.GetFiles(configDirectory, "*.json"))
+                File.Delete(configFile);
+
+            foreach (string configFile in Directory.GetFiles(configDirectory, "*.xml"))
+                File.Delete(configFile);
+
+            foreach (string configFile in Directory.GetFiles(configDirectory, "*.ini"))
+                File.Delete(configFile);
         }
 
         protected static void DeleteConfigFilesAll()
@@ -129,8 +138,6 @@ namespace Juhta.Net.Tests
 
         protected static string SetConfigFiles(string configLoadDirectory, string configFilePrefix, string configDirectory = null)
         {
-            FileInfo fileInfo;
-
             if (configDirectory == null)
             {
                 configDirectory = s_configDirectory;
@@ -143,15 +150,13 @@ namespace Juhta.Net.Tests
 
             if (configLoadDirectory != null)
             {
-                foreach (string configFile in Directory.GetFiles(s_configFilesRootDirectory + Path.DirectorySeparatorChar + configLoadDirectory, configFilePrefix + "*.config"))
-                    File.Copy(configFile, String.Format("{0}{1}{2}", configDirectory, Path.DirectorySeparatorChar, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
+                CopyConfigFiles(configLoadDirectory, configFilePrefix, configDirectory, "*.config");
 
-                foreach (string configFile in Directory.GetFiles(configDirectory, "*.config"))
-                {
-                    fileInfo = new FileInfo(configFile);
+                CopyConfigFiles(configLoadDirectory, configFilePrefix, configDirectory, "*.json");
 
-                    fileInfo.IsReadOnly = false;
-                }
+                CopyConfigFiles(configLoadDirectory, configFilePrefix, configDirectory, "*.xml");
+
+                CopyConfigFiles(configLoadDirectory, configFilePrefix, configDirectory, "*.ini");
             }
 
             return(s_configDirectory);
@@ -175,6 +180,25 @@ namespace Juhta.Net.Tests
         protected static string s_configDirectory;
 
         protected static string s_logDirectory;
+
+        #endregion
+
+        #region Private Methods
+
+        private static void CopyConfigFiles(string configLoadDirectory, string configFilePrefix, string configDirectory, string configFileMask)
+        {
+            FileInfo fileInfo;
+
+            foreach (string configFile in Directory.GetFiles(s_configFilesRootDirectory + Path.DirectorySeparatorChar + configLoadDirectory, configFilePrefix + configFileMask))
+                File.Copy(configFile, String.Format("{0}{1}{2}", configDirectory, Path.DirectorySeparatorChar, Path.GetFileName(configFile).RemoveStart(configFilePrefix)));
+
+            foreach (string configFile in Directory.GetFiles(configDirectory, configFileMask))
+            {
+                fileInfo = new FileInfo(configFile);
+
+                fileInfo.IsReadOnly = false;
+            }
+        }
 
         #endregion
 

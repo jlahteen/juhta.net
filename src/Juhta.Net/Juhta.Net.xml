@@ -599,7 +599,7 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error014">
             <summary>
-            Only one instance of the singleton class '{0}' is allowed to be created.
+            Only one instance of the singleton class '{0}' is allowed to be created at a time.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error015">
