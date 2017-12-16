@@ -288,6 +288,20 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Ini_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Ini_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
         public void Start_DynamicCustomXmlConfigurableLibrary_ShouldReturn()
         {
             string currentGreeting;
