@@ -1,14 +1,15 @@
 ﻿
+using AppXLibrary.Configurable;
 using Juhta.Net.LibraryManagement;
 using Microsoft.Extensions.Configuration;
 
-namespace AppXLibrary.Configurable
+namespace AppXLibrary.ConfigurableIni
 {
-    public class ConfigurableLibraryIni : LibraryHandleBase, IConfigurableLibrary
+    public class ConfigurableLibrary : LibraryHandleBase, IConfigurableLibrary
     {
         #region Public Constructors
 
-        public ConfigurableLibraryIni() : base("AppXLibrary.dll")
+        public ConfigurableLibrary() : base("AppXLibrary.dll")
         {}
 
         #endregion
