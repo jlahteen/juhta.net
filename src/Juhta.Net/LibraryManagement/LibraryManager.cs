@@ -681,26 +681,30 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Loads a specified configuration file. The type of the configuration file must be .json, .xml or .ini.
+        /// Loads a specified configuration file. The type of the configuration file must be .json, .xml, .config or
+        /// .ini.
         /// </summary>
         /// <param name="configFilePath">Specifies a configuration file path.</param>
         /// <returns>Returns an <see cref="IConfigurationRoot"/> object containing the settings defined in the
         /// specified configuration file.</returns>
         private static IConfigurationRoot LoadConfigFile(string configFilePath)
         {
+            string extension;
             IConfigurationBuilder configBuilder;
 
             configFilePath = Path.GetFullPath(configFilePath);
 
-            if (Path.GetExtension(configFilePath).ToLower() == ".json")
+            extension = Path.GetExtension(configFilePath).ToLower();
+
+            if (extension == ".json")
                 configBuilder = new ConfigurationBuilder()
                     .AddJsonFile(configFilePath);
 
-            else if (Path.GetExtension(configFilePath).ToLower() == ".xml")
+            else if (extension == ".xml" || extension == ".config")
                 configBuilder = new ConfigurationBuilder()
                     .AddXmlFile(configFilePath);
 
-            else if (Path.GetExtension(configFilePath).ToLower() == ".ini")
+            else if (extension == ".ini")
                 configBuilder = new ConfigurationBuilder()
                     .AddIniFile(configFilePath);
 

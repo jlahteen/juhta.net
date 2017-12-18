@@ -302,6 +302,127 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Ini_ConfigChange_ShouldReturn()
+        {
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.ini";
+            string configFileContent;
+
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Ini_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            configFileContent = File.ReadAllText(appXConfigFilePath);
+
+            configFileContent = configFileContent.Replace("This is String", "This is the updated String");
+
+            File.WriteAllText(appXConfigFilePath, configFileContent);
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Json_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Json_ConfigChange_ShouldReturn()
+        {
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.json";
+            string configFileContent;
+
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            configFileContent = File.ReadAllText(appXConfigFilePath);
+
+            configFileContent = configFileContent.Replace("This is String", "This is the updated String");
+
+            File.WriteAllText(appXConfigFilePath, configFileContent);
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Xml_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Xml_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Xml_ConfigChange_ShouldReturn()
+        {
+            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.xml";
+            string configFileContent;
+
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Xml_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            configFileContent = File.ReadAllText(appXConfigFilePath);
+
+            configFileContent = configFileContent.Replace("This is String", "This is the updated String");
+
+            File.WriteAllText(appXConfigFilePath, configFileContent);
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+        }
+
+        [TestMethod]
         public void Start_DynamicCustomXmlConfigurableLibrary_ShouldReturn()
         {
             string currentGreeting;

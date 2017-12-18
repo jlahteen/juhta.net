@@ -47,7 +47,7 @@ namespace Juhta.Net.LibraryManagement
             m_timers = new Dictionary<string, Timer>();
 
             // Create a configuration file watcher
-            m_configFileWatcher = new FileSystemWatcher(configDirectory, "*.config");
+            m_configFileWatcher = new FileSystemWatcher(configDirectory, "*.*");
 
             // Subscribe to the Created, Changed and Deleted events
             m_configFileWatcher.Created += OnConfigFileEvent;
@@ -111,6 +111,18 @@ namespace Juhta.Net.LibraryManagement
         #region Private Methods
 
         /// <summary>
+        /// Checks whether a specified file name determines a configuration file.
+        /// </summary>
+        /// <param name="fileName">Specifies a file name.</param>
+        /// <returns>Returns true if the specified file name determines a configuration file, otherwise false.</returns>
+        private static bool IsConfigFileName(string fileName)
+        {
+            string extension = Path.GetExtension(fileName).ToLower();
+
+            return(extension == ".json" || extension == ".xml" || extension == ".config" || extension == ".ini");
+        }
+
+        /// <summary>
         /// Handles the file system events raised by an internal <see cref="FileSystemWatcher"/> object.
         /// </summary>
         /// <param name="source">Specifies the source of the event.</param>
@@ -122,6 +134,10 @@ namespace Juhta.Net.LibraryManagement
 
             try
             {
+                // Return immediately if the file event doesn't relate to a configuration file
+                if (!IsConfigFileName(e.Name))
+                    return;
+
                 lock(m_syncLock)
                 {
                     // Return if the watching has been stopped

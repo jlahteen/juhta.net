@@ -2727,6 +2727,13 @@
             ConfigFileWatcher instance.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.IsConfigFileName(System.String)">
+            <summary>
+            Checks whether a specified file name determines a configuration file.
+            </summary>
+            <param name="fileName">Specifies a file name.</param>
+            <returns>Returns true if the specified file name determines a configuration file, otherwise false.</returns>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.OnConfigFileEvent(System.Object,System.IO.FileSystemEventArgs)">
             <summary>
             Handles the file system events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
@@ -3412,7 +3419,8 @@
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.LoadConfigFile(System.String)">
             <summary>
-            Loads a specified configuration file. The type of the configuration file must be .json, .xml or .ini.
+            Loads a specified configuration file. The type of the configuration file must be .json, .xml, .config or
+            .ini.
             </summary>
             <param name="configFilePath">Specifies a configuration file path.</param>
             <returns>Returns an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing the settings defined in the
@@ -3591,8 +3599,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error009">
             <summary>
-            Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml
-            and .ini.
+            Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml,
+            .config and .ini.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error010">
