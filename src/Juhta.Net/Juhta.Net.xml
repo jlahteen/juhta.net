@@ -2686,16 +2686,17 @@
         <member name="T:Juhta.Net.LibraryManagement.ConfigFileWatcher">
             <summary>
             Defines a class that watches configuration file changes. This class raises an appropriate event every time a
-            configuration file is created, updated or deleted in the configuration directory.
+            configuration file is created, updated, deleted or renamed in the configuration directory.
             </summary>
             <remarks>
             <para>The implementation relies on the <see cref="T:System.IO.FileSystemWatcher"/> class. The reason why this class isn't
             used as such is the fact that it raises multiple events per a single file system operation causing unnecessary
             configuration updates to take place.</para>
             <para>This class queues all file events caused by a single file system operation, which is done by waiting for
-            a certain time period for all these events to occur. After that the class determines which one of the three
-            events, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileCreated"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileChanged"/> or <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileDeleted"/>,
-            has actually occurred. Finally, that event will be raised for outside subscribers.</para>
+            a certain time period for all these events to occur. After that the class determines which one of the four
+            events, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileCreated"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileChanged"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileDeleted"/> or
+            <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileRenamed"/> has actually occurred. Finally, that event will be raised for outside
+            subscribers.</para>
             </remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.StartWatching(System.String)">
@@ -2712,19 +2713,25 @@
         <member name="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileChanged">
             <summary>
             Occurs when a configuration file is changed in the configuration directory associated with this
-            ConfigFileWatcher instance.
+            <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
             </summary>
         </member>
         <member name="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileCreated">
             <summary>
             Occurs when a configuration file is created in the configuration directory associated with this
-            ConfigFileWatcher instance.
+            <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
             </summary>
         </member>
         <member name="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileDeleted">
             <summary>
             Occurs when a configuration file is deleted in the configuration directory associated with this
-            ConfigFileWatcher instance.
+            <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
+            </summary>
+        </member>
+        <member name="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileRenamed">
+            <summary>
+            Occurs when a configuration file is renamed in the configuration directory associated with this
+            <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
             </summary>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.IsConfigFileName(System.String)">
@@ -2738,9 +2745,16 @@
             <summary>
             Handles the file system events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
             </summary>
-            <param name="source">Specifies the source of the event.</param>
+            <param name="source">Specifies the event source.</param>
             <param name="e">Specifies the event data.</param>
             <remarks>This method does nothing if the watching has been stopped.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.OnError(System.Object,System.IO.ErrorEventArgs)">
+            <summary>
+            Handles the Error events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
+            </summary>
+            <param name="sender">Specifies the event source.</param>
+            <param name="e">Specifies the event data.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.RaiseConfigFileEvent(System.Object)">
             <summary>
@@ -2754,6 +2768,11 @@
             <summary>
             Specifies the time period in milliseconds to wait for all file events to occur caused by a single file
             system operation.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryManagement.ConfigFileWatcher.m_configDirectory">
+            <summary>
+            Specifies the configuration directory to watch.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.ConfigFileWatcher.m_configFileEvents">
@@ -3603,9 +3622,11 @@
             .config and .ini.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error010">
+        <member name="F:Juhta.Net.LibraryMessages.Warning010">
             <summary>
-            Free for the future use.
+            Library Manager detected that it is unable to continue monitoring configuration file changes in the
+            configuration directory '{0}'. Therefore, from now on no configuration changes will come into effect on the
+            fly in the process.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning011">
