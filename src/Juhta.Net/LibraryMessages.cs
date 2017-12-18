@@ -76,12 +76,12 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml, .config and .ini.");
 
-        // NOTE: Message ID 10 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Library Manager detected that it is unable to continue monitoring configuration file changes in the
+        /// configuration directory '{0}'. Therefore, from now on no configuration changes will come into effect on the
+        /// fly in the process.
         /// </summary>
-        internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly WarningMessage Warning010 = MessageFactory.CreateWarningMessage("Library Manager detected that it is unable to continue monitoring configuration file changes in the configuration directory '{0}'. Therefore, from now on no configuration changes will come into effect on the fly in the process.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
