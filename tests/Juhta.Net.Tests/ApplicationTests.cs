@@ -22,22 +22,29 @@ namespace Juhta.Net.Tests
         public static void ClassCleanup()
         {}
 
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext testContext)
+        {
+            if (!Directory.Exists(s_tempDirectory))
+                Directory.CreateDirectory(s_tempDirectory);
+        }
+
         [TestCleanup]
         public void TestCleanup()
         {
             Application.CloseInstance();
 
+            DeleteConfigFiles(".");
+
             DeleteConfigFiles(s_configDirectory);
+
+            DeleteConfigFiles(s_tempDirectory);
         }
 
         [TestInitialize]
         public void TestInitialize()
         {
             string defaultLogFile;
-
-            DeleteConfigFiles(".");
-
-            DeleteConfigFiles(s_configDirectory);
 
             DeleteLogFiles(GetTestLogDirectory());
 
@@ -375,6 +382,97 @@ namespace Juhta.Net.Tests
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
             }
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingInConfigDirectory_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            File.Move(s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_configDirectory + Path.DirectorySeparatorChar + "RenamedAppXLibrary.json");
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            AssertDefaultLogFileContent(
+                "WARNING 'Juhta.Net.Warning10063'",
+                "RenamedAppXLibrary.json' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.",
+                "INFORMATION 'Juhta.Net.Info10012'",
+                "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
+            );
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingIntoConfigDirectory_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+
+            File.Move(s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_tempDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            File.Move(s_tempDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json");
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            AssertDefaultLogFileContent(
+                "INFORMATION 'Juhta.Net.Info10065'",
+                "AppXLibrary.json' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
+            );
+        }
+
+        [TestMethod]
+        public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingOutOfConfigDirectory_ShouldReturn()
+        {
+            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            File.Move(s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_tempDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json");
+
+            Thread.Sleep(2000);
+
+            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            {
+                for (int i = 0; i < 10; i++)
+                    Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
+            }
+
+            AssertDefaultLogFileContent(
+                "INFORMATION 'Juhta.Net.Info10012'",
+                "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
+            );
         }
 
         [TestMethod]

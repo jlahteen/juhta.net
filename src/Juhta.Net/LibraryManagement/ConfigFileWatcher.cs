@@ -23,10 +23,10 @@ namespace Juhta.Net.LibraryManagement
     /// used as such is the fact that it raises multiple events per a single file system operation causing unnecessary
     /// configuration updates to take place.</para>
     /// <para>This class queues all file events caused by a single file system operation, which is done by waiting for
-    /// a certain time period for all these events to occur. After that the class determines which one of the four
-    /// events, <see cref="ConfigFileCreated"/>, <see cref="ConfigFileChanged"/>, <see cref="ConfigFileDeleted"/> or
-    /// <see cref="ConfigFileRenamed"/> has actually occurred. Finally, that event will be raised for outside
-    /// subscribers.</para>
+    /// a certain time period for all these events to occur. After the waiting the class determines which one of the
+    /// three events, <see cref="ConfigFileCreated"/>, <see cref="ConfigFileChanged"/> or <see cref="ConfigFileDeleted"/>,
+    /// should be raised for the outside subscribers. Renamed events will be converted to series of deleted and created
+    /// events.</para>
     /// </remarks>
     internal class ConfigFileWatcher
     {
@@ -60,7 +60,7 @@ namespace Juhta.Net.LibraryManagement
 
             m_configFileWatcher.Deleted += OnConfigFileEvent;
 
-            m_configFileWatcher.Renamed += OnConfigFileEvent;
+            m_configFileWatcher.Renamed += OnConfigFileRenamed;
 
             // Subscribe to the Error event
             m_configFileWatcher.Error += OnError;
@@ -119,12 +119,6 @@ namespace Juhta.Net.LibraryManagement
         /// </summary>
         public event EventHandler<FileSystemEventArgs> ConfigFileDeleted;
 
-        /// <summary>
-        /// Occurs when a configuration file is renamed in the configuration directory associated with this
-        /// <see cref="ConfigFileWatcher"/> instance.
-        /// </summary>
-        public event EventHandler<FileSystemEventArgs> ConfigFileRenamed;
-
         #endregion
 
         #region Private Methods
@@ -142,7 +136,8 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Handles the file system events raised by an internal <see cref="FileSystemWatcher"/> object.
+        /// Handles the Created, Changed, and Deleted events raised by an internal <see cref="FileSystemWatcher"/>
+        /// object.
         /// </summary>
         /// <param name="source">Specifies the event source.</param>
         /// <param name="e">Specifies the event data.</param>
@@ -198,6 +193,22 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Handles the Renamed events raised by an internal <see cref="FileSystemWatcher"/> object.
+        /// </summary>
+        /// <param name="source">Specifies the event source.</param>
+        /// <param name="e">Specifies the event data.</param>
+        private void OnConfigFileRenamed(object source, RenamedEventArgs e)
+        {
+            if (Path.GetDirectoryName(e.OldFullPath).TrimEnd(Path.DirectorySeparatorChar) == m_configDirectory)
+                // The "source" file was in the configuration directory
+                OnConfigFileEvent(source, new FileSystemEventArgs(WatcherChangeTypes.Deleted, m_configDirectory, e.OldName));
+
+            if (Path.GetDirectoryName(e.FullPath).TrimEnd(Path.DirectorySeparatorChar) == m_configDirectory)
+                // The "target" file is in the configuration directory
+                OnConfigFileEvent(source, new FileSystemEventArgs(WatcherChangeTypes.Created, m_configDirectory, e.Name));
+        }
+
+        /// <summary>
         /// Handles the Error events raised by an internal <see cref="FileSystemWatcher"/> object.
         /// </summary>
         /// <param name="sender">Specifies the event source.</param>
@@ -247,9 +258,6 @@ namespace Juhta.Net.LibraryManagement
 
                     else if (eventArgs.ChangeType == WatcherChangeTypes.Deleted)
                         this.ConfigFileDeleted.RaiseEvent<FileSystemEventArgs>(this, eventArgs);
-
-                    else if (eventArgs.ChangeType == WatcherChangeTypes.Renamed)
-                        this.ConfigFileRenamed.RaiseEvent<FileSystemEventArgs>(this, eventArgs);
 
                     // Dispose the timer that called this method
                     m_timers[configFileNameAsString].Dispose();

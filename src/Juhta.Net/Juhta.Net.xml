@@ -2693,10 +2693,10 @@
             used as such is the fact that it raises multiple events per a single file system operation causing unnecessary
             configuration updates to take place.</para>
             <para>This class queues all file events caused by a single file system operation, which is done by waiting for
-            a certain time period for all these events to occur. After that the class determines which one of the four
-            events, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileCreated"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileChanged"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileDeleted"/> or
-            <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileRenamed"/> has actually occurred. Finally, that event will be raised for outside
-            subscribers.</para>
+            a certain time period for all these events to occur. After the waiting the class determines which one of the
+            three events, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileCreated"/>, <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileChanged"/> or <see cref="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileDeleted"/>,
+            should be raised for the outside subscribers. Renamed events will be converted to series of deleted and created
+            events.</para>
             </remarks>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.StartWatching(System.String)">
@@ -2728,12 +2728,6 @@
             <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
             </summary>
         </member>
-        <member name="E:Juhta.Net.LibraryManagement.ConfigFileWatcher.ConfigFileRenamed">
-            <summary>
-            Occurs when a configuration file is renamed in the configuration directory associated with this
-            <see cref="T:Juhta.Net.LibraryManagement.ConfigFileWatcher"/> instance.
-            </summary>
-        </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.IsConfigFileName(System.String)">
             <summary>
             Checks whether a specified file name determines a configuration file.
@@ -2743,11 +2737,19 @@
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.OnConfigFileEvent(System.Object,System.IO.FileSystemEventArgs)">
             <summary>
-            Handles the file system events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
+            Handles the Created, Changed, and Deleted events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/>
+            object.
             </summary>
             <param name="source">Specifies the event source.</param>
             <param name="e">Specifies the event data.</param>
             <remarks>This method does nothing if the watching has been stopped.</remarks>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.OnConfigFileRenamed(System.Object,System.IO.RenamedEventArgs)">
+            <summary>
+            Handles the Renamed events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
+            </summary>
+            <param name="source">Specifies the event source.</param>
+            <param name="e">Specifies the event data.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.ConfigFileWatcher.OnError(System.Object,System.IO.ErrorEventArgs)">
             <summary>
@@ -3411,6 +3413,12 @@
             </summary>
             <param name="library">Specifies a dynamic custom XML configurable library.</param>
             <param name="configFilePath">Specifies an XML configuration file path.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeDynamicInitializableLibrary(Juhta.Net.LibraryManagement.IDynamicInitializableLibrary)">
+            <summary>
+            Initializes a dynamic initializable library.
+            </summary>
+            <param name="library">Specifies a dynamic initializable library.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>

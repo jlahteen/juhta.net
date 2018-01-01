@@ -134,8 +134,11 @@ namespace Juhta.Net.LibraryManagement
             m_configFileWatcher = new ConfigFileWatcher();
 
             // Subscribe to the ConfigFileCreated, ConfigFileChanged and ConfigFileDeleted events
+
             m_configFileWatcher.ConfigFileCreated += OnConfigFileCreatedOrChanged;
+
             m_configFileWatcher.ConfigFileChanged += OnConfigFileCreatedOrChanged;
+
             m_configFileWatcher.ConfigFileDeleted += OnConfigFileDeleted;
 
             // Start watching configuration file changes
@@ -514,14 +517,21 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
+        /// Initializes a dynamic initializable library.
+        /// </summary>
+        /// <param name="library">Specifies a dynamic initializable library.</param>
+        private void InitializeDynamicInitializableLibrary(IDynamicInitializableLibrary library)
+        {
+            library.LibraryState = CreateDefaultLibraryState(library);
+        }
+
+        /// <summary>
         /// Initializes the library specified by a library handle.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
         private void InitializeLibrary(ILibraryHandle libraryHandle)
         {
-            bool requiresConfigFile;
-            IConfigurableLibraryBase configurableLibrary;
-            string configFilePath;
+            string configFileName = null, configFilePath = null;
             List<IDynamicLibrary> dynamicLibraries;
 
             try
@@ -541,82 +551,81 @@ namespace Juhta.Net.LibraryManagement
                 // to the error in the initialization
                 m_libraryHandles.Push(libraryHandle);
 
-                // Initialize the library if necessary
+                // Get the configuration file name and path if necessary
 
-                if (libraryHandle is IInitializableLibrary || libraryHandle is IConfigurableLibraryBase)
+                if (libraryHandle is IConfigurableLibraryBase)
                 {
-                    // Check if the library requires a configuration file
-                    requiresConfigFile = !(libraryHandle is IInitializableLibrary);
+                    configFileName = ((IConfigurableLibraryBase)libraryHandle).ConfigFileName;
 
-                    if (libraryHandle is IConfigurableLibraryBase)
-                    {
-                        // The library is configurable
+                    configFilePath = m_application.ConfigDirectory + Path.DirectorySeparatorChar + configFileName;
 
-                        configurableLibrary = (IConfigurableLibraryBase)libraryHandle;
-
-                        configFilePath = m_application.ConfigDirectory + Path.DirectorySeparatorChar + configurableLibrary.ConfigFileName;
-
-                        if (File.Exists(configFilePath))
-                        {
-                            // A configuration file exists for the library
-
-                            // Initialize the library based on the configuration file
-
-                            if (libraryHandle is IDynamicConfigurableLibrary)
-                                InitializeDynamicConfigurableLibrary((IDynamicConfigurableLibrary)libraryHandle, configFilePath);
-
-                            else if (libraryHandle is IConfigurableLibrary)
-                                InitializeConfigurableLibrary((IConfigurableLibrary)libraryHandle, configFilePath);
-
-                            else if (libraryHandle is IDynamicCustomXmlConfigurableLibrary)
-                                InitializeDynamicCustomXmlConfigurableLibrary((IDynamicCustomXmlConfigurableLibrary)libraryHandle, configFilePath);
-
-                            else if (libraryHandle is ICustomXmlConfigurableLibrary)
-                                InitializeCustomXmlConfigurableLibrary((ICustomXmlConfigurableLibrary)libraryHandle, configFilePath);
-
-                            // Add other configurable library types here
-                            // ...
-
-                            // Any of the required configurable library interfaces wasn't found
-                            else
-                                throw new LibraryInitializationException(LibraryMessages.Error069.FormatMessage(libraryHandle.LibraryFileName, configFilePath));
-                        }
-
-                        else if (requiresConfigFile)
-                            // The library requires a configuration file but such doesn't exist
-                            throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configurableLibrary.ConfigFileName, m_application.ConfigDirectory));
-
-                        else
-                            // There is no configuration file but the library is also initializable, so just initialize it
-                            ((IInitializableLibrary)libraryHandle).InitializeLibrary();
-
-                        // Add the library to the list of dynamic libraries if necessary
-
-                        if (libraryHandle is IDynamicLibrary)
-                        {
-                            if (!m_dynamicLibrariesByConfigFileName.TryGetValue(configurableLibrary.ConfigFileName, out dynamicLibraries))
-                            {
-                                dynamicLibraries = new List<IDynamicLibrary>();
-
-                                m_dynamicLibrariesByConfigFileName.Add(configurableLibrary.ConfigFileName, dynamicLibraries);
-                            }
-
-                            m_dynamicLibrariesByType.Add(libraryHandle.GetType().FullName, (IDynamicLibrary)libraryHandle);
-
-                            dynamicLibraries.Add((IDynamicLibrary)libraryHandle);
-                        }
-                    }
-                    else
-                        // The library is only initializable, initialize it
-                        ((IInitializableLibrary)libraryHandle).InitializeLibrary();
+                    // Check that the configuration file exists if such is required
+                    if (!(libraryHandle is IInitializableLibrary || libraryHandle is IDynamicInitializableLibrary) && !File.Exists(configFilePath))
+                        throw new ConfigException(LibraryMessages.Error001.FormatMessage(libraryHandle.LibraryFileName, configFileName, m_application.ConfigDirectory));
                 }
 
-                // Start the library processes if necessary
+                if (libraryHandle is IConfigurableLibraryBase && File.Exists(configFilePath))
+                {
+                    // The library is configurable and a configuration file exists for the library
 
+                    // Initialize the library based on the configuration file
+
+                    if (libraryHandle is IDynamicConfigurableLibrary)
+                        InitializeDynamicConfigurableLibrary((IDynamicConfigurableLibrary)libraryHandle, configFilePath);
+
+                    else if (libraryHandle is IConfigurableLibrary)
+                        InitializeConfigurableLibrary((IConfigurableLibrary)libraryHandle, configFilePath);
+
+                    else if (libraryHandle is IDynamicCustomXmlConfigurableLibrary)
+                        InitializeDynamicCustomXmlConfigurableLibrary((IDynamicCustomXmlConfigurableLibrary)libraryHandle, configFilePath);
+
+                    else if (libraryHandle is ICustomXmlConfigurableLibrary)
+                        InitializeCustomXmlConfigurableLibrary((ICustomXmlConfigurableLibrary)libraryHandle, configFilePath);
+
+                    // Add other configurable library types here
+                    // ...
+
+                    // Any of the required configurable library interfaces wasn't found
+                    else
+                        throw new LibraryInitializationException(LibraryMessages.Error069.FormatMessage(libraryHandle.LibraryFileName, configFilePath));
+                }
+
+                else if (libraryHandle is IDynamicInitializableLibrary)
+                    // The library is a dynamic initializable library, initialize it
+                    InitializeDynamicInitializableLibrary((IDynamicInitializableLibrary)libraryHandle);
+
+                else if (libraryHandle is IInitializableLibrary)
+                    // The library is an initializable library, initialize it
+                    ((IInitializableLibrary)libraryHandle).InitializeLibrary();
+
+                // Start the library processes if necessary
                 if (libraryHandle is IDynamicLibrary)
                     StartLibraryStateProcesses(((IDynamicLibrary)libraryHandle).LibraryState, LibraryStateInstanceType.New, true, libraryHandle.LibraryFileName);
                 else
                     StartLibraryProcesses(libraryHandle);
+
+                // In case of a dynamic library, go live with the created library state
+                if (libraryHandle is IDynamicLibrary)
+                    ((IDynamicLibrary)libraryHandle).GoLive(((IDynamicLibrary)libraryHandle).LibraryState);
+
+                // Update the lists of dynamic libraries if necessary
+
+                if (libraryHandle is IDynamicLibrary)
+                {
+                    if (libraryHandle is IConfigurableLibraryBase)
+                    {
+                        if (!m_dynamicLibrariesByConfigFileName.TryGetValue(configFileName, out dynamicLibraries))
+                        {
+                            dynamicLibraries = new List<IDynamicLibrary>();
+
+                            m_dynamicLibrariesByConfigFileName.Add(configFileName, dynamicLibraries);
+                        }
+
+                        dynamicLibraries.Add((IDynamicLibrary)libraryHandle);
+                    }
+
+                    m_dynamicLibrariesByType.Add(libraryHandle.GetType().FullName, (IDynamicLibrary)libraryHandle);
+                }
             }
 
             catch (Exception ex)

@@ -20,6 +20,8 @@ namespace Juhta.Net.Tests
             s_configDirectory = "..\\..\\..\\..\\Config\\Current".Replace('\\', Path.DirectorySeparatorChar);
 
             s_logDirectory = "..\\..\\..\\..\\Logs".Replace('\\', Path.DirectorySeparatorChar);
+
+            s_tempDirectory = "..\\..\\..\\..\\Temp".Replace('\\', Path.DirectorySeparatorChar);
         }
 
         #endregion
@@ -180,6 +182,8 @@ namespace Juhta.Net.Tests
         protected static string s_configDirectory;
 
         protected static string s_logDirectory;
+
+        protected static string s_tempDirectory;
 
         #endregion
 

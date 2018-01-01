@@ -67,6 +67,9 @@ namespace Juhta.Net
             if (String.IsNullOrEmpty(configDirectory))
                 configDirectory = m_binDirectory;
 
+            // Ensure the full path in the configuration directory
+            configDirectory = Path.GetFullPath(configDirectory);
+
             // Set the configuration directory
             m_configDirectory = configDirectory.TrimEnd(Path.DirectorySeparatorChar);
         }

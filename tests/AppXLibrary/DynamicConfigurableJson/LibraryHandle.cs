@@ -3,7 +3,7 @@ using Juhta.Net.LibraryManagement;
 
 namespace AppXLibrary.DynamicConfigurableJson
 {
-    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicConfigurableLibrary
+    public class LibraryHandle : DynamicLibraryHandleBase, IDynamicConfigurableLibrary, IDynamicInitializableLibrary
     {
         #region Public Constructors
 
@@ -13,6 +13,11 @@ namespace AppXLibrary.DynamicConfigurableJson
         #endregion
 
         #region Public Methods
+
+        public IDefaultLibraryState CreateDefaultLibraryState()
+        {
+            return(new LibraryState());
+        }
 
         public IConfigurableLibraryState CreateLibraryState()
         {
