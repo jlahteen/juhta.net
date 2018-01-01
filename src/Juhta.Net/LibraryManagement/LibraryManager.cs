@@ -89,7 +89,7 @@ namespace Juhta.Net.LibraryManagement
         /// <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
         /// <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
         /// <returns>Returns the created <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> instance.</returns>
-        public DynamicLibraryContext<TDynamicLibrary, TLibraryState> CreateDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
+        public DynamicLibraryContext<TDynamicLibrary, TLibraryState> GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
             where TDynamicLibrary : IDynamicLibrary
             where TLibraryState : ILibraryState
         {

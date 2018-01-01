@@ -9,7 +9,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurable
 
         public static string GetGreeting()
         {
-            using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<LibraryHandle, LibraryState>())
             {
                 return(context.LibraryState.CurrentGreeting);
             }

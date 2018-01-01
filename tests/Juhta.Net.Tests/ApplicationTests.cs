@@ -301,7 +301,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -318,7 +318,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -332,7 +332,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableIni.LibraryHandle, AppXLibrary.DynamicConfigurableIni.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -346,7 +346,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -363,7 +363,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -377,7 +377,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -391,7 +391,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -401,7 +401,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -424,7 +424,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -434,7 +434,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -453,7 +453,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -463,7 +463,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableJson.LibraryHandle, AppXLibrary.DynamicConfigurableJson.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is Default String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -482,7 +482,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -499,7 +499,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is String{i}", context.LibraryState.StringCache.Get($"String{i}"));
@@ -513,7 +513,7 @@ namespace Juhta.Net.Tests
 
             Thread.Sleep(2000);
 
-            using (var context = Application.Instance.CreateDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<AppXLibrary.DynamicConfigurableXml.LibraryHandle, AppXLibrary.DynamicConfigurableXml.LibraryState>())
             {
                 for (int i = 0; i < 10; i++)
                     Assert.AreEqual<string>($"This is the updated String{i}", context.LibraryState.StringCache.Get($"String{i}"));

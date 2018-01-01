@@ -11,7 +11,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
         {
             get
             {
-                using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
+                using (var context = Application.Instance.GetDynamicLibraryContext<LibraryHandle, LibraryState>())
                 {
                     return(context.LibraryState.ReplaceProcess.IsStarted);
                 }

@@ -46,7 +46,7 @@
             Closes the possibly created singleton <see cref="T:Juhta.Net.Application"/> instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Application.CreateDynamicLibraryContext``2">
+        <member name="M:Juhta.Net.Application.GetDynamicLibraryContext``2">
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> corresponding to
             specified dynamic library type and library state type.
@@ -3284,7 +3284,7 @@
             <para>This method will be called by the framework manager when the framework is closed.</para>
             </remarks>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.CreateDynamicLibraryContext``2">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.GetDynamicLibraryContext``2">
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> corresponding to
             specified dynamic library type and library state type.

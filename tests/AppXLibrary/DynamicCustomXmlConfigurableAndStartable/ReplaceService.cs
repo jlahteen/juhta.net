@@ -9,7 +9,7 @@ namespace AppXLibrary.DynamicCustomXmlConfigurableAndStartable
 
         public string Replace(string s)
         {
-            using (var context = Application.Instance.CreateDynamicLibraryContext<LibraryHandle, LibraryState>())
+            using (var context = Application.Instance.GetDynamicLibraryContext<LibraryHandle, LibraryState>())
             {
                 return(context.LibraryState.ReplaceProcess.Replace(s));
             }
