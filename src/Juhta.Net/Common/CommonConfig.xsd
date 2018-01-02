@@ -48,6 +48,13 @@
       <xs:pattern value="\.?[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <!-- Define configFileNameType -->
+  <xs:simpleType name="configFileNameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_\-]+(\.[a-zA-Z0-9_\-]+)*\.(json|config|xml|ini)"/>
+    </xs:restriction>
+  </xs:simpleType>
   
   <!-- Define directoryPathType -->
   <xs:simpleType name="directoryPathType">

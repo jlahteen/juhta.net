@@ -1137,11 +1137,27 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_NoParameters_SimplyConfig_ShouldReturn()
+        public void Start_NoParameters_SimpleConfig_ShouldReturn()
         {
             SetConfigFiles("Root", "SimpleConfig_", ".");
 
             Application.StartInstance();
+
+            Assert.AreEqual<string>(Path.GetFileName(Process.GetCurrentProcess().MainModule.FileName), Application.Instance.Name);
+
+            Assert.AreEqual<string>(null, Application.Instance.DefaultConfigFileName);
+        }
+
+        [TestMethod]
+        public void Start_NoParameters_SimpleConfig_NameAndDefaultConfigFileNameSpecified_ShouldReturn()
+        {
+            SetConfigFiles("Root", "SimpleConfig_NameAndDefaultConfigFileNameSpecified_", ".");
+
+            Application.StartInstance();
+
+            Assert.AreEqual<string>("Application X", Application.Instance.Name);
+
+            Assert.AreEqual<string>("SomeConfig.ini", Application.Instance.DefaultConfigFileName);
         }
 
         [TestMethod]

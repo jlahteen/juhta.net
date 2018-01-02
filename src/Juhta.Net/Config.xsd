@@ -27,6 +27,7 @@
       <xs:element name="startup" type="startupType"/>
     </xs:sequence>
     <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="optional"/>
+    <xs:attribute name="defaultConfigFileName" type="common:configFileNameType" use="optional"/>
   </xs:complexType>
   
   <!-- Define Juhta.NetType -->
@@ -47,6 +48,7 @@
   <xs:complexType name="libraryType">
     <xs:attribute name="fileName" type="common:libraryFileNameType" use="required"/>
     <xs:attribute name="handleClass" type="common:classNameType" use="optional"/>
+    <xs:attribute name="configFileName" type="common:configFileNameType" use="optional"/>
   </xs:complexType>
   
   <!-- Define startupType -->

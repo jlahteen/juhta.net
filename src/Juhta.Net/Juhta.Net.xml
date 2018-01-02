@@ -98,6 +98,11 @@
             the application is not initialized.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Application.DefaultConfigFileName">
+            <summary>
+            Gets the name of the default configuration file for the application. Can be null.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.Application.IsInitialized">
             <summary>
             Returns true if the application has been initialized, otherwise false.
@@ -108,9 +113,9 @@
             Gets the name of the application.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Application.InitializeName(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
+        <member name="M:Juhta.Net.Application.InitializeAttributeFields(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
             <summary>
-            Initializes the name of the application based on a specified configuration.
+            Initializes those fields that are determined by the attributes of the application XML node.
             </summary>
             <param name="rootConfig">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration.</param>
             <param name="namespaceManager">Specifies an <see cref="T:System.Xml.XmlNamespaceManager"/> object for selecting nodes in
@@ -152,6 +157,11 @@
         <member name="F:Juhta.Net.Application.m_configDirectory">
             <summary>
             Stores the <see cref="P:Juhta.Net.Application.ConfigDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.m_defaultConfigFileName">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Application.DefaultConfigFileName"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.Application.m_libraryManager">

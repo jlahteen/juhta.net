@@ -176,8 +176,8 @@ namespace Juhta.Net
 
                     namespaceManager.AddNamespace("ns", String.Format("{0}root-{1}.xsd", FrameworkConfig.RootXmlns, FrameworkConfig.RootConfigVersion));
 
-                    // Initialize the name of the application
-                    InitializeName(rootConfig, namespaceManager);
+                    // Initialize the attribute fields
+                    InitializeAttributeFields(rootConfig, namespaceManager);
 
                     // Initialize the libraries
 
@@ -269,6 +269,14 @@ namespace Juhta.Net
         }
 
         /// <summary>
+        /// Gets the name of the default configuration file for the application. Can be null.
+        /// </summary>
+        public string DefaultConfigFileName
+        {
+            get {return(m_defaultConfigFileName);}
+        }
+
+        /// <summary>
         /// Returns true if the application has been initialized, otherwise false.
         /// </summary>
         public bool IsInitialized
@@ -295,12 +303,12 @@ namespace Juhta.Net
         #region Private Methods
 
         /// <summary>
-        /// Initializes the name of the application based on a specified configuration.
+        /// Initializes those fields that are determined by the attributes of the application XML node.
         /// </summary>
         /// <param name="rootConfig">Specifies an <see cref="XmlDocument"/> object containing the root configuration.</param>
         /// <param name="namespaceManager">Specifies an <see cref="XmlNamespaceManager"/> object for selecting nodes in
         /// <paramref name="rootConfig"/>.</param>
-        private void InitializeName(XmlDocument rootConfig, XmlNamespaceManager namespaceManager)
+        private void InitializeAttributeFields(XmlDocument rootConfig, XmlNamespaceManager namespaceManager)
         {
             XmlNode applicationNode = rootConfig.SelectSingleNode("//ns:application", namespaceManager);
 
@@ -308,6 +316,9 @@ namespace Juhta.Net
                 m_name = applicationNode.GetAttribute("name");
             else
                 m_name = this.Name;
+
+            if (applicationNode.HasAttribute("defaultConfigFileName"))
+                m_defaultConfigFileName = applicationNode.GetAttribute("defaultConfigFileName");
         }
 
         /// <summary>
@@ -388,6 +399,11 @@ namespace Juhta.Net
         /// Stores the <see cref="ConfigDirectory"/> property.
         /// </summary>
         private string m_configDirectory;
+
+        /// <summary>
+        /// Stores the <see cref="DefaultConfigFileName"/> property.
+        /// </summary>
+        private string m_defaultConfigFileName;
 
         /// <summary>
         /// Specifies the <see cref="LibraryManager"/> instance that was created when the application was initialized.
