@@ -89,7 +89,7 @@ namespace Juhta.Net.Extensions
             if (attributeNames != null)
             {
                 if (attributeValues == null)
-                    throw new ArgumentNullException(CommonMessages.Error001.FormatMessage("attributeValues"));
+                    throw new ArgumentNullException(nameof(attributeValues), CommonMessages.Error001.FormatMessage("attributeValues"));
 
                 else if (attributeNames.Length != attributeValues.Length)
                     throw new ArgumentException(CommonMessages.Error013.FormatMessage("attributeNames", "attributeValues"));

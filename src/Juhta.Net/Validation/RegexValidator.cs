@@ -123,7 +123,7 @@ namespace Juhta.Net.Validation
         protected RegexValidator(string[] patterns, RegexOptions options, PatternMatchMode patternMatchMode, ErrorMessage errorMessage)
         {
             if (patterns == null)
-                throw new ArgumentNullException(CommonMessages.Error001.FormatMessage("patterns"));
+                throw new ArgumentNullException(nameof(patterns), CommonMessages.Error001.FormatMessage("patterns"));
 
             m_patterns = new List<string>();
 

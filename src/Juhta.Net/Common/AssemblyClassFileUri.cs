@@ -53,7 +53,7 @@ namespace Juhta.Net.Common
             string fileUriOrig = fileUri;
 
             if (fileUri == null)
-                throw new ArgumentNullException(CommonMessages.Error001.FormatMessage("fileUri"));
+                throw new ArgumentNullException(nameof(fileUri), CommonMessages.Error001.FormatMessage("fileUri"));
 
             else if (!fileUri.Contains("://"))
             {
