@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Common;
+using Juhta.Net.Extensions;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -111,6 +112,7 @@ namespace Juhta.Net.LibraryManagement
         {
             XmlNode librariesNode;
             ILibraryHandle libraryHandle;
+            string configFileName;
 
             // Select the libraries XML node
             librariesNode = rootConfig.SelectSingleNode("//ns:application/ns:startup/ns:libraries", namespaceManager);
@@ -121,7 +123,9 @@ namespace Juhta.Net.LibraryManagement
             {
                 libraryHandle = LibraryHandleBase.CreateInstance(libraryNode);
 
-                InitializeLibrary(libraryHandle);
+                configFileName = ResolveConfigFileName(libraryNode, libraryHandle);
+
+                InitializeLibrary(libraryHandle, configFileName);
             }
         }
 
@@ -529,9 +533,11 @@ namespace Juhta.Net.LibraryManagement
         /// Initializes the library specified by a library handle.
         /// </summary>
         /// <param name="libraryHandle">Specifies a library handle.</param>
-        private void InitializeLibrary(ILibraryHandle libraryHandle)
+        /// <param name="configFileName">Specifies a configuration file name. Can be null, if the specified library is
+        /// not configurable.</param>
+        private void InitializeLibrary(ILibraryHandle libraryHandle, string configFileName)
         {
-            string configFileName = null, configFilePath = null;
+            string configFilePath = null;
             List<IDynamicLibrary> dynamicLibraries;
 
             try
@@ -555,7 +561,9 @@ namespace Juhta.Net.LibraryManagement
 
                 if (libraryHandle is IConfigurableLibraryBase)
                 {
-                    configFileName = ((IConfigurableLibraryBase)libraryHandle).ConfigFileName;
+                    // Check that the configuration file name is not null
+                    if (configFileName == null)
+                        throw new ArgumentNullException(nameof(configFileName), LibraryMessages.Error014.FormatMessage(libraryHandle.LibraryFileName));
 
                     configFilePath = m_application.ConfigDirectory + Path.DirectorySeparatorChar + configFileName;
 
@@ -865,6 +873,31 @@ namespace Juhta.Net.LibraryManagement
 
             if (alert)
                 Logger.LogAlert(LibraryMessages.Alert005);
+        }
+
+        /// <summary>
+        /// Resolves the configuration file name for a specified library.
+        /// </summary>
+        /// <param name="libraryNode">Specifies a library XML node.</param>
+        /// <param name="libraryHandle">Specifies an <see cref="ILibraryHandle"/> object created based on
+        /// <paramref name="libraryNode"/>.</param>
+        /// <returns>Returns the configuration file name for the specified library or null, if the library is not
+        /// configurable.</returns>
+        private string ResolveConfigFileName(XmlNode libraryNode, ILibraryHandle libraryHandle)
+        {
+            IConfigurableLibraryBase configurableLibrary = libraryHandle as IConfigurableLibraryBase;
+
+            if (configurableLibrary == null)
+                return(null);
+
+            else if (libraryNode.HasAttribute("configFileName"))
+                return(libraryNode.GetAttribute("configFileName"));
+
+            else if (configurableLibrary.ConfigFileName != null)
+                return(configurableLibrary.ConfigFileName);
+
+            else
+                return(m_application.DefaultConfigFileName);
         }
 
         /// <summary>

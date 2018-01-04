@@ -19,6 +19,8 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Gets the name of the configuration file.
         /// </summary>
+        /// <remarks>This property can return null, but in this case the configuration file name must be specified in
+        /// the core library's configuration (in the application node or in the corresponding library node).</remarks>
         string ConfigFileName {get;}
 
         #endregion

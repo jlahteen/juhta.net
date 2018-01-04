@@ -2960,6 +2960,8 @@
             <summary>
             Gets the name of the configuration file.
             </summary>
+            <remarks>This property can return null, but in this case the configuration file name must be specified in
+            the core library's configuration (in the application node or in the corresponding library node).</remarks>
         </member>
         <member name="T:Juhta.Net.LibraryManagement.IConfigurableLibraryState">
             <summary>
@@ -3430,11 +3432,13 @@
             </summary>
             <param name="library">Specifies a dynamic initializable library.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle,System.String)">
             <summary>
             Initializes the library specified by a library handle.
             </summary>
             <param name="libraryHandle">Specifies a library handle.</param>
+            <param name="configFileName">Specifies a configuration file name. Can be null, if the specified library is
+            not configurable.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.IsLibraryInitialized(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
@@ -3476,6 +3480,16 @@
             </summary>
             <param name="source">Specifies an event source.</param>
             <param name="e">Specifies event arguments.</param>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.ResolveConfigFileName(System.Xml.XmlNode,Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Resolves the configuration file name for a specified library.
+            </summary>
+            <param name="libraryNode">Specifies a library XML node.</param>
+            <param name="libraryHandle">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> object created based on
+            <paramref name="libraryNode"/>.</param>
+            <returns>Returns the configuration file name for the specified library or null, if the library is not
+            configurable.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartLibraryProcesses(Juhta.Net.LibraryManagement.ILibraryHandle)">
             <summary>
@@ -3668,7 +3682,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error014">
             <summary>
-            Free for the future use.
+            Configuration file name cannot be null for the configurable library '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error015">

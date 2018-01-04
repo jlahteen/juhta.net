@@ -102,12 +102,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process is currently unstable. You should restore the configuration file and possibly restart the process.");
 
-        // NOTE: Message ID 14 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Configuration file name cannot be null for the configurable library '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Configuration file name cannot be null for the configurable library '{0}'.");
 
         // NOTE: Message ID 15 is free
 
