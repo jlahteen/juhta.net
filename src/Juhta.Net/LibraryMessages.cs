@@ -107,12 +107,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Configuration file name cannot be null for the configurable library '{0}'.");
 
-        // NOTE: Message ID 15 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Dependency injection service '{0}' has a duplicate definition in the configuration.
         /// </summary>
-        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' has a duplicate definition in the configuration.");
 
         // NOTE: Message ID 16 is free
 
