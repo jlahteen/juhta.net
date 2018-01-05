@@ -11,8 +11,8 @@ using System;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// This exception will be thrown when an XML configuration file has passed schema validation but in further
-    /// analysis an invalid configuration value is encountered.
+    /// This exception will be thrown when a configuration file has passed schema validation but in further processing
+    /// an invalid configuration value is encountered.
     /// </summary>
     public class InvalidConfigValueException : Exception
     {
