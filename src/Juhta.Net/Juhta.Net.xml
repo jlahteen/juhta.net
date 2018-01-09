@@ -2605,15 +2605,25 @@
             libraries.
             </summary>
         </member>
-        <member name="M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)">
+        <member name="M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)">
             <summary>
             Creates an <see cref="T:System.Xml.XmlNamespaceManager"/> object corresponding to a specified framework library, XML
             configuration and schema version.
             </summary>
             <param name="libraryFileName">Specifies a framework library file name.</param>
-            <param name="config">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing a library configuration.</param>
+            <param name="anyConfigNode">Specifies an <see cref="T:System.Xml.XmlNode"/> object containing in a library
+            configuration.</param>
             <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
-            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object.</returns>
+            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object specified by the parameters.</returns>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)">
+            <summary>
+            Creates an <see cref="T:System.Xml.XmlNamespaceManager"/> object for a specified root library configuration.
+            </summary>
+            <param name="anyRootConfigNode">Specifies an <see cref="T:System.Xml.XmlNode"/> object containing in a root library
+            configuration.</param>
+            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object for the specified root library
+            configuration.</returns>
         </member>
         <member name="M:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)">
             <summary>
@@ -2633,6 +2643,11 @@
             Gets the file namespace of the common configuration XML schema.
             </summary>
         </member>
+        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigSchemaVersion">
+            <summary>
+            Gets the version of the common configuration XML schema.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.FrameworkConfig.RootConfigFileName">
             <summary>
             Gets the file name of the root configuration XML schema.
@@ -2643,7 +2658,7 @@
             Gets the file namespace of the root configuration XML schema.
             </summary>
         </member>
-        <member name="P:Juhta.Net.FrameworkConfig.RootConfigVersion">
+        <member name="P:Juhta.Net.FrameworkConfig.RootConfigSchemaVersion">
             <summary>
             Gets the version of the root configuration XML schema.
             </summary>
@@ -2658,12 +2673,17 @@
             Defines the file name of the common configuration XML schema.
             </summary>
         </member>
+        <member name="F:Juhta.Net.FrameworkConfig.c_commonConfigSchemaVersion">
+            <summary>
+            Defines the version of the common configuration XML schema.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigFileName">
             <summary>
             Defines the file name of the root configuration XML schema.
             </summary>
         </member>
-        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigVersion">
+        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigSchemaVersion">
             <summary>
             Defines the version of the root configuration XML schema.
             </summary>
@@ -3305,13 +3325,11 @@
             <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
             <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> instance.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibraries(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibraries(System.Xml.XmlDocument)">
             <summary>
             Initializes the libraries listed in a specified root configuration.
             </summary>
             <param name="rootConfig">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration.</param>
-            <param name="namespaceManager">Specifies an <see cref="T:System.Xml.XmlNamespaceManager"/> object for selecting nodes in
-            <paramref name="rootConfig"/>.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartConfigFileWatching">
             <summary>
@@ -3692,7 +3710,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error016">
             <summary>
-            Free for the future use.
+            No dependency injection service was found with the name '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -4190,9 +4208,42 @@
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Services.Service">
+            <summary>
+            Defines a class that encapsulates a dependency injection service.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.Service.CreateInstance``1">
+            <summary>
+            Creates an instance of the encapsulated dependency injection service.
+            </summary>
+            <typeparam name="TService">Specifies a service type.</typeparam>
+            <returns>Returns the created instance casted to the specified service type.</returns>
+        </member>
         <member name="P:Juhta.Net.Services.Service.Name">
             <summary>
             Gets the name of the service.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.Service.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serviceNode">Specifies a service XML node based on which to initialize the instance.</param>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_constructorParams">
+            <summary>
+            Specifies an array of constructor parameters for creating instances of the service. Can be null.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_libraryClass">
+            <summary>
+            Specifies the library class that implements the service.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_libraryFileName">
+            <summary>
+            Specifies the file name of the library that contains the service.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_name">
@@ -4202,28 +4253,37 @@
         </member>
         <member name="T:Juhta.Net.Services.ServiceFactory">
             <summary>
-            Defines a class that provides a method for creating instances of the configured dependency injection services.
+            Defines a class that provides methods for creating instances of the configured dependency injection services.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1">
             <summary>
-            Creates an instance of the specified service type.
+            Creates an instance of a dependency injection service.
             </summary>
             <typeparam name="TService">Specifies a service type.</typeparam>
-            <returns>Returns the created instance of the specified service type.</returns>
+            <returns>Returns the created instance casted to the specified service type.</returns>
+            <remarks>The method locates the dependency injection service with the full type name of
+            <typeparamref name="TService"/>.</remarks>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(System.String)">
             <summary>
-            todo
+            Creates an instance of a dependency injection service corresponding to a specified service name.
             </summary>
-            <typeparam name="TService"></typeparam>
-            <returns></returns>
+            <typeparam name="TService">Specifies a service type.</typeparam>
+            <param name="serviceName">Specifies a service name.</param>
+            <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.#ctor(System.Xml.XmlNode)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="servicesNode">Specifies a services XML node based on which to initialize the instance.</param>
+            <param name="servicesNode">Specifies a services XML node based on which to initialize the instance. Can be
+            null.</param>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
+            <summary>
+            Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            </summary>
         </member>
         <member name="T:Juhta.Net.Validation.IStringValidator">
             <summary>

@@ -112,12 +112,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' has a duplicate definition in the configuration.");
 
-        // NOTE: Message ID 16 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// No dependency injection service was found with the name '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the name '{0}'.");
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library

@@ -170,11 +170,8 @@ namespace Juhta.Net
 
                 if ((rootConfig = LoadAndValidateRootConfig()) != null)
                 {
-                    // Create and initialize a namespace manager for the configuration
-
-                    namespaceManager = new XmlNamespaceManager(rootConfig.NameTable);
-
-                    namespaceManager.AddNamespace("ns", String.Format("{0}root-{1}.xsd", FrameworkConfig.RootXmlns, FrameworkConfig.RootConfigVersion));
+                    // Create a namespace manager for the configuration
+                    namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(rootConfig);
 
                     // Initialize the attribute fields
                     InitializeAttributeFields(rootConfig, namespaceManager);
@@ -183,7 +180,7 @@ namespace Juhta.Net
 
                     m_libraryManager = new LibraryManager(this);
 
-                    m_libraryManager.InitializeLibraries(rootConfig, namespaceManager);
+                    m_libraryManager.InitializeLibraries(rootConfig);
 
                     // Start watching configuration file changes
                     m_libraryManager.StartConfigFileWatching();

@@ -12,9 +12,13 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using System.Xml;
+using Juhta.Net.Common;
 
 namespace Juhta.Net.Services
 {
+    /// <summary>
+    /// Defines a class that encapsulates a dependency injection service.
+    /// </summary>
     public class Service
     {
         #region Static Constructor
@@ -24,6 +28,17 @@ namespace Juhta.Net.Services
         #endregion
 
         #region Public Methods
+
+        /// <summary>
+        /// Creates an instance of the encapsulated dependency injection service.
+        /// </summary>
+        /// <typeparam name="TService">Specifies a service type.</typeparam>
+        /// <returns>Returns the created instance casted to the specified service type.</returns>
+        public TService CreateInstance<TService>() where TService : class
+        {
+            return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParams));
+        }
+
         #endregion
 
         #region Public Properties
@@ -64,8 +79,14 @@ namespace Juhta.Net.Services
 
         #region Internal Constructors
 
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="serviceNode">Specifies a service XML node based on which to initialize the instance.</param>
         internal Service(XmlNode serviceNode)
         {
+            XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
+
 
         }
 
@@ -90,6 +111,21 @@ namespace Juhta.Net.Services
         #endregion
 
         #region Private Fields
+
+        /// <summary>
+        /// Specifies an array of constructor parameters for creating instances of the service. Can be null.
+        /// </summary>
+        private object[] m_constructorParams;
+
+        /// <summary>
+        /// Specifies the library class that implements the service.
+        /// </summary>
+        private string m_libraryClass;
+
+        /// <summary>
+        /// Specifies the file name of the library that contains the service.
+        /// </summary>
+        private string m_libraryFileName;
 
         /// <summary>
         /// Stores the <see cref="Name"/> property.
