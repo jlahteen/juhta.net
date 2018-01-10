@@ -4208,6 +4208,36 @@
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Services.Param.Name">
+            <summary>
+            Gets the name of the parameter.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.Param.Type">
+            <summary>
+            Gets the type name of the parameter.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.Param.Value">
+            <summary>
+            Gets the value of the parameter.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Param.m_name">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Param.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Param.m_type">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Param.Type"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Param.m_value">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Param.Value"/> property.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Services.Service">
             <summary>
             Defines a class that encapsulates a dependency injection service.
@@ -4233,7 +4263,7 @@
         </member>
         <member name="F:Juhta.Net.Services.Service.m_constructorParams">
             <summary>
-            Specifies an array of constructor parameters for creating instances of the service. Can be null.
+            Specifies an array of the constructor parameters for creating instances of the service. Can be null.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_libraryClass">

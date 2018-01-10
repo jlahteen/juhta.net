@@ -6,13 +6,10 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.Serialization;
-using System.Xml;
 using Juhta.Net.Common;
+using Juhta.Net.Extensions;
+using System.Collections.Generic;
+using System.Xml;
 
 namespace Juhta.Net.Services
 {
@@ -21,12 +18,6 @@ namespace Juhta.Net.Services
     /// </summary>
     public class Service
     {
-        #region Static Constructor
-        #endregion
-
-        #region Public Constructors
-        #endregion
-
         #region Public Methods
 
         /// <summary>
@@ -53,30 +44,6 @@ namespace Juhta.Net.Services
 
         #endregion
 
-        #region Public Indexers
-        #endregion
-
-        #region Public Types
-        #endregion
-
-        #region Public Constants
-        #endregion
-
-        #region Protected Constructors
-        #endregion
-
-        #region Protected Methods
-        #endregion
-
-        #region Protected Properties
-        #endregion
-
-        #region Protected Types
-        #endregion
-
-        #region Protected Fields
-        #endregion
-
         #region Internal Constructors
 
         /// <summary>
@@ -85,35 +52,36 @@ namespace Juhta.Net.Services
         /// <param name="serviceNode">Specifies a service XML node based on which to initialize the instance.</param>
         internal Service(XmlNode serviceNode)
         {
+            XmlNode constructorNode;
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
+            List<Param> constructorParams = new List<Param>();
 
+            m_name = serviceNode.GetAttribute("name");
 
+            m_libraryFileName = serviceNode.GetAttribute("libraryFileName");
+
+            m_libraryClass = serviceNode.GetAttribute("libraryClass");
+
+            constructorNode = serviceNode.SelectSingleNode("//ns:constructor", namespaceManager);
+
+            if (constructorNode == null)
+                return;
+
+            foreach (XmlNode paramNode in constructorNode.ChildNodes)
+                constructorParams.Add(new Param(paramNode));
+
+            m_constructorParams = new object[constructorParams.Count];
+
+            for (int i = 0; i < m_constructorParams.Length; i++)
+                m_constructorParams[i] = constructorParams[i].Value;
         }
 
-        #endregion
-
-        #region Internal Methods
-        #endregion
-
-        #region Internal Properties
-        #endregion
-
-        #region Internal Types
-        #endregion
-
-        #region Private Methods
-        #endregion
-
-        #region Private Types
-        #endregion
-
-        #region Private Constants
         #endregion
 
         #region Private Fields
 
         /// <summary>
-        /// Specifies an array of constructor parameters for creating instances of the service. Can be null.
+        /// Specifies an array of the constructor parameters for creating instances of the service. Can be null.
         /// </summary>
         private object[] m_constructorParams;
 
@@ -132,9 +100,6 @@ namespace Juhta.Net.Services
         /// </summary>
         private string m_name;
 
-        #endregion
-
-        #region Destructor
         #endregion
     }
 }
