@@ -6,17 +6,16 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.Serialization;
-using System.Xml;
-using Juhta.Net.Extensions;
 using Juhta.Net.Common;
+using Juhta.Net.Extensions;
+using System;
+using System.Xml;
 
 namespace Juhta.Net.Services
 {
+    /// <summary>
+    /// Defines a class that represents parameters used in consctructors of dependency injections services.
+    /// </summary>
     internal class Param
     {
         #region Public Properties
@@ -32,7 +31,7 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Gets the type name of the parameter.
         /// </summary>
-        public string Type
+        public ParamType Type
         {
             get {return(m_type);}
         }
@@ -47,39 +46,17 @@ namespace Juhta.Net.Services
 
         #endregion
 
-        #region Public Indexers
-        #endregion
-
-        #region Public Types
-        #endregion
-
-        #region Public Constants
-        #endregion
-
-        #region Protected Constructors
-        #endregion
-
-        #region Protected Methods
-        #endregion
-
-        #region Protected Properties
-        #endregion
-
-        #region Protected Types
-        #endregion
-
-        #region Protected Fields
-        #endregion
-
         #region Internal Constructors
 
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="paramNode">Specifies an XML node based on which to initialize the instance.</param>
         internal Param(XmlNode paramNode)
         {
             m_name = paramNode.GetAttribute("name");
 
-            m_type = paramNode.GetAttribute("type");
-
-            SetValue(paramNode.GetAttribute("value"));
+            SetTypeAndValue(paramNode);
         }
 
         #endregion
@@ -95,92 +72,128 @@ namespace Juhta.Net.Services
 
         #region Private Methods
 
-        private void SetValue(string value)
+        /// <summary>
+        /// Initializes the type and value fields based on a specified XML node.
+        /// </summary>
+        /// <param name="paramNode">Specifies an XML node.</param>
+        private void SetTypeAndValue(XmlNode paramNode)
         {
-            switch (m_type)
+            switch (paramNode.LocalName)
             {
-                case "System.Boolean":
-                    m_value = Convert.ToBoolean(value);
+                case "booleanParam":
+                    m_type = ParamType.Boolean;
+
+                    m_value = Convert.ToBoolean(paramNode.InnerText);
 
                     break;
 
-                case "System.Byte":
-                    m_value = Convert.ToByte(value);
+                case "byteParam":
+                    m_type = ParamType.Byte;
+
+                    m_value = Convert.ToByte(paramNode.InnerText);
 
                     break;
 
-                case "System.Char":
-                    m_value = Convert.ToChar(value);
+                case "charParam":
+                    m_type = ParamType.Char;
+
+                    m_value = Convert.ToChar(paramNode.InnerText);
 
                     break;
 
-                case "System.DateTime":
-                    m_value = Convert.ToDateTime(value.Replace(',', '.'));
+                case "dateTimeParam":
+                    m_type = ParamType.DateTime;
+
+                    m_value = Convert.ToDateTime(paramNode.InnerText);
 
                     break;
 
-                case "System.Decimal":
-                    m_value = Convert.ToDecimal(value.Replace('.', ','));
+                case "decimalParam":
+                    m_type = ParamType.Decimal;
+
+                    m_value = Convert.ToDecimal(paramNode.InnerText);
 
                     break;
 
-                case "System.Double":
-                    m_value = Convert.ToDouble(value.Replace('.', ','));
+                case "doubleParam":
+                    m_type = ParamType.Double;
+
+                    m_value = Convert.ToDouble(paramNode.InnerText);
 
                     break;
 
-                case "System.Int16":
-                    m_value = Convert.ToInt16(value);
+                case "int16Param":
+                    m_type = ParamType.Int16;
+
+                    m_value = Convert.ToInt16(paramNode.InnerText);
 
                     break;
 
-                case "System.Int32":
-                    m_value = Convert.ToInt32(value);
+                case "int32Param":
+                    m_type = ParamType.Int32;
+
+                    m_value = Convert.ToInt32(paramNode.InnerText);
 
                     break;
 
-                case "System.Int64":
-                    m_value = Convert.ToInt64(value);
+                case "int64Param":
+                    m_type = ParamType.Int64;
+
+                    m_value = Convert.ToInt64(paramNode.InnerText);
 
                     break;
 
-                case "System.SByte":
-                    m_value = Convert.ToSByte(value);
+                case "sbyteParam":
+                    m_type = ParamType.SByte;
+
+                    m_value = Convert.ToSByte(paramNode.InnerText);
 
                     break;
 
-                case "System.Single":
-                    m_value = Convert.ToSingle(value.Replace('.', ','));
+                case "singleParam":
+                    m_type = ParamType.Single;
+
+                    m_value = Convert.ToSingle(paramNode.InnerText);
 
                     break;
 
-                case "System.String":
-                    m_value = Convert.ToString(value);
+                case "stringParam":
+                    m_type = ParamType.String;
+
+                    m_value = Convert.ToString(paramNode.InnerText);
 
                     break;
 
-                case "System.TimeSpan":
-                    m_value = TimeSpan.Parse(value.Replace(',', '.'));
+                case "timeSpanParam":
+                    m_type = ParamType.TimeSpan;
+
+                    m_value = TimeSpan.Parse(paramNode.InnerText);
 
                     break;
 
-                case "System.UInt16":
-                    m_value = Convert.ToUInt16(value);
+                case "uint16Param":
+                    m_type = ParamType.UInt16;
+
+                    m_value = Convert.ToUInt16(paramNode.InnerText);
 
                     break;
 
-                case "System.UInt32":
-                    m_value = Convert.ToUInt32(value);
+                case "uint32Param":
+                    m_type = ParamType.UInt32;
+
+                    m_value = Convert.ToUInt32(paramNode.InnerText);
 
                     break;
 
-                case "System.UInt64":
-                    m_value = Convert.ToUInt64(value);
+                case "uint64Param":
+                    m_type = ParamType.UInt64;
+
+                    m_value = Convert.ToUInt64(paramNode.InnerText);
 
                     break;
 
                 default:
-                    throw new UnimplementedCodeBranchException(m_type);
+                    throw new UnimplementedCodeBranchException(paramNode.LocalName);
             }
         }
 
@@ -202,7 +215,7 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Stores the <see cref="Type"/> property.
         /// </summary>
-        private string m_type;
+        private ParamType m_type;
 
         /// <summary>
         /// Stores the <see cref="Value"/> property.

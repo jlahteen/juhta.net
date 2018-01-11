@@ -4208,6 +4208,11 @@
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Services.Param">
+            <summary>
+            Defines a class that represents parameters used in consctructors of dependency injections services.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.Services.Param.Name">
             <summary>
             Gets the name of the parameter.
@@ -4222,6 +4227,18 @@
             <summary>
             Gets the value of the parameter.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.Param.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="paramNode">Specifies an XML node based on which to initialize the instance.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.Param.SetTypeAndValue(System.Xml.XmlNode)">
+            <summary>
+            Initializes the type and value fields based on a specified XML node.
+            </summary>
+            <param name="paramNode">Specifies an XML node.</param>
         </member>
         <member name="F:Juhta.Net.Services.Param.m_name">
             <summary>
