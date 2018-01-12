@@ -13,7 +13,8 @@ using System.Xml;
 namespace Juhta.Net.Services
 {
     /// <summary>
-    /// Defines a class that provides methods for creating instances of the configured dependency injection services.
+    /// Defines a class that provides methods for getting metadata and creating instances of the configured dependency
+    /// injection services.
     /// </summary>
     public class ServiceFactory : Singleton<ServiceFactory>
     {
@@ -45,6 +46,25 @@ namespace Juhta.Net.Services
                 return(service.CreateInstance<TService>());
             else
                 throw new KeyNotFoundException(LibraryMessages.Error016.FormatMessage(serviceName));
+        }
+
+        /// <summary>
+        /// Gets the <see cref="Service"/> instances created based on the configuration.
+        /// </summary>
+        /// <returns>Returns an array of the <see cref="Service"/> instances created based on the configuration. The
+        /// array is empty if there are no configured dependency injection services.</returns>
+        public Service[] GetServices()
+        {
+            Service[] services;
+
+            if (m_services.Count == 0)
+                return(new Service[]{});
+
+            services = new Service[m_services.Count];
+
+            m_services.Values.CopyTo(services, 0);
+
+            return(services);
         }
 
         #endregion

@@ -4210,7 +4210,7 @@
         </member>
         <member name="T:Juhta.Net.Services.Param">
             <summary>
-            Defines a class that represents parameters used in consctructors of dependency injections services.
+            Defines a class that represents a single parameter used in constructors of dependency injection services.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Param.Name">
@@ -4220,7 +4220,7 @@
         </member>
         <member name="P:Juhta.Net.Services.Param.Type">
             <summary>
-            Gets the type name of the parameter.
+            Gets the type of the parameter.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Param.Value">
@@ -4257,7 +4257,7 @@
         </member>
         <member name="T:Juhta.Net.Services.Service">
             <summary>
-            Defines a class that encapsulates a dependency injection service.
+            Defines a class that encapsulates the metadata of a dependency injection service.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.Service.CreateInstance``1">
@@ -4267,9 +4267,25 @@
             <typeparam name="TService">Specifies a service type.</typeparam>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
+        <member name="P:Juhta.Net.Services.Service.ConstructorParams">
+            <summary>
+            Gets an array of <see cref="T:Juhta.Net.Services.Param"/> objects specifying the constructor parameters for the dependency
+            injection service. Can be null.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.Service.LibraryClass">
+            <summary>
+            Gets the library class that implements the dependency injection service.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.Service.LibraryFileName">
+            <summary>
+            Gets the file name of the library that contains the dependency injection service.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.Services.Service.Name">
             <summary>
-            Gets the name of the service.
+            Gets the name of the dependency injection service.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.Service.#ctor(System.Xml.XmlNode)">
@@ -4280,17 +4296,22 @@
         </member>
         <member name="F:Juhta.Net.Services.Service.m_constructorParams">
             <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Service.ConstructorParams"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_constructorParamObjs">
+            <summary>
             Specifies an array of the constructor parameters for creating instances of the service. Can be null.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_libraryClass">
             <summary>
-            Specifies the library class that implements the service.
+            Stores the <see cref="P:Juhta.Net.Services.Service.LibraryClass"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_libraryFileName">
             <summary>
-            Specifies the file name of the library that contains the service.
+            Stores the <see cref="P:Juhta.Net.Services.Service.LibraryFileName"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_name">
@@ -4300,7 +4321,8 @@
         </member>
         <member name="T:Juhta.Net.Services.ServiceFactory">
             <summary>
-            Defines a class that provides methods for creating instances of the configured dependency injection services.
+            Defines a class that provides methods for getting metadata and creating instances of the configured dependency
+            injection services.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1">
@@ -4320,6 +4342,13 @@
             <param name="serviceName">Specifies a service name.</param>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
+        <member name="M:Juhta.Net.Services.ServiceFactory.GetServices">
+            <summary>
+            Gets the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            </summary>
+            <returns>Returns an array of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration. The
+            array is empty if there are no configured dependency injection services.</returns>
+        </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.#ctor(System.Xml.XmlNode)">
             <summary>
             Initializes a new instance.
@@ -4330,6 +4359,91 @@
         <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
             <summary>
             Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Services.ParamType">
+            <summary>
+            Defines an enumeration for the parameter types used in constructors of depencendy injection services.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Boolean">
+            <summary>
+            Specifies the <see cref="T:System.Boolean"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Byte">
+            <summary>
+            Specifies the <see cref="T:System.Byte"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Char">
+            <summary>
+            Specifies the <see cref="T:System.Char"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.DateTime">
+            <summary>
+            Specifies the <see cref="T:System.DateTime"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Decimal">
+            <summary>
+            Specifies the <see cref="T:System.Decimal"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Double">
+            <summary>
+            Specifies the <see cref="T:System.Double"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Int16">
+            <summary>
+            Specifies the <see cref="T:System.Int16"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Int32">
+            <summary>
+            Specifies the <see cref="T:System.Int32"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Int64">
+            <summary>
+            Specifies the <see cref="T:System.Int64"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.SByte">
+            <summary>
+            Specifies the <see cref="T:System.SByte"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Single">
+            <summary>
+            Specifies the <see cref="T:System.Single"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.String">
+            <summary>
+            Specifies the <see cref="T:System.String"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.TimeSpan">
+            <summary>
+            Specifies the <see cref="T:System.TimeSpan"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.UInt16">
+            <summary>
+            Specifies the <see cref="T:System.UInt16"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.UInt32">
+            <summary>
+            Specifies the <see cref="T:System.UInt32"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.UInt64">
+            <summary>
+            Specifies the <see cref="T:System.UInt64"/> type.
             </summary>
         </member>
         <member name="T:Juhta.Net.Validation.IStringValidator">

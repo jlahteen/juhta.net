@@ -14,7 +14,7 @@ using System.Xml;
 namespace Juhta.Net.Services
 {
     /// <summary>
-    /// Defines a class that encapsulates a dependency injection service.
+    /// Defines a class that encapsulates the metadata of a dependency injection service.
     /// </summary>
     public class Service
     {
@@ -27,7 +27,7 @@ namespace Juhta.Net.Services
         /// <returns>Returns the created instance casted to the specified service type.</returns>
         public TService CreateInstance<TService>() where TService : class
         {
-            return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParams));
+            return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParamObjs));
         }
 
         #endregion
@@ -35,7 +35,32 @@ namespace Juhta.Net.Services
         #region Public Properties
 
         /// <summary>
-        /// Gets the name of the service.
+        /// Gets an array of <see cref="Param"/> objects specifying the constructor parameters for the dependency
+        /// injection service. Can be null.
+        /// </summary>
+        public Param[] ConstructorParams
+        {
+            get {return(m_constructorParams);}
+        }
+
+        /// <summary>
+        /// Gets the library class that implements the dependency injection service.
+        /// </summary>
+        public string LibraryClass
+        {
+            get {return(m_libraryClass);}
+        }
+
+        /// <summary>
+        /// Gets the file name of the library that contains the dependency injection service.
+        /// </summary>
+        public string LibraryFileName
+        {
+            get {return(m_libraryFileName);}
+        }
+
+        /// <summary>
+        /// Gets the name of the dependency injection service.
         /// </summary>
         public string Name
         {
@@ -70,10 +95,15 @@ namespace Juhta.Net.Services
             foreach (XmlNode paramNode in constructorNode.ChildNodes)
                 constructorParams.Add(new Param(paramNode));
 
-            m_constructorParams = new object[constructorParams.Count];
+            if (constructorParams.Count == 0)
+                return;
 
-            for (int i = 0; i < m_constructorParams.Length; i++)
-                m_constructorParams[i] = constructorParams[i].Value;
+            m_constructorParamObjs = new object[constructorParams.Count];
+
+            for (int i = 0; i < m_constructorParamObjs.Length; i++)
+                m_constructorParamObjs[i] = constructorParams[i].Value;
+
+            m_constructorParams = constructorParams.ToArray();
         }
 
         #endregion
@@ -81,17 +111,22 @@ namespace Juhta.Net.Services
         #region Private Fields
 
         /// <summary>
-        /// Specifies an array of the constructor parameters for creating instances of the service. Can be null.
+        /// Stores the <see cref="ConstructorParams"/> property.
         /// </summary>
-        private object[] m_constructorParams;
+        private Param[] m_constructorParams;
 
         /// <summary>
-        /// Specifies the library class that implements the service.
+        /// Specifies an array of the constructor parameters for creating instances of the service. Can be null.
+        /// </summary>
+        private object[] m_constructorParamObjs;
+
+        /// <summary>
+        /// Stores the <see cref="LibraryClass"/> property.
         /// </summary>
         private string m_libraryClass;
 
         /// <summary>
-        /// Specifies the file name of the library that contains the service.
+        /// Stores the <see cref="LibraryFileName"/> property.
         /// </summary>
         private string m_libraryFileName;
 

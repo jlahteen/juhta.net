@@ -14,9 +14,9 @@ using System.Xml;
 namespace Juhta.Net.Services
 {
     /// <summary>
-    /// Defines a class that represents parameters used in consctructors of dependency injections services.
+    /// Defines a class that represents a single parameter used in constructors of dependency injection services.
     /// </summary>
-    internal class Param
+    public class Param
     {
         #region Public Properties
 
@@ -29,7 +29,7 @@ namespace Juhta.Net.Services
         }
 
         /// <summary>
-        /// Gets the type name of the parameter.
+        /// Gets the type of the parameter.
         /// </summary>
         public ParamType Type
         {
@@ -61,15 +61,6 @@ namespace Juhta.Net.Services
 
         #endregion
 
-        #region Internal Methods
-        #endregion
-
-        #region Internal Properties
-        #endregion
-
-        #region Internal Types
-        #endregion
-
         #region Private Methods
 
         /// <summary>
@@ -80,112 +71,112 @@ namespace Juhta.Net.Services
         {
             switch (paramNode.LocalName)
             {
-                case "booleanParam":
+                case "boolean":
                     m_type = ParamType.Boolean;
 
                     m_value = Convert.ToBoolean(paramNode.InnerText);
 
                     break;
 
-                case "byteParam":
+                case "byte":
                     m_type = ParamType.Byte;
 
                     m_value = Convert.ToByte(paramNode.InnerText);
 
                     break;
 
-                case "charParam":
+                case "char":
                     m_type = ParamType.Char;
 
                     m_value = Convert.ToChar(paramNode.InnerText);
 
                     break;
 
-                case "dateTimeParam":
+                case "dateTime":
                     m_type = ParamType.DateTime;
 
                     m_value = Convert.ToDateTime(paramNode.InnerText);
 
                     break;
 
-                case "decimalParam":
+                case "decimal":
                     m_type = ParamType.Decimal;
 
                     m_value = Convert.ToDecimal(paramNode.InnerText);
 
                     break;
 
-                case "doubleParam":
+                case "double":
                     m_type = ParamType.Double;
 
                     m_value = Convert.ToDouble(paramNode.InnerText);
 
                     break;
 
-                case "int16Param":
+                case "int16":
                     m_type = ParamType.Int16;
 
                     m_value = Convert.ToInt16(paramNode.InnerText);
 
                     break;
 
-                case "int32Param":
+                case "int32":
                     m_type = ParamType.Int32;
 
                     m_value = Convert.ToInt32(paramNode.InnerText);
 
                     break;
 
-                case "int64Param":
+                case "int64":
                     m_type = ParamType.Int64;
 
                     m_value = Convert.ToInt64(paramNode.InnerText);
 
                     break;
 
-                case "sbyteParam":
+                case "sbyte":
                     m_type = ParamType.SByte;
 
                     m_value = Convert.ToSByte(paramNode.InnerText);
 
                     break;
 
-                case "singleParam":
+                case "single":
                     m_type = ParamType.Single;
 
                     m_value = Convert.ToSingle(paramNode.InnerText);
 
                     break;
 
-                case "stringParam":
+                case "string":
                     m_type = ParamType.String;
 
                     m_value = Convert.ToString(paramNode.InnerText);
 
                     break;
 
-                case "timeSpanParam":
+                case "timeSpan":
                     m_type = ParamType.TimeSpan;
 
                     m_value = TimeSpan.Parse(paramNode.InnerText);
 
                     break;
 
-                case "uint16Param":
+                case "uint16":
                     m_type = ParamType.UInt16;
 
                     m_value = Convert.ToUInt16(paramNode.InnerText);
 
                     break;
 
-                case "uint32Param":
+                case "uint32":
                     m_type = ParamType.UInt32;
 
                     m_value = Convert.ToUInt32(paramNode.InnerText);
 
                     break;
 
-                case "uint64Param":
+                case "uint64":
                     m_type = ParamType.UInt64;
 
                     m_value = Convert.ToUInt64(paramNode.InnerText);
@@ -197,12 +188,6 @@ namespace Juhta.Net.Services
             }
         }
 
-        #endregion
-
-        #region Private Types
-        #endregion
-
-        #region Private Constants
         #endregion
 
         #region Private Fields
@@ -222,9 +207,6 @@ namespace Juhta.Net.Services
         /// </summary>
         private object m_value;
 
-        #endregion
-
-        #region Destructor
         #endregion
     }
 }
