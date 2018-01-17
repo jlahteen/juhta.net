@@ -31,6 +31,11 @@ namespace Juhta.Net.Services
         Char,
 
         /// <summary>
+        /// Maps to the <see cref="System.DateTime"/> type so that the time part is 00:00:00.
+        /// </summary>
+        Date,
+
+        /// <summary>
         /// Specifies the <see cref="System.DateTime"/> type.
         /// </summary>
         DateTime,
@@ -44,6 +49,16 @@ namespace Juhta.Net.Services
         /// Specifies the <see cref="System.Double"/> type.
         /// </summary>
         Double,
+
+        /// <summary>
+        /// Maps to the <see cref="System.Single"/> type.
+        /// </summary>
+        Float,
+
+        /// <summary>
+        /// Maps to the <see cref="System.Int32"/> type.
+        /// </summary>
+        Int,
 
         /// <summary>
         /// Specifies the <see cref="System.Int16"/> type.
@@ -61,9 +76,19 @@ namespace Juhta.Net.Services
         Int64,
 
         /// <summary>
+        /// Maps to the <see cref="System.Int64"/> type.
+        /// </summary>
+        Long,
+
+        /// <summary>
         /// Specifies the <see cref="System.SByte"/> type.
         /// </summary>
         SByte,
+
+        /// <summary>
+        /// Maps to the <see cref="System.Int16"/> type.
+        /// </summary>
+        Short,
 
         /// <summary>
         /// Specifies the <see cref="System.Single"/> type.
@@ -76,9 +101,19 @@ namespace Juhta.Net.Services
         String,
 
         /// <summary>
+        /// Maps to the <see cref="System.DateTime"/> type so that the date part is uninitialized.
+        /// </summary>
+        Time,
+
+        /// <summary>
         /// Specifies the <see cref="System.TimeSpan"/> type.
         /// </summary>
         TimeSpan,
+
+        /// <summary>
+        /// Maps to the <see cref="System.UInt32"/> type.
+        /// </summary>
+        UInt,
 
         /// <summary>
         /// Specifies the <see cref="System.UInt16"/> type.
@@ -93,7 +128,17 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Specifies the <see cref="System.UInt64"/> type.
         /// </summary>
-        UInt64
+        UInt64,
+
+        /// <summary>
+        /// Maps to the <see cref="System.UInt64"/> type.
+        /// </summary>
+        ULong,
+
+        /// <summary>
+        /// Maps to the <see cref="System.UInt16"/> type.
+        /// </summary>
+        UShort
     }
 
     #endregion

@@ -113,13 +113,18 @@
             Gets the name of the application.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Application.InitializeAttributeFields(System.Xml.XmlDocument,System.Xml.XmlNamespaceManager)">
+        <member name="P:Juhta.Net.Application.ServiceFactory">
+            <summary>
+            Gets the <see cref="P:Juhta.Net.Application.ServiceFactory"/> singleton instance that provides access to the application's
+            dependency injection services.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Application.InitializeAttributeFields(System.Xml.XmlNode)">
             <summary>
             Initializes those fields that are determined by the attributes of the application XML node.
             </summary>
-            <param name="rootConfig">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration.</param>
-            <param name="namespaceManager">Specifies an <see cref="T:System.Xml.XmlNamespaceManager"/> object for selecting nodes in
-            <paramref name="rootConfig"/>.</param>
+            <param name="applicationNode">Specifies an application XML node based on which to initialize the attribute
+            fields.</param>
         </member>
         <member name="M:Juhta.Net.Application.LoadAndValidateRootConfig">
             <summary>
@@ -172,6 +177,11 @@
         <member name="F:Juhta.Net.Application.m_name">
             <summary>
             Stores the <see cref="P:Juhta.Net.Application.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Application.m_serviceFactory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Application.ServiceFactory"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.Application.m_state">
@@ -3325,11 +3335,12 @@
             <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
             <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2"/> instance.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibraries(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.LibraryManagement.LibraryManager.InitializeLibraries(System.Xml.XmlNode)">
             <summary>
-            Initializes the libraries listed in a specified root configuration.
+            Initializes the libraries listed in a specified libraries XML node.
             </summary>
-            <param name="rootConfig">Specifies an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration.</param>
+            <param name="librariesNode">Specifies a libraries XML node based on which to initialize the instance. Can
+            be null.</param>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryManager.StartConfigFileWatching">
             <summary>
@@ -3946,7 +3957,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error060">
             <summary>
-            Free for the future use.
+            Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error061">
@@ -4381,6 +4392,11 @@
             Specifies the <see cref="T:System.Char"/> type.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Services.ParamType.Date">
+            <summary>
+            Maps to the <see cref="T:System.DateTime"/> type so that the time part is 00:00:00.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Services.ParamType.DateTime">
             <summary>
             Specifies the <see cref="T:System.DateTime"/> type.
@@ -4394,6 +4410,16 @@
         <member name="F:Juhta.Net.Services.ParamType.Double">
             <summary>
             Specifies the <see cref="T:System.Double"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Float">
+            <summary>
+            Maps to the <see cref="T:System.Single"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Int">
+            <summary>
+            Maps to the <see cref="T:System.Int32"/> type.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.ParamType.Int16">
@@ -4411,9 +4437,19 @@
             Specifies the <see cref="T:System.Int64"/> type.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Services.ParamType.Long">
+            <summary>
+            Maps to the <see cref="T:System.Int64"/> type.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Services.ParamType.SByte">
             <summary>
             Specifies the <see cref="T:System.SByte"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.Short">
+            <summary>
+            Maps to the <see cref="T:System.Int16"/> type.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.ParamType.Single">
@@ -4426,9 +4462,19 @@
             Specifies the <see cref="T:System.String"/> type.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Services.ParamType.Time">
+            <summary>
+            Maps to the <see cref="T:System.DateTime"/> type so that the date part is uninitialized.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Services.ParamType.TimeSpan">
             <summary>
             Specifies the <see cref="T:System.TimeSpan"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.UInt">
+            <summary>
+            Maps to the <see cref="T:System.UInt32"/> type.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.ParamType.UInt16">
@@ -4444,6 +4490,16 @@
         <member name="F:Juhta.Net.Services.ParamType.UInt64">
             <summary>
             Specifies the <see cref="T:System.UInt64"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.ULong">
+            <summary>
+            Maps to the <see cref="T:System.UInt64"/> type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ParamType.UShort">
+            <summary>
+            Maps to the <see cref="T:System.UInt16"/> type.
             </summary>
         </member>
         <member name="T:Juhta.Net.Validation.IStringValidator">

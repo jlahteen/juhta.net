@@ -9,6 +9,7 @@
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace Juhta.Net.Services
@@ -92,8 +93,17 @@ namespace Juhta.Net.Services
 
                     break;
 
+                case "date":
+                    m_type = ParamType.Date;
+
+                    // todo
+                    break;
+
                 case "dateTime":
                     m_type = ParamType.DateTime;
+
+                    if (!Regex.IsMatch(paramNode.InnerText, @"^\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d$"))
+                        throw new InvalidConfigValueException(LibraryMessages.Error060.FormatMessage(paramNode.InnerText, m_name, ParamType.DateTime));
 
                     m_value = Convert.ToDateTime(paramNode.InnerText);
 
@@ -110,6 +120,20 @@ namespace Juhta.Net.Services
                     m_type = ParamType.Double;
 
                     m_value = Convert.ToDouble(paramNode.InnerText);
+
+                    break;
+
+                case "float":
+                    m_type = ParamType.Float;
+
+                    m_value = Convert.ToSingle(paramNode.InnerText);
+
+                    break;
+
+                case "int":
+                    m_type = ParamType.Int;
+
+                    m_value = Convert.ToInt32(paramNode.InnerText);
 
                     break;
 
@@ -134,10 +158,24 @@ namespace Juhta.Net.Services
 
                     break;
 
+                case "long":
+                    m_type = ParamType.Long;
+
+                    m_value = Convert.ToInt64(paramNode.InnerText);
+
+                    break;
+
                 case "sbyte":
                     m_type = ParamType.SByte;
 
                     m_value = Convert.ToSByte(paramNode.InnerText);
+
+                    break;
+
+                case "short":
+                    m_type = ParamType.Int16;
+
+                    m_value = Convert.ToInt16(paramNode.InnerText);
 
                     break;
 
@@ -155,10 +193,23 @@ namespace Juhta.Net.Services
 
                     break;
 
+                case "time":
+                    m_type = ParamType.Time;
+
+                    // todo
+                    break;
+
                 case "timeSpan":
                     m_type = ParamType.TimeSpan;
 
                     m_value = TimeSpan.Parse(paramNode.InnerText);
+
+                    break;
+
+                case "uint":
+                    m_type = ParamType.UInt;
+
+                    m_value = Convert.ToUInt32(paramNode.InnerText);
 
                     break;
 

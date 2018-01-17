@@ -9,6 +9,7 @@
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Juhta.Net.LibraryManagement;
+using Juhta.Net.Services;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -173,14 +174,17 @@ namespace Juhta.Net
                     // Create a namespace manager for the configuration
                     namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(rootConfig);
 
+                    // Initialize the service factory for the application's dependency injection services
+                    m_serviceFactory = new ServiceFactory(rootConfig.SelectSingleNode("//ns:application/ns:services", namespaceManager));
+
                     // Initialize the attribute fields
-                    InitializeAttributeFields(rootConfig, namespaceManager);
+                    InitializeAttributeFields(rootConfig.SelectSingleNode("//ns:application", namespaceManager));
 
                     // Initialize the libraries
 
                     m_libraryManager = new LibraryManager(this);
 
-                    m_libraryManager.InitializeLibraries(rootConfig);
+                    m_libraryManager.InitializeLibraries(rootConfig.SelectSingleNode("//ns:application/ns:startup/ns:libraries", namespaceManager));
 
                     // Start watching configuration file changes
                     m_libraryManager.StartConfigFileWatching();
@@ -295,6 +299,15 @@ namespace Juhta.Net
             }
         }
 
+        /// <summary>
+        /// Gets the <see cref="ServiceFactory"/> singleton instance that provides access to the application's
+        /// dependency injection services.
+        /// </summary>
+        public ServiceFactory ServiceFactory
+        {
+            get {return(m_serviceFactory);}
+        }
+
         #endregion
 
         #region Private Methods
@@ -302,13 +315,10 @@ namespace Juhta.Net
         /// <summary>
         /// Initializes those fields that are determined by the attributes of the application XML node.
         /// </summary>
-        /// <param name="rootConfig">Specifies an <see cref="XmlDocument"/> object containing the root configuration.</param>
-        /// <param name="namespaceManager">Specifies an <see cref="XmlNamespaceManager"/> object for selecting nodes in
-        /// <paramref name="rootConfig"/>.</param>
-        private void InitializeAttributeFields(XmlDocument rootConfig, XmlNamespaceManager namespaceManager)
+        /// <param name="applicationNode">Specifies an application XML node based on which to initialize the attribute
+        /// fields.</param>
+        private void InitializeAttributeFields(XmlNode applicationNode)
         {
-            XmlNode applicationNode = rootConfig.SelectSingleNode("//ns:application", namespaceManager);
-
             if (applicationNode.HasAttribute("name"))
                 m_name = applicationNode.GetAttribute("name");
             else
@@ -411,6 +421,11 @@ namespace Juhta.Net
         /// Stores the <see cref="Name"/> property.
         /// </summary>
         private string m_name;
+
+        /// <summary>
+        /// Stores the <see cref="ServiceFactory"/> property.
+        /// </summary>
+        private ServiceFactory m_serviceFactory;
 
         /// <summary>
         /// Specifies the current state of the application.

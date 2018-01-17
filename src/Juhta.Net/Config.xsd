@@ -25,9 +25,139 @@
   <xs:complexType name="applicationType">
     <xs:sequence>
       <xs:element name="startup" type="startupType"/>
+      <xs:element name="services" type="servicesType" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="optional"/>
     <xs:attribute name="defaultConfigFileName" type="common:configFileNameType" use="optional"/>
+  </xs:complexType>
+  
+  <!-- Define booleanType -->
+  <xs:complexType name="booleanType">
+    <xs:simpleContent>
+      <xs:extension base="xs:boolean">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define byteType -->
+  <xs:complexType name="byteType">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedByte">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define charType -->
+  <xs:complexType name="charType">
+    <xs:simpleContent>
+      <xs:restriction base="stringType">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1"/>
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define constructorParamsType -->
+  <xs:complexType name="constructorParamsType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="boolean" type="booleanType"/>
+      <xs:element name="byte" type="byteType"/>
+      <xs:element name="char" type="charType"/>
+      <xs:element name="dateTime" type="dateTimeType"/>
+      <xs:element name="decimal" type="decimalType"/>
+      <xs:element name="double" type="doubleType"/>
+      <xs:element name="float" type="floatType"/>
+      <xs:element name="int" type="intType"/>
+      <xs:element name="int16" type="int16Type"/>
+      <xs:element name="int32" type="int32Type"/>
+      <xs:element name="int64" type="int64Type"/>
+      <xs:element name="long" type="longType"/>
+      <xs:element name="sbyte" type="sbyteType"/>
+      <xs:element name="short" type="shortType"/>
+      <xs:element name="single" type="singleType"/>
+      <xs:element name="string" type="stringType"/>
+      <xs:element name="uint" type="uintType"/>
+      <xs:element name="uint16" type="uint16Type"/>
+      <xs:element name="uint32" type="uint32Type"/>
+      <xs:element name="uint64" type="uint64Type"/>
+      <xs:element name="ulong" type="ulongType"/>
+      <xs:element name="ushort" type="ushortType"/>
+    </xs:choice>
+  </xs:complexType>
+  
+  <!-- Define dateTimeType -->
+  <xs:complexType name="dateTimeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:dateTime">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define decimalType -->
+  <xs:complexType name="decimalType">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Define doubleType -->
+  <xs:complexType name="doubleType">
+    <xs:simpleContent>
+      <xs:extension base="xs:double">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define floatType -->
+  <xs:complexType name="floatType">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define intType -->
+  <xs:complexType name="intType">
+    <xs:simpleContent>
+      <xs:extension base="xs:int">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define int16Type -->
+  <xs:complexType name="int16Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:short">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define int32Type -->
+  <xs:complexType name="int32Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:int">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define int64Type -->
+  <xs:complexType name="int64Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:long">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   
   <!-- Define Juhta.NetType -->
@@ -51,11 +181,127 @@
     <xs:attribute name="configFileName" type="common:configFileNameType" use="optional"/>
   </xs:complexType>
   
+  <!-- Define longType -->
+  <xs:complexType name="longType">
+    <xs:simpleContent>
+      <xs:extension base="xs:long">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define sbyteType -->
+  <xs:complexType name="sbyteType">
+    <xs:simpleContent>
+      <xs:extension base="xs:byte">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define servicesType -->
+  <xs:complexType name="servicesType">
+    <xs:sequence>
+      <xs:element name="service" type="serviceType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define serviceType -->
+  <xs:complexType name="serviceType">
+    <xs:sequence>
+      <xs:element name="constructorParams" type="constructorParamsType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="required"/>
+    <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
+    <xs:attribute name="libraryClass" type="common:classNameType" use="required"/>
+  </xs:complexType>
+  
+  <!-- Define shortType -->
+  <xs:complexType name="shortType">
+    <xs:simpleContent>
+      <xs:extension base="xs:short">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define singleType -->
+  <xs:complexType name="singleType">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
   <!-- Define startupType -->
   <xs:complexType name="startupType">
     <xs:sequence>
       <xs:element name="libraries" type="librariesType"/>
     </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Define stringType -->
+  <xs:complexType name="stringType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="common:paramNameType" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define uintType -->
+  <xs:complexType name="uintType">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedInt">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define uint16Type -->
+  <xs:complexType name="uint16Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedShort">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define uint32Type -->
+  <xs:complexType name="uint32Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedInt">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define uint64Type -->
+  <xs:complexType name="uint64Type">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedLong">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define ulongType -->
+  <xs:complexType name="ulongType">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedLong">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- Define ushortType -->
+  <xs:complexType name="ushortType">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedShort">
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   
 </xs:schema>

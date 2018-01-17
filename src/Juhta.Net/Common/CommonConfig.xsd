@@ -124,35 +124,13 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <!-- Define objectType -->
-  <xs:complexType name="objectType">
-    <xs:sequence>
-      <xs:element name="constructorParameters" type="parametersType" minOccurs="0" maxOccurs="1"/>
-    </xs:sequence>
-    <xs:attribute name="assemblyClassFileUri" type="assemblyClassFileUriType" use="required"/>
-  </xs:complexType>
-  
-  <!-- Define parameterNameType -->
-  <xs:simpleType name="parameterNameType">
+  <!-- Define paramNameType -->
+  <xs:simpleType name="paramNameType">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
       <xs:pattern value="[a-zA-Z_][a-zA-Z0-9_]*"/>
     </xs:restriction>
   </xs:simpleType>
-  
-  <!-- Define parametersType -->
-  <xs:complexType name="parametersType">
-    <xs:sequence>
-      <xs:element name="parameter" type="parameterType" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  
-  <!-- Define parameterType -->
-  <xs:complexType name="parameterType">
-    <xs:attribute name="name" type="parameterNameType"/>
-    <xs:attribute name="type" type="builtInTypeType" use="required"/>
-    <xs:attribute name="value" type="xs:string" use="required"/>
-  </xs:complexType>
   
   <!-- Define tcpPortType -->
   <xs:simpleType name="tcpPortType">

@@ -103,21 +103,18 @@ namespace Juhta.Net.LibraryManagement
         }
 
         /// <summary>
-        /// Initializes the libraries listed in a specified root configuration.
+        /// Initializes the libraries listed in a specified libraries XML node.
         /// </summary>
-        /// <param name="rootConfig">Specifies an <see cref="XmlDocument"/> object containing the root configuration.</param>
-        public void InitializeLibraries(XmlDocument rootConfig)
+        /// <param name="librariesNode">Specifies a libraries XML node based on which to initialize the instance. Can
+        /// be null.</param>
+        public void InitializeLibraries(XmlNode librariesNode)
         {
-            XmlNamespaceManager namespaceManager;
-            XmlNode librariesNode;
             ILibraryHandle libraryHandle;
             string configFileName;
 
-            // Create a namespace manager
-            namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(rootConfig);
-
-            // Select the libraries XML node
-            librariesNode = rootConfig.SelectSingleNode("//ns:application/ns:startup/ns:libraries", namespaceManager);
+            // Return immediately if there is nothing to initialize
+            if (librariesNode == null)
+                return;
 
             // Initialize the libraries listed in the libraries XML node
 

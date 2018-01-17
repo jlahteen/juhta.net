@@ -348,12 +348,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be completely stopped.");
 
-        // NOTE: Message ID 60 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
         /// </summary>
-        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.");
 
         /// <summary>
         /// Processes in the {0} state of the library '{1}' could not be started.
