@@ -358,12 +358,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
 
-        // NOTE: Message ID 62 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Constructor parameter '{0}' could not be initialized.
         /// </summary>
-        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("Constructor parameter '{0}' could not be initialized.");
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but no actions were

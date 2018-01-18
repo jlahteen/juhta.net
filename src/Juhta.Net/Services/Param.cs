@@ -9,6 +9,7 @@
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -57,7 +58,15 @@ namespace Juhta.Net.Services
         {
             m_name = paramNode.GetAttribute("name");
 
-            SetTypeAndValue(paramNode);
+            try
+            {
+                SetTypeAndValue(paramNode);
+            }
+
+            catch (Exception ex)
+            {
+                throw new ArgumentException(LibraryMessages.Error062.FormatMessage(m_name), ex);
+            }
         }
 
         #endregion
@@ -65,11 +74,24 @@ namespace Juhta.Net.Services
         #region Private Methods
 
         /// <summary>
+        /// Runs a regex pattern validation for a value.
+        /// </summary>
+        /// <param name="value">Specifies a value.</param>
+        /// <param name="pattern">Specifies a regex pattern.</param>
+        void RunRegexValidation(string value, string pattern)
+        {
+            if (!Regex.IsMatch(value, pattern))
+                throw new InvalidConfigValueException(LibraryMessages.Error060.FormatMessage(value, m_name, m_type));
+        }
+
+        /// <summary>
         /// Initializes the type and value fields based on a specified XML node.
         /// </summary>
         /// <param name="paramNode">Specifies an XML node.</param>
         private void SetTypeAndValue(XmlNode paramNode)
         {
+            CultureInfo culture = CultureInfo.InvariantCulture;
+
             switch (paramNode.LocalName)
             {
                 case "boolean":
@@ -96,37 +118,37 @@ namespace Juhta.Net.Services
                 case "date":
                     m_type = ParamType.Date;
 
-                    // todo
+                    m_value = DateTime.Parse(paramNode.InnerText, culture);
+
                     break;
 
                 case "dateTime":
                     m_type = ParamType.DateTime;
 
-                    if (!Regex.IsMatch(paramNode.InnerText, @"^\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d$"))
-                        throw new InvalidConfigValueException(LibraryMessages.Error060.FormatMessage(paramNode.InnerText, m_name, ParamType.DateTime));
+                    RunRegexValidation(paramNode.InnerText, @"^\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d$");
 
-                    m_value = Convert.ToDateTime(paramNode.InnerText);
+                    m_value = Convert.ToDateTime(paramNode.InnerText, culture);
 
                     break;
 
                 case "decimal":
                     m_type = ParamType.Decimal;
 
-                    m_value = Convert.ToDecimal(paramNode.InnerText);
+                    m_value = Convert.ToDecimal(paramNode.InnerText, culture);
 
                     break;
 
                 case "double":
                     m_type = ParamType.Double;
 
-                    m_value = Convert.ToDouble(paramNode.InnerText);
+                    m_value = Convert.ToDouble(paramNode.InnerText, culture);
 
                     break;
 
                 case "float":
                     m_type = ParamType.Float;
 
-                    m_value = Convert.ToSingle(paramNode.InnerText);
+                    m_value = Convert.ToSingle(paramNode.InnerText, culture);
 
                     break;
 
@@ -182,7 +204,7 @@ namespace Juhta.Net.Services
                 case "single":
                     m_type = ParamType.Single;
 
-                    m_value = Convert.ToSingle(paramNode.InnerText);
+                    m_value = Convert.ToSingle(paramNode.InnerText, culture);
 
                     break;
 
@@ -196,13 +218,16 @@ namespace Juhta.Net.Services
                 case "time":
                     m_type = ParamType.Time;
 
-                    // todo
+                    RunRegexValidation(paramNode.InnerText, @"^\d\d:\d\d:\d\d$");
+
+                    m_value = Convert.ToDateTime(paramNode.InnerText, culture);
+
                     break;
 
                 case "timeSpan":
                     m_type = ParamType.TimeSpan;
 
-                    m_value = TimeSpan.Parse(paramNode.InnerText);
+                    m_value = TimeSpan.Parse(paramNode.InnerText, culture);
 
                     break;
 
@@ -231,6 +256,20 @@ namespace Juhta.Net.Services
                     m_type = ParamType.UInt64;
 
                     m_value = Convert.ToUInt64(paramNode.InnerText);
+
+                    break;
+
+                case "ulong":
+                    m_type = ParamType.ULong;
+
+                    m_value = Convert.ToUInt64(paramNode.InnerText);
+
+                    break;
+
+                case "ushort":
+                    m_type = ParamType.UShort;
+
+                    m_value = Convert.ToUInt16(paramNode.InnerText);
 
                     break;
 

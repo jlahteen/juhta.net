@@ -77,7 +77,7 @@ namespace Juhta.Net.Services
         /// <param name="serviceNode">Specifies a service XML node based on which to initialize the instance.</param>
         internal Service(XmlNode serviceNode)
         {
-            XmlNode constructorNode;
+            XmlNode constructorParamsNode;
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
             List<Param> constructorParams = new List<Param>();
 
@@ -87,12 +87,12 @@ namespace Juhta.Net.Services
 
             m_libraryClass = serviceNode.GetAttribute("libraryClass");
 
-            constructorNode = serviceNode.SelectSingleNode("//ns:constructor", namespaceManager);
+            constructorParamsNode = serviceNode.SelectSingleNode("//ns:constructorParams", namespaceManager);
 
-            if (constructorNode == null)
+            if (constructorParamsNode == null)
                 return;
 
-            foreach (XmlNode paramNode in constructorNode.ChildNodes)
+            foreach (XmlNode paramNode in constructorParamsNode.ChildNodes)
                 constructorParams.Add(new Param(paramNode));
 
             if (constructorParams.Count == 0)

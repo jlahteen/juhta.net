@@ -3967,7 +3967,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error062">
             <summary>
-            Free for the future use.
+            Constructor parameter '{0}' could not be initialized.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning063">
@@ -4244,6 +4244,13 @@
             Initializes a new instance.
             </summary>
             <param name="paramNode">Specifies an XML node based on which to initialize the instance.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.Param.RunRegexValidation(System.String,System.String)">
+            <summary>
+            Runs a regex pattern validation for a value.
+            </summary>
+            <param name="value">Specifies a value.</param>
+            <param name="pattern">Specifies a regex pattern.</param>
         </member>
         <member name="M:Juhta.Net.Services.Param.SetTypeAndValue(System.Xml.XmlNode)">
             <summary>

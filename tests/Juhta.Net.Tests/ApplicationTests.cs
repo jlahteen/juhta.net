@@ -1227,6 +1227,16 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_AllParamTypeService_ShouldReturn()
+        {
+            SetConfigFiles("Root", "Services_AllParamTypeService_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            //Application.Instance.ServiceFactory.CreateService
+        }
+
+        [TestMethod]
         public void Start_StartableLibrary_ShouldReturn()
         {
             SetConfigFiles("Root", "StartableLibrary_");
