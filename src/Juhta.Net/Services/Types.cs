@@ -13,7 +13,7 @@ namespace Juhta.Net.Services
     /// <summary>
     /// Defines an enumeration for the parameter types used in constructors of depencendy injection services.
     /// </summary>
-    public enum ParamType
+    public enum ConstructorParamType
     {
         /// <summary>
         /// Specifies the <see cref="System.Boolean"/> type.

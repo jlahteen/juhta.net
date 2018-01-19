@@ -35,10 +35,10 @@ namespace Juhta.Net.Services
         #region Public Properties
 
         /// <summary>
-        /// Gets an array of <see cref="Param"/> objects specifying the constructor parameters for the dependency
-        /// injection service. Can be null.
+        /// Gets an array of <see cref="ConstructorParam"/> objects specifying the constructor parameters for the
+        /// dependency injection service. Can be null.
         /// </summary>
-        public Param[] ConstructorParams
+        public ConstructorParam[] ConstructorParams
         {
             get {return(m_constructorParams);}
         }
@@ -79,7 +79,7 @@ namespace Juhta.Net.Services
         {
             XmlNode constructorParamsNode;
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
-            List<Param> constructorParams = new List<Param>();
+            List<ConstructorParam> constructorParams = new List<ConstructorParam>();
 
             m_name = serviceNode.GetAttribute("name");
 
@@ -93,7 +93,7 @@ namespace Juhta.Net.Services
                 return;
 
             foreach (XmlNode paramNode in constructorParamsNode.ChildNodes)
-                constructorParams.Add(new Param(paramNode));
+                constructorParams.Add(new ConstructorParam(paramNode));
 
             if (constructorParams.Count == 0)
                 return;
@@ -113,7 +113,7 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Stores the <see cref="ConstructorParams"/> property.
         /// </summary>
-        private Param[] m_constructorParams;
+        private ConstructorParam[] m_constructorParams;
 
         /// <summary>
         /// Specifies an array of the constructor parameters for creating instances of the service. Can be null.

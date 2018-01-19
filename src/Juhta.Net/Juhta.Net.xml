@@ -4219,59 +4219,78 @@
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Services.Param">
+        <member name="T:Juhta.Net.Services.ConstructorParam">
             <summary>
             Defines a class that represents a single parameter used in constructors of dependency injection services.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Services.Param.Name">
+        <member name="P:Juhta.Net.Services.ConstructorParam.Name">
             <summary>
-            Gets the name of the parameter.
+            Gets the name of the constructor parameter.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Services.Param.Type">
+        <member name="P:Juhta.Net.Services.ConstructorParam.Type">
             <summary>
-            Gets the type of the parameter.
+            Gets the type of the constructor parameter.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Services.Param.Value">
+        <member name="P:Juhta.Net.Services.ConstructorParam.Value">
             <summary>
-            Gets the value of the parameter.
+            Gets the value of the constructor parameter.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Services.Param.#ctor(System.Xml.XmlNode)">
+        <member name="M:Juhta.Net.Services.ConstructorParam.#ctor(System.Xml.XmlNode)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="paramNode">Specifies an XML node based on which to initialize the instance.</param>
+            <param name="constructorParamNode">Specifies an XML node based on which to initialize the instance.</param>
         </member>
-        <member name="M:Juhta.Net.Services.Param.RunRegexValidation(System.String,System.String)">
+        <member name="M:Juhta.Net.Services.ConstructorParam.RunRegexValidation(System.String,System.String)">
             <summary>
             Runs a regex pattern validation for a value.
             </summary>
             <param name="value">Specifies a value.</param>
             <param name="pattern">Specifies a regex pattern.</param>
         </member>
-        <member name="M:Juhta.Net.Services.Param.SetTypeAndValue(System.Xml.XmlNode)">
+        <member name="M:Juhta.Net.Services.ConstructorParam.SetTypeAndValue(System.Xml.XmlNode)">
             <summary>
             Initializes the type and value fields based on a specified XML node.
             </summary>
             <param name="paramNode">Specifies an XML node.</param>
         </member>
-        <member name="F:Juhta.Net.Services.Param.m_name">
+        <member name="F:Juhta.Net.Services.ConstructorParam.m_name">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Param.Name"/> property.
+            Stores the <see cref="P:Juhta.Net.Services.ConstructorParam.Name"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.Param.m_type">
+        <member name="F:Juhta.Net.Services.ConstructorParam.m_type">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Param.Type"/> property.
+            Stores the <see cref="P:Juhta.Net.Services.ConstructorParam.Type"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.Param.m_value">
+        <member name="F:Juhta.Net.Services.ConstructorParam.m_value">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Param.Value"/> property.
+            Stores the <see cref="P:Juhta.Net.Services.ConstructorParam.Value"/> property.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.Services.ConstructorParamException">
+            <summary>
+            This exception will be thrown whenever an error related to a constructor parameter of a dependency injection
+            service occurs.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.ConstructorParamException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.ConstructorParamException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an <see cref="T:System.Exception"/> object that relates to the error.</param>
         </member>
         <member name="T:Juhta.Net.Services.Service">
             <summary>
@@ -4287,7 +4306,7 @@
         </member>
         <member name="P:Juhta.Net.Services.Service.ConstructorParams">
             <summary>
-            Gets an array of <see cref="T:Juhta.Net.Services.Param"/> objects specifying the constructor parameters for the dependency
+            Gets an array of <see cref="T:Juhta.Net.Services.ConstructorParam"/> objects specifying the constructor parameters for the dependency
             injection service. Can be null.
             </summary>
         </member>
@@ -4337,6 +4356,24 @@
             Stores the <see cref="P:Juhta.Net.Services.Service.Name"/> property.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Services.ServiceCreationException">
+            <summary>
+            This exception will be thrown when an instance of a dependency injection service cannot be created.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceCreationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceCreationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an <see cref="T:System.Exception"/> object that relates to the error.</param>
+        </member>
         <member name="T:Juhta.Net.Services.ServiceFactory">
             <summary>
             Defines a class that provides methods for getting metadata and creating instances of the configured dependency
@@ -4379,132 +4416,150 @@
             Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Services.ParamType">
+        <member name="T:Juhta.Net.Services.ServiceInitializationException">
+            <summary>
+            This exception will be thrown when a dependency injection service cannot be initialized.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceInitializationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceInitializationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an <see cref="T:System.Exception"/> object that relates to the error.</param>
+        </member>
+        <member name="T:Juhta.Net.Services.ConstructorParamType">
             <summary>
             Defines an enumeration for the parameter types used in constructors of depencendy injection services.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Boolean">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Boolean">
             <summary>
             Specifies the <see cref="T:System.Boolean"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Byte">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Byte">
             <summary>
             Specifies the <see cref="T:System.Byte"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Char">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Char">
             <summary>
             Specifies the <see cref="T:System.Char"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Date">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Date">
             <summary>
             Maps to the <see cref="T:System.DateTime"/> type so that the time part is 00:00:00.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.DateTime">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.DateTime">
             <summary>
             Specifies the <see cref="T:System.DateTime"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Decimal">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Decimal">
             <summary>
             Specifies the <see cref="T:System.Decimal"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Double">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Double">
             <summary>
             Specifies the <see cref="T:System.Double"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Float">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Float">
             <summary>
             Maps to the <see cref="T:System.Single"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Int">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Int">
             <summary>
             Maps to the <see cref="T:System.Int32"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Int16">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Int16">
             <summary>
             Specifies the <see cref="T:System.Int16"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Int32">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Int32">
             <summary>
             Specifies the <see cref="T:System.Int32"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Int64">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Int64">
             <summary>
             Specifies the <see cref="T:System.Int64"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Long">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Long">
             <summary>
             Maps to the <see cref="T:System.Int64"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.SByte">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.SByte">
             <summary>
             Specifies the <see cref="T:System.SByte"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Short">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Short">
             <summary>
             Maps to the <see cref="T:System.Int16"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Single">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Single">
             <summary>
             Specifies the <see cref="T:System.Single"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.String">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.String">
             <summary>
             Specifies the <see cref="T:System.String"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.Time">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Time">
             <summary>
             Maps to the <see cref="T:System.DateTime"/> type so that the date part is uninitialized.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.TimeSpan">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.TimeSpan">
             <summary>
             Specifies the <see cref="T:System.TimeSpan"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.UInt">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.UInt">
             <summary>
             Maps to the <see cref="T:System.UInt32"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.UInt16">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.UInt16">
             <summary>
             Specifies the <see cref="T:System.UInt16"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.UInt32">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.UInt32">
             <summary>
             Specifies the <see cref="T:System.UInt32"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.UInt64">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.UInt64">
             <summary>
             Specifies the <see cref="T:System.UInt64"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.ULong">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.ULong">
             <summary>
             Maps to the <see cref="T:System.UInt64"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ParamType.UShort">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.UShort">
             <summary>
             Maps to the <see cref="T:System.UInt16"/> type.
             </summary>
