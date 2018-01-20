@@ -1,6 +1,7 @@
 
 using AppXLibrary.CustomXmlConfig;
 using AppXLibrary.DynamicCustomXmlConfigurableAndStartable;
+using AppXLibrary.Services;
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Juhta.Net.LibraryManagement;
@@ -1215,6 +1216,18 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_NoParameters_SimpleConfig2_ShouldReturn()
+        {
+            SetConfigFiles("Root", "SimpleConfig2_", ".");
+
+            Application.StartInstance();
+
+            Assert.AreEqual<string>(Path.GetFileName(Process.GetCurrentProcess().MainModule.FileName), Application.Instance.Name);
+
+            Assert.AreEqual<string>(null, Application.Instance.DefaultConfigFileName);
+        }
+
+        [TestMethod]
         public void Start_NoParameters_SimpleConfig_NameAndDefaultConfigFileNameSpecified_ShouldReturn()
         {
             SetConfigFiles("Root", "SimpleConfig_NameAndDefaultConfigFileNameSpecified_", ".");
@@ -1229,11 +1242,63 @@ namespace Juhta.Net.Tests
         [TestMethod]
         public void Start_Services_AllParamTypeService_ShouldReturn()
         {
+            IAllParamTypeService allParamTypeService;
+
             SetConfigFiles("Root", "Services_AllParamTypeService_");
 
             Application.StartInstance(null, s_configDirectory);
 
-            //Application.Instance.ServiceFactory.CreateService
+            allParamTypeService = Application.Instance.ServiceFactory.CreateService<IAllParamTypeService>("AllParamTypeService");
+
+            Assert.AreEqual<bool>(true, allParamTypeService.BoolValue);
+
+            Assert.AreEqual<byte>(223, allParamTypeService.ByteValue);
+
+            Assert.AreEqual<char>('d', allParamTypeService.CharValue);
+
+            Assert.AreEqual<DateTime>(new DateTime(2018, 1, 18), allParamTypeService.DateValue);
+
+            Assert.AreEqual<DateTime>(new DateTime(2018, 1, 16, 19, 8, 20), allParamTypeService.DateTimeValue);
+
+            Assert.AreEqual<decimal>(54.7636m, allParamTypeService.DecimalValue);
+
+            Assert.AreEqual<double>(9956.8763, allParamTypeService.DoubleValue);
+
+            Assert.AreEqual<float>(6373.88f, allParamTypeService.FloatValue);
+
+            Assert.AreEqual<int>(64644646, allParamTypeService.IntValue);
+
+            Assert.AreEqual<Int16>(32767, allParamTypeService.Int16Value);
+
+            Assert.AreEqual<Int32>(64655646, allParamTypeService.Int32Value);
+
+            Assert.AreEqual<Int64>(64644646566, allParamTypeService.Int64Value);
+
+            Assert.AreEqual<long>(327000, allParamTypeService.LongValue);
+
+            Assert.AreEqual<sbyte>(-100, allParamTypeService.SByteValue);
+
+            Assert.AreEqual<short>(-4533, allParamTypeService.ShortValue);
+
+            Assert.AreEqual<Single>(-66334.775f, allParamTypeService.SingleValue);
+
+            Assert.AreEqual<string>("Hello from the service!", allParamTypeService.StringValue);
+
+            Assert.AreEqual<DateTime>(new DateTime(1, 1, 1, 3, 9, 21), allParamTypeService.TimeValue);
+
+            Assert.AreEqual<TimeSpan>(new TimeSpan(12345, 23, 56, 59), allParamTypeService.TimeSpanValue);
+
+            Assert.AreEqual<uint>(65000, allParamTypeService.UintValue);
+
+            Assert.AreEqual<UInt16>(56433, allParamTypeService.Uint16Value);
+
+            Assert.AreEqual<UInt32>(444444444, allParamTypeService.Uint32Value);
+
+            Assert.AreEqual<UInt64>(555555555555555, allParamTypeService.Uint64Value);
+
+            Assert.AreEqual<ulong>(46456464646464, allParamTypeService.UlongValue);
+
+            Assert.AreEqual<ushort>(56733, allParamTypeService.UshortValue);
         }
 
         [TestMethod]

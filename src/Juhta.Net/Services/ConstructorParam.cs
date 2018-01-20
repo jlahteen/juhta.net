@@ -220,7 +220,7 @@ namespace Juhta.Net.Services
 
                     RunRegexValidation(paramNode.InnerText, @"^\d\d:\d\d:\d\d$");
 
-                    m_value = Convert.ToDateTime(paramNode.InnerText, culture);
+                    m_value = Convert.ToDateTime("0001-01-01T" + paramNode.InnerText, culture);
 
                     break;
 

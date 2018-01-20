@@ -429,12 +429,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
-        // NOTE: Message ID 74 is free
-
         /// <summary>
-        /// Free for the future use.
+        /// Dependency injection service '{0}' could not be initialized.
         /// </summary>
-        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("Free for the future use.");
+        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' could not be initialized.");
 
         /// <summary>
         /// An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
@@ -464,6 +462,11 @@ namespace Juhta.Net
         /// dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
         /// </summary>
         internal static readonly WarningMessage Warning079 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.");
+
+        /// <summary>
+        /// An instance of the dependency injection service '{0}' could not be created.
+        /// </summary>
+        internal static readonly ErrorMessage Error080 = MessageFactory.CreateErrorMessage("An instance of the dependency injection service '{0}' could not be created.");
 
         #endregion
     }

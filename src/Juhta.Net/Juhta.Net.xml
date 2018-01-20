@@ -4038,7 +4038,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error074">
             <summary>
-            Free for the future use.
+            Dependency injection service '{0}' could not be initialized.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error075">
@@ -4068,6 +4068,11 @@
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted but the state of the associated
             dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error080">
+            <summary>
+            An instance of the dependency injection service '{0}' could not be created.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">
@@ -4306,8 +4311,8 @@
         </member>
         <member name="P:Juhta.Net.Services.Service.ConstructorParams">
             <summary>
-            Gets an array of <see cref="T:Juhta.Net.Services.ConstructorParam"/> objects specifying the constructor parameters for the dependency
-            injection service. Can be null.
+            Gets an array of <see cref="T:Juhta.Net.Services.ConstructorParam"/> objects specifying the constructor parameters for the
+            dependency injection service. Can be null.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Service.LibraryClass">

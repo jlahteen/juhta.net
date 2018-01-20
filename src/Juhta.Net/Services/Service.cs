@@ -8,6 +8,7 @@
 
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -27,7 +28,15 @@ namespace Juhta.Net.Services
         /// <returns>Returns the created instance casted to the specified service type.</returns>
         public TService CreateInstance<TService>() where TService : class
         {
-            return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParamObjs));
+            try
+            {
+                return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParamObjs));
+            }
+
+            catch (Exception ex)
+            {
+                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(m_name), ex);
+            }
         }
 
         #endregion
@@ -83,27 +92,35 @@ namespace Juhta.Net.Services
 
             m_name = serviceNode.GetAttribute("name");
 
-            m_libraryFileName = serviceNode.GetAttribute("libraryFileName");
+            try
+            {
+                m_libraryFileName = serviceNode.GetAttribute("libraryFileName");
 
-            m_libraryClass = serviceNode.GetAttribute("libraryClass");
+                m_libraryClass = serviceNode.GetAttribute("libraryClass");
 
-            constructorParamsNode = serviceNode.SelectSingleNode("//ns:constructorParams", namespaceManager);
+                constructorParamsNode = serviceNode.SelectSingleNode("//ns:constructorParams", namespaceManager);
 
-            if (constructorParamsNode == null)
-                return;
+                if (constructorParamsNode == null)
+                    return;
 
-            foreach (XmlNode paramNode in constructorParamsNode.ChildNodes)
-                constructorParams.Add(new ConstructorParam(paramNode));
+                foreach (XmlNode paramNode in constructorParamsNode.ChildNodes)
+                    constructorParams.Add(new ConstructorParam(paramNode));
 
-            if (constructorParams.Count == 0)
-                return;
+                if (constructorParams.Count == 0)
+                    return;
 
-            m_constructorParamObjs = new object[constructorParams.Count];
+                m_constructorParamObjs = new object[constructorParams.Count];
 
-            for (int i = 0; i < m_constructorParamObjs.Length; i++)
-                m_constructorParamObjs[i] = constructorParams[i].Value;
+                for (int i = 0; i < m_constructorParamObjs.Length; i++)
+                    m_constructorParamObjs[i] = constructorParams[i].Value;
 
-            m_constructorParams = constructorParams.ToArray();
+                m_constructorParams = constructorParams.ToArray();
+            }
+
+            catch (Exception ex)
+            {
+                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(m_name), ex);
+            }
         }
 
         #endregion
