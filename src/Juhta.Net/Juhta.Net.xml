@@ -1620,14 +1620,14 @@
             Gets the singleton instance of <typeparamref name="T"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Common.Singleton`1.ClearSingletonInstance">
+        <member name="M:Juhta.Net.Common.Singleton`1.ResetSingletonInstance">
             <summary>
-            Clears the singleton instance.
+            Sets a null value as the singleton instance.
             </summary>
         </member>
         <member name="M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)">
             <summary>
-            Sets the singleton instance.
+            Sets a specified value as the singleton instance.
             </summary>
             <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
             instance.</param>
@@ -4415,6 +4415,12 @@
             </summary>
             <param name="servicesNode">Specifies a services XML node based on which to initialize the instance. Can be
             null.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceFactory.Close">
+            <summary>
+            Closes this <see cref="T:Juhta.Net.Services.ServiceFactory"/> instance by releasing all the metadata related to the configured
+            dependency injection services.
+            </summary>
         </member>
         <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
             <summary>

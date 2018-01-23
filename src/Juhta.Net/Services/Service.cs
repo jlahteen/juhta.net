@@ -98,7 +98,7 @@ namespace Juhta.Net.Services
 
                 m_libraryClass = serviceNode.GetAttribute("libraryClass");
 
-                constructorParamsNode = serviceNode.SelectSingleNode("//ns:constructorParams", namespaceManager);
+                constructorParamsNode = serviceNode.SelectSingleNode("ns:constructorParams", namespaceManager);
 
                 if (constructorParamsNode == null)
                     return;

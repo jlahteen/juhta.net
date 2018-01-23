@@ -49,9 +49,9 @@ namespace Juhta.Net.Common
         #region Protected Methods
 
         /// <summary>
-        /// Clears the singleton instance.
+        /// Sets a null value as the singleton instance.
         /// </summary>
-        protected void ClearSingletonInstance()
+        protected void ResetSingletonInstance()
         {
             lock(s_syncLock)
             {
@@ -60,7 +60,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Sets the singleton instance.
+        /// Sets a specified value as the singleton instance.
         /// </summary>
         /// <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
         /// instance.</param>

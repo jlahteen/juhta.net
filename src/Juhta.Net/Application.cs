@@ -99,8 +99,12 @@ namespace Juhta.Net
                     m_libraryManager.CloseLibraries();
                 }
 
-                // Clear the singleton instance
-                ClearSingletonInstance();
+                // Close the service factory if necessary
+                if (m_serviceFactory != null)
+                    m_serviceFactory.Close();
+
+                // Reset the singleton instance
+                ResetSingletonInstance();
             }
 
             catch (Exception ex)
@@ -136,7 +140,7 @@ namespace Juhta.Net
                 Application.Instance.Close();
 
             else
-                Application.Instance.ClearSingletonInstance();
+                Application.Instance.ResetSingletonInstance();
         }
 
         /// <summary>

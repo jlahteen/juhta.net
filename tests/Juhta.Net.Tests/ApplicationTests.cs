@@ -1302,6 +1302,39 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_ServiceCreationWithoutServiceName_ShouldReturn()
+        {
+            IAllParamTypeService allParamTypeService;
+
+            SetConfigFiles("Root", "Services_ServiceCreationWithoutServiceName_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            allParamTypeService = Application.Instance.ServiceFactory.CreateService<IAllParamTypeService>();
+
+            Assert.AreEqual<string>("This service has no name!", allParamTypeService.StringValue);
+        }
+
+        [TestMethod]
+        public void Start_Services_SumService10_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 0; i < 9; i++)
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>($"SumService{i}");
+
+                sumService.Add(10 + i);
+
+                Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
+            }
+        }
+
+        [TestMethod]
         public void Start_StartableLibrary_ShouldReturn()
         {
             SetConfigFiles("Root", "StartableLibrary_");

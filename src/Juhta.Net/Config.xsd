@@ -215,7 +215,7 @@
   <!-- Define servicesType -->
   <xs:complexType name="servicesType">
     <xs:sequence>
-      <xs:element name="service" type="serviceType" minOccurs="0"/>
+      <xs:element name="service" type="serviceType" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   

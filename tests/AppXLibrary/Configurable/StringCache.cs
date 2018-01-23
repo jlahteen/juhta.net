@@ -28,7 +28,7 @@ namespace AppXLibrary.Configurable
         {
             m_cache = null;
 
-            ClearSingletonInstance();
+            ResetSingletonInstance();
         }
 
         #endregion

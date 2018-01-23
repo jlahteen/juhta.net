@@ -7,6 +7,11 @@ namespace AppXLibrary.Services
     {
         #region Public Constructors
 
+        public AllParamTypeService(string stringValue)
+        {
+            this.StringValue = stringValue;
+        }
+
         public AllParamTypeService(
             bool boolValue,
             byte byteValue,

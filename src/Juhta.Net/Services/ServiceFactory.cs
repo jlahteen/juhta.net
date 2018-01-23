@@ -100,6 +100,21 @@ namespace Juhta.Net.Services
 
         #endregion
 
+        #region Internal Methods
+
+        /// <summary>
+        /// Closes this <see cref="ServiceFactory"/> instance by releasing all the metadata related to the configured
+        /// dependency injection services.
+        /// </summary>
+        internal void Close()
+        {
+            m_services.Clear();
+
+            ResetSingletonInstance();
+        }
+
+        #endregion
+
         #region Private Fields
 
         /// <summary>
