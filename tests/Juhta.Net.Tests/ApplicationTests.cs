@@ -5,8 +5,10 @@ using AppXLibrary.Services;
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Juhta.Net.LibraryManagement;
+using Juhta.Net.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -1302,17 +1304,138 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_Services_ServiceCreationWithoutServiceName_ShouldReturn()
+        public void Start_Services_CreationWithoutServiceName_ShouldReturn()
         {
             IAllParamTypeService allParamTypeService;
 
-            SetConfigFiles("Root", "Services_ServiceCreationWithoutServiceName_");
+            SetConfigFiles("Root", "Services_CreationWithoutServiceName_");
 
             Application.StartInstance(null, s_configDirectory);
 
             allParamTypeService = Application.Instance.ServiceFactory.CreateService<IAllParamTypeService>();
 
             Assert.AreEqual<string>("This service has no name!", allParamTypeService.StringValue);
+        }
+
+        [TestMethod]
+        public void Start_Services_DefaultConstructor1_ShouldReturn()
+        {
+            SumService2 sumService2;
+
+            SetConfigFiles("Root", "Services_DefaultConstructor_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService2 = Application.Instance.ServiceFactory.CreateService<SumService2>("SumService20");
+
+            sumService2.Add(10);
+
+            Assert.AreEqual<int>(100 + 10, sumService2.GetSum());
+        }
+
+        [TestMethod]
+        public void Start_Services_DefaultConstructor2_ShouldReturn()
+        {
+            SumService2 sumService2;
+
+            SetConfigFiles("Root", "Services_DefaultConstructor_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService2 = Application.Instance.ServiceFactory.CreateService<SumService2>("SumService21");
+
+            sumService2.Add(11);
+
+            Assert.AreEqual<int>(100 + 11, sumService2.GetSum());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ServiceCreationException))]
+        public void Start_Services_NoDefaultConstructor_ShouldThrowServiceCreationException()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_NoDefaultConstructor_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>("SumService");
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10080'",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'SumService' could not be created.",
+                    "System.MissingMethodException: Constructor on type 'AppXLibrary.Services.SumService' not found."
+                );
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ServiceCreationException))]
+        public void Start_Services_NonExistingLibraryClass_ShouldThrowServiceCreationException()
+        {
+            object testService;
+
+            SetConfigFiles("Root", "Services_NonExistingLibraryClass_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                testService = Application.Instance.ServiceFactory.CreateService<object>("TestService");
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Common.Error11017'",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'TestService' could not be created.",
+                    "System.ArgumentException",
+                    "An instance of the class 'AppXLibrary.Services.TestService' could not be created because the type was not found in the assembly"
+                );
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ServiceCreationException))]
+        public void Start_Services_NonExistingLibraryFile_ShouldThrowServiceCreationException()
+        {
+            object testService;
+
+            SetConfigFiles("Root", "Services_NonExistingLibraryFile_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                testService = Application.Instance.ServiceFactory.CreateService<object>("TestService");
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10080'",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'TestService' could not be created.",
+                    "System.IO.FileNotFoundException",
+                    "AppXLibrary1234.dll' or one of its dependencies. The system cannot find the file specified."
+                );
+
+                throw;
+            }
         }
 
         [TestMethod]
@@ -1331,6 +1454,34 @@ namespace Juhta.Net.Tests
                 sumService.Add(10 + i);
 
                 Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(KeyNotFoundException))]
+        public void Start_Services_UndefinedService_ShouldThrowKeyNotFoundException()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>("SumService10");
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10016'",
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the name 'SumService10'."
+                );
+
+                throw;
             }
         }
 
@@ -1374,7 +1525,7 @@ namespace Juhta.Net.Tests
 
             do
                 s = replaceService.Replace("Ho-Ho-Ho");
-            while (s == $"Yo-Yo-Yo" && stopwatch.ElapsedMilliseconds <= 15000);
+            while (s == $"Yo-Yo-Yo" && stopwatch.ElapsedMilliseconds <= 30000);
 
             param.Value = s + "-" + param.Index.ToString();
         }
