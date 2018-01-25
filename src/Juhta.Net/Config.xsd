@@ -224,7 +224,8 @@
     <xs:sequence>
       <xs:element name="constructorParams" type="constructorParamsType" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="required"/>
+    <xs:attribute name="name" type="common:nonEmptyTrimmedStringType" use="optional"/>
+    <xs:attribute name="type" type="common:fullClassNameType" use="optional"/>
     <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
     <xs:attribute name="libraryClass" type="common:classNameType" use="required"/>
   </xs:complexType>

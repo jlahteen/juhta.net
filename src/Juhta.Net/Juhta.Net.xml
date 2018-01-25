@@ -1391,15 +1391,21 @@
         </member>
         <member name="T:Juhta.Net.Common.InvalidConfigFileException">
             <summary>
-            This exception will be thrown when an XML configuration file doesn't pass schema validation.
+            This exception will be thrown when an XML configuration file doesn't pass (schema) validation.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
-            <param name="exception">Specifies an actual error that has occurred in the schema validation.</param>
+            <param name="exception">Specifies an error that has occurred in the schema validation.</param>
         </member>
         <member name="T:Juhta.Net.Common.InvalidConfigValueException">
             <summary>
@@ -4075,6 +4081,16 @@
             An instance of the dependency injection service '{0}' could not be created.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error081">
+            <summary>
+            No dependency injection service was found with the type '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error082">
+            <summary>
+            Either 'name' or 'type' attribute must be present in the service XML node '{0}'.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Logger">
             <summary>
             Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
@@ -4315,6 +4331,11 @@
             dependency injection service. Can be null.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Services.Service.Key">
+            <summary>
+            Gets the key of the dependency injection service. The key is either the name or the type of the service.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.Services.Service.LibraryClass">
             <summary>
             Gets the library class that implements the dependency injection service.
@@ -4327,7 +4348,12 @@
         </member>
         <member name="P:Juhta.Net.Services.Service.Name">
             <summary>
-            Gets the name of the dependency injection service.
+            Gets the name of the dependency injection service. Can be null.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.Service.Type">
+            <summary>
+            Gets the type of the dependency injection service. Can be null.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.Service.#ctor(System.Xml.XmlNode)">
@@ -4359,6 +4385,11 @@
         <member name="F:Juhta.Net.Services.Service.m_name">
             <summary>
             Stores the <see cref="P:Juhta.Net.Services.Service.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_type">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Service.Type"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ServiceCreationException">

@@ -1304,25 +1304,55 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_Services_CreationWithoutServiceName_ShouldReturn()
+        [ExpectedException(typeof(InvalidConfigFileException))]
+        public void Start_Services_BothNameAndTypeGiven_ShouldThrowInvalidConfigFileException()
         {
-            IAllParamTypeService allParamTypeService;
+            SetConfigFiles("Root", "Services_BothNameAndTypeGiven_");
 
-            SetConfigFiles("Root", "Services_CreationWithoutServiceName_");
+            try
+            {
+                Application.StartInstance(null, s_configDirectory);
+            }
 
-            Application.StartInstance(null, s_configDirectory);
+            catch
+            {
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10082'",
+                    "Juhta.Net.Common.InvalidConfigFileException: Either 'name' or 'type' attribute must be present in the service XML node '<service"
+                );
 
-            allParamTypeService = Application.Instance.ServiceFactory.CreateService<IAllParamTypeService>();
-
-            Assert.AreEqual<string>("This service has no name!", allParamTypeService.StringValue);
+                throw;
+            }
         }
 
         [TestMethod]
-        public void Start_Services_DefaultConstructor1_ShouldReturn()
+        [ExpectedException(typeof(InvalidConfigFileException))]
+        public void Start_Services_NeitherNameNorTypeGiven_ShouldThrowInvalidConfigFileException()
+        {
+            SetConfigFiles("Root", "Services_NeitherNameNorTypeGiven_");
+
+            try
+            {
+                Application.StartInstance(null, s_configDirectory);
+            }
+
+            catch
+            {
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10082'",
+                    "Juhta.Net.Common.InvalidConfigFileException: Either 'name' or 'type' attribute must be present in the service XML node '<service"
+                );
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        public void Start_Services_NoConstructorParams_DefaultConstructor1_ShouldReturn()
         {
             SumService2 sumService2;
 
-            SetConfigFiles("Root", "Services_DefaultConstructor_");
+            SetConfigFiles("Root", "Services_NoConstructorParams_DefaultConstructor_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1334,11 +1364,11 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_Services_DefaultConstructor2_ShouldReturn()
+        public void Start_Services_NoConstructorParams_DefaultConstructor2_ShouldReturn()
         {
             SumService2 sumService2;
 
-            SetConfigFiles("Root", "Services_DefaultConstructor_");
+            SetConfigFiles("Root", "Services_NoConstructorParams_DefaultConstructor_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1351,11 +1381,11 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ServiceCreationException))]
-        public void Start_Services_NoDefaultConstructor_ShouldThrowServiceCreationException()
+        public void Start_Services_NoConstructorParams_NoDefaultConstructor_ShouldThrowServiceCreationException()
         {
             SumService sumService;
 
-            SetConfigFiles("Root", "Services_NoDefaultConstructor_");
+            SetConfigFiles("Root", "Services_NoConstructorParams_NoDefaultConstructor_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1439,6 +1469,48 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_NoServiceName_TypeImplemented_ShouldReturn()
+        {
+            IAllParamTypeService allParamTypeService;
+
+            SetConfigFiles("Root", "Services_NoServiceName_TypeImplemented_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            allParamTypeService = Application.Instance.ServiceFactory.CreateService<IAllParamTypeService>();
+
+            Assert.AreEqual<string>("This service has no name!", allParamTypeService.StringValue);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(KeyNotFoundException))]
+        public void Start_Services_NoServiceName_TypeNotImplemented_ShouldThrowKeyNotFoundException()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>();
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                AssertDefaultLogFileContent(
+                    "ERROR 'Juhta.Net.Error10081'",
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the type 'AppXLibrary.Services.SumService'."
+                );
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void Start_Services_SumService10_ShouldReturn()
         {
             SumService sumService;
@@ -1459,7 +1531,7 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(KeyNotFoundException))]
-        public void Start_Services_UndefinedService_ShouldThrowKeyNotFoundException()
+        public void Start_Services_UndefinedServiceName_ShouldThrowKeyNotFoundException()
         {
             SumService sumService;
 

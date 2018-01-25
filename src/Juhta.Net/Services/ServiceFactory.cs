@@ -29,7 +29,13 @@ namespace Juhta.Net.Services
         /// <typeparamref name="TService"/>.</remarks>
         public TService CreateService<TService>() where TService : class
         {
-            return(CreateService<TService>(typeof(TService).FullName));
+            string serviceType = typeof(TService).FullName;
+            Service service;
+
+            if (m_services.TryGetValue(serviceType, out service))
+                return(service.CreateInstance<TService>());
+            else
+                throw new KeyNotFoundException(LibraryMessages.Error081.FormatMessage(serviceType));
         }
 
         /// <summary>
@@ -89,10 +95,10 @@ namespace Juhta.Net.Services
             {
                 service = new Service(serviceNode);
 
-                if (m_services.ContainsKey(service.Name))
-                    throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Name));
+                if (m_services.ContainsKey(service.Key))
+                    throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Key));
 
-                m_services.Add(service.Name, service);
+                m_services.Add(service.Key, service);
             }
 
             SetSingletonInstance(this);

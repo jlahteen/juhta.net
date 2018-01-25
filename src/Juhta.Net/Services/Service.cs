@@ -35,7 +35,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(m_name), ex);
+                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(this.Key), ex);
             }
         }
 
@@ -50,6 +50,14 @@ namespace Juhta.Net.Services
         public ConstructorParam[] ConstructorParams
         {
             get {return(m_constructorParams);}
+        }
+
+        /// <summary>
+        /// Gets the key of the dependency injection service. The key is either the name or the type of the service.
+        /// </summary>
+        public string Key
+        {
+            get {return(m_name != null ? m_name : m_type);}
         }
 
         /// <summary>
@@ -69,11 +77,19 @@ namespace Juhta.Net.Services
         }
 
         /// <summary>
-        /// Gets the name of the dependency injection service.
+        /// Gets the name of the dependency injection service. Can be null.
         /// </summary>
         public string Name
         {
             get {return(m_name);}
+        }
+
+        /// <summary>
+        /// Gets the type of the dependency injection service. Can be null.
+        /// </summary>
+        public string Type
+        {
+            get {return(m_type);}
         }
 
         #endregion
@@ -90,7 +106,12 @@ namespace Juhta.Net.Services
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
             List<ConstructorParam> constructorParams = new List<ConstructorParam>();
 
-            m_name = serviceNode.GetAttribute("name");
+            m_name = serviceNode.HasAttribute("name") ? serviceNode.GetAttribute("name") : null;
+
+            m_type = serviceNode.HasAttribute("type") ? serviceNode.GetAttribute("type") : null;
+
+            if (m_name != null && m_type != null || m_name == null && m_type == null)
+                throw new InvalidConfigFileException(LibraryMessages.Error082.FormatMessage(serviceNode.OuterXml));
 
             try
             {
@@ -119,7 +140,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(m_name), ex);
+                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(this.Key), ex);
             }
         }
 
@@ -151,6 +172,11 @@ namespace Juhta.Net.Services
         /// Stores the <see cref="Name"/> property.
         /// </summary>
         private string m_name;
+
+        /// <summary>
+        /// Stores the <see cref="Type"/> property.
+        /// </summary>
+        private string m_type;
 
         #endregion
     }

@@ -468,6 +468,16 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error080 = MessageFactory.CreateErrorMessage("An instance of the dependency injection service '{0}' could not be created.");
 
+        /// <summary>
+        /// No dependency injection service was found with the type '{0}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error081 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the type '{0}'.");
+
+        /// <summary>
+        /// Either 'name' or 'type' attribute must be present in the service XML node '{0}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("Either 'name' or 'type' attribute must be present in the service XML node '{0}'.");
+
         #endregion
     }
 }
