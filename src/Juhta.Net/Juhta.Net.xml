@@ -3727,7 +3727,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error016">
             <summary>
-            No dependency injection service was found with the name '{0}'.
+            No dependency injection service was found with the key '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -4086,11 +4086,6 @@
             No dependency injection service was found with the type '{0}'.
             </summary>
         </member>
-        <member name="F:Juhta.Net.LibraryMessages.Error082">
-            <summary>
-            Either 'name' or 'type' attribute must be present in the service XML node '{0}'.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Logger">
             <summary>
             Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
@@ -4333,7 +4328,8 @@
         </member>
         <member name="P:Juhta.Net.Services.Service.Key">
             <summary>
-            Gets the key of the dependency injection service. The key is either the name or the type of the service.
+            Gets the key of the dependency injection service. The key is the combination of the service type and
+            service name separated by a slash.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Service.LibraryClass">
@@ -4418,19 +4414,17 @@
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1">
             <summary>
-            Creates an instance of a dependency injection service.
+            Creates an instance of a dependency injection service corresponding to a specified service type.
             </summary>
             <typeparam name="TService">Specifies a service type.</typeparam>
             <returns>Returns the created instance casted to the specified service type.</returns>
-            <remarks>The method locates the dependency injection service with the full type name of
-            <typeparamref name="TService"/>.</remarks>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(System.String)">
             <summary>
-            Creates an instance of a dependency injection service corresponding to a specified service name.
+            Creates an instance of a dependency injection service corresponding to a specified service type and name.
             </summary>
             <typeparam name="TService">Specifies a service type.</typeparam>
-            <param name="serviceName">Specifies a service name.</param>
+            <param name="serviceName">Specifies a service name. Can be null.</param>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.GetServices">

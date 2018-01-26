@@ -53,11 +53,12 @@ namespace Juhta.Net.Services
         }
 
         /// <summary>
-        /// Gets the key of the dependency injection service. The key is either the name or the type of the service.
+        /// Gets the key of the dependency injection service. The key is the combination of the service type and
+        /// service name separated by a slash.
         /// </summary>
         public string Key
         {
-            get {return(m_name != null ? m_name : m_type);}
+            get {return(m_type + (m_name != null ? "/" + m_name : String.Empty));}
         }
 
         /// <summary>
@@ -106,12 +107,10 @@ namespace Juhta.Net.Services
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
             List<ConstructorParam> constructorParams = new List<ConstructorParam>();
 
-            m_name = serviceNode.HasAttribute("name") ? serviceNode.GetAttribute("name") : null;
+            if (serviceNode.HasAttribute("name"))
+                m_name = serviceNode.GetAttribute("name");
 
-            m_type = serviceNode.HasAttribute("type") ? serviceNode.GetAttribute("type") : null;
-
-            if (m_name != null && m_type != null || m_name == null && m_type == null)
-                throw new InvalidConfigFileException(LibraryMessages.Error082.FormatMessage(serviceNode.OuterXml));
+            m_type = serviceNode.GetAttribute("type");
 
             try
             {

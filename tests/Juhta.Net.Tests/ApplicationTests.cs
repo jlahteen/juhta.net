@@ -1305,28 +1305,6 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(InvalidConfigFileException))]
-        public void Start_Services_BothNameAndTypeGiven_ShouldThrowInvalidConfigFileException()
-        {
-            SetConfigFiles("Root", "Services_BothNameAndTypeGiven_");
-
-            try
-            {
-                Application.StartInstance(null, s_configDirectory);
-            }
-
-            catch
-            {
-                AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10082'",
-                    "Juhta.Net.Common.InvalidConfigFileException: Either 'name' or 'type' attribute must be present in the service XML node '<service"
-                );
-
-                throw;
-            }
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidConfigFileException))]
         public void Start_Services_NeitherNameNorTypeGiven_ShouldThrowInvalidConfigFileException()
         {
             SetConfigFiles("Root", "Services_NeitherNameNorTypeGiven_");
@@ -1339,8 +1317,9 @@ namespace Juhta.Net.Tests
             catch
             {
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10082'",
-                    "Juhta.Net.Common.InvalidConfigFileException: Either 'name' or 'type' attribute must be present in the service XML node '<service"
+                    "ERROR 'Juhta.Net.Error10002'",
+                    "Juhta.Net.Common.InvalidConfigFileException: XML configuration file",
+                    "Juhta.Net.config' does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.dll'. ---> System.Xml.Schema.XmlSchemaValidationException: The required attribute 'type' is missing."
                 );
 
                 throw;
@@ -1400,7 +1379,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'SumService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'AppXLibrary.Services.SumService/SumService' could not be created.",
                     "System.MissingMethodException: Constructor on type 'AppXLibrary.Services.SumService' not found."
                 );
 
@@ -1429,7 +1408,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Common.Error11017'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'TestService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'System.Object/TestService' could not be created.",
                     "System.ArgumentException",
                     "An instance of the class 'AppXLibrary.Services.TestService' could not be created because the type was not found in the assembly"
                 );
@@ -1459,7 +1438,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'TestService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'System.Object/TestService' could not be created.",
                     "System.IO.FileNotFoundException",
                     "AppXLibrary1234.dll' or one of its dependencies. The system cannot find the file specified."
                 );
@@ -1469,11 +1448,11 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_Services_NoServiceName_TypeImplemented_ShouldReturn()
+        public void Start_Services_NoServiceName_ServiceTypeImplemented_ShouldReturn()
         {
             IAllParamTypeService allParamTypeService;
 
-            SetConfigFiles("Root", "Services_NoServiceName_TypeImplemented_");
+            SetConfigFiles("Root", "Services_NoServiceName_ServiceTypeImplemented_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1484,7 +1463,7 @@ namespace Juhta.Net.Tests
 
         [TestMethod]
         [ExpectedException(typeof(KeyNotFoundException))]
-        public void Start_Services_NoServiceName_TypeNotImplemented_ShouldThrowKeyNotFoundException()
+        public void Start_Services_NoServiceName_ServiceTypeNotImplemented_ShouldThrowKeyNotFoundException()
         {
             SumService sumService;
 
@@ -1502,8 +1481,8 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10081'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the type 'AppXLibrary.Services.SumService'."
+                    "ERROR 'Juhta.Net.Error10016'",
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the key 'AppXLibrary.Services.SumService'."
                 );
 
                 throw;
@@ -1550,7 +1529,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10016'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the name 'SumService10'."
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the key 'AppXLibrary.Services.SumService/SumService10'."
                 );
 
                 throw;

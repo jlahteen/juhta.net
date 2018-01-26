@@ -113,9 +113,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' has a duplicate definition in the configuration.");
 
         /// <summary>
-        /// No dependency injection service was found with the name '{0}'.
+        /// No dependency injection service was found with the key '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the name '{0}'.");
+        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the key '{0}'.");
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library
@@ -472,11 +472,6 @@ namespace Juhta.Net
         /// No dependency injection service was found with the type '{0}'.
         /// </summary>
         internal static readonly ErrorMessage Error081 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the type '{0}'.");
-
-        /// <summary>
-        /// Either 'name' or 'type' attribute must be present in the service XML node '{0}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("Either 'name' or 'type' attribute must be present in the service XML node '{0}'.");
 
         #endregion
     }
