@@ -96,12 +96,12 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Defines the regex for validating service IDs.
         /// </summary>
-        private const string c_regexServiceId = @"^([a-zA-Z0-9])+/([a-zA-Z0-9\.:/_-])+$";
+        private const string c_regexServiceId = @"^([a-zA-Z0-9])+/([a-zA-Z0-9\.:;_-])+$";
 
         /// <summary>
         /// Defines the regex for validating service ID specifiers.
         /// </summary>
-        private const string c_regexSpecifier = @"^([a-zA-Z0-9\.:/_-])+$";
+        private const string c_regexSpecifier = @"^([a-zA-Z0-9\.:;_-])+$";
 
         /// <summary>
         /// Defines the separator character for the scheme and specifier parts in a service identifier.

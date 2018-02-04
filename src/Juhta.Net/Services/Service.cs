@@ -35,7 +35,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(this.Key), ex);
+                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(this.Id.Value), ex);
             }
         }
 
@@ -53,12 +53,11 @@ namespace Juhta.Net.Services
         }
 
         /// <summary>
-        /// Gets the key of the dependency injection service. The key is the combination of the service type and
-        /// service name separated by a slash.
+        /// Gets the identifier of the dependency injection service.
         /// </summary>
-        public string Key
+        public ServiceId Id
         {
-            get {return(m_type + (m_name != null ? "/" + m_name : String.Empty));}
+            get {return(m_id);}
         }
 
         /// <summary>
@@ -77,22 +76,6 @@ namespace Juhta.Net.Services
             get {return(m_libraryFileName);}
         }
 
-        /// <summary>
-        /// Gets the name of the dependency injection service. Can be null.
-        /// </summary>
-        public string Name
-        {
-            get {return(m_name);}
-        }
-
-        /// <summary>
-        /// Gets the type of the dependency injection service. Can be null.
-        /// </summary>
-        public string Type
-        {
-            get {return(m_type);}
-        }
-
         #endregion
 
         #region Internal Constructors
@@ -107,10 +90,7 @@ namespace Juhta.Net.Services
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
             List<ConstructorParam> constructorParams = new List<ConstructorParam>();
 
-            if (serviceNode.HasAttribute("name"))
-                m_name = serviceNode.GetAttribute("name");
-
-            m_type = serviceNode.GetAttribute("type");
+            m_id = new ServiceId(serviceNode.GetAttribute("id"));
 
             try
             {
@@ -139,7 +119,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(this.Key), ex);
+                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(this.Id.Value), ex);
             }
         }
 
@@ -158,6 +138,11 @@ namespace Juhta.Net.Services
         private object[] m_constructorParamObjs;
 
         /// <summary>
+        /// Stores the <see cref="Id"/> property.
+        /// </summary>
+        private ServiceId m_id;
+
+        /// <summary>
         /// Stores the <see cref="LibraryClass"/> property.
         /// </summary>
         private string m_libraryClass;
@@ -166,16 +151,6 @@ namespace Juhta.Net.Services
         /// Stores the <see cref="LibraryFileName"/> property.
         /// </summary>
         private string m_libraryFileName;
-
-        /// <summary>
-        /// Stores the <see cref="Name"/> property.
-        /// </summary>
-        private string m_name;
-
-        /// <summary>
-        /// Stores the <see cref="Type"/> property.
-        /// </summary>
-        private string m_type;
 
         #endregion
     }

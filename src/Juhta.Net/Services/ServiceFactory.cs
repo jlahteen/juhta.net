@@ -27,29 +27,47 @@ namespace Juhta.Net.Services
         /// <returns>Returns the created instance casted to the specified service type.</returns>
         public TService CreateService<TService>() where TService : class
         {
-            return(CreateService<TService>(null));
+            return(CreateService<TService>(new ServiceId("type", typeof(TService).FullName)));
         }
 
         /// <summary>
-        /// Creates an instance of a dependency injection service corresponding to a specified service type and name.
+        /// Creates an instance of a dependency injection service corresponding to a specified service identifier.
         /// </summary>
         /// <typeparam name="TService">Specifies a service type.</typeparam>
-        /// <param name="serviceName">Specifies a service name. Can be null.</param>
+        /// <param name="serviceId">Specifies a service identifier.</param>
+        /// <returns>Returns the created instance casted to the specified service type.</returns>
+        public TService CreateService<TService>(ServiceId serviceId) where TService : class
+        {
+            Service service;
+
+            if (m_services.TryGetValue(serviceId.Value, out service))
+                return(service.CreateInstance<TService>());
+            else
+                throw new KeyNotFoundException(LibraryMessages.Error016.FormatMessage(serviceId.Value));
+        }
+
+        /// <summary>
+        /// Creates an instance of a dependency injection service corresponding to a specified service name.
+        /// </summary>
+        /// <typeparam name="TService">Specifies a service type.</typeparam>
+        /// <param name="serviceName">Specifies a service name.</param>
         /// <returns>Returns the created instance casted to the specified service type.</returns>
         public TService CreateService<TService>(string serviceName) where TService : class
         {
-            string serviceKey;
-            Service service;
+            return(CreateService<TService>(new ServiceId("name", serviceName)));
+        }
 
-            if (serviceName == null)
-                serviceKey = typeof(TService).FullName;
-            else
-                serviceKey = typeof(TService).FullName + "/" + serviceName;
-
-            if (m_services.TryGetValue(serviceKey, out service))
-                return(service.CreateInstance<TService>());
-            else
-                throw new KeyNotFoundException(LibraryMessages.Error016.FormatMessage(serviceKey));
+        /// <summary>
+        /// Creates an instance of a dependency injection service corresponding to a specified service identifier
+        /// scheme and specifier.
+        /// </summary>
+        /// <typeparam name="TService">Specifies a service type.</typeparam>
+        /// <param name="serviceIdScheme">Specifies a service identifier scheme.</param>
+        /// <param name="serviceIdSpecifier">Specifies a service identifier specifier.</param>
+        /// <returns>Returns the created instance casted to the specified service type.</returns>
+        public TService CreateService<TService>(string serviceIdScheme, string serviceIdSpecifier) where TService : class
+        {
+            return(CreateService<TService>(new ServiceId(serviceIdScheme, serviceIdSpecifier)));
         }
 
         /// <summary>
@@ -93,10 +111,10 @@ namespace Juhta.Net.Services
             {
                 service = new Service(serviceNode);
 
-                if (m_services.ContainsKey(service.Key))
-                    throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Key));
+                if (m_services.ContainsKey(service.Id.Value))
+                    throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Id.Value));
 
-                m_services.Add(service.Key, service);
+                m_services.Add(service.Id.Value, service);
             }
 
             SetSingletonInstance(this);
