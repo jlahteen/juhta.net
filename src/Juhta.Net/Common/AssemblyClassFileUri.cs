@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Extensions;
+using Juhta.Net.Helpers;
 using System;
 using System.IO;
 
@@ -52,10 +53,9 @@ namespace Juhta.Net.Common
         {
             string fileUriOrig = fileUri;
 
-            if (fileUri == null)
-                throw new ArgumentNullException(nameof(fileUri), CommonMessages.Error001.FormatMessage("fileUri"));
+            ArgumentHelper.CheckNotNull(nameof(fileUri), fileUri);
 
-            else if (!fileUri.Contains("://"))
+            if (!fileUri.Contains("://"))
             {
                 if (!fileUri.Contains(":\\") && !fileUri.StartsWith("\\\\"))
                     fileUri = Environment.CurrentDirectory.EnsureEnd("\\") + fileUri;

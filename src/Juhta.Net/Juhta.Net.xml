@@ -551,7 +551,7 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error001">
             <summary>
-            Value of the parameter '{0}' cannot be null.
+            Invalid value was passed to the parameter '{0}' in the method '{1}'. The value cannot be null.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error002">
@@ -572,7 +572,8 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error005">
             <summary>
-            Value of the parameter '{0}' is not valid.
+            Invalid value was passed to the parameter '{0}' in the method '{1}'. The value '{2}' does not conform to
+            the regex pattern '{3}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error006">
@@ -2729,6 +2730,36 @@
             Gets the root namespace of the framework.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Helpers.ArgumentHelper">
+            <summary>
+            Defines a static helper class that provides methods for simplifying common argument operations such as
+            null-checking and value validations. These helper methods enable replacing of repetitive code blocks with
+            one-liners.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)">
+            <summary>
+            Checks that a parameter value is not null.
+            </summary>
+            <param name="paramName">Specifies a parameter name.</param>
+            <param name="paramValue">Specifies a parameter value.</param>
+        </member>
+        <member name="M:Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)">
+            <summary>
+            Checks that a parameter value conforms to a regex pattern.
+            </summary>
+            <param name="paramName">Specifies a parameter name.</param>
+            <param name="paramValue">Specifies a parameter value.</param>
+            <param name="regexPattern">Specifies a regex pattern.</param>
+        </member>
+        <member name="M:Juhta.Net.Helpers.ArgumentHelper.GetCallingMethod(System.Diagnostics.StackFrame)">
+            <summary>
+            Gets the full method name related to a specified <see cref="T:System.Diagnostics.StackFrame"/> object.
+            </summary>
+            <param name="stackFrame">Specifies a <see cref="T:System.Diagnostics.StackFrame"/> object.</param>
+            <returns>Returns the full method name related to the specified <see cref="T:System.Diagnostics.StackFrame"/> object.</returns>
+            <remarks>Full method name means a full type name plus a method name in this context.</remarks>
+        </member>
         <member name="T:Juhta.Net.LibraryManagement.ConfigFileWatcher">
             <summary>
             Defines a class that watches configuration file changes. This class raises an appropriate event every time a
@@ -3727,7 +3758,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error016">
             <summary>
-            No dependency injection service was found with the key '{0}'.
+            No dependency injection service was found with the identifier '{0}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Warning017">
@@ -4326,10 +4357,9 @@
             dependency injection service. Can be null.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Services.Service.Key">
+        <member name="P:Juhta.Net.Services.Service.Id">
             <summary>
-            Gets the key of the dependency injection service. The key is the combination of the service type and
-            service name separated by a slash.
+            Gets the identifier of the dependency injection service.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Service.LibraryClass">
@@ -4340,16 +4370,6 @@
         <member name="P:Juhta.Net.Services.Service.LibraryFileName">
             <summary>
             Gets the file name of the library that contains the dependency injection service.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Services.Service.Name">
-            <summary>
-            Gets the name of the dependency injection service. Can be null.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Services.Service.Type">
-            <summary>
-            Gets the type of the dependency injection service. Can be null.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.Service.#ctor(System.Xml.XmlNode)">
@@ -4368,6 +4388,11 @@
             Specifies an array of the constructor parameters for creating instances of the service. Can be null.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Services.Service.m_id">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Service.Id"/> property.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Services.Service.m_libraryClass">
             <summary>
             Stores the <see cref="P:Juhta.Net.Services.Service.LibraryClass"/> property.
@@ -4376,16 +4401,6 @@
         <member name="F:Juhta.Net.Services.Service.m_libraryFileName">
             <summary>
             Stores the <see cref="P:Juhta.Net.Services.Service.LibraryFileName"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Services.Service.m_name">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Service.Name"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Services.Service.m_type">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Service.Type"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ServiceCreationException">
@@ -4419,12 +4434,30 @@
             <typeparam name="TService">Specifies a service type.</typeparam>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
-        <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(System.String)">
+        <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(Juhta.Net.Services.ServiceId)">
             <summary>
-            Creates an instance of a dependency injection service corresponding to a specified service type and name.
+            Creates an instance of a dependency injection service corresponding to a specified service identifier.
             </summary>
             <typeparam name="TService">Specifies a service type.</typeparam>
-            <param name="serviceName">Specifies a service name. Can be null.</param>
+            <param name="serviceId">Specifies a service identifier.</param>
+            <returns>Returns the created instance casted to the specified service type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(System.String)">
+            <summary>
+            Creates an instance of a dependency injection service corresponding to a specified service name.
+            </summary>
+            <typeparam name="TService">Specifies a service type.</typeparam>
+            <param name="serviceName">Specifies a service name.</param>
+            <returns>Returns the created instance casted to the specified service type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceFactory.CreateService``1(System.String,System.String)">
+            <summary>
+            Creates an instance of a dependency injection service corresponding to a specified service identifier
+            scheme and specifier.
+            </summary>
+            <typeparam name="TService">Specifies a service type.</typeparam>
+            <param name="serviceIdScheme">Specifies a service identifier scheme.</param>
+            <param name="serviceIdSpecifier">Specifies a service identifier specifier.</param>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.GetServices">
@@ -4450,6 +4483,76 @@
         <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
             <summary>
             Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Services.ServiceId">
+            <summary>
+            Defines an identifier class for dependency injection services. A service identifier consists of two parts,
+            scheme and specifier, which are separated by a slash. Type binded services can be defined by the 'type' scheme
+            and name binded by the 'name' scheme.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceId.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serviceId">Specifies a service identifier as a string.</param>
+        </member>
+        <member name="M:Juhta.Net.Services.ServiceId.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="scheme">Specifies a service identifier scheme.</param>
+            <param name="specifier">Specifies a service identifier specifier.</param>
+        </member>
+        <member name="P:Juhta.Net.Services.ServiceId.Scheme">
+            <summary>
+            Gets the scheme part of the service identifier.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.ServiceId.Specifier">
+            <summary>
+            Gets the specifier part of the service identifier.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Services.ServiceId.Value">
+            <summary>
+            Gets the service identifier as a string.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.c_regexScheme">
+            <summary>
+            Defines the regex for validating service ID schemes.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.c_regexServiceId">
+            <summary>
+            Defines the regex for validating service IDs.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.c_regexSpecifier">
+            <summary>
+            Defines the regex for validating service ID specifiers.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.c_schemeSpecifierSeparator">
+            <summary>
+            Defines the separator character for the scheme and specifier parts in a service identifier.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.m_scheme">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.ServiceId.Scheme"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.m_specifier">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.ServiceId.Specifier"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceId.m_value">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.ServiceId.Value"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ServiceInitializationException">

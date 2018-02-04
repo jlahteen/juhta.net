@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Common;
+using Juhta.Net.Helpers;
 using System;
 using System.Xml;
 
@@ -88,10 +89,9 @@ namespace Juhta.Net.Extensions
 
             if (attributeNames != null)
             {
-                if (attributeValues == null)
-                    throw new ArgumentNullException(nameof(attributeValues), CommonMessages.Error001.FormatMessage("attributeValues"));
+                ArgumentHelper.CheckNotNull(nameof(attributeValues), attributeValues);
 
-                else if (attributeNames.Length != attributeValues.Length)
+                if (attributeNames.Length != attributeValues.Length)
                     throw new ArgumentException(CommonMessages.Error013.FormatMessage("attributeNames", "attributeValues"));
 
                 for (i = 0; i < attributeNames.Length; i++)

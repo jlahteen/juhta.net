@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Common;
+using Juhta.Net.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -122,8 +123,7 @@ namespace Juhta.Net.Validation
         /// a placeholder for a value to validate.</param>
         protected RegexValidator(string[] patterns, RegexOptions options, PatternMatchMode patternMatchMode, ErrorMessage errorMessage)
         {
-            if (patterns == null)
-                throw new ArgumentNullException(nameof(patterns), CommonMessages.Error001.FormatMessage("patterns"));
+            ArgumentHelper.CheckNotNull(nameof(patterns), patterns);
 
             m_patterns = new List<string>();
 

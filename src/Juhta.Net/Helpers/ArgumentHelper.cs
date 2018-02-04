@@ -8,6 +8,8 @@
 
 using Juhta.Net.Common;
 using System;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace Juhta.Net.Helpers
@@ -28,8 +30,10 @@ namespace Juhta.Net.Helpers
         /// <param name="paramValue">Specifies a parameter value.</param>
         public static void CheckNotNull(string paramName, object paramValue)
         {
+            StackFrame caller = new StackFrame(1);
+
             if (paramValue == null)
-                throw new ArgumentNullException(paramName, CommonMessages.Error001.FormatMessage(paramName));
+                throw new ArgumentNullException(paramName, CommonMessages.Error001.FormatMessage(paramName, GetCallingMethod(caller)));
         }
 
         /// <summary>
@@ -40,10 +44,29 @@ namespace Juhta.Net.Helpers
         /// <param name="regexPattern">Specifies a regex pattern.</param>
         public static void CheckValue(string paramName, string paramValue, string regexPattern)
         {
+            StackFrame caller = new StackFrame(1);
+
             CheckNotNull(paramName, paramValue);
 
             if (!Regex.IsMatch(paramValue, regexPattern))
-                throw new ArgumentException(CommonMessages.Error005.FormatMessage(paramValue, paramName, regexPattern));
+                throw new ArgumentException(CommonMessages.Error005.FormatMessage(paramName, GetCallingMethod(caller), paramValue, regexPattern));
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Gets the full method name related to a specified <see cref="StackFrame"/> object.
+        /// </summary>
+        /// <param name="stackFrame">Specifies a <see cref="StackFrame"/> object.</param>
+        /// <returns>Returns the full method name related to the specified <see cref="StackFrame"/> object.</returns>
+        /// <remarks>Full method name means a full type name plus a method name in this context.</remarks>
+        private static string GetCallingMethod(StackFrame stackFrame)
+        {
+            MethodBase method = stackFrame.GetMethod();
+
+            return(method.DeclaringType.FullName + "." + method.Name);
         }
 
         #endregion
