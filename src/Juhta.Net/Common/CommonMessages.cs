@@ -46,9 +46,9 @@ namespace Juhta.Net.Common
         public static readonly ErrorMessage Error004 = MessageFactory.CreateErrorMessage("Portion of the file '{0}' could not be locked within a {1} millisecond timeout.");
 
         /// <summary>
-        /// Value of the parameter '{0}' is not valid.
+        /// Value '{0}' of the parameter '{1}' does not conform to the regex pattern '{2}'.
         /// </summary>
-        public static readonly ErrorMessage Error005 = MessageFactory.CreateErrorMessage("Value of the parameter '{0}' is not valid.");
+        public static readonly ErrorMessage Error005 = MessageFactory.CreateErrorMessage("Value '{0}' of the parameter '{1}' does not conform to the regex pattern '{2}'.");
 
         /// <summary>
         /// Method '{0}' of the class '{1}' cannot be executed because the current state of the appropriate instance
