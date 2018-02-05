@@ -551,7 +551,7 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error001">
             <summary>
-            Invalid value was passed to the parameter '{0}' in the method '{1}'. The value cannot be null.
+            Invalid '{0}' parameter value was passed to the method '{1}'. The value cannot be null.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error002">
@@ -572,8 +572,8 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error005">
             <summary>
-            Invalid value was passed to the parameter '{0}' in the method '{1}'. The value '{2}' does not conform to
-            the regex pattern '{3}'.
+            Invalid '{0}' parameter value was passed to the method '{1}'. The value '{2}' does not conform to the
+            regex pattern '{3}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error006">

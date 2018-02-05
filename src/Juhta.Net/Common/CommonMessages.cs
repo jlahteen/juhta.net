@@ -25,9 +25,9 @@ namespace Juhta.Net.Common
         #region Public Properties
 
         /// <summary>
-        /// Invalid value was passed to the parameter '{0}' in the method '{1}'. The value cannot be null.
+        /// Invalid '{0}' parameter value was passed to the method '{1}'. The value cannot be null.
         /// </summary>
-        public static readonly ErrorMessage Error001 = MessageFactory.CreateErrorMessage("Invalid value was passed to the parameter '{0}' in the method '{1}'. The value cannot be null.");
+        public static readonly ErrorMessage Error001 = MessageFactory.CreateErrorMessage("Invalid '{0}' parameter value was passed to the method '{1}'. The value cannot be null.");
 
         /// <summary>
         /// Value of the parameter '{0}' cannot be an empty string or a string containing nothing but white space
@@ -46,10 +46,10 @@ namespace Juhta.Net.Common
         public static readonly ErrorMessage Error004 = MessageFactory.CreateErrorMessage("Portion of the file '{0}' could not be locked within a {1} millisecond timeout.");
 
         /// <summary>
-        /// Invalid value was passed to the parameter '{0}' in the method '{1}'. The value '{2}' does not conform to
-        /// the regex pattern '{3}'.
+        /// Invalid '{0}' parameter value was passed to the method '{1}'. The value '{2}' does not conform to the
+        /// regex pattern '{3}'.
         /// </summary>
-        public static readonly ErrorMessage Error005 = MessageFactory.CreateErrorMessage("Invalid value was passed to the parameter '{0}' in the method '{1}'. The value '{2}' does not conform to the regex pattern '{3}'.");
+        public static readonly ErrorMessage Error005 = MessageFactory.CreateErrorMessage("Invalid '{0}' parameter value was passed to the method '{1}'. The value '{2}' does not conform to the regex pattern '{3}'.");
 
         /// <summary>
         /// Method '{0}' of the class '{1}' cannot be executed because the current state of the appropriate instance
