@@ -4488,7 +4488,7 @@
         <member name="T:Juhta.Net.Services.ServiceId">
             <summary>
             Defines an identifier class for dependency injection services. A service identifier consists of two parts,
-            scheme and specifier, which are separated by a slash. Type binded services can be defined by the 'type' scheme
+            scheme and specifier, which are separated by a colon. Type binded services can be defined by the 'type' scheme
             and name binded by the 'name' scheme.
             </summary>
         </member>

@@ -12,7 +12,7 @@ namespace Juhta.Net.Services
 {
     /// <summary>
     /// Defines an identifier class for dependency injection services. A service identifier consists of two parts,
-    /// scheme and specifier, which are separated by a slash. Type binded services can be defined by the 'type' scheme
+    /// scheme and specifier, which are separated by a colon. Type binded services can be defined by the 'type' scheme
     /// and name binded by the 'name' scheme.
     /// </summary>
     public class ServiceId
@@ -96,17 +96,17 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Defines the regex for validating service IDs.
         /// </summary>
-        private const string c_regexServiceId = @"^([a-zA-Z0-9])+/([a-zA-Z0-9\.:;_-])+$";
+        private const string c_regexServiceId = @"^([a-zA-Z0-9])+:([a-zA-Z0-9\._/-])+$";
 
         /// <summary>
         /// Defines the regex for validating service ID specifiers.
         /// </summary>
-        private const string c_regexSpecifier = @"^([a-zA-Z0-9\.:;_-])+$";
+        private const string c_regexSpecifier = @"^([a-zA-Z0-9\._/-])+$";
 
         /// <summary>
         /// Defines the separator character for the scheme and specifier parts in a service identifier.
         /// </summary>
-        private const char c_schemeSpecifierSeparator = '/';
+        private const char c_schemeSpecifierSeparator = ':';
 
         #endregion
 

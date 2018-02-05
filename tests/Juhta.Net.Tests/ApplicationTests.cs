@@ -1318,7 +1318,7 @@ namespace Juhta.Net.Tests
             {
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10060'",
-                    "Juhta.Net.Services.ServiceInitializationException: Dependency injection service 'name/AnyService' could not be initialized.",
+                    "Juhta.Net.Services.ServiceInitializationException: Dependency injection service 'name:AnyService' could not be initialized.",
                     "Juhta.Net.Services.ConstructorParamException: Constructor parameter 'dateTimeValue' could not be initialized.",
                     "Juhta.Net.Common.InvalidConfigValueException: Value '2018-02-04T16:55:00.7774' of the constructor parameter 'dateTimeValue' is not a valid 'DateTime' parameter value."
                 );
@@ -1390,7 +1390,7 @@ namespace Juhta.Net.Tests
             {
                 Assert.IsTrue(ex.Message.Contains("Invalid 'specifier' parameter value was passed to the method 'Juhta.Net.Services.ServiceId..ctor'."));
 
-                Assert.IsTrue(ex.Message.Contains("The value 'SumService%' does not conform to the regex pattern '^([a-zA-Z0-9\\.:;_-])+$'."));
+                Assert.IsTrue(ex.Message.Contains("The value 'SumService%' does not conform to the regex pattern '^([a-zA-Z0-9\\._/-])+$'."));
 
                 throw;
             }
@@ -1449,7 +1449,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name/SumService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:SumService' could not be created.",
                     "System.MissingMethodException: Constructor on type 'AppXLibrary.Services.SumService' not found."
                 );
 
@@ -1478,7 +1478,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Common.Error11017'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name/TestService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:TestService' could not be created.",
                     "System.ArgumentException",
                     "An instance of the class 'AppXLibrary.Services.TestService' could not be created because the type was not found in the assembly"
                 );
@@ -1508,7 +1508,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name/TestService' could not be created.",
+                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:TestService' could not be created.",
                     "System.IO.FileNotFoundException",
                     "AppXLibrary1234.dll' or one of its dependencies. The system cannot find the file specified."
                 );
@@ -1552,7 +1552,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10016'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'type/AppXLibrary.Services.SumService'."
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'type:AppXLibrary.Services.SumService'."
                 );
 
                 throw;
@@ -1619,7 +1619,7 @@ namespace Juhta.Net.Tests
 
             Application.StartInstance(null, s_configDirectory);
 
-            sumService = Application.Instance.ServiceFactory.CreateService<SumService>(new ServiceId("name/SumService0"));
+            sumService = Application.Instance.ServiceFactory.CreateService<SumService>(new ServiceId("name:SumService0"));
 
             sumService.Add(9);
 
@@ -1647,7 +1647,7 @@ namespace Juhta.Net.Tests
 
                 AssertDefaultLogFileContent(
                     "ERROR 'Juhta.Net.Error10016'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'name/SumService10'."
+                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'name:SumService10'."
                 );
 
                 throw;
