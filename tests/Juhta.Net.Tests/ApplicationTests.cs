@@ -1351,6 +1351,52 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Start_Services_InvalidServiceIdScheme_ShouldThrowArgumentException()
+        {
+            SetConfigFiles("Root", "Services_AllParamTypeService_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                Application.Instance.ServiceFactory.CreateService<SumService>("scheme%", "SumService");
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("Invalid 'scheme' parameter value was passed to the method 'Juhta.Net.Services.ServiceId..ctor'."));
+
+                Assert.IsTrue(ex.Message.Contains("The value 'scheme%' does not conform to the regex pattern '^([a-zA-Z0-9])+$'."));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Start_Services_InvalidServiceIdSpecifier_ShouldThrowArgumentException()
+        {
+            SetConfigFiles("Root", "Services_AllParamTypeService_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            try
+            {
+                Application.Instance.ServiceFactory.CreateService<SumService>("scheme", "SumService%");
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("Invalid 'specifier' parameter value was passed to the method 'Juhta.Net.Services.ServiceId..ctor'."));
+
+                Assert.IsTrue(ex.Message.Contains("The value 'SumService%' does not conform to the regex pattern '^([a-zA-Z0-9\\.:;_-])+$'."));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void Start_Services_NoConstructorParams_DefaultConstructor1_ShouldReturn()
         {
             SumService2 sumService2;
@@ -1530,6 +1576,54 @@ namespace Juhta.Net.Tests
 
                 Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
             }
+        }
+
+        [TestMethod]
+        public void Start_Services_ValidServiceIdSchemeAndSpecifier_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService = Application.Instance.ServiceFactory.CreateService<SumService>("name", "SumService0");
+
+            sumService.Add(9);
+
+            Assert.AreEqual<int>(10 + 9, sumService.GetSum());
+        }
+
+        [TestMethod]
+        public void Start_Services_ValidServiceIdSchemeAndSpecifier2_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService = Application.Instance.ServiceFactory.CreateService<SumService>(new ServiceId("name", "SumService0"));
+
+            sumService.Add(9);
+
+            Assert.AreEqual<int>(10 + 9, sumService.GetSum());
+        }
+
+        [TestMethod]
+        public void Start_Services_ValidServiceIdSchemeAndSpecifier3_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService = Application.Instance.ServiceFactory.CreateService<SumService>(new ServiceId("name/SumService0"));
+
+            sumService.Add(9);
+
+            Assert.AreEqual<int>(10 + 9, sumService.GetSum());
         }
 
         [TestMethod]
