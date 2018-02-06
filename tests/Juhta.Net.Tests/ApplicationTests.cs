@@ -1328,6 +1328,16 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_GetServices_ShouldReturn()
+        {
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            Assert.AreEqual<int>(10, Application.Instance.ServiceFactory.GetServices().Length);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(InvalidConfigFileException))]
         public void Start_Services_IdNotGiven_ShouldThrowInvalidConfigFileException()
         {
@@ -1633,6 +1643,22 @@ namespace Juhta.Net.Tests
 
                 Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
             }
+        }
+
+        [TestMethod]
+        public void Start_Services_ValidServiceId_AllCharacters_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_ValidServiceId_AllCharacters_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            sumService = Application.Instance.ServiceFactory.CreateService<SumService>(new ServiceId("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._/-"));
+
+            sumService.Add(19);
+
+            Assert.AreEqual<int>(72 + 19, sumService.GetSum());
         }
 
         [TestMethod]
