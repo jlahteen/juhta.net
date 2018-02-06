@@ -214,9 +214,10 @@
   
   <!-- Define servicesType -->
   <xs:complexType name="servicesType">
-    <xs:sequence>
-      <xs:element name="service" type="serviceType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="service" type="serviceType"/>
+      <xs:element name="serviceGroup" type="serviceGroupType"/>
+    </xs:choice>
   </xs:complexType>
   
   <!-- Define serviceType -->
@@ -229,6 +230,15 @@
     <xs:attribute name="libraryClass" type="common:classNameType" use="required"/>
   </xs:complexType>
 
+  <!-- Define serviceGroupType -->
+  <xs:complexType name="serviceGroupType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="service" type="serviceType"/>
+      <xs:element name="serviceGroup" type="serviceGroupType"/>
+    </xs:choice>
+    <xs:attribute name="name" type="common:nonEmptyStringType" use="optional"/>
+  </xs:complexType>
+  
   <!-- Define serviceIdType -->
   <xs:simpleType name="serviceIdType">
     <xs:restriction base="xs:string">

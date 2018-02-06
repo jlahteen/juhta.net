@@ -4480,6 +4480,14 @@
             dependency injection services.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Services.ServiceFactory.CollectServiceNodes(System.Xml.XmlNode,System.Collections.Generic.List{System.Xml.XmlNode})">
+            <summary>
+            Collects recursively service XML nodes from a specified serviceGroup XML node.
+            </summary>
+            <param name="serviceGroupNode">Specifies a serviceGroup XML node.</param>
+            <param name="serviceNodes">Specifies a list of <see cref="T:System.Xml.XmlNode"/> objects for storing the found service
+            XML nodes.</param>
+        </member>
         <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
             <summary>
             Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.

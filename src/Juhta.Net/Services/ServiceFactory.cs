@@ -100,6 +100,7 @@ namespace Juhta.Net.Services
         /// null.</param>
         internal ServiceFactory(XmlNode servicesNode)
         {
+            List<XmlNode> serviceNodes = new List<XmlNode>();
             Service service;
 
             m_services = new Dictionary<string, Service>();
@@ -107,7 +108,9 @@ namespace Juhta.Net.Services
             if (servicesNode == null)
                 return;
 
-            foreach (XmlNode serviceNode in servicesNode.ChildNodes)
+            CollectServiceNodes(servicesNode, serviceNodes);
+
+            foreach (XmlNode serviceNode in serviceNodes)
             {
                 service = new Service(serviceNode);
 
@@ -133,6 +136,27 @@ namespace Juhta.Net.Services
             m_services.Clear();
 
             ResetSingletonInstance();
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Collects recursively service XML nodes from a specified serviceGroup XML node.
+        /// </summary>
+        /// <param name="serviceGroupNode">Specifies a serviceGroup XML node.</param>
+        /// <param name="serviceNodes">Specifies a list of <see cref="XmlNode"/> objects for storing the found service
+        /// XML nodes.</param>
+        private static void CollectServiceNodes(XmlNode serviceGroupNode, List<XmlNode> serviceNodes)
+        {
+            foreach (XmlNode node in serviceGroupNode)
+
+                if (node.LocalName == "service")
+                    serviceNodes.Add(node);
+
+                else if (node.LocalName == "serviceGroup")
+                    CollectServiceNodes(node, serviceNodes);
         }
 
         #endregion

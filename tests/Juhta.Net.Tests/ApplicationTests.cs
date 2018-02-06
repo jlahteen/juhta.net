@@ -1579,6 +1579,63 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_SumService10_ServiceGroups_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_ServiceGroups_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 0; i < 9; i++)
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>($"SumService{i}");
+
+                sumService.Add(10 + i);
+
+                Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
+            }
+        }
+
+        [TestMethod]
+        public void Start_Services_SumService10_ServiceGroups2_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_ServiceGroups2_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 0; i < 9; i++)
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>($"SumService{i}");
+
+                sumService.Add(10 + i);
+
+                Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
+            }
+        }
+
+        [TestMethod]
+        public void Start_Services_SumService10_ServiceGroups3_ShouldReturn()
+        {
+            SumService sumService;
+
+            SetConfigFiles("Root", "Services_SumService10_ServiceGroups3_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            for (int i = 0; i < 9; i++)
+            {
+                sumService = Application.Instance.ServiceFactory.CreateService<SumService>($"SumService{i}");
+
+                sumService.Add(10 + i);
+
+                Assert.AreEqual<int>(10 + i + 10 + i, sumService.GetSum());
+            }
+        }
+
+        [TestMethod]
         public void Start_Services_ValidServiceIdSchemeAndSpecifier_ShouldReturn()
         {
             SumService sumService;
