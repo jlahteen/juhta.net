@@ -9,7 +9,7 @@
 using Juhta.Net.Extensions;
 using Juhta.Net.Validation;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Console
 {
     /// <summary>
     /// Defines an abstract base class for command line arguments.

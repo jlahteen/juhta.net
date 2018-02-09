@@ -6,7 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Console
 {
     /// <summary>
     /// Defines a class that represents a command line option. At the command line level, command line options consist

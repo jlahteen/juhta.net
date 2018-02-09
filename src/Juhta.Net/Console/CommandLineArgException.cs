@@ -8,7 +8,7 @@
 
 using System;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Console
 {
     /// <summary>
     /// This exception will be thrown when an invalid argument is encountered in command line parsing.
