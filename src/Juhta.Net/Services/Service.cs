@@ -10,6 +10,7 @@ using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 
 namespace Juhta.Net.Services
@@ -30,7 +31,7 @@ namespace Juhta.Net.Services
         {
             try
             {
-                return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, m_constructorParamObjs));
+                return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, GetConstructorParams()));
             }
 
             catch (Exception ex)
@@ -115,12 +116,43 @@ namespace Juhta.Net.Services
                     m_constructorParamObjs[i] = constructorParams[i].Value;
 
                 m_constructorParams = constructorParams.ToArray();
+
+                m_hasServiceRefs = m_constructorParams.Where(x => x.Type == ConstructorParamType.ServiceRef).Count() > 0;
             }
 
             catch (Exception ex)
             {
                 throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(this.Id.Value), ex);
             }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Gets an array of the constructor parameter objects required for creating an instance of the service.
+        /// </summary>
+        /// <returns>Returns an array of the required constructor parameter objects.</returns>
+        private object[] GetConstructorParams()
+        {
+            ServiceFactory serviceFactory;
+            object[] constructorParams;
+
+            if (!m_hasServiceRefs)
+                return(m_constructorParamObjs);
+
+            serviceFactory = Application.Instance.ServiceFactory;
+
+            constructorParams = new object[m_constructorParams.Length];
+
+            for (int i = 0; i < m_constructorParams.Length; i++)
+                if (m_constructorParams[i].Type != ConstructorParamType.ServiceRef)
+                    constructorParams[i] = m_constructorParams[i].Value;
+                else
+                    constructorParams[i] = serviceFactory.CreateService<object>((ServiceId)m_constructorParams[i].Value);
+
+            return(constructorParams);
         }
 
         #endregion
@@ -136,6 +168,11 @@ namespace Juhta.Net.Services
         /// Specifies an array of the constructor parameters for creating instances of the service. Can be null.
         /// </summary>
         private object[] m_constructorParamObjs;
+
+        /// <summary>
+        /// Specifies whether the constructor parameters of this service contain references to other services.
+        /// </summary>
+        private bool m_hasServiceRefs;
 
         /// <summary>
         /// Stores the <see cref="Id"/> property.

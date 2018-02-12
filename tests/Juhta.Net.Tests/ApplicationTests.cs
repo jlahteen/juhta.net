@@ -1242,6 +1242,22 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
+        public void Start_Services_AggregateSumService_ServiceGroups_ShouldReturn()
+        {
+            AggregateSumService aggregateSumService;
+
+            SetConfigFiles("Root", "Services_AggregateSumService_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            aggregateSumService = Application.Instance.ServiceFactory.CreateService<AggregateSumService>();
+
+            aggregateSumService.Add(15);
+
+            Assert.AreEqual<int>(11 + 12 + 13 + 3 * 15, aggregateSumService.GetSum());
+        }
+
+        [TestMethod]
         public void Start_Services_AllParamTypeService_ShouldReturn()
         {
             IAllParamTypeService allParamTypeService;

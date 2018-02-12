@@ -86,6 +86,11 @@ namespace Juhta.Net.Services
         SByte,
 
         /// <summary>
+        /// Specifies the service reference type.
+        /// </summary>
+        ServiceRef,
+
+        /// <summary>
         /// Maps to the <see cref="System.Int16"/> type.
         /// </summary>
         Short,

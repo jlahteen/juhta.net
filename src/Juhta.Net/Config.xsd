@@ -78,6 +78,7 @@
       <xs:element name="int64" type="int64Type"/>
       <xs:element name="long" type="longType"/>
       <xs:element name="sbyte" type="sbyteType"/>
+      <xs:element name="serviceRef" type="serviceRefType"/>
       <xs:element name="short" type="shortType"/>
       <xs:element name="single" type="singleType"/>
       <xs:element name="string" type="stringType"/>
@@ -225,7 +226,7 @@
     <xs:sequence>
       <xs:element name="constructorParams" type="constructorParamsType" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="id" type="serviceIdType" use="required"/>
+    <xs:attribute name="id" type="common:serviceIdType" use="required"/>
     <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
     <xs:attribute name="libraryClass" type="common:classNameType" use="required"/>
   </xs:complexType>
@@ -238,13 +239,16 @@
     </xs:choice>
     <xs:attribute name="name" type="common:nonEmptyStringType" use="optional"/>
   </xs:complexType>
-  
-  <!-- Define serviceIdType -->
-  <xs:simpleType name="serviceIdType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="^([a-zA-Z0-9])+:([a-zA-Z0-9\._/-])+$"/>
-    </xs:restriction>
-  </xs:simpleType>
+
+  <!-- Define serviceRefType -->
+  <xs:complexType name="serviceRefType">
+    <xs:simpleContent>
+      <xs:restriction base="stringType">
+        <xs:pattern value="([a-zA-Z0-9])+:([a-zA-Z0-9\._/-])+"/>
+        <xs:attribute name="name" type="common:paramNameType" use="required"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
   
   <!-- Define shortType -->
   <xs:complexType name="shortType">
