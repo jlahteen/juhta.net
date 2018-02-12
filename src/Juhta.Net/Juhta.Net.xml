@@ -4380,9 +4380,9 @@
         </member>
         <member name="M:Juhta.Net.Services.Service.GetConstructorParams">
             <summary>
-            Gets an array of the constructor parameter objects for creating an instance of the service.
+            Gets an array of the constructor parameter objects required for creating an instance of the service.
             </summary>
-            <returns>Returns an array of the constructor parameter objects.</returns>
+            <returns>Returns an array of the required constructor parameter objects.</returns>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_constructorParams">
             <summary>
