@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Console
 {
     /// <summary>
     /// Defines a class for parsing command line arguments.
