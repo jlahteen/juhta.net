@@ -11,7 +11,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Validators
 {
     /// <summary>
     /// A wrapper class that makes easier to validate XML documents against XML schemas.
