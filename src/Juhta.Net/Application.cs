@@ -344,7 +344,7 @@ namespace Juhta.Net
             XmlDocument config = null;
             XmlDocumentValidator configValidator;
 
-            configFilePath = String.Format("{0}/{1}.config", m_configDirectory, FrameworkInfo.RootNamespace);
+            configFilePath = String.Format("{0}{1}{2}.config", m_configDirectory, Path.DirectorySeparatorChar, FrameworkInfo.RootNamespace);
 
             if (!File.Exists(configFilePath))
                 return(null);
