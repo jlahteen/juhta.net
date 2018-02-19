@@ -11,8 +11,7 @@ using System;
 namespace Juhta.Net.Validators
 {
     /// <summary>
-    /// This exception will be thrown by instances of the <see cref="IValidator&lt;T&gt;"/> interface when they
-    /// encounter invalid data.
+    /// This exception will be thrown by validator classes when a value doesn't pass validation.
     /// </summary>
     public class ValidationException : Exception
     {
@@ -23,6 +22,14 @@ namespace Juhta.Net.Validators
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
         public ValidationException(string message) : base(message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="innerException">Specifies an inner exception.</param>
+        public ValidationException(string message, Exception innerException) : base(message, innerException)
         {}
 
         #endregion

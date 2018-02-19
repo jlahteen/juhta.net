@@ -17,8 +17,8 @@ namespace Juhta.Net.Validators
         #region Methods
 
         /// <summary>
-        /// Validates a specified value. If the specified value doesn't pass validation, the method must throw an
-        /// instance of <see cref="ValidationException"/>.
+        /// Validates a specified value. If the specified value doesn't pass validation, the method must throw a
+        /// <see cref="ValidationException"/>.
         /// </summary>
         /// <param name="value">Specifies a value to validate.</param>
         void Validate(T value);

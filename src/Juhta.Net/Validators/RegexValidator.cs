@@ -189,7 +189,8 @@ namespace Juhta.Net.Validators
         private PatternMatchMode m_patternMatchMode;
 
         /// <summary>
-        /// Specifies a list of the regular expression patterns associated with this RegexValidator instance.
+        /// Specifies a list of the regular expression patterns associated with this <see cref="RegexValidator"/>
+        /// instance.
         /// </summary>
         private List<string> m_patterns;
 
