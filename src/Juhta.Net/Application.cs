@@ -342,7 +342,7 @@ namespace Juhta.Net
         {
             string configFilePath;
             XmlDocument config = null;
-            XmlValidator validator;
+            XmlDocumentValidator configValidator;
 
             configFilePath = String.Format("{0}/{1}.config", m_configDirectory, FrameworkInfo.RootNamespace);
 
@@ -353,15 +353,15 @@ namespace Juhta.Net
 
             config.Load(configFilePath);
 
-            validator = new XmlValidator();
+            configValidator = new XmlDocumentValidator();
 
-            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.RootConfigFileName, FrameworkConfig.RootConfigFileNamespace));
+            configValidator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.RootConfigFileName, FrameworkConfig.RootConfigFileNamespace));
 
-            validator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.CommonConfigFileName, FrameworkConfig.CommonConfigFileNamespace));
+            configValidator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.CommonConfigFileName, FrameworkConfig.CommonConfigFileNamespace));
 
             try
             {
-                validator.Validate(config);
+                configValidator.Validate(config);
             }
 
             catch (XmlSchemaValidationException ex)

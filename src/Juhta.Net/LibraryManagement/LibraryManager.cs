@@ -670,7 +670,7 @@ namespace Juhta.Net.LibraryManagement
         private static XmlDocument LoadAndValidateXmlConfigFile(string configFilePath, XmlSchema[] configSchemas, string libraryFileName)
         {
             XmlDocument config;
-            XmlValidator validator;
+            XmlDocumentValidator configValidator;
 
             config = new XmlDocument();
 
@@ -681,12 +681,12 @@ namespace Juhta.Net.LibraryManagement
 
             try
             {
-                validator = new XmlValidator();
+                configValidator = new XmlDocumentValidator();
 
                 foreach (XmlSchema schema in configSchemas)
-                    validator.AddSchema(schema);
+                    configValidator.AddSchema(schema);
 
-                validator.Validate(config);
+                configValidator.Validate(config);
 
                 return(config);
             }

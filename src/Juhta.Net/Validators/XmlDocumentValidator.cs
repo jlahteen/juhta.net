@@ -14,16 +14,16 @@ using System.Xml.Schema;
 namespace Juhta.Net.Validators
 {
     /// <summary>
-    /// A wrapper class that makes easier to validate XML documents against XML schemas.
+    /// A validator class that makes easier to validate XML documents against XML schemas.
     /// </summary>
-    public class XmlValidator
+    public class XmlDocumentValidator
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public XmlValidator()
+        public XmlDocumentValidator()
         {
             m_schemaSet = new XmlSchemaSet();
         }
@@ -93,7 +93,7 @@ namespace Juhta.Net.Validators
         /// the validation process is finished.</remarks>
         public static void Validate(XmlDocument document, string schema)
         {
-            XmlValidator validator = new XmlValidator();
+            XmlDocumentValidator validator = new XmlDocumentValidator();
 
             validator.AddSchema(schema);
 
@@ -110,7 +110,7 @@ namespace Juhta.Net.Validators
         /// the validation process is finished.</remarks>
         public static void Validate(XmlDocument document, XmlSchema schema)
         {
-            XmlValidator validator = new XmlValidator();
+            XmlDocumentValidator validator = new XmlDocumentValidator();
 
             validator.AddSchema(schema);
 

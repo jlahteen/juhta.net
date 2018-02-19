@@ -4781,35 +4781,35 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="T:Juhta.Net.Validators.XmlValidator">
+        <member name="T:Juhta.Net.Validators.XmlDocumentValidator">
             <summary>
-            A wrapper class that makes easier to validate XML documents against XML schemas.
+            A validator class that makes easier to validate XML documents against XML schemas.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.#ctor">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.AddSchema(System.Xml.Schema.XmlSchema)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)">
             <summary>
             Adds an XML schema to this validator instance.
             </summary>
             <param name="schema">Specifies an XmlSchema object.</param>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.AddSchema(System.String)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.String)">
             <summary>
             Adds an XML schema to this validator instance.
             </summary>
             <param name="schema">Specifies an XML schema string.</param>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.AddSchema(System.Uri)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Uri)">
             <summary>
             Adds an XML schema to this validator instance.
             </summary>
             <param name="schemaUri">Specifies the URI of a schema to be added to the instance.</param>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.Validate(System.Xml.XmlDocument)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument)">
             <summary>
             Validates a specified XML document.
             </summary>
@@ -4818,7 +4818,7 @@
             to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
             the validation process is finished.</remarks>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.Validate(System.Xml.XmlDocument,System.String)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)">
             <summary>
             Validates a specified XML document against a specified XML schema.
             </summary>
@@ -4828,7 +4828,7 @@
             to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
             the validation process is finished.</remarks>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)">
             <summary>
             Validates a specified XML document against a specified XML schema.
             </summary>
@@ -4838,17 +4838,17 @@
             to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
             the validation process is finished.</remarks>
         </member>
-        <member name="M:Juhta.Net.Validators.XmlValidator.ValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
+        <member name="M:Juhta.Net.Validators.XmlDocumentValidator.ValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
             <summary>
             Implements a validation event handler.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validators.XmlValidator.m_schemaSet">
+        <member name="F:Juhta.Net.Validators.XmlDocumentValidator.m_schemaSet">
             <summary>
             Specifies a set of XML schemas added to this instance.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validators.XmlValidator.m_validationException">
+        <member name="F:Juhta.Net.Validators.XmlDocumentValidator.m_validationException">
             <summary>
             Specifies the latest validation exception chain.
             </summary>
