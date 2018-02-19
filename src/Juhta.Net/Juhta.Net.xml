@@ -4471,12 +4471,11 @@
             <param name="serviceIdSpecifier">Specifies a service identifier specifier.</param>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
-        <member name="M:Juhta.Net.Services.ServiceFactory.GetServices">
+        <member name="P:Juhta.Net.Services.ServiceFactory.Services">
             <summary>
-            Gets the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            Gets an array of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration. The array is empty
+            if there are no configured dependency injection services.
             </summary>
-            <returns>Returns an array of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration. The
-            array is empty if there are no configured dependency injection services.</returns>
         </member>
         <member name="M:Juhta.Net.Services.ServiceFactory.#ctor(System.Xml.XmlNode)">
             <summary>
@@ -4501,7 +4500,13 @@
         </member>
         <member name="F:Juhta.Net.Services.ServiceFactory.m_services">
             <summary>
-            Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances created based on the configuration.
+            Stores the <see cref="P:Juhta.Net.Services.ServiceFactory.Services"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Services.ServiceFactory.m_servicesById">
+            <summary>
+            Specifies a collection of the <see cref="T:Juhta.Net.Services.Service"/> instances indexed by identifier. The collection has
+            been created based on the configuration.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ServiceId">

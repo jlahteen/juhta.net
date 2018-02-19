@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Xml;
 
@@ -1344,16 +1345,6 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_Services_GetServices_ShouldReturn()
-        {
-            SetConfigFiles("Root", "Services_SumService10_");
-
-            Application.StartInstance(null, s_configDirectory);
-
-            Assert.AreEqual<int>(10, Application.Instance.ServiceFactory.GetServices().Length);
-        }
-
-        [TestMethod]
         [ExpectedException(typeof(InvalidConfigFileException))]
         public void Start_Services_IdNotGiven_ShouldThrowInvalidConfigFileException()
         {
@@ -1583,6 +1574,24 @@ namespace Juhta.Net.Tests
 
                 throw;
             }
+        }
+
+        [TestMethod]
+        public void Start_Services_Services_ShouldReturn()
+        {
+            Service[] services;
+
+            SetConfigFiles("Root", "Services_SumService10_");
+
+            Application.StartInstance(null, s_configDirectory);
+
+            services = Application.Instance.ServiceFactory.Services;
+
+            Assert.AreEqual<int>(10, services.Length);
+
+            var sumServices = services.Where(service => service.Id.Specifier.StartsWith("SumService"));
+
+            Assert.AreEqual<int>(10, sumServices.Count());
         }
 
         [TestMethod]

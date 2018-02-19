@@ -40,7 +40,7 @@ namespace Juhta.Net.Services
         {
             Service service;
 
-            if (m_services.TryGetValue(serviceId.Value, out service))
+            if (m_servicesById.TryGetValue(serviceId.Value, out service))
                 return(service.CreateInstance<TService>());
             else
                 throw new KeyNotFoundException(LibraryMessages.Error016.FormatMessage(serviceId.Value));
@@ -70,23 +70,17 @@ namespace Juhta.Net.Services
             return(CreateService<TService>(new ServiceId(serviceIdScheme, serviceIdSpecifier)));
         }
 
+        #endregion
+
+        #region Public Properties
+
         /// <summary>
-        /// Gets the <see cref="Service"/> instances created based on the configuration.
+        /// Gets an array of the <see cref="Service"/> instances created based on the configuration. The array is empty
+        /// if there are no configured dependency injection services.
         /// </summary>
-        /// <returns>Returns an array of the <see cref="Service"/> instances created based on the configuration. The
-        /// array is empty if there are no configured dependency injection services.</returns>
-        public Service[] GetServices()
+        public Service[] Services
         {
-            Service[] services;
-
-            if (m_services.Count == 0)
-                return(new Service[]{});
-
-            services = new Service[m_services.Count];
-
-            m_services.Values.CopyTo(services, 0);
-
-            return(services);
+            get {return(m_services);}
         }
 
         #endregion
@@ -103,7 +97,7 @@ namespace Juhta.Net.Services
             List<XmlNode> serviceNodes = new List<XmlNode>();
             Service service;
 
-            m_services = new Dictionary<string, Service>();
+            m_servicesById = new Dictionary<string, Service>();
 
             if (servicesNode == null)
                 return;
@@ -114,11 +108,16 @@ namespace Juhta.Net.Services
             {
                 service = new Service(serviceNode);
 
-                if (m_services.ContainsKey(service.Id.Value))
+                if (m_servicesById.ContainsKey(service.Id.Value))
                     throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Id.Value));
 
-                m_services.Add(service.Id.Value, service);
+                m_servicesById.Add(service.Id.Value, service);
             }
+
+            m_services = new Service[m_servicesById.Count];
+
+            if (m_services.Length > 0)
+                m_servicesById.Values.CopyTo(m_services, 0);
 
             SetSingletonInstance(this);
         }
@@ -133,7 +132,7 @@ namespace Juhta.Net.Services
         /// </summary>
         internal void Close()
         {
-            m_services.Clear();
+            m_servicesById.Clear();
 
             ResetSingletonInstance();
         }
@@ -164,9 +163,15 @@ namespace Juhta.Net.Services
         #region Private Fields
 
         /// <summary>
-        /// Specifies a collection of the <see cref="Service"/> instances created based on the configuration.
+        /// Stores the <see cref="Services"/> property.
         /// </summary>
-        private IDictionary<string, Service> m_services;
+        private Service[] m_services;
+
+        /// <summary>
+        /// Specifies a collection of the <see cref="Service"/> instances indexed by identifier. The collection has
+        /// been created based on the configuration.
+        /// </summary>
+        private IDictionary<string, Service> m_servicesById;
 
         #endregion
     }
