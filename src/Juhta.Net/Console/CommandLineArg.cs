@@ -7,7 +7,7 @@
 //
 
 using Juhta.Net.Extensions;
-using Juhta.Net.Validation;
+using Juhta.Net.Validators;
 
 namespace Juhta.Net.Console
 {

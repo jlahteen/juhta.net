@@ -8,7 +8,7 @@
 
 using System;
 
-namespace Juhta.Net.Validation
+namespace Juhta.Net.Validators
 {
     /// <summary>
     /// This exception will be thrown by instances of the <see cref="IValidator&lt;T&gt;"/> interface when they

@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Juhta.Net.Validation
+namespace Juhta.Net.Validators
 {
     /// <summary>
     /// Defines a validator class that can validate string values based on a regular expression.
@@ -62,7 +62,7 @@ namespace Juhta.Net.Validation
         #region Public Methods
 
         /// <summary>
-        /// See <see cref="Validation.IValidator&lt;T&gt;.Validate"/>.
+        /// See <see cref="Validators.IValidator&lt;T&gt;.Validate"/>.
         /// </summary>
         public virtual void Validate(string value)
         {

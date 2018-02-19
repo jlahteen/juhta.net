@@ -1844,7 +1844,7 @@
             Defines an abstract base class for command line arguments.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Console.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)">
+        <member name="M:Juhta.Net.Console.CommandLineArg.ValidateValue(Juhta.Net.Validators.IStringValidator)">
             <summary>
             Validates the value of this CommandLineArg object through a specified IStringValidator instance.
             </summary>
@@ -4732,50 +4732,50 @@
             Maps to the <see cref="T:System.UInt16"/> type.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Validation.IStringValidator">
+        <member name="T:Juhta.Net.Validators.IStringValidator">
             <summary>
             Defines an interface for string value validators.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Validation.IValidator`1">
+        <member name="T:Juhta.Net.Validators.IValidator`1">
             <summary>
             Defines a generic interface for validators.
             </summary>
             <typeparam name="T">Specifies the type of values to validate.</typeparam>
         </member>
-        <member name="M:Juhta.Net.Validation.IValidator`1.Validate(`0)">
+        <member name="M:Juhta.Net.Validators.IValidator`1.Validate(`0)">
             <summary>
             Validates a specified value. If the specified value doesn't pass validation, the method must throw an
-            instance of <see cref="T:Juhta.Net.Validation.ValidationException"/>.
+            instance of <see cref="T:Juhta.Net.Validators.ValidationException"/>.
             </summary>
             <param name="value">Specifies a value to validate.</param>
         </member>
-        <member name="T:Juhta.Net.Validation.RegexValidator">
+        <member name="T:Juhta.Net.Validators.RegexValidator">
             <summary>
             Defines a validator class that can validate string values based on a regular expression.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.#ctor(System.String)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="pattern">Specifies a regular expression pattern.</param>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="pattern">Specifies a regular expression pattern.</param>
             <param name="errorMessage">Specifies an error message to use in validation errors.</param>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="pattern">Specifies a regular expression pattern.</param>
             <param name="options">Specifies a bitwise combination of regular expression options.</param>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -4783,12 +4783,12 @@
             <param name="options">Specifies a bitwise combination of regular expression options.</param>
             <param name="errorMessage">Specifies an error message to use in validation errors.</param>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.Validate(System.String)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.Validate(System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Validation.IValidator`1.Validate(`0)"/>.
+            See <see cref="M:Juhta.Net.Validators.IValidator`1.Validate(`0)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validation.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validation.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -4799,55 +4799,55 @@
             <param name="errorMessage">Specifies an error message to use in validation errors. The message can contain
             a placeholder for a value to validate.</param>
         </member>
-        <member name="T:Juhta.Net.Validation.RegexValidator.PatternMatchMode">
+        <member name="T:Juhta.Net.Validators.RegexValidator.PatternMatchMode">
             <summary>
             Defines an enumeration for the pattern match modes.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.PatternMatchMode.And">
+        <member name="F:Juhta.Net.Validators.RegexValidator.PatternMatchMode.And">
             <summary>
             All associated regular expressions must match for a succesful validation.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.PatternMatchMode.Or">
+        <member name="F:Juhta.Net.Validators.RegexValidator.PatternMatchMode.Or">
             <summary>
             At least one associated regular expression must match for a succesful validation.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.PatternMatchMode.Xor">
+        <member name="F:Juhta.Net.Validators.RegexValidator.PatternMatchMode.Xor">
             <summary>
             Exactly one associated regular expression must match for a succesful validation.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.m_errorMessage">
+        <member name="F:Juhta.Net.Validators.RegexValidator.m_errorMessage">
             <summary>
             Specifies the error message to use in validation errors. The message can contain a placeholder for a value
             to validate. Can be null.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.m_options">
+        <member name="F:Juhta.Net.Validators.RegexValidator.m_options">
             <summary>
             Specifies a combination of the regular expression options to control validation operations.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.m_patternMatchMode">
+        <member name="F:Juhta.Net.Validators.RegexValidator.m_patternMatchMode">
             <summary>
             Specifies the pattern match mode determining how many of the associated regular expression patterns must
             match for a successful validation.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Validation.RegexValidator.m_patterns">
+        <member name="F:Juhta.Net.Validators.RegexValidator.m_patterns">
             <summary>
             Specifies a list of the regular expression patterns associated with this RegexValidator instance.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Validation.ValidationException">
+        <member name="T:Juhta.Net.Validators.ValidationException">
             <summary>
-            This exception will be thrown by instances of the <see cref="T:Juhta.Net.Validation.IValidator`1"/> interface when they
+            This exception will be thrown by instances of the <see cref="T:Juhta.Net.Validators.IValidator`1"/> interface when they
             encounter invalid data.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validation.ValidationException.#ctor(System.String)">
+        <member name="M:Juhta.Net.Validators.ValidationException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
