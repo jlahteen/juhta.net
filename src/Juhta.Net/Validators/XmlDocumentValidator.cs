@@ -16,7 +16,7 @@ namespace Juhta.Net.Validators
     /// <summary>
     /// A validator class that makes easier to validate XML documents against XML schemas.
     /// </summary>
-    public class XmlDocumentValidator
+    public class XmlDocumentValidator : IValidator<XmlDocument>
     {
         #region Public Constructors
 
@@ -62,10 +62,10 @@ namespace Juhta.Net.Validators
         /// <summary>
         /// Validates a specified XML document.
         /// </summary>
-        /// <param name="document">Specifies an XmlDocument object.</param>
-        /// <remarks>If the XML document contains validation errors, the function collects the corresponding exceptions
-        /// to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
-        /// the validation process is finished.</remarks>
+        /// <param name="document">Specifies an <see cref="XmlDocument"/> object.</param>
+        /// <remarks>If the XML document contains validation errors, the method collects the corresponding exceptions
+        /// to an exception chain of the type <see cref="XmlSchemaValidationException"/>. This exception chain will be
+        /// thrown as an inner exception of <see cref="ValidationException"/> after the validation process is finished.</remarks>
         public void Validate(XmlDocument document)
         {
             if (!m_schemaSet.Contains(document.DocumentElement.NamespaceURI))
@@ -80,7 +80,7 @@ namespace Juhta.Net.Validators
             document.Schemas = null;
 
             if (m_validationException != null)
-                throw m_validationException;
+                throw new ValidationException(LibraryMessages.Error082.GetMessage(), m_validationException);
         }
 
         /// <summary>

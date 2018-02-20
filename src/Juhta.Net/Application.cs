@@ -364,7 +364,7 @@ namespace Juhta.Net
                 configValidator.Validate(config);
             }
 
-            catch (XmlSchemaValidationException ex)
+            catch (ValidationException ex)
             {
                 throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, FrameworkInfo.RootNamespace + ".dll"), ex);
             }

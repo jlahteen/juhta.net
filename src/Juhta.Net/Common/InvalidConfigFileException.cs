@@ -29,8 +29,8 @@ namespace Juhta.Net.Common
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        /// <param name="exception">Specifies an error that has occurred in the schema validation.</param>
-        public InvalidConfigFileException(string message, XmlSchemaValidationException exception) : base(message, exception)
+        /// <param name="innerException">Specifies an inner exception.</param>
+        public InvalidConfigFileException(string message, Exception innerException) : base(message, innerException)
         {}
 
         #endregion

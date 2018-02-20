@@ -473,6 +473,11 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error081 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the type '{0}'.");
 
+        /// <summary>
+        /// XML document is not valid according to the given schema(s).
+        /// </summary>
+        internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("XML document is not valid according to the given schema(s).");
+
         #endregion
     }
 }

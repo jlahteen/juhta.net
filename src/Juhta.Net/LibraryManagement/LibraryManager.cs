@@ -691,7 +691,7 @@ namespace Juhta.Net.LibraryManagement
                 return(config);
             }
 
-            catch (XmlSchemaValidationException ex)
+            catch (ValidationException ex)
             {
                 throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, libraryFileName), ex);
             }

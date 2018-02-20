@@ -1164,12 +1164,12 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)">
+        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
-            <param name="exception">Specifies an error that has occurred in the schema validation.</param>
+            <param name="innerException">Specifies an inner exception.</param>
         </member>
         <member name="T:Juhta.Net.Common.InvalidConfigValueException">
             <summary>
@@ -4045,6 +4045,11 @@
             No dependency injection service was found with the type '{0}'.
             </summary>
         </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error082">
+            <summary>
+            XML document does not conform to the specified XML schema(s).
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Logger">
             <summary>
             Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
@@ -4820,10 +4825,10 @@
             <summary>
             Validates a specified XML document.
             </summary>
-            <param name="document">Specifies an XmlDocument object.</param>
-            <remarks>If the XML document contains validation errors, the function collects the corresponding exceptions
-            to an exception chain of the type XmlSchemaValidationException. This exception chain will be thrown after
-            the validation process is finished.</remarks>
+            <param name="document">Specifies an <see cref="T:System.Xml.XmlDocument"/> object.</param>
+            <remarks>If the XML document contains validation errors, the method collects the corresponding exceptions
+            to an exception chain of the type <see cref="T:System.Xml.Schema.XmlSchemaValidationException"/>. This exception chain will be
+            thrown as an inner exception of <see cref="T:Juhta.Net.Validators.ValidationException"/> after the validation process is finished.</remarks>
         </member>
         <member name="M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)">
             <summary>
