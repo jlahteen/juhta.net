@@ -499,20 +499,20 @@
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId">
             <summary>
-            Gets an integer ID out of the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this DiagnosticMessage instance.
+            Gets an integer identifier out of the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this DiagnosticMessage instance.
             </summary>
             <returns>Returns the greatest whole number fragment in the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this
-            DiagnosticMessage instance as an integer. If there are no whole number fragments in the ID property, the
-            return value is zero.</returns>
+            DiagnosticMessage instance as an integer. If there are no whole number fragments in the identifier
+            property, the return value is zero.</returns>
             <seealso cref="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)"/>
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)">
             <summary>
-            Gets an integer ID out of a specified string ID.
+            Gets an integer identifier out of a specified string identifier.
             </summary>
-            <param name="id">Specifies a string ID.</param>
-            <returns>Returns the greatest whole number fragment in the specified string ID as an integer. If there are
-            no whole number fragments in the string ID, the return value is zero.</returns>
+            <param name="id">Specifies a string identifier.</param>
+            <returns>Returns the greatest whole number fragment in the specified string identifier as an integer. If
+            there are no whole number fragments in the string identifier, the return value is zero.</returns>
             <seealso cref="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId"/>
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.GetMessage">
@@ -524,32 +524,32 @@
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)">
             <summary>
-            Tries to get an ID for the message of a specified exception.
+            Tries to get an identifier for the message of a specified exception.
             </summary>
             <param name="exception">Specifies an exception.</param>
-            <param name="messageId">If the function returns true, returns the ID of the message of the specified
-            exception, otherwise returns null.</param>
-            <returns>Returns true if an ID was found for the message of the specified exception, otherwise returns
-            false.</returns>
+            <param name="messageId">If the function returns true, returns the identifier of the message of the
+            specified exception, otherwise returns null.</param>
+            <returns>Returns true if an identifier was found for the message of the specified exception, otherwise
+            returns false.</returns>
             <remarks>
-            <para>If the specified exception contains inner exceptions, the innermost exception with a found ID match
-            is decisive (root cause exception).</para>
+            <para>If the specified exception contains inner exceptions, the innermost exception with a found identifier
+            match is decisive (root cause exception).</para>
             <para>Searching will be done in the last formatted messages for the current thread.</para>
             </remarks>
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)">
             <summary>
-            Tries to get an ID for a specified message.
+            Tries to get an identifier for a specified message.
             </summary>
             <param name="message">Specifies a message.</param>
-            <param name="messageId">If the function returns true, returns the ID of the specified message, otherwise
-            returns null.</param>
-            <returns>Returns true if an ID was found for the specified message, otherwise returns false.</returns>
+            <param name="messageId">If the function returns true, returns the identifier of the specified message,
+            otherwise returns null.</param>
+            <returns>Returns true if an identifier was found for the specified message, otherwise returns false.</returns>
             <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
         </member>
         <member name="P:Juhta.Net.Common.DiagnosticMessage.Id">
             <summary>
-            Gets the ID of the diagnostic message that this DiagnosticMessage instance represents.
+            Gets the identifier of the diagnostic message that this DiagnosticMessage instance represents.
             </summary>
         </member>
         <member name="P:Juhta.Net.Common.DiagnosticMessage.Message">
@@ -579,6 +579,13 @@
             <param name="message">Specifies a message that will be associated with the instance. The value can contain
             format items.</param>
             <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.DiagnosticMessage.AddIdPrefix(System.String)">
+            <summary>
+            Adds the identifier of this diagnostic message as a prefix to a specified message.
+            </summary>
+            <param name="message">Specifies a message.</param>
+            <returns>Returns the specified messaged prefixed by the identifier of this diagnostic message.</returns>
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.SaveAsLastFormattedMessage(System.String)">
             <summary>
@@ -875,12 +882,11 @@
             </summary>
             <returns>Returns the default log file path.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.String,System.Exception,System.String,System.Object[])">
+        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.Exception,System.String,System.Object[])">
             <summary>
             Writes a log event to the underlying log file.
             </summary>
             <param name="messageType">Specifies a message type.</param>
-            <param name="messageId">Specifies a message ID.</param>
             <param name="exception">Specifies an Exception object.</param>
             <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
             <param name="args">Specifies an array of format objects corresponding the format items in
@@ -4047,7 +4053,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error082">
             <summary>
-            XML document does not conform to the specified XML schema(s).
+            XML document is not valid according to the given schema(s).
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">

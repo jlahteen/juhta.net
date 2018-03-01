@@ -48,15 +48,15 @@ namespace Juhta.Net.Common
                 SaveAsLastFormattedMessage(message);
             }
 
-            return(message);
+            return(AddIdPrefix(message));
         }
 
         /// <summary>
-        /// Gets an integer ID out of the <see cref="Id"/> property of this DiagnosticMessage instance.
+        /// Gets an integer identifier out of the <see cref="Id"/> property of this DiagnosticMessage instance.
         /// </summary>
         /// <returns>Returns the greatest whole number fragment in the <see cref="Id"/> property of this
-        /// DiagnosticMessage instance as an integer. If there are no whole number fragments in the ID property, the
-        /// return value is zero.</returns>
+        /// DiagnosticMessage instance as an integer. If there are no whole number fragments in the <see cref="Id"/>
+        /// property, the return value is zero.</returns>
         /// <seealso cref="GetIntegerId(string)"/>
         public int GetIntegerId()
         {
@@ -64,11 +64,11 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets an integer ID out of a specified string ID.
+        /// Gets an integer identifier out of a specified string identifier.
         /// </summary>
-        /// <param name="id">Specifies a string ID.</param>
-        /// <returns>Returns the greatest whole number fragment in the specified string ID as an integer. If there are
-        /// no whole number fragments in the string ID, the return value is zero.</returns>
+        /// <param name="id">Specifies a string identifier.</param>
+        /// <returns>Returns the greatest whole number fragment in the specified string identifier as an integer. If
+        /// there are no whole number fragments in the string identifier, the return value is zero.</returns>
         /// <seealso cref="GetIntegerId()"/>
         public static int GetIntegerId(string id)
         {
@@ -107,20 +107,20 @@ namespace Juhta.Net.Common
         {
             SaveAsLastFormattedMessage(m_message);
 
-            return(m_message);
+            return(AddIdPrefix(m_message));
         }
 
         /// <summary>
-        /// Tries to get an ID for the message of a specified exception.
+        /// Tries to get an identifier for the message of a specified exception.
         /// </summary>
         /// <param name="exception">Specifies an exception.</param>
-        /// <param name="messageId">If the function returns true, returns the ID of the message of the specified
-        /// exception, otherwise returns null.</param>
-        /// <returns>Returns true if an ID was found for the message of the specified exception, otherwise returns
-        /// false.</returns>
+        /// <param name="messageId">If the function returns true, returns the identifier of the message of the
+        /// specified exception, otherwise returns null.</param>
+        /// <returns>Returns true if an identifier was found for the message of the specified exception, otherwise
+        /// returns false.</returns>
         /// <remarks>
-        /// <para>If the specified exception contains inner exceptions, the innermost exception with a found ID match
-        /// is decisive (root cause exception).</para>
+        /// <para>If the specified exception contains inner exceptions, the innermost exception with a found identifier
+        /// match is decisive (root cause exception).</para>
         /// <para>Searching will be done in the last formatted messages for the current thread.</para>
         /// </remarks>
         public static bool TryGetMessageId(Exception exception, out string messageId)
@@ -141,12 +141,12 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Tries to get an ID for a specified message.
+        /// Tries to get an identifier for a specified message.
         /// </summary>
         /// <param name="message">Specifies a message.</param>
-        /// <param name="messageId">If the function returns true, returns the ID of the specified message, otherwise
-        /// returns null.</param>
-        /// <returns>Returns true if an ID was found for the specified message, otherwise returns false.</returns>
+        /// <param name="messageId">If the function returns true, returns the identifier of the specified message,
+        /// otherwise returns null.</param>
+        /// <returns>Returns true if an identifier was found for the specified message, otherwise returns false.</returns>
         /// <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
         public static bool TryGetMessageId(string message, out string messageId)
         {
@@ -171,7 +171,7 @@ namespace Juhta.Net.Common
         #region Public Properties
 
         /// <summary>
-        /// Gets the ID of the diagnostic message that this DiagnosticMessage instance represents.
+        /// Gets the identifier of the diagnostic message that this DiagnosticMessage instance represents.
         /// </summary>
         public string Id
         {
@@ -227,6 +227,19 @@ namespace Juhta.Net.Common
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Adds the identifier of this diagnostic message as a prefix to a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message.</param>
+        /// <returns>Returns the specified message prefixed by the identifier of this diagnostic message.</returns>
+        private string AddIdPrefix(string message)
+        {
+            if (String.IsNullOrEmpty(m_id))
+                return(message);
+            else
+                return("[" + m_id + "] " + message);
+        }
 
         /// <summary>
         /// Saves a specified message as a last formatted message for the current thread, and associates the current
