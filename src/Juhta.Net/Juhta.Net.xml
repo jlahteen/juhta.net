@@ -502,7 +502,7 @@
             Gets an integer identifier out of the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this DiagnosticMessage instance.
             </summary>
             <returns>Returns the greatest whole number fragment in the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this
-            DiagnosticMessage instance as an integer. If there are no whole number fragments in the identifier
+            DiagnosticMessage instance as an integer. If there are no whole number fragments in the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/>
             property, the return value is zero.</returns>
             <seealso cref="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)"/>
         </member>
@@ -585,7 +585,7 @@
             Adds the identifier of this diagnostic message as a prefix to a specified message.
             </summary>
             <param name="message">Specifies a message.</param>
-            <returns>Returns the specified messaged prefixed by the identifier of this diagnostic message.</returns>
+            <returns>Returns the specified message prefixed by the identifier of this diagnostic message.</returns>
         </member>
         <member name="M:Juhta.Net.Common.DiagnosticMessage.SaveAsLastFormattedMessage(System.String)">
             <summary>

@@ -33,7 +33,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogAlert(new AlertMessage("This is an alert message 'Alert #1'.", "Alert #1"));
 
-            AssertDefaultLogFileContent("ALERT 'Alert #1'", "This is an alert message 'Alert #1'.");
+            AssertDefaultLogFileContent("ALERT event", "[Alert #1] This is an alert message 'Alert #1'.");
         }
 
         [TestMethod]
@@ -41,7 +41,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogAlert(new AlertMessage("This is an alert message '{0}'.", "Alert #3"), "Alert #3");
 
-            AssertDefaultLogFileContent("ALERT 'Alert #3'", "This is an alert message 'Alert #3'.");
+            AssertDefaultLogFileContent("ALERT event", "[Alert #3] This is an alert message 'Alert #3'.");
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogError(new ErrorMessage("This is an error message 'Error #1'.", "Error #1"));
 
-            AssertDefaultLogFileContent("ERROR 'Error #1'", "This is an error message 'Error #1'.");
+            AssertDefaultLogFileContent("ERROR event", "[Error #1] This is an error message 'Error #1'.");
         }
 
         [TestMethod]
@@ -73,7 +73,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogError(new ErrorMessage("This is an error message '{0}'.", "Error #3"), "Error #3");
 
-            AssertDefaultLogFileContent("ERROR 'Error #3'", "This is an error message 'Error #3'.");
+            AssertDefaultLogFileContent("ERROR event", "[Error #3] This is an error message 'Error #3'.");
         }
 
         [TestMethod]
@@ -105,7 +105,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogEvent(new ErrorMessage("This is an error message 'Error #10'.", "Error #10"));
 
-            AssertDefaultLogFileContent("ERROR 'Error #10'", "This is an error message 'Error #10'.");
+            AssertDefaultLogFileContent("ERROR event", "[Error #10] This is an error message 'Error #10'.");
         }
 
         [TestMethod]
@@ -113,7 +113,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogEvent(new ErrorMessage("This is an error message '{0}'.", "Error #11"), "Error #11");
 
-            AssertDefaultLogFileContent("ERROR 'Error #11'", "This is an error message 'Error #11'.");
+            AssertDefaultLogFileContent("ERROR event", "[Error #11] This is an error message 'Error #11'.");
         }
 
         [TestMethod]
@@ -121,7 +121,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogInformation(new InformationMessage("This is an information message 'Information #1'.", "Information #1"));
 
-            AssertDefaultLogFileContent("INFORMATION 'Information #1'", "This is an information message 'Information #1'.");
+            AssertDefaultLogFileContent("INFORMATION event", "[Information #1] This is an information message 'Information #1'.");
         }
 
         [TestMethod]
@@ -129,7 +129,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogInformation(new InformationMessage("This is an information message '{0}'.", "Information #3"), "Information #3");
 
-            AssertDefaultLogFileContent("INFORMATION 'Information #3'", "This is an information message 'Information #3'.");
+            AssertDefaultLogFileContent("INFORMATION event", "[Information #3] This is an information message 'Information #3'.");
         }
 
         [TestMethod]
@@ -153,7 +153,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogWarning(new WarningMessage("This is a warning message 'Warning #1'.", "Warning #1"));
 
-            AssertDefaultLogFileContent("WARNING 'Warning #1'", "This is a warning message 'Warning #1'.");
+            AssertDefaultLogFileContent("WARNING event", "[Warning #1] This is a warning message 'Warning #1'.");
         }
 
         [TestMethod]
@@ -161,7 +161,7 @@ namespace Juhta.Net.Tests
         {
             Logger.LogWarning(new WarningMessage("This is a warning message '{0}'.", "Warning #3"), "Warning #3");
 
-            AssertDefaultLogFileContent("WARNING 'Warning #3'", "This is a warning message 'Warning #3'.");
+            AssertDefaultLogFileContent("WARNING event", "[Warning #3] This is a warning message 'Warning #3'.");
         }
 
         [TestMethod]

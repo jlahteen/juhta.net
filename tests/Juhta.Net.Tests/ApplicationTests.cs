@@ -216,7 +216,7 @@ namespace Juhta.Net.Tests
 
             catch (LibraryInitializationException ex)
             {
-                Assert.IsTrue(ex.InnerException.Message.StartsWith("Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
+                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Error10014] Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
 
                 throw;
             }
@@ -306,7 +306,7 @@ namespace Juhta.Net.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("WARNING 'Juhta.Net.Warning10017'", "At least one error occurred when the library 'AppXLibrary.dll' was closed.");
+            AssertDefaultLogFileContent("WARNING event", "[Juhta.Net.Warning10017] At least one error occurred when the library 'AppXLibrary.dll' was closed.");
         }
 
         [TestMethod]
@@ -328,7 +328,7 @@ namespace Juhta.Net.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10004'", "An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
+            AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Error10004] An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
         }
 
         [TestMethod]
@@ -478,9 +478,11 @@ namespace Juhta.Net.Tests
             }
 
             AssertDefaultLogFileContent(
-                "WARNING 'Juhta.Net.Warning10063'",
+                "WARNING event",
+                "[Juhta.Net.Warning10063] Library Manager detected that the configuration file",
                 "RenamedAppXLibrary.json' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.",
-                "INFORMATION 'Juhta.Net.Info10012'",
+                "INFORMATION event",
+                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -511,7 +513,8 @@ namespace Juhta.Net.Tests
             }
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10065'",
+                "INFORMATION event",
+                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -540,7 +543,8 @@ namespace Juhta.Net.Tests
             }
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10012'",
+                "INFORMATION event",
+                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -627,8 +631,8 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("Hello there, what's up?", currentGreeting);
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10012'",
-                "Library Manager detected that the configuration file",
+                "INFORMATION event",
+                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -664,12 +668,14 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10012'",
-                "Library Manager detected that the configuration file",
+                "INFORMATION event",
+                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully.",
-                "INFORMATION 'Juhta.Net.Info10065'",
+                "INFORMATION event",
+                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully.",
-                "WARNING 'Juhta.Net.Warning10063'",
+                "WARNING event",
+                "[Juhta.Net.Warning10063] Library Manager detected that the configuration file",
                 "Juhta.Net.config' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
@@ -702,12 +708,14 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
 
             AssertDefaultLogFileContent(
-                "ERROR 'Juhta.Net.Error10002'",
-                "Library Manager detected that the configuration file",
+                "ERROR event",
+                "[Juhta.Net.Error10064] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. The state of the library was left unmodified.",
+                "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Error10002] XML configuration file",
                 "AppXLibrary.config' does not conform to the configuration schema(s) of the custom XML configurable library 'AppXLibrary.dll'.",
-                "'Juhta.Net.Alert10005'",
-                "Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                "ALERT event",
+                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -739,8 +747,8 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("This is the new greeting dynamically changed by a unit test!", currentGreeting);
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10065'",
-                "Library Manager detected that the configuration file",
+                "INFORMATION event",
+                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -771,8 +779,8 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("This is the current greeting.#%!", currentGreeting);
 
             AssertDefaultLogFileContent(
-                "WARNING 'Juhta.Net.Warning10011'",
-                "Library Manager detected that the configuration file",
+                "WARNING event",
+                "[Juhta.Net.Warning10011] Library Manager detected that the configuration file",
                 "Unknown.config' was deleted, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
@@ -816,8 +824,8 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("Zz-Zz-Zz", s);
 
             AssertDefaultLogFileContent(
-                "INFORMATION 'Juhta.Net.Info10065'",
-                "Library Manager detected that the configuration file",
+                "INFORMATION event",
+                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -885,13 +893,13 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
             AssertDefaultLogFileContent(
-                "ERROR 'Juhta.Net.Error10061'",
-                "Juhta.Net.LibraryManagement.LibraryStateException: Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
+                "ERROR event",
+                "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10061] Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
                 "System.InvalidOperationException: Cannot replace with 'XYZ' strings. Please use any other token but not that. Sorry.",
-                "WARNING 'Juhta.Net.Warning10078'",
+                "[Juhta.Net.Warning10078] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The library continues running with the current state.",
-                "ALERT 'Juhta.Net.Alert10005'",
-                "Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "ALERT event",
+                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -928,13 +936,14 @@ namespace Juhta.Net.Tests
             catch
             {
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10059'",
+                    "ERROR event",
+                    "[Juhta.Net.Error10066] Library Manager detected that the configuration file",
                     "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated.",
                     "NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                    "An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
-                    "Juhta.Net.LibraryManagement.LibraryStateException: Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
-                    "ALERT 'Juhta.Net.Alert10005'",
-                    "Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                    "[Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                    "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10059] Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
+                    "ALERT event",
+                    "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
                 );
 
                 throw;
@@ -970,11 +979,11 @@ namespace Juhta.Net.Tests
             Assert.AreEqual<string>("Yo-Yo-Yo", s);
 
             AssertDefaultLogFileContent(
-                "ERROR 'Juhta.Net.Error10075'",
+                "ERROR event",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                "Juhta.Net.LibraryManagement.LibraryStateException: An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
-                "ALERT 'Juhta.Net.Alert10005'",
-                "Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
+                "ALERT event",
+                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -990,8 +999,8 @@ namespace Juhta.Net.Tests
             Application.CloseInstance();
 
             AssertDefaultLogFileContent(
-                "WARNING 'Juhta.Net.Warning10073'",
-                "At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
+                "WARNING event",
+                "[Juhta.Net.Warning10073] At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
             );
         }
 
@@ -1007,8 +1016,8 @@ namespace Juhta.Net.Tests
             Application.CloseInstance();
 
             AssertDefaultLogFileContent(
-                "ERROR 'Juhta.Net.Error10075'",
-                "An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                "ERROR event",
+                "[Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
                 "System.Exception: Processes could not be stopped."
             );
         }
@@ -1089,7 +1098,8 @@ namespace Juhta.Net.Tests
 
             for (int i = 1; i <= 100; i++)
                 AssertDefaultLogFileContent(
-                    "INFORMATION 'Juhta.Net.Info10065'",
+                    "INFORMATION event",
+                    "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
                     $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibraryTempC{i}.dll' was updated successfully."
                 );
         }
@@ -1109,7 +1119,7 @@ namespace Juhta.Net.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10003'", "Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
+                AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Error10003] Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
 
                 throw;
             }
@@ -1170,7 +1180,7 @@ namespace Juhta.Net.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("ERROR 'Juhta.Net.Error10002'");
+                AssertDefaultLogFileContent("[Juhta.Net.Error10002]");
 
                 throw;
             }
@@ -1334,10 +1344,10 @@ namespace Juhta.Net.Tests
             catch
             {
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10060'",
-                    "Juhta.Net.Services.ServiceInitializationException: Dependency injection service 'name:AnyService' could not be initialized.",
-                    "Juhta.Net.Services.ConstructorParamException: Constructor parameter 'dateTimeValue' could not be initialized.",
-                    "Juhta.Net.Common.InvalidConfigValueException: Value '2018-02-04T16:55:00.7774' of the constructor parameter 'dateTimeValue' is not a valid 'DateTime' parameter value."
+                    "[Juhta.Net.Error10060]",
+                    "Juhta.Net.Services.ServiceInitializationException: [Juhta.Net.Error10074] Dependency injection service 'name:AnyService' could not be initialized.",
+                    "Juhta.Net.Services.ConstructorParamException: [Juhta.Net.Error10062] Constructor parameter 'dateTimeValue' could not be initialized.",
+                    "Juhta.Net.Common.InvalidConfigValueException: [Juhta.Net.Error10060] Value '2018-02-04T16:55:00.7774' of the constructor parameter 'dateTimeValue' is not a valid 'DateTime' parameter value."
                 );
 
                 throw;
@@ -1358,9 +1368,13 @@ namespace Juhta.Net.Tests
             catch
             {
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10002'",
-                    "Juhta.Net.Common.InvalidConfigFileException: XML configuration file",
-                    "Juhta.Net.config' does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.dll'. ---> System.Xml.Schema.XmlSchemaValidationException: The required attribute 'id' is missing."
+                    "[Juhta.Net.Error10002]",
+                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Error10002] XML configuration file",
+                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                    "[Juhta.Net.Error10002] XML configuration file",
+                    "Juhta.Net.config' does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.dll'.",
+                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                    "System.Xml.Schema.XmlSchemaValidationException: The required attribute 'id' is missing."
                 );
 
                 throw;
@@ -1465,8 +1479,8 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:SumService' could not be created.",
+                    "[Juhta.Net.Error10080]",
+                    "Juhta.Net.Services.ServiceCreationException: [Juhta.Net.Error10080] An instance of the dependency injection service 'name:SumService' could not be created.",
                     "System.MissingMethodException: Constructor on type 'AppXLibrary.Services.SumService' not found."
                 );
 
@@ -1494,10 +1508,10 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Common.Error11017'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:TestService' could not be created.",
+                    "[Juhta.Net.Common.Error11017]",
+                    "Juhta.Net.Services.ServiceCreationException: [Juhta.Net.Error10080] An instance of the dependency injection service 'name:TestService' could not be created.",
                     "System.ArgumentException",
-                    "An instance of the class 'AppXLibrary.Services.TestService' could not be created because the type was not found in the assembly"
+                    "[Juhta.Net.Common.Error11017] An instance of the class 'AppXLibrary.Services.TestService' could not be created because the type was not found in the assembly"
                 );
 
                 throw;
@@ -1524,8 +1538,8 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10080'",
-                    "Juhta.Net.Services.ServiceCreationException: An instance of the dependency injection service 'name:TestService' could not be created.",
+                    "[Juhta.Net.Error10080]",
+                    "Juhta.Net.Services.ServiceCreationException: [Juhta.Net.Error10080] An instance of the dependency injection service 'name:TestService' could not be created.",
                     "System.IO.FileNotFoundException",
                     "AppXLibrary1234.dll' or one of its dependencies. The system cannot find the file specified."
                 );
@@ -1568,8 +1582,8 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10016'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'type:AppXLibrary.Services.SumService'."
+                    "[Juhta.Net.Error10016]",
+                    "System.Collections.Generic.KeyNotFoundException: [Juhta.Net.Error10016] No dependency injection service was found with the identifier 'type:AppXLibrary.Services.SumService'."
                 );
 
                 throw;
@@ -1754,8 +1768,8 @@ namespace Juhta.Net.Tests
                 Logger.LogError(ex);
 
                 AssertDefaultLogFileContent(
-                    "ERROR 'Juhta.Net.Error10016'",
-                    "System.Collections.Generic.KeyNotFoundException: No dependency injection service was found with the identifier 'name:SumService10'."
+                    "[Juhta.Net.Error10016]",
+                    "System.Collections.Generic.KeyNotFoundException: [Juhta.Net.Error10016] No dependency injection service was found with the identifier 'name:SumService10'."
                 );
 
                 throw;
