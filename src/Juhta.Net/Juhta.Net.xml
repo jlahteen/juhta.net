@@ -189,26 +189,6 @@
             Specifies the current state of the application.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Common.AlertMessage">
-            <summary>
-            Defines a class for alert messages.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
         <member name="T:Juhta.Net.Common.AssemblyClassFileUri">
             <summary>
             Defines a class that can be used for locating assembly classes with file URIs.
@@ -481,6 +461,651 @@
             <summary>
             Specifies the worker thread that actually consumes incoming objects.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.InterfaceNotSupportedException">
+            <summary>
+            This exception will be thrown when an object doesn't support a requested interface.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an InvalidCastException instance that relates to the failed
+            interface cast operation.</param>
+        </member>
+        <member name="T:Juhta.Net.Common.InternalException">
+            <summary>
+            This exception will be thrown when an internal error occurs.
+            </summary>
+            <remarks>An internal error is typically an error that should 'never happen', and it usually means some kind of
+            a bug in the software.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.InternalException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="P:Juhta.Net.Common.InternalException.InternalErrorInfo">
+            <summary>
+            Gets general information about internal errors.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.InvalidConfigFileException">
+            <summary>
+            This exception will be thrown when an XML configuration file doesn't pass (schema) validation.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception.</param>
+        </member>
+        <member name="T:Juhta.Net.Common.InvalidConfigValueException">
+            <summary>
+            This exception will be thrown when a configuration file has passed schema validation but in further processing
+            an invalid configuration value is encountered.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.InvalidConfigValueException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.Common.ObjectFactory">
+            <summary>
+            A static class that provides services for creating instances of such classes whose type is not directly
+            referencable in the current programming context. A typical scenario for using this class is to create instances
+            of classes that are not available at the build time but are known to implement a specific interface.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String)">
+            <summary>
+            Creates an instance of a specified class by using the default constructor.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assembly">Specifies an Assembly object.</param>
+            <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
+            case the root namespace for the class will be taken from the file name part of the Assembly object's
+            Location property.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String,System.Object[])">
+            <summary>
+            Creates an instance of a specified class.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assembly">Specifies an Assembly object.</param>
+            <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
+            case the root namespace for the class will be taken from the file name part of the Assembly object's
+            Location property.</param>
+            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
+            constructor. Can be null causing the default constructor to be called.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)">
+            <summary>
+            Creates an instance of a specified class by using the default constructor.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])">
+            <summary>
+            Creates an instance of a specified class.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
+            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
+            constructor. Can be null causing the default constructor to be called.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+            <remarks>An exception will be thrown if the assembly referenced by <paramref name="assemblyClassUri"/> has
+            not been downloaded to the local machine.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)">
+            <summary>
+            Creates an instance of a specified class by using the default constructor.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assemblyFile">Specifies an assembly file.</param>
+            <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
+            the root namespace for the class will be taken from the file name of the assembly.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String,System.Object[])">
+            <summary>
+            Creates an instance of a specified class.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="assemblyFile">Specifies an assembly file.</param>
+            <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
+            the root namespace for the class will be taken from the file name of the assembly.</param>
+            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
+            constructor. Can be null causing the default constructor to be called.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)">
+            <summary>
+            Creates an instance based on a specified object XML node.
+            </summary>
+            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
+            type.</typeparam>
+            <param name="objectNode">Specifies an object XML node.</param>
+            <returns>Returns the created instance casted to the requested type.</returns>
+        </member>
+        <member name="T:Juhta.Net.Common.ObjectQueue`1">
+            <summary>
+            Represents a first-in, first-out queue for a generic object type. The queue implemented by this class is
+            thread-safe, and it also blocks readers in case of an empty queue. This queue has especially been designed to
+            act as a work queue in multi-threaded applications.
+            </summary>
+            <typeparam name="T">Specifies an object type.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectQueue`1.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectQueue`1.Close">
+            <summary>
+            Closes the object queue specified by this ObjectQueue instance. The operation releases all threads that are
+            blocked by the current instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectQueue`1.GetObject">
+            <summary>
+            Gets the next object from the object queue specified by this ObjectQueue instance.
+            </summary>
+            <returns>Returns the next instance of <i>T</i> from the queue. The return value is null only, if the queue
+            was initially empty and the queue had been closed prior to the call or no object became available before
+            the queue was closed during the call.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.ObjectQueue`1.PutObject(`0)">
+            <summary>
+            Puts an object to the object queue specified by this ObjectQueue instance.
+            </summary>
+            <param name="object">Specifies an object.</param>
+        </member>
+        <member name="P:Juhta.Net.Common.ObjectQueue`1.Count">
+            <summary>
+            Gets the number of elements contained in the object queue specified by this ObjectQueue instance.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.ObjectQueue`1.WaitEvent">
+            <summary>
+            Defines an enumeration for wait events.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.WaitEvent.Close">
+            <summary>
+            Specifies the Close event.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.WaitEvent.Put">
+            <summary>
+            Specifies the Put event.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_closed">
+            <summary>
+            Specifies whether the object queue has been closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_eventWaitHandles">
+            <summary>
+            Specifies an array of EventWaitHandle objects related to this ObjectQueue instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_mutex">
+            <summary>
+            Specifies a Mutex object for synchronizing concurrent access to the object queue.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_objectQueue">
+            <summary>
+            Specifies the underlying Queue instance.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.RegularExpressions">
+            <summary>
+            Defines a static class containing certain regular expression patterns for validating string data.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegularExpressions.AssemblyClassFileUri">
+            <summary>
+            Specifies a regular expression for validating assembly class file URIs.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegularExpressions.DirectoryPath">
+            <summary>
+            Specifies a regular expression for validating absolute or relative directory paths.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddress">
+            <summary>
+            Specifies a regular expression for validating email addresses.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddressList">
+            <summary>
+            Specifies a regular expression for validating email address lists.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegularExpressions.FilePath">
+            <summary>
+            Specifies a regular expression for validating absolute or relative file paths.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.Singleton`1">
+            <summary>
+            Defines an abstract base class singleton classes.
+            </summary>
+            <typeparam name="T">Specifies a type to make as singleton.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.#cctor">
+            <summary>
+            Initializes the class.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.Singleton`1.Instance">
+            <summary>
+            Gets the singleton instance of <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.ResetSingletonInstance">
+            <summary>
+            Sets a null value as the singleton instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)">
+            <summary>
+            Sets a specified value as the singleton instance.
+            </summary>
+            <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
+            instance.</param>
+        </member>
+        <member name="F:Juhta.Net.Common.Singleton`1.s_instance">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.Singleton`1.Instance"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Singleton`1.s_syncLock">
+            <summary>
+            Specifies a synchronization object for accessing the singleton instance.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.SymmetricCipher">
+            <summary>
+            Defines a class that simplifies the use of symmetric cryptographic service providers.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.SymmetricCipher.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <remarks>Instances created with this constructor use the <see cref="T:System.Security.Cryptography.TripleDES"/> algorithm.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.SymmetricCipher.#ctor(System.Security.Cryptography.SymmetricAlgorithm)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="symmetricAlgorithm">Specifies a SymmetricAlgorithm object.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.SymmetricCipher.DecryptData(System.String,System.Byte[])">
+            <summary>
+            Decrypts a specified array of bytes containing encrypted data.
+            </summary>
+            <param name="cipherKey">Specifies a cipher key.</param>
+            <param name="encryptedData">Specifies an array of bytes containing encrypted data.</param>
+            <returns>Returns an array of bytes containing the plain data.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.SymmetricCipher.EncryptData(System.String,System.Byte[])">
+            <summary>
+            Encrypts a specified array of bytes containing plain data.
+            </summary>
+            <param name="cipherKey">Specifies a cipher key.</param>
+            <param name="plainData">Specifies an array of bytes containing plain data.</param>
+            <returns>Returns an array of bytes containing the encrypted data.</returns>
+        </member>
+        <member name="M:Juhta.Net.Common.SymmetricCipher.CreateKeyAndInitializationVector(System.String,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            Creates a key and initialization vector based on a specified cipher key.
+            </summary>
+            <param name="cipherKey">Specifies a cipher key.</param>
+            <param name="key">A byte array that returns the key for the specified cipher key.</param>
+            <param name="iv">A byte array that returns the initialization vector for the specified cipher key.</param>
+        </member>
+        <member name="F:Juhta.Net.Common.SymmetricCipher.m_keySize">
+            <summary>
+            Specifies the key size to use with the associated SymmetricAlgorithm object. The class determines the key
+            size by selecting the maximum key size supported by <see cref="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm">
+            <summary>
+            Specifies a SymmetricAlgorithm object that performs actual encryption and decryption operations.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.TimestampFactory">
+            <summary>
+            Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
+            Time (UTC). This class is thread-safe.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.TimestampFactory.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.TimestampFactory.GetUniqueTimestamp">
+            <summary>
+            Gets a 21-digit unique timestamp.
+            </summary>
+            <returns>Returns the unique timestamp that was given to the calling thread.</returns>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_created">
+            <summary>
+            Specifies the time when this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_lastTimestamp">
+            <summary>
+            Specifies the last timestamp that was returned from this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_stopwatch">
+            <summary>
+            Measures the elapsed time since this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.TimestampFactory.m_syncLock">
+            <summary>
+            Specifies a synchronization object for serializing concurrent access.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.DiagnosticMessageIdBase">
+            <summary>
+            An enumeration that defines the diagnostic message ID bases used in the framework libraries.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages">
+            <summary>
+            Defines the message ID base for the root library messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages">
+            <summary>
+            Defines the message ID base for the common messages.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.DiagnosticMessageType">
+            <summary>
+            Defines an enumeration for the diagnostic message types.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Alert">
+            <summary>
+            The diagnostic message is an alert message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Error">
+            <summary>
+            The diagnostic message is an error message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Information">
+            <summary>
+            The diagnostic message is an information message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Warning">
+            <summary>
+            The diagnostic message is a warning message.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.UnexpectedException">
+            <summary>
+            This exception will be thrown when an unexpected error occurs.
+            </summary>
+            <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-
+            sensitive functionality such as network communication or file I/O operations.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.UnexpectedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception that determines the actual unexpected error.</param>
+        </member>
+        <member name="T:Juhta.Net.Common.UnimplementedCodeBranchException">
+            <summary>
+            This exception will be thrown when the execution flow of software reaches a code branch that should in practise
+            never be reached.
+            </summary>
+            <remarks>Generally it's better to throw this kind of exception than to do nothing which can easily lead to
+            weird or even error behaviour in the later execution.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint object.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint string.</param>
+        </member>
+        <member name="T:Juhta.Net.Common.Utf8FileWriter">
+            <summary>
+            Defines a writer class for UTF8-encoded files.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="filePath">Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
+            written. If the file already exists, it will be overwritten.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String,System.IO.FileMode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="filePath">Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
+            written.</param>
+            <param name="openMode">Specifies how the UTF8-encoded file should be opened.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Close">
+            <summary>
+            Flushes all unwritten data to the underlying UTF8-encoded file, and after that, closes the file.
+            </summary>
+            <remarks>This method does nothing if the underlying UTF8-encoded file is not open.</remarks>
+            <seealso cref="M:Juhta.Net.Common.Utf8FileWriter.Open"/>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel">
+            <summary>
+            Decreases the current indent level by one.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Flush">
+            <summary>
+            Flushes all unwritten data to the underlying UTF8-encoded file.
+            </summary>
+            <remarks>This method does nothing if the underlying UTF8-encoded file is not open.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel">
+            <summary>
+            Increases the current indent level by one.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Open">
+            <summary>
+            Opens the underlying UTF8-encoded file.
+            </summary>
+            <remarks>
+            <para>This method does nothing if the underlying UTF8-encoded file is already open.</para>
+            <para>This method does not necessarily have to be called when writing data to the underlying UTF8-encoded
+            file. If the file is not open, it will be automatically opened and closed in context of each write
+            operation. However, recurrent openings and closings of the file might cause some performance loss. To gain
+            the maximum performance, the file should be opened with an explicit call on this method prior to write
+            operations. In this case, the file must also be explicitly closed with the <see cref="M:Juhta.Net.Common.Utf8FileWriter.Close"/> method.</para>
+            </remarks>
+            <seealso cref="M:Juhta.Net.Common.Utf8FileWriter.Close"/>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.String)">
+            <summary>
+            Writes a specified string to the underlying UTF8-encoded file.
+            </summary>
+            <param name="s">Specifies a string.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.String,System.Object[])">
+            <summary>
+            Writes a formatted string to the underlying UTF8-encoded file.
+            </summary>
+            <param name="format">Specifies a string containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="format"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine">
+            <summary>
+            Writes a line terminator to the underlying UTF8-encoded file.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)">
+            <summary>
+            Writes a specified number of line terminators to the underlying UTF8-encoded file.
+            </summary>
+            <param name="count">Specifies a number of line terminators to write.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)">
+            <summary>
+            Writes a specified string followed by a line terminator to the underlying UTF8-encoded file.
+            </summary>
+            <param name="s">Specifies a string.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String,System.Object[])">
+            <summary>
+            Writes a formatted string followed by a line terminator to the underlying UTF8-encoded file.
+            </summary>
+            <param name="format">Specifies a string containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="format"/>.</param>
+        </member>
+        <member name="P:Juhta.Net.Common.Utf8FileWriter.FilePath">
+            <summary>
+            Gets the absolute path of the underlying UTF8-encoded file.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel">
+            <summary>
+            Gets or sets the current indent level.
+            </summary>
+            <remarks>The result of the multiplication of <see cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/> and <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> determines
+            the number of space characters to write at the beginning of each new line.</remarks>
+            <seealso cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/>
+        </member>
+        <member name="P:Juhta.Net.Common.Utf8FileWriter.TabSize">
+            <summary>
+            Gets or sets the current tab size.
+            </summary>
+            <seealso cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Writes data to the underlying UTF8-encoded file.
+            </summary>
+            <param name="endWithLineTerminator">If true, a line terminator will be finally written to the file.</param>
+            <param name="format">Specifies a string containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="format"/>. Can be null.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLineTerminators(System.Int32)">
+            <summary>
+            Writes a specified number of line terminators to the underlying UTF8-encoded file.
+            </summary>
+            <param name="count">Specifies a number of line terminators to write.</param>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.c_defaultTabSize">
+            <summary>
+            Specifies the default tab size.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_atBeginningOfLine">
+            <summary>
+            Determines whether the file pointer of the underlying UTF8-encoded file is currently at the beginning of a
+            line.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_filePath">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.FilePath"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_fileWriter">
+            <summary>
+            Specifies a StreamWriter object for writing data to the underlying UTF8-encoded file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_indentLevel">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_openMode">
+            <summary>
+            Specifies the mode with which the underlying UTF8-encoded file must be opened for the first time. After the
+            first opening, this field will be updated to <see cref="F:System.IO.FileMode.Append"/>.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_tabSize">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> property.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.AlertMessage">
+            <summary>
+            Defines a class for alert messages.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
         </member>
         <member name="T:Juhta.Net.Common.DiagnosticMessage">
             <summary>
@@ -1127,631 +1752,6 @@
             <param name="message">Specifies a message that will be associated with the instance. The value can contain
             format items.</param>
             <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.InterfaceNotSupportedException">
-            <summary>
-            This exception will be thrown when an object doesn't support a requested interface.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an InvalidCastException instance that relates to the failed
-            interface cast operation.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.InternalException">
-            <summary>
-            This exception will be thrown when an internal error occurs.
-            </summary>
-            <remarks>An internal error is typically an error that should 'never happen', and it usually means some kind of
-            a bug in the software.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.InternalException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="P:Juhta.Net.Common.InternalException.InternalErrorInfo">
-            <summary>
-            Gets general information about internal errors.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.InvalidConfigFileException">
-            <summary>
-            This exception will be thrown when an XML configuration file doesn't pass (schema) validation.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an inner exception.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.InvalidConfigValueException">
-            <summary>
-            This exception will be thrown when a configuration file has passed schema validation but in further processing
-            an invalid configuration value is encountered.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.InvalidConfigValueException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.ObjectFactory">
-            <summary>
-            A static class that provides services for creating instances of such classes whose type is not directly
-            referencable in the current programming context. A typical scenario for using this class is to create instances
-            of classes that are not available at the build time but are known to implement a specific interface.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String)">
-            <summary>
-            Creates an instance of a specified class by using the default constructor.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assembly">Specifies an Assembly object.</param>
-            <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
-            case the root namespace for the class will be taken from the file name part of the Assembly object's
-            Location property.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String,System.Object[])">
-            <summary>
-            Creates an instance of a specified class.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assembly">Specifies an Assembly object.</param>
-            <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
-            case the root namespace for the class will be taken from the file name part of the Assembly object's
-            Location property.</param>
-            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
-            constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)">
-            <summary>
-            Creates an instance of a specified class by using the default constructor.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])">
-            <summary>
-            Creates an instance of a specified class.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
-            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
-            constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-            <remarks>An exception will be thrown if the assembly referenced by <paramref name="assemblyClassUri"/> has
-            not been downloaded to the local machine.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)">
-            <summary>
-            Creates an instance of a specified class by using the default constructor.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assemblyFile">Specifies an assembly file.</param>
-            <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
-            the root namespace for the class will be taken from the file name of the assembly.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String,System.Object[])">
-            <summary>
-            Creates an instance of a specified class.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="assemblyFile">Specifies an assembly file.</param>
-            <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
-            the root namespace for the class will be taken from the file name of the assembly.</param>
-            <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
-            constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)">
-            <summary>
-            Creates an instance based on a specified object XML node.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="objectNode">Specifies an object XML node.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="T:Juhta.Net.Common.ObjectQueue`1">
-            <summary>
-            Represents a first-in, first-out queue for a generic object type. The queue implemented by this class is
-            thread-safe, and it also blocks readers in case of an empty queue. This queue has especially been designed to
-            act as a work queue in multi-threaded applications.
-            </summary>
-            <typeparam name="T">Specifies an object type.</typeparam>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectQueue`1.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectQueue`1.Close">
-            <summary>
-            Closes the object queue specified by this ObjectQueue instance. The operation releases all threads that are
-            blocked by the current instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectQueue`1.GetObject">
-            <summary>
-            Gets the next object from the object queue specified by this ObjectQueue instance.
-            </summary>
-            <returns>Returns the next instance of <i>T</i> from the queue. The return value is null only, if the queue
-            was initially empty and the queue had been closed prior to the call or no object became available before
-            the queue was closed during the call.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectQueue`1.PutObject(`0)">
-            <summary>
-            Puts an object to the object queue specified by this ObjectQueue instance.
-            </summary>
-            <param name="object">Specifies an object.</param>
-        </member>
-        <member name="P:Juhta.Net.Common.ObjectQueue`1.Count">
-            <summary>
-            Gets the number of elements contained in the object queue specified by this ObjectQueue instance.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.ObjectQueue`1.WaitEvent">
-            <summary>
-            Defines an enumeration for wait events.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.WaitEvent.Close">
-            <summary>
-            Specifies the Close event.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.WaitEvent.Put">
-            <summary>
-            Specifies the Put event.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_closed">
-            <summary>
-            Specifies whether the object queue has been closed.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_eventWaitHandles">
-            <summary>
-            Specifies an array of EventWaitHandle objects related to this ObjectQueue instance.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_mutex">
-            <summary>
-            Specifies a Mutex object for synchronizing concurrent access to the object queue.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ObjectQueue`1.m_objectQueue">
-            <summary>
-            Specifies the underlying Queue instance.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.RegularExpressions">
-            <summary>
-            Defines a static class containing certain regular expression patterns for validating string data.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.AssemblyClassFileUri">
-            <summary>
-            Specifies a regular expression for validating assembly class file URIs.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.DirectoryPath">
-            <summary>
-            Specifies a regular expression for validating absolute or relative directory paths.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddress">
-            <summary>
-            Specifies a regular expression for validating email addresses.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddressList">
-            <summary>
-            Specifies a regular expression for validating email address lists.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.FilePath">
-            <summary>
-            Specifies a regular expression for validating absolute or relative file paths.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.Singleton`1">
-            <summary>
-            Defines an abstract base class singleton classes.
-            </summary>
-            <typeparam name="T">Specifies a type to make as singleton.</typeparam>
-        </member>
-        <member name="M:Juhta.Net.Common.Singleton`1.#cctor">
-            <summary>
-            Initializes the class.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.Singleton`1.Instance">
-            <summary>
-            Gets the singleton instance of <typeparamref name="T"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Singleton`1.ResetSingletonInstance">
-            <summary>
-            Sets a null value as the singleton instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)">
-            <summary>
-            Sets a specified value as the singleton instance.
-            </summary>
-            <param name="instance">Specifies an instance of <typeparamref name="T"/> to be set as the singleton
-            instance.</param>
-        </member>
-        <member name="F:Juhta.Net.Common.Singleton`1.s_instance">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.Singleton`1.Instance"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Singleton`1.s_syncLock">
-            <summary>
-            Specifies a synchronization object for accessing the singleton instance.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.SymmetricCipher">
-            <summary>
-            Defines a class that simplifies the use of symmetric cryptographic service providers.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.SymmetricCipher.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <remarks>Instances created with this constructor use the <see cref="T:System.Security.Cryptography.TripleDES"/> algorithm.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.SymmetricCipher.#ctor(System.Security.Cryptography.SymmetricAlgorithm)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="symmetricAlgorithm">Specifies a SymmetricAlgorithm object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.SymmetricCipher.DecryptData(System.String,System.Byte[])">
-            <summary>
-            Decrypts a specified array of bytes containing encrypted data.
-            </summary>
-            <param name="cipherKey">Specifies a cipher key.</param>
-            <param name="encryptedData">Specifies an array of bytes containing encrypted data.</param>
-            <returns>Returns an array of bytes containing the plain data.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.SymmetricCipher.EncryptData(System.String,System.Byte[])">
-            <summary>
-            Encrypts a specified array of bytes containing plain data.
-            </summary>
-            <param name="cipherKey">Specifies a cipher key.</param>
-            <param name="plainData">Specifies an array of bytes containing plain data.</param>
-            <returns>Returns an array of bytes containing the encrypted data.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.SymmetricCipher.CreateKeyAndInitializationVector(System.String,System.Byte[]@,System.Byte[]@)">
-            <summary>
-            Creates a key and initialization vector based on a specified cipher key.
-            </summary>
-            <param name="cipherKey">Specifies a cipher key.</param>
-            <param name="key">A byte array that returns the key for the specified cipher key.</param>
-            <param name="iv">A byte array that returns the initialization vector for the specified cipher key.</param>
-        </member>
-        <member name="F:Juhta.Net.Common.SymmetricCipher.m_keySize">
-            <summary>
-            Specifies the key size to use with the associated SymmetricAlgorithm object. The class determines the key
-            size by selecting the maximum key size supported by <see cref="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm"/>.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm">
-            <summary>
-            Specifies a SymmetricAlgorithm object that performs actual encryption and decryption operations.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.TimestampFactory">
-            <summary>
-            Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
-            Time (UTC). This class is thread-safe.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.TimestampFactory.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.TimestampFactory.GetUniqueTimestamp">
-            <summary>
-            Gets a 21-digit unique timestamp.
-            </summary>
-            <returns>Returns the unique timestamp that was given to the calling thread.</returns>
-        </member>
-        <member name="F:Juhta.Net.Common.TimestampFactory.m_created">
-            <summary>
-            Specifies the time when this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.TimestampFactory.m_lastTimestamp">
-            <summary>
-            Specifies the last timestamp that was returned from this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.TimestampFactory.m_stopwatch">
-            <summary>
-            Measures the elapsed time since this <see cref="T:Juhta.Net.Common.TimestampFactory"/> instance was created.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.TimestampFactory.m_syncLock">
-            <summary>
-            Specifies a synchronization object for serializing concurrent access.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessageIdBase">
-            <summary>
-            An enumeration that defines the diagnostic message ID bases used in the framework libraries.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages">
-            <summary>
-            Defines the message ID base for the root library messages.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages">
-            <summary>
-            Defines the message ID base for the common messages.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessageType">
-            <summary>
-            Defines an enumeration for the diagnostic message types.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Alert">
-            <summary>
-            The diagnostic message is an alert message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Error">
-            <summary>
-            The diagnostic message is an error message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Information">
-            <summary>
-            The diagnostic message is an information message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Warning">
-            <summary>
-            The diagnostic message is a warning message.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.UnexpectedException">
-            <summary>
-            This exception will be thrown when an unexpected error occurs.
-            </summary>
-            <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-
-            sensitive functionality such as network communication or file I/O operations.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.UnexpectedException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an inner exception that determines the actual unexpected error.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.UnimplementedCodeBranchException">
-            <summary>
-            This exception will be thrown when the execution flow of software reaches a code branch that should in practise
-            never be reached.
-            </summary>
-            <remarks>Generally it's better to throw this kind of exception than to do nothing which can easily lead to
-            weird or even error behaviour in the later execution.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.Object)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="hint">Specifies a hint object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="hint">Specifies a hint string.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.Utf8FileWriter">
-            <summary>
-            Defines a writer class for UTF8-encoded files.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="filePath">Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
-            written. If the file already exists, it will be overwritten.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.#ctor(System.String,System.IO.FileMode)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="filePath">Specifies the ablosute or a relative path of a UTF8-encoded file where data will be
-            written.</param>
-            <param name="openMode">Specifies how the UTF8-encoded file should be opened.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Close">
-            <summary>
-            Flushes all unwritten data to the underlying UTF8-encoded file, and after that, closes the file.
-            </summary>
-            <remarks>This method does nothing if the underlying UTF8-encoded file is not open.</remarks>
-            <seealso cref="M:Juhta.Net.Common.Utf8FileWriter.Open"/>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel">
-            <summary>
-            Decreases the current indent level by one.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Flush">
-            <summary>
-            Flushes all unwritten data to the underlying UTF8-encoded file.
-            </summary>
-            <remarks>This method does nothing if the underlying UTF8-encoded file is not open.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel">
-            <summary>
-            Increases the current indent level by one.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Open">
-            <summary>
-            Opens the underlying UTF8-encoded file.
-            </summary>
-            <remarks>
-            <para>This method does nothing if the underlying UTF8-encoded file is already open.</para>
-            <para>This method does not necessarily have to be called when writing data to the underlying UTF8-encoded
-            file. If the file is not open, it will be automatically opened and closed in context of each write
-            operation. However, recurrent openings and closings of the file might cause some performance loss. To gain
-            the maximum performance, the file should be opened with an explicit call on this method prior to write
-            operations. In this case, the file must also be explicitly closed with the <see cref="M:Juhta.Net.Common.Utf8FileWriter.Close"/> method.</para>
-            </remarks>
-            <seealso cref="M:Juhta.Net.Common.Utf8FileWriter.Close"/>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.String)">
-            <summary>
-            Writes a specified string to the underlying UTF8-encoded file.
-            </summary>
-            <param name="s">Specifies a string.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.String,System.Object[])">
-            <summary>
-            Writes a formatted string to the underlying UTF8-encoded file.
-            </summary>
-            <param name="format">Specifies a string containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="format"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine">
-            <summary>
-            Writes a line terminator to the underlying UTF8-encoded file.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.Int32)">
-            <summary>
-            Writes a specified number of line terminators to the underlying UTF8-encoded file.
-            </summary>
-            <param name="count">Specifies a number of line terminators to write.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String)">
-            <summary>
-            Writes a specified string followed by a line terminator to the underlying UTF8-encoded file.
-            </summary>
-            <param name="s">Specifies a string.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLine(System.String,System.Object[])">
-            <summary>
-            Writes a formatted string followed by a line terminator to the underlying UTF8-encoded file.
-            </summary>
-            <param name="format">Specifies a string containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="format"/>.</param>
-        </member>
-        <member name="P:Juhta.Net.Common.Utf8FileWriter.FilePath">
-            <summary>
-            Gets the absolute path of the underlying UTF8-encoded file.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel">
-            <summary>
-            Gets or sets the current indent level.
-            </summary>
-            <remarks>The result of the multiplication of <see cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/> and <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> determines
-            the number of space characters to write at the beginning of each new line.</remarks>
-            <seealso cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/>
-        </member>
-        <member name="P:Juhta.Net.Common.Utf8FileWriter.TabSize">
-            <summary>
-            Gets or sets the current tab size.
-            </summary>
-            <seealso cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.Write(System.Boolean,System.String,System.Object[])">
-            <summary>
-            Writes data to the underlying UTF8-encoded file.
-            </summary>
-            <param name="endWithLineTerminator">If true, a line terminator will be finally written to the file.</param>
-            <param name="format">Specifies a string containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="format"/>. Can be null.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.Utf8FileWriter.WriteLineTerminators(System.Int32)">
-            <summary>
-            Writes a specified number of line terminators to the underlying UTF8-encoded file.
-            </summary>
-            <param name="count">Specifies a number of line terminators to write.</param>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.c_defaultTabSize">
-            <summary>
-            Specifies the default tab size.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_atBeginningOfLine">
-            <summary>
-            Determines whether the file pointer of the underlying UTF8-encoded file is currently at the beginning of a
-            line.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_filePath">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.FilePath"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_fileWriter">
-            <summary>
-            Specifies a StreamWriter object for writing data to the underlying UTF8-encoded file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_indentLevel">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.IndentLevel"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_openMode">
-            <summary>
-            Specifies the mode with which the underlying UTF8-encoded file must be opened for the first time. After the
-            first opening, this field will be updated to <see cref="F:System.IO.FileMode.Append"/>.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.Utf8FileWriter.m_tabSize">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> property.
-            </summary>
         </member>
         <member name="T:Juhta.Net.Common.WarningMessage">
             <summary>
