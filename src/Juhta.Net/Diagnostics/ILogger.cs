@@ -8,7 +8,7 @@
 
 using System;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Defines an interface for the loggers to be used with the framework.

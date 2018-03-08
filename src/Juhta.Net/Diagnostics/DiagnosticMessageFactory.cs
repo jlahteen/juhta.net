@@ -8,7 +8,7 @@
 
 using System;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Represents a class that can be used to create instances of classes deriving from the <see cref="DiagnosticMessage"/>

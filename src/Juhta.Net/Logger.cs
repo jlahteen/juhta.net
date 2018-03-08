@@ -6,7 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using Juhta.Net.Common;
+using Juhta.Net.Diagnostics;
 using System;
 
 namespace Juhta.Net

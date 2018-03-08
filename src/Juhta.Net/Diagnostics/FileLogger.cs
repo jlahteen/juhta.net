@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
 using System.Diagnostics;
@@ -14,7 +15,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Defines a logger class that writes log events to a file.

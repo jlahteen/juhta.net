@@ -6,7 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Defines a class for error messages.

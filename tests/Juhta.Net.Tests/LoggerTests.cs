@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.Common;
+using Juhta.Net.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

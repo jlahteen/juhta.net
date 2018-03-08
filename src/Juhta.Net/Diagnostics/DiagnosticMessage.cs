@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Defines an abstract base class for diagnostic messages. Diagnostic messages make it possible not to write long

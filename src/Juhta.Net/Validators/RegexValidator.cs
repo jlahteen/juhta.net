@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Common;
+using Juhta.Net.Diagnostics;
 using Juhta.Net.Helpers;
 using System;
 using System.Collections.Generic;

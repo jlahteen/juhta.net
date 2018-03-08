@@ -841,46 +841,6 @@
             Specifies a synchronization object for serializing concurrent access.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessageIdBase">
-            <summary>
-            An enumeration that defines the diagnostic message ID bases used in the framework libraries.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages">
-            <summary>
-            Defines the message ID base for the root library messages.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages">
-            <summary>
-            Defines the message ID base for the common messages.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessageType">
-            <summary>
-            Defines an enumeration for the diagnostic message types.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Alert">
-            <summary>
-            The diagnostic message is an alert message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Error">
-            <summary>
-            The diagnostic message is an error message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Information">
-            <summary>
-            The diagnostic message is an information message.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageType.Warning">
-            <summary>
-            The diagnostic message is a warning message.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Common.UnexpectedException">
             <summary>
             This exception will be thrown when an unexpected error occurs.
@@ -1086,692 +1046,6 @@
             <summary>
             Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> property.
             </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.AlertMessage">
-            <summary>
-            Defines a class for alert messages.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.AlertMessage.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessage">
-            <summary>
-            Defines an abstract base class for diagnostic messages. Diagnostic messages make it possible not to write long
-            messages inside the actual code but centralize them in better manageable separate contexts.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])">
-            <summary>
-            Formats the message stored in this DiagnosticMessage instance with specified objects.
-            </summary>
-            <param name="args">Specifies an array of objects to format. Can be null.</param>
-            <returns>Returns the formatted message. If the specified object array doesn't match the format items in the
-            message stored in this DiagnosticMessage instance, the method just returns the message without any
-            formatting.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId">
-            <summary>
-            Gets an integer identifier out of the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this DiagnosticMessage instance.
-            </summary>
-            <returns>Returns the greatest whole number fragment in the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property of this
-            DiagnosticMessage instance as an integer. If there are no whole number fragments in the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/>
-            property, the return value is zero.</returns>
-            <seealso cref="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)"/>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)">
-            <summary>
-            Gets an integer identifier out of a specified string identifier.
-            </summary>
-            <param name="id">Specifies a string identifier.</param>
-            <returns>Returns the greatest whole number fragment in the specified string identifier as an integer. If
-            there are no whole number fragments in the string identifier, the return value is zero.</returns>
-            <seealso cref="M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId"/>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.GetMessage">
-            <summary>
-            Gets the message stored in this DiagnosticMessage instance without any formatting.
-            </summary>
-            <returns>Returns the stored message without any formatting.</returns>
-            <remarks>Use this method instead of <see cref="M:Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])"/> when the message contains no format items.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)">
-            <summary>
-            Tries to get an identifier for the message of a specified exception.
-            </summary>
-            <param name="exception">Specifies an exception.</param>
-            <param name="messageId">If the function returns true, returns the identifier of the message of the
-            specified exception, otherwise returns null.</param>
-            <returns>Returns true if an identifier was found for the message of the specified exception, otherwise
-            returns false.</returns>
-            <remarks>
-            <para>If the specified exception contains inner exceptions, the innermost exception with a found identifier
-            match is decisive (root cause exception).</para>
-            <para>Searching will be done in the last formatted messages for the current thread.</para>
-            </remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)">
-            <summary>
-            Tries to get an identifier for a specified message.
-            </summary>
-            <param name="message">Specifies a message.</param>
-            <param name="messageId">If the function returns true, returns the identifier of the specified message,
-            otherwise returns null.</param>
-            <returns>Returns true if an identifier was found for the specified message, otherwise returns false.</returns>
-            <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
-        </member>
-        <member name="P:Juhta.Net.Common.DiagnosticMessage.Id">
-            <summary>
-            Gets the identifier of the diagnostic message that this DiagnosticMessage instance represents.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.DiagnosticMessage.Message">
-            <summary>
-            Gets the message associated with this DiagnosticMessage instance.
-            </summary>
-            <remarks>The value can contain format items.</remarks>
-        </member>
-        <member name="P:Juhta.Net.Common.DiagnosticMessage.Type">
-            <summary>
-            Gets the type of the diagnostic message that this DiagnosticMessage instance represents.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.#ctor(Juhta.Net.Common.DiagnosticMessageType,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="type">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Type"/> property.</param>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.#ctor(Juhta.Net.Common.DiagnosticMessageType,System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="type">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Type"/> property.</param>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.AddIdPrefix(System.String)">
-            <summary>
-            Adds the identifier of this diagnostic message as a prefix to a specified message.
-            </summary>
-            <param name="message">Specifies a message.</param>
-            <returns>Returns the specified message prefixed by the identifier of this diagnostic message.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessage.SaveAsLastFormattedMessage(System.String)">
-            <summary>
-            Saves a specified message as a last formatted message for the current thread, and associates the current
-            DiagnosticMessage instance with it.
-            </summary>
-            <param name="message">Specifies a message.</param>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessage.c_maxLastFormattedMessagesCount">
-            <summary>
-            Specifies the maximum length for the last formatted messages queue per thread.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessage.m_id">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessage.t_lastFormattedMessages">
-            <summary>
-            Specifies the thread-specific queue for the last formatted messages. Queue items are key/value pairs
-            consisting of a formatted message and the corresponding DiagnosticMessage instance.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessage.m_message">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Message"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessage.m_type">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Type"/> property.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.DiagnosticMessageFactory">
-            <summary>
-            Represents a class that can be used to create instances of classes deriving from the <see cref="T:Juhta.Net.Common.DiagnosticMessage"/>
-            class. The main benefit of using this class is automatic and consistent message ID generation.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.#ctor(Juhta.Net.Common.DiagnosticMessageIdBase,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
-            <param name="messageNamespace">Specifies a namespace for messages to create.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.#ctor(System.Int32,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
-            <param name="messageNamespace">Specifies a namespace for messages to create.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
-            <param name="informationMessageIdPrefix">Specifies a prefix for information message IDs. Can be null.</param>
-            <param name="warningMessageIdPrefix">Specifies a prefix for warning message IDs. Can be null.</param>
-            <param name="errorMessageIdPrefix">Specifies a prefix for error message IDs. Can be null.</param>
-            <param name="alertMessageIdPrefix">Specifies a prefix for alert message IDs. Can be null.</param>
-            <remarks>IDs of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
-            ascending order.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.CreateAlertMessage(System.String)">
-            <summary>
-            Creates an AlertMessage instance based on a specified message.
-            </summary>
-            <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created AlertMessage instance.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.CreateErrorMessage(System.String)">
-            <summary>
-            Creates an ErrorMessage instance based on a specified message.
-            </summary>
-            <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created ErrorMessage instance.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.CreateInformationMessage(System.String)">
-            <summary>
-            Creates an InformationMessage instance based on a specified message.
-            </summary>
-            <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created InformationMessage instance.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.DiagnosticMessageFactory.CreateWarningMessage(System.String)">
-            <summary>
-            Creates a WarningMessage instance based on a specified message.
-            </summary>
-            <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created WarningMessage instance.</returns>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageFactory.m_alertMessageIdPrefix">
-            <summary>
-            Specifies the prefix for alert message IDs.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageFactory.m_errorMessageIdPrefix">
-            <summary>
-            Specifies the prefix for error message IDs.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageFactory.m_informationMessageIdPrefix">
-            <summary>
-            Specifies the prefix for information message IDs.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageFactory.m_nextMessageId">
-            <summary>
-            Specifies the next message ID (without a prefix).
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.DiagnosticMessageFactory.m_warningMessageIdPrefix">
-            <summary>
-            Specifies the prefix for warning message IDs.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.ErrorMessage">
-            <summary>
-            Defines a class for error messages.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ErrorMessage.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ErrorMessage.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.FileLogger">
-            <summary>
-            Defines a logger class that writes log events to a file.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="logFilePath">Specifies a log file path. The path can be relative or absolute. Can be null in
-            which case the default log file path will be used. The default value will also be used if
-            <paramref name="logFilePath"/> specifies somehow an invalid log file path.</param>
-            <remarks>
-            <para>The default log file will be written to the current user's temp folder with the process name.</para>
-            <para>If the log file already exists, new rows will be appended to the end of the file.</para>
-            </remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(Juhta.Net.Common.AlertMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogAlert(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(Juhta.Net.Common.ErrorMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogError(System.Exception,System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(Juhta.Net.Common.InformationMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogInformation(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(Juhta.Net.Common.WarningMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.FileLogger.IsThreadSafe">
-            <summary>
-            See <see cref="P:Juhta.Net.Common.ILogger.IsThreadSafe"/>.
-            </summary>
-            <remarks>This logger is not thread-safe, we let the static <see cref="T:Juhta.Net.Logger"/> class to take care of the
-            synchronization.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.EnsureLogTitle">
-            <summary>
-            Writes the title to the log file if such has not yet been written.
-            </summary>
-            <remarks>This method will also change the log file to its default value if the title cannot be written to
-            the original log file.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.GetDefaultLogFilePath">
-            <summary>
-            Gets the default log file path.
-            </summary>
-            <returns>Returns the default log file path.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.WriteLogEvent(Juhta.Net.Common.DiagnosticMessageType,System.Exception,System.String,System.Object[])">
-            <summary>
-            Writes a log event to the underlying log file.
-            </summary>
-            <param name="messageType">Specifies a message type.</param>
-            <param name="exception">Specifies an Exception object.</param>
-            <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
-            <param name="args">Specifies an array of format objects corresponding the format items in
-            <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.FileLogger.WriteLogTitle">
-            <summary>
-            Writes the title to the underlying log file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.c_logTitleFormat">
-            <summary>
-            Defines the log title format.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.c_tabSize">
-            <summary>
-            Defines the tab size for the log event message lines.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.m_logFilePath">
-            <summary>
-            Specifies the log file path. The path can be relative or absolute.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.m_logTitle">
-            <summary>
-            Specifies the log title. The value null means that the title has been written to the log file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.m_processId">
-            <summary>
-            Specifies the ID of the process.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.FileLogger.m_processName">
-            <summary>
-            Specifies the name of the process.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.ILogger">
-            <summary>
-            Defines an interface for the loggers to be used with the framework.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)">
-            <summary>
-            Logs an alert event.
-            </summary>
-            <param name="message">Specifies an AlertMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogAlert(System.String)">
-            <summary>
-            Logs an alert event.
-            </summary>
-            <param name="message">Specifies an alert message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])">
-            <summary>
-            Logs an alert event.
-            </summary>
-            <param name="message">Specifies an AlertMessage object whose Message property contains zero or more format
-            items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])">
-            <summary>
-            Logs an alert event.
-            </summary>
-            <param name="messageFormat">Specifies an alert message format containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="messageFormat"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)">
-            <summary>
-            Logs an error event.
-            </summary>
-            <param name="message">Specifies an ErrorMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception)">
-            <summary>
-            Logs an error event.
-            </summary>
-            <param name="exception">Specifies an Exception object whose string representation determines the error
-            message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.String)">
-            <summary>
-            Logs an error event.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])">
-            <summary>
-            Logs an error event.
-            </summary>
-            <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
-            items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
-            <summary>
-            Logs an error event consisting of an error message and exception.
-            </summary>
-            <param name="exception">Specifies an Exception object.</param>
-            <param name="message">Specifies an ErrorMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)">
-            <summary>
-            Logs an error event consisting of an error message and exception.
-            </summary>
-            <param name="exception">Specifies an Exception object.</param>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])">
-            <summary>
-            Logs an error event.
-            </summary>
-            <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="messageFormat"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
-            <summary>
-            Logs an error event consisting of an error message and exception.
-            </summary>
-            <param name="exception">Specifies an Exception object.</param>
-            <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
-            items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])">
-            <summary>
-            Logs an error event consisting of an error message and exception.
-            </summary>
-            <param name="exception">Specifies an Exception object.</param>
-            <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="messageFormat"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
-            <summary>
-            Logs a diagnostic event.
-            </summary>
-            <param name="message">Specifies a DiagnosticMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])">
-            <summary>
-            Logs a diagnostic event.
-            </summary>
-            <param name="message">Specifies a DiagnosticMessage object whose Message property contains zero or more
-            format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)">
-            <summary>
-            Logs an information event.
-            </summary>
-            <param name="message">Specifies an InformationMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogInformation(System.String)">
-            <summary>
-            Logs an information event.
-            </summary>
-            <param name="message">Specifies an information message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])">
-            <summary>
-            Logs an information event.
-            </summary>
-            <param name="message">Specifies an InformationMessage object whose Message property contains zero or more
-            format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])">
-            <summary>
-            Logs an information event.
-            </summary>
-            <param name="messageFormat">Specifies an information message format containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="messageFormat"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogWarning(System.String)">
-            <summary>
-            Logs a warning event.
-            </summary>
-            <param name="message">Specifies a warning message.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)">
-            <summary>
-            Logs a warning event.
-            </summary>
-            <param name="message">Specifies a WarningMessage object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])">
-            <summary>
-            Logs a warning event.
-            </summary>
-            <param name="messageFormat">Specifies a warning message format containing zero or more format items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in <paramref name="messageFormat"/>.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])">
-            <summary>
-            Logs a warning event.
-            </summary>
-            <param name="message">Specifies a WarningMessage object whose Message property contains zero or more format
-            items.</param>
-            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
-            correspond to the format items in the Message property of <paramref name="message"/>.</param>
-        </member>
-        <member name="P:Juhta.Net.Common.ILogger.IsThreadSafe">
-            <summary>
-            Returns true if this <see cref="T:Juhta.Net.Common.ILogger"/> instance is thread-safe, otherwise false.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Common.InformationMessage">
-            <summary>
-            Defines a class for information messages.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.InformationMessage.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.InformationMessage.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.WarningMessage">
-            <summary>
-            Defines a class for warning messages.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.WarningMessage.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.WarningMessage.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies a message that will be associated with the instance. The value can contain
-            format items.</param>
-            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Common.DiagnosticMessage.Id"/> property.</param>
         </member>
         <member name="T:Juhta.Net.Console.CommandLineArg">
             <summary>
@@ -2009,6 +1283,732 @@
             </summary>
             <param name="value">Specifies a value for the <see cref="P:Juhta.Net.Console.CommandLineArg.Value"/> property as well as to the
             <see cref="P:Juhta.Net.Console.CommandLineArg.RawArg"/> property.</param>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.AlertMessage">
+            <summary>
+            Defines a class for alert messages.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.DiagnosticMessage">
+            <summary>
+            Defines an abstract base class for diagnostic messages. Diagnostic messages make it possible not to write long
+            messages inside the actual code but centralize them in better manageable separate contexts.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])">
+            <summary>
+            Formats the message stored in this DiagnosticMessage instance with specified objects.
+            </summary>
+            <param name="args">Specifies an array of objects to format. Can be null.</param>
+            <returns>Returns the formatted message. If the specified object array doesn't match the format items in the
+            message stored in this DiagnosticMessage instance, the method just returns the message without any
+            formatting.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId">
+            <summary>
+            Gets an integer identifier out of the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property of this DiagnosticMessage instance.
+            </summary>
+            <returns>Returns the greatest whole number fragment in the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property of this
+            DiagnosticMessage instance as an integer. If there are no whole number fragments in the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/>
+            property, the return value is zero.</returns>
+            <seealso cref="M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)"/>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)">
+            <summary>
+            Gets an integer identifier out of a specified string identifier.
+            </summary>
+            <param name="id">Specifies a string identifier.</param>
+            <returns>Returns the greatest whole number fragment in the specified string identifier as an integer. If
+            there are no whole number fragments in the string identifier, the return value is zero.</returns>
+            <seealso cref="M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId"/>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage">
+            <summary>
+            Gets the message stored in this DiagnosticMessage instance without any formatting.
+            </summary>
+            <returns>Returns the stored message without any formatting.</returns>
+            <remarks>Use this method instead of <see cref="M:Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])"/> when the message contains no format items.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)">
+            <summary>
+            Tries to get an identifier for the message of a specified exception.
+            </summary>
+            <param name="exception">Specifies an exception.</param>
+            <param name="messageId">If the function returns true, returns the identifier of the message of the
+            specified exception, otherwise returns null.</param>
+            <returns>Returns true if an identifier was found for the message of the specified exception, otherwise
+            returns false.</returns>
+            <remarks>
+            <para>If the specified exception contains inner exceptions, the innermost exception with a found identifier
+            match is decisive (root cause exception).</para>
+            <para>Searching will be done in the last formatted messages for the current thread.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)">
+            <summary>
+            Tries to get an identifier for a specified message.
+            </summary>
+            <param name="message">Specifies a message.</param>
+            <param name="messageId">If the function returns true, returns the identifier of the specified message,
+            otherwise returns null.</param>
+            <returns>Returns true if an identifier was found for the specified message, otherwise returns false.</returns>
+            <remarks>Searching will be done in the last formatted messages for the current thread.</remarks>
+        </member>
+        <member name="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id">
+            <summary>
+            Gets the identifier of the diagnostic message that this DiagnosticMessage instance represents.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Diagnostics.DiagnosticMessage.Message">
+            <summary>
+            Gets the message associated with this DiagnosticMessage instance.
+            </summary>
+            <remarks>The value can contain format items.</remarks>
+        </member>
+        <member name="P:Juhta.Net.Diagnostics.DiagnosticMessage.Type">
+            <summary>
+            Gets the type of the diagnostic message that this DiagnosticMessage instance represents.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageType,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="type">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Type"/> property.</param>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageType,System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="type">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Type"/> property.</param>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.AddIdPrefix(System.String)">
+            <summary>
+            Adds the identifier of this diagnostic message as a prefix to a specified message.
+            </summary>
+            <param name="message">Specifies a message.</param>
+            <returns>Returns the specified message prefixed by the identifier of this diagnostic message.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessage.SaveAsLastFormattedMessage(System.String)">
+            <summary>
+            Saves a specified message as a last formatted message for the current thread, and associates the current
+            DiagnosticMessage instance with it.
+            </summary>
+            <param name="message">Specifies a message.</param>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessage.c_maxLastFormattedMessagesCount">
+            <summary>
+            Specifies the maximum length for the last formatted messages queue per thread.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessage.m_id">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessage.t_lastFormattedMessages">
+            <summary>
+            Specifies the thread-specific queue for the last formatted messages. Queue items are key/value pairs
+            consisting of a formatted message and the corresponding DiagnosticMessage instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessage.m_message">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Message"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessage.m_type">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Type"/> property.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory">
+            <summary>
+            Represents a class that can be used to create instances of classes deriving from the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessage"/>
+            class. The main benefit of using this class is automatic and consistent message ID generation.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="messageIdBase">Specifies a message ID base.</param>
+            <param name="messageNamespace">Specifies a namespace for messages to create.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="messageIdBase">Specifies a message ID base.</param>
+            <param name="messageNamespace">Specifies a namespace for messages to create.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="messageIdBase">Specifies a message ID base.</param>
+            <param name="informationMessageIdPrefix">Specifies a prefix for information message IDs. Can be null.</param>
+            <param name="warningMessageIdPrefix">Specifies a prefix for warning message IDs. Can be null.</param>
+            <param name="errorMessageIdPrefix">Specifies a prefix for error message IDs. Can be null.</param>
+            <param name="alertMessageIdPrefix">Specifies a prefix for alert message IDs. Can be null.</param>
+            <remarks>IDs of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
+            ascending order.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)">
+            <summary>
+            Creates an AlertMessage instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <returns>Returns the created AlertMessage instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)">
+            <summary>
+            Creates an ErrorMessage instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <returns>Returns the created ErrorMessage instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)">
+            <summary>
+            Creates an InformationMessage instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <returns>Returns the created InformationMessage instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)">
+            <summary>
+            Creates a WarningMessage instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <returns>Returns the created WarningMessage instance.</returns>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_alertMessageIdPrefix">
+            <summary>
+            Specifies the prefix for alert message IDs.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_errorMessageIdPrefix">
+            <summary>
+            Specifies the prefix for error message IDs.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_informationMessageIdPrefix">
+            <summary>
+            Specifies the prefix for information message IDs.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_nextMessageId">
+            <summary>
+            Specifies the next message ID (without a prefix).
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_warningMessageIdPrefix">
+            <summary>
+            Specifies the prefix for warning message IDs.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.ErrorMessage">
+            <summary>
+            Defines a class for error messages.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.FileLogger">
+            <summary>
+            Defines a logger class that writes log events to a file.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. The path can be relative or absolute. Can be null in
+            which case the default log file path will be used. The default value will also be used if
+            <paramref name="logFilePath"/> specifies somehow an invalid log file path.</param>
+            <remarks>
+            <para>The default log file will be written to the current user's temp folder with the process name.</para>
+            <para>If the log file already exists, new rows will be appended to the end of the file.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogAlert(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogAlert(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.Exception)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.Exception,System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogInformation(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogInformation(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogWarning(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogWarning(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Diagnostics.FileLogger.IsThreadSafe">
+            <summary>
+            See <see cref="P:Juhta.Net.Diagnostics.ILogger.IsThreadSafe"/>.
+            </summary>
+            <remarks>This logger is not thread-safe, we let the static <see cref="T:Juhta.Net.Logger"/> class to take care of the
+            synchronization.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.EnsureLogTitle">
+            <summary>
+            Writes the title to the log file if such has not yet been written.
+            </summary>
+            <remarks>This method will also change the log file to its default value if the title cannot be written to
+            the original log file.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.GetDefaultLogFilePath">
+            <summary>
+            Gets the default log file path.
+            </summary>
+            <returns>Returns the default log file path.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.WriteLogEvent(Juhta.Net.Diagnostics.DiagnosticMessageType,System.Exception,System.String,System.Object[])">
+            <summary>
+            Writes a log event to the underlying log file.
+            </summary>
+            <param name="messageType">Specifies a message type.</param>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="messageFormat">Specifies a message format containing zero or more format items.</param>
+            <param name="args">Specifies an array of format objects corresponding the format items in
+            <paramref name="messageFormat"/>. Can be null if <paramref name="messageFormat"/> contains no format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.FileLogger.WriteLogTitle">
+            <summary>
+            Writes the title to the underlying log file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.c_logTitleFormat">
+            <summary>
+            Defines the log title format.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.c_tabSize">
+            <summary>
+            Defines the tab size for the log event message lines.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.m_logFilePath">
+            <summary>
+            Specifies the log file path. The path can be relative or absolute.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.m_logTitle">
+            <summary>
+            Specifies the log title. The value null means that the title has been written to the log file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.m_processId">
+            <summary>
+            Specifies the ID of the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.FileLogger.m_processName">
+            <summary>
+            Specifies the name of the process.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.ILogger">
+            <summary>
+            Defines an interface for the loggers to be used with the framework.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)">
+            <summary>
+            Logs an alert event.
+            </summary>
+            <param name="message">Specifies an AlertMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)">
+            <summary>
+            Logs an alert event.
+            </summary>
+            <param name="message">Specifies an alert message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])">
+            <summary>
+            Logs an alert event.
+            </summary>
+            <param name="message">Specifies an AlertMessage object whose Message property contains zero or more format
+            items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])">
+            <summary>
+            Logs an alert event.
+            </summary>
+            <param name="messageFormat">Specifies an alert message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            Logs an error event.
+            </summary>
+            <param name="message">Specifies an ErrorMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)">
+            <summary>
+            Logs an error event.
+            </summary>
+            <param name="exception">Specifies an Exception object whose string representation determines the error
+            message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)">
+            <summary>
+            Logs an error event.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            Logs an error event.
+            </summary>
+            <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
+            items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an ErrorMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])">
+            <summary>
+            Logs an error event.
+            </summary>
+            <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="message">Specifies an ErrorMessage object whose Message property contains zero or more format
+            items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            Logs an error event consisting of an error message and exception.
+            </summary>
+            <param name="exception">Specifies an Exception object.</param>
+            <param name="messageFormat">Specifies an error message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)">
+            <summary>
+            Logs a diagnostic event.
+            </summary>
+            <param name="message">Specifies a DiagnosticMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])">
+            <summary>
+            Logs a diagnostic event.
+            </summary>
+            <param name="message">Specifies a DiagnosticMessage object whose Message property contains zero or more
+            format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)">
+            <summary>
+            Logs an information event.
+            </summary>
+            <param name="message">Specifies an InformationMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)">
+            <summary>
+            Logs an information event.
+            </summary>
+            <param name="message">Specifies an information message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])">
+            <summary>
+            Logs an information event.
+            </summary>
+            <param name="message">Specifies an InformationMessage object whose Message property contains zero or more
+            format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])">
+            <summary>
+            Logs an information event.
+            </summary>
+            <param name="messageFormat">Specifies an information message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)">
+            <summary>
+            Logs a warning event.
+            </summary>
+            <param name="message">Specifies a warning message.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)">
+            <summary>
+            Logs a warning event.
+            </summary>
+            <param name="message">Specifies a WarningMessage object.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])">
+            <summary>
+            Logs a warning event.
+            </summary>
+            <param name="messageFormat">Specifies a warning message format containing zero or more format items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in <paramref name="messageFormat"/>.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])">
+            <summary>
+            Logs a warning event.
+            </summary>
+            <param name="message">Specifies a WarningMessage object whose Message property contains zero or more format
+            items.</param>
+            <param name="args">Specifies an object array containing zero or more objects to format. These objects must
+            correspond to the format items in the Message property of <paramref name="message"/>.</param>
+        </member>
+        <member name="P:Juhta.Net.Diagnostics.ILogger.IsThreadSafe">
+            <summary>
+            Returns true if this <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance is thread-safe, otherwise false.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.InformationMessage">
+            <summary>
+            Defines a class for information messages.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.InformationMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.InformationMessage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase">
+            <summary>
+            An enumeration that defines the diagnostic message ID bases used in the framework libraries.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages">
+            <summary>
+            Defines the message ID base for the root library messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages">
+            <summary>
+            Defines the message ID base for the common messages.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageType">
+            <summary>
+            Defines an enumeration for the diagnostic message types.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageType.Alert">
+            <summary>
+            The diagnostic message is an alert message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageType.Error">
+            <summary>
+            The diagnostic message is an error message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageType.Information">
+            <summary>
+            The diagnostic message is an information message.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageType.Warning">
+            <summary>
+            The diagnostic message is a warning message.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.WarningMessage">
+            <summary>
+            Defines a class for warning messages.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.WarningMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.WarningMessage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies a message that will be associated with the instance. The value can contain
+            format items.</param>
+            <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
         </member>
         <member name="T:Juhta.Net.Extensions.AppDomainExtensions">
             <summary>
@@ -4058,13 +4058,13 @@
         </member>
         <member name="T:Juhta.Net.Logger">
             <summary>
-            Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/>
+            Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
             instance.
             </summary>
             <remarks>
-            <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="T:Juhta.Net.Common.ILogger"/>
-            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)"/> method.</para>
-            <para>All exceptions thrown by the underlying <see cref="T:Juhta.Net.Common.ILogger"/> instance will be caught without handling,
+            <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
+            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)"/> method.</para>
+            <para>All exceptions thrown by the underlying <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance will be caught without handling,
             so no exceptions will be thrown by the class.</para>
             </remarks>
         </member>
@@ -4073,131 +4073,131 @@
             Initializes the class.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage)">
+        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogAlert(System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)"/>.
             </summary>
             <param name="message"></param>
         </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogAlert(System.String,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogError(System.Exception)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogError(System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogError(System.String,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)">
+        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage)">
+        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogInformation(System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogInformation(System.String,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogWarning(System.String)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage)">
+        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)"/>.
             </summary>
         </member>
         <member name="M:Juhta.Net.Logger.LogWarning(System.String,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])">
+        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])">
             <summary>
-            See <see cref="M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])"/>.
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)">
+        <member name="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)">
             <summary>
-            Sets an <see cref="T:Juhta.Net.Common.ILogger"/> instance into the class.
+            Sets an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance into the class.
             </summary>
-            <param name="logger">Specifies an <see cref="T:Juhta.Net.Common.ILogger"/> object.</param>
+            <param name="logger">Specifies an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> object.</param>
         </member>
         <member name="F:Juhta.Net.Logger.s_logger">
             <summary>
-            Specifies the encapsulated <see cref="T:Juhta.Net.Common.ILogger"/> instance.
+            Specifies the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance.
             </summary>
         </member>
         <member name="F:Juhta.Net.Logger.s_syncLock">
@@ -4700,7 +4700,7 @@
             </summary>
             <param name="pattern">Specifies a regular expression pattern.</param>
         </member>
-        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Diagnostics.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -4714,7 +4714,7 @@
             <param name="pattern">Specifies a regular expression pattern.</param>
             <param name="options">Specifies a bitwise combination of regular expression options.</param>
         </member>
-        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Diagnostics.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -4727,7 +4727,7 @@
             See <see cref="M:Juhta.Net.Validators.IValidator`1.Validate(`0)"/>.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)">
+        <member name="M:Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Diagnostics.ErrorMessage)">
             <summary>
             Initializes a new instance.
             </summary>
