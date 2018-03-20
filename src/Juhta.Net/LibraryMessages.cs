@@ -478,6 +478,53 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("XML document is not valid according to the given schema(s).");
 
+        /// <summary>
+        /// Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an
+        /// option prefix '{1}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an option prefix '{1}'.");
+
+        /// <summary>
+        /// Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error084 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.");
+
+        /// <summary>
+        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+        /// given but the name part is missing.
+        /// </summary>
+        internal static readonly ErrorMessage Error085 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is given but the name part is missing.");
+
+        /// <summary>
+        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+        /// given but the value part is missing.
+        /// </summary>
+        internal static readonly ErrorMessage Error086 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is given but the value part is missing.");
+
+        /// <summary>
+        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid
+        /// according to the regex '{1}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error087 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid according to the regex '{1}'.");
+
+        /// <summary>
+        /// Cannot create an instance of NamedArgument because the name argument '{0}' doesn't begin with an argument
+        /// name prefix '{1}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the name argument '{0}' doesn't begin with an argument name prefix '{1}'.");
+
+        /// <summary>
+        /// Cannot create an instance of NamedArgument because the name argument '{0}' contains just an argument name
+        /// prefix '{1}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the name argument '{0}' contains just an argument name prefix '{1}'.");
+
+        /// <summary>
+        /// Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
+        /// regex '{1}'.
+        /// </summary>
+        internal static readonly ErrorMessage Error090 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the regex '{1}'.");
+
         #endregion
     }
 }

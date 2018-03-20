@@ -1047,198 +1047,6 @@
             Stores the <see cref="P:Juhta.Net.Common.Utf8FileWriter.TabSize"/> property.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Console.CommandLineArg">
-            <summary>
-            Defines an abstract base class for command line arguments.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArg.ValidateValue(Juhta.Net.Validators.IStringValidator)">
-            <summary>
-            Validates the value of this CommandLineArg object through a specified IStringValidator instance.
-            </summary>
-            <param name="validator">Specifies an IStringValidator instance.</param>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArg.ValidateValue(System.String)">
-            <summary>
-            Validates the value of this CommandLineArg object with a specified regular expression.
-            </summary>
-            <param name="regex">Specifies a regular expression.</param>
-        </member>
-        <member name="P:Juhta.Net.Console.CommandLineArg.RawArg">
-            <summary>
-            Gets the raw command line argument specified by this CommandLineArg object.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Console.CommandLineArg.Value">
-            <summary>
-            Gets the (possibly parsed) value of the command line argument specified by this CommandLineArg object.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArg.#ctor(System.String,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="rawArg">Specifies a value for the <see cref="P:Juhta.Net.Console.CommandLineArg.RawArg"/> property.</param>
-            <param name="value">Specifies a value for the <see cref="P:Juhta.Net.Console.CommandLineArg.Value"/> property.</param>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArg.m_rawArg">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Console.CommandLineArg.RawArg"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArg.m_value">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Console.CommandLineArg.Value"/> property.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Console.CommandLineArgException">
-            <summary>
-            This exception will be thrown when an invalid argument is encountered in command line parsing.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgException.#ctor(System.String,System.Exception)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an inner exception.</param>
-        </member>
-        <member name="T:Juhta.Net.Console.CommandLineArgsParser">
-            <summary>
-            Defines a class for parsing command line arguments.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.#ctor(System.String[],System.Nullable{System.Char},System.Nullable{System.Char})">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="args">Specifies an array of command line arguments. Can be null.</param>
-            <param name="optionPrefix">Specifies a prefix for command line options. Can be null in which case all
-            arguments are expected to be parameters.</param>
-            <param name="optionNameValueSeparator">Specifies a separator for name and value parts in command line
-            options. Can be null in which case options are not expected to contain any value parts.</param>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.GetExclusiveOption(System.String[])">
-            <summary>
-            Gets and removes a mutually exclusive option from the command line arguments.
-            </summary>
-            <param name="optionNames">Specifies an array of option names that are treated as mutually exclusive.</param>
-            <returns>Returns the option from the specified mutually exclusive options that is found among the command
-            line arguments. If no option or more than one options are found, an exception will be thrown.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.GetExclusiveOption(System.String[],System.String)">
-            <summary>
-            Gets and removes a mutually exclusive option from the command line arguments.
-            </summary>
-            <param name="optionNames">Specifies an array of option names that are treated as mutually exclusive.</param>
-            <param name="defaultOption">Specifies a default option. Can be null.</param>
-            <returns>Returns the option from the specified mutually exclusive options that is found among the command
-            line arguments. If more than one options are found, an exception will be thrown; in case of no option is
-            found, returns the default option if such is given, or throws an exception.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.GetOption(System.String)">
-            <summary>
-            Gets and removes an option from the command line arguments.
-            </summary>
-            <param name="optionName">Specifies an option name.</param>
-            <returns>Returns the specified option from the command line arguments. If the option is specified more than
-            once, an exception will be thrown as well as when the option is not found.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.GetOption(System.String,System.String)">
-            <summary>
-            Gets and removes an option from the command line arguments.
-            </summary>
-            <param name="optionName">Specifies an option name.</param>
-            <param name="defaultOption">Specifies a default option. Can be null.</param>
-            <returns>Returns the specified option from the command line arguments. If the option is specified more than
-            once, an exception will be thrown as well as when the option is not found and no default option is given.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.TryGetOption(System.String,Juhta.Net.Console.CommandLineOption@)">
-            <summary>
-            Tries to get and remove an option from the command line arguments.
-            </summary>
-            <param name="optionName">Specifies an option name.</param>
-            <param name="option">If the function returns true, this parameter returns the specified option from the
-            command line arguments, otherwise the return value is null.</param>
-            <returns>The function returns true if the specified option was found in the command line arguments,
-            otherwise the return value is false.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.VerifyArgsConsumed">
-            <summary>
-            Verifies that all command line arguments have been consumed. If not, an exception will be thrown.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Console.CommandLineArgsParser.CurrentArgCount">
-            <summary>
-            Gets the number of command line arguments left to be consumed.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Console.CommandLineArgsParser.OriginalArgCount">
-            <summary>
-            Gets the original number of the command line arguments.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.CreateCommandLineOption(System.String)">
-            <summary>
-            Creates a CommandLineOption object based on a command line option string.
-            </summary>
-            <param name="option">Specifies a command line option string.</param>
-            <returns>Returns the CommandLineOption object created based on the specified command line option string.</returns>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineArgsParser.GetOption(System.String,System.String,System.Boolean)">
-            <summary>
-            Gets and removes an option from the command line arguments.
-            </summary>
-            <param name="optionName">Specifies an option name.</param>
-            <param name="defaultOption">Specifies a default option. Can be null.</param>
-            <param name="throwExceptionIfNotFound">Specifies whether an exception will be thrown if the option is not
-            found and no default option is given.</param>
-            <returns>Returns the specified option from the command line arguments. If the option is specified more than
-            once, an exception will be thrown. If the option is not found and no default option is given, the function
-            either throws an exception or returns null depending on the boolean value of
-            <paramref name="throwExceptionIfNotFound"/>.</returns>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.c_optionNamePattern">
-            <summary>
-            Specifies the regex pattern for validating option names.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.c_optionNameValueSeparatorPattern">
-            <summary>
-            Specifies the regex pattern for validating name and value part separators in command line options.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.c_optionPrefixPattern">
-            <summary>
-            Specifies the regex pattern for validating option prefixes.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.m_commandLineArgs">
-            <summary>
-            Specifies a linked list of the command line arguments.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.m_optionNameValueSeparator">
-            <summary>
-            Specifies the separator for name and value parts in command line options.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.m_optionPrefix">
-            <summary>
-            Specifies the prefix for command line options.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Console.CommandLineArgsParser.m_originalArgCount">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Console.CommandLineArgsParser.OriginalArgCount"/> property.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Console.CommandLineArgument">
             <summary>
             Defines an abstract base class for command line arguments.
@@ -1260,29 +1068,23 @@
             Stores the <see cref="P:Juhta.Net.Console.CommandLineArgument.Value"/> property.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Console.CommandLineOption">
+        <member name="T:Juhta.Net.Console.CommandLineArgumentException">
             <summary>
-            Defines a class that represents a command line option. At the command line level, command line options consist
-            of a prefix, name and an optional value, which is separated by a name-value separator from the name part.
+            This exception will be thrown when an invalid argument is encountered in command line parsing.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Console.CommandLineOption.Name">
-            <summary>
-            Gets the name of the command line option specified by this CommandLineOption object.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Console.CommandLineOption.#ctor(System.String,System.String,System.String)">
+        <member name="M:Juhta.Net.Console.CommandLineArgumentException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="rawArg">Species a value for the <see cref="P:Juhta.Net.Console.CommandLineArg.RawArg"/> property.</param>
-            <param name="name">Species a value for the <see cref="P:Juhta.Net.Console.CommandLineOption.Name"/> property.</param>
-            <param name="value">Species a value for the <see cref="P:Juhta.Net.Console.CommandLineArg.Value"/> property.</param>
+            <param name="message">Specifies an error message.</param>
         </member>
-        <member name="F:Juhta.Net.Console.CommandLineOption.m_name">
+        <member name="M:Juhta.Net.Console.CommandLineArgumentException.#ctor(System.String,System.Exception)">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Console.CommandLineOption.Name"/> property.
+            Initializes a new instance.
             </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception.</param>
         </member>
         <member name="T:Juhta.Net.Console.CommandLineParser">
             <summary>
@@ -1300,29 +1102,27 @@
             todo
             </summary>
         </member>
-        <member name="M:Juhta.Net.Console.CommandLineParser.CreateNamedArgument(System.String[],System.Int32)">
+        <member name="M:Juhta.Net.Console.CommandLineParser.CreateNamedArgument(System.String,System.String)">
             <summary>
             todo
             </summary>
-            <param name="arguments"></param>
-            <param name="i"></param>
+            <param name="nameArgument"></param>
+            <param name="valueArgument"></param>
             <returns></returns>
         </member>
-        <member name="M:Juhta.Net.Console.CommandLineParser.CreateOptionArgument(System.String[],System.Int32)">
+        <member name="M:Juhta.Net.Console.CommandLineParser.CreateOptionArgument(System.String)">
             <summary>
-            todo
+            Creates an instance of <see cref="T:Juhta.Net.Console.OptionArgument"/> based on a specified string value.
             </summary>
-            <param name="arguments"></param>
-            <param name="i"></param>
-            <returns></returns>
+            <param name="optionArgument">Specifies an option argument as a string value.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.Console.OptionArgument"/> instance.</returns>
         </member>
-        <member name="M:Juhta.Net.Console.CommandLineParser.CreateRawArgument(System.String[],System.Int32)">
+        <member name="M:Juhta.Net.Console.CommandLineParser.CreatePlainArgument(System.String)">
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.Console.PlainArgument"/>.
             </summary>
-            <param name="arguments">Specifies an array of raw command line arguments.</param>
-            <param name="i">An index in <paramref name="arguments"/> specifying the raw argument based on which to
-            create an instance of <see cref="T:Juhta.Net.Console.PlainArgument"/>.</param>
+            <param name="argument">Specifies a raw command line argument based on which to create an instance of
+            <see cref="T:Juhta.Net.Console.PlainArgument"/>.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.Console.PlainArgument"/> instance.</returns>
         </member>
         <member name="F:Juhta.Net.Console.CommandLineParser.c_defaultArgumentNamePrefix">
@@ -1330,14 +1130,29 @@
             Specifies the default argument name prefix.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.CommandLineParser.c_defaultOptionNamePrefix">
-            <summary>
-            Specifies the default option name prefix.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.Console.CommandLineParser.c_defaultOptionNameValueSeparator">
             <summary>
-            Specifies the default name-value separator in option arguments.
+            Specifies the default option name-value separator.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.c_defaultOptionPrefix">
+            <summary>
+            Specifies the default option prefix.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.c_regexArgumentName">
+            <summary>
+            Specifies the regex for validating argument names.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.c_regexOptionName">
+            <summary>
+            Specifies the regex for validating option names.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.m_argumentNamePrefix">
+            <summary>
+            Specifies the argument name prefix.
             </summary>
         </member>
         <member name="F:Juhta.Net.Console.CommandLineParser.m_arguments">
@@ -1348,6 +1163,16 @@
         <member name="F:Juhta.Net.Console.CommandLineParser.m_nameValueArguments">
             <summary>
             Specifies a list of the parsed name-value command line arguments indexed by name.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.m_optionNameValueSeparator">
+            <summary>
+            Specifies the option name-value separator.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.m_optionPrefix">
+            <summary>
+            Specifies the option prefix.
             </summary>
         </member>
         <member name="T:Juhta.Net.Console.NamedArgument">
@@ -4183,6 +4008,53 @@
         <member name="F:Juhta.Net.LibraryMessages.Error082">
             <summary>
             XML document is not valid according to the given schema(s).
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error083">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an
+            option prefix '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error084">
+            <summary>
+            Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error085">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+            given but the name part is missing.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error086">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+            given but the value part is missing.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error087">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid
+            according to the regex '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error088">
+            <summary>
+            Cannot create an instance of NamedArgument because the name argument '{0}' doesn't begin with an argument
+            name prefix '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error089">
+            <summary>
+            Cannot create an instance of NamedArgument because the name argument '{0}' contains just an argument name
+            prefix '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error090">
+            <summary>
+            Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
+            regex '{1}'.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">
