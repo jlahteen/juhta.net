@@ -508,22 +508,31 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error087 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid according to the regex '{1}'.");
 
         /// <summary>
-        /// Cannot create an instance of NamedArgument because the name argument '{0}' doesn't begin with an argument
+        /// Cannot create an instance of NamedArgument because the argument name '{0}' doesn't begin with an argument
         /// name prefix '{1}'.
         /// </summary>
-        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the name argument '{0}' doesn't begin with an argument name prefix '{1}'.");
+        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' doesn't begin with an argument name prefix '{1}'.");
 
         /// <summary>
-        /// Cannot create an instance of NamedArgument because the name argument '{0}' contains just an argument name
-        /// prefix '{1}'.
+        /// Cannot create an instance of NamedArgument based on the pure argument name prefix '{0}'.
         /// </summary>
-        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the name argument '{0}' contains just an argument name prefix '{1}'.");
+        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument based on the pure argument name prefix '{0}'.");
 
         /// <summary>
         /// Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
         /// regex '{1}'.
         /// </summary>
         internal static readonly ErrorMessage Error090 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the regex '{1}'.");
+
+        /// <summary>
+        /// Option argument '{0}' is not specified in the command line arguments.
+        /// </summary>
+        internal static readonly ErrorMessage Error091 = MessageFactory.CreateErrorMessage("Option argument '{0}' is not specified in the command line arguments.");
+
+        /// <summary>
+        /// Command line argument cannot be null or an empty string.
+        /// </summary>
+        internal static readonly ErrorMessage Error092 = MessageFactory.CreateErrorMessage("Command line argument cannot be null or an empty string.");
 
         #endregion
     }

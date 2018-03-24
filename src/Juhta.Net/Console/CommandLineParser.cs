@@ -21,6 +21,39 @@ namespace Juhta.Net.Console
         #region Public Methods
 
         /// <summary>
+        /// Gets an option argument.
+        /// </summary>
+        /// <param name="optionName">Specifies an option name.</param>
+        /// <returns>Returns an instance of <see cref="OptionArgument"/> holding the specified option argument.</returns>
+        /// <remarks>If the specified option is not found, an exception will be thrown.</remarks>
+        public OptionArgument GetOptionArgument(string optionName)
+        {
+            return(GetOptionArgument(optionName, null));
+        }
+
+        /// <summary>
+        /// Gets an option argument.
+        /// </summary>
+        /// <param name="optionName">Specifies an option name.</param>
+        /// <param name="defaultValue">Specifies a default value for the option argument. Can be null.</param>
+        /// <returns>Returns an instance of <see cref="OptionArgument"/> holding the specified option argument.</returns>
+        /// <remarks>If the specified option is not found and <paramref name="defaultValue"/> is null, an exception
+        /// will be thrown.</remarks>
+        public OptionArgument GetOptionArgument(string optionName, string defaultValue)
+        {
+            OptionArgument optionArgument;
+
+            if (m_optionArguments.TryGetValue(optionName, out optionArgument))
+                return(optionArgument);
+
+            else if (defaultValue != null)
+                return(CreateOptionArgument(m_optionPrefix + optionName + m_optionNameValueSeparator + defaultValue));
+
+            else
+                throw new CommandLineArgumentException(LibraryMessages.Error091.FormatMessage(optionName));
+        }
+
+        /// <summary>
         /// todo
         /// </summary>
         /// <param name="arguments"></param>
@@ -34,11 +67,19 @@ namespace Juhta.Net.Console
         /// </summary>
         public void ParseArguments(string[] arguments, string argumentNamePrefix, string optionPrefix, string optionNameValueSeparator)
         {
-            m_arguments = new List<CommandLineArgument>();
             CommandLineArgument argument;
-            NameValueArgument nameValueArgument;
 
-            m_nameValueArguments = new Dictionary<string, NameValueArgument>();
+            // Initialize the argument lists
+
+            m_allArguments = new List<CommandLineArgument>();
+
+            m_optionArguments = new Dictionary<string, OptionArgument>();
+
+            m_namedArguments = new Dictionary<string, NamedArgument>();
+
+            m_plainArguments = new List<PlainArgument>();
+
+            // Initialize the parsing settings
 
             m_argumentNamePrefix = argumentNamePrefix;
 
@@ -46,32 +87,54 @@ namespace Juhta.Net.Console
 
             m_optionNameValueSeparator = optionNameValueSeparator;
 
+            // Return if there is nothing to parse
             if (arguments == null || arguments.Length == 0)
                 return;
+
+            // Check null and empty arguments
+
+            for (int i = 0; i < arguments.Length; i++)
+            {
+                if (arguments[i] != null)
+                    arguments[i] = arguments[i].Trim();
+
+                if (String.IsNullOrEmpty(arguments[i]))
+                    throw new CommandLineArgumentException(LibraryMessages.Error092.GetMessage());
+            }
 
             for (int i = 0; i < arguments.Length; i++)
             {
                 if (arguments[i].StartsWith(optionPrefix))
+                {
+                    // Parse an option argument
+
                     argument = CreateOptionArgument(arguments[i]);
 
+                    m_optionArguments.Add(((OptionArgument)argument).Name, ((OptionArgument)argument));
+                }
                 else if (arguments[i].StartsWith(argumentNamePrefix))
                 {
+                    // Parse a named argument
+
                     if (i == arguments.Length - 1)
                         throw new CommandLineArgumentException("");
 
                     argument = CreateNamedArgument(arguments[i], arguments[i + 1]);
 
                     i++;
+
+                    m_namedArguments.Add(((NamedArgument)argument).Name, ((NamedArgument)argument));
                 }
                 else
+                {
+                    // Parse a plain argument
+
                     argument = CreatePlainArgument(arguments[i]);
 
-                m_arguments.Add(argument);
+                    m_plainArguments.Add((PlainArgument)argument);
+                }
 
-                nameValueArgument = argument as NameValueArgument;
-
-                if (nameValueArgument != null)
-                    m_nameValueArguments.Add(nameValueArgument.Name, nameValueArgument);
+                m_allArguments.Add(argument);
             }
         }
 
@@ -80,27 +143,25 @@ namespace Juhta.Net.Console
         #region Private Methods
 
         /// <summary>
-        /// todo
+        /// Creates an instance of <see cref="NamedArgument"/> based on a specified argument name and value.
         /// </summary>
-        /// <param name="nameArgument"></param>
-        /// <param name="valueArgument"></param>
-        /// <returns></returns>
-        private CommandLineArgument CreateNamedArgument(string nameArgument, string valueArgument)
+        /// <param name="argumentName">Specifies an argument name. The name must begin with an argument name prefix.</param>
+        /// <param name="argumentValue">Specifies an argument value.</param>
+        /// <returns>Returns the created <see cref="NamedArgument"/> instance.</returns>
+        private NamedArgument CreateNamedArgument(string argumentName, string argumentValue)
         {
-            string nameArgumentOriginal = nameArgument;
+            if (!argumentName.StartsWith(m_argumentNamePrefix))
+                throw new CommandLineArgumentException(LibraryMessages.Error088.FormatMessage(argumentName, m_argumentNamePrefix));
 
-            if (!nameArgument.StartsWith(m_argumentNamePrefix))
-                throw new CommandLineArgumentException(LibraryMessages.Error088.FormatMessage(nameArgument, m_argumentNamePrefix));
+            argumentName = argumentName.Substring(m_argumentNamePrefix.Length);
 
-            nameArgument = nameArgument.Substring(m_argumentNamePrefix.Length);
+            if (String.IsNullOrWhiteSpace(argumentName))
+                throw new CommandLineArgumentException(LibraryMessages.Error089.FormatMessage(m_argumentNamePrefix));
 
-            if (String.IsNullOrWhiteSpace(nameArgument))
-                throw new CommandLineArgumentException(LibraryMessages.Error089.FormatMessage(nameArgumentOriginal, m_argumentNamePrefix));
+            if (!Regex.IsMatch(argumentName, c_regexArgumentName))
+                throw new CommandLineArgumentException(LibraryMessages.Error090.FormatMessage(argumentName, c_regexArgumentName));
 
-            if (!Regex.IsMatch(nameArgument, c_regexArgumentName))
-                throw new CommandLineArgumentException(LibraryMessages.Error090.FormatMessage(nameArgument, c_regexArgumentName));
-
-            return(new NamedArgument(nameArgument, valueArgument));
+            return(new NamedArgument(argumentName, argumentValue));
         }
 
         /// <summary>
@@ -108,7 +169,7 @@ namespace Juhta.Net.Console
         /// </summary>
         /// <param name="optionArgument">Specifies an option argument as a string value.</param>
         /// <returns>Returns the created <see cref="OptionArgument"/> instance.</returns>
-        private CommandLineArgument CreateOptionArgument(string optionArgument)
+        private OptionArgument CreateOptionArgument(string optionArgument)
         {
             string optionArgumentOriginal, optionName, optionValue;
             int nameValueSeparatorPosition;
@@ -156,7 +217,7 @@ namespace Juhta.Net.Console
         /// <param name="argument">Specifies a raw command line argument based on which to create an instance of
         /// <see cref="PlainArgument"/>.</param>
         /// <returns>Returns the created <see cref="PlainArgument"/> instance.</returns>
-        private CommandLineArgument CreatePlainArgument(string argument)
+        private PlainArgument CreatePlainArgument(string argument)
         {
             return(new PlainArgument(argument));
         }
@@ -195,19 +256,24 @@ namespace Juhta.Net.Console
         #region Private Fields
 
         /// <summary>
+        /// Specifies a list of all parsed command line arguments.
+        /// </summary>
+        private List<CommandLineArgument> m_allArguments;
+
+        /// <summary>
         /// Specifies the argument name prefix.
         /// </summary>
         private string m_argumentNamePrefix;
 
         /// <summary>
-        /// Specifies a list of the parsed command line arguments.
+        /// Specifies a list of the parsed named arguments indexed by name.
         /// </summary>
-        private List<CommandLineArgument> m_arguments;
+        private Dictionary<string, NamedArgument> m_namedArguments;
 
         /// <summary>
-        /// Specifies a list of the parsed name-value command line arguments indexed by name.
+        /// Specifies a list of the parsed option arguments indexed by name.
         /// </summary>
-        private Dictionary<string, NameValueArgument> m_nameValueArguments;
+        private Dictionary<string, OptionArgument> m_optionArguments;
 
         /// <summary>
         /// Specifies the option name-value separator.
@@ -218,6 +284,11 @@ namespace Juhta.Net.Console
         /// Specifies the option prefix.
         /// </summary>
         private string m_optionPrefix;
+
+        /// <summary>
+        /// Specifies a list of the parsed plain arguments.
+        /// </summary>
+        private List<PlainArgument> m_plainArguments;
 
         #endregion
     }

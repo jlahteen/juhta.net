@@ -9,66 +9,115 @@ namespace Juhta.Net.Tests.Console
     {
         #region Test Methods
 
-        //[TestMethod]
-        //public void GetOption_OneOptionWithValue_ShoulReturnCommandLineOption()
-        //{
-        //    string[] args;
-        //    CommandLineArgsParser commandLineArgsParser;
-        //    CommandLineOption option;
+        [TestMethod]
+        public void GetOptionArgument_ExistingOption_ShouldReturnOptionArgument()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            OptionArgument optionArgument; 
 
-        //    args = new string[]
-        //    {
-        //        "/SaveOption=Force"
-        //    };
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "/inputFile:MyInputFile.txt",
+                    "/targetFile:MyTargetFile.txt",
+                }
+            );
 
-        //    commandLineArgsParser = new CommandLineArgsParser(args, '/', '=');
+            optionArgument = commandLineParser.GetOptionArgument("inputFile");
 
-        //    Assert.AreEqual<int>(1, commandLineArgsParser.OriginalArgCount);
+            Assert.AreEqual<string>("inputFile", optionArgument.Name);
 
-        //    Assert.AreEqual<int>(1, commandLineArgsParser.CurrentArgCount);
+            Assert.AreEqual<string>("MyInputFile.txt", optionArgument.Value);
+        }
 
-        //    option = commandLineArgsParser.GetOption("SaveOption");
+        [TestMethod]
+        public void GetOptionArgument_NonExistingOption_DefaultValueGiven_ShouldReturnOptionArgument()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            OptionArgument optionArgument;
 
-        //    Assert.AreEqual<string>("SaveOption", option.Name);
+            commandLineParser.ParseArguments(null);
 
-        //    Assert.AreEqual<string>("Force", option.Value);
+            optionArgument = commandLineParser.GetOptionArgument("inputFile", "MyInputFile.txt");
 
-        //    Assert.AreEqual<int>(0, commandLineArgsParser.CurrentArgCount);
+            Assert.AreEqual<string>("inputFile", optionArgument.Name);
 
-        //    commandLineArgsParser.VerifyArgsConsumed();
-        //}
+            Assert.AreEqual<string>("MyInputFile.txt", optionArgument.Value);
+        }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(CommandLineArgException))]
-        //public void GetOption_UnknownOption_ShouldThrowCommandLineArgException()
-        //{
-        //    string[] args;
-        //    CommandLineArgsParser commandLineArgsParser;
-        //    CommandLineOption option;
+        [TestMethod]
+        [ExpectedException(typeof(CommandLineArgumentException))]
+        public void GetOptionArgument_NonExistingOption_NoDefaultValueGiven_ShouldThrowCommandLineArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            OptionArgument optionArgument;
 
-        //    args = new string[]
-        //    {
-        //        "/SkipValidation=true"
-        //    };
+            commandLineParser.ParseArguments(null);
 
-        //    commandLineArgsParser = new CommandLineArgsParser(args, '/', '=');
+            try
+            {
+                optionArgument = commandLineParser.GetOptionArgument("inputFile");
+            }
 
-        //    Assert.AreEqual<int>(1, commandLineArgsParser.OriginalArgCount);
+            catch (CommandLineArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10091]"));
 
-        //    Assert.AreEqual<int>(1, commandLineArgsParser.CurrentArgCount);
+                throw;
+            }
+        }
 
-        //    try
-        //    {
-        //        option = commandLineArgsParser.GetOption("SaveOption");
-        //    }
+        [TestMethod]
+        [ExpectedException(typeof(CommandLineArgumentException))]
+        public void ParseArguments_EmptyArgumentGiven_ShouldThrowCommandLineArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
 
-        //    catch (CommandLineArgException ex)
-        //    {
-        //        Assert.AreEqual<string>("[Juhta.Net.Error10043] Option 'SaveOption' was not found in the command line arguments.", ex.Message);
+            try
+            {
+                commandLineParser.ParseArguments(
+                    new string[]
+                    {
+                        "/inputFile:MyInputFile.txt",
+                        "/targetFile:MyTargetFile.txt",
+                        "   "
+                    }
+                );
+            }
 
-        //        throw;
-        //    }
-        //}
+            catch (CommandLineArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10092]"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CommandLineArgumentException))]
+        public void ParseArguments_NullArgumentGiven_ShouldThrowCommandLineArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+
+            try
+            {
+                commandLineParser.ParseArguments(
+                    new string[]
+                    {
+                        "/inputFile:MyInputFile.txt",
+                        "/targetFile:MyTargetFile.txt",
+                        null
+                    }
+                );
+            }
+
+            catch (CommandLineArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10092]"));
+
+                throw;
+            }
+        }
 
         #endregion
     }
