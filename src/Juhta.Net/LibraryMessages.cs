@@ -534,6 +534,16 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error092 = MessageFactory.CreateErrorMessage("Command line argument cannot be null or an empty string.");
 
+        /// <summary>
+        /// Named argument '{0}' is not specified in the command line arguments.
+        /// </summary>
+        internal static readonly ErrorMessage Error093 = MessageFactory.CreateErrorMessage("Named argument '{0}' is not specified in the command line arguments.");
+
+        /// <summary>
+        /// Argument name cannot be the last command line argument, it must be followed by an argument value.
+        /// </summary>
+        internal static readonly ErrorMessage Error094 = MessageFactory.CreateErrorMessage("Argument name cannot be the last command line argument, it must be followed by an argument value.");
+
         #endregion
     }
 }

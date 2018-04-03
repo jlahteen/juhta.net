@@ -1091,6 +1091,24 @@
             todo
             </summary>
         </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)">
+            <summary>
+            Gets a named argument.
+            </summary>
+            <param name="argumentName">Specifies an argument name.</param>
+            <returns>Returns an instance of <see cref="T:Juhta.Net.Console.NamedArgument"/> holding the specified named argument.</returns>
+            <remarks>If the specified named argument is not found, an exception will be thrown.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String,System.String)">
+            <summary>
+            Gets a named argument.
+            </summary>
+            <param name="argumentName">Specifies an argument name.</param>
+            <param name="defaultValue">Specifies a default value for the named argument. Can be null.</param>
+            <returns>Returns an instance of <see cref="T:Juhta.Net.Console.NamedArgument"/> holding the specified named argument.</returns>
+            <remarks>If the specified named argument is not found and <paramref name="defaultValue"/> is null, an
+            exception will be thrown.</remarks>
+        </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String)">
             <summary>
             Gets an option argument.
@@ -4092,6 +4110,16 @@
         <member name="F:Juhta.Net.LibraryMessages.Error092">
             <summary>
             Command line argument cannot be null or an empty string.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error093">
+            <summary>
+            Named argument '{0}' is not specified in the command line arguments.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error094">
+            <summary>
+            Argument name cannot be the last command line argument, it must be followed by an argument value.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">

@@ -21,6 +21,39 @@ namespace Juhta.Net.Console
         #region Public Methods
 
         /// <summary>
+        /// Gets a named argument.
+        /// </summary>
+        /// <param name="argumentName">Specifies an argument name.</param>
+        /// <returns>Returns an instance of <see cref="NamedArgument"/> holding the specified named argument.</returns>
+        /// <remarks>If the specified named argument is not found, an exception will be thrown.</remarks>
+        public NamedArgument GetNamedArgument(string argumentName)
+        {
+            return(GetNamedArgument(argumentName, null));
+        }
+
+        /// <summary>
+        /// Gets a named argument.
+        /// </summary>
+        /// <param name="argumentName">Specifies an argument name.</param>
+        /// <param name="defaultValue">Specifies a default value for the named argument. Can be null.</param>
+        /// <returns>Returns an instance of <see cref="NamedArgument"/> holding the specified named argument.</returns>
+        /// <remarks>If the specified named argument is not found and <paramref name="defaultValue"/> is null, an
+        /// exception will be thrown.</remarks>
+        public NamedArgument GetNamedArgument(string argumentName, string defaultValue)
+        {
+            NamedArgument namedArgument;
+
+            if (m_namedArguments.TryGetValue(argumentName, out namedArgument))
+                return(namedArgument);
+
+            else if (defaultValue != null)
+                return(CreateNamedArgument(m_argumentNamePrefix + argumentName, defaultValue));
+
+            else
+                throw new CommandLineArgumentException(LibraryMessages.Error093.FormatMessage(argumentName));
+        }
+
+        /// <summary>
         /// Gets an option argument.
         /// </summary>
         /// <param name="optionName">Specifies an option name.</param>
@@ -117,7 +150,7 @@ namespace Juhta.Net.Console
                     // Parse a named argument
 
                     if (i == arguments.Length - 1)
-                        throw new CommandLineArgumentException("");
+                        throw new CommandLineArgumentException(LibraryMessages.Error094.GetMessage());
 
                     argument = CreateNamedArgument(arguments[i], arguments[i + 1]);
 
