@@ -1127,6 +1127,24 @@
             <remarks>If the specified option is not found and <paramref name="defaultValue"/> is null, an exception
             will be thrown.</remarks>
         </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32)">
+            <summary>
+            Gets a plain argument.
+            </summary>
+            <param name="index">Specifies a plain argument index. The index of the first plain argument is 0.</param>
+            <returns>Returns an instance of <see cref="T:Juhta.Net.Console.PlainArgument"/> holding the specified plain argument.</returns>
+            <remarks>If the specified plain argument is not found, an exception will be thrown.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32,System.String)">
+            <summary>
+            Gets a plain argument.
+            </summary>
+            <param name="index">Specifies a plain argument index. The index of the first plain argument is 0.</param>
+            <param name="defaultValue">Specifies a default value for the plain argument. Can be null.</param>
+            <returns>Returns an instance of <see cref="T:Juhta.Net.Console.PlainArgument"/> holding the specified plain argument.</returns>
+            <remarks>If the specified plain argument is not found and <paramref name="defaultValue"/> is null, an
+            exception will be thrown.</remarks>
+        </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])">
             <summary>
             todo
@@ -4120,6 +4138,11 @@
         <member name="F:Juhta.Net.LibraryMessages.Error094">
             <summary>
             Argument name cannot be the last command line argument, it must be followed by an argument value.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error095">
+            <summary>
+            Plain argument #{0} is not specified in the command line arguments.
             </summary>
         </member>
         <member name="T:Juhta.Net.Logger">

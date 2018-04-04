@@ -544,6 +544,11 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error094 = MessageFactory.CreateErrorMessage("Argument name cannot be the last command line argument, it must be followed by an argument value.");
 
+        /// <summary>
+        /// Plain argument #{0} is not specified in the command line arguments.
+        /// </summary>
+        internal static readonly ErrorMessage Error095 = MessageFactory.CreateErrorMessage("Plain argument #{0} is not specified in the command line arguments.");
+
         #endregion
     }
 }

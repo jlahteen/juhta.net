@@ -87,6 +87,37 @@ namespace Juhta.Net.Console
         }
 
         /// <summary>
+        /// Gets a plain argument.
+        /// </summary>
+        /// <param name="index">Specifies a plain argument index. The index of the first plain argument is 0.</param>
+        /// <returns>Returns an instance of <see cref="PlainArgument"/> holding the specified plain argument.</returns>
+        /// <remarks>If the specified plain argument is not found, an exception will be thrown.</remarks>
+        public PlainArgument GetPlainArgument(int index)
+        {
+            return(GetPlainArgument(index, null));
+        }
+
+        /// <summary>
+        /// Gets a plain argument.
+        /// </summary>
+        /// <param name="index">Specifies a plain argument index. The index of the first plain argument is 0.</param>
+        /// <param name="defaultValue">Specifies a default value for the plain argument. Can be null.</param>
+        /// <returns>Returns an instance of <see cref="PlainArgument"/> holding the specified plain argument.</returns>
+        /// <remarks>If the specified plain argument is not found and <paramref name="defaultValue"/> is null, an
+        /// exception will be thrown.</remarks>
+        public PlainArgument GetPlainArgument(int index, string defaultValue)
+        {
+            if (0 <= index && index < m_plainArguments.Count)
+                return(m_plainArguments[index]);
+
+            else if (defaultValue != null)
+                return(CreatePlainArgument(defaultValue));
+
+            else
+                throw new CommandLineArgumentException(LibraryMessages.Error095.FormatMessage(index));
+        }
+
+        /// <summary>
         /// todo
         /// </summary>
         /// <param name="arguments"></param>

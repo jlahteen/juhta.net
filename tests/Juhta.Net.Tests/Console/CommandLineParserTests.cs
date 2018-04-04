@@ -128,6 +128,88 @@ namespace Juhta.Net.Tests.Console
         }
 
         [TestMethod]
+        public void GetPlainArgument_ExistingPlainArgument_ShouldReturnPlainArgument()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            PlainArgument plainArgument;
+
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "/inputFile:MyInputFile.txt",
+                    "/targetFile:MyTargetFile.txt",
+                    "ThisIsPlainArgument0",
+                    "ThisIsPlainArgument1",
+                    "-myLoggerClass",
+                    "AppX.Logger"
+                }
+            );
+
+            plainArgument = commandLineParser.GetPlainArgument(0);
+
+            Assert.AreEqual<string>("ThisIsPlainArgument0", plainArgument.Value);
+
+            plainArgument = commandLineParser.GetPlainArgument(1);
+
+            Assert.AreEqual<string>("ThisIsPlainArgument1", plainArgument.Value);
+        }
+
+        [TestMethod]
+        public void GetPlainArgument_NonExistingPlainArgument_DefaultValueGiven_ShouldReturnPlainArgument()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            PlainArgument plainArgument;
+
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "/inputFile:MyInputFile.txt",
+                    "/targetFile:MyTargetFile.txt",
+                    "ThisIsPlainArgument0",
+                    "ThisIsPlainArgument1",
+                    "-myLoggerClass",
+                    "AppX.Logger"
+                }
+            );
+
+            plainArgument = commandLineParser.GetPlainArgument(2, "ThisIsPlainArgument2");
+
+            Assert.AreEqual<string>("ThisIsPlainArgument2", plainArgument.Value);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CommandLineArgumentException))]
+        public void GetPlainArgument_NonExistingPlainArgument_NoDefaultValueGiven_ShouldThrowCommandLineArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            PlainArgument plainArgument;
+
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "/inputFile:MyInputFile.txt",
+                    "/targetFile:MyTargetFile.txt",
+                    "ThisIsPlainArgument0",
+                    "ThisIsPlainArgument1",
+                    "-myLoggerClass",
+                    "AppX.Logger"
+                }
+            );
+
+            try
+            {
+                plainArgument = commandLineParser.GetPlainArgument(2);
+            }
+
+            catch (CommandLineArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10095]"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(CommandLineArgumentException))]
         public void ParseArguments_ArgumentValueMissing_ShouldThrowCommandLineArgumentException()
         {
