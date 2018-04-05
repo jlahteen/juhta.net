@@ -1088,7 +1088,12 @@
         </member>
         <member name="T:Juhta.Net.Console.CommandLineParser">
             <summary>
-            todo
+            Defines a class for parsing command line arguments. The following command line arguments are supported:
+            <list type="bullet">
+            <item>Named arguments, e.g. --workFolder C:\Temp</item>
+            <item>Option arguments: /BufferSize:12345</item>
+            <item>Plain arguments: all arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain arguments.</item>
+            </list>
             </summary>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)">
@@ -1147,14 +1152,18 @@
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])">
             <summary>
-            todo
+            Parses an array of raw command line arguments.
             </summary>
-            <param name="arguments"></param>
+            <param name="arguments">Specifies an array of raw command line arguments.</param>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[],System.String,System.String,System.String)">
             <summary>
-            todo
+            Parses an array of raw command line arguments.
             </summary>
+            <param name="arguments">Specifies an array of raw command line arguments.</param>
+            <param name="argumentNamePrefix">Specifies an argument name prefix.</param>
+            <param name="optionPrefix">Specifies an option prefix.</param>
+            <param name="optionNameValueSeparator">Specifies an option name-value separator.</param>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.CreateNamedArgument(System.String,System.String)">
             <summary>

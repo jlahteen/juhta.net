@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -118,36 +119,46 @@ namespace Juhta.Net.Console
         }
 
         /// <summary>
-        /// todo
+        /// Parses an array of raw command line arguments.
         /// </summary>
-        /// <param name="arguments"></param>
+        /// <param name="arguments">Specifies an array of raw command line arguments.</param>
         public void ParseArguments(string[] arguments)
         {
             ParseArguments(arguments, c_defaultArgumentNamePrefix, c_defaultOptionPrefix, c_defaultOptionNameValueSeparator);
         }
 
         /// <summary>
-        /// todo
+        /// Parses an array of raw command line arguments.
         /// </summary>
+        /// <param name="arguments">Specifies an array of raw command line arguments.</param>
+        /// <param name="argumentNamePrefix">Specifies an argument name prefix.</param>
+        /// <param name="optionPrefix">Specifies an option prefix.</param>
+        /// <param name="optionNameValueSeparator">Specifies an option name-value separator.</param>
         public void ParseArguments(string[] arguments, string argumentNamePrefix, string optionPrefix, string optionNameValueSeparator)
         {
             CommandLineArgument argument;
 
-            // Initialize the argument lists
+            // Initialize the argument lists and collections
 
             m_allArguments = new List<CommandLineArgument>();
 
-            m_optionArguments = new Dictionary<string, OptionArgument>();
-
             m_namedArguments = new Dictionary<string, NamedArgument>();
+
+            m_optionArguments = new Dictionary<string, OptionArgument>();
 
             m_plainArguments = new List<PlainArgument>();
 
             // Initialize the parsing settings
 
+            ArgumentHelper.CheckNotNull(nameof(argumentNamePrefix), argumentNamePrefix);
+
             m_argumentNamePrefix = argumentNamePrefix;
 
+            ArgumentHelper.CheckNotNull(nameof(optionPrefix), optionPrefix);
+
             m_optionPrefix = optionPrefix;
+
+            ArgumentHelper.CheckNotNull(nameof(optionNameValueSeparator), optionNameValueSeparator);
 
             m_optionNameValueSeparator = optionNameValueSeparator;
 
@@ -170,7 +181,7 @@ namespace Juhta.Net.Console
             {
                 if (arguments[i].StartsWith(optionPrefix))
                 {
-                    // Parse an option argument
+                    // Create an option argument
 
                     argument = CreateOptionArgument(arguments[i]);
 
@@ -178,7 +189,7 @@ namespace Juhta.Net.Console
                 }
                 else if (arguments[i].StartsWith(argumentNamePrefix))
                 {
-                    // Parse a named argument
+                    // Create a named argument
 
                     if (i == arguments.Length - 1)
                         throw new CommandLineArgumentException(LibraryMessages.Error094.GetMessage());
@@ -191,7 +202,7 @@ namespace Juhta.Net.Console
                 }
                 else
                 {
-                    // Parse a plain argument
+                    // Create a plain argument
 
                     argument = CreatePlainArgument(arguments[i]);
 
