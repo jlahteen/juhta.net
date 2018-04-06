@@ -238,6 +238,80 @@ namespace Juhta.Net.Tests.Console
         }
 
         [TestMethod]
+        public void ParseArguments_ComplexArguments_ShouldReturn()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            NamedArgument namedArgument;
+
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "-sourceDirectory",
+                    "C:\\Users\\Joe",
+                    "-destinationDirectory",
+                    "C:\\Temp",
+                    "/S",
+                    "/E",
+                    "/ignoreFileTypes:*.dll;*.pdb;*.exe",
+                    "MyFile1.json",
+                    "MyFile2.json",
+                    "MyFile3.json",
+                    "/serviceName:AppService",
+                    "/setting1:123",
+                    "/setting2:2001-10-23",
+                    "/generateReport:true",
+                    "/reportType:html",
+                    "-reportOutputFile",
+                    "AppServiceReport.html"
+                }
+            );
+
+            namedArgument = commandLineParser.GetNamedArgument("sourceDirectory");
+
+            Assert.AreEqual<string>("C:\\Users\\Joe", namedArgument.Value);
+
+            namedArgument = commandLineParser.GetNamedArgument("destinationDirectory");
+
+            Assert.AreEqual<string>("C:\\Temp", namedArgument.Value);
+
+            Assert.AreEqual<string>("true", commandLineParser.GetOptionArgument("S").Value);
+
+            Assert.AreEqual<string>("true", commandLineParser.GetOptionArgument("E").Value);
+
+            Assert.AreEqual<string>("*.dll;*.pdb;*.exe", commandLineParser.GetOptionArgument("ignoreFileTypes").Value);
+
+            Assert.AreEqual<string>("AppService", commandLineParser.GetOptionArgument("serviceName").Value);
+
+            Assert.AreEqual<string>("123", commandLineParser.GetOptionArgument("setting1").Value);
+
+            Assert.AreEqual<string>("2001-10-23", commandLineParser.GetOptionArgument("setting2").Value);
+
+            Assert.AreEqual<string>("true", commandLineParser.GetOptionArgument("generateReport").Value);
+
+            Assert.AreEqual<string>("AppServiceReport.html", commandLineParser.GetNamedArgument("reportOutputFile").Value);
+
+            Assert.AreEqual<bool>(true, commandLineParser.HasUnconsumedArguments);
+
+            Assert.AreEqual<string>("MyFile1.json", commandLineParser.GetUnconsumedArguments()[0].Value);
+
+            Assert.AreEqual<string>("MyFile2.json", commandLineParser.GetUnconsumedArguments()[1].Value);
+
+            Assert.AreEqual<string>("MyFile3.json", commandLineParser.GetUnconsumedArguments()[2].Value);
+
+            Assert.AreEqual<string>("MyFile1.json", commandLineParser.GetPlainArgument(0).Value);
+
+            Assert.AreEqual<string>("MyFile2.json", commandLineParser.GetPlainArgument(1).Value);
+
+            Assert.AreEqual<string>("MyFile3.json", commandLineParser.GetPlainArgument(2).Value);
+
+            Assert.AreEqual<bool>(true, commandLineParser.HasUnconsumedArguments);
+
+            Assert.AreEqual<string>("html", commandLineParser.GetOptionArgument("reportType").Value);
+
+            Assert.AreEqual<bool>(false, commandLineParser.HasUnconsumedArguments);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(CommandLineArgumentException))]
         public void ParseArguments_EmptyArgumentGiven_ShouldThrowCommandLineArgumentException()
         {
