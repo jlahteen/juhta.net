@@ -18,10 +18,23 @@ namespace Juhta.Net.Console
     /// <summary>
     /// Defines a class for parsing command line arguments. The following types of command line arguments are
     /// supported:
-    /// <list type="bullet">
-    /// <item>Named arguments</item>
-    /// <item>Option arguments</item>
-    /// <item>Plain arguments</item>
+    /// <list type="table">
+    /// <listheader>
+    /// <term>Argument type</term>
+    /// <description>Description</description>
+    /// </listheader>
+    /// <item>
+    /// <term>Named arguments</term>
+    /// <description>Represents a named command line argument</description>
+    /// </item>
+    /// <item>
+    /// <term>Option arguments</term>
+    /// <description>Represents a command line option</description>
+    /// </item>
+    /// <item>
+    /// <term>Plain arguments</term>
+    /// <description>Represents any raw command line argument</description>
+    /// </item>
     /// </list>
     /// <para>A named argument consists of two raw arguments. The first argument determines an argument name and the
     /// second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For

@@ -1110,9 +1110,10 @@
             Defines a class for parsing command line arguments. The following types of command line arguments are
             supported:
             <list type="bullet">
-            <item>Named arguments</item>
-            <item>Option arguments</item>
-            <item>Plain arguments</item>
+            <item><term>Named arguments</term></item>
+            <item><term>Option arguments</term></item>
+            <item><term>Plain arguments</term></item>
+            </list>
             <para>A named argument consists of two raw arguments. The first argument determines an argument name and the
             second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For
             example, <c>-workingFolder C:\Temp</c> is a valid named argument. Character '-' is the default named argument
@@ -1125,7 +1126,6 @@
             <para>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all
             raw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain
             arguments.</para>
-            </list>
             </summary>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)">
