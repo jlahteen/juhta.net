@@ -321,8 +321,8 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error006">
             <summary>
-            Method '{0}' of the class '{1}' cannot be executed because the current state of the appropriate instance
-            doesn't allow it.
+            Method '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't allow
+            it.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error007">
@@ -379,6 +379,12 @@
         <member name="F:Juhta.Net.Common.CommonMessages.Error017">
             <summary>
             An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.CommonMessages.Error018">
+            <summary>
+            Property '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't
+            allow it.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.ConfigException">
@@ -1052,6 +1058,14 @@
             Defines an abstract base class for command line arguments.
             </summary>
         </member>
+        <member name="P:Juhta.Net.Console.CommandLineArgument.Consumed">
+            <summary>
+            Gets or sets (internal) a boolean value determining whether this <see cref="T:Juhta.Net.Console.CommandLineArgument"/> has been
+            consumed.
+            </summary>
+            <remarks>A <see cref="T:Juhta.Net.Console.CommandLineArgument"/> becomes consumed when it is fetched from a
+            <see cref="T:Juhta.Net.Console.CommandLineParser"/>.</remarks>
+        </member>
         <member name="P:Juhta.Net.Console.CommandLineArgument.Value">
             <summary>
             Gets the value of the command line argument.
@@ -1062,6 +1076,11 @@
             Initializes a new instance.
             </summary>
             <param name="value">Specifies a value for the <see cref="P:Juhta.Net.Console.CommandLineArgument.Value"/> property.</param>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineArgument.m_consumed">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Console.CommandLineArgument.Consumed"/> property.
+            </summary>
         </member>
         <member name="F:Juhta.Net.Console.CommandLineArgument.m_value">
             <summary>
@@ -1088,11 +1107,24 @@
         </member>
         <member name="T:Juhta.Net.Console.CommandLineParser">
             <summary>
-            Defines a class for parsing command line arguments. The following command line arguments are supported:
+            Defines a class for parsing command line arguments. The following types of command line arguments are
+            supported:
             <list type="bullet">
-            <item>Named arguments, e.g. --workFolder C:\Temp</item>
-            <item>Option arguments: /BufferSize:12345</item>
-            <item>Plain arguments: all arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain arguments.</item>
+            <item>Named arguments</item>
+            <item>Option arguments</item>
+            <item>Plain arguments</item>
+            <para>A named argument consists of two raw arguments. The first argument determines an argument name and the
+            second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For
+            example, <c>-workingFolder C:\Temp</c> is a valid named argument. Character '-' is the default named argument
+            prefix.</para>
+            <para>An option argument consists of an option prefix, option name, option name-value separator and an actual
+            option value. For example, <c>/BufferSize:12345</c> is a valid option argument. Characters '/' and ':' are the
+            default option prefix and option name-value separator, respectively. If a value part is missing from an option
+            argument, it’s assumed to be a boolean option with the default value of true. Thus, the option arguments
+            <c>/SaveLog</c> and <c>/SaveLog:true</c> are equivalent.</para>
+            <para>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all
+            raw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain
+            arguments.</para>
             </list>
             </summary>
         </member>
@@ -1150,6 +1182,12 @@
             <remarks>If the specified plain argument is not found and <paramref name="defaultValue"/> is null, an
             exception will be thrown.</remarks>
         </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments">
+            <summary>
+            Gets all unconsumed command line arguments.
+            </summary>
+            <returns>Returns an array of <see cref="T:Juhta.Net.Console.CommandLineArgument"/> objects not yet consumed.</returns>
+        </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])">
             <summary>
             Parses an array of raw command line arguments.
@@ -1164,6 +1202,12 @@
             <param name="argumentNamePrefix">Specifies an argument name prefix.</param>
             <param name="optionPrefix">Specifies an option prefix.</param>
             <param name="optionNameValueSeparator">Specifies an option name-value separator.</param>
+        </member>
+        <member name="P:Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments">
+            <summary>
+            Gets a boolean value determining whether this <see cref="T:Juhta.Net.Console.CommandLineParser"/> instance has unconsumed
+            arguments.
+            </summary>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.CreateNamedArgument(System.String,System.String)">
             <summary>
@@ -1187,6 +1231,13 @@
             <param name="argument">Specifies a raw command line argument based on which to create an instance of
             <see cref="T:Juhta.Net.Console.PlainArgument"/>.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.Console.PlainArgument"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.SetConsumed(Juhta.Net.Console.CommandLineArgument)">
+            <summary>
+            Sets a specified <see cref="T:Juhta.Net.Console.CommandLineArgument"/> as consumed.
+            </summary>
+            <param name="argument">Specifies an instance of <see cref="T:Juhta.Net.Console.CommandLineArgument"/>.</param>
+            <returns>Returns the specified <see cref="T:Juhta.Net.Console.CommandLineArgument"/> instance.</returns>
         </member>
         <member name="F:Juhta.Net.Console.CommandLineParser.c_defaultArgumentNamePrefix">
             <summary>

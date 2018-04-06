@@ -54,10 +54,10 @@ namespace Juhta.Net.Common
         public static readonly ErrorMessage Error005 = MessageFactory.CreateErrorMessage("Invalid '{0}' parameter value was passed to the method '{1}'. The value '{2}' does not conform to the regex pattern '{3}'.");
 
         /// <summary>
-        /// Method '{0}' of the class '{1}' cannot be executed because the current state of the appropriate instance
-        /// doesn't allow it.
+        /// Method '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't allow
+        /// it.
         /// </summary>
-        public static readonly ErrorMessage Error006 = MessageFactory.CreateErrorMessage("Method '{0}' of the class '{1}' cannot be executed because the current state of the appropriate instance doesn't allow it.");
+        public static readonly ErrorMessage Error006 = MessageFactory.CreateErrorMessage("Method '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't allow it.");
 
         /// <summary>
         /// File '{0}' does not exist.
@@ -114,6 +114,12 @@ namespace Juhta.Net.Common
         /// An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.
         /// </summary>
         public static readonly ErrorMessage Error017 = MessageFactory.CreateErrorMessage("An instance of the class '{0}' could not be created because the type was not found in the assembly '{1}'.");
+
+        /// <summary>
+        /// Property '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't
+        /// allow it.
+        /// </summary>
+        public static readonly ErrorMessage Error018 = MessageFactory.CreateErrorMessage("Property '{0}' of the class '{1}' cannot be executed because the current state of the instance doesn't allow it.");
 
         #endregion
     }

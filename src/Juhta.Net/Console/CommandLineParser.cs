@@ -6,16 +6,35 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using Juhta.Net.Helpers;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Juhta.Net.Console
 {
     /// <summary>
-    /// todo
+    /// Defines a class for parsing command line arguments. The following types of command line arguments are
+    /// supported:
+    /// <list type="bullet">
+    /// <item>Named arguments</item>
+    /// <item>Option arguments</item>
+    /// <item>Plain arguments</item>
+    /// </list>
+    /// <para>A named argument consists of two raw arguments. The first argument determines an argument name and the
+    /// second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For
+    /// example, <c>-workingFolder C:\Temp</c> is a valid named argument. Character '-' is the default named argument
+    /// prefix.</para>
+    /// <para>An option argument consists of an option prefix, option name, option name-value separator and an actual
+    /// option value. For example, <c>/BufferSize:12345</c> is a valid option argument. Characters '/' and ':' are the
+    /// default option prefix and option name-value separator, respectively. If a value part is missing from an option
+    /// argument, it’s assumed to be a boolean option with the default value of true. Thus, the option arguments
+    /// <c>/SaveLog</c> and <c>/SaveLog:true</c> are equivalent.</para>
+    /// <para>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all
+    /// raw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain
+    /// arguments.</para>
     /// </summary>
     public class CommandLineParser
     {
@@ -44,8 +63,11 @@ namespace Juhta.Net.Console
         {
             NamedArgument namedArgument;
 
-            if (m_namedArguments.TryGetValue(argumentName, out namedArgument))
-                return(namedArgument);
+            if (m_namedArguments == null)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(GetNamedArgument), this.GetType()));
+
+            else if (m_namedArguments.TryGetValue(argumentName, out namedArgument))
+                return((NamedArgument)SetConsumed(namedArgument));
 
             else if (defaultValue != null)
                 return(CreateNamedArgument(m_argumentNamePrefix + argumentName, defaultValue));
@@ -77,8 +99,11 @@ namespace Juhta.Net.Console
         {
             OptionArgument optionArgument;
 
-            if (m_optionArguments.TryGetValue(optionName, out optionArgument))
-                return(optionArgument);
+            if (m_optionArguments == null)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(GetOptionArgument), this.GetType()));
+
+            else if (m_optionArguments.TryGetValue(optionName, out optionArgument))
+                return((OptionArgument)SetConsumed(optionArgument));
 
             else if (defaultValue != null)
                 return(CreateOptionArgument(m_optionPrefix + optionName + m_optionNameValueSeparator + defaultValue));
@@ -108,14 +133,29 @@ namespace Juhta.Net.Console
         /// exception will be thrown.</remarks>
         public PlainArgument GetPlainArgument(int index, string defaultValue)
         {
-            if (0 <= index && index < m_plainArguments.Count)
-                return(m_plainArguments[index]);
+            if (m_plainArguments == null)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(GetPlainArgument), this.GetType()));
+
+            else if (0 <= index && index < m_plainArguments.Count)
+                return((PlainArgument)SetConsumed(m_plainArguments[index]));
 
             else if (defaultValue != null)
                 return(CreatePlainArgument(defaultValue));
 
             else
                 throw new CommandLineArgumentException(LibraryMessages.Error095.FormatMessage(index));
+        }
+
+        /// <summary>
+        /// Gets all unconsumed command line arguments.
+        /// </summary>
+        /// <returns>Returns an array of <see cref="CommandLineArgument"/> objects not yet consumed.</returns>
+        public CommandLineArgument[] GetUnconsumedArguments()
+        {
+            if (m_allArguments == null)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(GetUnconsumedArguments), this.GetType()));
+
+            return(m_allArguments.Where(x => x.Consumed == false).ToArray());
         }
 
         /// <summary>
@@ -215,6 +255,25 @@ namespace Juhta.Net.Console
 
         #endregion
 
+        #region Public Properties
+
+        /// <summary>
+        /// Gets a boolean value determining whether this <see cref="CommandLineParser"/> instance has unconsumed
+        /// arguments.
+        /// </summary>
+        public bool HasUnconsumedArguments
+        {
+            get
+            {
+                if (m_allArguments == null)
+                    throw new InvalidOperationException(CommonMessages.Error018.FormatMessage(nameof(HasUnconsumedArguments), this.GetType()));
+
+                return(m_allArguments.Count(x => x.Consumed == false) > 0);
+            }
+        }
+
+        #endregion
+
         #region Private Methods
 
         /// <summary>
@@ -295,6 +354,18 @@ namespace Juhta.Net.Console
         private PlainArgument CreatePlainArgument(string argument)
         {
             return(new PlainArgument(argument));
+        }
+
+        /// <summary>
+        /// Sets a specified <see cref="CommandLineArgument"/> as consumed.
+        /// </summary>
+        /// <param name="argument">Specifies an instance of <see cref="CommandLineArgument"/>.</param>
+        /// <returns>Returns the specified <see cref="CommandLineArgument"/> instance.</returns>
+        private static CommandLineArgument SetConsumed(CommandLineArgument argument)
+        {
+            argument.Consumed = true;
+
+            return(argument);
         }
 
         #endregion

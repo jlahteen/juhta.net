@@ -16,6 +16,19 @@ namespace Juhta.Net.Console
         #region Public Properties
 
         /// <summary>
+        /// Gets or sets (internal) a boolean value determining whether this <see cref="CommandLineArgument"/> has been
+        /// consumed.
+        /// </summary>
+        /// <remarks>A <see cref="CommandLineArgument"/> becomes consumed when it is fetched from a
+        /// <see cref="CommandLineParser"/>.</remarks>
+        public bool Consumed
+        {
+            get {return(m_consumed);}
+
+            internal set {m_consumed = value;}
+        }
+
+        /// <summary>
         /// Gets the value of the command line argument.
         /// </summary>
         public string Value
@@ -39,6 +52,11 @@ namespace Juhta.Net.Console
         #endregion
 
         #region Private Fields
+
+        /// <summary>
+        /// Stores the <see cref="Consumed"/> property.
+        /// </summary>
+        private bool m_consumed;
 
         /// <summary>
         /// Stores the <see cref="Value"/> property.
