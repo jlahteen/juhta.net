@@ -58,7 +58,7 @@ namespace Juhta.Net.Common
         public void Start()
         {
             if (m_workerThread != null)
-                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage("Start", this.GetType()));
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(Start), this.GetType()));
 
             m_workerThread = new Thread(new ThreadStart(WorkerThreadMain));
 
@@ -71,7 +71,7 @@ namespace Juhta.Net.Common
         public void Stop()
         {
             if (m_workerThread == null)
-                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage("Stop", this.GetType()));
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(Stop), this.GetType()));
 
             else if (m_workerThread.ThreadState == ThreadState.Stopped)
                 return;
