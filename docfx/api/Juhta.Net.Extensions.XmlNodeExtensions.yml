@@ -25,12 +25,12 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: XmlNodeExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 17
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    startLine: 18
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -70,12 +70,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 27
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    startLine: 28
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -118,12 +118,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 39
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    startLine: 40
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -169,12 +169,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 52
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    startLine: 53
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -223,12 +223,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 77
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    startLine: 78
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -293,11 +293,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CopyTo
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 116
   assemblies:
   - Juhta.Net
@@ -339,11 +339,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttribute
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 132
   assemblies:
   - Juhta.Net
@@ -387,11 +387,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttribute
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 149
   assemblies:
   - Juhta.Net
@@ -438,11 +438,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: HasAttribute
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 163
   assemblies:
   - Juhta.Net
@@ -486,11 +486,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SetAttribute
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 175
   assemblies:
   - Juhta.Net
@@ -535,11 +535,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToBuiltInTypeObject
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 196
   assemblies:
   - Juhta.Net
@@ -580,11 +580,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToBuiltInTypeObjectArray
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlNodeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 307
   assemblies:
   - Juhta.Net

@@ -19,11 +19,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ObjectQueue
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 20
   assemblies:
   - Juhta.Net
@@ -68,11 +68,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 27
   assemblies:
   - Juhta.Net
@@ -102,11 +102,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Close
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 48
   assemblies:
   - Juhta.Net
@@ -136,11 +136,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetObject
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 65
   assemblies:
   - Juhta.Net
@@ -178,11 +178,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: PutObject
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 113
   assemblies:
   - Juhta.Net
@@ -216,11 +216,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectQueue.cs
+      path: src/Juhta.Net/Common/ObjectQueue.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Count
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectQueue.cs
+    path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 142
   assemblies:
   - Juhta.Net

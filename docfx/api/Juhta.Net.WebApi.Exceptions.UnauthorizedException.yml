@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: UnauthorizedException
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
     startLine: 15
   assemblies:
   - Juhta.Net.WebApi
@@ -81,11 +81,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
     startLine: 22
   assemblies:
   - Juhta.Net.WebApi
@@ -113,11 +113,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/UnauthorizedException.cs
     startLine: 29
   assemblies:
   - Juhta.Net.WebApi

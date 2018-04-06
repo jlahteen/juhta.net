@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkInfo.cs
+      path: src/Juhta.Net/FrameworkInfo.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FrameworkInfo
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkInfo.cs
+    path: ../src/Juhta.Net/FrameworkInfo.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -61,11 +61,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkInfo.cs
+      path: src/Juhta.Net/FrameworkInfo.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Copyright
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkInfo.cs
+    path: ../src/Juhta.Net/FrameworkInfo.cs
     startLine: 23
   assemblies:
   - Juhta.Net
@@ -100,11 +100,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkInfo.cs
+      path: src/Juhta.Net/FrameworkInfo.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FrameworkName
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkInfo.cs
+    path: ../src/Juhta.Net/FrameworkInfo.cs
     startLine: 31
   assemblies:
   - Juhta.Net
@@ -139,11 +139,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkInfo.cs
+      path: src/Juhta.Net/FrameworkInfo.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RootNamespace
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkInfo.cs
+    path: ../src/Juhta.Net/FrameworkInfo.cs
     startLine: 39
   assemblies:
   - Juhta.Net

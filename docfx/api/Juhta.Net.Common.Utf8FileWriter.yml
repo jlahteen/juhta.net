@@ -30,11 +30,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Utf8FileWriter
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -75,11 +75,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -114,11 +114,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 35
   assemblies:
   - Juhta.Net
@@ -156,11 +156,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Close
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 55
   assemblies:
   - Juhta.Net
@@ -192,11 +192,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DecreaseIndentLevel
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 72
   assemblies:
   - Juhta.Net
@@ -224,11 +224,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Flush
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 82
   assemblies:
   - Juhta.Net
@@ -257,11 +257,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IncreaseIndentLevel
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 91
   assemblies:
   - Juhta.Net
@@ -289,11 +289,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Open
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 109
   assemblies:
   - Juhta.Net
@@ -325,11 +325,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 123
   assemblies:
   - Juhta.Net
@@ -361,11 +361,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 134
   assemblies:
   - Juhta.Net
@@ -406,11 +406,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 142
   assemblies:
   - Juhta.Net
@@ -438,11 +438,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 151
   assemblies:
   - Juhta.Net
@@ -474,11 +474,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 160
   assemblies:
   - Juhta.Net
@@ -510,11 +510,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 171
   assemblies:
   - Juhta.Net
@@ -555,11 +555,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FilePath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 183
   assemblies:
   - Juhta.Net
@@ -592,11 +592,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IndentLevel
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 194
   assemblies:
   - Juhta.Net
@@ -636,11 +636,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/Utf8FileWriter.cs
+      path: src/Juhta.Net/Common/Utf8FileWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TabSize
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Utf8FileWriter.cs
+    path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 205
   assemblies:
   - Juhta.Net

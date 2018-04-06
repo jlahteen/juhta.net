@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConfigException.cs
+      path: src/Juhta.Net/Common/ConfigException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ConfigException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConfigException.cs
+    path: ../src/Juhta.Net/Common/ConfigException.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -30,9 +30,7 @@ items:
     content: 'public class ConfigException : Exception, ISerializable'
     content.vb: >-
       Public Class ConfigException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -77,11 +75,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConfigException.cs
+      path: src/Juhta.Net/Common/ConfigException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConfigException.cs
+    path: ../src/Juhta.Net/Common/ConfigException.cs
     startLine: 25
   assemblies:
   - Juhta.Net

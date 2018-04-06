@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+      path: src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: UnimplementedCodeBranchException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+    path: ../src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -36,9 +36,7 @@ items:
     content: 'public class UnimplementedCodeBranchException : InternalException, ISerializable'
     content.vb: >-
       Public Class UnimplementedCodeBranchException
-
           Inherits InternalException
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -84,11 +82,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+      path: src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+    path: ../src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
     startLine: 23
   assemblies:
   - Juhta.Net
@@ -116,11 +114,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+      path: src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+    path: ../src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
     startLine: 30
   assemblies:
   - Juhta.Net
@@ -152,11 +150,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+      path: src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnimplementedCodeBranchException.cs
+    path: ../src/Juhta.Net/Common/UnimplementedCodeBranchException.cs
     startLine: 37
   assemblies:
   - Juhta.Net

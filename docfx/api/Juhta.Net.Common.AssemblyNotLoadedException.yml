@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyNotLoadedException.cs
+      path: src/Juhta.Net/Common/AssemblyNotLoadedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyNotLoadedException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyNotLoadedException.cs
+    path: ../src/Juhta.Net/Common/AssemblyNotLoadedException.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -30,9 +30,7 @@ items:
     content: 'public class AssemblyNotLoadedException : Exception, ISerializable'
     content.vb: >-
       Public Class AssemblyNotLoadedException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -77,11 +75,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyNotLoadedException.cs
+      path: src/Juhta.Net/Common/AssemblyNotLoadedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyNotLoadedException.cs
+    path: ../src/Juhta.Net/Common/AssemblyNotLoadedException.cs
     startLine: 24
   assemblies:
   - Juhta.Net

@@ -1,47 +1,46 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Validation.RegexValidator
-  commentId: T:Juhta.Net.Validation.RegexValidator
+- uid: Juhta.Net.Validators.RegexValidator
+  commentId: T:Juhta.Net.Validators.RegexValidator
   id: RegexValidator
-  parent: Juhta.Net.Validation
+  parent: Juhta.Net.Validators
   children:
-  - Juhta.Net.Validation.RegexValidator.#ctor(System.String)
-  - Juhta.Net.Validation.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
-  - Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Validation.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validation.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Validation.RegexValidator.Validate(System.String)
+  - Juhta.Net.Validators.RegexValidator.#ctor(System.String)
+  - Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
+  - Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Validators.RegexValidator.Validate(System.String)
   langs:
   - csharp
   - vb
   name: RegexValidator
   nameWithType: RegexValidator
-  fullName: Juhta.Net.Validation.RegexValidator
+  fullName: Juhta.Net.Validators.RegexValidator
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RegexValidator
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 18
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 20
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nDefines a validator class that can validate string values based on a regular expression.\n"
   example: []
   syntax:
     content: 'public class RegexValidator : IStringValidator, IValidator<string>'
     content.vb: >-
       Public Class RegexValidator
-
           Implements IStringValidator, IValidator(Of String)
   inheritance:
   - System.Object
   implements:
-  - Juhta.Net.Validation.IStringValidator
-  - Juhta.Net.Validation.IValidator{System.String}
+  - Juhta.Net.Validators.IStringValidator
+  - Juhta.Net.Validators.IValidator{System.String}
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -56,28 +55,28 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Validation.RegexValidator.#ctor(System.String)
-  commentId: M:Juhta.Net.Validation.RegexValidator.#ctor(System.String)
+- uid: Juhta.Net.Validators.RegexValidator.#ctor(System.String)
+  commentId: M:Juhta.Net.Validators.RegexValidator.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Validation.RegexValidator
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: RegexValidator(String)
   nameWithType: RegexValidator.RegexValidator(String)
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String)
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 26
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 28
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -87,33 +86,33 @@ items:
       type: System.String
       description: Specifies a regular expression pattern.
     content.vb: Public Sub New(pattern As String)
-  overload: Juhta.Net.Validation.RegexValidator.#ctor*
+  overload: Juhta.Net.Validators.RegexValidator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validation.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,Juhta.Net.Common.ErrorMessage)
-  id: '#ctor(System.String,Juhta.Net.Common.ErrorMessage)'
-  parent: Juhta.Net.Validation.RegexValidator
+- uid: Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,Juhta.Net.Diagnostics.ErrorMessage)
+  id: '#ctor(System.String,Juhta.Net.Diagnostics.ErrorMessage)'
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: RegexValidator(String, ErrorMessage)
   nameWithType: RegexValidator.RegexValidator(String, ErrorMessage)
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String, Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String, Juhta.Net.Diagnostics.ErrorMessage)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 35
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 37
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -123,36 +122,36 @@ items:
       type: System.String
       description: Specifies a regular expression pattern.
     - id: errorMessage
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
       description: Specifies an error message to use in validation errors.
     content.vb: Public Sub New(pattern As String, errorMessage As ErrorMessage)
-  overload: Juhta.Net.Validation.RegexValidator.#ctor*
+  overload: Juhta.Net.Validators.RegexValidator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
-  commentId: M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
+- uid: Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
+  commentId: M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)
   id: '#ctor(System.String,System.Text.RegularExpressions.RegexOptions)'
-  parent: Juhta.Net.Validation.RegexValidator
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: RegexValidator(String, RegexOptions)
   nameWithType: RegexValidator.RegexValidator(String, RegexOptions)
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String, System.Text.RegularExpressions.RegexOptions)
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String, System.Text.RegularExpressions.RegexOptions)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 44
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 46
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -165,33 +164,33 @@ items:
       type: System.Text.RegularExpressions.RegexOptions
       description: Specifies a bitwise combination of regular expression options.
     content.vb: Public Sub New(pattern As String, options As RegexOptions)
-  overload: Juhta.Net.Validation.RegexValidator.#ctor*
+  overload: Juhta.Net.Validators.RegexValidator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Validation.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)
-  id: '#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Common.ErrorMessage)'
-  parent: Juhta.Net.Validation.RegexValidator
+- uid: Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Validators.RegexValidator.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Diagnostics.ErrorMessage)
+  id: '#ctor(System.String,System.Text.RegularExpressions.RegexOptions,Juhta.Net.Diagnostics.ErrorMessage)'
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: RegexValidator(String, RegexOptions, ErrorMessage)
   nameWithType: RegexValidator.RegexValidator(String, RegexOptions, ErrorMessage)
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String, System.Text.RegularExpressions.RegexOptions, Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String, System.Text.RegularExpressions.RegexOptions, Juhta.Net.Diagnostics.ErrorMessage)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 54
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 56
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -204,37 +203,37 @@ items:
       type: System.Text.RegularExpressions.RegexOptions
       description: Specifies a bitwise combination of regular expression options.
     - id: errorMessage
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
       description: Specifies an error message to use in validation errors.
     content.vb: Public Sub New(pattern As String, options As RegexOptions, errorMessage As ErrorMessage)
-  overload: Juhta.Net.Validation.RegexValidator.#ctor*
+  overload: Juhta.Net.Validators.RegexValidator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validation.RegexValidator.Validate(System.String)
-  commentId: M:Juhta.Net.Validation.RegexValidator.Validate(System.String)
+- uid: Juhta.Net.Validators.RegexValidator.Validate(System.String)
+  commentId: M:Juhta.Net.Validators.RegexValidator.Validate(System.String)
   id: Validate(System.String)
-  parent: Juhta.Net.Validation.RegexValidator
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: Validate(String)
   nameWithType: RegexValidator.Validate(String)
-  fullName: Juhta.Net.Validation.RegexValidator.Validate(System.String)
+  fullName: Juhta.Net.Validators.RegexValidator.Validate(System.String)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Validate
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 65
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 67
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
-  summary: "\nSee <xref href=\"Juhta.Net.Validation.IValidator%601.Validate(%600)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Juhta.Net.Validators
+  summary: "\nSee <xref href=\"Juhta.Net.Validators.IValidator%601.Validate(%600)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public virtual void Validate(string value)
@@ -242,37 +241,37 @@ items:
     - id: value
       type: System.String
     content.vb: Public Overridable Sub Validate(value As String)
-  overload: Juhta.Net.Validation.RegexValidator.Validate*
+  overload: Juhta.Net.Validators.RegexValidator.Validate*
   implements:
-  - Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
+  - Juhta.Net.Validators.IValidator{System.String}.Validate(System.String)
   modifiers.csharp:
   - public
   - virtual
   modifiers.vb:
   - Public
   - Overridable
-- uid: Juhta.Net.Validation.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validation.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Validation.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validation.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)
-  id: '#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validation.RegexValidator.PatternMatchMode,Juhta.Net.Common.ErrorMessage)'
-  parent: Juhta.Net.Validation.RegexValidator
+- uid: Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Validators.RegexValidator.#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Diagnostics.ErrorMessage)
+  id: '#ctor(System.String[],System.Text.RegularExpressions.RegexOptions,Juhta.Net.Validators.RegexValidator.PatternMatchMode,Juhta.Net.Diagnostics.ErrorMessage)'
+  parent: Juhta.Net.Validators.RegexValidator
   langs:
   - csharp
   - vb
   name: RegexValidator(String[], RegexOptions, RegexValidator.PatternMatchMode, ErrorMessage)
   nameWithType: RegexValidator.RegexValidator(String[], RegexOptions, RegexValidator.PatternMatchMode, ErrorMessage)
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String[], System.Text.RegularExpressions.RegexOptions, Juhta.Net.Validation.RegexValidator.PatternMatchMode, Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String[], System.Text.RegularExpressions.RegexOptions, Juhta.Net.Validators.RegexValidator.PatternMatchMode, Juhta.Net.Diagnostics.ErrorMessage)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/RegexValidator.cs
+      path: src/Juhta.Net/Validators/RegexValidator.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/RegexValidator.cs
-    startLine: 122
+    path: ../src/Juhta.Net/Validators/RegexValidator.cs
+    startLine: 124
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Validators
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -285,33 +284,33 @@ items:
       type: System.Text.RegularExpressions.RegexOptions
       description: Specifies a bitwise combination of regular expression options.
     - id: patternMatchMode
-      type: Juhta.Net.Validation.RegexValidator.PatternMatchMode
+      type: Juhta.Net.Validators.RegexValidator.PatternMatchMode
       description: >-
         Specifies a pattern match mode determining how many of the specified regular
 
         expression patterns must match for a successful validation.
     - id: errorMessage
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
       description: >-
         Specifies an error message to use in validation errors. The message can contain
 
         a placeholder for a value to validate.
     content.vb: Protected Sub New(patterns As String(), options As RegexOptions, patternMatchMode As RegexValidator.PatternMatchMode, errorMessage As ErrorMessage)
-  overload: Juhta.Net.Validation.RegexValidator.#ctor*
+  overload: Juhta.Net.Validators.RegexValidator.#ctor*
   nameWithType.vb: RegexValidator.RegexValidator(String(), RegexOptions, RegexValidator.PatternMatchMode, ErrorMessage)
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: Juhta.Net.Validation.RegexValidator.RegexValidator(System.String(), System.Text.RegularExpressions.RegexOptions, Juhta.Net.Validation.RegexValidator.PatternMatchMode, Juhta.Net.Common.ErrorMessage)
+  fullName.vb: Juhta.Net.Validators.RegexValidator.RegexValidator(System.String(), System.Text.RegularExpressions.RegexOptions, Juhta.Net.Validators.RegexValidator.PatternMatchMode, Juhta.Net.Diagnostics.ErrorMessage)
   name.vb: RegexValidator(String(), RegexOptions, RegexValidator.PatternMatchMode, ErrorMessage)
 references:
-- uid: Juhta.Net.Validation
-  commentId: N:Juhta.Net.Validation
+- uid: Juhta.Net.Validators
+  commentId: N:Juhta.Net.Validators
   isExternal: false
-  name: Juhta.Net.Validation
-  nameWithType: Juhta.Net.Validation
-  fullName: Juhta.Net.Validation
+  name: Juhta.Net.Validators
+  nameWithType: Juhta.Net.Validators
+  fullName: Juhta.Net.Validators
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -319,28 +318,28 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Validation.IStringValidator
-  commentId: T:Juhta.Net.Validation.IStringValidator
-  parent: Juhta.Net.Validation
+- uid: Juhta.Net.Validators.IStringValidator
+  commentId: T:Juhta.Net.Validators.IStringValidator
+  parent: Juhta.Net.Validators
   isExternal: false
   name: IStringValidator
   nameWithType: IStringValidator
-  fullName: Juhta.Net.Validation.IStringValidator
-- uid: Juhta.Net.Validation.IValidator{System.String}
-  commentId: T:Juhta.Net.Validation.IValidator{System.String}
-  parent: Juhta.Net.Validation
-  definition: Juhta.Net.Validation.IValidator`1
+  fullName: Juhta.Net.Validators.IStringValidator
+- uid: Juhta.Net.Validators.IValidator{System.String}
+  commentId: T:Juhta.Net.Validators.IValidator{System.String}
+  parent: Juhta.Net.Validators
+  definition: Juhta.Net.Validators.IValidator`1
   name: IValidator<String>
   nameWithType: IValidator<String>
-  fullName: Juhta.Net.Validation.IValidator<System.String>
+  fullName: Juhta.Net.Validators.IValidator<System.String>
   nameWithType.vb: IValidator(Of String)
-  fullName.vb: Juhta.Net.Validation.IValidator(Of System.String)
+  fullName.vb: Juhta.Net.Validators.IValidator(Of System.String)
   name.vb: IValidator(Of String)
   spec.csharp:
-  - uid: Juhta.Net.Validation.IValidator`1
+  - uid: Juhta.Net.Validators.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
+    fullName: Juhta.Net.Validators.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -353,10 +352,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validation.IValidator`1
+  - uid: Juhta.Net.Validators.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
+    fullName: Juhta.Net.Validators.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -653,20 +652,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Validation.IValidator`1
-  commentId: T:Juhta.Net.Validation.IValidator`1
+- uid: Juhta.Net.Validators.IValidator`1
+  commentId: T:Juhta.Net.Validators.IValidator`1
   isExternal: false
   name: IValidator<T>
   nameWithType: IValidator<T>
-  fullName: Juhta.Net.Validation.IValidator<T>
+  fullName: Juhta.Net.Validators.IValidator<T>
   nameWithType.vb: IValidator(Of T)
-  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
+  fullName.vb: Juhta.Net.Validators.IValidator(Of T)
   name.vb: IValidator(Of T)
   spec.csharp:
-  - uid: Juhta.Net.Validation.IValidator`1
+  - uid: Juhta.Net.Validators.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
+    fullName: Juhta.Net.Validators.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -677,10 +676,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validation.IValidator`1
+  - uid: Juhta.Net.Validators.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
+    fullName: Juhta.Net.Validators.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -690,12 +689,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validation.RegexValidator.#ctor*
-  commentId: Overload:Juhta.Net.Validation.RegexValidator.#ctor
+- uid: Juhta.Net.Validators.RegexValidator.#ctor*
+  commentId: Overload:Juhta.Net.Validators.RegexValidator.#ctor
   isExternal: false
   name: RegexValidator
   nameWithType: RegexValidator.RegexValidator
-  fullName: Juhta.Net.Validation.RegexValidator.RegexValidator
+  fullName: Juhta.Net.Validators.RegexValidator.RegexValidator
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -703,19 +702,19 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Juhta.Net.Common.ErrorMessage
-  commentId: T:Juhta.Net.Common.ErrorMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: ErrorMessage
   nameWithType: ErrorMessage
-  fullName: Juhta.Net.Common.ErrorMessage
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
 - uid: System.Text.RegularExpressions.RegexOptions
   commentId: T:System.Text.RegularExpressions.RegexOptions
   parent: System.Text.RegularExpressions
@@ -729,19 +728,19 @@ references:
   name: System.Text.RegularExpressions
   nameWithType: System.Text.RegularExpressions
   fullName: System.Text.RegularExpressions
-- uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
-  commentId: M:Juhta.Net.Validation.IValidator`1.Validate(`0)
+- uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  commentId: M:Juhta.Net.Validators.IValidator`1.Validate(`0)
   isExternal: false
   name: Validate(T)
   nameWithType: IValidator<T>.Validate(T)
-  fullName: Juhta.Net.Validation.IValidator<T>.Validate(T)
+  fullName: Juhta.Net.Validators.IValidator<T>.Validate(T)
   nameWithType.vb: IValidator(Of T).Validate(T)
-  fullName.vb: Juhta.Net.Validation.IValidator(Of T).Validate(T)
+  fullName.vb: Juhta.Net.Validators.IValidator(Of T).Validate(T)
   spec.csharp:
-  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator<T>.Validate
-    fullName: Juhta.Net.Validation.IValidator<T>.Validate
+    fullName: Juhta.Net.Validators.IValidator<T>.Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -752,10 +751,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator(Of T).Validate
-    fullName: Juhta.Net.Validation.IValidator(Of T).Validate
+    fullName: Juhta.Net.Validators.IValidator(Of T).Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -765,26 +764,26 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validation.RegexValidator.Validate*
-  commentId: Overload:Juhta.Net.Validation.RegexValidator.Validate
+- uid: Juhta.Net.Validators.RegexValidator.Validate*
+  commentId: Overload:Juhta.Net.Validators.RegexValidator.Validate
   isExternal: false
   name: Validate
   nameWithType: RegexValidator.Validate
-  fullName: Juhta.Net.Validation.RegexValidator.Validate
-- uid: Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
-  commentId: M:Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
-  parent: Juhta.Net.Validation.IValidator{System.String}
-  definition: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  fullName: Juhta.Net.Validators.RegexValidator.Validate
+- uid: Juhta.Net.Validators.IValidator{System.String}.Validate(System.String)
+  commentId: M:Juhta.Net.Validators.IValidator{System.String}.Validate(System.String)
+  parent: Juhta.Net.Validators.IValidator{System.String}
+  definition: Juhta.Net.Validators.IValidator`1.Validate(`0)
   name: Validate(String)
   nameWithType: IValidator<String>.Validate(String)
-  fullName: Juhta.Net.Validation.IValidator<System.String>.Validate(System.String)
+  fullName: Juhta.Net.Validators.IValidator<System.String>.Validate(System.String)
   nameWithType.vb: IValidator(Of String).Validate(String)
-  fullName.vb: Juhta.Net.Validation.IValidator(Of System.String).Validate(System.String)
+  fullName.vb: Juhta.Net.Validators.IValidator(Of System.String).Validate(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator<String>.Validate
-    fullName: Juhta.Net.Validation.IValidator<System.String>.Validate
+    fullName: Juhta.Net.Validators.IValidator<System.String>.Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -797,10 +796,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator(Of String).Validate
-    fullName: Juhta.Net.Validation.IValidator(Of System.String).Validate
+    fullName: Juhta.Net.Validators.IValidator(Of System.String).Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -837,10 +836,10 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Juhta.Net.Validation.RegexValidator.PatternMatchMode
-  commentId: T:Juhta.Net.Validation.RegexValidator.PatternMatchMode
-  parent: Juhta.Net.Validation
+- uid: Juhta.Net.Validators.RegexValidator.PatternMatchMode
+  commentId: T:Juhta.Net.Validators.RegexValidator.PatternMatchMode
+  parent: Juhta.Net.Validators
   isExternal: false
   name: RegexValidator.PatternMatchMode
   nameWithType: RegexValidator.PatternMatchMode
-  fullName: Juhta.Net.Validation.RegexValidator.PatternMatchMode
+  fullName: Juhta.Net.Validators.RegexValidator.PatternMatchMode

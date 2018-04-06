@@ -1,46 +1,42 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Common.CommandLineParam
-  commentId: T:Juhta.Net.Common.CommandLineParam
-  id: CommandLineParam
-  parent: Juhta.Net.Common
-  children: []
+- uid: Juhta.Net.Console.CommandLineArgument
+  commentId: T:Juhta.Net.Console.CommandLineArgument
+  id: CommandLineArgument
+  parent: Juhta.Net.Console
+  children:
+  - Juhta.Net.Console.CommandLineArgument.#ctor(System.String)
+  - Juhta.Net.Console.CommandLineArgument.Consumed
+  - Juhta.Net.Console.CommandLineArgument.Value
   langs:
   - csharp
   - vb
-  name: CommandLineParam
-  nameWithType: CommandLineParam
-  fullName: Juhta.Net.Common.CommandLineParam
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineParam.cs
+      path: src/Juhta.Net/Console/CommandLineArgument.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: CommandLineParam
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineParam.cs
-    startLine: 15
+    id: CommandLineArgument
+    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    startLine: 13
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nDefines a class that represents a command line parameter. The values of the properties\n<xref href=\"Juhta.Net.Common.CommandLineArg.Value\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Juhta.Net.Common.CommandLineArg.RawArg\" data-throw-if-not-resolved=\"false\"></xref> are always the same with command\nline parameters.\n"
+  namespace: Juhta.Net.Console
+  summary: "\nDefines an abstract base class for command line arguments.\n"
   example: []
   syntax:
-    content: 'public class CommandLineParam : CommandLineArg'
-    content.vb: >-
-      Public Class CommandLineParam
-
-          Inherits CommandLineArg
+    content: public abstract class CommandLineArgument
+    content.vb: Public MustInherit Class CommandLineArgument
   inheritance:
   - System.Object
-  - Juhta.Net.Common.CommandLineArg
+  derivedClasses:
+  - Juhta.Net.Console.NameValueArgument
+  - Juhta.Net.Console.PlainArgument
   inheritedMembers:
-  - Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  - Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  - Juhta.Net.Common.CommandLineArg.RawArg
-  - Juhta.Net.Common.CommandLineArg.Value
-  - Juhta.Net.Common.CommandLineArg.m_rawArg
-  - Juhta.Net.Common.CommandLineArg.m_value
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -50,31 +46,133 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - abstract
   - class
   modifiers.vb:
   - Public
+  - MustInherit
   - Class
-references:
-- uid: Juhta.Net.Common.CommandLineArg.Value
-  commentId: P:Juhta.Net.Common.CommandLineArg.Value
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
+- uid: Juhta.Net.Console.CommandLineArgument.Consumed
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Consumed
+  id: Consumed
+  parent: Juhta.Net.Console.CommandLineArgument
+  langs:
+  - csharp
+  - vb
+  name: Consumed
+  nameWithType: CommandLineArgument.Consumed
+  fullName: Juhta.Net.Console.CommandLineArgument.Consumed
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineArgument.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Consumed
+    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets or sets (internal) a boolean value determining whether this <xref href=\"Juhta.Net.Console.CommandLineArgument\" data-throw-if-not-resolved=\"false\"></xref> has been\nconsumed.\n"
+  remarks: >-
+    A <xref href="Juhta.Net.Console.CommandLineArgument" data-throw-if-not-resolved="false"></xref> becomes consumed when it is fetched from a
+
+    <xref href="Juhta.Net.Console.CommandLineParser" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool Consumed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Consumed As Boolean
+  overload: Juhta.Net.Console.CommandLineArgument.Consumed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Console.CommandLineArgument.Value
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Value
+  id: Value
+  parent: Juhta.Net.Console.CommandLineArgument
+  langs:
+  - csharp
+  - vb
   name: Value
-  nameWithType: CommandLineArg.Value
-  fullName: Juhta.Net.Common.CommandLineArg.Value
-- uid: Juhta.Net.Common.CommandLineArg.RawArg
-  commentId: P:Juhta.Net.Common.CommandLineArg.RawArg
-  parent: Juhta.Net.Common.CommandLineArg
+  nameWithType: CommandLineArgument.Value
+  fullName: Juhta.Net.Console.CommandLineArgument.Value
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineArgument.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Value
+    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    startLine: 33
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets the value of the command line argument.\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Juhta.Net.Console.CommandLineArgument.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Console.CommandLineArgument.#ctor(System.String)
+  commentId: M:Juhta.Net.Console.CommandLineArgument.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.Console.CommandLineArgument
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArgument(String)
+  nameWithType: CommandLineArgument.CommandLineArgument(String)
+  fullName: Juhta.Net.Console.CommandLineArgument.CommandLineArgument(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineArgument.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    startLine: 46
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: protected CommandLineArgument(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: Specifies a value for the <xref href="Juhta.Net.Console.CommandLineArgument.Value" data-throw-if-not-resolved="false"></xref> property.
+    content.vb: Protected Sub New(value As String)
+  overload: Juhta.Net.Console.CommandLineArgument.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Juhta.Net.Console
+  commentId: N:Juhta.Net.Console
   isExternal: false
-  name: RawArg
-  nameWithType: CommandLineArg.RawArg
-  fullName: Juhta.Net.Common.CommandLineArg.RawArg
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
-  isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Console
+  nameWithType: Juhta.Net.Console
+  fullName: Juhta.Net.Console
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -82,103 +180,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Common.CommandLineArg
-  commentId: T:Juhta.Net.Common.CommandLineArg
-  parent: Juhta.Net.Common
-  isExternal: false
-  name: CommandLineArg
-  nameWithType: CommandLineArg
-  fullName: Juhta.Net.Common.CommandLineArg
-- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
-  name: ValidateValue(IStringValidator)
-  nameWithType: CommandLineArg.ValidateValue(IStringValidator)
-  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  spec.csharp:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Juhta.Net.Validation.IStringValidator
-    name: IStringValidator
-    nameWithType: IStringValidator
-    fullName: Juhta.Net.Validation.IStringValidator
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Juhta.Net.Validation.IStringValidator
-    name: IStringValidator
-    nameWithType: IStringValidator
-    fullName: Juhta.Net.Validation.IStringValidator
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: true
-  name: ValidateValue(String)
-  nameWithType: CommandLineArg.ValidateValue(String)
-  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  spec.csharp:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Juhta.Net.Common.CommandLineArg.m_rawArg
-  commentId: F:Juhta.Net.Common.CommandLineArg.m_rawArg
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
-  name: m_rawArg
-  nameWithType: CommandLineArg.m_rawArg
-  fullName: Juhta.Net.Common.CommandLineArg.m_rawArg
-- uid: Juhta.Net.Common.CommandLineArg.m_value
-  commentId: F:Juhta.Net.Common.CommandLineArg.m_value
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
-  name: m_value
-  nameWithType: CommandLineArg.m_value
-  fullName: Juhta.Net.Common.CommandLineArg.m_value
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -464,3 +465,55 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Juhta.Net.Console.CommandLineArgument
+  commentId: T:Juhta.Net.Console.CommandLineArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument
+- uid: Juhta.Net.Console.CommandLineParser
+  commentId: T:Juhta.Net.Console.CommandLineParser
+  isExternal: false
+  name: CommandLineParser
+  nameWithType: CommandLineParser
+  fullName: Juhta.Net.Console.CommandLineParser
+- uid: Juhta.Net.Console.CommandLineArgument.Consumed*
+  commentId: Overload:Juhta.Net.Console.CommandLineArgument.Consumed
+  isExternal: false
+  name: Consumed
+  nameWithType: CommandLineArgument.Consumed
+  fullName: Juhta.Net.Console.CommandLineArgument.Consumed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Juhta.Net.Console.CommandLineArgument.Value*
+  commentId: Overload:Juhta.Net.Console.CommandLineArgument.Value
+  isExternal: false
+  name: Value
+  nameWithType: CommandLineArgument.Value
+  fullName: Juhta.Net.Console.CommandLineArgument.Value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Console.CommandLineArgument.Value
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Value
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: Value
+  nameWithType: CommandLineArgument.Value
+  fullName: Juhta.Net.Console.CommandLineArgument.Value
+- uid: Juhta.Net.Console.CommandLineArgument.#ctor*
+  commentId: Overload:Juhta.Net.Console.CommandLineArgument.#ctor
+  isExternal: false
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument.CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument.CommandLineArgument

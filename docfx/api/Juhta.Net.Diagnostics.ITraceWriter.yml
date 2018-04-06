@@ -54,11 +54,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ITraceWriter
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 17
   assemblies:
   - Juhta.Net.Diagnostics
@@ -87,11 +87,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Close
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 25
   assemblies:
   - Juhta.Net.Diagnostics
@@ -115,11 +115,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DecreaseRelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 30
   assemblies:
   - Juhta.Net.Diagnostics
@@ -143,11 +143,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Flush
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 35
   assemblies:
   - Juhta.Net.Diagnostics
@@ -171,11 +171,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IncreaseRelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 40
   assemblies:
   - Juhta.Net.Diagnostics
@@ -199,11 +199,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Open
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 45
   assemblies:
   - Juhta.Net.Diagnostics
@@ -227,11 +227,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 51
   assemblies:
   - Juhta.Net.Diagnostics
@@ -259,11 +259,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 58
   assemblies:
   - Juhta.Net.Diagnostics
@@ -297,11 +297,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 63
   assemblies:
   - Juhta.Net.Diagnostics
@@ -325,11 +325,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 68
   assemblies:
   - Juhta.Net.Diagnostics
@@ -353,11 +353,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 74
   assemblies:
   - Juhta.Net.Diagnostics
@@ -385,11 +385,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 80
   assemblies:
   - Juhta.Net.Diagnostics
@@ -413,11 +413,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 86
   assemblies:
   - Juhta.Net.Diagnostics
@@ -445,11 +445,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 92
   assemblies:
   - Juhta.Net.Diagnostics
@@ -477,11 +477,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteException
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 98
   assemblies:
   - Juhta.Net.Diagnostics
@@ -509,11 +509,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 104
   assemblies:
   - Juhta.Net.Diagnostics
@@ -537,11 +537,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 111
   assemblies:
   - Juhta.Net.Diagnostics
@@ -569,11 +569,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 118
   assemblies:
   - Juhta.Net.Diagnostics
@@ -604,11 +604,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 126
   assemblies:
   - Juhta.Net.Diagnostics
@@ -642,11 +642,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 133
   assemblies:
   - Juhta.Net.Diagnostics
@@ -677,11 +677,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 140
   assemblies:
   - Juhta.Net.Diagnostics
@@ -712,11 +712,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 148
   assemblies:
   - Juhta.Net.Diagnostics
@@ -753,11 +753,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 153
   assemblies:
   - Juhta.Net.Diagnostics
@@ -781,11 +781,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 159
   assemblies:
   - Juhta.Net.Diagnostics
@@ -813,11 +813,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 166
   assemblies:
   - Juhta.Net.Diagnostics
@@ -851,11 +851,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 172
   assemblies:
   - Juhta.Net.Diagnostics
@@ -879,11 +879,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 179
   assemblies:
   - Juhta.Net.Diagnostics
@@ -911,11 +911,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 186
   assemblies:
   - Juhta.Net.Diagnostics
@@ -946,11 +946,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 194
   assemblies:
   - Juhta.Net.Diagnostics
@@ -984,11 +984,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 201
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1019,11 +1019,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteObjectGraph
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 208
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1054,11 +1054,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 214
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1082,11 +1082,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 220
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1114,11 +1114,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 226
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1146,11 +1146,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 232
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1174,11 +1174,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 239
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1209,11 +1209,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 246
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1244,11 +1244,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 254
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1282,11 +1282,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AbsoluteIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 263
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1317,11 +1317,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IsThreadSafe
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 270
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1353,11 +1353,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+      path: src/Juhta.Net.Diagnostics/ITraceWriter.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/ITraceWriter.cs
+    path: ../src/Juhta.Net.Diagnostics/ITraceWriter.cs
     startLine: 275
   assemblies:
   - Juhta.Net.Diagnostics

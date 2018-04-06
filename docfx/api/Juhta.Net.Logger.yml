@@ -5,30 +5,30 @@ items:
   id: Logger
   parent: Juhta.Net
   children:
-  - Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage)
-  - Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+  - Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  - Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
   - Juhta.Net.Logger.LogAlert(System.String)
   - Juhta.Net.Logger.LogAlert(System.String,System.Object[])
-  - Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+  - Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   - Juhta.Net.Logger.LogError(System.Exception)
-  - Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
+  - Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   - Juhta.Net.Logger.LogError(System.Exception,System.String)
   - Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])
   - Juhta.Net.Logger.LogError(System.String)
   - Juhta.Net.Logger.LogError(System.String,System.Object[])
-  - Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  - Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  - Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage)
-  - Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+  - Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  - Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  - Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  - Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
   - Juhta.Net.Logger.LogInformation(System.String)
   - Juhta.Net.Logger.LogInformation(System.String,System.Object[])
-  - Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage)
-  - Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+  - Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  - Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
   - Juhta.Net.Logger.LogWarning(System.String)
   - Juhta.Net.Logger.LogWarning(System.String,System.Object[])
-  - Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
+  - Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
   langs:
   - csharp
   - vb
@@ -38,17 +38,17 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Logger
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 23
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nDefines a static wrapper class for enabling easy logging through the encapsulated <xref href=\"Juhta.Net.Common.ILogger\" data-throw-if-not-resolved=\"false\"></xref>\ninstance.\n"
-  remarks: "\n<p>This class is also capable for serializing concurrent access to non-thread-safe <xref href=\"Juhta.Net.Common.ILogger\" data-throw-if-not-resolved=\"false\"></xref>\ninstances. In other words, this class is thread-safe excluding the <xref href=\"Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n<p>All exceptions thrown by the underlying <xref href=\"Juhta.Net.Common.ILogger\" data-throw-if-not-resolved=\"false\"></xref> instance will be caught without handling,\nso no exceptions will be thrown by the class.</p>\n"
+  summary: "\nDefines a static wrapper class for enabling easy logging through the encapsulated <xref href=\"Juhta.Net.Diagnostics.ILogger\" data-throw-if-not-resolved=\"false\"></xref>\ninstance.\n"
+  remarks: "\n<p>This class is also capable for serializing concurrent access to non-thread-safe <xref href=\"Juhta.Net.Diagnostics.ILogger\" data-throw-if-not-resolved=\"false\"></xref>\ninstances. In other words, this class is thread-safe excluding the <xref href=\"Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n<p>All exceptions thrown by the underlying <xref href=\"Juhta.Net.Diagnostics.ILogger\" data-throw-if-not-resolved=\"false\"></xref> instance will be caught without handling,\nso no exceptions will be thrown by the class.</p>\n"
   example: []
   syntax:
     content: public static class Logger
@@ -70,35 +70,35 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage)
-  commentId: M:Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage)
-  id: LogAlert(Juhta.Net.Common.AlertMessage)
+- uid: Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  commentId: M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  id: LogAlert(Juhta.Net.Diagnostics.AlertMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogAlert(AlertMessage)
   nameWithType: Logger.LogAlert(AlertMessage)
-  fullName: Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage)
+  fullName: Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 42
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogAlert(AlertMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.AlertMessage
+      type: Juhta.Net.Diagnostics.AlertMessage
     content.vb: Public Shared Sub LogAlert(message As AlertMessage)
   overload: Juhta.Net.Logger.LogAlert*
   modifiers.csharp:
@@ -120,16 +120,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 66
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogAlert(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogAlert(string message)
@@ -145,35 +145,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  id: LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  id: LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogAlert(AlertMessage, Object[])
   nameWithType: Logger.LogAlert(AlertMessage, Object[])
-  fullName: Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 89
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogAlert(AlertMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.AlertMessage
+      type: Juhta.Net.Diagnostics.AlertMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogAlert(message As AlertMessage, ParamArray args As Object())
@@ -185,7 +185,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object())
   name.vb: LogAlert(AlertMessage, Object())
 - uid: Juhta.Net.Logger.LogAlert(System.String,System.Object[])
   commentId: M:Juhta.Net.Logger.LogAlert(System.String,System.Object[])
@@ -200,16 +200,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 112
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogAlert(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogAlert(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogAlert(string messageFormat, params object[] args)
@@ -229,35 +229,35 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Logger.LogAlert(System.String, System.Object())
   name.vb: LogAlert(String, Object())
-- uid: Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage)
-  id: LogError(Juhta.Net.Common.ErrorMessage)
+- uid: Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  id: LogError(Juhta.Net.Diagnostics.ErrorMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogError(ErrorMessage)
   nameWithType: Logger.LogError(ErrorMessage)
-  fullName: Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 135
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(ErrorMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared Sub LogError(message As ErrorMessage)
   overload: Juhta.Net.Logger.LogError*
   modifiers.csharp:
@@ -279,16 +279,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 158
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.Exception)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(Exception exception)
@@ -316,16 +316,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 181
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(string message)
@@ -340,35 +340,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  id: LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  id: LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogError(ErrorMessage, Object[])
   nameWithType: Logger.LogError(ErrorMessage, Object[])
-  fullName: Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 204
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(ErrorMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogError(message As ErrorMessage, ParamArray args As Object())
@@ -380,31 +380,31 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogError(Juhta.Net.Common.ErrorMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object())
   name.vb: LogError(ErrorMessage, Object())
-- uid: Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
-  id: LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
+- uid: Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
+  id: LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogError(Exception, ErrorMessage)
   nameWithType: Logger.LogError(Exception, ErrorMessage)
-  fullName: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 227
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.Exception%2cJuhta.Net.Common.ErrorMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.Exception%2cJuhta.Net.Diagnostics.ErrorMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(Exception exception, ErrorMessage message)
@@ -412,7 +412,7 @@ items:
     - id: exception
       type: System.Exception
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared Sub LogError(exception As Exception, message As ErrorMessage)
   overload: Juhta.Net.Logger.LogError*
   modifiers.csharp:
@@ -434,16 +434,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 250
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.Exception%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.Exception%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(Exception exception, string message)
@@ -473,16 +473,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 273
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(string messageFormat, params object[] args)
@@ -502,29 +502,29 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Logger.LogError(System.String, System.Object())
   name.vb: LogError(String, Object())
-- uid: Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
-  id: LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  id: LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogError(Exception, ErrorMessage, Object[])
   nameWithType: Logger.LogError(Exception, ErrorMessage, Object[])
-  fullName: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 296
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.Exception%2cJuhta.Net.Common.ErrorMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.Exception%2cJuhta.Net.Diagnostics.ErrorMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(Exception exception, ErrorMessage message, params object[] args)
@@ -532,7 +532,7 @@ items:
     - id: exception
       type: System.Exception
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogError(exception As Exception, message As ErrorMessage, ParamArray args As Object())
@@ -544,7 +544,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage, System.Object())
   name.vb: LogError(Exception, ErrorMessage, Object())
 - uid: Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])
   commentId: M:Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])
@@ -559,16 +559,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 319
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogError(System.Exception%2cSystem.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogError(System.Exception%2cSystem.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogError(Exception exception, string messageFormat, params object[] args)
@@ -590,35 +590,35 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Logger.LogError(System.Exception, System.String, System.Object())
   name.vb: LogError(Exception, String, Object())
-- uid: Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  commentId: M:Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  id: LogEvent(Juhta.Net.Common.DiagnosticMessage)
+- uid: Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  commentId: M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  id: LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogEvent(DiagnosticMessage)
   nameWithType: Logger.LogEvent(DiagnosticMessage)
-  fullName: Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
+  fullName: Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 342
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogEvent(DiagnosticMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.DiagnosticMessage
+      type: Juhta.Net.Diagnostics.DiagnosticMessage
     content.vb: Public Shared Sub LogEvent(message As DiagnosticMessage)
   overload: Juhta.Net.Logger.LogEvent*
   modifiers.csharp:
@@ -627,35 +627,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  id: LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  id: LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogEvent(DiagnosticMessage, Object[])
   nameWithType: Logger.LogEvent(DiagnosticMessage, Object[])
-  fullName: Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 365
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogEvent(DiagnosticMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.DiagnosticMessage
+      type: Juhta.Net.Diagnostics.DiagnosticMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogEvent(message As DiagnosticMessage, ParamArray args As Object())
@@ -667,37 +667,37 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object())
   name.vb: LogEvent(DiagnosticMessage, Object())
-- uid: Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage)
-  commentId: M:Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage)
-  id: LogInformation(Juhta.Net.Common.InformationMessage)
+- uid: Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  commentId: M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  id: LogInformation(Juhta.Net.Diagnostics.InformationMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogInformation(InformationMessage)
   nameWithType: Logger.LogInformation(InformationMessage)
-  fullName: Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage)
+  fullName: Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 388
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogInformation(InformationMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.InformationMessage
+      type: Juhta.Net.Diagnostics.InformationMessage
     content.vb: Public Shared Sub LogInformation(message As InformationMessage)
   overload: Juhta.Net.Logger.LogInformation*
   modifiers.csharp:
@@ -719,16 +719,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 411
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogInformation(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogInformation(string message)
@@ -743,35 +743,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  id: LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  id: LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogInformation(InformationMessage, Object[])
   nameWithType: Logger.LogInformation(InformationMessage, Object[])
-  fullName: Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 434
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogInformation(InformationMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.InformationMessage
+      type: Juhta.Net.Diagnostics.InformationMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogInformation(message As InformationMessage, ParamArray args As Object())
@@ -783,7 +783,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object())
   name.vb: LogInformation(InformationMessage, Object())
 - uid: Juhta.Net.Logger.LogInformation(System.String,System.Object[])
   commentId: M:Juhta.Net.Logger.LogInformation(System.String,System.Object[])
@@ -798,16 +798,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 457
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogInformation(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogInformation(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogInformation(string messageFormat, params object[] args)
@@ -840,16 +840,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 480
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogWarning(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogWarning(string message)
@@ -864,35 +864,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage)
-  commentId: M:Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage)
-  id: LogWarning(Juhta.Net.Common.WarningMessage)
+- uid: Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  commentId: M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  id: LogWarning(Juhta.Net.Diagnostics.WarningMessage)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogWarning(WarningMessage)
   nameWithType: Logger.LogWarning(WarningMessage)
-  fullName: Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage)
+  fullName: Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 503
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogWarning(WarningMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.WarningMessage
+      type: Juhta.Net.Diagnostics.WarningMessage
     content.vb: Public Shared Sub LogWarning(message As WarningMessage)
   overload: Juhta.Net.Logger.LogWarning*
   modifiers.csharp:
@@ -914,16 +914,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 526
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogWarning(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogWarning(System.String%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogWarning(string messageFormat, params object[] args)
@@ -943,35 +943,35 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Logger.LogWarning(System.String, System.Object())
   name.vb: LogWarning(String, Object())
-- uid: Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  commentId: M:Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  id: LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+- uid: Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  commentId: M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  id: LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: LogWarning(WarningMessage, Object[])
   nameWithType: Logger.LogWarning(WarningMessage, Object[])
-  fullName: Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object[])
+  fullName: Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 549
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSee <xref href=\"Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage%2cSystem.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void LogWarning(WarningMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.WarningMessage
+      type: Juhta.Net.Diagnostics.WarningMessage
     - id: args
       type: System.Object[]
     content.vb: Public Shared Sub LogWarning(message As WarningMessage, ParamArray args As Object())
@@ -983,38 +983,38 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Logger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object())
+  fullName.vb: Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object())
   name.vb: LogWarning(WarningMessage, Object())
-- uid: Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
-  commentId: M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
-  id: SetLogger(Juhta.Net.Common.ILogger)
+- uid: Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
+  commentId: M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
+  id: SetLogger(Juhta.Net.Diagnostics.ILogger)
   parent: Juhta.Net.Logger
   langs:
   - csharp
   - vb
   name: SetLogger(ILogger)
   nameWithType: Logger.SetLogger(ILogger)
-  fullName: Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
+  fullName: Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Logger.cs
+      path: src/Juhta.Net/Logger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SetLogger
-    path: ../../Juhta.NET/Source/Juhta.Net/Logger.cs
+    path: ../src/Juhta.Net/Logger.cs
     startLine: 573
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
-  summary: "\nSets an <xref href=\"Juhta.Net.Common.ILogger\" data-throw-if-not-resolved=\"false\"></xref> instance into the class.\n"
+  summary: "\nSets an <xref href=\"Juhta.Net.Diagnostics.ILogger\" data-throw-if-not-resolved=\"false\"></xref> instance into the class.\n"
   example: []
   syntax:
     content: public static void SetLogger(ILogger logger)
     parameters:
     - id: logger
-      type: Juhta.Net.Common.ILogger
-      description: Specifies an <xref href="Juhta.Net.Common.ILogger" data-throw-if-not-resolved="false"></xref> object.
+      type: Juhta.Net.Diagnostics.ILogger
+      description: Specifies an <xref href="Juhta.Net.Diagnostics.ILogger" data-throw-if-not-resolved="false"></xref> object.
     content.vb: Public Shared Sub SetLogger(logger As ILogger)
   overload: Juhta.Net.Logger.SetLogger*
   modifiers.csharp:
@@ -1024,15 +1024,15 @@ items:
   - Public
   - Shared
 references:
-- uid: Juhta.Net.Common.ILogger
-  commentId: T:Juhta.Net.Common.ILogger
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ILogger
+  commentId: T:Juhta.Net.Diagnostics.ILogger
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: ILogger
   nameWithType: ILogger
-  fullName: Juhta.Net.Common.ILogger
-- uid: Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
-  commentId: M:Juhta.Net.Logger.SetLogger(Juhta.Net.Common.ILogger)
+  fullName: Juhta.Net.Diagnostics.ILogger
+- uid: Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
+  commentId: M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)
 - uid: Juhta.Net
   commentId: N:Juhta.Net
   isExternal: false
@@ -1325,52 +1325,52 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: false
   name: LogAlert(AlertMessage)
   nameWithType: ILogger.LogAlert(AlertMessage)
-  fullName: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.AlertMessage
+  - uid: Juhta.Net.Diagnostics.AlertMessage
     name: AlertMessage
     nameWithType: AlertMessage
-    fullName: Juhta.Net.Common.AlertMessage
+    fullName: Juhta.Net.Diagnostics.AlertMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.AlertMessage
+  - uid: Juhta.Net.Diagnostics.AlertMessage
     name: AlertMessage
     nameWithType: AlertMessage
-    fullName: Juhta.Net.Common.AlertMessage
+    fullName: Juhta.Net.Diagnostics.AlertMessage
   - name: )
     nameWithType: )
     fullName: )
@@ -1380,25 +1380,25 @@ references:
   name: LogAlert
   nameWithType: Logger.LogAlert
   fullName: Juhta.Net.Logger.LogAlert
-- uid: Juhta.Net.Common.AlertMessage
-  commentId: T:Juhta.Net.Common.AlertMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.AlertMessage
+  commentId: T:Juhta.Net.Diagnostics.AlertMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: AlertMessage
   nameWithType: AlertMessage
-  fullName: Juhta.Net.Common.AlertMessage
-- uid: Juhta.Net.Common.ILogger.LogAlert(System.String)
-  commentId: M:Juhta.Net.Common.ILogger.LogAlert(System.String)
-  parent: Juhta.Net.Common.ILogger
+  fullName: Juhta.Net.Diagnostics.AlertMessage
+- uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogAlert(String)
   nameWithType: ILogger.LogAlert(String)
-  fullName: Juhta.Net.Common.ILogger.LogAlert(System.String)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
@@ -1411,10 +1411,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
@@ -1433,28 +1433,28 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogAlert(AlertMessage, Object[])
   nameWithType: ILogger.LogAlert(AlertMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object[])
   nameWithType.vb: ILogger.LogAlert(AlertMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object())
   name.vb: LogAlert(AlertMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.AlertMessage
+  - uid: Juhta.Net.Diagnostics.AlertMessage
     name: AlertMessage
     nameWithType: AlertMessage
-    fullName: Juhta.Net.Common.AlertMessage
+    fullName: Juhta.Net.Diagnostics.AlertMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1470,17 +1470,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.AlertMessage
+  - uid: Juhta.Net.Diagnostics.AlertMessage
     name: AlertMessage
     nameWithType: AlertMessage
-    fullName: Juhta.Net.Common.AlertMessage
+    fullName: Juhta.Net.Diagnostics.AlertMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1520,21 +1520,21 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogAlert(String, Object[])
   nameWithType: ILogger.LogAlert(String, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogAlert(System.String, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String, System.Object[])
   nameWithType.vb: ILogger.LogAlert(String, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogAlert(System.String, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String, System.Object())
   name.vb: LogAlert(String, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
@@ -1558,10 +1558,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogAlert(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])
     name: LogAlert
     nameWithType: ILogger.LogAlert
-    fullName: Juhta.Net.Common.ILogger.LogAlert
+    fullName: Juhta.Net.Diagnostics.ILogger.LogAlert
   - name: (
     nameWithType: (
     fullName: (
@@ -1584,40 +1584,40 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: false
   name: LogError(ErrorMessage)
   nameWithType: ILogger.LogError(ErrorMessage)
-  fullName: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: )
     nameWithType: )
     fullName: )
@@ -1627,25 +1627,25 @@ references:
   name: LogError
   nameWithType: Logger.LogError
   fullName: Juhta.Net.Logger.LogError
-- uid: Juhta.Net.Common.ErrorMessage
-  commentId: T:Juhta.Net.Common.ErrorMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: ErrorMessage
   nameWithType: ErrorMessage
-  fullName: Juhta.Net.Common.ErrorMessage
-- uid: Juhta.Net.Common.ILogger.LogError(System.Exception)
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.Exception)
-  parent: Juhta.Net.Common.ILogger
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(Exception)
   nameWithType: ILogger.LogError(Exception)
-  fullName: Juhta.Net.Common.ILogger.LogError(System.Exception)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1658,10 +1658,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1680,18 +1680,18 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
-- uid: Juhta.Net.Common.ILogger.LogError(System.String)
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.String)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(String)
   nameWithType: ILogger.LogError(String)
-  fullName: Juhta.Net.Common.ILogger.LogError(System.String)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1704,10 +1704,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1719,28 +1719,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(ErrorMessage, Object[])
   nameWithType: ILogger.LogError(ErrorMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object[])
   nameWithType.vb: ILogger.LogError(ErrorMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object())
   name.vb: LogError(ErrorMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1756,17 +1756,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1781,18 +1781,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(Exception, ErrorMessage)
   nameWithType: ILogger.LogError(Exception, ErrorMessage)
-  fullName: Juhta.Net.Common.ILogger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1804,18 +1804,18 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1827,25 +1827,25 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(Exception, String)
   nameWithType: ILogger.LogError(Exception, String)
-  fullName: Juhta.Net.Common.ILogger.LogError(System.Exception, System.String)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1866,10 +1866,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1889,21 +1889,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(String, Object[])
   nameWithType: ILogger.LogError(String, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogError(System.String, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.String, System.Object[])
   nameWithType.vb: ILogger.LogError(String, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogError(System.String, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogError(System.String, System.Object())
   name.vb: LogError(String, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1927,10 +1927,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1953,21 +1953,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(Exception, ErrorMessage, Object[])
   nameWithType: ILogger.LogError(Exception, ErrorMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage, System.Object[])
   nameWithType.vb: ILogger.LogError(Exception, ErrorMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogError(System.Exception, Juhta.Net.Common.ErrorMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, Juhta.Net.Diagnostics.ErrorMessage, System.Object())
   name.vb: LogError(Exception, ErrorMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -1979,10 +1979,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1998,10 +1998,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,Juhta.Net.Common.ErrorMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -2013,10 +2013,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Juhta.Net.Common.ErrorMessage
+  - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
     nameWithType: ErrorMessage
-    fullName: Juhta.Net.Common.ErrorMessage
+    fullName: Juhta.Net.Diagnostics.ErrorMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2031,21 +2031,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogError(Exception, String, Object[])
   nameWithType: ILogger.LogError(Exception, String, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogError(System.Exception, System.String, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, System.String, System.Object[])
   nameWithType.vb: ILogger.LogError(Exception, String, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogError(System.Exception, System.String, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception, System.String, System.Object())
   name.vb: LogError(Exception, String, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -2077,10 +2077,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogError(System.Exception,System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])
     name: LogError
     nameWithType: ILogger.LogError
-    fullName: Juhta.Net.Common.ILogger.LogError
+    fullName: Juhta.Net.Diagnostics.ILogger.LogError
   - name: (
     nameWithType: (
     fullName: (
@@ -2111,40 +2111,40 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: false
   name: LogEvent(DiagnosticMessage)
   nameWithType: ILogger.LogEvent(DiagnosticMessage)
-  fullName: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
     name: LogEvent
     nameWithType: ILogger.LogEvent
-    fullName: Juhta.Net.Common.ILogger.LogEvent
+    fullName: Juhta.Net.Diagnostics.ILogger.LogEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.DiagnosticMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage
     name: DiagnosticMessage
     nameWithType: DiagnosticMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
     name: LogEvent
     nameWithType: ILogger.LogEvent
-    fullName: Juhta.Net.Common.ILogger.LogEvent
+    fullName: Juhta.Net.Diagnostics.ILogger.LogEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.DiagnosticMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage
     name: DiagnosticMessage
     nameWithType: DiagnosticMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage
   - name: )
     nameWithType: )
     fullName: )
@@ -2154,35 +2154,35 @@ references:
   name: LogEvent
   nameWithType: Logger.LogEvent
   fullName: Juhta.Net.Logger.LogEvent
-- uid: Juhta.Net.Common.DiagnosticMessage
-  commentId: T:Juhta.Net.Common.DiagnosticMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: DiagnosticMessage
   nameWithType: DiagnosticMessage
-  fullName: Juhta.Net.Common.DiagnosticMessage
-- uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogEvent(DiagnosticMessage, Object[])
   nameWithType: ILogger.LogEvent(DiagnosticMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object[])
   nameWithType.vb: ILogger.LogEvent(DiagnosticMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object())
   name.vb: LogEvent(DiagnosticMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
     name: LogEvent
     nameWithType: ILogger.LogEvent
-    fullName: Juhta.Net.Common.ILogger.LogEvent
+    fullName: Juhta.Net.Diagnostics.ILogger.LogEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.DiagnosticMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage
     name: DiagnosticMessage
     nameWithType: DiagnosticMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2198,17 +2198,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
     name: LogEvent
     nameWithType: ILogger.LogEvent
-    fullName: Juhta.Net.Common.ILogger.LogEvent
+    fullName: Juhta.Net.Diagnostics.ILogger.LogEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.DiagnosticMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage
     name: DiagnosticMessage
     nameWithType: DiagnosticMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2223,40 +2223,40 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: false
   name: LogInformation(InformationMessage)
   nameWithType: ILogger.LogInformation(InformationMessage)
-  fullName: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.InformationMessage
+  - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
     nameWithType: InformationMessage
-    fullName: Juhta.Net.Common.InformationMessage
+    fullName: Juhta.Net.Diagnostics.InformationMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.InformationMessage
+  - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
     nameWithType: InformationMessage
-    fullName: Juhta.Net.Common.InformationMessage
+    fullName: Juhta.Net.Diagnostics.InformationMessage
   - name: )
     nameWithType: )
     fullName: )
@@ -2266,25 +2266,25 @@ references:
   name: LogInformation
   nameWithType: Logger.LogInformation
   fullName: Juhta.Net.Logger.LogInformation
-- uid: Juhta.Net.Common.InformationMessage
-  commentId: T:Juhta.Net.Common.InformationMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.InformationMessage
+  commentId: T:Juhta.Net.Diagnostics.InformationMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: InformationMessage
   nameWithType: InformationMessage
-  fullName: Juhta.Net.Common.InformationMessage
-- uid: Juhta.Net.Common.ILogger.LogInformation(System.String)
-  commentId: M:Juhta.Net.Common.ILogger.LogInformation(System.String)
-  parent: Juhta.Net.Common.ILogger
+  fullName: Juhta.Net.Diagnostics.InformationMessage
+- uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogInformation(String)
   nameWithType: ILogger.LogInformation(String)
-  fullName: Juhta.Net.Common.ILogger.LogInformation(System.String)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
@@ -2297,10 +2297,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
@@ -2312,28 +2312,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogInformation(InformationMessage, Object[])
   nameWithType: ILogger.LogInformation(InformationMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object[])
   nameWithType.vb: ILogger.LogInformation(InformationMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object())
   name.vb: LogInformation(InformationMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.InformationMessage
+  - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
     nameWithType: InformationMessage
-    fullName: Juhta.Net.Common.InformationMessage
+    fullName: Juhta.Net.Diagnostics.InformationMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2349,17 +2349,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.InformationMessage
+  - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
     nameWithType: InformationMessage
-    fullName: Juhta.Net.Common.InformationMessage
+    fullName: Juhta.Net.Diagnostics.InformationMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2374,21 +2374,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogInformation(String, Object[])
   nameWithType: ILogger.LogInformation(String, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogInformation(System.String, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String, System.Object[])
   nameWithType.vb: ILogger.LogInformation(String, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogInformation(System.String, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String, System.Object())
   name.vb: LogInformation(String, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
@@ -2412,10 +2412,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogInformation(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])
     name: LogInformation
     nameWithType: ILogger.LogInformation
-    fullName: Juhta.Net.Common.ILogger.LogInformation
+    fullName: Juhta.Net.Diagnostics.ILogger.LogInformation
   - name: (
     nameWithType: (
     fullName: (
@@ -2438,18 +2438,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogWarning(System.String)
-  commentId: M:Juhta.Net.Common.ILogger.LogWarning(System.String)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogWarning(String)
   nameWithType: ILogger.LogWarning(String)
-  fullName: Juhta.Net.Common.ILogger.LogWarning(System.String)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
@@ -2462,10 +2462,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(System.String)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
@@ -2483,65 +2483,65 @@ references:
   name: LogWarning
   nameWithType: Logger.LogWarning
   fullName: Juhta.Net.Logger.LogWarning
-- uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)
-  commentId: M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: false
   name: LogWarning(WarningMessage)
   nameWithType: ILogger.LogWarning(WarningMessage)
-  fullName: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)
+  fullName: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.WarningMessage
+  - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
     nameWithType: WarningMessage
-    fullName: Juhta.Net.Common.WarningMessage
+    fullName: Juhta.Net.Diagnostics.WarningMessage
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage)
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.WarningMessage
+  - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
     nameWithType: WarningMessage
-    fullName: Juhta.Net.Common.WarningMessage
+    fullName: Juhta.Net.Diagnostics.WarningMessage
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.WarningMessage
-  commentId: T:Juhta.Net.Common.WarningMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.WarningMessage
+  commentId: T:Juhta.Net.Diagnostics.WarningMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: WarningMessage
   nameWithType: WarningMessage
-  fullName: Juhta.Net.Common.WarningMessage
-- uid: Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+  fullName: Juhta.Net.Diagnostics.WarningMessage
+- uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogWarning(String, Object[])
   nameWithType: ILogger.LogWarning(String, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogWarning(System.String, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String, System.Object[])
   nameWithType.vb: ILogger.LogWarning(String, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogWarning(System.String, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String, System.Object())
   name.vb: LogWarning(String, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
@@ -2565,10 +2565,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(System.String,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
@@ -2591,28 +2591,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  commentId: M:Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  parent: Juhta.Net.Common.ILogger
+- uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  parent: Juhta.Net.Diagnostics.ILogger
   isExternal: true
   name: LogWarning(WarningMessage, Object[])
   nameWithType: ILogger.LogWarning(WarningMessage, Object[])
-  fullName: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object[])
   nameWithType.vb: ILogger.LogWarning(WarningMessage, Object())
-  fullName.vb: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object())
   name.vb: LogWarning(WarningMessage, Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.WarningMessage
+  - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
     nameWithType: WarningMessage
-    fullName: Juhta.Net.Common.WarningMessage
+    fullName: Juhta.Net.Diagnostics.WarningMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2628,17 +2628,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.ILogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+  - uid: Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
     name: LogWarning
     nameWithType: ILogger.LogWarning
-    fullName: Juhta.Net.Common.ILogger.LogWarning
+    fullName: Juhta.Net.Diagnostics.ILogger.LogWarning
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Common.WarningMessage
+  - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
     nameWithType: WarningMessage
-    fullName: Juhta.Net.Common.WarningMessage
+    fullName: Juhta.Net.Diagnostics.WarningMessage
   - name: ', '
     nameWithType: ', '
     fullName: ', '

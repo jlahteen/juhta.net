@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryInitializationException
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
     startLine: 15
   assemblies:
   - Juhta.Net
@@ -31,9 +31,7 @@ items:
     content: 'public class LibraryInitializationException : Exception, ISerializable'
     content.vb: >-
       Public Class LibraryInitializationException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -78,11 +76,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
     startLine: 23
   assemblies:
   - Juhta.Net
@@ -114,11 +112,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
     startLine: 32
   assemblies:
   - Juhta.Net

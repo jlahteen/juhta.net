@@ -21,11 +21,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ConsumerThread
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 18
   assemblies:
   - Juhta.Net
@@ -72,11 +72,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 25
   assemblies:
   - Juhta.Net
@@ -106,11 +106,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Consume
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 43
   assemblies:
   - Juhta.Net
@@ -145,11 +145,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Start
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 57
   assemblies:
   - Juhta.Net
@@ -179,11 +179,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Stop
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 70
   assemblies:
   - Juhta.Net
@@ -213,11 +213,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ConsumeObject
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 91
   assemblies:
   - Juhta.Net
@@ -253,11 +253,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: OnConsumeObjectFailed
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 98
   assemblies:
   - Juhta.Net
@@ -296,11 +296,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ConsumerThread.cs
+      path: src/Juhta.Net/Common/ConsumerThread.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: OnWorkerThreadFailed
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ConsumerThread.cs
+    path: ../src/Juhta.Net/Common/ConsumerThread.cs
     startLine: 104
   assemblies:
   - Juhta.Net

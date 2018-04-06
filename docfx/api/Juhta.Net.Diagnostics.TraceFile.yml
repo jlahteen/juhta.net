@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/TraceFile.cs
+      path: src/Juhta.Net.Diagnostics/TraceFile.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TraceFile
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/TraceFile.cs
+    path: ../src/Juhta.Net.Diagnostics/TraceFile.cs
     startLine: 18
   assemblies:
   - Juhta.Net.Diagnostics
@@ -32,7 +32,6 @@ items:
     content: 'public class TraceFile : Utf8FileWriter'
     content.vb: >-
       Public Class TraceFile
-
           Inherits Utf8FileWriter
   inheritance:
   - System.Object
@@ -78,11 +77,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/TraceFile.cs
+      path: src/Juhta.Net.Diagnostics/TraceFile.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/TraceFile.cs
+    path: ../src/Juhta.Net.Diagnostics/TraceFile.cs
     startLine: 39
   assemblies:
   - Juhta.Net.Diagnostics
@@ -110,11 +109,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/TraceFile.cs
+      path: src/Juhta.Net.Diagnostics/TraceFile.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/TraceFile.cs
+    path: ../src/Juhta.Net.Diagnostics/TraceFile.cs
     startLine: 46
   assemblies:
   - Juhta.Net.Diagnostics
@@ -146,11 +145,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/TraceFile.cs
+      path: src/Juhta.Net.Diagnostics/TraceFile.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/TraceFile.cs
+    path: ../src/Juhta.Net.Diagnostics/TraceFile.cs
     startLine: 54
   assemblies:
   - Juhta.Net.Diagnostics

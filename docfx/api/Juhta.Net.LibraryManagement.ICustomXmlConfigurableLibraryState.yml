@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ICustomXmlConfigurableLibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -31,7 +31,6 @@ items:
     content: 'public interface ICustomXmlConfigurableLibraryState : ILibraryState'
     content.vb: >-
       Public Interface ICustomXmlConfigurableLibraryState
-
           Inherits ILibraryState
   modifiers.csharp:
   - public
@@ -52,11 +51,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Initialize
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibraryState.cs
     startLine: 27
   assemblies:
   - Juhta.Net

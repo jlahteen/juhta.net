@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageType
+  id: DiagnosticMessageType
+  parent: Juhta.Net.Diagnostics
+  children:
+  - Juhta.Net.Diagnostics.DiagnosticMessageType.Alert
+  - Juhta.Net.Diagnostics.DiagnosticMessageType.Error
+  - Juhta.Net.Diagnostics.DiagnosticMessageType.Information
+  - Juhta.Net.Diagnostics.DiagnosticMessageType.Warning
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageType
+  nameWithType: DiagnosticMessageType
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType
+  type: Enum
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/Types.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: DiagnosticMessageType
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nDefines an enumeration for the diagnostic message types.\n"
+  example: []
+  syntax:
+    content: public enum DiagnosticMessageType
+    content.vb: Public Enum DiagnosticMessageType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType.Alert
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageType.Alert
+  id: Alert
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageType
+  langs:
+  - csharp
+  - vb
+  name: Alert
+  nameWithType: DiagnosticMessageType.Alert
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType.Alert
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/Types.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Alert
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
+    startLine: 36
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nThe diagnostic message is an alert message.\n"
+  example: []
+  syntax:
+    content: Alert = 0
+    return:
+      type: Juhta.Net.Diagnostics.DiagnosticMessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType.Error
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageType.Error
+  id: Error
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: DiagnosticMessageType.Error
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType.Error
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/Types.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
+    startLine: 41
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nThe diagnostic message is an error message.\n"
+  example: []
+  syntax:
+    content: Error = 1
+    return:
+      type: Juhta.Net.Diagnostics.DiagnosticMessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType.Information
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageType.Information
+  id: Information
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageType
+  langs:
+  - csharp
+  - vb
+  name: Information
+  nameWithType: DiagnosticMessageType.Information
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType.Information
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/Types.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Information
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
+    startLine: 46
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nThe diagnostic message is an information message.\n"
+  example: []
+  syntax:
+    content: Information = 2
+    return:
+      type: Juhta.Net.Diagnostics.DiagnosticMessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType.Warning
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageType.Warning
+  id: Warning
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: DiagnosticMessageType.Warning
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType.Warning
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/Types.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Warning
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
+    startLine: 51
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nThe diagnostic message is a warning message.\n"
+  example: []
+  syntax:
+    content: Warning = 3
+    return:
+      type: Juhta.Net.Diagnostics.DiagnosticMessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageType
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageType
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: DiagnosticMessageType
+  nameWithType: DiagnosticMessageType
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageType

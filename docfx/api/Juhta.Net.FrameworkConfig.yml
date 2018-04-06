@@ -5,7 +5,8 @@ items:
   id: FrameworkConfig
   parent: Juhta.Net
   children:
-  - Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+  - Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
+  - Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
   - Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
   langs:
   - csharp
@@ -16,12 +17,12 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkConfig.cs
+      path: src/Juhta.Net/FrameworkConfig.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FrameworkConfig
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
-    startLine: 16
+    path: ../src/Juhta.Net/FrameworkConfig.cs
+    startLine: 17
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
@@ -47,47 +48,97 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
-  commentId: M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
-  id: CreateNamespaceManager(System.String,System.Xml.XmlDocument,System.String)
+- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
+  commentId: M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
+  id: CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
   parent: Juhta.Net.FrameworkConfig
   langs:
   - csharp
   - vb
-  name: CreateNamespaceManager(String, XmlDocument, String)
-  nameWithType: FrameworkConfig.CreateNamespaceManager(String, XmlDocument, String)
-  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String, System.Xml.XmlDocument, System.String)
+  name: CreateNamespaceManager(String, XmlNode, String)
+  nameWithType: FrameworkConfig.CreateNamespaceManager(String, XmlNode, String)
+  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String, System.Xml.XmlNode, System.String)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkConfig.cs
+      path: src/Juhta.Net/FrameworkConfig.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateNamespaceManager
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
-    startLine: 28
+    path: ../src/Juhta.Net/FrameworkConfig.cs
+    startLine: 30
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
   summary: "\nCreates an <xref href=\"System.Xml.XmlNamespaceManager\" data-throw-if-not-resolved=\"false\"></xref> object corresponding to a specified framework library, XML\nconfiguration and schema version.\n"
   example: []
   syntax:
-    content: public static XmlNamespaceManager CreateNamespaceManager(string libraryFileName, XmlDocument config, string schemaVersion)
+    content: public static XmlNamespaceManager CreateNamespaceManager(string libraryFileName, XmlNode anyConfigNode, string schemaVersion)
     parameters:
     - id: libraryFileName
       type: System.String
       description: Specifies a framework library file name.
-    - id: config
-      type: System.Xml.XmlDocument
-      description: Specifies an <xref href="System.Xml.XmlDocument" data-throw-if-not-resolved="false"></xref> object containing a library configuration.
+    - id: anyConfigNode
+      type: System.Xml.XmlNode
+      description: >-
+        Specifies an <xref href="System.Xml.XmlNode" data-throw-if-not-resolved="false"></xref> object containing in a library
+
+        configuration.
     - id: schemaVersion
       type: System.String
       description: Specifies the schema version of the library configuration.
     return:
       type: System.Xml.XmlNamespaceManager
-      description: Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object.
-    content.vb: Public Shared Function CreateNamespaceManager(libraryFileName As String, config As XmlDocument, schemaVersion As String) As XmlNamespaceManager
+      description: Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object specified by the parameters.
+    content.vb: Public Shared Function CreateNamespaceManager(libraryFileName As String, anyConfigNode As XmlNode, schemaVersion As String) As XmlNamespaceManager
   overload: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
+  commentId: M:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
+  id: CreateRootConfigNamespaceManager(System.Xml.XmlNode)
+  parent: Juhta.Net.FrameworkConfig
+  langs:
+  - csharp
+  - vb
+  name: CreateRootConfigNamespaceManager(XmlNode)
+  nameWithType: FrameworkConfig.CreateRootConfigNamespaceManager(XmlNode)
+  fullName: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/FrameworkConfig.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateRootConfigNamespaceManager
+    path: ../src/Juhta.Net/FrameworkConfig.cs
+    startLine: 53
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nCreates an <xref href=\"System.Xml.XmlNamespaceManager\" data-throw-if-not-resolved=\"false\"></xref> object for a specified root library configuration.\n"
+  example: []
+  syntax:
+    content: public static XmlNamespaceManager CreateRootConfigNamespaceManager(XmlNode anyRootConfigNode)
+    parameters:
+    - id: anyRootConfigNode
+      type: System.Xml.XmlNode
+      description: >-
+        Specifies an <xref href="System.Xml.XmlNode" data-throw-if-not-resolved="false"></xref> object containing in a root library
+
+        configuration.
+    return:
+      type: System.Xml.XmlNamespaceManager
+      description: >-
+        Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object for the specified root library
+
+        configuration.
+    content.vb: Public Shared Function CreateRootConfigNamespaceManager(anyRootConfigNode As XmlNode) As XmlNamespaceManager
+  overload: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager*
   modifiers.csharp:
   - public
   - static
@@ -107,12 +158,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/FrameworkConfig.cs
+      path: src/Juhta.Net/FrameworkConfig.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetLibraryConfigXmlns
-    path: ../../Juhta.NET/Source/Juhta.Net/FrameworkConfig.cs
-    startLine: 47
+    path: ../src/Juhta.Net/FrameworkConfig.cs
+    startLine: 75
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net
@@ -444,13 +495,13 @@ references:
   name: XmlNamespaceManager
   nameWithType: XmlNamespaceManager
   fullName: System.Xml.XmlNamespaceManager
-- uid: System.Xml.XmlDocument
-  commentId: T:System.Xml.XmlDocument
+- uid: System.Xml.XmlNode
+  commentId: T:System.Xml.XmlNode
   parent: System.Xml
   isExternal: true
-  name: XmlDocument
-  nameWithType: XmlDocument
-  fullName: System.Xml.XmlDocument
+  name: XmlNode
+  nameWithType: XmlNode
+  fullName: System.Xml.XmlNode
 - uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
   commentId: Overload:Juhta.Net.FrameworkConfig.CreateNamespaceManager
   isExternal: false
@@ -470,6 +521,12 @@ references:
   name: System.Xml
   nameWithType: System.Xml
   fullName: System.Xml
+- uid: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager*
+  commentId: Overload:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager
+  isExternal: false
+  name: CreateRootConfigNamespaceManager
+  nameWithType: FrameworkConfig.CreateRootConfigNamespaceManager
+  fullName: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager
 - uid: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns*
   commentId: Overload:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns
   isExternal: false

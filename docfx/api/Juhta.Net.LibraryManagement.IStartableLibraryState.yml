@@ -16,11 +16,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IStartableLibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
     startLine: 14
   assemblies:
   - Juhta.Net
@@ -49,11 +49,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: StartProcesses
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
     startLine: 21
   assemblies:
   - Juhta.Net
@@ -77,11 +77,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: StopProcesses
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
     startLine: 38
   assemblies:
   - Juhta.Net

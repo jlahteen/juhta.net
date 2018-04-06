@@ -22,6 +22,7 @@ items:
   - Juhta.Net.Common.CommonMessages.Error015
   - Juhta.Net.Common.CommonMessages.Error016
   - Juhta.Net.Common.CommonMessages.Error017
+  - Juhta.Net.Common.CommonMessages.Error018
   langs:
   - csharp
   - vb
@@ -31,12 +32,12 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CommonMessages
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 13
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 15
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -75,21 +76,21 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error001
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 29
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 31
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nValue of the parameter &apos;{0}&apos; cannot be null.\n"
+  summary: "\nInvalid &apos;{0}&apos; parameter value was passed to the method &apos;{1}&apos;. The value cannot be null.\n"
   example: []
   syntax:
     content: public static readonly ErrorMessage Error001
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error001 As ErrorMessage
   modifiers.csharp:
   - public
@@ -112,12 +113,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error002
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 35
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 37
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -126,7 +127,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error002
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error002 As ErrorMessage
   modifiers.csharp:
   - public
@@ -149,12 +150,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error003
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 40
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 42
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -163,7 +164,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error003
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error003 As ErrorMessage
   modifiers.csharp:
   - public
@@ -186,12 +187,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error004
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 45
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 47
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -200,7 +201,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error004
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error004 As ErrorMessage
   modifiers.csharp:
   - public
@@ -223,21 +224,21 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error005
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 50
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 53
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nValue of the parameter &apos;{0}&apos; is not valid.\n"
+  summary: "\nInvalid &apos;{0}&apos; parameter value was passed to the method &apos;{1}&apos;. The value &apos;{2}&apos; does not conform to the\nregex pattern &apos;{3}&apos;.\n"
   example: []
   syntax:
     content: public static readonly ErrorMessage Error005
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error005 As ErrorMessage
   modifiers.csharp:
   - public
@@ -260,21 +261,21 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error006
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 56
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 59
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nMethod &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the appropriate instance\ndoesn&apos;t allow it.\n"
+  summary: "\nMethod &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the instance doesn&apos;t allow\nit.\n"
   example: []
   syntax:
     content: public static readonly ErrorMessage Error006
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error006 As ErrorMessage
   modifiers.csharp:
   - public
@@ -297,12 +298,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error007
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 61
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 64
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -311,7 +312,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error007
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error007 As ErrorMessage
   modifiers.csharp:
   - public
@@ -334,12 +335,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error008
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 66
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 69
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -348,7 +349,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error008
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error008 As ErrorMessage
   modifiers.csharp:
   - public
@@ -371,12 +372,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error009
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 71
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 74
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -385,7 +386,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error009
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error009 As ErrorMessage
   modifiers.csharp:
   - public
@@ -408,12 +409,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error010
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 76
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 79
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -422,7 +423,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error010
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error010 As ErrorMessage
   modifiers.csharp:
   - public
@@ -445,12 +446,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error011
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 81
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 84
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -459,7 +460,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error011
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error011 As ErrorMessage
   modifiers.csharp:
   - public
@@ -482,12 +483,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error012
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 87
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 90
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -496,7 +497,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error012
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error012 As ErrorMessage
   modifiers.csharp:
   - public
@@ -519,12 +520,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error013
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 92
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 95
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -533,7 +534,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error013
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error013 As ErrorMessage
   modifiers.csharp:
   - public
@@ -556,21 +557,21 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error014
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 97
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 100
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nOnly one instance of the singleton class &apos;{0}&apos; is allowed to be created.\n"
+  summary: "\nOnly one instance of the singleton class &apos;{0}&apos; is allowed to be created at a time.\n"
   example: []
   syntax:
     content: public static readonly ErrorMessage Error014
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error014 As ErrorMessage
   modifiers.csharp:
   - public
@@ -593,12 +594,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error015
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 102
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 105
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -607,7 +608,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error015
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error015 As ErrorMessage
   modifiers.csharp:
   - public
@@ -630,12 +631,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error016
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 107
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 110
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -644,7 +645,7 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error016
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error016 As ErrorMessage
   modifiers.csharp:
   - public
@@ -667,12 +668,12 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommonMessages.cs
+      path: src/Juhta.Net/Common/CommonMessages.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Error017
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommonMessages.cs
-    startLine: 112
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 115
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -681,8 +682,45 @@ items:
   syntax:
     content: public static readonly ErrorMessage Error017
     return:
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
     content.vb: Public Shared ReadOnly Error017 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error018
+  commentId: F:Juhta.Net.Common.CommonMessages.Error018
+  id: Error018
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error018
+  nameWithType: CommonMessages.Error018
+  fullName: Juhta.Net.Common.CommonMessages.Error018
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error018
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 121
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nProperty &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the instance doesn&apos;t\nallow it.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error018
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error018 As ErrorMessage
   modifiers.csharp:
   - public
   - static
@@ -990,10 +1028,16 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Common.ErrorMessage
-  commentId: T:Juhta.Net.Common.ErrorMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: ErrorMessage
   nameWithType: ErrorMessage
-  fullName: Juhta.Net.Common.ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics

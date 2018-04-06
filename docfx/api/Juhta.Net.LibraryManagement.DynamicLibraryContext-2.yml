@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DynamicLibraryContext
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
     startLine: 21
   assemblies:
   - Juhta.Net
@@ -37,7 +37,6 @@ items:
       description: Specifies a library state type.
     content.vb: >-
       Public Class DynamicLibraryContext(Of TDynamicLibrary As IDynamicLibrary, TLibraryState As ILibraryState)
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -73,11 +72,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Dispose
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
     startLine: 30
   assemblies:
   - Juhta.Net
@@ -109,11 +108,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DynamicLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
     startLine: 45
   assemblies:
   - Juhta.Net
@@ -148,11 +147,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
     startLine: 59
   assemblies:
   - Juhta.Net

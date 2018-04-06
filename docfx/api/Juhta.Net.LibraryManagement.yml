@@ -9,9 +9,12 @@ items:
   - Juhta.Net.LibraryManagement.IClosableLibrary
   - Juhta.Net.LibraryManagement.IClosableLibraryState
   - Juhta.Net.LibraryManagement.IConfigurableLibrary
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryState
   - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
   - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
   - Juhta.Net.LibraryManagement.IDefaultLibraryState
+  - Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary
   - Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
   - Juhta.Net.LibraryManagement.IDynamicInitializableLibrary
   - Juhta.Net.LibraryManagement.IDynamicLibrary
@@ -102,11 +105,24 @@ references:
   fullName: Juhta.Net.LibraryManagement.IClosableLibraryState
 - uid: Juhta.Net.LibraryManagement.IConfigurableLibrary
   commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibrary
-  parent: Juhta.Net.LibraryManagement
   isExternal: false
   name: IConfigurableLibrary
   nameWithType: IConfigurableLibrary
   fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IConfigurableLibraryState
+  nameWithType: IConfigurableLibraryState
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryState
 - uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
   commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
   isExternal: false
@@ -127,6 +143,12 @@ references:
   name: IDefaultLibraryState
   nameWithType: IDefaultLibraryState
   fullName: Juhta.Net.LibraryManagement.IDefaultLibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary
+  isExternal: false
+  name: IDynamicConfigurableLibrary
+  nameWithType: IDynamicConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary
 - uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
   commentId: T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
   isExternal: false

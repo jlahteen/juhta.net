@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IClosableLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
     startLine: 13
   assemblies:
   - Juhta.Net
@@ -48,11 +48,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CloseLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
     startLine: 30
   assemblies:
   - Juhta.Net

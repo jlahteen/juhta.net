@@ -1,38 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Validation.ValidationException
-  commentId: T:Juhta.Net.Validation.ValidationException
-  id: ValidationException
-  parent: Juhta.Net.Validation
+- uid: Juhta.Net.Services.ServiceCreationException
+  commentId: T:Juhta.Net.Services.ServiceCreationException
+  id: ServiceCreationException
+  parent: Juhta.Net.Services
   children:
-  - Juhta.Net.Validation.ValidationException.#ctor(System.String)
+  - Juhta.Net.Services.ServiceCreationException.#ctor(System.String)
+  - Juhta.Net.Services.ServiceCreationException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
-  name: ValidationException
-  nameWithType: ValidationException
-  fullName: Juhta.Net.Validation.ValidationException
+  name: ServiceCreationException
+  nameWithType: ServiceCreationException
+  fullName: Juhta.Net.Services.ServiceCreationException
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Validation/ValidationException.cs
+      path: src/Juhta.Net/Services/ServiceCreationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: ValidationException
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/ValidationException.cs
-    startLine: 16
+    id: ServiceCreationException
+    path: ../src/Juhta.Net/Services/ServiceCreationException.cs
+    startLine: 15
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
-  summary: "\nThis exception will be thrown by instances of the <xref href=\"Juhta.Net.Validation.IValidator%601\" data-throw-if-not-resolved=\"false\"></xref> interface when they\nencounter invalid data.\n"
+  namespace: Juhta.Net.Services
+  summary: "\nThis exception will be thrown when an instance of a dependency injection service cannot be created.\n"
   example: []
   syntax:
-    content: 'public class ValidationException : Exception, ISerializable'
+    content: 'public class ServiceCreationException : Exception, ISerializable'
     content.vb: >-
-      Public Class ValidationException
-
+      Public Class ServiceCreationException
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -64,86 +63,88 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Validation.ValidationException.#ctor(System.String)
-  commentId: M:Juhta.Net.Validation.ValidationException.#ctor(System.String)
+- uid: Juhta.Net.Services.ServiceCreationException.#ctor(System.String)
+  commentId: M:Juhta.Net.Services.ServiceCreationException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Validation.ValidationException
+  parent: Juhta.Net.Services.ServiceCreationException
   langs:
   - csharp
   - vb
-  name: ValidationException(String)
-  nameWithType: ValidationException.ValidationException(String)
-  fullName: Juhta.Net.Validation.ValidationException.ValidationException(System.String)
+  name: ServiceCreationException(String)
+  nameWithType: ServiceCreationException.ServiceCreationException(String)
+  fullName: Juhta.Net.Services.ServiceCreationException.ServiceCreationException(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Validation/ValidationException.cs
+      path: src/Juhta.Net/Services/ServiceCreationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Validation/ValidationException.cs
-    startLine: 24
+    path: ../src/Juhta.Net/Services/ServiceCreationException.cs
+    startLine: 23
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Validation
+  namespace: Juhta.Net.Services
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public ValidationException(string message)
+    content: public ServiceCreationException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.Validation.ValidationException.#ctor*
+  overload: Juhta.Net.Services.ServiceCreationException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Services.ServiceCreationException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Services.ServiceCreationException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Juhta.Net.Services.ServiceCreationException
+  langs:
+  - csharp
+  - vb
+  name: ServiceCreationException(String, Exception)
+  nameWithType: ServiceCreationException.ServiceCreationException(String, Exception)
+  fullName: Juhta.Net.Services.ServiceCreationException.ServiceCreationException(System.String, System.Exception)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Services/ServiceCreationException.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Services/ServiceCreationException.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ServiceCreationException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    - id: innerException
+      type: System.Exception
+      description: Specifies an <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> object that relates to the error.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Juhta.Net.Services.ServiceCreationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.Validation.IValidator`1
-  commentId: T:Juhta.Net.Validation.IValidator`1
+- uid: Juhta.Net.Services
+  commentId: N:Juhta.Net.Services
   isExternal: false
-  name: IValidator<T>
-  nameWithType: IValidator<T>
-  fullName: Juhta.Net.Validation.IValidator<T>
-  nameWithType.vb: IValidator(Of T)
-  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
-  name.vb: IValidator(Of T)
-  spec.csharp:
-  - uid: Juhta.Net.Validation.IValidator`1
-    name: IValidator
-    nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Juhta.Net.Validation.IValidator`1
-    name: IValidator
-    nameWithType: IValidator
-    fullName: Juhta.Net.Validation.IValidator
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Juhta.Net.Validation
-  commentId: N:Juhta.Net.Validation
-  isExternal: false
-  name: Juhta.Net.Validation
-  nameWithType: Juhta.Net.Validation
-  fullName: Juhta.Net.Validation
+  name: Juhta.Net.Services
+  nameWithType: Juhta.Net.Services
+  fullName: Juhta.Net.Services
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -607,12 +608,12 @@ references:
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-- uid: Juhta.Net.Validation.ValidationException.#ctor*
-  commentId: Overload:Juhta.Net.Validation.ValidationException.#ctor
+- uid: Juhta.Net.Services.ServiceCreationException.#ctor*
+  commentId: Overload:Juhta.Net.Services.ServiceCreationException.#ctor
   isExternal: false
-  name: ValidationException
-  nameWithType: ValidationException.ValidationException
-  fullName: Juhta.Net.Validation.ValidationException.ValidationException
+  name: ServiceCreationException
+  nameWithType: ServiceCreationException.ServiceCreationException
+  fullName: Juhta.Net.Services.ServiceCreationException.ServiceCreationException
 - uid: System.String
   commentId: T:System.String
   parent: System

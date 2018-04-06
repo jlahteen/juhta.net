@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+      path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ILibraryHandle
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
     startLine: 14
   assemblies:
   - Juhta.Net
@@ -48,11 +48,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+      path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryFileName
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
     startLine: 21
   assemblies:
   - Juhta.Net

@@ -53,11 +53,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Trace
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 24
   assemblies:
   - Juhta.Net.Diagnostics
@@ -97,11 +97,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DecreaseRelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 31
   assemblies:
   - Juhta.Net.Diagnostics
@@ -131,11 +131,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Flush
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 42
   assemblies:
   - Juhta.Net.Diagnostics
@@ -165,11 +165,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IncreaseRelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 53
   assemblies:
   - Juhta.Net.Diagnostics
@@ -199,11 +199,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 64
   assemblies:
   - Juhta.Net.Diagnostics
@@ -236,11 +236,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Write
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 75
   assemblies:
   - Juhta.Net.Diagnostics
@@ -278,11 +278,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 86
   assemblies:
   - Juhta.Net.Diagnostics
@@ -312,11 +312,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 97
   assemblies:
   - Juhta.Net.Diagnostics
@@ -346,11 +346,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 108
   assemblies:
   - Juhta.Net.Diagnostics
@@ -383,11 +383,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 119
   assemblies:
   - Juhta.Net.Diagnostics
@@ -417,11 +417,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 130
   assemblies:
   - Juhta.Net.Diagnostics
@@ -454,11 +454,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 141
   assemblies:
   - Juhta.Net.Diagnostics
@@ -491,11 +491,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteException
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 152
   assemblies:
   - Juhta.Net.Diagnostics
@@ -528,11 +528,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 163
   assemblies:
   - Juhta.Net.Diagnostics
@@ -562,11 +562,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 174
   assemblies:
   - Juhta.Net.Diagnostics
@@ -599,11 +599,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 185
   assemblies:
   - Juhta.Net.Diagnostics
@@ -638,11 +638,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 196
   assemblies:
   - Juhta.Net.Diagnostics
@@ -679,11 +679,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 207
   assemblies:
   - Juhta.Net.Diagnostics
@@ -718,11 +718,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 218
   assemblies:
   - Juhta.Net.Diagnostics
@@ -757,11 +757,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 229
   assemblies:
   - Juhta.Net.Diagnostics
@@ -801,11 +801,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 240
   assemblies:
   - Juhta.Net.Diagnostics
@@ -835,11 +835,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 251
   assemblies:
   - Juhta.Net.Diagnostics
@@ -872,11 +872,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 262
   assemblies:
   - Juhta.Net.Diagnostics
@@ -914,11 +914,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 273
   assemblies:
   - Juhta.Net.Diagnostics
@@ -948,11 +948,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 284
   assemblies:
   - Juhta.Net.Diagnostics
@@ -985,11 +985,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 295
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1024,11 +1024,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 306
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1065,11 +1065,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 317
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1104,11 +1104,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteObjectGraph
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 328
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1143,11 +1143,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 339
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1177,11 +1177,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 350
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1214,11 +1214,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 361
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1251,11 +1251,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 372
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1285,11 +1285,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 383
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1324,11 +1324,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 394
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1363,11 +1363,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 405
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1404,11 +1404,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AbsoluteIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 420
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1443,11 +1443,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IsTracingOn
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 439
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1482,11 +1482,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RelativeIndent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 447
   assemblies:
   - Juhta.Net.Diagnostics
@@ -1521,11 +1521,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/Trace.cs
+      path: src/Juhta.Net.Diagnostics/Trace.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TraceDirectory
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/Trace.cs
+    path: ../src/Juhta.Net.Diagnostics/Trace.cs
     startLine: 474
   assemblies:
   - Juhta.Net.Diagnostics

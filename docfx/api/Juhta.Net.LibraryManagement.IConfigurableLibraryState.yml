@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  id: IConfigurableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  langs:
+  - csharp
+  - vb
+  name: IConfigurableLibraryState
+  nameWithType: IConfigurableLibraryState
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IConfigurableLibraryState
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for configurable library states.\n"
+  remarks: Configurable library states relate to dynamic configurable libraries.
+  example: []
+  syntax:
+    content: 'public interface IConfigurableLibraryState : ILibraryState'
+    content.vb: >-
+      Public Interface IConfigurableLibraryState
+          Inherits ILibraryState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  commentId: M:Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  id: Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryState
+  langs:
+  - csharp
+  - vb
+  name: Initialize(IConfigurationRoot)
+  nameWithType: IConfigurableLibraryState.Initialize(IConfigurationRoot)
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Initialize
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+    startLine: 27
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes the library state based on a specified configuration.\n"
+  remarks: >-
+    Initializing a library state means performing all necessary actions on the objects comprising the
+
+    library state so that the state is ready to be set as the effective library state.
+  example: []
+  syntax:
+    content: void Initialize(IConfigurationRoot config)
+    parameters:
+    - id: config
+      type: Microsoft.Extensions.Configuration.IConfigurationRoot
+      description: >-
+        Specifies an <xref href="Microsoft.Extensions.Configuration.IConfigurationRoot" data-throw-if-not-resolved="false"></xref> object containing a configuration for
+
+        the library state.
+    content.vb: Sub Initialize(config As IConfigurationRoot)
+  overload: Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Microsoft.Extensions.Configuration.IConfigurationRoot
+  commentId: T:Microsoft.Extensions.Configuration.IConfigurationRoot
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  name: IConfigurationRoot
+  nameWithType: IConfigurationRoot
+  fullName: Microsoft.Extensions.Configuration.IConfigurationRoot
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize*
+  commentId: Overload:Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize
+  isExternal: false
+  name: Initialize
+  nameWithType: IConfigurableLibraryState.Initialize
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryState.Initialize
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: false
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration

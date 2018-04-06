@@ -19,11 +19,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DateTimeExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 15
   assemblies:
   - Juhta.Net
@@ -64,11 +64,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToDigitTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -113,11 +113,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 36
   assemblies:
   - Juhta.Net
@@ -158,11 +158,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 48
   assemblies:
   - Juhta.Net
@@ -209,11 +209,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 61
   assemblies:
   - Juhta.Net
@@ -263,11 +263,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+      path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/DateTimeExtensions.cs
+    path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 75
   assemblies:
   - Juhta.Net

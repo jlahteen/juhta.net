@@ -5,23 +5,23 @@ items:
   id: EventLogger
   parent: Juhta.Net.Diagnostics
   children:
-  - Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage)
-  - Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+  - Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  - Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
   - Juhta.Net.Diagnostics.EventLogger.LogAlert(System.String)
   - Juhta.Net.Diagnostics.EventLogger.LogAlert(System.String,System.Object[])
-  - Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage)
-  - Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+  - Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   - Juhta.Net.Diagnostics.EventLogger.LogError(System.Exception)
   - Juhta.Net.Diagnostics.EventLogger.LogError(System.String)
   - Juhta.Net.Diagnostics.EventLogger.LogError(System.String,System.Object[])
-  - Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  - Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  - Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage)
-  - Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+  - Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  - Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  - Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  - Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
   - Juhta.Net.Diagnostics.EventLogger.LogInformation(System.String)
   - Juhta.Net.Diagnostics.EventLogger.LogInformation(System.String,System.Object[])
-  - Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage)
-  - Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+  - Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  - Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
   - Juhta.Net.Diagnostics.EventLogger.LogWarning(System.String)
   - Juhta.Net.Diagnostics.EventLogger.LogWarning(System.String,System.Object[])
   langs:
@@ -33,11 +33,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EventLogger
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 18
   assemblies:
   - Juhta.Net.Diagnostics
@@ -64,24 +64,24 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage)
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage)
-  id: LogAlert(Juhta.Net.Common.AlertMessage)
+- uid: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
+  id: LogAlert(Juhta.Net.Diagnostics.AlertMessage)
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogAlert(AlertMessage)
   nameWithType: EventLogger.LogAlert(AlertMessage)
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage)
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 26
   assemblies:
   - Juhta.Net.Diagnostics
@@ -92,7 +92,7 @@ items:
     content: public static void LogAlert(AlertMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.AlertMessage
+      type: Juhta.Net.Diagnostics.AlertMessage
       description: Specifies an AlertMessage object.
     content.vb: Public Shared Sub LogAlert(message As AlertMessage)
   overload: Juhta.Net.Diagnostics.EventLogger.LogAlert*
@@ -115,11 +115,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 35
   assemblies:
   - Juhta.Net.Diagnostics
@@ -140,24 +140,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
-  id: LogAlert(Juhta.Net.Common.AlertMessage,System.Object[])
+- uid: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
+  id: LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogAlert(AlertMessage, Object[])
   nameWithType: EventLogger.LogAlert(AlertMessage, Object[])
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 47
   assemblies:
   - Juhta.Net.Diagnostics
@@ -168,7 +168,7 @@ items:
     content: public static void LogAlert(AlertMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.AlertMessage
+      type: Juhta.Net.Diagnostics.AlertMessage
       description: >-
         Specifies an AlertMessage object whose Message property contains zero or more format
 
@@ -188,7 +188,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Common.AlertMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage, System.Object())
   name.vb: LogAlert(AlertMessage, Object())
 - uid: Juhta.Net.Diagnostics.EventLogger.LogAlert(System.String,System.Object[])
   commentId: M:Juhta.Net.Diagnostics.EventLogger.LogAlert(System.String,System.Object[])
@@ -203,11 +203,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 58
   assemblies:
   - Juhta.Net.Diagnostics
@@ -237,24 +237,24 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogAlert(System.String, System.Object())
   name.vb: LogAlert(String, Object())
-- uid: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage)
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage)
-  id: LogError(Juhta.Net.Common.ErrorMessage)
+- uid: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
+  id: LogError(Juhta.Net.Diagnostics.ErrorMessage)
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogError(ErrorMessage)
   nameWithType: EventLogger.LogError(ErrorMessage)
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage)
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 67
   assemblies:
   - Juhta.Net.Diagnostics
@@ -265,7 +265,7 @@ items:
     content: public static void LogError(ErrorMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
       description: Specifies an ErrorMessage object.
     content.vb: Public Shared Sub LogError(message As ErrorMessage)
   overload: Juhta.Net.Diagnostics.EventLogger.LogError*
@@ -288,11 +288,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 77
   assemblies:
   - Juhta.Net.Diagnostics
@@ -329,11 +329,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 86
   assemblies:
   - Juhta.Net.Diagnostics
@@ -354,24 +354,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
-  id: LogError(Juhta.Net.Common.ErrorMessage,System.Object[])
+- uid: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
+  id: LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogError(ErrorMessage, Object[])
   nameWithType: EventLogger.LogError(ErrorMessage, Object[])
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 98
   assemblies:
   - Juhta.Net.Diagnostics
@@ -382,7 +382,7 @@ items:
     content: public static void LogError(ErrorMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.ErrorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
       description: >-
         Specifies an ErrorMessage object whose Message property contains zero or more format
 
@@ -402,7 +402,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Common.ErrorMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogError(Juhta.Net.Diagnostics.ErrorMessage, System.Object())
   name.vb: LogError(ErrorMessage, Object())
 - uid: Juhta.Net.Diagnostics.EventLogger.LogError(System.String,System.Object[])
   commentId: M:Juhta.Net.Diagnostics.EventLogger.LogError(System.String,System.Object[])
@@ -417,11 +417,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 109
   assemblies:
   - Juhta.Net.Diagnostics
@@ -451,24 +451,24 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogError(System.String, System.Object())
   name.vb: LogError(String, Object())
-- uid: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
-  id: LogEvent(Juhta.Net.Common.DiagnosticMessage)
+- uid: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
+  id: LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogEvent(DiagnosticMessage)
   nameWithType: EventLogger.LogEvent(DiagnosticMessage)
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage)
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 118
   assemblies:
   - Juhta.Net.Diagnostics
@@ -479,7 +479,7 @@ items:
     content: public static void LogEvent(DiagnosticMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.DiagnosticMessage
+      type: Juhta.Net.Diagnostics.DiagnosticMessage
       description: Specifies a DiagnosticMessage object.
     content.vb: Public Shared Sub LogEvent(message As DiagnosticMessage)
   overload: Juhta.Net.Diagnostics.EventLogger.LogEvent*
@@ -489,24 +489,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
-  id: LogEvent(Juhta.Net.Common.DiagnosticMessage,System.Object[])
+- uid: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
+  id: LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogEvent(DiagnosticMessage, Object[])
   nameWithType: EventLogger.LogEvent(DiagnosticMessage, Object[])
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 130
   assemblies:
   - Juhta.Net.Diagnostics
@@ -517,7 +517,7 @@ items:
     content: public static void LogEvent(DiagnosticMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.DiagnosticMessage
+      type: Juhta.Net.Diagnostics.DiagnosticMessage
       description: >-
         Specifies a DiagnosticMessage object whose Message property contains zero or more
 
@@ -537,26 +537,26 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Common.DiagnosticMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage, System.Object())
   name.vb: LogEvent(DiagnosticMessage, Object())
-- uid: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage)
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage)
-  id: LogInformation(Juhta.Net.Common.InformationMessage)
+- uid: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
+  id: LogInformation(Juhta.Net.Diagnostics.InformationMessage)
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogInformation(InformationMessage)
   nameWithType: EventLogger.LogInformation(InformationMessage)
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage)
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 139
   assemblies:
   - Juhta.Net.Diagnostics
@@ -567,7 +567,7 @@ items:
     content: public static void LogInformation(InformationMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.InformationMessage
+      type: Juhta.Net.Diagnostics.InformationMessage
       description: Specifies an InformationMessage object.
     content.vb: Public Shared Sub LogInformation(message As InformationMessage)
   overload: Juhta.Net.Diagnostics.EventLogger.LogInformation*
@@ -590,11 +590,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 148
   assemblies:
   - Juhta.Net.Diagnostics
@@ -615,24 +615,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
-  id: LogInformation(Juhta.Net.Common.InformationMessage,System.Object[])
+- uid: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
+  id: LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogInformation(InformationMessage, Object[])
   nameWithType: EventLogger.LogInformation(InformationMessage, Object[])
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 160
   assemblies:
   - Juhta.Net.Diagnostics
@@ -643,7 +643,7 @@ items:
     content: public static void LogInformation(InformationMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.InformationMessage
+      type: Juhta.Net.Diagnostics.InformationMessage
       description: >-
         Specifies an InformationMessage object whose Message property contains zero or more
 
@@ -663,7 +663,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Common.InformationMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage, System.Object())
   name.vb: LogInformation(InformationMessage, Object())
 - uid: Juhta.Net.Diagnostics.EventLogger.LogInformation(System.String,System.Object[])
   commentId: M:Juhta.Net.Diagnostics.EventLogger.LogInformation(System.String,System.Object[])
@@ -678,11 +678,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 171
   assemblies:
   - Juhta.Net.Diagnostics
@@ -725,11 +725,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 180
   assemblies:
   - Juhta.Net.Diagnostics
@@ -750,24 +750,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage)
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage)
-  id: LogWarning(Juhta.Net.Common.WarningMessage)
+- uid: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
+  id: LogWarning(Juhta.Net.Diagnostics.WarningMessage)
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogWarning(WarningMessage)
   nameWithType: EventLogger.LogWarning(WarningMessage)
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage)
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 189
   assemblies:
   - Juhta.Net.Diagnostics
@@ -778,7 +778,7 @@ items:
     content: public static void LogWarning(WarningMessage message)
     parameters:
     - id: message
-      type: Juhta.Net.Common.WarningMessage
+      type: Juhta.Net.Diagnostics.WarningMessage
       description: Specifies a WarningMessage object.
     content.vb: Public Shared Sub LogWarning(message As WarningMessage)
   overload: Juhta.Net.Diagnostics.EventLogger.LogWarning*
@@ -801,11 +801,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 200
   assemblies:
   - Juhta.Net.Diagnostics
@@ -835,24 +835,24 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogWarning(System.String, System.Object())
   name.vb: LogWarning(String, Object())
-- uid: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
-  id: LogWarning(Juhta.Net.Common.WarningMessage,System.Object[])
+- uid: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
+  id: LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])
   parent: Juhta.Net.Diagnostics.EventLogger
   langs:
   - csharp
   - vb
   name: LogWarning(WarningMessage, Object[])
   nameWithType: EventLogger.LogWarning(WarningMessage, Object[])
-  fullName: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object[])
+  fullName: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object[])
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net.Diagnostics/EventLogger.cs
+      path: src/Juhta.Net.Diagnostics/EventLogger.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
-    path: ../../Juhta.NET/Source/Juhta.Net.Diagnostics/EventLogger.cs
+    path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
     startLine: 212
   assemblies:
   - Juhta.Net.Diagnostics
@@ -863,7 +863,7 @@ items:
     content: public static void LogWarning(WarningMessage message, params object[] args)
     parameters:
     - id: message
-      type: Juhta.Net.Common.WarningMessage
+      type: Juhta.Net.Diagnostics.WarningMessage
       description: >-
         Specifies a WarningMessage object whose Message property contains zero or more format
 
@@ -883,7 +883,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Common.WarningMessage, System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.EventLogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage, System.Object())
   name.vb: LogWarning(WarningMessage, Object())
 references:
 - uid: Juhta.Net.Diagnostics
@@ -1190,19 +1190,13 @@ references:
   name: LogAlert
   nameWithType: EventLogger.LogAlert
   fullName: Juhta.Net.Diagnostics.EventLogger.LogAlert
-- uid: Juhta.Net.Common.AlertMessage
-  commentId: T:Juhta.Net.Common.AlertMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.AlertMessage
+  commentId: T:Juhta.Net.Diagnostics.AlertMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: AlertMessage
   nameWithType: AlertMessage
-  fullName: Juhta.Net.Common.AlertMessage
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
-  isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  fullName: Juhta.Net.Diagnostics.AlertMessage
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1241,13 +1235,13 @@ references:
   name: LogError
   nameWithType: EventLogger.LogError
   fullName: Juhta.Net.Diagnostics.EventLogger.LogError
-- uid: Juhta.Net.Common.ErrorMessage
-  commentId: T:Juhta.Net.Common.ErrorMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: ErrorMessage
   nameWithType: ErrorMessage
-  fullName: Juhta.Net.Common.ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
 - uid: System.Exception
   commentId: T:System.Exception
   parent: System
@@ -1261,36 +1255,36 @@ references:
   name: LogEvent
   nameWithType: EventLogger.LogEvent
   fullName: Juhta.Net.Diagnostics.EventLogger.LogEvent
-- uid: Juhta.Net.Common.DiagnosticMessage
-  commentId: T:Juhta.Net.Common.DiagnosticMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: DiagnosticMessage
   nameWithType: DiagnosticMessage
-  fullName: Juhta.Net.Common.DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage
 - uid: Juhta.Net.Diagnostics.EventLogger.LogInformation*
   commentId: Overload:Juhta.Net.Diagnostics.EventLogger.LogInformation
   isExternal: false
   name: LogInformation
   nameWithType: EventLogger.LogInformation
   fullName: Juhta.Net.Diagnostics.EventLogger.LogInformation
-- uid: Juhta.Net.Common.InformationMessage
-  commentId: T:Juhta.Net.Common.InformationMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.InformationMessage
+  commentId: T:Juhta.Net.Diagnostics.InformationMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: InformationMessage
   nameWithType: InformationMessage
-  fullName: Juhta.Net.Common.InformationMessage
+  fullName: Juhta.Net.Diagnostics.InformationMessage
 - uid: Juhta.Net.Diagnostics.EventLogger.LogWarning*
   commentId: Overload:Juhta.Net.Diagnostics.EventLogger.LogWarning
   isExternal: false
   name: LogWarning
   nameWithType: EventLogger.LogWarning
   fullName: Juhta.Net.Diagnostics.EventLogger.LogWarning
-- uid: Juhta.Net.Common.WarningMessage
-  commentId: T:Juhta.Net.Common.WarningMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.WarningMessage
+  commentId: T:Juhta.Net.Diagnostics.WarningMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: WarningMessage
   nameWithType: WarningMessage
-  fullName: Juhta.Net.Common.WarningMessage
+  fullName: Juhta.Net.Diagnostics.WarningMessage

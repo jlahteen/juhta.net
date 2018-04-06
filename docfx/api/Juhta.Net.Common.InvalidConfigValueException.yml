@@ -15,24 +15,22 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/InvalidConfigValueException.cs
+      path: src/Juhta.Net/Common/InvalidConfigValueException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: InvalidConfigValueException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InvalidConfigValueException.cs
+    path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
     startLine: 16
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when an XML configuration file has passed schema validation but in further\nanalysis an invalid configuration value is encountered.\n"
+  summary: "\nThis exception will be thrown when a configuration file has passed schema validation but in further processing\nan invalid configuration value is encountered.\n"
   example: []
   syntax:
     content: 'public class InvalidConfigValueException : Exception, ISerializable'
     content.vb: >-
       Public Class InvalidConfigValueException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -77,11 +75,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/InvalidConfigValueException.cs
+      path: src/Juhta.Net/Common/InvalidConfigValueException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InvalidConfigValueException.cs
+    path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
     startLine: 24
   assemblies:
   - Juhta.Net

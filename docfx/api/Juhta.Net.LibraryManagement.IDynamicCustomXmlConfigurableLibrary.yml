@@ -16,11 +16,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicCustomXmlConfigurableLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -28,16 +28,15 @@ items:
   summary: "\nDefines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML\nconfigurable library if it is dynamic, configurable and the configuration is done with a custom XML\nconfiguration.\n"
   example: []
   syntax:
-    content: 'public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibrary'
+    content: 'public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IDynamicCustomXmlConfigurableLibrary
-
-          Inherits IDynamicLibrary, IConfigurableLibrary
+          Inherits IDynamicLibrary, IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
   - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
   - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
-  - Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
   modifiers.csharp:
   - public
   - interface
@@ -57,11 +56,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateLibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 25
   assemblies:
   - Juhta.Net
@@ -88,11 +87,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetConfigSchemas
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 33
   assemblies:
   - Juhta.Net
@@ -168,13 +167,13 @@ references:
   name: LibraryStateLock
   nameWithType: IDynamicLibrary.LibraryStateLock
   fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
-- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-  parent: Juhta.Net.LibraryManagement.IConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
   isExternal: false
   name: ConfigFileName
-  nameWithType: IConfigurableLibrary.ConfigFileName
-  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
 - uid: Juhta.Net.LibraryManagement.IDynamicLibrary
   commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
   parent: Juhta.Net.LibraryManagement
@@ -182,13 +181,13 @@ references:
   name: IDynamicLibrary
   nameWithType: IDynamicLibrary
   fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
-- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary
-  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibrary
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
   parent: Juhta.Net.LibraryManagement
   isExternal: false
-  name: IConfigurableLibrary
-  nameWithType: IConfigurableLibrary
-  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
 - uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
   commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
   parent: Juhta.Net.LibraryManagement

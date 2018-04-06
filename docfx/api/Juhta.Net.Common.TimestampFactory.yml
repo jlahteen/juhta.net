@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/TimestampFactory.cs
+      path: src/Juhta.Net/Common/TimestampFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TimestampFactory
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/TimestampFactory.cs
+    path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -59,11 +59,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/TimestampFactory.cs
+      path: src/Juhta.Net/Common/TimestampFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/TimestampFactory.cs
+    path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 24
   assemblies:
   - Juhta.Net
@@ -91,11 +91,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/TimestampFactory.cs
+      path: src/Juhta.Net/Common/TimestampFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetUniqueTimestamp
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/TimestampFactory.cs
+    path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 43
   assemblies:
   - Juhta.Net

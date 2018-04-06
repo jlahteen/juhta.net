@@ -10,6 +10,7 @@ items:
   - Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetVersion(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.LoadEmbeddedResourceFile(System.Reflection.Assembly,System.String)
@@ -23,12 +24,12 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 17
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 18
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -68,12 +69,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetCompany
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 68
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 69
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -113,12 +114,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetCopyright
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 83
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 84
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -158,12 +159,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetDescription
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 98
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 99
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -203,12 +204,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetDirectory
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 113
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 114
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -248,12 +249,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetProduct
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 127
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 128
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -279,6 +280,51 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)
+  id: GetProductVersion(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProductVersion(Assembly)
+  nameWithType: AssemblyExtensions.GetProductVersion(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetProductVersion
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 143
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the product version associated with the current assembly.\n"
+  example: []
+  syntax:
+    content: public static string GetProductVersion(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the product version associated with the current assembly.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetProductVersion(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
   commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
   id: GetTitle(System.Reflection.Assembly)
@@ -293,12 +339,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetTitle
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 142
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 155
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -338,12 +384,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetVersion
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 157
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 170
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -383,12 +429,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LoadEmbeddedResourceFile
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 177
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 190
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -435,12 +481,12 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AssemblyExtensions.cs
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LoadEmbeddedResourceFile
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 190
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 203
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -824,6 +870,12 @@ references:
   name: GetProduct
   nameWithType: AssemblyExtensions.GetProduct
   fullName: Juhta.Net.Extensions.AssemblyExtensions.GetProduct
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion
+  isExternal: false
+  name: GetProductVersion
+  nameWithType: AssemblyExtensions.GetProductVersion
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion
 - uid: Juhta.Net.Extensions.AssemblyExtensions.GetTitle*
   commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetTitle
   isExternal: false

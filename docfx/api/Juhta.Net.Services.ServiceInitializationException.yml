@@ -1,39 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Common.CommandLineArgException
-  commentId: T:Juhta.Net.Common.CommandLineArgException
-  id: CommandLineArgException
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Services.ServiceInitializationException
+  commentId: T:Juhta.Net.Services.ServiceInitializationException
+  id: ServiceInitializationException
+  parent: Juhta.Net.Services
   children:
-  - Juhta.Net.Common.CommandLineArgException.#ctor(System.String)
-  - Juhta.Net.Common.CommandLineArgException.#ctor(System.String,System.Exception)
+  - Juhta.Net.Services.ServiceInitializationException.#ctor(System.String)
+  - Juhta.Net.Services.ServiceInitializationException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
-  name: CommandLineArgException
-  nameWithType: CommandLineArgException
-  fullName: Juhta.Net.Common.CommandLineArgException
+  name: ServiceInitializationException
+  nameWithType: ServiceInitializationException
+  fullName: Juhta.Net.Services.ServiceInitializationException
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineArgException.cs
+      path: src/Juhta.Net/Services/ServiceInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: CommandLineArgException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgException.cs
+    id: ServiceInitializationException
+    path: ../src/Juhta.Net/Services/ServiceInitializationException.cs
     startLine: 15
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when an invalid argument is encountered in command line parsing.\n"
+  namespace: Juhta.Net.Services
+  summary: "\nThis exception will be thrown when a dependency injection service cannot be initialized.\n"
   example: []
   syntax:
-    content: 'public class CommandLineArgException : Exception, ISerializable'
+    content: 'public class ServiceInitializationException : Exception, ISerializable'
     content.vb: >-
-      Public Class CommandLineArgException
-
+      Public Class ServiceInitializationException
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -65,88 +63,88 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Common.CommandLineArgException.#ctor(System.String)
-  commentId: M:Juhta.Net.Common.CommandLineArgException.#ctor(System.String)
+- uid: Juhta.Net.Services.ServiceInitializationException.#ctor(System.String)
+  commentId: M:Juhta.Net.Services.ServiceInitializationException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Common.CommandLineArgException
+  parent: Juhta.Net.Services.ServiceInitializationException
   langs:
   - csharp
   - vb
-  name: CommandLineArgException(String)
-  nameWithType: CommandLineArgException.CommandLineArgException(String)
-  fullName: Juhta.Net.Common.CommandLineArgException.CommandLineArgException(System.String)
+  name: ServiceInitializationException(String)
+  nameWithType: ServiceInitializationException.ServiceInitializationException(String)
+  fullName: Juhta.Net.Services.ServiceInitializationException.ServiceInitializationException(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineArgException.cs
+      path: src/Juhta.Net/Services/ServiceInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgException.cs
+    path: ../src/Juhta.Net/Services/ServiceInitializationException.cs
     startLine: 23
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Services
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public CommandLineArgException(string message)
+    content: public ServiceInitializationException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.Common.CommandLineArgException.#ctor*
+  overload: Juhta.Net.Services.ServiceInitializationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Common.CommandLineArgException.#ctor(System.String,System.Exception)
-  commentId: M:Juhta.Net.Common.CommandLineArgException.#ctor(System.String,System.Exception)
+- uid: Juhta.Net.Services.ServiceInitializationException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Services.ServiceInitializationException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
-  parent: Juhta.Net.Common.CommandLineArgException
+  parent: Juhta.Net.Services.ServiceInitializationException
   langs:
   - csharp
   - vb
-  name: CommandLineArgException(String, Exception)
-  nameWithType: CommandLineArgException.CommandLineArgException(String, Exception)
-  fullName: Juhta.Net.Common.CommandLineArgException.CommandLineArgException(System.String, System.Exception)
+  name: ServiceInitializationException(String, Exception)
+  nameWithType: ServiceInitializationException.ServiceInitializationException(String, Exception)
+  fullName: Juhta.Net.Services.ServiceInitializationException.ServiceInitializationException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineArgException.cs
+      path: src/Juhta.Net/Services/ServiceInitializationException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineArgException.cs
+    path: ../src/Juhta.Net/Services/ServiceInitializationException.cs
     startLine: 31
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Services
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public CommandLineArgException(string message, Exception innerException)
+    content: public ServiceInitializationException(string message, Exception innerException)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     - id: innerException
       type: System.Exception
-      description: Specifies an inner exception.
+      description: Specifies an <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> object that relates to the error.
     content.vb: Public Sub New(message As String, innerException As Exception)
-  overload: Juhta.Net.Common.CommandLineArgException.#ctor*
+  overload: Juhta.Net.Services.ServiceInitializationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+- uid: Juhta.Net.Services
+  commentId: N:Juhta.Net.Services
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Services
+  nameWithType: Juhta.Net.Services
+  fullName: Juhta.Net.Services
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -610,12 +608,12 @@ references:
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-- uid: Juhta.Net.Common.CommandLineArgException.#ctor*
-  commentId: Overload:Juhta.Net.Common.CommandLineArgException.#ctor
+- uid: Juhta.Net.Services.ServiceInitializationException.#ctor*
+  commentId: Overload:Juhta.Net.Services.ServiceInitializationException.#ctor
   isExternal: false
-  name: CommandLineArgException
-  nameWithType: CommandLineArgException.CommandLineArgException
-  fullName: Juhta.Net.Common.CommandLineArgException.CommandLineArgException
+  name: ServiceInitializationException
+  nameWithType: ServiceInitializationException.ServiceInitializationException
+  fullName: Juhta.Net.Services.ServiceInitializationException.ServiceInitializationException
 - uid: System.String
   commentId: T:System.String
   parent: System

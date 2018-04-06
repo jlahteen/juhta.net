@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+      path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FileStreamExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+    path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -63,11 +63,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+      path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Lock
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+    path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -108,11 +108,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+      path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Lock
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+    path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 38
   assemblies:
   - Juhta.Net
@@ -159,11 +159,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+      path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TryLock
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+    path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 90
   assemblies:
   - Juhta.Net
@@ -207,11 +207,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+      path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: TryLock
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/FileStreamExtensions.cs
+    path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 114
   assemblies:
   - Juhta.Net

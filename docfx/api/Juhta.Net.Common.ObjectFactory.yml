@@ -21,11 +21,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ObjectFactory
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 21
   assemblies:
   - Juhta.Net
@@ -65,11 +65,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 35
   assemblies:
   - Juhta.Net
@@ -123,11 +123,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 52
   assemblies:
   - Juhta.Net
@@ -187,11 +187,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 74
   assemblies:
   - Juhta.Net
@@ -237,11 +237,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 90
   assemblies:
   - Juhta.Net
@@ -297,11 +297,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 107
   assemblies:
   - Juhta.Net
@@ -353,11 +353,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 123
   assemblies:
   - Juhta.Net
@@ -415,11 +415,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/ObjectFactory.cs
+      path: src/Juhta.Net/Common/ObjectFactory.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/ObjectFactory.cs
+    path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 138
   assemblies:
   - Juhta.Net

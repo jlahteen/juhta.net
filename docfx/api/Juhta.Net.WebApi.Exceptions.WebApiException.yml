@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: WebApiException
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
     startLine: 16
   assemblies:
   - Juhta.Net.WebApi
@@ -84,11 +84,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: HttpStatusCode
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
     startLine: 23
   assemblies:
   - Juhta.Net.WebApi
@@ -121,11 +121,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
     startLine: 37
   assemblies:
   - Juhta.Net.WebApi
@@ -157,11 +157,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/WebApiException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/WebApiException.cs
     startLine: 45
   assemblies:
   - Juhta.Net.WebApi

@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/ArrayExtensions.cs
+      path: src/Juhta.Net/Extensions/ArrayExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ArrayExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/ArrayExtensions.cs
+    path: ../src/Juhta.Net/Extensions/ArrayExtensions.cs
     startLine: 15
   assemblies:
   - Juhta.Net
@@ -60,11 +60,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/ArrayExtensions.cs
+      path: src/Juhta.Net/Extensions/ArrayExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToStringArray
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/ArrayExtensions.cs
+    path: ../src/Juhta.Net/Extensions/ArrayExtensions.cs
     startLine: 24
   assemblies:
   - Juhta.Net

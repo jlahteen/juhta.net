@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EventHandlerExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 15
   assemblies:
   - Juhta.Net
@@ -61,11 +61,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RaiseEvent
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 24
   assemblies:
   - Juhta.Net
@@ -106,11 +106,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RaiseEvent
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 37
   assemblies:
   - Juhta.Net

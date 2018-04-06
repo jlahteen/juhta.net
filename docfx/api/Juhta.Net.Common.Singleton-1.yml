@@ -5,8 +5,8 @@ items:
   id: Singleton`1
   parent: Juhta.Net.Common
   children:
-  - Juhta.Net.Common.Singleton`1.ClearSingletonInstance
   - Juhta.Net.Common.Singleton`1.Instance
+  - Juhta.Net.Common.Singleton`1.ResetSingletonInstance
   - Juhta.Net.Common.Singleton`1.s_instance
   - Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
   langs:
@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/Singleton.cs
+      path: src/Juhta.Net/Common/Singleton.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Singleton
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Singleton.cs
+    path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -39,6 +39,7 @@ items:
   - System.Object
   derivedClasses:
   - Juhta.Net.Application
+  - Juhta.Net.Services.ServiceFactory
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -71,11 +72,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/Singleton.cs
+      path: src/Juhta.Net/Common/Singleton.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Instance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Singleton.cs
+    path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 35
   assemblies:
   - Juhta.Net
@@ -99,40 +100,40 @@ items:
   - Shared
   - ReadOnly
   fullName.vb: Juhta.Net.Common.Singleton(Of T).Instance
-- uid: Juhta.Net.Common.Singleton`1.ClearSingletonInstance
-  commentId: M:Juhta.Net.Common.Singleton`1.ClearSingletonInstance
-  id: ClearSingletonInstance
+- uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  commentId: M:Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  id: ResetSingletonInstance
   parent: Juhta.Net.Common.Singleton`1
   langs:
   - csharp
   - vb
-  name: ClearSingletonInstance()
-  nameWithType: Singleton<T>.ClearSingletonInstance()
-  fullName: Juhta.Net.Common.Singleton<T>.ClearSingletonInstance()
+  name: ResetSingletonInstance()
+  nameWithType: Singleton<T>.ResetSingletonInstance()
+  fullName: Juhta.Net.Common.Singleton<T>.ResetSingletonInstance()
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Singleton.cs
+      path: src/Juhta.Net/Common/Singleton.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: ClearSingletonInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Singleton.cs
+    id: ResetSingletonInstance
+    path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 53
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nClears the singleton instance.\n"
+  summary: "\nSets a null value as the singleton instance.\n"
   example: []
   syntax:
-    content: protected void ClearSingletonInstance()
-    content.vb: Protected Sub ClearSingletonInstance
-  overload: Juhta.Net.Common.Singleton`1.ClearSingletonInstance*
-  nameWithType.vb: Singleton(Of T).ClearSingletonInstance()
+    content: protected void ResetSingletonInstance()
+    content.vb: Protected Sub ResetSingletonInstance
+  overload: Juhta.Net.Common.Singleton`1.ResetSingletonInstance*
+  nameWithType.vb: Singleton(Of T).ResetSingletonInstance()
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: Juhta.Net.Common.Singleton(Of T).ClearSingletonInstance()
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).ResetSingletonInstance()
 - uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
   commentId: M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
   id: SetSingletonInstance(`0)
@@ -146,16 +147,16 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/Singleton.cs
+      path: src/Juhta.Net/Common/Singleton.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SetSingletonInstance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Singleton.cs
+    path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 66
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nSets the singleton instance.\n"
+  summary: "\nSets a specified value as the singleton instance.\n"
   example: []
   syntax:
     content: protected void SetSingletonInstance(T instance)
@@ -187,11 +188,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/Singleton.cs
+      path: src/Juhta.Net/Common/Singleton.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: s_instance
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Singleton.cs
+    path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 84
   assemblies:
   - Juhta.Net
@@ -529,14 +530,14 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: Juhta.Net.Common.Singleton`1.ClearSingletonInstance*
-  commentId: Overload:Juhta.Net.Common.Singleton`1.ClearSingletonInstance
+- uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance*
+  commentId: Overload:Juhta.Net.Common.Singleton`1.ResetSingletonInstance
   isExternal: false
-  name: ClearSingletonInstance
-  nameWithType: Singleton<T>.ClearSingletonInstance
-  fullName: Juhta.Net.Common.Singleton<T>.ClearSingletonInstance
-  nameWithType.vb: Singleton(Of T).ClearSingletonInstance
-  fullName.vb: Juhta.Net.Common.Singleton(Of T).ClearSingletonInstance
+  name: ResetSingletonInstance
+  nameWithType: Singleton<T>.ResetSingletonInstance
+  fullName: Juhta.Net.Common.Singleton<T>.ResetSingletonInstance
+  nameWithType.vb: Singleton(Of T).ResetSingletonInstance
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).ResetSingletonInstance
 - uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance*
   commentId: Overload:Juhta.Net.Common.Singleton`1.SetSingletonInstance
   isExternal: false

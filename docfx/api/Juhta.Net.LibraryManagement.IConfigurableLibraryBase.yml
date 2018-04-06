@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  id: IConfigurableLibraryBase
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  langs:
+  - csharp
+  - vb
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: IConfigurableLibraryBase
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines a base interface for configurable libraries. A library is configurable if it requires specific startup\noperations and those operations need configuration.\n"
+  example: []
+  syntax:
+    content: public interface IConfigurableLibraryBase
+    content.vb: Public Interface IConfigurableLibraryBase
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  id: ConfigFileName
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  langs:
+  - csharp
+  - vb
+  name: ConfigFileName
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ConfigFileName
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets the name of the configuration file.\n"
+  remarks: >-
+    This property can return null, but in this case the configuration file name must be specified in
+
+    the core library&apos;s configuration (in the application node or in the corresponding library node).
+  example: []
+  syntax:
+    content: string ConfigFileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property ConfigFileName As String
+  overload: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName*
+  commentId: Overload:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  isExternal: false
+  name: ConfigFileName
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

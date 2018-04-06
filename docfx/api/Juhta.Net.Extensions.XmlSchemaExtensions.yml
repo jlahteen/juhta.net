@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: XmlSchemaExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -60,11 +60,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+      path: src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttributeDefaultValue
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/XmlSchemaExtensions.cs
+    path: ../src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
     startLine: 28
   assemblies:
   - Juhta.Net

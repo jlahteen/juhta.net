@@ -1,0 +1,491 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Services.ConstructorParam
+  commentId: T:Juhta.Net.Services.ConstructorParam
+  id: ConstructorParam
+  parent: Juhta.Net.Services
+  children:
+  - Juhta.Net.Services.ConstructorParam.Name
+  - Juhta.Net.Services.ConstructorParam.Type
+  - Juhta.Net.Services.ConstructorParam.Value
+  langs:
+  - csharp
+  - vb
+  name: ConstructorParam
+  nameWithType: ConstructorParam
+  fullName: Juhta.Net.Services.ConstructorParam
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Services/ConstructorParam.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ConstructorParam
+    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    startLine: 20
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nDefines a class that represents a single parameter used in constructors of dependency injection services.\n"
+  example: []
+  syntax:
+    content: public class ConstructorParam
+    content.vb: Public Class ConstructorParam
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Services.ConstructorParam.Name
+  commentId: P:Juhta.Net.Services.ConstructorParam.Name
+  id: Name
+  parent: Juhta.Net.Services.ConstructorParam
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ConstructorParam.Name
+  fullName: Juhta.Net.Services.ConstructorParam.Name
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/ConstructorParam.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Name
+    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    startLine: 27
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the name of the constructor parameter.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Juhta.Net.Services.ConstructorParam.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Services.ConstructorParam.Type
+  commentId: P:Juhta.Net.Services.ConstructorParam.Type
+  id: Type
+  parent: Juhta.Net.Services.ConstructorParam
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: ConstructorParam.Type
+  fullName: Juhta.Net.Services.ConstructorParam.Type
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/ConstructorParam.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Type
+    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    startLine: 35
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the type of the constructor parameter.\n"
+  example: []
+  syntax:
+    content: public ConstructorParamType Type { get; }
+    parameters: []
+    return:
+      type: Juhta.Net.Services.ConstructorParamType
+    content.vb: Public ReadOnly Property Type As ConstructorParamType
+  overload: Juhta.Net.Services.ConstructorParam.Type*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Services.ConstructorParam.Value
+  commentId: P:Juhta.Net.Services.ConstructorParam.Value
+  id: Value
+  parent: Juhta.Net.Services.ConstructorParam
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ConstructorParam.Value
+  fullName: Juhta.Net.Services.ConstructorParam.Value
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/ConstructorParam.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Value
+    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    startLine: 43
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the value of the constructor parameter.\n"
+  example: []
+  syntax:
+    content: public object Value { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property Value As Object
+  overload: Juhta.Net.Services.ConstructorParam.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Juhta.Net.Services
+  commentId: N:Juhta.Net.Services
+  isExternal: false
+  name: Juhta.Net.Services
+  nameWithType: Juhta.Net.Services
+  fullName: Juhta.Net.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Services.ConstructorParam.Name*
+  commentId: Overload:Juhta.Net.Services.ConstructorParam.Name
+  isExternal: false
+  name: Name
+  nameWithType: ConstructorParam.Name
+  fullName: Juhta.Net.Services.ConstructorParam.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Services.ConstructorParam.Type*
+  commentId: Overload:Juhta.Net.Services.ConstructorParam.Type
+  isExternal: false
+  name: Type
+  nameWithType: ConstructorParam.Type
+  fullName: Juhta.Net.Services.ConstructorParam.Type
+- uid: Juhta.Net.Services.ConstructorParamType
+  commentId: T:Juhta.Net.Services.ConstructorParamType
+  parent: Juhta.Net.Services
+  isExternal: false
+  name: ConstructorParamType
+  nameWithType: ConstructorParamType
+  fullName: Juhta.Net.Services.ConstructorParamType
+- uid: Juhta.Net.Services.ConstructorParam.Value*
+  commentId: Overload:Juhta.Net.Services.ConstructorParam.Value
+  isExternal: false
+  name: Value
+  nameWithType: ConstructorParam.Value
+  fullName: Juhta.Net.Services.ConstructorParam.Value

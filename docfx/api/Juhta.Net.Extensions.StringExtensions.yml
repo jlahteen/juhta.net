@@ -31,11 +31,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: StringExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -76,11 +76,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ContainsWhitespaces
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -121,11 +121,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EnsureEnd
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 41
   assemblies:
   - Juhta.Net
@@ -169,11 +169,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EnsureEnd
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 53
   assemblies:
   - Juhta.Net
@@ -220,11 +220,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FromBase64String
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 74
   assemblies:
   - Juhta.Net
@@ -266,11 +266,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IsMatch
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 88
   assemblies:
   - Juhta.Net
@@ -317,11 +317,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveEnd
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 101
   assemblies:
   - Juhta.Net
@@ -369,11 +369,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveEnd
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 114
   assemblies:
   - Juhta.Net
@@ -423,11 +423,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveStart
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 130
   assemblies:
   - Juhta.Net
@@ -475,11 +475,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveStart
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 143
   assemblies:
   - Juhta.Net
@@ -529,11 +529,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ReplaceHtmlSpecialCharacters
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 157
   assemblies:
   - Juhta.Net
@@ -577,11 +577,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ReplaceXmlSpecialCharacters
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 179
   assemblies:
   - Juhta.Net
@@ -625,11 +625,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringAfter
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 204
   assemblies:
   - Juhta.Net
@@ -681,11 +681,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringAfter
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 218
   assemblies:
   - Juhta.Net
@@ -737,11 +737,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringBefore
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 242
   assemblies:
   - Juhta.Net
@@ -793,11 +793,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringBefore
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 256
   assemblies:
   - Juhta.Net
@@ -849,11 +849,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToBase64String
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 277
   assemblies:
   - Juhta.Net
@@ -895,11 +895,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/StringExtensions.cs
+      path: src/Juhta.Net/Extensions/StringExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ToBoolean
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/StringExtensions.cs
+    path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 292
   assemblies:
   - Juhta.Net

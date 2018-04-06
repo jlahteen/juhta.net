@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicInitializableLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
     startLine: 14
   assemblies:
   - Juhta.Net
@@ -30,7 +30,6 @@ items:
     content: 'public interface IDynamicInitializableLibrary : IDynamicLibrary'
     content.vb: >-
       Public Interface IDynamicInitializableLibrary
-
           Inherits IDynamicLibrary
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
@@ -55,11 +54,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CreateDefaultLibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
     startLine: 23
   assemblies:
   - Juhta.Net

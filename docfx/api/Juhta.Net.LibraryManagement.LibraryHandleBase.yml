@@ -21,11 +21,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryHandleBase
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 21
   assemblies:
   - Juhta.Net
@@ -36,7 +36,6 @@ items:
     content: 'public abstract class LibraryHandleBase : ILibraryHandle'
     content.vb: >-
       Public MustInherit Class LibraryHandleBase
-
           Implements ILibraryHandle
   inheritance:
   - System.Object
@@ -73,11 +72,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ConfigFileName
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 29
   assemblies:
   - Juhta.Net
@@ -112,11 +111,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryFileName
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 37
   assemblies:
   - Juhta.Net
@@ -153,11 +152,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryRootNamespace
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 45
   assemblies:
   - Juhta.Net
@@ -192,11 +191,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 58
   assemblies:
   - Juhta.Net
@@ -228,11 +227,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetCommonConfigSchema
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 71
   assemblies:
   - Juhta.Net
@@ -263,11 +262,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetEmbeddedConfigAndCommonSchema
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 85
   assemblies:
   - Juhta.Net
@@ -314,11 +313,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetEmbeddedConfigSchema
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
+    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
     startLine: 105
   assemblies:
   - Juhta.Net

@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/SymmetricCipher.cs
+      path: src/Juhta.Net/Common/SymmetricCipher.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: SymmetricCipher
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/SymmetricCipher.cs
+    path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 18
   assemblies:
   - Juhta.Net
@@ -61,11 +61,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/SymmetricCipher.cs
+      path: src/Juhta.Net/Common/SymmetricCipher.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/SymmetricCipher.cs
+    path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -94,11 +94,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/SymmetricCipher.cs
+      path: src/Juhta.Net/Common/SymmetricCipher.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/SymmetricCipher.cs
+    path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 33
   assemblies:
   - Juhta.Net
@@ -130,11 +130,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/SymmetricCipher.cs
+      path: src/Juhta.Net/Common/SymmetricCipher.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DecryptData
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/SymmetricCipher.cs
+    path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 55
   assemblies:
   - Juhta.Net
@@ -175,11 +175,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/SymmetricCipher.cs
+      path: src/Juhta.Net/Common/SymmetricCipher.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EncryptData
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/SymmetricCipher.cs
+    path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 96
   assemblies:
   - Juhta.Net

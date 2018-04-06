@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IDefaultLibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
     startLine: 14
   assemblies:
   - Juhta.Net
@@ -31,7 +31,6 @@ items:
     content: 'public interface IDefaultLibraryState : ILibraryState'
     content.vb: >-
       Public Interface IDefaultLibraryState
-
           Inherits ILibraryState
   modifiers.csharp:
   - public
@@ -52,11 +51,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+      path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: Initialize
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
     startLine: 26
   assemblies:
   - Juhta.Net

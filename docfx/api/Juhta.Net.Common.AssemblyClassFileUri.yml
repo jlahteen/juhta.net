@@ -15,12 +15,12 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassFileUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassFileUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyClassFileUri
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassFileUri.cs
-    startLine: 17
+    path: ../src/Juhta.Net/Common/AssemblyClassFileUri.cs
+    startLine: 18
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -30,9 +30,7 @@ items:
     content: 'public class AssemblyClassFileUri : AssemblyClassUri, ISerializable'
     content.vb: >-
       Public Class AssemblyClassFileUri
-
           Inherits AssemblyClassUri
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -137,12 +135,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassFileUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassFileUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassFileUri.cs
-    startLine: 30
+    path: ../src/Juhta.Net/Common/AssemblyClassFileUri.cs
+    startLine: 31
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common

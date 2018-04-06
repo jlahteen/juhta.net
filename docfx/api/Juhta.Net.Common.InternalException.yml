@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/InternalException.cs
+      path: src/Juhta.Net/Common/InternalException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: InternalException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InternalException.cs
+    path: ../src/Juhta.Net/Common/InternalException.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -34,9 +34,7 @@ items:
     content: 'public class InternalException : Exception, ISerializable'
     content.vb: >-
       Public Class InternalException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -83,11 +81,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/InternalException.cs
+      path: src/Juhta.Net/Common/InternalException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InternalException.cs
+    path: ../src/Juhta.Net/Common/InternalException.cs
     startLine: 25
   assemblies:
   - Juhta.Net

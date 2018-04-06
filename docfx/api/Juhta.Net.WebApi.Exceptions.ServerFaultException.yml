@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: ServerFaultException
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
     startLine: 15
   assemblies:
   - Juhta.Net.WebApi
@@ -82,11 +82,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
     startLine: 23
   assemblies:
   - Juhta.Net.WebApi
@@ -118,11 +118,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+      path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
+    path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
     startLine: 31
   assemblies:
   - Juhta.Net.WebApi

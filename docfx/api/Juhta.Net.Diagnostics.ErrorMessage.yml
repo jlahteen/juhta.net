@@ -1,51 +1,50 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Common.InformationMessage
-  commentId: T:Juhta.Net.Common.InformationMessage
-  id: InformationMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  id: ErrorMessage
+  parent: Juhta.Net.Diagnostics
   children:
-  - Juhta.Net.Common.InformationMessage.#ctor(System.String)
-  - Juhta.Net.Common.InformationMessage.#ctor(System.String,System.String)
+  - Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String)
+  - Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String,System.String)
   langs:
   - csharp
   - vb
-  name: InformationMessage
-  nameWithType: InformationMessage
-  fullName: Juhta.Net.Common.InformationMessage
+  name: ErrorMessage
+  nameWithType: ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/InformationMessage.cs
+      path: src/Juhta.Net/Diagnostics/ErrorMessage.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: InformationMessage
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InformationMessage.cs
+    id: ErrorMessage
+    path: ../src/Juhta.Net/Diagnostics/ErrorMessage.cs
     startLine: 13
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nDefines a class for information messages.\n"
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nDefines a class for error messages.\n"
   example: []
   syntax:
-    content: 'public class InformationMessage : DiagnosticMessage'
+    content: 'public class ErrorMessage : DiagnosticMessage'
     content.vb: >-
-      Public Class InformationMessage
-
+      Public Class ErrorMessage
           Inherits DiagnosticMessage
   inheritance:
   - System.Object
-  - Juhta.Net.Common.DiagnosticMessage
+  - Juhta.Net.Diagnostics.DiagnosticMessage
   inheritedMembers:
-  - Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
-  - Juhta.Net.Common.DiagnosticMessage.GetIntegerId
-  - Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
-  - Juhta.Net.Common.DiagnosticMessage.GetMessage
-  - Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
-  - Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
-  - Juhta.Net.Common.DiagnosticMessage.Id
-  - Juhta.Net.Common.DiagnosticMessage.Message
-  - Juhta.Net.Common.DiagnosticMessage.Type
+  - Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  - Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Type
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -59,32 +58,32 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Common.InformationMessage.#ctor(System.String)
-  commentId: M:Juhta.Net.Common.InformationMessage.#ctor(System.String)
+- uid: Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String)
+  commentId: M:Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Common.InformationMessage
+  parent: Juhta.Net.Diagnostics.ErrorMessage
   langs:
   - csharp
   - vb
-  name: InformationMessage(String)
-  nameWithType: InformationMessage.InformationMessage(String)
-  fullName: Juhta.Net.Common.InformationMessage.InformationMessage(System.String)
+  name: ErrorMessage(String)
+  nameWithType: ErrorMessage.ErrorMessage(String)
+  fullName: Juhta.Net.Diagnostics.ErrorMessage.ErrorMessage(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/InformationMessage.cs
+      path: src/Juhta.Net/Diagnostics/ErrorMessage.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InformationMessage.cs
+    path: ../src/Juhta.Net/Diagnostics/ErrorMessage.cs
     startLine: 22
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Diagnostics
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public InformationMessage(string message)
+    content: public ErrorMessage(string message)
     parameters:
     - id: message
       type: System.String
@@ -93,37 +92,37 @@ items:
 
         format items.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.Common.InformationMessage.#ctor*
+  overload: Juhta.Net.Diagnostics.ErrorMessage.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Common.InformationMessage.#ctor(System.String,System.String)
-  commentId: M:Juhta.Net.Common.InformationMessage.#ctor(System.String,System.String)
+- uid: Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.Diagnostics.ErrorMessage.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
-  parent: Juhta.Net.Common.InformationMessage
+  parent: Juhta.Net.Diagnostics.ErrorMessage
   langs:
   - csharp
   - vb
-  name: InformationMessage(String, String)
-  nameWithType: InformationMessage.InformationMessage(String, String)
-  fullName: Juhta.Net.Common.InformationMessage.InformationMessage(System.String, System.String)
+  name: ErrorMessage(String, String)
+  nameWithType: ErrorMessage.ErrorMessage(String, String)
+  fullName: Juhta.Net.Diagnostics.ErrorMessage.ErrorMessage(System.String, System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/InformationMessage.cs
+      path: src/Juhta.Net/Diagnostics/ErrorMessage.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InformationMessage.cs
+    path: ../src/Juhta.Net/Diagnostics/ErrorMessage.cs
     startLine: 31
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Diagnostics
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public InformationMessage(string message, string id)
+    content: public ErrorMessage(string message, string id)
     parameters:
     - id: message
       type: System.String
@@ -133,20 +132,20 @@ items:
         format items.
     - id: id
       type: System.String
-      description: Specifies a value for the <xref href="Juhta.Net.Common.DiagnosticMessage.Id" data-throw-if-not-resolved="false"></xref> property.
+      description: Specifies a value for the <xref href="Juhta.Net.Diagnostics.DiagnosticMessage.Id" data-throw-if-not-resolved="false"></xref> property.
     content.vb: Public Sub New(message As String, id As String)
-  overload: Juhta.Net.Common.InformationMessage.#ctor*
+  overload: Juhta.Net.Diagnostics.ErrorMessage.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -154,28 +153,28 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Common.DiagnosticMessage
-  commentId: T:Juhta.Net.Common.DiagnosticMessage
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessage
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: DiagnosticMessage
   nameWithType: DiagnosticMessage
-  fullName: Juhta.Net.Common.DiagnosticMessage
-- uid: Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
-  parent: Juhta.Net.Common.DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: true
   name: FormatMessage(Object[])
   nameWithType: DiagnosticMessage.FormatMessage(Object[])
-  fullName: Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
   nameWithType.vb: DiagnosticMessage.FormatMessage(Object())
-  fullName.vb: Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object())
+  fullName.vb: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object())
   name.vb: FormatMessage(Object())
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
     name: FormatMessage
     nameWithType: DiagnosticMessage.FormatMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage.FormatMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage
   - name: (
     nameWithType: (
     fullName: (
@@ -191,10 +190,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.FormatMessage(System.Object[])
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
     name: FormatMessage
     nameWithType: DiagnosticMessage.FormatMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage.FormatMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage
   - name: (
     nameWithType: (
     fullName: (
@@ -209,18 +208,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: false
   name: GetIntegerId()
   nameWithType: DiagnosticMessage.GetIntegerId()
-  fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId()
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId()
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
     name: GetIntegerId
     nameWithType: DiagnosticMessage.GetIntegerId
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
   - name: (
     nameWithType: (
     fullName: (
@@ -228,28 +227,28 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
     name: GetIntegerId
     nameWithType: DiagnosticMessage.GetIntegerId
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: true
   name: GetIntegerId(String)
   nameWithType: DiagnosticMessage.GetIntegerId(String)
-  fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
     name: GetIntegerId
     nameWithType: DiagnosticMessage.GetIntegerId
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
   - name: (
     nameWithType: (
     fullName: (
@@ -262,10 +261,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetIntegerId(System.String)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
     name: GetIntegerId
     nameWithType: DiagnosticMessage.GetIntegerId
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
   - name: (
     nameWithType: (
     fullName: (
@@ -277,18 +276,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.GetMessage
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.GetMessage
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: false
   name: GetMessage()
   nameWithType: DiagnosticMessage.GetMessage()
-  fullName: Juhta.Net.Common.DiagnosticMessage.GetMessage()
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage()
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
     name: GetMessage
     nameWithType: DiagnosticMessage.GetMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
   - name: (
     nameWithType: (
     fullName: (
@@ -296,28 +295,28 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.GetMessage
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
     name: GetMessage
     nameWithType: DiagnosticMessage.GetMessage
-    fullName: Juhta.Net.Common.DiagnosticMessage.GetMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: true
   name: TryGetMessageId(Exception, String)
   nameWithType: DiagnosticMessage.TryGetMessageId(Exception, String)
-  fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception, System.String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception, System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
     name: TryGetMessageId
     nameWithType: DiagnosticMessage.TryGetMessageId
-    fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
   - name: (
     nameWithType: (
     fullName: (
@@ -338,10 +337,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
     name: TryGetMessageId
     nameWithType: DiagnosticMessage.TryGetMessageId
-    fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
   - name: (
     nameWithType: (
     fullName: (
@@ -361,18 +360,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
-  commentId: M:Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: true
   name: TryGetMessageId(String, String)
   nameWithType: DiagnosticMessage.TryGetMessageId(String, String)
-  fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String, System.String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String, System.String)
   spec.csharp:
-  - uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
     name: TryGetMessageId
     nameWithType: DiagnosticMessage.TryGetMessageId
-    fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
   - name: (
     nameWithType: (
     fullName: (
@@ -393,10 +392,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
     name: TryGetMessageId
     nameWithType: DiagnosticMessage.TryGetMessageId
-    fullName: Juhta.Net.Common.DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
   - name: (
     nameWithType: (
     fullName: (
@@ -416,27 +415,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.DiagnosticMessage.Id
-  commentId: P:Juhta.Net.Common.DiagnosticMessage.Id
-  parent: Juhta.Net.Common.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: false
   name: Id
   nameWithType: DiagnosticMessage.Id
-  fullName: Juhta.Net.Common.DiagnosticMessage.Id
-- uid: Juhta.Net.Common.DiagnosticMessage.Message
-  commentId: P:Juhta.Net.Common.DiagnosticMessage.Message
-  parent: Juhta.Net.Common.DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Id
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: false
   name: Message
   nameWithType: DiagnosticMessage.Message
-  fullName: Juhta.Net.Common.DiagnosticMessage.Message
-- uid: Juhta.Net.Common.DiagnosticMessage.Type
-  commentId: P:Juhta.Net.Common.DiagnosticMessage.Type
-  parent: Juhta.Net.Common.DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Message
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Type
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Type
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
   isExternal: false
   name: Type
   nameWithType: DiagnosticMessage.Type
-  fullName: Juhta.Net.Common.DiagnosticMessage.Type
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Type
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -722,12 +721,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Common.InformationMessage.#ctor*
-  commentId: Overload:Juhta.Net.Common.InformationMessage.#ctor
+- uid: Juhta.Net.Diagnostics.ErrorMessage.#ctor*
+  commentId: Overload:Juhta.Net.Diagnostics.ErrorMessage.#ctor
   isExternal: false
-  name: InformationMessage
-  nameWithType: InformationMessage.InformationMessage
-  fullName: Juhta.Net.Common.InformationMessage.InformationMessage
+  name: ErrorMessage
+  nameWithType: ErrorMessage.ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage.ErrorMessage
 - uid: System.String
   commentId: T:System.String
   parent: System

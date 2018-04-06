@@ -1,30 +1,30 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Common.DiagnosticMessageIdBase
-  commentId: T:Juhta.Net.Common.DiagnosticMessageIdBase
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   id: DiagnosticMessageIdBase
-  parent: Juhta.Net.Common
+  parent: Juhta.Net.Diagnostics
   children:
-  - Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages
-  - Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages
+  - Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages
+  - Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages
   langs:
   - csharp
   - vb
   name: DiagnosticMessageIdBase
   nameWithType: DiagnosticMessageIdBase
-  fullName: Juhta.Net.Common.DiagnosticMessageIdBase
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   type: Enum
   source:
     remote:
-      path: Source/Juhta.Net/Common/Types.cs
+      path: src/Juhta.Net/Diagnostics/Types.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DiagnosticMessageIdBase
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Types.cs
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 15
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Diagnostics
   summary: "\nAn enumeration that defines the diagnostic message ID bases used in the framework libraries.\n"
   example: []
   syntax:
@@ -36,68 +36,68 @@ items:
   modifiers.vb:
   - Public
   - Enum
-- uid: Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages
-  commentId: F:Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages
   id: RootLibraryMessages
-  parent: Juhta.Net.Common.DiagnosticMessageIdBase
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   langs:
   - csharp
   - vb
   name: RootLibraryMessages
   nameWithType: DiagnosticMessageIdBase.RootLibraryMessages
-  fullName: Juhta.Net.Common.DiagnosticMessageIdBase.RootLibraryMessages
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/Types.cs
+      path: src/Juhta.Net/Diagnostics/Types.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RootLibraryMessages
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Types.cs
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 20
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Diagnostics
   summary: "\nDefines the message ID base for the root library messages.\n"
   example: []
   syntax:
     content: RootLibraryMessages = 10000
     return:
-      type: Juhta.Net.Common.DiagnosticMessageIdBase
+      type: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages
-  commentId: F:Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages
+  commentId: F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages
   id: CommonMessages
-  parent: Juhta.Net.Common.DiagnosticMessageIdBase
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   langs:
   - csharp
   - vb
   name: CommonMessages
   nameWithType: DiagnosticMessageIdBase.CommonMessages
-  fullName: Juhta.Net.Common.DiagnosticMessageIdBase.CommonMessages
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/Types.cs
+      path: src/Juhta.Net/Diagnostics/Types.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: CommonMessages
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/Types.cs
+    path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 25
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
+  namespace: Juhta.Net.Diagnostics
   summary: "\nDefines the message ID base for the common messages.\n"
   example: []
   syntax:
     content: CommonMessages = 11000
     return:
-      type: Juhta.Net.Common.DiagnosticMessageIdBase
+      type: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   modifiers.csharp:
   - public
   - const
@@ -105,16 +105,16 @@ items:
   - Public
   - Const
 references:
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
-- uid: Juhta.Net.Common.DiagnosticMessageIdBase
-  commentId: T:Juhta.Net.Common.DiagnosticMessageIdBase
-  parent: Juhta.Net.Common
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  parent: Juhta.Net.Diagnostics
   isExternal: false
   name: DiagnosticMessageIdBase
   nameWithType: DiagnosticMessageIdBase
-  fullName: Juhta.Net.Common.DiagnosticMessageIdBase
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase

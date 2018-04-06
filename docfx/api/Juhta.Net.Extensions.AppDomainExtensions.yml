@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AppDomainExtensions
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -62,11 +62,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAssemblyByFileName
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
     startLine: 28
   assemblies:
   - Juhta.Net
@@ -113,11 +113,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAssemblyByPath
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
     startLine: 47
   assemblies:
   - Juhta.Net
@@ -165,11 +165,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GetAssemblyByTypeName
-    path: ../../Juhta.NET/Source/Juhta.Net/Extensions/AppDomainExtensions.cs
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
     startLine: 65
   assemblies:
   - Juhta.Net

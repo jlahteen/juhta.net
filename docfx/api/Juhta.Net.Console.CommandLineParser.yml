@@ -1,0 +1,911 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Console.CommandLineParser
+  commentId: T:Juhta.Net.Console.CommandLineParser
+  id: CommandLineParser
+  parent: Juhta.Net.Console
+  children:
+  - Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)
+  - Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String,System.String)
+  - Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String)
+  - Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String,System.String)
+  - Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32)
+  - Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32,System.String)
+  - Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments
+  - Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+  - Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])
+  - Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[],System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: CommandLineParser
+  nameWithType: CommandLineParser
+  fullName: Juhta.Net.Console.CommandLineParser
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CommandLineParser
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 51
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nDefines a class for parsing command line arguments. The following types of command line arguments are\nsupported:\n<table><thead><tr><th>Argument type</th><th>Description</th></tr></thead><tbody><tr><td>Named arguments</td><td>Represents a named command line argument</td></tr><tr><td>Option arguments</td><td>Represents a command line option</td></tr><tr><td>Plain arguments</td><td>Represents any raw command line argument</td></tr></tbody></table>\n<p>A named argument consists of two raw arguments. The first argument determines an argument name and the\nsecond argument an actual argument value. Argument names must be prefixed by an argument name prefix. For\nexample, <code>-workingFolder C:\\Temp</code> is a valid named argument. Character &apos;-&apos; is the default named argument\nprefix.</p>\n<p>An option argument consists of an option prefix, option name, option name-value separator and an actual\noption value. For example, <code>/BufferSize:12345</code> is a valid option argument. Characters &apos;/&apos; and &apos;:&apos; are the\ndefault option prefix and option name-value separator, respectively. If a value part is missing from an option\nargument, it’s assumed to be a boolean option with the default value of true. Thus, the option arguments\n<code>/SaveLog</code> and <code>/SaveLog:true</code> are equivalent.</p>\n<p>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all\nraw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain\narguments.</p>\n"
+  example: []
+  syntax:
+    content: public class CommandLineParser
+    content.vb: Public Class CommandLineParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)
+  id: GetNamedArgument(System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetNamedArgument(String)
+  nameWithType: CommandLineParser.GetNamedArgument(String)
+  fullName: Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetNamedArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 61
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets a named argument.\n"
+  remarks: If the specified named argument is not found, an exception will be thrown.
+  example: []
+  syntax:
+    content: public NamedArgument GetNamedArgument(string argumentName)
+    parameters:
+    - id: argumentName
+      type: System.String
+      description: Specifies an argument name.
+    return:
+      type: Juhta.Net.Console.NamedArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.NamedArgument" data-throw-if-not-resolved="false"></xref> holding the specified named argument.
+    content.vb: Public Function GetNamedArgument(argumentName As String) As NamedArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetNamedArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String,System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String,System.String)
+  id: GetNamedArgument(System.String,System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetNamedArgument(String, String)
+  nameWithType: CommandLineParser.GetNamedArgument(String, String)
+  fullName: Juhta.Net.Console.CommandLineParser.GetNamedArgument(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetNamedArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 74
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets a named argument.\n"
+  remarks: >-
+    If the specified named argument is not found and <code data-dev-comment-type="paramref" class="paramref">defaultValue</code> is null, an
+
+    exception will be thrown.
+  example: []
+  syntax:
+    content: public NamedArgument GetNamedArgument(string argumentName, string defaultValue)
+    parameters:
+    - id: argumentName
+      type: System.String
+      description: Specifies an argument name.
+    - id: defaultValue
+      type: System.String
+      description: Specifies a default value for the named argument. Can be null.
+    return:
+      type: Juhta.Net.Console.NamedArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.NamedArgument" data-throw-if-not-resolved="false"></xref> holding the specified named argument.
+    content.vb: Public Function GetNamedArgument(argumentName As String, defaultValue As String) As NamedArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetNamedArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String)
+  id: GetOptionArgument(System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetOptionArgument(String)
+  nameWithType: CommandLineParser.GetOptionArgument(String)
+  fullName: Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetOptionArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 97
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets an option argument.\n"
+  remarks: If the specified option is not found, an exception will be thrown.
+  example: []
+  syntax:
+    content: public OptionArgument GetOptionArgument(string optionName)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: Specifies an option name.
+    return:
+      type: Juhta.Net.Console.OptionArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.OptionArgument" data-throw-if-not-resolved="false"></xref> holding the specified option argument.
+    content.vb: Public Function GetOptionArgument(optionName As String) As OptionArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetOptionArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String,System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String,System.String)
+  id: GetOptionArgument(System.String,System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetOptionArgument(String, String)
+  nameWithType: CommandLineParser.GetOptionArgument(String, String)
+  fullName: Juhta.Net.Console.CommandLineParser.GetOptionArgument(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetOptionArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 110
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets an option argument.\n"
+  remarks: >-
+    If the specified option is not found and <code data-dev-comment-type="paramref" class="paramref">defaultValue</code> is null, an exception
+
+    will be thrown.
+  example: []
+  syntax:
+    content: public OptionArgument GetOptionArgument(string optionName, string defaultValue)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: Specifies an option name.
+    - id: defaultValue
+      type: System.String
+      description: Specifies a default value for the option argument. Can be null.
+    return:
+      type: Juhta.Net.Console.OptionArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.OptionArgument" data-throw-if-not-resolved="false"></xref> holding the specified option argument.
+    content.vb: Public Function GetOptionArgument(optionName As String, defaultValue As String) As OptionArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetOptionArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32)
+  id: GetPlainArgument(System.Int32)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetPlainArgument(Int32)
+  nameWithType: CommandLineParser.GetPlainArgument(Int32)
+  fullName: Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetPlainArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 133
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets a plain argument.\n"
+  remarks: If the specified plain argument is not found, an exception will be thrown.
+  example: []
+  syntax:
+    content: public PlainArgument GetPlainArgument(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: Specifies a plain argument index. The index of the first plain argument is 0.
+    return:
+      type: Juhta.Net.Console.PlainArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.PlainArgument" data-throw-if-not-resolved="false"></xref> holding the specified plain argument.
+    content.vb: Public Function GetPlainArgument(index As Integer) As PlainArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetPlainArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32,System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32,System.String)
+  id: GetPlainArgument(System.Int32,System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetPlainArgument(Int32, String)
+  nameWithType: CommandLineParser.GetPlainArgument(Int32, String)
+  fullName: Juhta.Net.Console.CommandLineParser.GetPlainArgument(System.Int32, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetPlainArgument
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 146
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets a plain argument.\n"
+  remarks: >-
+    If the specified plain argument is not found and <code data-dev-comment-type="paramref" class="paramref">defaultValue</code> is null, an
+
+    exception will be thrown.
+  example: []
+  syntax:
+    content: public PlainArgument GetPlainArgument(int index, string defaultValue)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: Specifies a plain argument index. The index of the first plain argument is 0.
+    - id: defaultValue
+      type: System.String
+      description: Specifies a default value for the plain argument. Can be null.
+    return:
+      type: Juhta.Net.Console.PlainArgument
+      description: Returns an instance of <xref href="Juhta.Net.Console.PlainArgument" data-throw-if-not-resolved="false"></xref> holding the specified plain argument.
+    content.vb: Public Function GetPlainArgument(index As Integer, defaultValue As String) As PlainArgument
+  overload: Juhta.Net.Console.CommandLineParser.GetPlainArgument*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments
+  commentId: M:Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments
+  id: GetUnconsumedArguments
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: GetUnconsumedArguments()
+  nameWithType: CommandLineParser.GetUnconsumedArguments()
+  fullName: Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetUnconsumedArguments
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 165
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets all unconsumed command line arguments.\n"
+  example: []
+  syntax:
+    content: public CommandLineArgument[] GetUnconsumedArguments()
+    return:
+      type: Juhta.Net.Console.CommandLineArgument[]
+      description: Returns an array of <xref href="Juhta.Net.Console.CommandLineArgument" data-throw-if-not-resolved="false"></xref> objects not yet consumed.
+    content.vb: Public Function GetUnconsumedArguments As CommandLineArgument()
+  overload: Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])
+  commentId: M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])
+  id: ParseArguments(System.String[])
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: ParseArguments(String[])
+  nameWithType: CommandLineParser.ParseArguments(String[])
+  fullName: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[])
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ParseArguments
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 177
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nParses an array of raw command line arguments.\n"
+  example: []
+  syntax:
+    content: public void ParseArguments(string[] arguments)
+    parameters:
+    - id: arguments
+      type: System.String[]
+      description: Specifies an array of raw command line arguments.
+    content.vb: Public Sub ParseArguments(arguments As String())
+  overload: Juhta.Net.Console.CommandLineParser.ParseArguments*
+  nameWithType.vb: CommandLineParser.ParseArguments(String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String())
+  name.vb: ParseArguments(String())
+- uid: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[],System.String,System.String,System.String)
+  commentId: M:Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[],System.String,System.String,System.String)
+  id: ParseArguments(System.String[],System.String,System.String,System.String)
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: ParseArguments(String[], String, String, String)
+  nameWithType: CommandLineParser.ParseArguments(String[], String, String, String)
+  fullName: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String[], System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ParseArguments
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 189
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nParses an array of raw command line arguments.\n"
+  example: []
+  syntax:
+    content: public void ParseArguments(string[] arguments, string argumentNamePrefix, string optionPrefix, string optionNameValueSeparator)
+    parameters:
+    - id: arguments
+      type: System.String[]
+      description: Specifies an array of raw command line arguments.
+    - id: argumentNamePrefix
+      type: System.String
+      description: Specifies an argument name prefix.
+    - id: optionPrefix
+      type: System.String
+      description: Specifies an option prefix.
+    - id: optionNameValueSeparator
+      type: System.String
+      description: Specifies an option name-value separator.
+    content.vb: Public Sub ParseArguments(arguments As String(), argumentNamePrefix As String, optionPrefix As String, optionNameValueSeparator As String)
+  overload: Juhta.Net.Console.CommandLineParser.ParseArguments*
+  nameWithType.vb: CommandLineParser.ParseArguments(String(), String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Console.CommandLineParser.ParseArguments(System.String(), System.String, System.String, System.String)
+  name.vb: ParseArguments(String(), String, String, String)
+- uid: Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+  commentId: P:Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+  id: HasUnconsumedArguments
+  parent: Juhta.Net.Console.CommandLineParser
+  langs:
+  - csharp
+  - vb
+  name: HasUnconsumedArguments
+  nameWithType: CommandLineParser.HasUnconsumedArguments
+  fullName: Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Console/CommandLineParser.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: HasUnconsumedArguments
+    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    startLine: 276
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nGets a boolean value determining whether this <xref href=\"Juhta.Net.Console.CommandLineParser\" data-throw-if-not-resolved=\"false\"></xref> instance has unconsumed\narguments.\n"
+  example: []
+  syntax:
+    content: public bool HasUnconsumedArguments { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasUnconsumedArguments As Boolean
+  overload: Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Juhta.Net.Console
+  commentId: N:Juhta.Net.Console
+  isExternal: false
+  name: Juhta.Net.Console
+  nameWithType: Juhta.Net.Console
+  fullName: Juhta.Net.Console
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Console.NamedArgument
+  commentId: T:Juhta.Net.Console.NamedArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: NamedArgument
+  nameWithType: NamedArgument
+  fullName: Juhta.Net.Console.NamedArgument
+- uid: Juhta.Net.Console.CommandLineParser.GetNamedArgument*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.GetNamedArgument
+  isExternal: false
+  name: GetNamedArgument
+  nameWithType: CommandLineParser.GetNamedArgument
+  fullName: Juhta.Net.Console.CommandLineParser.GetNamedArgument
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Console.OptionArgument
+  commentId: T:Juhta.Net.Console.OptionArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: OptionArgument
+  nameWithType: OptionArgument
+  fullName: Juhta.Net.Console.OptionArgument
+- uid: Juhta.Net.Console.CommandLineParser.GetOptionArgument*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.GetOptionArgument
+  isExternal: false
+  name: GetOptionArgument
+  nameWithType: CommandLineParser.GetOptionArgument
+  fullName: Juhta.Net.Console.CommandLineParser.GetOptionArgument
+- uid: Juhta.Net.Console.PlainArgument
+  commentId: T:Juhta.Net.Console.PlainArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: PlainArgument
+  nameWithType: PlainArgument
+  fullName: Juhta.Net.Console.PlainArgument
+- uid: Juhta.Net.Console.CommandLineParser.GetPlainArgument*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.GetPlainArgument
+  isExternal: false
+  name: GetPlainArgument
+  nameWithType: CommandLineParser.GetPlainArgument
+  fullName: Juhta.Net.Console.CommandLineParser.GetPlainArgument
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Juhta.Net.Console.CommandLineArgument
+  commentId: T:Juhta.Net.Console.CommandLineArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument
+- uid: Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments
+  isExternal: false
+  name: GetUnconsumedArguments
+  nameWithType: CommandLineParser.GetUnconsumedArguments
+  fullName: Juhta.Net.Console.CommandLineParser.GetUnconsumedArguments
+- uid: Juhta.Net.Console.CommandLineArgument[]
+  name: CommandLineArgument[]
+  nameWithType: CommandLineArgument[]
+  fullName: Juhta.Net.Console.CommandLineArgument[]
+  nameWithType.vb: CommandLineArgument()
+  fullName.vb: Juhta.Net.Console.CommandLineArgument()
+  name.vb: CommandLineArgument()
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument
+    name: CommandLineArgument
+    nameWithType: CommandLineArgument
+    fullName: Juhta.Net.Console.CommandLineArgument
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument
+    name: CommandLineArgument
+    nameWithType: CommandLineArgument
+    fullName: Juhta.Net.Console.CommandLineArgument
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Juhta.Net.Console.CommandLineParser.ParseArguments*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.ParseArguments
+  isExternal: false
+  name: ParseArguments
+  nameWithType: CommandLineParser.ParseArguments
+  fullName: Juhta.Net.Console.CommandLineParser.ParseArguments
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Juhta.Net.Console.CommandLineParser
+  commentId: T:Juhta.Net.Console.CommandLineParser
+  isExternal: false
+  name: CommandLineParser
+  nameWithType: CommandLineParser
+  fullName: Juhta.Net.Console.CommandLineParser
+- uid: Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments*
+  commentId: Overload:Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+  isExternal: false
+  name: HasUnconsumedArguments
+  nameWithType: CommandLineParser.HasUnconsumedArguments
+  fullName: Juhta.Net.Console.CommandLineParser.HasUnconsumedArguments
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

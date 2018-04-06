@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnexpectedException.cs
+      path: src/Juhta.Net/Common/UnexpectedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: UnexpectedException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnexpectedException.cs
+    path: ../src/Juhta.Net/Common/UnexpectedException.cs
     startLine: 17
   assemblies:
   - Juhta.Net
@@ -34,9 +34,7 @@ items:
     content: 'public class UnexpectedException : Exception, ISerializable'
     content.vb: >-
       Public Class UnexpectedException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -81,11 +79,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/UnexpectedException.cs
+      path: src/Juhta.Net/Common/UnexpectedException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/UnexpectedException.cs
+    path: ../src/Juhta.Net/Common/UnexpectedException.cs
     startLine: 26
   assemblies:
   - Juhta.Net

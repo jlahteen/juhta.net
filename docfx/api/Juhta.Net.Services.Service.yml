@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Services.Service
+  commentId: T:Juhta.Net.Services.Service
+  id: Service
+  parent: Juhta.Net.Services
+  children:
+  - Juhta.Net.Services.Service.ConstructorParams
+  - Juhta.Net.Services.Service.CreateInstance``1
+  - Juhta.Net.Services.Service.Id
+  - Juhta.Net.Services.Service.LibraryClass
+  - Juhta.Net.Services.Service.LibraryFileName
+  langs:
+  - csharp
+  - vb
+  name: Service
+  nameWithType: Service
+  fullName: Juhta.Net.Services.Service
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Service
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 20
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nDefines a class that encapsulates the metadata of a dependency injection service.\n"
+  example: []
+  syntax:
+    content: public class Service
+    content.vb: Public Class Service
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Services.Service.CreateInstance``1
+  commentId: M:Juhta.Net.Services.Service.CreateInstance``1
+  id: CreateInstance``1
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: CreateInstance<TService>()
+  nameWithType: Service.CreateInstance<TService>()
+  fullName: Juhta.Net.Services.Service.CreateInstance<TService>()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateInstance
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 29
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nCreates an instance of the encapsulated dependency injection service.\n"
+  example: []
+  syntax:
+    content: 'public TService CreateInstance<TService>()where TService : class'
+    typeParameters:
+    - id: TService
+      description: Specifies a service type.
+    return:
+      type: '{TService}'
+      description: Returns the created instance casted to the specified service type.
+    content.vb: Public Function CreateInstance(Of TService As Class) As TService
+  overload: Juhta.Net.Services.Service.CreateInstance*
+  nameWithType.vb: Service.CreateInstance(Of TService)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.Services.Service.CreateInstance(Of TService)()
+  name.vb: CreateInstance(Of TService)()
+- uid: Juhta.Net.Services.Service.ConstructorParams
+  commentId: P:Juhta.Net.Services.Service.ConstructorParams
+  id: ConstructorParams
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: ConstructorParams
+  nameWithType: Service.ConstructorParams
+  fullName: Juhta.Net.Services.Service.ConstructorParams
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: ConstructorParams
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 50
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets an array of <xref href=\"Juhta.Net.Services.ConstructorParam\" data-throw-if-not-resolved=\"false\"></xref> objects specifying the constructor parameters for the\ndependency injection service. Can be null.\n"
+  example: []
+  syntax:
+    content: public ConstructorParam[] ConstructorParams { get; }
+    parameters: []
+    return:
+      type: Juhta.Net.Services.ConstructorParam[]
+    content.vb: Public ReadOnly Property ConstructorParams As ConstructorParam()
+  overload: Juhta.Net.Services.Service.ConstructorParams*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Services.Service.Id
+  commentId: P:Juhta.Net.Services.Service.Id
+  id: Id
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Service.Id
+  fullName: Juhta.Net.Services.Service.Id
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: Id
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 58
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the identifier of the dependency injection service.\n"
+  example: []
+  syntax:
+    content: public ServiceId Id { get; }
+    parameters: []
+    return:
+      type: Juhta.Net.Services.ServiceId
+    content.vb: Public ReadOnly Property Id As ServiceId
+  overload: Juhta.Net.Services.Service.Id*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Services.Service.LibraryClass
+  commentId: P:Juhta.Net.Services.Service.LibraryClass
+  id: LibraryClass
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: LibraryClass
+  nameWithType: Service.LibraryClass
+  fullName: Juhta.Net.Services.Service.LibraryClass
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryClass
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 66
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the library class that implements the dependency injection service.\n"
+  example: []
+  syntax:
+    content: public string LibraryClass { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property LibraryClass As String
+  overload: Juhta.Net.Services.Service.LibraryClass*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Juhta.Net.Services.Service.LibraryFileName
+  commentId: P:Juhta.Net.Services.Service.LibraryFileName
+  id: LibraryFileName
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: LibraryFileName
+  nameWithType: Service.LibraryFileName
+  fullName: Juhta.Net.Services.Service.LibraryFileName
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryFileName
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 74
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the file name of the library that contains the dependency injection service.\n"
+  example: []
+  syntax:
+    content: public string LibraryFileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property LibraryFileName As String
+  overload: Juhta.Net.Services.Service.LibraryFileName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Juhta.Net.Services
+  commentId: N:Juhta.Net.Services
+  isExternal: false
+  name: Juhta.Net.Services
+  nameWithType: Juhta.Net.Services
+  fullName: Juhta.Net.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Services.Service.CreateInstance*
+  commentId: Overload:Juhta.Net.Services.Service.CreateInstance
+  isExternal: false
+  name: CreateInstance
+  nameWithType: Service.CreateInstance
+  fullName: Juhta.Net.Services.Service.CreateInstance
+- uid: '{TService}'
+  commentId: '!:TService'
+  definition: TService
+  name: TService
+  nameWithType: TService
+  fullName: TService
+- uid: TService
+  isExternal: false
+  name: TService
+  nameWithType: TService
+  fullName: TService
+- uid: Juhta.Net.Services.ConstructorParam
+  commentId: T:Juhta.Net.Services.ConstructorParam
+  isExternal: false
+  name: ConstructorParam
+  nameWithType: ConstructorParam
+  fullName: Juhta.Net.Services.ConstructorParam
+- uid: Juhta.Net.Services.Service.ConstructorParams*
+  commentId: Overload:Juhta.Net.Services.Service.ConstructorParams
+  isExternal: false
+  name: ConstructorParams
+  nameWithType: Service.ConstructorParams
+  fullName: Juhta.Net.Services.Service.ConstructorParams
+- uid: Juhta.Net.Services.ConstructorParam[]
+  name: ConstructorParam[]
+  nameWithType: ConstructorParam[]
+  fullName: Juhta.Net.Services.ConstructorParam[]
+  nameWithType.vb: ConstructorParam()
+  fullName.vb: Juhta.Net.Services.ConstructorParam()
+  name.vb: ConstructorParam()
+  spec.csharp:
+  - uid: Juhta.Net.Services.ConstructorParam
+    name: ConstructorParam
+    nameWithType: ConstructorParam
+    fullName: Juhta.Net.Services.ConstructorParam
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Juhta.Net.Services.ConstructorParam
+    name: ConstructorParam
+    nameWithType: ConstructorParam
+    fullName: Juhta.Net.Services.ConstructorParam
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Juhta.Net.Services.Service.Id*
+  commentId: Overload:Juhta.Net.Services.Service.Id
+  isExternal: false
+  name: Id
+  nameWithType: Service.Id
+  fullName: Juhta.Net.Services.Service.Id
+- uid: Juhta.Net.Services.ServiceId
+  commentId: T:Juhta.Net.Services.ServiceId
+  parent: Juhta.Net.Services
+  isExternal: false
+  name: ServiceId
+  nameWithType: ServiceId
+  fullName: Juhta.Net.Services.ServiceId
+- uid: Juhta.Net.Services.Service.LibraryClass*
+  commentId: Overload:Juhta.Net.Services.Service.LibraryClass
+  isExternal: false
+  name: LibraryClass
+  nameWithType: Service.LibraryClass
+  fullName: Juhta.Net.Services.Service.LibraryClass
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Services.Service.LibraryFileName*
+  commentId: Overload:Juhta.Net.Services.Service.LibraryFileName
+  isExternal: false
+  name: LibraryFileName
+  nameWithType: Service.LibraryFileName
+  fullName: Juhta.Net.Services.Service.LibraryFileName

@@ -1,47 +1,44 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Common.CommandLineOption
-  commentId: T:Juhta.Net.Common.CommandLineOption
-  id: CommandLineOption
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Console.NamedArgument
+  commentId: T:Juhta.Net.Console.NamedArgument
+  id: NamedArgument
+  parent: Juhta.Net.Console
   children:
-  - Juhta.Net.Common.CommandLineOption.Name
+  - Juhta.Net.Console.NamedArgument.#ctor(System.String,System.String)
   langs:
   - csharp
   - vb
-  name: CommandLineOption
-  nameWithType: CommandLineOption
-  fullName: Juhta.Net.Common.CommandLineOption
+  name: NamedArgument
+  nameWithType: NamedArgument
+  fullName: Juhta.Net.Console.NamedArgument
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineOption.cs
+      path: src/Juhta.Net/Console/NamedArgument.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: CommandLineOption
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineOption.cs
-    startLine: 14
+    id: NamedArgument
+    path: ../src/Juhta.Net/Console/NamedArgument.cs
+    startLine: 15
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nDefines a class that represents a command line option. At the command line level, command line options consist\nof a prefix, name and an optional value, which is separated by a name-value separator from the name part.\n"
+  namespace: Juhta.Net.Console
+  summary: "\nDefines a class that represents a named argument. At the command line level, named arguments consist of two\nseparate raw arguments. The first argument specifies the name for the argument and the second argument the\nactual argument value. The first argument must begin with a named argument prefix.\n"
   example: []
   syntax:
-    content: 'public class CommandLineOption : CommandLineArg'
+    content: 'public class NamedArgument : NameValueArgument'
     content.vb: >-
-      Public Class CommandLineOption
-
-          Inherits CommandLineArg
+      Public Class NamedArgument
+          Inherits NameValueArgument
   inheritance:
   - System.Object
-  - Juhta.Net.Common.CommandLineArg
+  - Juhta.Net.Console.CommandLineArgument
+  - Juhta.Net.Console.NameValueArgument
   inheritedMembers:
-  - Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  - Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  - Juhta.Net.Common.CommandLineArg.RawArg
-  - Juhta.Net.Common.CommandLineArg.Value
-  - Juhta.Net.Common.CommandLineArg.m_rawArg
-  - Juhta.Net.Common.CommandLineArg.m_value
+  - Juhta.Net.Console.NameValueArgument.Name
+  - Juhta.Net.Console.CommandLineArgument.Consumed
+  - Juhta.Net.Console.CommandLineArgument.Value
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -55,50 +52,52 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Common.CommandLineOption.Name
-  commentId: P:Juhta.Net.Common.CommandLineOption.Name
-  id: Name
-  parent: Juhta.Net.Common.CommandLineOption
+- uid: Juhta.Net.Console.NamedArgument.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.Console.NamedArgument.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Juhta.Net.Console.NamedArgument
   langs:
   - csharp
   - vb
-  name: Name
-  nameWithType: CommandLineOption.Name
-  fullName: Juhta.Net.Common.CommandLineOption.Name
-  type: Property
+  name: NamedArgument(String, String)
+  nameWithType: NamedArgument.NamedArgument(String, String)
+  fullName: Juhta.Net.Console.NamedArgument.NamedArgument(System.String, System.String)
+  type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/CommandLineOption.cs
+      path: src/Juhta.Net/Console/NamedArgument.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: Name
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/CommandLineOption.cs
-    startLine: 21
+    id: .ctor
+    path: ../src/Juhta.Net/Console/NamedArgument.cs
+    startLine: 24
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nGets the name of the command line option specified by this CommandLineOption object.\n"
+  namespace: Juhta.Net.Console
+  summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public string Name { get; }
-    parameters: []
-    return:
+    content: public NamedArgument(string name, string value)
+    parameters:
+    - id: name
       type: System.String
-    content.vb: Public ReadOnly Property Name As String
-  overload: Juhta.Net.Common.CommandLineOption.Name*
+      description: Specifies a value for the <xref href="Juhta.Net.Console.NameValueArgument.Name" data-throw-if-not-resolved="false"></xref> property.
+    - id: value
+      type: System.String
+      description: Specifies a value for the <xref href="Juhta.Net.Console.CommandLineArgument.Value" data-throw-if-not-resolved="false"></xref> property.
+    content.vb: Public Sub New(name As String, value As String)
+  overload: Juhta.Net.Console.NamedArgument.#ctor*
   modifiers.csharp:
   - public
-  - get
   modifiers.vb:
   - Public
-  - ReadOnly
 references:
-- uid: Juhta.Net.Common
-  commentId: N:Juhta.Net.Common
+- uid: Juhta.Net.Console
+  commentId: N:Juhta.Net.Console
   isExternal: false
-  name: Juhta.Net.Common
-  nameWithType: Juhta.Net.Common
-  fullName: Juhta.Net.Common
+  name: Juhta.Net.Console
+  nameWithType: Juhta.Net.Console
+  fullName: Juhta.Net.Console
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -106,117 +105,41 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Common.CommandLineArg
-  commentId: T:Juhta.Net.Common.CommandLineArg
-  parent: Juhta.Net.Common
+- uid: Juhta.Net.Console.CommandLineArgument
+  commentId: T:Juhta.Net.Console.CommandLineArgument
+  parent: Juhta.Net.Console
   isExternal: false
-  name: CommandLineArg
-  nameWithType: CommandLineArg
-  fullName: Juhta.Net.Common.CommandLineArg
-- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  parent: Juhta.Net.Common.CommandLineArg
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument
+- uid: Juhta.Net.Console.NameValueArgument
+  commentId: T:Juhta.Net.Console.NameValueArgument
+  parent: Juhta.Net.Console
   isExternal: false
-  name: ValidateValue(IStringValidator)
-  nameWithType: CommandLineArg.ValidateValue(IStringValidator)
-  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-  spec.csharp:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Juhta.Net.Validation.IStringValidator
-    name: IStringValidator
-    nameWithType: IStringValidator
-    fullName: Juhta.Net.Validation.IStringValidator
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(Juhta.Net.Validation.IStringValidator)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Juhta.Net.Validation.IStringValidator
-    name: IStringValidator
-    nameWithType: IStringValidator
-    fullName: Juhta.Net.Validation.IStringValidator
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  commentId: M:Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: true
-  name: ValidateValue(String)
-  nameWithType: CommandLineArg.ValidateValue(String)
-  fullName: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-  spec.csharp:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.CommandLineArg.ValidateValue(System.String)
-    name: ValidateValue
-    nameWithType: CommandLineArg.ValidateValue
-    fullName: Juhta.Net.Common.CommandLineArg.ValidateValue
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Juhta.Net.Common.CommandLineArg.RawArg
-  commentId: P:Juhta.Net.Common.CommandLineArg.RawArg
-  parent: Juhta.Net.Common.CommandLineArg
+  name: NameValueArgument
+  nameWithType: NameValueArgument
+  fullName: Juhta.Net.Console.NameValueArgument
+- uid: Juhta.Net.Console.NameValueArgument.Name
+  commentId: P:Juhta.Net.Console.NameValueArgument.Name
+  parent: Juhta.Net.Console.NameValueArgument
   isExternal: false
-  name: RawArg
-  nameWithType: CommandLineArg.RawArg
-  fullName: Juhta.Net.Common.CommandLineArg.RawArg
-- uid: Juhta.Net.Common.CommandLineArg.Value
-  commentId: P:Juhta.Net.Common.CommandLineArg.Value
-  parent: Juhta.Net.Common.CommandLineArg
+  name: Name
+  nameWithType: NameValueArgument.Name
+  fullName: Juhta.Net.Console.NameValueArgument.Name
+- uid: Juhta.Net.Console.CommandLineArgument.Consumed
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Consumed
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: Consumed
+  nameWithType: CommandLineArgument.Consumed
+  fullName: Juhta.Net.Console.CommandLineArgument.Consumed
+- uid: Juhta.Net.Console.CommandLineArgument.Value
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Value
+  parent: Juhta.Net.Console.CommandLineArgument
   isExternal: false
   name: Value
-  nameWithType: CommandLineArg.Value
-  fullName: Juhta.Net.Common.CommandLineArg.Value
-- uid: Juhta.Net.Common.CommandLineArg.m_rawArg
-  commentId: F:Juhta.Net.Common.CommandLineArg.m_rawArg
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
-  name: m_rawArg
-  nameWithType: CommandLineArg.m_rawArg
-  fullName: Juhta.Net.Common.CommandLineArg.m_rawArg
-- uid: Juhta.Net.Common.CommandLineArg.m_value
-  commentId: F:Juhta.Net.Common.CommandLineArg.m_value
-  parent: Juhta.Net.Common.CommandLineArg
-  isExternal: false
-  name: m_value
-  nameWithType: CommandLineArg.m_value
-  fullName: Juhta.Net.Common.CommandLineArg.m_value
+  nameWithType: CommandLineArgument.Value
+  fullName: Juhta.Net.Console.CommandLineArgument.Value
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -502,12 +425,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Common.CommandLineOption.Name*
-  commentId: Overload:Juhta.Net.Common.CommandLineOption.Name
+- uid: Juhta.Net.Console.NamedArgument.#ctor*
+  commentId: Overload:Juhta.Net.Console.NamedArgument.#ctor
   isExternal: false
-  name: Name
-  nameWithType: CommandLineOption.Name
-  fullName: Juhta.Net.Common.CommandLineOption.Name
+  name: NamedArgument
+  nameWithType: NamedArgument.NamedArgument
+  fullName: Juhta.Net.Console.NamedArgument.NamedArgument
 - uid: System.String
   commentId: T:System.String
   parent: System

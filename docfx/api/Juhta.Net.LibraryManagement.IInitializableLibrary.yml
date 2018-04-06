@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IInitializableLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
     startLine: 14
   assemblies:
   - Juhta.Net
@@ -48,11 +48,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: InitializeLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
     startLine: 22
   assemblies:
   - Juhta.Net

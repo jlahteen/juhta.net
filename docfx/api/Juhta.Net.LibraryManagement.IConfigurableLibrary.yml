@@ -5,7 +5,7 @@ items:
   id: IConfigurableLibrary
   parent: Juhta.Net.LibraryManagement
   children:
-  - Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
+  - Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)
   langs:
   - csharp
   - vb
@@ -15,61 +15,65 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IConfigurableLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
-    startLine: 14
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
+    startLine: 16
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.LibraryManagement
-  summary: "\nDefines a base interface for configurable libraries. A library is configurable if it requires specific startup\noperations and those operations need configuration.\n"
+  summary: "\nDefines an interface for such configurable libraries whose configuration is done with a JSON, XML or INI\nconfiguration.\n"
   example: []
   syntax:
-    content: public interface IConfigurableLibrary
-    content.vb: Public Interface IConfigurableLibrary
+    content: 'public interface IConfigurableLibrary : IConfigurableLibraryBase'
+    content.vb: >-
+      Public Interface IConfigurableLibrary
+          Inherits IConfigurableLibraryBase
+  inheritedMembers:
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
   modifiers.csharp:
   - public
   - interface
   modifiers.vb:
   - Public
   - Interface
-- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-  id: ConfigFileName
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  commentId: M:Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  id: InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)
   parent: Juhta.Net.LibraryManagement.IConfigurableLibrary
   langs:
   - csharp
   - vb
-  name: ConfigFileName
-  nameWithType: IConfigurableLibrary.ConfigFileName
-  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-  type: Property
+  name: InitializeLibrary(IConfigurationRoot)
+  nameWithType: IConfigurableLibrary.InitializeLibrary(IConfigurationRoot)
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
-    id: ConfigFileName
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
-    startLine: 21
+    id: InitializeLibrary
+    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibrary.cs
+    startLine: 25
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.LibraryManagement
-  summary: "\nGets the name of the configuration file.\n"
+  summary: "\nInitializes the library based on a specified configuration.\n"
   example: []
   syntax:
-    content: string ConfigFileName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: ReadOnly Property ConfigFileName As String
-  overload: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName*
-  modifiers.csharp:
-  - get
-  modifiers.vb:
-  - ReadOnly
+    content: void InitializeLibrary(IConfigurationRoot config)
+    parameters:
+    - id: config
+      type: Microsoft.Extensions.Configuration.IConfigurationRoot
+      description: >-
+        Specifies an <xref href="Microsoft.Extensions.Configuration.IConfigurationRoot" data-throw-if-not-resolved="false"></xref> object containing a configuration for
+
+        the library.
+    content.vb: Sub InitializeLibrary(config As IConfigurationRoot)
+  overload: Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary*
 references:
 - uid: Juhta.Net.LibraryManagement
   commentId: N:Juhta.Net.LibraryManagement
@@ -77,22 +81,36 @@ references:
   name: Juhta.Net.LibraryManagement
   nameWithType: Juhta.Net.LibraryManagement
   fullName: Juhta.Net.LibraryManagement
-- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName*
-  commentId: Overload:Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
   isExternal: false
   name: ConfigFileName
-  nameWithType: IConfigurableLibrary.ConfigFileName
-  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary.ConfigFileName
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: System
-  commentId: N:System
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  parent: Juhta.Net.LibraryManagement
   isExternal: false
-  name: System
-  nameWithType: System
-  fullName: System
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+- uid: Microsoft.Extensions.Configuration.IConfigurationRoot
+  commentId: T:Microsoft.Extensions.Configuration.IConfigurationRoot
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  name: IConfigurationRoot
+  nameWithType: IConfigurationRoot
+  fullName: Microsoft.Extensions.Configuration.IConfigurationRoot
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary*
+  commentId: Overload:Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary
+  isExternal: false
+  name: InitializeLibrary
+  nameWithType: IConfigurableLibrary.InitializeLibrary
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibrary.InitializeLibrary
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: false
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration

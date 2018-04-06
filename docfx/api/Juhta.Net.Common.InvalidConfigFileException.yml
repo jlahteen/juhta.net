@@ -5,7 +5,8 @@ items:
   id: InvalidConfigFileException
   parent: Juhta.Net.Common
   children:
-  - Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)
+  - Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)
+  - Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
@@ -15,24 +16,22 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/InvalidConfigFileException.cs
+      path: src/Juhta.Net/Common/InvalidConfigFileException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: InvalidConfigFileException
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InvalidConfigFileException.cs
+    path: ../src/Juhta.Net/Common/InvalidConfigFileException.cs
     startLine: 16
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when an XML configuration file doesn&apos;t pass schema validation.\n"
+  summary: "\nThis exception will be thrown when an XML configuration file doesn&apos;t pass (schema) validation.\n"
   example: []
   syntax:
     content: 'public class InvalidConfigFileException : Exception, ISerializable'
     content.vb: >-
       Public Class InvalidConfigFileException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -64,40 +63,76 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)
-  commentId: M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)
-  id: '#ctor(System.String,System.Xml.Schema.XmlSchemaValidationException)'
+- uid: Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)
+  commentId: M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String)
+  id: '#ctor(System.String)'
   parent: Juhta.Net.Common.InvalidConfigFileException
   langs:
   - csharp
   - vb
-  name: InvalidConfigFileException(String, XmlSchemaValidationException)
-  nameWithType: InvalidConfigFileException.InvalidConfigFileException(String, XmlSchemaValidationException)
-  fullName: Juhta.Net.Common.InvalidConfigFileException.InvalidConfigFileException(System.String, System.Xml.Schema.XmlSchemaValidationException)
+  name: InvalidConfigFileException(String)
+  nameWithType: InvalidConfigFileException.InvalidConfigFileException(String)
+  fullName: Juhta.Net.Common.InvalidConfigFileException.InvalidConfigFileException(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/InvalidConfigFileException.cs
+      path: src/Juhta.Net/Common/InvalidConfigFileException.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/InvalidConfigFileException.cs
-    startLine: 25
+    path: ../src/Juhta.Net/Common/InvalidConfigFileException.cs
+    startLine: 24
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public InvalidConfigFileException(string message, XmlSchemaValidationException exception)
+    content: public InvalidConfigFileException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
-    - id: exception
-      type: System.Xml.Schema.XmlSchemaValidationException
-      description: Specifies an actual error that has occurred in the schema validation.
-    content.vb: Public Sub New(message As String, exception As XmlSchemaValidationException)
+    content.vb: Public Sub New(message As String)
+  overload: Juhta.Net.Common.InvalidConfigFileException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Common.InvalidConfigFileException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Juhta.Net.Common.InvalidConfigFileException
+  langs:
+  - csharp
+  - vb
+  name: InvalidConfigFileException(String, Exception)
+  nameWithType: InvalidConfigFileException.InvalidConfigFileException(String, Exception)
+  fullName: Juhta.Net.Common.InvalidConfigFileException.InvalidConfigFileException(System.String, System.Exception)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Common/InvalidConfigFileException.cs
+      branch: Dev
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Common/InvalidConfigFileException.cs
+    startLine: 32
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public InvalidConfigFileException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    - id: innerException
+      type: System.Exception
+      description: Specifies an inner exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
   overload: Juhta.Net.Common.InvalidConfigFileException.#ctor*
   modifiers.csharp:
   - public
@@ -586,16 +621,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System.Xml.Schema.XmlSchemaValidationException
-  commentId: T:System.Xml.Schema.XmlSchemaValidationException
-  parent: System.Xml.Schema
-  isExternal: true
-  name: XmlSchemaValidationException
-  nameWithType: XmlSchemaValidationException
-  fullName: System.Xml.Schema.XmlSchemaValidationException
-- uid: System.Xml.Schema
-  commentId: N:System.Xml.Schema
-  isExternal: false
-  name: System.Xml.Schema
-  nameWithType: System.Xml.Schema
-  fullName: System.Xml.Schema

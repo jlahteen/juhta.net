@@ -20,11 +20,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyClassUri
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 19
   assemblies:
   - Juhta.Net
@@ -35,9 +35,7 @@ items:
     content: 'public abstract class AssemblyClassUri : Uri, ISerializable'
     content.vb: >-
       Public MustInherit Class AssemblyClassUri
-
           Inherits Uri
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -140,11 +138,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FullClassName
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 26
   assemblies:
   - Juhta.Net
@@ -177,11 +175,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IsAssemblyDownloaded
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 35
   assemblies:
   - Juhta.Net
@@ -214,11 +212,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LocalAssemblyPath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 45
   assemblies:
   - Juhta.Net
@@ -255,11 +253,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 67
   assemblies:
   - Juhta.Net
@@ -298,11 +296,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IsFixedDiskDrivePath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 84
   assemblies:
   - Juhta.Net
@@ -339,11 +337,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/AssemblyClassUri.cs
+      path: src/Juhta.Net/Common/AssemblyClassUri.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: m_localAssemblyPath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/AssemblyClassUri.cs
+    path: ../src/Juhta.Net/Common/AssemblyClassUri.cs
     startLine: 101
   assemblies:
   - Juhta.Net

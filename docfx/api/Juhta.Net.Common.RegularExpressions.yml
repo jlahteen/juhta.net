@@ -19,11 +19,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: RegularExpressions
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 13
   assemblies:
   - Juhta.Net
@@ -63,11 +63,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyClassFileUri
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 20
   assemblies:
   - Juhta.Net
@@ -98,11 +98,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: DirectoryPath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 25
   assemblies:
   - Juhta.Net
@@ -133,11 +133,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EmailAddress
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 30
   assemblies:
   - Juhta.Net
@@ -168,11 +168,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: EmailAddressList
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 35
   assemblies:
   - Juhta.Net
@@ -203,11 +203,11 @@ items:
   type: Field
   source:
     remote:
-      path: Source/Juhta.Net/Common/RegularExpressions.cs
+      path: src/Juhta.Net/Common/RegularExpressions.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: FilePath
-    path: ../../Juhta.NET/Source/Juhta.Net/Common/RegularExpressions.cs
+    path: ../src/Juhta.Net/Common/RegularExpressions.cs
     startLine: 40
   assemblies:
   - Juhta.Net

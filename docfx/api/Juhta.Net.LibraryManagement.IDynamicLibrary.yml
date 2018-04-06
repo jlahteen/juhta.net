@@ -17,11 +17,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicLibrary
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
     startLine: 16
   assemblies:
   - Juhta.Net
@@ -50,11 +50,11 @@ items:
   type: Method
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: GoLive
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
     startLine: 29
   assemblies:
   - Juhta.Net
@@ -83,11 +83,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryState
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
     startLine: 38
   assemblies:
   - Juhta.Net
@@ -117,11 +117,11 @@ items:
   type: Property
   source:
     remote:
-      path: Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
       branch: Dev
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryStateLock
-    path: ../../Juhta.NET/Source/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
     startLine: 44
   assemblies:
   - Juhta.Net
