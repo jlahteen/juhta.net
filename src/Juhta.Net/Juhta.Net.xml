@@ -1109,10 +1109,23 @@
             <summary>
             Defines a class for parsing command line arguments. The following types of command line arguments are
             supported:
-            <list type="bullet">
-            <item><term>Named arguments</term></item>
-            <item><term>Option arguments</term></item>
-            <item><term>Plain arguments</term></item>
+            <list type="table">
+            <listheader>
+            <term>Argument type</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term>Named arguments</term>
+            <description>Represents a named command line argument</description>
+            </item>
+            <item>
+            <term>Option arguments</term>
+            <description>Represents a command line option</description>
+            </item>
+            <item>
+            <term>Plain arguments</term>
+            <description>Represents any raw command line argument</description>
+            </item>
             </list>
             <para>A named argument consists of two raw arguments. The first argument determines an argument name and the
             second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For
@@ -1213,7 +1226,7 @@
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.Console.NamedArgument"/> based on a specified argument name and value.
             </summary>
-            <param name="argumentName">Specifies an argument name. The name must begin with an argument name prefix.</param>
+            <param name="argumentName">Specifies an argument name.</param>
             <param name="argumentValue">Specifies an argument value.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.Console.NamedArgument"/> instance.</returns>
         </member>
@@ -1221,7 +1234,8 @@
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.Console.OptionArgument"/> based on a specified string value.
             </summary>
-            <param name="optionArgument">Specifies an option argument as a string value.</param>
+            <param name="optionArgument">Specifies an option argument as a string value. The value is not assumed to
+            start with an option prefix.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.Console.OptionArgument"/> instance.</returns>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.CreatePlainArgument(System.String)">
@@ -1231,6 +1245,14 @@
             <param name="argument">Specifies a raw command line argument based on which to create an instance of
             <see cref="T:Juhta.Net.Console.PlainArgument"/>.</param>
             <returns>Returns the created <see cref="T:Juhta.Net.Console.PlainArgument"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParser.RemovePossiblePrefix(System.String@)">
+            <summary>
+            Removes a possible reserved prefix from the beginning of an argument.
+            </summary>
+            <param name="argument">Specifies an argument. If the argument starts with a reserved prefix, returns the
+            argument without the prefix.</param>
+            <returns>Returns the removed prefix or null, if no prefix was removed.</returns>
         </member>
         <member name="M:Juhta.Net.Console.CommandLineParser.SetConsumed(Juhta.Net.Console.CommandLineArgument)">
             <summary>
@@ -4136,13 +4158,13 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error083">
             <summary>
-            Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an
-            option prefix '{1}'.
+            This is an unused message.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error084">
             <summary>
-            Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.
+            Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
+            after an option prefix.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error085">
@@ -4165,13 +4187,13 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error088">
             <summary>
-            Cannot create an instance of NamedArgument because the argument name '{0}' doesn't begin with an argument
-            name prefix '{1}'.
+            This is an unused message.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error089">
             <summary>
-            Cannot create an instance of NamedArgument based on the pure argument name prefix '{0}'.
+            Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
+            immediately after an argument name prefix.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error090">

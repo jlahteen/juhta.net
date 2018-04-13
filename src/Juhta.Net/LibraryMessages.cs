@@ -478,16 +478,18 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("XML document is not valid according to the given schema(s).");
 
-        /// <summary>
-        /// Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an
-        /// option prefix '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because it doesn't begin with an option prefix '{1}'.");
+        // Free identifier: 083
 
         /// <summary>
-        /// Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.
+        /// This is an unused message.
         /// </summary>
-        internal static readonly ErrorMessage Error084 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the pure option prefix '{0}'.");
+        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("This is an unused message.");
+
+        /// <summary>
+        /// Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
+        /// after an option prefix.
+        /// </summary>
+        internal static readonly ErrorMessage Error084 = MessageFactory.CreateErrorMessage("Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately after an option prefix.");
 
         /// <summary>
         /// Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
@@ -507,16 +509,18 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error087 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid according to the regex '{1}'.");
 
-        /// <summary>
-        /// Cannot create an instance of NamedArgument because the argument name '{0}' doesn't begin with an argument
-        /// name prefix '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' doesn't begin with an argument name prefix '{1}'.");
+        // Free identifier: 088
 
         /// <summary>
-        /// Cannot create an instance of NamedArgument based on the pure argument name prefix '{0}'.
+        /// This is an unused message.
         /// </summary>
-        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument based on the pure argument name prefix '{0}'.");
+        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("This is an unused message.");
+
+        /// <summary>
+        /// Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
+        /// immediately after an argument name prefix.
+        /// </summary>
+        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected immediately after an argument name prefix.");
 
         /// <summary>
         /// Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the

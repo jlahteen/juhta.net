@@ -83,7 +83,7 @@ namespace Juhta.Net.Console
                 return((NamedArgument)SetConsumed(namedArgument));
 
             else if (defaultValue != null)
-                return(CreateNamedArgument(m_argumentNamePrefix + argumentName, defaultValue));
+                return(CreateNamedArgument(argumentName, defaultValue));
 
             else
                 throw new CommandLineArgumentException(LibraryMessages.Error093.FormatMessage(argumentName));
@@ -119,7 +119,7 @@ namespace Juhta.Net.Console
                 return((OptionArgument)SetConsumed(optionArgument));
 
             else if (defaultValue != null)
-                return(CreateOptionArgument(m_optionPrefix + optionName + m_optionNameValueSeparator + defaultValue));
+                return(CreateOptionArgument(optionName + m_optionNameValueSeparator + defaultValue));
 
             else
                 throw new CommandLineArgumentException(LibraryMessages.Error091.FormatMessage(optionName));
@@ -189,6 +189,7 @@ namespace Juhta.Net.Console
         /// <param name="optionNameValueSeparator">Specifies an option name-value separator.</param>
         public void ParseArguments(string[] arguments, string argumentNamePrefix, string optionPrefix, string optionNameValueSeparator)
         {
+            string prefix;
             CommandLineArgument argument;
 
             // Initialize the argument lists and collections
@@ -232,7 +233,9 @@ namespace Juhta.Net.Console
 
             for (int i = 0; i < arguments.Length; i++)
             {
-                if (arguments[i].StartsWith(optionPrefix))
+                prefix = RemovePossiblePrefix(ref arguments[i]);
+
+                if (prefix == m_optionPrefix)
                 {
                     // Create an option argument
 
@@ -240,7 +243,7 @@ namespace Juhta.Net.Console
 
                     m_optionArguments.Add(((OptionArgument)argument).Name, ((OptionArgument)argument));
                 }
-                else if (arguments[i].StartsWith(argumentNamePrefix))
+                else if (prefix == m_argumentNamePrefix)
                 {
                     // Create a named argument
 
@@ -292,19 +295,11 @@ namespace Juhta.Net.Console
         /// <summary>
         /// Creates an instance of <see cref="NamedArgument"/> based on a specified argument name and value.
         /// </summary>
-        /// <param name="argumentName">Specifies an argument name. The name must begin with an argument name prefix.</param>
+        /// <param name="argumentName">Specifies an argument name.</param>
         /// <param name="argumentValue">Specifies an argument value.</param>
         /// <returns>Returns the created <see cref="NamedArgument"/> instance.</returns>
         private NamedArgument CreateNamedArgument(string argumentName, string argumentValue)
         {
-            if (!argumentName.StartsWith(m_argumentNamePrefix))
-                throw new CommandLineArgumentException(LibraryMessages.Error088.FormatMessage(argumentName, m_argumentNamePrefix));
-
-            argumentName = argumentName.Substring(m_argumentNamePrefix.Length);
-
-            if (String.IsNullOrWhiteSpace(argumentName))
-                throw new CommandLineArgumentException(LibraryMessages.Error089.FormatMessage(m_argumentNamePrefix));
-
             if (!Regex.IsMatch(argumentName, c_regexArgumentName))
                 throw new CommandLineArgumentException(LibraryMessages.Error090.FormatMessage(argumentName, c_regexArgumentName));
 
@@ -314,22 +309,15 @@ namespace Juhta.Net.Console
         /// <summary>
         /// Creates an instance of <see cref="OptionArgument"/> based on a specified string value.
         /// </summary>
-        /// <param name="optionArgument">Specifies an option argument as a string value.</param>
+        /// <param name="optionArgument">Specifies an option argument as a string value. The value is not assumed to
+        /// start with an option prefix.</param>
         /// <returns>Returns the created <see cref="OptionArgument"/> instance.</returns>
         private OptionArgument CreateOptionArgument(string optionArgument)
         {
-            string optionArgumentOriginal, optionName, optionValue;
+            string fullOptionArgument, optionName, optionValue;
             int nameValueSeparatorPosition;
 
-            optionArgumentOriginal = optionArgument;
-
-            if (!optionArgument.StartsWith(m_optionPrefix))
-                throw new CommandLineArgumentException(LibraryMessages.Error083.FormatMessage(optionArgument, m_optionPrefix));
-
-            optionArgument = optionArgument.Substring(m_optionPrefix.Length);
-
-            if (String.IsNullOrWhiteSpace(optionArgument))
-                throw new CommandLineArgumentException(LibraryMessages.Error084.FormatMessage(m_optionPrefix));
+            fullOptionArgument = m_optionPrefix + optionArgument;
 
             nameValueSeparatorPosition = optionArgument.IndexOf(m_optionNameValueSeparator);
 
@@ -344,16 +332,16 @@ namespace Juhta.Net.Console
                 optionName = optionArgument.Substring(0, nameValueSeparatorPosition);
 
                 if (String.IsNullOrWhiteSpace(optionName))
-                    throw new CommandLineArgumentException(LibraryMessages.Error085.FormatMessage(optionArgumentOriginal));
+                    throw new CommandLineArgumentException(LibraryMessages.Error085.FormatMessage(fullOptionArgument));
 
                 optionValue = optionArgument.Substring(nameValueSeparatorPosition + m_optionNameValueSeparator.Length);
 
                 if (String.IsNullOrWhiteSpace(optionValue))
-                    throw new CommandLineArgumentException(LibraryMessages.Error086.FormatMessage(optionArgumentOriginal));
+                    throw new CommandLineArgumentException(LibraryMessages.Error086.FormatMessage(fullOptionArgument));
             }
 
             if (!Regex.IsMatch(optionName, c_regexOptionName))
-                throw new CommandLineArgumentException(LibraryMessages.Error087.FormatMessage(optionArgumentOriginal, c_regexOptionName));
+                throw new CommandLineArgumentException(LibraryMessages.Error087.FormatMessage(fullOptionArgument, c_regexOptionName));
 
             return(new OptionArgument(optionName, optionValue));
         }
@@ -367,6 +355,36 @@ namespace Juhta.Net.Console
         private PlainArgument CreatePlainArgument(string argument)
         {
             return(new PlainArgument(argument));
+        }
+
+        /// <summary>
+        /// Removes a possible reserved prefix from the beginning of an argument.
+        /// </summary>
+        /// <param name="argument">Specifies an argument. If the argument starts with a reserved prefix, returns the
+        /// argument without the prefix.</param>
+        /// <returns>Returns the removed prefix or null, if no prefix was removed.</returns>
+        private string RemovePossiblePrefix(ref string argument)
+        {
+            if (argument.StartsWith(m_argumentNamePrefix))
+            {
+                argument = argument.Substring(m_argumentNamePrefix.Length);
+
+                if (String.IsNullOrWhiteSpace(argument))
+                    throw new CommandLineArgumentException(LibraryMessages.Error089.FormatMessage(m_argumentNamePrefix));
+
+                return(m_argumentNamePrefix);
+            }
+            else if (argument.StartsWith(m_optionPrefix))
+            {
+                argument = argument.Substring(m_optionPrefix.Length);
+
+                if (String.IsNullOrWhiteSpace(argument))
+                    throw new CommandLineArgumentException(LibraryMessages.Error084.FormatMessage(m_optionPrefix));
+
+                return(m_optionPrefix);
+            }
+            else
+                return(null);
         }
 
         /// <summary>
