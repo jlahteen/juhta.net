@@ -5,6 +5,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Xml;
 
 namespace Juhta.Net.Tests
@@ -41,7 +42,13 @@ namespace Juhta.Net.Tests
 
         protected void AssertDefaultLogFileContent(params string[] messageExcerpts)
         {
-            string logFileContent;
+            string defaultLogFile, logFileContent;
+
+            defaultLogFile = GetDefaultLogFile();
+
+            for (int i = 0; i < 10; i++)
+                if (!File.Exists(defaultLogFile))
+                    Thread.Sleep(1000);
 
             logFileContent = File.ReadAllText(GetDefaultLogFile());
 
