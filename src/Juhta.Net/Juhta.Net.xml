@@ -3885,25 +3885,22 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error033">
             <summary>
-            Name part cannot be empty in a command line option ('{0}'). The common syntax of command line options is
-            &lt;prefix&gt;&lt;name&gt;[&lt;nameValueSeparator&gt;&lt;value&gt;].
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error034">
             <summary>
-            Value part cannot be empty in a command line option ('{0}'). The common syntax of command line options is
-            &lt;prefix&gt;&lt;name&gt;[&lt;nameValueSeparator&gt;&lt;value&gt;].
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error035">
             <summary>
-            More than one mutually exclusive options from the option group '{0}' were found in the command line
-            arguments.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error036">
             <summary>
-            None of the options from the option group '{0}' were found in the command line arguments.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error037">
@@ -3919,17 +3916,17 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error039">
             <summary>
-            Command line option name '{0}' is not valid according to the regular expression pattern '{1}'.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error040">
             <summary>
-            Default option's name was not found in the option group '{0}'.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error041">
             <summary>
-            Default option's name must be '{0}'.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error042">
@@ -3939,12 +3936,12 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error043">
             <summary>
-            Option '{0}' was not found in the command line arguments.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error044">
             <summary>
-            Command line argument '{0}' has no value part.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error045">
@@ -3969,12 +3966,12 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error049">
             <summary>
-            Command line argument '{0}' is unexpected.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error050">
             <summary>
-            There are no command line parameters to be consumed.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error051">
@@ -4158,7 +4155,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error083">
             <summary>
-            This is an unused message.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error084">
@@ -4187,7 +4184,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error088">
             <summary>
-            This is an unused message.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error089">

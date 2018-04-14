@@ -206,32 +206,33 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error032 = MessageFactory.CreateErrorMessage("XML document cannot be validated because the target namespace '{0}' is not present in the schema collection of the XML validator.");
 
         /// <summary>
-        /// Name part cannot be empty in a command line option ('{0}'). The common syntax of command line options is
-        /// &lt;prefix&gt;&lt;name&gt;[&lt;nameValueSeparator&gt;&lt;value&gt;].
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("Name part cannot be empty in a command line option ('{0}'). The common syntax of command line options is <prefix><name>[<nameValueSeparator><value>].");
+        internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Value part cannot be empty in a command line option ('{0}'). The common syntax of command line options is
-        /// &lt;prefix&gt;&lt;name&gt;[&lt;nameValueSeparator&gt;&lt;value&gt;].
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("Value part cannot be empty in a command line option ('{0}'). The common syntax of command line options is <prefix><name>[<nameValueSeparator><value>].");
+        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// More than one mutually exclusive options from the option group '{0}' were found in the command line
-        /// arguments.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("More than one mutually exclusive options from the option group '{0}' were found in the command line arguments.");
+        internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// None of the options from the option group '{0}' were found in the command line arguments.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("None of the options from the option group '{0}' were found in the command line arguments.");
+        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("<undefined>");
+
+        // TODO: The message below is currently not in use.
 
         /// <summary>
         /// Prefix '{0}' for command line options is not valid according to the regular expression pattern '{1}'.
         /// </summary>
         internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Prefix '{0}' for command line options is not valid according to the regular expression pattern '{1}'.");
+
+        // TODO: The message below is currently not in use.
 
         /// <summary>
         /// Separator '{0}' for name and value parts in command line options is not valid according to the regular
@@ -240,19 +241,21 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Separator '{0}' for name and value parts in command line options is not valid according to the regular expression pattern '{1}'.");
 
         /// <summary>
-        /// Command line option name '{0}' is not valid according to the regular expression pattern '{1}'.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error039 = MessageFactory.CreateErrorMessage("Command line option name '{0}' is not valid according to the regular expression pattern '{1}'.");
+        internal static readonly ErrorMessage Error039 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Default option's name was not found in the option group '{0}'.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error040 = MessageFactory.CreateErrorMessage("Default option's name was not found in the option group '{0}'.");
+        internal static readonly ErrorMessage Error040 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Default option's name must be '{0}'.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error041 = MessageFactory.CreateErrorMessage("Default option's name must be '{0}'.");
+        internal static readonly ErrorMessage Error041 = MessageFactory.CreateErrorMessage("<undefined>");
+
+        // TODO: The message below is currently not in use.
 
         /// <summary>
         /// Option '{0}' was specified more than once in the command line arguments.
@@ -260,29 +263,37 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error042 = MessageFactory.CreateErrorMessage("Option '{0}' was specified more than once in the command line arguments.");
 
         /// <summary>
-        /// Option '{0}' was not found in the command line arguments.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error043 = MessageFactory.CreateErrorMessage("Option '{0}' was not found in the command line arguments.");
+        internal static readonly ErrorMessage Error043 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Command line argument '{0}' has no value part.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error044 = MessageFactory.CreateErrorMessage("Command line argument '{0}' has no value part.");
+        internal static readonly ErrorMessage Error044 = MessageFactory.CreateErrorMessage("<undefined>");
+
+        // TODO: The message below is currently not in use.
 
         /// <summary>
         /// Command line argument '{0}' is invalid according to the given validator.
         /// </summary>
         internal static readonly ErrorMessage Error045 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is invalid according to the given validator.");
 
+        // TODO: The message below is currently not in use.
+
         /// <summary>
         /// Command line argument '{0}' is invalid according to the regular expression '{1}'.
         /// </summary>
         internal static readonly ErrorMessage Error046 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is invalid according to the regular expression '{1}'.");
 
+        // TODO: The message below is currently not in use.
+
         /// <summary>
         /// Command line argument value '{0}' is invalid according to the given validator.
         /// </summary>
         internal static readonly ErrorMessage Error047 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to the given validator.");
+
+        // TODO: The message below is currently not in use.
 
         /// <summary>
         /// Command line argument value '{0}' is invalid according to the regular expression '{1}'.
@@ -290,14 +301,14 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error048 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to the regular expression '{1}'.");
 
         /// <summary>
-        /// Command line argument '{0}' is unexpected.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error049 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is unexpected.");
+        internal static readonly ErrorMessage Error049 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// There are no command line parameters to be consumed.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error050 = MessageFactory.CreateErrorMessage("There are no command line parameters to be consumed.");
+        internal static readonly ErrorMessage Error050 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
         /// Regular expression pattern cannot be null.
@@ -478,12 +489,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("XML document is not valid according to the given schema(s).");
 
-        // Free identifier: 083
-
         /// <summary>
-        /// This is an unused message.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("This is an unused message.");
+        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
         /// Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
@@ -509,12 +518,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error087 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid according to the regex '{1}'.");
 
-        // Free identifier: 088
-
         /// <summary>
-        /// This is an unused message.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("This is an unused message.");
+        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
         /// Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
