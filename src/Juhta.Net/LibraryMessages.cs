@@ -272,12 +272,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error044 = MessageFactory.CreateErrorMessage("<undefined>");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Command line argument '{0}' is invalid according to the given validator.
+        /// Command line argument value '{0}' cannot be converted to the type '{1}'.
         /// </summary>
-        internal static readonly ErrorMessage Error045 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is invalid according to the given validator.");
+        internal static readonly ErrorMessage Error045 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' cannot be converted to the type '{1}'.");
 
         // TODO: The message below is currently not in use.
 

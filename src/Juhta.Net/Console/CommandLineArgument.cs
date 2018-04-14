@@ -6,6 +6,9 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using System;
+using System.Globalization;
+
 namespace Juhta.Net.Console
 {
     /// <summary>
@@ -13,6 +16,28 @@ namespace Juhta.Net.Console
     /// </summary>
     public abstract class CommandLineArgument
     {
+        #region Public Methods
+
+        /// <summary>
+        /// Gets the value of this command line argument converted to a specified type.
+        /// </summary>
+        /// <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
+        /// <returns>Returns the value of this command line argument converted to the specified type.</returns>
+        public T GetValueAs<T>()
+        {
+            try
+            {
+                return((T)Convert.ChangeType(m_value, typeof(T), CultureInfo.InvariantCulture));
+            }
+
+            catch (Exception ex) when (ex is FormatException || ex is InvalidCastException || ex is OverflowException)
+            {
+                throw new CommandLineArgumentException(LibraryMessages.Error045.FormatMessage(m_value, typeof(T)), ex);
+            }
+        }
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>

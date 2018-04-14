@@ -1058,6 +1058,13 @@
             Defines an abstract base class for command line arguments.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1">
+            <summary>
+            Gets the value of this command line argument converted to a specified type.
+            </summary>
+            <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
+            <returns>Returns the value of this command line argument converted to the specified type.</returns>
+        </member>
         <member name="P:Juhta.Net.Console.CommandLineArgument.Consumed">
             <summary>
             Gets or sets (internal) a boolean value determining whether this <see cref="T:Juhta.Net.Console.CommandLineArgument"/> has been
@@ -3946,7 +3953,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error045">
             <summary>
-            Command line argument '{0}' is invalid according to the given validator.
+            Command line argument value '{0}' cannot be converted to the type '{1}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error046">
