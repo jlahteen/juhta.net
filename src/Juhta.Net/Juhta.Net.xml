@@ -1060,9 +1060,18 @@
         </member>
         <member name="M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1">
             <summary>
-            Gets the value of this command line argument converted to a specified type.
+            Converts the value of this command line argument to a specified type.
             </summary>
             <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
+            <returns>Returns the value of this command line argument converted to the specified type.</returns>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})">
+            <summary>
+            Converts the value of this command line argument to a specified type and validates the converted value with
+            a specified validator.
+            </summary>
+            <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
+            <param name="validator">Specifies a validator.</param>
             <returns>Returns the value of this command line argument converted to the specified type.</returns>
         </member>
         <member name="P:Juhta.Net.Console.CommandLineArgument.Consumed">
@@ -3963,7 +3972,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error047">
             <summary>
-            Command line argument value '{0}' is invalid according to the given validator.
+            Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error048">

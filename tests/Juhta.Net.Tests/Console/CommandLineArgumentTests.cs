@@ -1,5 +1,6 @@
 ﻿
 using Juhta.Net.Console;
+using Juhta.Net.Validators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -256,6 +257,35 @@ namespace Juhta.Net.Tests.Console
         }
 
         [TestMethod]
+        [ExpectedException(typeof(CommandLineArgumentException))]
+        public void GetValueAs_String_InvalidValue_ShouldThrowCommandLineArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+            CommandLineArgument argument;
+
+            commandLineParser.ParseArguments(
+                new string[]
+                {
+                    "/MyOption:XXXHello"
+                }
+            );
+
+            argument = commandLineParser.GetOptionArgument("MyOption");
+
+            try
+            {
+                Assert.AreEqual<string>("XXXHello", argument.GetValueAs<string>(new TestValidator()));
+            }
+
+            catch (CommandLineArgumentException ex)
+            {
+                Assert.AreEqual<string>("[Juhta.Net.Error10047] Command line argument value 'XXXHello' is invalid according to a validator of the type 'Juhta.Net.Tests.Console.TestValidator'.", ex.Message);
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void GetValueAs_UInt16_ShouldReturnUInt16()
         {
             CommandLineParser commandLineParser = new CommandLineParser();
@@ -310,6 +340,19 @@ namespace Juhta.Net.Tests.Console
             argument = commandLineParser.GetOptionArgument("MyOption");
 
             Assert.AreEqual<ulong>(expected, argument.GetValueAs<ulong>());
+        }
+
+        #endregion
+    }
+
+    internal class TestValidator : IValidator<string>
+    {
+        #region Public Methods
+
+        public void Validate(string value)
+        {
+            if (value.StartsWith("XXX"))
+                throw new ValidationException("Value cannot start with 'XXX' because otherwise the system will crash. Try to be patient, we are still learning to code.");
         }
 
         #endregion

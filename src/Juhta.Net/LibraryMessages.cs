@@ -284,12 +284,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error046 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is invalid according to the regular expression '{1}'.");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Command line argument value '{0}' is invalid according to the given validator.
+        /// Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
         /// </summary>
-        internal static readonly ErrorMessage Error047 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to the given validator.");
+        internal static readonly ErrorMessage Error047 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to a validator of the type '{1}'.");
 
         // TODO: The message below is currently not in use.
 

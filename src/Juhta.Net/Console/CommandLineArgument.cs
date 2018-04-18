@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Validators;
 using System;
 using System.Globalization;
 
@@ -19,7 +20,7 @@ namespace Juhta.Net.Console
         #region Public Methods
 
         /// <summary>
-        /// Gets the value of this command line argument converted to a specified type.
+        /// Converts the value of this command line argument to a specified type.
         /// </summary>
         /// <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
         /// <returns>Returns the value of this command line argument converted to the specified type.</returns>
@@ -34,6 +35,32 @@ namespace Juhta.Net.Console
             {
                 throw new CommandLineArgumentException(LibraryMessages.Error045.FormatMessage(m_value, typeof(T)), ex);
             }
+        }
+
+        /// <summary>
+        /// Converts the value of this command line argument to a specified type and validates the converted value with
+        /// a specified validator.
+        /// </summary>
+        /// <typeparam name="T">Specifies a type to which to convert the value.</typeparam>
+        /// <param name="validator">Specifies a validator.</param>
+        /// <returns>Returns the value of this command line argument converted to the specified type.</returns>
+        public T GetValueAs<T>(IValidator<T> validator)
+        {
+            T value;
+
+            value = GetValueAs<T>();
+
+            try
+            {
+                validator.Validate(value);
+            }
+
+            catch (ValidationException ex)
+            {
+                throw new CommandLineArgumentException(LibraryMessages.Error047.FormatMessage(m_value, validator.GetType()), ex);
+            }
+
+            return(value);
         }
 
         #endregion
