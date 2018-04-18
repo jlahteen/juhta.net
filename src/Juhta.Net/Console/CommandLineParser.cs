@@ -204,15 +204,18 @@ namespace Juhta.Net.Console
 
             // Initialize the parsing settings
 
-            ArgumentHelper.CheckNotNull(nameof(argumentNamePrefix), argumentNamePrefix);
+            ArgumentHelper.CheckValue(nameof(argumentNamePrefix), argumentNamePrefix, c_regexPrefix);
 
             m_argumentNamePrefix = argumentNamePrefix;
 
-            ArgumentHelper.CheckNotNull(nameof(optionPrefix), optionPrefix);
+            ArgumentHelper.CheckValue(nameof(optionPrefix), optionPrefix, c_regexPrefix);
 
             m_optionPrefix = optionPrefix;
 
-            ArgumentHelper.CheckNotNull(nameof(optionNameValueSeparator), optionNameValueSeparator);
+            if (m_argumentNamePrefix == m_optionPrefix)
+                throw new CommandLineParserException(LibraryMessages.Error037.GetMessage());
+
+            ArgumentHelper.CheckValue(nameof(optionNameValueSeparator), optionNameValueSeparator, c_regexOptionNameValueSeparator);
 
             m_optionNameValueSeparator = optionNameValueSeparator;
 
@@ -427,6 +430,16 @@ namespace Juhta.Net.Console
         /// Specifies the regex for validating option names.
         /// </summary>
         private const string c_regexOptionName = "^[a-zA-Z0-9]+([_-][a-zA-Z0-9]+)*$";
+
+        /// <summary>
+        /// Specifies the regex for validating option name-value separators.
+        /// </summary>
+        private const string c_regexOptionNameValueSeparator = "^[:?=]$";
+
+        /// <summary>
+        /// Specifies the regex for validating argument name and option prefixes.
+        /// </summary>
+        private const string c_regexPrefix = @"^[#&*./~^_+\\-]+$";
 
         #endregion
 

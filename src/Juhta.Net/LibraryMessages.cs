@@ -225,12 +225,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("<undefined>");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Prefix '{0}' for command line options is not valid according to the regular expression pattern '{1}'.
+        /// Argument name prefix and option prefix cannot be the same in the command line parser.
         /// </summary>
-        internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Prefix '{0}' for command line options is not valid according to the regular expression pattern '{1}'.");
+        internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Argument name prefix and option prefix cannot be the same in the command line parser.");
 
         // TODO: The message below is currently not in use.
 

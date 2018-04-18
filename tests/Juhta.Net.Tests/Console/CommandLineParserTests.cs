@@ -1,6 +1,7 @@
 ﻿
 using Juhta.Net.Console;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Juhta.Net.Tests.Console
 {
@@ -210,6 +211,25 @@ namespace Juhta.Net.Tests.Console
         }
 
         [TestMethod]
+        [ExpectedException(typeof(CommandLineParserException))]
+        public void ParseArguments_ArgumentNamePrefixAndOptionPrefixSame_ShouldThrowCommandLineParserException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+
+            try
+            {
+                commandLineParser.ParseArguments(null, "--", "--", "=");
+            }
+
+            catch (CommandLineParserException ex)
+            {
+                Assert.AreEqual<string>("[Juhta.Net.Error10037] Argument name prefix and option prefix cannot be the same in the command line parser.", ex.Message);
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(CommandLineArgumentException))]
         public void ParseArguments_ArgumentValueMissing_ShouldThrowCommandLineArgumentException()
         {
@@ -332,6 +352,63 @@ namespace Juhta.Net.Tests.Console
             catch (CommandLineArgumentException ex)
             {
                 Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10092]"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ParseArguments_InvalidArgumentNamePrefix_ShouldThrowArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+
+            try
+            {
+                commandLineParser.ParseArguments(null, "%&¤", "/", ":");
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'argumentNamePrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ParseArguments_InvalidOptionNameValueSeparator_ShouldThrowArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+
+            try
+            {
+                commandLineParser.ParseArguments(null, "--", "/", "==");
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'optionNameValueSeparator' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ParseArguments_InvalidOptionPrefix_ShouldThrowArgumentException()
+        {
+            CommandLineParser commandLineParser = new CommandLineParser();
+
+            try
+            {
+                commandLineParser.ParseArguments(null, "--", "PRE", ":");
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'optionPrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
 
                 throw;
             }

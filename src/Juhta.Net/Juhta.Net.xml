@@ -1302,6 +1302,16 @@
             Specifies the regex for validating option names.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.c_regexOptionNameValueSeparator">
+            <summary>
+            Specifies the regex for validating option name-value separators.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Console.CommandLineParser.c_regexPrefix">
+            <summary>
+            Specifies the regex for validating argument name and option prefixes.
+            </summary>
+        </member>
         <member name="F:Juhta.Net.Console.CommandLineParser.m_allArguments">
             <summary>
             Specifies a list of all parsed command line arguments.
@@ -1336,6 +1346,25 @@
             <summary>
             Specifies a list of the parsed plain arguments.
             </summary>
+        </member>
+        <member name="T:Juhta.Net.Console.CommandLineParserException">
+            <summary>
+            This exception will be thrown when a command line parser encounters an error not related to command line
+            arguments.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParserException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Console.CommandLineParserException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception.</param>
         </member>
         <member name="T:Juhta.Net.Console.NamedArgument">
             <summary>
@@ -3921,7 +3950,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error037">
             <summary>
-            Prefix '{0}' for command line options is not valid according to the regular expression pattern '{1}'.
+            Argument name prefix and option prefix cannot be the same in the command line parser.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error038">
