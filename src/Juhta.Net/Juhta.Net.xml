@@ -282,6 +282,17 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.Common.ClassFileUri">
+            <summary>
+            todo
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.ClassFileUri.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="fileUri"></param>
+        </member>
         <member name="T:Juhta.Net.Common.CommonMessages">
             <summary>
             A static class that defines the common diagnostic messages.
