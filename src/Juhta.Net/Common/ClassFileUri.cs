@@ -6,6 +6,8 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Helpers;
+using Juhta.Net.Validators;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,26 +28,69 @@ namespace Juhta.Net.Common
         /// <param name="fileUri"></param>
         public ClassFileUri(string fileUri)
         {
-            Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(nameof(fileUri), fileUri);
+            int fragmentPosition;
+            string fragment, filePath;
+            FilePathValidator filePathValidator = new FilePathValidator();
 
-            if (fileUri.StartsWith("file:///"))
-                fileUri = fileUri.Substring("file:///".Length);
+            ArgumentHelper.CheckNotNull(nameof(fileUri), fileUri);
 
-            if (String.IsNullOrWhiteSpace(fileUri))
+            if (fileUri.StartsWith("file://") && !fileUri.StartsWith("file:///"))
                 throw new ArgumentException();
 
-            fileUri = Path.GetFullPath(fileUri);
+            else if (fileUri.StartsWith("file:///"))
+                fileUri = fileUri.Substring("file:///".Length);
 
-            if (!System.IO.File.Exists(fileUri))
-                throw new ArgumentException("", new FileNotFoundException());
+            fragmentPosition = fileUri.IndexOf('#');
 
-            string libraryDirectory = Path.GetDirectoryName(fileUri);
+            if (fragmentPosition <= 0 || fragmentPosition == fileUri.Length - 1)
+                throw new ArgumentException();
 
-            string libraryFileName = Path.GetFileName(fileUri);
+            try
+            {
 
+                fragment = fileUri.Substring(fragmentPosition + 1);
 
+                filePath = fileUri.Substring(0, fragmentPosition);
 
+                filePathValidator.Validate(filePath);
+
+                filePath = Path.GetFullPath(fileUri);
+
+                m_libaryDirectory = Path.GetDirectoryName(filePath);
+
+                m_libaryFileName = Path.GetFileName(filePath);
+
+                if (fragment.StartsWith("."))
+                    m_fullClassName = Path.GetFileNameWithoutExtension(filePath) + fragment;
+                else
+                    m_fullClassName = fragment;
+
+                m_classNamespace = m_fullClassName.Substring(0, m_fullClassName.LastIndexOf('.'));
+
+                m_className = m_fullClassName.Substring(m_fullClassName.LastIndexOf('.'));
+
+                //RegexValidator.ValidateFullClassName(m_fullClassName);
+            }
+
+            catch (Validators.ValidationException ex)
+            {
+                throw new ArgumentException("", ex);
+            }
         }
+
+        #endregion
+
+        #region Private Fields
+
+        private string m_className;
+
+        private string m_classNamespace;
+
+        private string m_fullClassName;
+
+        private string m_libaryDirectory;
+
+        private string m_libaryFileName;
 
         #endregion
     }

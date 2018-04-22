@@ -4913,6 +4913,40 @@
             </summary>
             <param name="value">Specifies a value to validate.</param>
         </member>
+        <member name="T:Juhta.Net.Validators.PathValidator">
+            <summary>
+            Defines an abstract base class for classes validating directory or file paths.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)">
+            <summary>
+            Checks whether a specified value is a valid directory name.
+            </summary>
+            <param name="value">Specifies a value to be checked.</param>
+            <returns>Returns true if the specified value is a valid directory name, otherwise false.</returns>
+        </member>
+        <member name="M:Juhta.Net.Validators.PathValidator.IsValidFileName(System.String)">
+            <summary>
+            Checks whether a specified value is a valid file name.
+            </summary>
+            <param name="value">Specifies a value to be checked.</param>
+            <returns>Returns true if the specified value is a valid file name, otherwise false.</returns>
+        </member>
+        <member name="T:Juhta.Net.Validators.PathValidator.PathType">
+            <summary>
+            Defines an enumeration for the path types.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Validators.PathValidator.PathType.DirectoryPath">
+            <summary>
+            The path is a directory path.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Validators.PathValidator.PathType.FilePath">
+            <summary>
+            The path is a file path.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Validators.RegexValidator">
             <summary>
             Defines a validator class that can validate string values based on a regular expression.
