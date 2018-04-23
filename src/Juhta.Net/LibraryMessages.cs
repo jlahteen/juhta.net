@@ -230,13 +230,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Argument name prefix and option prefix cannot be the same in the command line parser.");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Separator '{0}' for name and value parts in command line options is not valid according to the regular
-        /// expression pattern '{1}'.
+        /// Value '{0}' is not a valid file path.
         /// </summary>
-        internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Separator '{0}' for name and value parts in command line options is not valid according to the regular expression pattern '{1}'.");
+        internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid file path.");
 
         /// <summary>
         /// This message is free to be redefined.
@@ -253,12 +250,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error041 = MessageFactory.CreateErrorMessage("<undefined>");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Option '{0}' was specified more than once in the command line arguments.
+        /// Value '{0}' is not a valid directory path.
         /// </summary>
-        internal static readonly ErrorMessage Error042 = MessageFactory.CreateErrorMessage("Option '{0}' was specified more than once in the command line arguments.");
+        internal static readonly ErrorMessage Error042 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid directory path.");
 
         /// <summary>
         /// This message is free to be redefined.

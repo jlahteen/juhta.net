@@ -6,22 +6,41 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Text;
+using Juhta.Net.Diagnostics;
 
 namespace Juhta.Net.Validators
 {
+    /// <summary>
+    /// Defines a validator class for validating file paths.
+    /// </summary>
     public class FilePathValidator : PathValidator, IStringValidator
     {
+        #region Public Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        public FilePathValidator() : base(LibraryMessages.Error038)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorMessage">Specifies an error message to associate with the instance.</param>
+        public FilePathValidator(ErrorMessage errorMessage) : base(errorMessage)
+        {}
+
+        #endregion
+
         #region Public Methods
 
+        /// <summary>
+        /// See <see cref="IValidator{T}.Validate"/>.
+        /// </summary>
         public void Validate(string value)
         {
             if (!IsValidPath(value, PathType.FilePath))
-                throw new ValidationException("");
+                throw new ValidationException(m_errorMessage.FormatMessage(value));
         }
 
         #endregion

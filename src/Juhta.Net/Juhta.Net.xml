@@ -3966,8 +3966,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error038">
             <summary>
-            Separator '{0}' for name and value parts in command line options is not valid according to the regular
-            expression pattern '{1}'.
+            Value '{0}' is not a valid file path.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error039">
@@ -3987,7 +3986,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error042">
             <summary>
-            Option '{0}' was specified more than once in the command line arguments.
+            Value '{0}' is not a valid directory path.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error043">
@@ -4895,6 +4894,48 @@
             Maps to the <see cref="T:System.UInt16"/> type.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Validators.DirectoryPathValidator">
+            <summary>
+            Defines a validator class for validating directory paths.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.DirectoryPathValidator.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.DirectoryPathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorMessage">Specifies an error message to associate with the instance.</param>
+        </member>
+        <member name="M:Juhta.Net.Validators.DirectoryPathValidator.Validate(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Validators.IValidator`1.Validate(`0)"/>.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Validators.FilePathValidator">
+            <summary>
+            Defines a validator class for validating file paths.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.FilePathValidator.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.FilePathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorMessage">Specifies an error message to associate with the instance.</param>
+        </member>
+        <member name="M:Juhta.Net.Validators.FilePathValidator.Validate(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Validators.IValidator`1.Validate(`0)"/>.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Validators.IStringValidator">
             <summary>
             Defines an interface for string value validators.
@@ -4915,8 +4956,14 @@
         </member>
         <member name="T:Juhta.Net.Validators.PathValidator">
             <summary>
-            Defines an abstract base class for classes validating directory or file paths.
+            Defines an abstract base class for validator classes validating directory or file paths.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Validators.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorMessage">Specifies an error message to associate with the instance.</param>
         </member>
         <member name="M:Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)">
             <summary>
@@ -4932,6 +4979,14 @@
             <param name="value">Specifies a value to be checked.</param>
             <returns>Returns true if the specified value is a valid file name, otherwise false.</returns>
         </member>
+        <member name="M:Juhta.Net.Validators.PathValidator.IsValidPath(System.String,Juhta.Net.Validators.PathValidator.PathType)">
+            <summary>
+            Checks whether a specified value is a valid path.
+            </summary>
+            <param name="value">Specifies a value to be checked.</param>
+            <param name="pathType">Specifies a path type.</param>
+            <returns>Returns true if the specified value is a valid path, otherwise false.</returns>
+        </member>
         <member name="T:Juhta.Net.Validators.PathValidator.PathType">
             <summary>
             Defines an enumeration for the path types.
@@ -4945,6 +5000,11 @@
         <member name="F:Juhta.Net.Validators.PathValidator.PathType.FilePath">
             <summary>
             The path is a file path.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Validators.PathValidator.m_errorMessage">
+            <summary>
+            Specifies the error message associated with this validator instance.
             </summary>
         </member>
         <member name="T:Juhta.Net.Validators.RegexValidator">

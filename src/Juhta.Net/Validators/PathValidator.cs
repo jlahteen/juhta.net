@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Common;
+using Juhta.Net.Diagnostics;
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -15,10 +16,23 @@ using System.Text.RegularExpressions;
 namespace Juhta.Net.Validators
 {
     /// <summary>
-    /// Defines an abstract base class for classes validating directory or file paths.
+    /// Defines an abstract base class for validator classes validating directory or file paths.
     /// </summary>
     public abstract class PathValidator
     {
+        #region Protected Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorMessage">Specifies an error message to associate with the instance.</param>
+        protected PathValidator(ErrorMessage errorMessage)
+        {
+            m_errorMessage = errorMessage;
+        }
+
+        #endregion
+
         #region Protected Methods
 
         /// <summary>
@@ -53,31 +67,35 @@ namespace Juhta.Net.Validators
             return(true);
         }
 
+        /// <summary>
+        /// Checks whether a specified value is a valid path.
+        /// </summary>
+        /// <param name="value">Specifies a value to be checked.</param>
+        /// <param name="pathType">Specifies a path type.</param>
+        /// <returns>Returns true if the specified value is a valid path, otherwise false.</returns>
         protected bool IsValidPath(string value, PathType pathType)
         {
-            int index = 0;
+            int i = 0;
             string[] parts = value.Split(new char[]{Path.DirectorySeparatorChar}, StringSplitOptions.None);
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
                 if (Regex.IsMatch(parts[0], "^[A-Za-z]:$"))
-                    index++;
-            }
+                    i++;
 
-            for (; index < parts.Length; index++)
-                if (index < parts.Length - 1)
+            for (; i < parts.Length; i++)
+                if (i < parts.Length - 1)
                 {
-                    if (!IsValidDirectoryName(parts[index]))
+                    if (!IsValidDirectoryName(parts[i]))
                         return(false);
                 }
                 else if (pathType == PathType.DirectoryPath)
                 {
-                    if (!IsValidDirectoryName(parts[index]))
-                        return (false);
+                    if (!IsValidDirectoryName(parts[i]))
+                        return(false);
                 }
                 else if (pathType == PathType.FilePath)
                 {
-                    if (!IsValidFileName(parts[index]))
+                    if (!IsValidFileName(parts[i]))
                         return(false);
                 }
                 else
@@ -105,6 +123,15 @@ namespace Juhta.Net.Validators
             /// </summary>
             FilePath
         }
+
+        #endregion
+
+        #region Protected Fields
+
+        /// <summary>
+        /// Specifies the error message associated with this validator instance.
+        /// </summary>
+        protected readonly ErrorMessage m_errorMessage;
 
         #endregion
     }
