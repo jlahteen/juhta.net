@@ -814,6 +814,31 @@
             Specifies a synchronization object for accessing the singleton instance.
             </summary>
         </member>
+        <member name="T:Juhta.Net.Common.StatementNotImplementedException">
+            <summary>
+            This exception will be thrown when the execution flow enters a statement that is not implemented.
+            </summary>
+            <remarks>Generally it's a better idea to throw this kind of exception than to do nothing which can easily lead
+            to weird or most probably error behaviour in the subsequent execution. This is especially true regarding
+            statements that 'should' never be reached.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.StatementNotImplementedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.StatementNotImplementedException.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint object.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.StatementNotImplementedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint string.</param>
+        </member>
         <member name="T:Juhta.Net.Common.SymmetricCipher">
             <summary>
             Defines a class that simplifies the use of symmetric cryptographic service providers.
@@ -4026,7 +4051,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error046">
             <summary>
-            Command line argument '{0}' is invalid according to the regular expression '{1}'.
+            Execution flow entered a statement that is not implemented (hint: {0}).
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error047">

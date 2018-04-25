@@ -270,12 +270,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error045 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' cannot be converted to the type '{1}'.");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Command line argument '{0}' is invalid according to the regular expression '{1}'.
+        /// Execution flow entered a statement that is not implemented (hint: {0}).
         /// </summary>
-        internal static readonly ErrorMessage Error046 = MessageFactory.CreateErrorMessage("Command line argument '{0}' is invalid according to the regular expression '{1}'.");
+        internal static readonly ErrorMessage Error046 = MessageFactory.CreateErrorMessage("Execution flow entered a statement that is not implemented (hint: {0}).");
 
         /// <summary>
         /// Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
