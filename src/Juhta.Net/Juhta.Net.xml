@@ -282,6 +282,31 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.Common.BlockNotImplementedException">
+            <summary>
+            This exception will be thrown when the execution flow enters a block that is not implemented.
+            </summary>
+            <remarks>Generally it's a better idea to throw this kind of exception than to do nothing which can easily lead
+            to weird or most probably error behaviour in the subsequent execution. This is especially true regarding code
+            blocks that 'should' never be reached.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Common.BlockNotImplementedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.BlockNotImplementedException.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint object.</param>
+        </member>
+        <member name="M:Juhta.Net.Common.BlockNotImplementedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="hint">Specifies a hint string.</param>
+        </member>
         <member name="T:Juhta.Net.Common.ClassFileUri">
             <summary>
             todo
@@ -891,31 +916,6 @@
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception that determines the actual unexpected error.</param>
-        </member>
-        <member name="T:Juhta.Net.Common.UnimplementedCodeBranchException">
-            <summary>
-            This exception will be thrown when the execution flow of software reaches a code branch that should in practise
-            never be reached.
-            </summary>
-            <remarks>Generally it's better to throw this kind of exception than to do nothing which can easily lead to
-            weird or even error behaviour in the later execution.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.Object)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="hint">Specifies a hint object.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.UnimplementedCodeBranchException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="hint">Specifies a hint string.</param>
         </member>
         <member name="T:Juhta.Net.Common.Utf8FileWriter">
             <summary>
@@ -3950,7 +3950,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error031">
             <summary>
-            Execution flow of the software reached a code branch that should never be reached (hint: {0}).
+            Execution flow entered a block that is not implemented (hint: {0}).
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error032">

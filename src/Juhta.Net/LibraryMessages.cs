@@ -195,9 +195,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error030 = MessageFactory.CreateErrorMessage("Object cannot be created based on the URI '{0}' because the referenced assembly has not been downloaded to the local machine.");
 
         /// <summary>
-        /// Execution flow of the software reached a code branch that should never be reached (hint: {0}).
+        /// Execution flow entered a block that is not implemented (hint: {0}).
         /// </summary>
-        internal static readonly ErrorMessage Error031 = MessageFactory.CreateErrorMessage("Execution flow of the software reached a code branch that should never be reached (hint: {0}).");
+        internal static readonly ErrorMessage Error031 = MessageFactory.CreateErrorMessage("Execution flow entered a block that is not implemented (hint: {0}).");
 
         /// <summary>
         /// XML document cannot be validated because the target namespace '{0}' is not present in the schema collection

@@ -102,7 +102,7 @@ namespace Juhta.Net.Validators
                     break;
 
                 default:
-                    throw new UnimplementedCodeBranchException(m_patternMatchMode);
+                    throw new BlockNotImplementedException(m_patternMatchMode);
             }
 
             if (!success)

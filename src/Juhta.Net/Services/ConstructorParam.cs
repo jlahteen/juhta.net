@@ -281,7 +281,7 @@ namespace Juhta.Net.Services
                     break;
 
                 default:
-                    throw new UnimplementedCodeBranchException(paramNode.LocalName);
+                    throw new BlockNotImplementedException(paramNode.LocalName);
             }
         }
 

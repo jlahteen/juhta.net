@@ -98,7 +98,7 @@ namespace Juhta.Net.Validators
                         return(false);
                 }
                 else
-                    throw new UnimplementedCodeBranchException(pathType);
+                    throw new BlockNotImplementedException(pathType);
 
             return(true);
         }
