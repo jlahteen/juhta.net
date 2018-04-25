@@ -10,7 +10,6 @@ using Juhta.Net.Common;
 using Juhta.Net.Diagnostics;
 using System;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 namespace Juhta.Net.Validators
@@ -78,7 +77,7 @@ namespace Juhta.Net.Validators
             int i = 0;
             string[] parts = value.Split(new char[]{Path.DirectorySeparatorChar}, StringSplitOptions.None);
 
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            if (OSInfo.IsWindows)
                 if (Regex.IsMatch(parts[0], "^[A-Za-z]:$"))
                     i++;
 
