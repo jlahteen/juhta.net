@@ -91,7 +91,7 @@
   <!-- Define fullClassNameType -->
   <xs:simpleType name="fullClassNameType">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*"/>
+      <xs:pattern value="[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*"/>
     </xs:restriction>
   </xs:simpleType>
 

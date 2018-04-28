@@ -28,7 +28,7 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Specifies a regular expression pattern for full class names.
         /// </summary>
-        public const string FullClassName = @"^[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*$";
+        public const string FullClassName = @"^[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*$";
 
         #endregion
     }
