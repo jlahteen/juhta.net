@@ -6,17 +6,35 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Extensions;
 using Juhta.Net.Helpers;
 using Juhta.Net.Validators;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// todo
+    /// <para>Defines a class that can be used for locating library classes with file URIs. A class file URI is a
+    /// localhost file URI whose fragment part specifies a class name in a referenced library file.</para>
+    /// <para>The fragment part can begin with a '.' character indicating that the library file name specifies the root
+    /// namespace of the class. If a library path is not absolute, the path will be filled according to the current
+    /// directory.</para>
+    /// <para>For example, the following values are valid class file URIs:</para>
+    /// <list type="bullet">
+    /// <item>
+    /// <term><c>MyLibrary.dll#.MyClass</c></term>
+    /// </item>
+    /// <item>
+    /// <term><c>file:///MyLibrary.dll#.MyClass</c></term>
+    /// </item>
+    /// <item>
+    /// <term><c>file:///C:\MyDirectory\MyLibrary.dll#.MyClass</c></term>
+    /// </item>
+    /// <item>
+    /// <term><c>file:///C:\MyDirectory\MyLibrary.dll#MyNamespace.MyClass</c></term>
+    /// </item>
+    /// </list>
     /// </summary>
     public class ClassFileUri
     {
@@ -25,72 +43,179 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="fileUri"></param>
-        public ClassFileUri(string fileUri)
+        /// <param name="classFileUri">Specifies a class file URI as a string.</param>
+        public ClassFileUri(string classFileUri)
         {
-            int fragmentPosition;
-            string fragment, filePath;
+            string originalValue, filePath, fragment;
+            int indexOf;
             FilePathValidator filePathValidator = new FilePathValidator();
 
-            ArgumentHelper.CheckNotNull(nameof(fileUri), fileUri);
+            originalValue = classFileUri;
 
-            if (fileUri.StartsWith("file://") && !fileUri.StartsWith("file:///"))
-                throw new ArgumentException();
+            ArgumentHelper.CheckNotNull(nameof(classFileUri), classFileUri);
 
-            else if (fileUri.StartsWith("file:///"))
-                fileUri = fileUri.Substring("file:///".Length);
+            // Check that the class file URI is a localhost file URI
+            if (classFileUri.StartsWith("file://") && !classFileUri.StartsWith("file:///"))
+                throw new ArgumentException(LibraryMessages.Error048.GetMessage());
 
-            fragmentPosition = fileUri.IndexOf('#');
+            // Remove the 'file' scheme if necessary
+            else if (classFileUri.StartsWith("file:///"))
+                classFileUri = classFileUri.Substring("file:///".Length);
 
-            if (fragmentPosition <= 0 || fragmentPosition == fileUri.Length - 1)
-                throw new ArgumentException();
+            // Check that no scheme is given
+            else if (classFileUri.IndexOf("://") >= 0)
+                throw new ArgumentException(LibraryMessages.Error033.GetMessage());
+
+            // Check that the fragment part is present
+
+            indexOf = classFileUri.IndexOf('#');
+
+            if (indexOf < 0 || indexOf == classFileUri.Length - 1)
+                throw new ArgumentException(LibraryMessages.Error034.FormatMessage(originalValue));
 
             try
             {
+                // Parse the file path
+                filePath = classFileUri.Substring(0, indexOf);
 
-                fragment = fileUri.Substring(fragmentPosition + 1);
-
-                filePath = fileUri.Substring(0, fragmentPosition);
-
+                // Validate the file path
                 filePathValidator.Validate(filePath);
 
-                filePath = Path.GetFullPath(fileUri);
+                // Initialize the library file path
+                m_libraryFilePath = Path.GetFullPath(filePath);
 
-                m_libaryDirectory = Path.GetDirectoryName(filePath);
+                // Initialize the library directory
+                m_libraryDirectory = Path.GetDirectoryName(m_libraryFilePath);
 
-                m_libaryFileName = Path.GetFileName(filePath);
+                // Initialize the library file name
+                m_libraryFileName = Path.GetFileName(m_libraryFilePath);
 
+                // Check the library file extension
+                if (Path.GetExtension(m_libraryFileName).ToLower() != ".dll")
+                    throw new ArgumentException(LibraryMessages.Error035.FormatMessage(originalValue));
+
+                // Parse the fragment
+                fragment = classFileUri.Substring(indexOf + 1);
+
+                // Initialize the full class name
                 if (fragment.StartsWith("."))
-                    m_fullClassName = Path.GetFileNameWithoutExtension(filePath) + fragment;
+                    m_fullClassName = Path.GetFileNameWithoutExtension(m_libraryFileName) + fragment;
                 else
                     m_fullClassName = fragment;
 
-                m_classNamespace = m_fullClassName.Substring(0, m_fullClassName.LastIndexOf('.'));
+                // Validate the full class name
+                if (!m_fullClassName.IsRegexMatch(RegexPatterns.FullClassName))
+                    throw new ArgumentException(LibraryMessages.Error036.FormatMessage(originalValue));
 
-                m_className = m_fullClassName.Substring(m_fullClassName.LastIndexOf('.'));
+                // Initialize the class namespace and name
 
-                //RegexValidator.ValidateFullClassName(m_fullClassName);
+                indexOf = m_fullClassName.LastIndexOf('.');
+
+                if (indexOf > 0)
+                {
+                    m_classNamespace = m_fullClassName.Substring(0, indexOf);
+
+                    m_className = m_fullClassName.Substring(indexOf + 1);
+                }
+                else
+                {
+                    m_classNamespace = null;
+
+                    m_className = m_fullClassName;
+                }
             }
 
-            catch (Validators.ValidationException ex)
+            catch (ValidationException ex)
             {
-                throw new ArgumentException("", ex);
+                throw new ArgumentException(LibraryMessages.Error039.FormatMessage(originalValue), ex);
             }
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets the name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string ClassName
+        {
+            get {return(m_className);}
+        }
+
+        /// <summary>
+        /// Gets the namespace of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string ClassNamespace
+        {
+            get {return(m_classNamespace);}
+        }
+
+        /// <summary>
+        /// Gets the full name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string FullClassName
+        {
+            get {return(m_fullClassName);}
+        }
+
+        /// <summary>
+        /// Gets the library directory of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string LibraryDirectory
+        {
+            get {return(m_libraryDirectory);}
+        }
+
+        /// <summary>
+        /// Gets the library file name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string LibraryFileName
+        {
+            get {return(m_libraryFileName);}
+        }
+
+        /// <summary>
+        /// Gets the library file path of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// </summary>
+        public string LibraryFilePath
+        {
+            get {return(m_libraryFilePath);}
         }
 
         #endregion
 
         #region Private Fields
 
+        /// <summary>
+        /// Stores the <see cref="ClassName"/> property.
+        /// </summary>
         private string m_className;
 
+        /// <summary>
+        /// Stores the <see cref="ClassNamespace"/> property.
+        /// </summary>
         private string m_classNamespace;
 
+        /// <summary>
+        /// Stores the <see cref="FullClassName"/> property.
+        /// </summary>
         private string m_fullClassName;
 
-        private string m_libaryDirectory;
+        /// <summary>
+        /// Stores the <see cref="LibraryDirectory"/> property.
+        /// </summary>
+        private string m_libraryDirectory;
 
-        private string m_libaryFileName;
+        /// <summary>
+        /// Stores the <see cref="LibraryFileName"/> property.
+        /// </summary>
+        private string m_libraryFileName;
+
+        /// <summary>
+        /// Stores the <see cref="LibraryFilePath"/> property.
+        /// </summary>
+        private string m_libraryFilePath;
 
         #endregion
     }

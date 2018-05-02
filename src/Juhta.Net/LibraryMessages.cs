@@ -206,24 +206,24 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error032 = MessageFactory.CreateErrorMessage("XML document cannot be validated because the target namespace '{0}' is not present in the schema collection of the XML validator.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Scheme of a class file URI must be 'file'.
         /// </summary>
-        internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("Scheme of a class file URI must be 'file'.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Value '{0}' is not a valid class file URI because the fragment part is missing.
         /// </summary>
-        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part is missing.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.
         /// </summary>
-        internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Value '{0}' is not a valid class file URI because the fragment part is invalid.
         /// </summary>
-        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part is invalid.");
 
         /// <summary>
         /// Argument name prefix and option prefix cannot be the same in the command line parser.
@@ -236,9 +236,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid file path.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Value '{0}' is not a valid class file URI.
         /// </summary>
-        internal static readonly ErrorMessage Error039 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error039 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI.");
 
         /// <summary>
         /// This message is free to be redefined.
@@ -280,12 +280,10 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error047 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to a validator of the type '{1}'.");
 
-        // TODO: The message below is currently not in use.
-
         /// <summary>
-        /// Command line argument value '{0}' is invalid according to the regular expression '{1}'.
+        /// Class file URI must be a localhost file URI starting with 'file:///'.
         /// </summary>
-        internal static readonly ErrorMessage Error048 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to the regular expression '{1}'.");
+        internal static readonly ErrorMessage Error048 = MessageFactory.CreateErrorMessage("Class file URI must be a localhost file URI starting with 'file:///'.");
 
         /// <summary>
         /// This message is free to be redefined.

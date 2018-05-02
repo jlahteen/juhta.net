@@ -309,14 +309,93 @@
         </member>
         <member name="T:Juhta.Net.Common.ClassFileUri">
             <summary>
-            todo
+            <para>Defines a class that can be used for locating library classes with file URIs. A class file URI is a
+            localhost file URI whose fragment part specifies a class name in a referenced library file.</para>
+            <para>The fragment part can begin with a '.' character indicating that the library file name specifies the root
+            namespace of the class. If a library path is not absolute, the path will be filled according to the current
+            directory.</para>
+            <para>For example, the following values are valid class file URIs:</para>
+            <list type="bullet">
+            <item>
+            <term><c>MyLibrary.dll#.MyClass</c></term>
+            </item>
+            <item>
+            <term><c>file:///MyLibrary.dll#.MyClass</c></term>
+            </item>
+            <item>
+            <term><c>file:///C:\MyDirectory\MyLibrary.dll#.MyClass</c></term>
+            </item>
+            <item>
+            <term><c>file:///C:\MyDirectory\MyLibrary.dll#MyNamespace.MyClass</c></term>
+            </item>
+            </list>
             </summary>
         </member>
         <member name="M:Juhta.Net.Common.ClassFileUri.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="fileUri"></param>
+            <param name="classFileUri">Specifies a class file URI as a string.</param>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.ClassName">
+            <summary>
+            Gets the name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.ClassNamespace">
+            <summary>
+            Gets the namespace of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.FullClassName">
+            <summary>
+            Gets the full name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryDirectory">
+            <summary>
+            Gets the library directory of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryFileName">
+            <summary>
+            Gets the library file name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryFilePath">
+            <summary>
+            Gets the library file path of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_className">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.ClassName"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_classNamespace">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.ClassNamespace"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_fullClassName">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.FullClassName"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryDirectory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryFileName">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryFileName"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryFilePath">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryFilePath"/> property.
+            </summary>
         </member>
         <member name="T:Juhta.Net.Common.CommonMessages">
             <summary>
@@ -744,6 +823,26 @@
         <member name="P:Juhta.Net.Common.OSInfo.IsWindows">
             <summary>
             Returns true if the application is running on Windows, otherwise false.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Common.RegexPatterns">
+            <summary>
+            A static class that defines regular expression patterns.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegexPatterns.EmailAddress">
+            <summary>
+            Specifies a regular expression pattern for email addresses.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegexPatterns.EmailAddressList">
+            <summary>
+            Specifies a regular expression pattern for email address lists.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Common.RegexPatterns.FullClassName">
+            <summary>
+            Specifies a regular expression pattern for full class names.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.RegularExpressions">
@@ -2504,14 +2603,13 @@
             <returns>Returns the string representation of this base64 string.</returns>
             <remarks>This method performs string conversions through the UTF-8 encoding.</remarks>
         </member>
-        <member name="M:Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)">
+        <member name="M:Juhta.Net.Extensions.StringExtensions.IsRegexMatch(System.String,System.String)">
             <summary>
-            Checks whether a specified regular expression matches this string.
+            Checks whether a specified regular expression pattern matches this string.
             </summary>
             <param name="s">Specifies the current string instance.</param>
-            <param name="regex">Specifies a regular expression. Anchor characters '^' (at the start) and '$' (at the
-            end) are not required.</param>
-            <returns>Returns true if the specified regular expression matches this string, otherwise false.</returns>
+            <param name="pattern">Specifies a regular expression pattern.</param>
+            <returns>Returns true if the specified regular expression pattern matches this string, otherwise false.</returns>
         </member>
         <member name="M:Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String)">
             <summary>
@@ -3986,22 +4084,22 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error033">
             <summary>
-            This message is free to be redefined.
+            Scheme of a class file URI must be 'file'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error034">
             <summary>
-            This message is free to be redefined.
+            Value '{0}' is not a valid class file URI because the fragment part is missing.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error035">
             <summary>
-            This message is free to be redefined.
+            Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error036">
             <summary>
-            This message is free to be redefined.
+            Value '{0}' is not a valid class file URI because the fragment part is invalid.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error037">
@@ -4016,7 +4114,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error039">
             <summary>
-            This message is free to be redefined.
+            Value '{0}' is not a valid class file URI.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error040">
@@ -4061,7 +4159,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error048">
             <summary>
-            Command line argument value '{0}' is invalid according to the regular expression '{1}'.
+            Class file URI must be a localhost file URI starting with 'file:///'.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error049">
