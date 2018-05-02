@@ -63,7 +63,7 @@ namespace Juhta.Net.Validators
         #region Public Methods
 
         /// <summary>
-        /// See <see cref="Validators.IValidator&lt;T&gt;.Validate"/>.
+        /// See <see cref="Validators.IValidator{T}.Validate"/>.
         /// </summary>
         public virtual void Validate(string value)
         {
