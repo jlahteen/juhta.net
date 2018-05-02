@@ -80,15 +80,14 @@ namespace Juhta.Net.Extensions
         }
 
         /// <summary>
-        /// Checks whether a specified regular expression matches this string.
+        /// Checks whether a specified regular expression pattern matches this string.
         /// </summary>
         /// <param name="s">Specifies the current string instance.</param>
-        /// <param name="regex">Specifies a regular expression. Anchor characters '^' (at the start) and '$' (at the
-        /// end) are not required.</param>
-        /// <returns>Returns true if the specified regular expression matches this string, otherwise false.</returns>
-        public static bool IsMatch(this string s, string regex)
+        /// <param name="pattern">Specifies a regular expression pattern.</param>
+        /// <returns>Returns true if the specified regular expression pattern matches this string, otherwise false.</returns>
+        public static bool IsRegexMatch(this string s, string pattern)
         {
-            return(Regex.IsMatch(s, "^" + regex + "$"));
+            return(Regex.IsMatch(s, pattern));
         }
 
         /// <summary>

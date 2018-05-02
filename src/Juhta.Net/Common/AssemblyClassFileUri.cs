@@ -63,7 +63,7 @@ namespace Juhta.Net.Common
                 fileUri = Uri.UriSchemeFile + "://" + fileUri;
             }
 
-            if (!fileUri.IsMatch(RegularExpressions.AssemblyClassFileUri))
+            if (!fileUri.IsRegexMatch(RegularExpressions.AssemblyClassFileUri))
                 throw new ArgumentException(LibraryMessages.Error025.FormatMessage(fileUriOrig));
 
             return(fileUri);
