@@ -1,4 +1,5 @@
 ﻿
+using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -178,6 +179,24 @@ namespace Juhta.Net.Tests
             m_stopwatch.Start();
 
             m_timeout = timeout;
+        }
+
+        protected static string ToOSPath(string path)
+        {
+            // Character 'X' stands for an illegal character
+
+            if (OSInfo.IsWindows)
+                path = path.Replace('X', '<');
+            else
+            {
+                path = path.Replace("C:", "");
+
+                path = path.Replace('\\', Path.DirectorySeparatorChar);
+
+                path = path.Replace('X', '\0');
+            }
+
+            return(path);
         }
 
         #endregion

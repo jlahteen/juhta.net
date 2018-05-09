@@ -7,7 +7,7 @@ using System.IO;
 namespace Juhta.Net.Tests.Validators
 {
     [TestClass]
-    public class DirectoryPathValidatorTests
+    public class DirectoryPathValidatorTests : TestClassBase
     {
         #region Test Methods
 
@@ -17,7 +17,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator validator = new DirectoryPathValidator();
 
-            validator.Validate(OSConvert(@"C:\My Documents\Shopping."));
+            validator.Validate(ToOSPath(@"C:\My Documents\Shopping."));
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator validator = new DirectoryPathValidator();
 
-            validator.Validate(OSConvert(@"C:\My Documents\Shopping\MyDoc.docx "));
+            validator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDoc.docx "));
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
-            filePathValidator.Validate(OSConvert(@"C:\My Documents\Shopping\MyDocX"));
+            filePathValidator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDocX"));
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
-            filePathValidator.Validate(OSConvert(@"C:\My Documents\Shopping"));
+            filePathValidator.Validate(ToOSPath(@"C:\My Documents\Shopping"));
         }
 
         [TestMethod]
@@ -51,7 +51,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
-            filePathValidator.Validate(OSConvert(@"C:\My Documents\Shopping\MyDoc.docx"));
+            filePathValidator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDoc.docx"));
         }
 
         [TestMethod]
@@ -59,7 +59,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
-            filePathValidator.Validate(OSConvert(@"C:\My Documents\.\Shopping\MyDoc.docx"));
+            filePathValidator.Validate(ToOSPath(@"C:\My Documents\.\Shopping\MyDoc.docx"));
         }
 
         [TestMethod]
@@ -67,7 +67,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
-            filePathValidator.Validate(OSConvert(@"C:\My Documents\..\Shopping\MyDoc.docx"));
+            filePathValidator.Validate(ToOSPath(@"C:\My Documents\..\Shopping\MyDoc.docx"));
         }
 
         [TestMethod]
@@ -75,7 +75,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator validator = new DirectoryPathValidator();
 
-            validator.Validate(OSConvert(@"MyDoc.docx"));
+            validator.Validate(ToOSPath(@"MyDoc.docx"));
         }
 
         [TestMethod]
@@ -83,27 +83,7 @@ namespace Juhta.Net.Tests.Validators
         {
             DirectoryPathValidator validator = new DirectoryPathValidator();
 
-            validator.Validate(OSConvert(@"MyDoc"));
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private static string OSConvert(string path)
-        {
-            if (OSInfo.IsWindows)
-                path = path.Replace('X', '<');
-            else
-            {
-                path = path.Replace("C:", "");
-
-                path = path.Replace('/', Path.DirectorySeparatorChar);
-
-                path = path.Replace('X', '\0');
-            }
-
-            return(path);
+            validator.Validate(ToOSPath(@"MyDoc"));
         }
 
         #endregion
