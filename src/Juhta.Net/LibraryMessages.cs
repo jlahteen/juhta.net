@@ -211,9 +211,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("Scheme of a class file URI must be 'file'.");
 
         /// <summary>
-        /// Value '{0}' is not a valid class file URI because the fragment part is missing.
+        /// Value '{0}' is not a valid class file URI because the fragment part is missing or empty.
         /// </summary>
-        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part is missing.");
+        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part is missing or empty.");
 
         /// <summary>
         /// Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.
@@ -221,9 +221,9 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.");
 
         /// <summary>
-        /// Value '{0}' is not a valid class file URI because the fragment part is invalid.
+        /// Value '{0}' is not a valid class file URI because the fragment part doesn't specify a valid class name.
         /// </summary>
-        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part is invalid.");
+        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class file URI because the fragment part doesn't specify a valid class name.");
 
         /// <summary>
         /// Argument name prefix and option prefix cannot be the same in the command line parser.
