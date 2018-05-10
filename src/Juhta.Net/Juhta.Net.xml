@@ -4089,7 +4089,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error034">
             <summary>
-            Value '{0}' is not a valid class file URI because the fragment part is missing.
+            Value '{0}' is not a valid class file URI because the fragment part is missing or empty.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error035">
@@ -4099,7 +4099,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error036">
             <summary>
-            Value '{0}' is not a valid class file URI because the fragment part is invalid.
+            Value '{0}' is not a valid class file URI because the fragment part doesn't specify a valid class name.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error037">
