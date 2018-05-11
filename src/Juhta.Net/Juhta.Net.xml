@@ -753,36 +753,6 @@
             Specifies a regular expression pattern for full class names.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Common.RegularExpressions">
-            <summary>
-            Defines a static class containing certain regular expression patterns for validating string data.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.AssemblyClassFileUri">
-            <summary>
-            Specifies a regular expression for validating assembly class file URIs.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.DirectoryPath">
-            <summary>
-            Specifies a regular expression for validating absolute or relative directory paths.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddress">
-            <summary>
-            Specifies a regular expression for validating email addresses.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.EmailAddressList">
-            <summary>
-            Specifies a regular expression for validating email address lists.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.RegularExpressions.FilePath">
-            <summary>
-            Specifies a regular expression for validating absolute or relative file paths.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Common.Singleton`1">
             <summary>
             Defines an abstract base class singleton classes.
