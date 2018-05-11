@@ -189,87 +189,6 @@
             Specifies the current state of the application.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Common.AssemblyClassFileUri">
-            <summary>
-            Defines a class that can be used for locating assembly classes with file URIs.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyClassFileUri.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="fileUri">Specifies a file URI whose fragment part determines a class name in a referenced
-            assembly file.</param>
-            <remarks>This constructor also accepts an incomplete file URI consisting only of a file name or a relative
-            file path and the fragment part. For example, MyAssembly.dll#MyNamespace.MyClass is a valid file URI for
-            this constructor. Furthermore, the fragment part can start with a dot '.' character in which case the root
-            namespace will be taken from the assembly file name.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyClassFileUri.CompleteAndCheckFileUri(System.String)">
-            <summary>
-            Completes and checks a specified file URI value.
-            </summary>
-            <param name="fileUri">Specifies a file URI value.</param>
-            <returns>Returns the specified file URI value as a completed URI value.</returns>
-        </member>
-        <member name="T:Juhta.Net.Common.AssemblyClassUri">
-            <summary>
-            Defines an abstract base class for classes that can be used for locating assembly classes with URIs. An
-            assembly class URI is a standard URI whose fragment part specifies a class name in a referenced assembly file.
-            For instance, file://C:\MyAssemblies\MyAssembly.dll#MyNamespace.MyClass is a valid assembly class URI.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.AssemblyClassUri.FullClassName">
-            <summary>
-            Gets the full name of the assembly class referenced by this AssemblyClassUri instance.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.AssemblyClassUri.IsAssemblyDownloaded">
-            <summary>
-            Returns true if the assembly referenced by this AssemblyClassUri instance has been downloaded to the local
-            machine or is available without a download on the local machine.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Common.AssemblyClassUri.LocalAssemblyPath">
-            <summary>
-            Gets the local path of the assembly referenced by this AssemblyClassUri instance.
-            </summary>
-            <remarks>An exception will be thrown if the assembly has not been downloaded to the local machine.</remarks>
-            <seealso cref="P:Juhta.Net.Common.AssemblyClassUri.IsAssemblyDownloaded"/>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyClassUri.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="uri">Specifies a URI whose fragment part determines a class name in a referenced assembly
-            file.</param>
-            <remarks>The fragment part can start with a dot '.' character in which case the root namespace will be
-            taken from the assembly file name.</remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyClassUri.IsFixedDiskDrivePath(System.String)">
-            <summary>
-            Checks whether a specified file path refers to a file on a fixed disk drive.
-            </summary>
-            <param name="filePath">Specified a file path.</param>
-            <returns>Returns true if the specified file path refers to a file on a fixed disk drive, otherwise false.</returns>
-        </member>
-        <member name="F:Juhta.Net.Common.AssemblyClassUri.m_localAssemblyPath">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.AssemblyClassUri.LocalAssemblyPath"/> property.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyClassUri.SetLocalAssemblyPath(System.String)">
-            <summary>
-            Associates a local assembly with this AssemblyClassUri instance.
-            </summary>
-            <param name="localAssemblyPath">Specifies an absolute path that must refer to an assembly on a fixed disk
-            drive.</param>
-        </member>
-        <member name="F:Juhta.Net.Common.AssemblyClassUri.m_fullClassName">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Common.AssemblyClassUri.FullClassName"/> property.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Common.AssemblyNotLoadedException">
             <summary>
             This exception will be thrown when a desired assembly was not found among the loaded assemblies of an
@@ -661,7 +580,7 @@
             <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
             case the root namespace for the class will be taken from the file name part of the Assembly object's
             Location property.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
+            <returns>Returns the created instance casted to the specified type.</returns>
         </member>
         <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String,System.Object[])">
             <summary>
@@ -675,29 +594,27 @@
             Location property.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
             constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
+            <returns>Returns the created instance casted to the specified type.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)">
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassFileUri)">
             <summary>
             Creates an instance of a specified class by using the default constructor.
             </summary>
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
-            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
+            <param name="classFileUri">Specifies a <see cref="T:Juhta.Net.Common.ClassFileUri"/> object.</param>
+            <returns>Returns the created instance casted to the specified type.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])">
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassFileUri,System.Object[])">
             <summary>
             Creates an instance of a specified class.
             </summary>
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
-            <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
+            <param name="classFileUri">Specifies a <see cref="T:Juhta.Net.Common.ClassFileUri"/> object.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
             constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-            <remarks>An exception will be thrown if the assembly referenced by <paramref name="assemblyClassUri"/> has
-            not been downloaded to the local machine.</remarks>
+            <returns>Returns the created instance casted to the specified type.</returns>
         </member>
         <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)">
             <summary>
@@ -721,15 +638,6 @@
             the root namespace for the class will be taken from the file name of the assembly.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
             constructor. Can be null causing the default constructor to be called.</param>
-            <returns>Returns the created instance casted to the requested type.</returns>
-        </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)">
-            <summary>
-            Creates an instance based on a specified object XML node.
-            </summary>
-            <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-            type.</typeparam>
-            <param name="objectNode">Specifies an object XML node.</param>
             <returns>Returns the created instance casted to the requested type.</returns>
         </member>
         <member name="T:Juhta.Net.Common.ObjectQueue`1">
@@ -4035,17 +3943,17 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error024">
             <summary>
-            Local assembly path has already been associated with this AssemblyClassUri instance.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error025">
             <summary>
-            Value '{0}' is not a valid assembly class file URI.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error026">
             <summary>
-            Assembly specified by the URI '{0}' has not been downloaded to the local machine.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error027">
@@ -4061,14 +3969,12 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error029">
             <summary>
-            Local assembly path to be associated with an AssemblyClassUri instance must refer to an assembly on a fixed
-            disk drive.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error030">
             <summary>
-            Object cannot be created based on the URI '{0}' because the referenced assembly has not been downloaded to
-            the local machine.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error031">

@@ -6,11 +6,9 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using Juhta.Net.Extensions;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Xml;
 
 namespace Juhta.Net.Common
 {
@@ -32,7 +30,7 @@ namespace Juhta.Net.Common
         /// <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
         /// case the root namespace for the class will be taken from the file name part of the Assembly object's
         /// Location property.</param>
-        /// <returns>Returns the created instance casted to the requested type.</returns>
+        /// <returns>Returns the created instance casted to the specified type.</returns>
         public static T CreateInstance<T>(Assembly assembly, string className)
         {
             return(CreateInstance<T>(assembly, className, null));
@@ -49,7 +47,7 @@ namespace Juhta.Net.Common
         /// Location property.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
-        /// <returns>Returns the created instance casted to the requested type.</returns>
+        /// <returns>Returns the created instance casted to the specified type.</returns>
         public static T CreateInstance<T>(Assembly assembly, string className, params object[] parameters)
         {
             object @object;
@@ -70,11 +68,11 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
-        /// <returns>Returns the created instance casted to the requested type.</returns>
-        public static T CreateInstance<T>(AssemblyClassUri assemblyClassUri)
+        /// <param name="classFileUri">Specifies a <see cref="ClassFileUri"/> object.</param>
+        /// <returns>Returns the created instance casted to the specified type.</returns>
+        public static T CreateInstance<T>(ClassFileUri classFileUri)
         {
-            return(CreateInstance<T>(assemblyClassUri, null));
+            return(CreateInstance<T>(classFileUri, null));
         }
 
         /// <summary>
@@ -82,18 +80,13 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assemblyClassUri">Specifies an AssemblyClassUri object.</param>
+        /// <param name="classFileUri">Specifies a <see cref="ClassFileUri"/> object.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
-        /// <returns>Returns the created instance casted to the requested type.</returns>
-        /// <remarks>An exception will be thrown if the assembly referenced by <paramref name="assemblyClassUri"/> has
-        /// not been downloaded to the local machine.</remarks>
-        public static T CreateInstance<T>(AssemblyClassUri assemblyClassUri, params object[] parameters)
+        /// <returns>Returns the created instance casted to the specified type.</returns>
+        public static T CreateInstance<T>(ClassFileUri classFileUri, params object[] parameters)
         {
-            if (!assemblyClassUri.IsAssemblyDownloaded)
-                throw new ArgumentException(LibraryMessages.Error030.FormatMessage(assemblyClassUri.OriginalString));
-
-            return(CreateInstance<T>(assemblyClassUri.LocalAssemblyPath, assemblyClassUri.FullClassName, parameters));
+            return(CreateInstance<T>(classFileUri.LibraryFilePath, classFileUri.FullClassName, parameters));
         }
 
         /// <summary>
@@ -127,23 +120,6 @@ namespace Juhta.Net.Common
                 className = Path.GetFileNameWithoutExtension(assemblyFile) + className;
 
             return(CreateInstance<T>(Assembly.LoadFrom(assemblyFile), className, parameters));
-        }
-
-        /// <summary>
-        /// Creates an instance based on a specified object XML node.
-        /// </summary>
-        /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
-        /// type.</typeparam>
-        /// <param name="objectNode">Specifies an object XML node.</param>
-        /// <returns>Returns the created instance casted to the requested type.</returns>
-        public static T CreateInstance<T>(XmlNode objectNode)
-        {
-            AssemblyClassUri assemblyClassUri = new AssemblyClassFileUri(objectNode.GetAttribute("assemblyClassFileUri"));
-
-            if (objectNode.HasChildNodes)
-                return(CreateInstance<T>(assemblyClassUri, objectNode.FirstChild.ToBuiltInTypeObjectArray()));
-            else
-                return(CreateInstance<T>(assemblyClassUri));
         }
 
         #endregion

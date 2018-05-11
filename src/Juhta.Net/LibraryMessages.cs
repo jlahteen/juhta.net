@@ -157,19 +157,19 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning023 = MessageFactory.CreateWarningMessage("Library '{0}' has already been initialized. This library exists at least twice under the libraries XML node in the root library configuration. Please remove duplicate occurrences.");
 
         /// <summary>
-        /// Local assembly path has already been associated with this AssemblyClassUri instance.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error024 = MessageFactory.CreateErrorMessage("Local assembly path has already been associated with this AssemblyClassUri instance.");
+        internal static readonly ErrorMessage Error024 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Value '{0}' is not a valid assembly class file URI.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error025 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid assembly class file URI.");
+        internal static readonly ErrorMessage Error025 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Assembly specified by the URI '{0}' has not been downloaded to the local machine.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error026 = MessageFactory.CreateErrorMessage("Assembly specified by the URI '{0}' has not been downloaded to the local machine.");
+        internal static readonly ErrorMessage Error026 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
         /// Consumer thread cannot consume the specified object because the instance has not been started.
@@ -183,16 +183,14 @@ namespace Juhta.Net
         internal static readonly ErrorMessage Error028 = MessageFactory.CreateErrorMessage("Consumer thread cannot consume the specified object because the internal worker thread has stopped due to an unexpected error.");
 
         /// <summary>
-        /// Local assembly path to be associated with an AssemblyClassUri instance must refer to an assembly on a fixed
-        /// disk drive.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error029 = MessageFactory.CreateErrorMessage("Local assembly path to be associated with an AssemblyClassUri instance must refer to an assembly on a fixed disk drive.");
+        internal static readonly ErrorMessage Error029 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
-        /// Object cannot be created based on the URI '{0}' because the referenced assembly has not been downloaded to
-        /// the local machine.
+        /// This message is free to be redefined.
         /// </summary>
-        internal static readonly ErrorMessage Error030 = MessageFactory.CreateErrorMessage("Object cannot be created based on the URI '{0}' because the referenced assembly has not been downloaded to the local machine.");
+        internal static readonly ErrorMessage Error030 = MessageFactory.CreateErrorMessage("<undefined>");
 
         /// <summary>
         /// Execution flow entered a block that is not implemented (hint: {0}).
