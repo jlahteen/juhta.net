@@ -189,18 +189,6 @@
             Specifies the current state of the application.
             </summary>
         </member>
-        <member name="T:Juhta.Net.Common.AssemblyNotLoadedException">
-            <summary>
-            This exception will be thrown when a desired assembly was not found among the loaded assemblies of an
-            application domain.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.AssemblyNotLoadedException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
         <member name="T:Juhta.Net.Common.BlockNotImplementedException">
             <summary>
             This exception will be thrown when the execution flow enters a block that is not implemented.
@@ -459,12 +447,12 @@
         </member>
         <member name="M:Juhta.Net.Common.ConsumerThread`1.Start">
             <summary>
-            Starts this ConsumerThread instance.
+            Starts this <see cref="T:Juhta.Net.Common.ConsumerThread`1"/> instance.
             </summary>
         </member>
         <member name="M:Juhta.Net.Common.ConsumerThread`1.Stop">
             <summary>
-            Stops this ConsumerThread instance.
+            Stops this <see cref="T:Juhta.Net.Common.ConsumerThread`1"/> instance.
             </summary>
         </member>
         <member name="M:Juhta.Net.Common.ConsumerThread`1.ConsumeObject(`0)">
@@ -490,7 +478,7 @@
             <summary>
             Consumes objects until the queue of incoming objects is closed.
             </summary>
-            <remarks>This method defines the &quot;main&quot; program for the worker thread.</remarks>
+            <remarks>This method is the 'main' program of the worker thread.</remarks>
         </member>
         <member name="F:Juhta.Net.Common.ConsumerThread`1.m_objectQueue">
             <summary>

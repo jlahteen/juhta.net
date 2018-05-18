@@ -53,7 +53,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Starts this ConsumerThread instance.
+        /// Starts this <see cref="ConsumerThread{T}"/> instance.
         /// </summary>
         public void Start()
         {
@@ -66,7 +66,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Stops this ConsumerThread instance.
+        /// Stops this <see cref="ConsumerThread{T}"/> instance.
         /// </summary>
         public void Stop()
         {
@@ -111,7 +111,7 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Consumes objects until the queue of incoming objects is closed.
         /// </summary>
-        /// <remarks>This method defines the &quot;main&quot; program for the worker thread.</remarks>
+        /// <remarks>This method is the 'main' program of the worker thread.</remarks>
         private void WorkerThreadMain()
         {
             T @object;
