@@ -11,7 +11,7 @@ using System;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// This exception will be thrown when an object doesn't support a requested interface.
+    /// This exception will be thrown when an object doesn't support a required interface.
     /// </summary>
     public class InterfaceNotSupportedException : Exception
     {
@@ -21,8 +21,15 @@ namespace Juhta.Net.Common
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        /// <param name="innerException">Specifies an InvalidCastException instance that relates to the failed
-        /// interface cast operation.</param>
+        public InterfaceNotSupportedException(string message) : base(message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="innerException">Specifies an <see cref="InvalidCastException"/> instance that relates to the
+        /// failed interface cast operation.</param>
         public InterfaceNotSupportedException(string message, InvalidCastException innerException) : base(message, innerException)
         {}
 
