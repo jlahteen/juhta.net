@@ -26,10 +26,10 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assembly">Specifies an Assembly object.</param>
-        /// <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
-        /// case the root namespace for the class will be taken from the file name part of the Assembly object's
-        /// Location property.</param>
+        /// <param name="assembly">Specifies an <see cref="Assembly"/> object.</param>
+        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// root namespace for the class will be taken from the file name part of the <see cref="Assembly.Location"/>
+        /// property.</param>
         /// <returns>Returns the created instance casted to the specified type.</returns>
         public static T CreateInstance<T>(Assembly assembly, string className)
         {
@@ -41,10 +41,10 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assembly">Specifies an Assembly object.</param>
-        /// <param name="className">Specifies an assembly class name. The value can begin with a '.' character in which
-        /// case the root namespace for the class will be taken from the file name part of the Assembly object's
-        /// Location property.</param>
+        /// <param name="assembly">Specifies an <see cref="Assembly"/> object.</param>
+        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// root namespace for the class will be taken from the file name part of the <see cref="Assembly.Location"/>
+        /// property.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
         /// <returns>Returns the created instance casted to the specified type.</returns>
@@ -94,13 +94,14 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assemblyFile">Specifies an assembly file.</param>
-        /// <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
-        /// the root namespace for the class will be taken from the file name of the assembly.</param>
+        /// <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
+        /// absolute.</param>
+        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
         /// <returns>Returns the created instance casted to the requested type.</returns>
-        public static T CreateInstance<T>(string assemblyFile, string className)
+        public static T CreateInstance<T>(string libraryFile, string className)
         {
-            return(CreateInstance<T>(assemblyFile, className, null));
+            return(CreateInstance<T>(libraryFile, className, null));
         }
 
         /// <summary>
@@ -108,18 +109,19 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="assemblyFile">Specifies an assembly file.</param>
-        /// <param name="className">Specifies an assembly class. The value can begin with a '.' character in which case
-        /// the root namespace for the class will be taken from the file name of the assembly.</param>
+        /// <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
+        /// absolute.</param>
+        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
         /// <returns>Returns the created instance casted to the requested type.</returns>
-        public static T CreateInstance<T>(string assemblyFile, string className, params object[] parameters)
+        public static T CreateInstance<T>(string libraryFile, string className, params object[] parameters)
         {
             if (className[0] == '.')
-                className = Path.GetFileNameWithoutExtension(assemblyFile) + className;
+                className = Path.GetFileNameWithoutExtension(libraryFile) + className;
 
-            return(CreateInstance<T>(Assembly.LoadFrom(assemblyFile), className, parameters));
+            return(CreateInstance<T>(Assembly.LoadFrom(libraryFile), className, parameters));
         }
 
         #endregion
