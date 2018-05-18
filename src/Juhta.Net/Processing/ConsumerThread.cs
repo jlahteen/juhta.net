@@ -6,10 +6,11 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Common;
 using System;
 using System.Threading;
 
-namespace Juhta.Net.Common
+namespace Juhta.Net.Processing
 {
     /// <summary>
     /// Defines an abstract base class for consumer threads. The class provides a thread-safe method for putting

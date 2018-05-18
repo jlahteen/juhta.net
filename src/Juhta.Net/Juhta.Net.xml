@@ -422,74 +422,6 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="T:Juhta.Net.Common.ConsumerThread`1">
-            <summary>
-            Defines an abstract base class for consumer threads. The class provides a thread-safe method for putting
-            objects into consumption. Incoming objects will be consumed asynchronously with a single worker thread.
-            </summary>
-            <typeparam name="T">Specifies the type of objects to consume.</typeparam>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.Consume(`0)">
-            <summary>
-            Consumes a specified object asynchronously.
-            </summary>
-            <param name="object">Specifies an object to consume.</param>
-            <remarks>
-            <para>This method returns immediately after the specified object has been put into an internal queue to
-            wait for asynchronous consumption.</para>
-            <para>Multiple threads can access this method concurrently.</para>
-            </remarks>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.Start">
-            <summary>
-            Starts this <see cref="T:Juhta.Net.Common.ConsumerThread`1"/> instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.Stop">
-            <summary>
-            Stops this <see cref="T:Juhta.Net.Common.ConsumerThread`1"/> instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.ConsumeObject(`0)">
-            <summary>
-            Consumes a specified object.
-            </summary>
-            <param name="object">Specifies an object to consume.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.OnConsumeObjectFailed(`0,System.Exception)">
-            <summary>
-            Performs necessary actions when an error occurs at the time an object is consumed.
-            </summary>
-            <param name="object">Specifies an object whose consumption was failed.</param>
-            <param name="exception">Specifies the occurred exception.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.OnWorkerThreadFailed(System.Exception)">
-            <summary>
-            Performs necessary actions when the worker thread is about to exit due to an (unexpected) exception.
-            </summary>
-            <param name="exception">Specifies an exception that forces the worker thread to exit.</param>
-        </member>
-        <member name="M:Juhta.Net.Common.ConsumerThread`1.WorkerThreadMain">
-            <summary>
-            Consumes objects until the queue of incoming objects is closed.
-            </summary>
-            <remarks>This method is the 'main' program of the worker thread.</remarks>
-        </member>
-        <member name="F:Juhta.Net.Common.ConsumerThread`1.m_objectQueue">
-            <summary>
-            Specifies the queue where incoming objects are put to wait for consumption.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Common.ConsumerThread`1.m_workerThread">
-            <summary>
-            Specifies the worker thread that actually consumes incoming objects.
-            </summary>
-        </member>
         <member name="T:Juhta.Net.Common.InterfaceNotSupportedException">
             <summary>
             This exception will be thrown when an object doesn't support a requested interface.
@@ -4435,6 +4367,74 @@
         <member name="F:Juhta.Net.Logger.s_syncLock">
             <summary>
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Processing.ConsumerThread`1">
+            <summary>
+            Defines an abstract base class for consumer threads. The class provides a thread-safe method for putting
+            objects into consumption. Incoming objects will be consumed asynchronously with a single worker thread.
+            </summary>
+            <typeparam name="T">Specifies the type of objects to consume.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.Consume(`0)">
+            <summary>
+            Consumes a specified object asynchronously.
+            </summary>
+            <param name="object">Specifies an object to consume.</param>
+            <remarks>
+            <para>This method returns immediately after the specified object has been put into an internal queue to
+            wait for asynchronous consumption.</para>
+            <para>Multiple threads can access this method concurrently.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.Start">
+            <summary>
+            Starts this <see cref="T:Juhta.Net.Processing.ConsumerThread`1"/> instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.Stop">
+            <summary>
+            Stops this <see cref="T:Juhta.Net.Processing.ConsumerThread`1"/> instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.ConsumeObject(`0)">
+            <summary>
+            Consumes a specified object.
+            </summary>
+            <param name="object">Specifies an object to consume.</param>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.OnConsumeObjectFailed(`0,System.Exception)">
+            <summary>
+            Performs necessary actions when an error occurs at the time an object is consumed.
+            </summary>
+            <param name="object">Specifies an object whose consumption was failed.</param>
+            <param name="exception">Specifies the occurred exception.</param>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.OnWorkerThreadFailed(System.Exception)">
+            <summary>
+            Performs necessary actions when the worker thread is about to exit due to an (unexpected) exception.
+            </summary>
+            <param name="exception">Specifies an exception that forces the worker thread to exit.</param>
+        </member>
+        <member name="M:Juhta.Net.Processing.ConsumerThread`1.WorkerThreadMain">
+            <summary>
+            Consumes objects until the queue of incoming objects is closed.
+            </summary>
+            <remarks>This method is the 'main' program of the worker thread.</remarks>
+        </member>
+        <member name="F:Juhta.Net.Processing.ConsumerThread`1.m_objectQueue">
+            <summary>
+            Specifies the queue where incoming objects are put to wait for consumption.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Processing.ConsumerThread`1.m_workerThread">
+            <summary>
+            Specifies the worker thread that actually consumes incoming objects.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ConstructorParam">
