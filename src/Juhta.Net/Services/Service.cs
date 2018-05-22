@@ -10,6 +10,7 @@ using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml;
 
@@ -31,7 +32,7 @@ namespace Juhta.Net.Services
         {
             try
             {
-                return(ObjectFactory.CreateInstance<TService>(m_libraryFileName, m_libraryClass, GetConstructorParams()));
+                return(ObjectFactory.CreateInstance<TService>(m_classFileUri, GetConstructorParams()));
             }
 
             catch (Exception ex)
@@ -43,6 +44,14 @@ namespace Juhta.Net.Services
         #endregion
 
         #region Public Properties
+
+        /// <summary>
+        /// Gets the file URI of the class that implements the dependency injection service.
+        /// </summary>
+        public ClassFileUri ClassFileUri
+        {
+            get {return(m_classFileUri);}
+        }
 
         /// <summary>
         /// Gets an array of <see cref="ConstructorParam"/> objects specifying the constructor parameters for the
@@ -59,22 +68,6 @@ namespace Juhta.Net.Services
         public ServiceId Id
         {
             get {return(m_id);}
-        }
-
-        /// <summary>
-        /// Gets the library class that implements the dependency injection service.
-        /// </summary>
-        public string LibraryClass
-        {
-            get {return(m_libraryClass);}
-        }
-
-        /// <summary>
-        /// Gets the file name of the library that contains the dependency injection service.
-        /// </summary>
-        public string LibraryFileName
-        {
-            get {return(m_libraryFileName);}
         }
 
         #endregion
@@ -95,9 +88,7 @@ namespace Juhta.Net.Services
 
             try
             {
-                m_libraryFileName = serviceNode.GetAttribute("libraryFileName");
-
-                m_libraryClass = serviceNode.GetAttribute("libraryClass");
+                m_classFileUri = new ClassFileUri(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + serviceNode.GetAttribute("class"));
 
                 constructorParamsNode = serviceNode.SelectSingleNode("ns:constructorParams", namespaceManager);
 
@@ -160,6 +151,11 @@ namespace Juhta.Net.Services
         #region Private Fields
 
         /// <summary>
+        /// Stores the <see cref="ClassFileUri"/> property.
+        /// </summary>
+        private ClassFileUri m_classFileUri;
+
+        /// <summary>
         /// Stores the <see cref="ConstructorParams"/> property.
         /// </summary>
         private ConstructorParam[] m_constructorParams;
@@ -178,16 +174,6 @@ namespace Juhta.Net.Services
         /// Stores the <see cref="Id"/> property.
         /// </summary>
         private ServiceId m_id;
-
-        /// <summary>
-        /// Stores the <see cref="LibraryClass"/> property.
-        /// </summary>
-        private string m_libraryClass;
-
-        /// <summary>
-        /// Stores the <see cref="LibraryFileName"/> property.
-        /// </summary>
-        private string m_libraryFileName;
 
         #endregion
     }

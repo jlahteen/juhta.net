@@ -424,16 +424,22 @@
         </member>
         <member name="T:Juhta.Net.Common.InterfaceNotSupportedException">
             <summary>
-            This exception will be thrown when an object doesn't support a requested interface.
+            This exception will be thrown when an object doesn't support a required interface.
             </summary>
+        </member>
+        <member name="M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
-            <param name="innerException">Specifies an InvalidCastException instance that relates to the failed
-            interface cast operation.</param>
+            <param name="innerException">Specifies an <see cref="T:System.InvalidCastException"/> instance that relates to the
+            failed interface cast operation.</param>
         </member>
         <member name="T:Juhta.Net.Common.InternalException">
             <summary>
@@ -4522,6 +4528,11 @@
             <typeparam name="TService">Specifies a service type.</typeparam>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
+        <member name="P:Juhta.Net.Services.Service.ClassFileUri">
+            <summary>
+            Gets the file URI of the class that implements the dependency injection service.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.Services.Service.ConstructorParams">
             <summary>
             Gets an array of <see cref="T:Juhta.Net.Services.ConstructorParam"/> objects specifying the constructor parameters for the
@@ -4531,16 +4542,6 @@
         <member name="P:Juhta.Net.Services.Service.Id">
             <summary>
             Gets the identifier of the dependency injection service.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Services.Service.LibraryClass">
-            <summary>
-            Gets the library class that implements the dependency injection service.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.Services.Service.LibraryFileName">
-            <summary>
-            Gets the file name of the library that contains the dependency injection service.
             </summary>
         </member>
         <member name="M:Juhta.Net.Services.Service.#ctor(System.Xml.XmlNode)">
@@ -4554,6 +4555,11 @@
             Gets an array of the constructor parameter objects required for creating an instance of the service.
             </summary>
             <returns>Returns an array of the required constructor parameter objects.</returns>
+        </member>
+        <member name="F:Juhta.Net.Services.Service.m_classFileUri">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Services.Service.ClassFileUri"/> property.
+            </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_constructorParams">
             <summary>
@@ -4573,16 +4579,6 @@
         <member name="F:Juhta.Net.Services.Service.m_id">
             <summary>
             Stores the <see cref="P:Juhta.Net.Services.Service.Id"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Services.Service.m_libraryClass">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Service.LibraryClass"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Services.Service.m_libraryFileName">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Service.LibraryFileName"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.Services.ServiceCreationException">

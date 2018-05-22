@@ -227,8 +227,7 @@
       <xs:element name="constructorParams" type="constructorParamsType" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="common:serviceIdType" use="required"/>
-    <xs:attribute name="libraryFileName" type="common:libraryFileNameType" use="required"/>
-    <xs:attribute name="libraryClass" type="common:classNameType" use="required"/>
+    <xs:attribute name="class" type="common:shortClassFileUriType" use="required"/>
   </xs:complexType>
 
   <!-- Define serviceGroupType -->
