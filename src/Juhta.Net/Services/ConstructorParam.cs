@@ -194,8 +194,8 @@ namespace Juhta.Net.Services
 
                     break;
 
-                case "serviceRef":
-                    m_type = ConstructorParamType.ServiceRef;
+                case "serviceId":
+                    m_type = ConstructorParamType.ServiceId;
 
                     m_value = new ServiceId(paramNode.InnerText);
 

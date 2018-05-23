@@ -4839,9 +4839,9 @@
             Specifies the <see cref="T:System.SByte"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ConstructorParamType.ServiceRef">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.ServiceId">
             <summary>
-            Specifies the service reference type.
+            Specifies the service identifier type.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.ConstructorParamType.Short">
