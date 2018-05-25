@@ -108,7 +108,7 @@ namespace Juhta.Net.Services
 
                 m_constructorParams = constructorParams.ToArray();
 
-                m_hasServiceIdParams = m_constructorParams.Where(x => x.Type == ConstructorParamType.ServiceId).Count() > 0;
+                m_hasServiceParams = m_constructorParams.Where(x => x.Type == ConstructorParamType.Service).Count() > 0;
             }
 
             catch (Exception ex)
@@ -130,7 +130,7 @@ namespace Juhta.Net.Services
             ServiceFactory serviceFactory;
             object[] constructorParams;
 
-            if (!m_hasServiceIdParams)
+            if (!m_hasServiceParams)
                 return(m_constructorParamObjs);
 
             serviceFactory = Application.Instance.ServiceFactory;
@@ -138,7 +138,7 @@ namespace Juhta.Net.Services
             constructorParams = new object[m_constructorParams.Length];
 
             for (int i = 0; i < m_constructorParams.Length; i++)
-                if (m_constructorParams[i].Type != ConstructorParamType.ServiceId)
+                if (m_constructorParams[i].Type != ConstructorParamType.Service)
                     constructorParams[i] = m_constructorParams[i].Value;
                 else
                     constructorParams[i] = serviceFactory.CreateService<object>((ServiceId)m_constructorParams[i].Value);
@@ -166,9 +166,9 @@ namespace Juhta.Net.Services
         private object[] m_constructorParamObjs;
 
         /// <summary>
-        /// Specifies whether the constructor parameters of this service contain references to other services.
+        /// Specifies whether the constructor parameters of this service contain service type parameters.
         /// </summary>
-        private bool m_hasServiceIdParams;
+        private bool m_hasServiceParams;
 
         /// <summary>
         /// Stores the <see cref="Id"/> property.

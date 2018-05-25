@@ -86,9 +86,9 @@ namespace Juhta.Net.Services
         SByte,
 
         /// <summary>
-        /// Specifies the service identifier type.
+        /// Specifies the <see cref="Service"/> type.
         /// </summary>
-        ServiceId,
+        Service,
 
         /// <summary>
         /// Maps to the <see cref="System.Int16"/> type.

@@ -4571,9 +4571,9 @@
             Specifies an array of the constructor parameters for creating instances of the service. Can be null.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.Service.m_hasServiceRefs">
+        <member name="F:Juhta.Net.Services.Service.m_hasServiceParams">
             <summary>
-            Specifies whether the constructor parameters of this service contain references to other services.
+            Specifies whether the constructor parameters of this service contain service type parameters.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_id">
@@ -4839,9 +4839,9 @@
             Specifies the <see cref="T:System.SByte"/> type.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Services.ConstructorParamType.ServiceId">
+        <member name="F:Juhta.Net.Services.ConstructorParamType.Service">
             <summary>
-            Specifies the service identifier type.
+            Specifies the <see cref="F:Juhta.Net.Services.ConstructorParamType.Service"/> type.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.ConstructorParamType.Short">

@@ -78,7 +78,7 @@
       <xs:element name="int64" type="int64Type"/>
       <xs:element name="long" type="longType"/>
       <xs:element name="sbyte" type="sbyteType"/>
-      <xs:element name="serviceId" type="serviceIdType"/>
+      <xs:element name="service" type="service2Type"/>
       <xs:element name="short" type="shortType"/>
       <xs:element name="single" type="singleType"/>
       <xs:element name="string" type="stringType"/>
@@ -239,8 +239,8 @@
     <xs:attribute name="name" type="common:nonEmptyStringType" use="optional"/>
   </xs:complexType>
 
-  <!-- Define serviceIdType -->
-  <xs:complexType name="serviceIdType">
+  <!-- Define service2Type -->
+  <xs:complexType name="service2Type">
     <xs:simpleContent>
       <xs:restriction base="stringType">
         <xs:pattern value="([a-zA-Z0-9])+:([a-zA-Z0-9\._/-])+"/>
