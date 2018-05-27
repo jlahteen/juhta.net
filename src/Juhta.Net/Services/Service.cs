@@ -88,7 +88,7 @@ namespace Juhta.Net.Services
 
             try
             {
-                m_classId = new ClassId(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + serviceNode.GetAttribute("class"));
+                m_classId = new ClassId(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + serviceNode.GetAttribute("classId"));
 
                 constructorParamsNode = serviceNode.SelectSingleNode("ns:constructorParams", namespaceManager);
 
