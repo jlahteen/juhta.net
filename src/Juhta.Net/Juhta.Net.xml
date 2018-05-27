@@ -443,21 +443,20 @@
         </member>
         <member name="T:Juhta.Net.Common.InternalException">
             <summary>
-            This exception will be thrown when an internal error occurs.
+            This exception can be thrown when an error occurs in an application but no technical details are wanted to be
+            exposed to the caller.
             </summary>
-            <remarks>An internal error is typically an error that should 'never happen', and it usually means some kind of
-            a bug in the software.</remarks>
         </member>
-        <member name="M:Juhta.Net.Common.InternalException.#ctor(System.String)">
+        <member name="M:Juhta.Net.Common.InternalException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="message">Specifies an error message.</param>
         </member>
-        <member name="P:Juhta.Net.Common.InternalException.InternalErrorInfo">
+        <member name="M:Juhta.Net.Common.InternalException.GetErrorMessage">
             <summary>
-            Gets general information about internal errors.
+            Gets the general internal error message.
             </summary>
+            <returns>Returns the general internal error message.</returns>
         </member>
         <member name="T:Juhta.Net.Common.InvalidConfigFileException">
             <summary>

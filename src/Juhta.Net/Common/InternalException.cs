@@ -11,10 +11,9 @@ using System;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// This exception will be thrown when an internal error occurs.
+    /// This exception can be thrown when an error occurs in an application but no technical details are wanted to be
+    /// exposed to the caller.
     /// </summary>
-    /// <remarks>An internal error is typically an error that should 'never happen', and it usually means some kind of
-    /// a bug in the software.</remarks>
     public class InternalException : Exception
     {
         #region Public Constructors
@@ -22,28 +21,28 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="message">Specifies an error message.</param>
-        public InternalException(string message) : base(message + InternalErrorInfo)
+        public InternalException() : base(GetErrorMessage())
         {}
 
         #endregion
 
-        #region Private Properties
+        #region Private Methods
 
         /// <summary>
-        /// Gets general information about internal errors.
+        /// Gets the general internal error message.
         /// </summary>
-        private static string InternalErrorInfo
+        /// <returns>Returns the general internal error message.</returns>
+        private static string GetErrorMessage()
         {
-            get
-            {
-                string info;
+            string errorMessage = null;
 
-                info = "This is an internal error and should never happen.";
-                info += " You can make this software better by sending this error information to the product manufacturer.";
+            errorMessage += "An internal error occurred in the application. ";
 
-                return(" (" + info + ")");
-            }
+            errorMessage += "If this error occurs repeatedly, please consider reporting this error with the appropriate context to the software vendor or author(s) to help them improve the quality of this software. ";
+
+            errorMessage += "Thank you.";
+
+            return(errorMessage);
         }
 
         #endregion
