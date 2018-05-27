@@ -12,7 +12,7 @@ using System.Xml.Schema;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// This exception will be thrown when an XML configuration file doesn't pass (schema) validation.
+    /// This exception will be thrown when a configuration file doesn't pass (schema) validation.
     /// </summary>
     public class InvalidConfigFileException : Exception
     {
