@@ -214,23 +214,23 @@
             </summary>
             <param name="hint">Specifies a hint string.</param>
         </member>
-        <member name="T:Juhta.Net.Common.ClassFileUri">
+        <member name="T:Juhta.Net.Common.ClassId">
             <summary>
-            <para>Defines a class that can be used for locating library classes with file URIs. A class file URI is a
-            localhost file URI whose fragment part specifies a class name in a referenced library file.</para>
-            <para>The fragment part can begin with a '.' character indicating that the library file name specifies the root
+            <para>Defines a class identifier. A class identifier is a localhost file URI whose fragment part specifies a
+            class name in a referenced library file.</para>
+            <para>The fragment part can begin with a '~.' prefix indicating that the library file name specifies the root
             namespace of the class. If a library path is not absolute, the path will be filled according to the current
             directory.</para>
-            <para>For example, the following values are valid class file URIs:</para>
+            <para>For example, the following values are valid class identifiers:</para>
             <list type="bullet">
             <item>
-            <term><c>MyLibrary.dll#.MyClass</c></term>
+            <term><c>MyLibrary.dll#~.MyClass</c></term>
             </item>
             <item>
-            <term><c>file:///MyLibrary.dll#.MyClass</c></term>
+            <term><c>file:///MyLibrary.dll#~.MyClass</c></term>
             </item>
             <item>
-            <term><c>file:///C:\MyDirectory\MyLibrary.dll#.MyClass</c></term>
+            <term><c>file:///C:\MyDirectory\MyLibrary.dll#~.MyClass</c></term>
             </item>
             <item>
             <term><c>file:///C:\MyDirectory\MyLibrary.dll#MyNamespace.MyClass</c></term>
@@ -238,70 +238,70 @@
             </list>
             </summary>
         </member>
-        <member name="M:Juhta.Net.Common.ClassFileUri.#ctor(System.String)">
+        <member name="M:Juhta.Net.Common.ClassId.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="classFileUri">Specifies a class file URI as a string.</param>
+            <param name="classId">Specifies a class identifier as a string.</param>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.ClassName">
+        <member name="P:Juhta.Net.Common.ClassId.ClassName">
             <summary>
-            Gets the name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the name of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.ClassNamespace">
+        <member name="P:Juhta.Net.Common.ClassId.ClassNamespace">
             <summary>
-            Gets the namespace of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the namespace of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.FullClassName">
+        <member name="P:Juhta.Net.Common.ClassId.FullClassName">
             <summary>
-            Gets the full name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the full name of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryDirectory">
+        <member name="P:Juhta.Net.Common.ClassId.LibraryDirectory">
             <summary>
-            Gets the library directory of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the library directory of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryFileName">
+        <member name="P:Juhta.Net.Common.ClassId.LibraryFileName">
             <summary>
-            Gets the library file name of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the library file name of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.Common.ClassFileUri.LibraryFilePath">
+        <member name="P:Juhta.Net.Common.ClassId.LibraryFilePath">
             <summary>
-            Gets the library file path of the class associated with this <see cref="T:Juhta.Net.Common.ClassFileUri"/> instance.
+            Gets the library file path of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_className">
+        <member name="F:Juhta.Net.Common.ClassId.m_className">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.ClassName"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.ClassName"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_classNamespace">
+        <member name="F:Juhta.Net.Common.ClassId.m_classNamespace">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.ClassNamespace"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.ClassNamespace"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_fullClassName">
+        <member name="F:Juhta.Net.Common.ClassId.m_fullClassName">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.FullClassName"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.FullClassName"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryDirectory">
+        <member name="F:Juhta.Net.Common.ClassId.m_libraryDirectory">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryDirectory"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.LibraryDirectory"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryFileName">
+        <member name="F:Juhta.Net.Common.ClassId.m_libraryFileName">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryFileName"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.LibraryFileName"/> property.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Common.ClassFileUri.m_libraryFilePath">
+        <member name="F:Juhta.Net.Common.ClassId.m_libraryFilePath">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Common.ClassFileUri.LibraryFilePath"/> property.
+            Stores the <see cref="P:Juhta.Net.Common.ClassId.LibraryFilePath"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.CommonMessages">
@@ -522,22 +522,22 @@
             constructor. Can be null causing the default constructor to be called.</param>
             <returns>Returns the created instance casted to the specified type.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassFileUri)">
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId)">
             <summary>
             Creates an instance of a specified class by using the default constructor.
             </summary>
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
-            <param name="classFileUri">Specifies a <see cref="T:Juhta.Net.Common.ClassFileUri"/> object.</param>
+            <param name="classId">Specifies a <see cref="T:Juhta.Net.Common.ClassId"/> object.</param>
             <returns>Returns the created instance casted to the specified type.</returns>
         </member>
-        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassFileUri,System.Object[])">
+        <member name="M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId,System.Object[])">
             <summary>
             Creates an instance of a specified class.
             </summary>
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
-            <param name="classFileUri">Specifies a <see cref="T:Juhta.Net.Common.ClassFileUri"/> object.</param>
+            <param name="classId">Specifies a <see cref="T:Juhta.Net.Common.ClassId"/> object.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
             constructor. Can be null causing the default constructor to be called.</param>
             <returns>Returns the created instance casted to the specified type.</returns>
@@ -3888,22 +3888,23 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error033">
             <summary>
-            Scheme of a class file URI must be 'file'.
+            This message is free to be redefined.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error034">
             <summary>
-            Value '{0}' is not a valid class file URI because the fragment part is missing or empty.
+            Value '{0}' is not a valid class identifier because the fragment part of the file URI is missing or empty.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error035">
             <summary>
-            Value '{0}' is not a valid class file URI because it doesn't specify a '.DLL' file.
+            Value '{0}' is not a valid class identifier because the file URI doesn't specify a '.DLL' file.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error036">
             <summary>
-            Value '{0}' is not a valid class file URI because the fragment part doesn't specify a valid class name.
+            Value '{0}' is not a valid class identifier because the fragment part of the file URI doesn't specify a
+            valid class name.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error037">
@@ -3918,7 +3919,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error039">
             <summary>
-            Value '{0}' is not a valid class file URI.
+            Value '{0}' is not a valid class identifier.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error040">
@@ -3963,7 +3964,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error048">
             <summary>
-            Class file URI must be a localhost file URI starting with 'file:///'.
+            Class identifier must be a localhost file URI.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error049">
@@ -4528,9 +4529,9 @@
             <typeparam name="TService">Specifies a service type.</typeparam>
             <returns>Returns the created instance casted to the specified service type.</returns>
         </member>
-        <member name="P:Juhta.Net.Services.Service.ClassFileUri">
+        <member name="P:Juhta.Net.Services.Service.ClassId">
             <summary>
-            Gets the file URI of the class that implements the dependency injection service.
+            Gets the identifier of the class that implements the dependency injection service.
             </summary>
         </member>
         <member name="P:Juhta.Net.Services.Service.ConstructorParams">
@@ -4556,9 +4557,9 @@
             </summary>
             <returns>Returns an array of the required constructor parameter objects.</returns>
         </member>
-        <member name="F:Juhta.Net.Services.Service.m_classFileUri">
+        <member name="F:Juhta.Net.Services.Service.m_classId">
             <summary>
-            Stores the <see cref="P:Juhta.Net.Services.Service.ClassFileUri"/> property.
+            Stores the <see cref="P:Juhta.Net.Services.Service.ClassId"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.Services.Service.m_constructorParams">

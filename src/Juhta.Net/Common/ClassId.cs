@@ -15,68 +15,68 @@ using System.IO;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// <para>Defines a class that can be used for locating library classes with file URIs. A class file URI is a
-    /// localhost file URI whose fragment part specifies a class name in a referenced library file.</para>
-    /// <para>The fragment part can begin with a '.' character indicating that the library file name specifies the root
+    /// <para>Defines a class identifier. A class identifier is a localhost file URI whose fragment part specifies a
+    /// class name in a referenced library file.</para>
+    /// <para>The fragment part can begin with a '~.' prefix indicating that the library file name specifies the root
     /// namespace of the class. If a library path is not absolute, the path will be filled according to the current
     /// directory.</para>
-    /// <para>For example, the following values are valid class file URIs:</para>
+    /// <para>For example, the following values are valid class identifiers:</para>
     /// <list type="bullet">
     /// <item>
-    /// <term><c>MyLibrary.dll#.MyClass</c></term>
+    /// <term><c>MyLibrary.dll#~.MyClass</c></term>
     /// </item>
     /// <item>
-    /// <term><c>file:///MyLibrary.dll#.MyClass</c></term>
+    /// <term><c>file:///MyLibrary.dll#~.MyClass</c></term>
     /// </item>
     /// <item>
-    /// <term><c>file:///C:\MyDirectory\MyLibrary.dll#.MyClass</c></term>
+    /// <term><c>file:///C:\MyDirectory\MyLibrary.dll#~.MyClass</c></term>
     /// </item>
     /// <item>
     /// <term><c>file:///C:\MyDirectory\MyLibrary.dll#MyNamespace.MyClass</c></term>
     /// </item>
     /// </list>
     /// </summary>
-    public class ClassFileUri
+    public class ClassId
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="classFileUri">Specifies a class file URI as a string.</param>
-        public ClassFileUri(string classFileUri)
+        /// <param name="classId">Specifies a class identifier as a string.</param>
+        public ClassId(string classId)
         {
             string originalValue, filePath, fragment;
             int indexOf;
             FilePathValidator filePathValidator = new FilePathValidator();
 
-            originalValue = classFileUri;
+            originalValue = classId;
 
-            ArgumentHelper.CheckNotNull(nameof(classFileUri), classFileUri);
+            ArgumentHelper.CheckNotNull(nameof(classId), classId);
 
-            // Check that the class file URI is a localhost file URI
-            if (classFileUri.StartsWith("file://") && !classFileUri.StartsWith("file:///"))
+            // Check that the class identifier is a localhost file URI
+            if (classId.StartsWith("file://") && !classId.StartsWith("file:///"))
                 throw new ArgumentException(LibraryMessages.Error048.GetMessage());
 
             // Remove the 'file' scheme if necessary
-            else if (classFileUri.StartsWith("file:///"))
-                classFileUri = classFileUri.Substring("file:///".Length);
+            else if (classId.StartsWith("file:///"))
+                classId = classId.Substring("file:///".Length);
 
             // Check that no scheme is given
-            else if (classFileUri.IndexOf("://") >= 0)
-                throw new ArgumentException(LibraryMessages.Error033.GetMessage());
+            else if (classId.IndexOf("://") >= 0)
+                throw new ArgumentException(LibraryMessages.Error048.GetMessage());
 
             // Check that the fragment part is present
 
-            indexOf = classFileUri.IndexOf('#');
+            indexOf = classId.IndexOf('#');
 
-            if (indexOf < 0 || indexOf == classFileUri.Length - 1)
+            if (indexOf < 0 || indexOf == classId.Length - 1)
                 throw new ArgumentException(LibraryMessages.Error034.FormatMessage(originalValue));
 
             try
             {
                 // Parse the file path
-                filePath = classFileUri.Substring(0, indexOf);
+                filePath = classId.Substring(0, indexOf);
 
                 // Validate the file path
                 filePathValidator.Validate(filePath);
@@ -95,11 +95,11 @@ namespace Juhta.Net.Common
                     throw new ArgumentException(LibraryMessages.Error035.FormatMessage(originalValue));
 
                 // Parse the fragment
-                fragment = classFileUri.Substring(indexOf + 1);
+                fragment = classId.Substring(indexOf + 1);
 
                 // Initialize the full class name
-                if (fragment.StartsWith("."))
-                    m_fullClassName = Path.GetFileNameWithoutExtension(m_libraryFileName) + fragment;
+                if (fragment.StartsWith("~."))
+                    m_fullClassName = Path.GetFileNameWithoutExtension(m_libraryFileName) + fragment.Substring(1);
                 else
                     m_fullClassName = fragment;
 
@@ -136,7 +136,7 @@ namespace Juhta.Net.Common
         #region Public Properties
 
         /// <summary>
-        /// Gets the name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the name of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string ClassName
         {
@@ -144,7 +144,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets the namespace of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the namespace of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string ClassNamespace
         {
@@ -152,7 +152,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets the full name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the full name of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string FullClassName
         {
@@ -160,7 +160,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets the library directory of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the library directory of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string LibraryDirectory
         {
@@ -168,7 +168,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets the library file name of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the library file name of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string LibraryFileName
         {
@@ -176,7 +176,7 @@ namespace Juhta.Net.Common
         }
 
         /// <summary>
-        /// Gets the library file path of the class associated with this <see cref="ClassFileUri"/> instance.
+        /// Gets the library file path of the class associated with this <see cref="ClassId"/> instance.
         /// </summary>
         public string LibraryFilePath
         {

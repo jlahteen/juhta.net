@@ -32,7 +32,7 @@ namespace Juhta.Net.Services
         {
             try
             {
-                return(ObjectFactory.CreateInstance<TService>(m_classFileUri, GetConstructorParams()));
+                return(ObjectFactory.CreateInstance<TService>(m_classId, GetConstructorParams()));
             }
 
             catch (Exception ex)
@@ -46,11 +46,11 @@ namespace Juhta.Net.Services
         #region Public Properties
 
         /// <summary>
-        /// Gets the file URI of the class that implements the dependency injection service.
+        /// Gets the identifier of the class that implements the dependency injection service.
         /// </summary>
-        public ClassFileUri ClassFileUri
+        public ClassId ClassId
         {
-            get {return(m_classFileUri);}
+            get {return(m_classId);}
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Juhta.Net.Services
 
             try
             {
-                m_classFileUri = new ClassFileUri(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + serviceNode.GetAttribute("class"));
+                m_classId = new ClassId(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + serviceNode.GetAttribute("class"));
 
                 constructorParamsNode = serviceNode.SelectSingleNode("ns:constructorParams", namespaceManager);
 
@@ -151,9 +151,9 @@ namespace Juhta.Net.Services
         #region Private Fields
 
         /// <summary>
-        /// Stores the <see cref="ClassFileUri"/> property.
+        /// Stores the <see cref="ClassId"/> property.
         /// </summary>
-        private ClassFileUri m_classFileUri;
+        private ClassId m_classId;
 
         /// <summary>
         /// Stores the <see cref="ConstructorParams"/> property.

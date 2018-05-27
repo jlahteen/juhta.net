@@ -68,11 +68,11 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="classFileUri">Specifies a <see cref="ClassFileUri"/> object.</param>
+        /// <param name="classId">Specifies a <see cref="ClassId"/> object.</param>
         /// <returns>Returns the created instance casted to the specified type.</returns>
-        public static T CreateInstance<T>(ClassFileUri classFileUri)
+        public static T CreateInstance<T>(ClassId classId)
         {
-            return(CreateInstance<T>(classFileUri, null));
+            return(CreateInstance<T>(classId, null));
         }
 
         /// <summary>
@@ -80,13 +80,13 @@ namespace Juhta.Net.Common
         /// </summary>
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
-        /// <param name="classFileUri">Specifies a <see cref="ClassFileUri"/> object.</param>
+        /// <param name="classId">Specifies a <see cref="ClassId"/> object.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
         /// <returns>Returns the created instance casted to the specified type.</returns>
-        public static T CreateInstance<T>(ClassFileUri classFileUri, params object[] parameters)
+        public static T CreateInstance<T>(ClassId classId, params object[] parameters)
         {
-            return(CreateInstance<T>(classFileUri.LibraryFilePath, classFileUri.FullClassName, parameters));
+            return(CreateInstance<T>(classId.LibraryFilePath, classId.FullClassName, parameters));
         }
 
         /// <summary>
