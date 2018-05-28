@@ -16,6 +16,7 @@ namespace Juhta.Net.Common
     /// <remarks>Generally it's a better idea to throw this kind of exception than to do nothing which can easily lead
     /// to weird or most probably error behaviour in the subsequent execution. This is especially true regarding
     /// statements that 'should' never be reached.</remarks>
+    /// <seealso cref="BlockNotImplementedException"/>
     public class StatementNotImplementedException : Exception
     {
         #region Public Constructors
