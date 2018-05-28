@@ -11,7 +11,7 @@ using System;
 namespace Juhta.Net.Common
 {
     /// <summary>
-    /// Defines an abstract base class singleton classes.
+    /// Defines an abstract base class for singleton classes.
     /// </summary>
     /// <typeparam name="T">Specifies a type to make as singleton.</typeparam>
     public abstract class Singleton<T>
