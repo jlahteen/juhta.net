@@ -13,8 +13,9 @@ namespace Juhta.Net.Common
 {
     /// <summary>
     /// Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
-    /// Time (UTC). This class is thread-safe.
+    /// Time (UTC). An example of a timestamp is '201805282026441234567', generated on May 28, 2018 at 20:26:44.
     /// </summary>
+    /// <remarks>This class is thread-safe.</remarks>
     public class TimestampFactory
     {
         #region Public Constructors
