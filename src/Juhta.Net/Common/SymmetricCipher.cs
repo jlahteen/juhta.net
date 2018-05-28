@@ -30,7 +30,7 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="symmetricAlgorithm">Specifies a SymmetricAlgorithm object.</param>
+        /// <param name="symmetricAlgorithm">Specifies a <see cref="SymmetricAlgorithm"/> object.</param>
         public SymmetricCipher(SymmetricAlgorithm symmetricAlgorithm)
         {
             m_symmetricAlgorithm = symmetricAlgorithm;
@@ -153,13 +153,14 @@ namespace Juhta.Net.Common
         #region Private Fields
 
         /// <summary>
-        /// Specifies the key size to use with the associated SymmetricAlgorithm object. The class determines the key
-        /// size by selecting the maximum key size supported by <see cref="m_symmetricAlgorithm"/>.
+        /// Specifies the key size to use with the associated <see cref="SymmetricAlgorithm"/> object. The class
+        /// determines the key size by selecting the maximum key size supported by <see cref="m_symmetricAlgorithm"/>.
         /// </summary>
         private int m_keySize;
 
         /// <summary>
-        /// Specifies a SymmetricAlgorithm object that performs actual encryption and decryption operations.
+        /// Specifies a <see cref="SymmetricAlgorithm"/> object that performs actual encryption and decryption
+        /// operations.
         /// </summary>
         private SymmetricAlgorithm m_symmetricAlgorithm;
 

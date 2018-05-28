@@ -196,6 +196,7 @@
             <remarks>Generally it's a better idea to throw this kind of exception than to do nothing which can easily lead
             to weird or most probably error behaviour in the subsequent execution. This is especially true regarding code
             blocks that 'should' never be reached.</remarks>
+            <seealso cref="T:Juhta.Net.Common.StatementNotImplementedException"/>
         </member>
         <member name="M:Juhta.Net.Common.BlockNotImplementedException.#ctor">
             <summary>
@@ -682,7 +683,7 @@
         </member>
         <member name="T:Juhta.Net.Common.Singleton`1">
             <summary>
-            Defines an abstract base class singleton classes.
+            Defines an abstract base class for singleton classes.
             </summary>
             <typeparam name="T">Specifies a type to make as singleton.</typeparam>
         </member>
@@ -725,6 +726,7 @@
             <remarks>Generally it's a better idea to throw this kind of exception than to do nothing which can easily lead
             to weird or most probably error behaviour in the subsequent execution. This is especially true regarding
             statements that 'should' never be reached.</remarks>
+            <seealso cref="T:Juhta.Net.Common.BlockNotImplementedException"/>
         </member>
         <member name="M:Juhta.Net.Common.StatementNotImplementedException.#ctor">
             <summary>
@@ -758,7 +760,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="symmetricAlgorithm">Specifies a SymmetricAlgorithm object.</param>
+            <param name="symmetricAlgorithm">Specifies a <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/> object.</param>
         </member>
         <member name="M:Juhta.Net.Common.SymmetricCipher.DecryptData(System.String,System.Byte[])">
             <summary>
@@ -786,13 +788,14 @@
         </member>
         <member name="F:Juhta.Net.Common.SymmetricCipher.m_keySize">
             <summary>
-            Specifies the key size to use with the associated SymmetricAlgorithm object. The class determines the key
-            size by selecting the maximum key size supported by <see cref="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm"/>.
+            Specifies the key size to use with the associated <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/> object. The class
+            determines the key size by selecting the maximum key size supported by <see cref="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm"/>.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.SymmetricCipher.m_symmetricAlgorithm">
             <summary>
-            Specifies a SymmetricAlgorithm object that performs actual encryption and decryption operations.
+            Specifies a <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/> object that performs actual encryption and decryption
+            operations.
             </summary>
         </member>
         <member name="T:Juhta.Net.Common.TimestampFactory">
