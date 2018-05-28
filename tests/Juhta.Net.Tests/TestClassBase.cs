@@ -185,7 +185,7 @@ namespace Juhta.Net.Tests
         {
             // Character 'X' stands for an illegal character
 
-            if (OSInfo.IsWindows)
+            if (OperatingSystemInfo.IsWindows)
                 path = path.Replace('X', '<');
             else
             {

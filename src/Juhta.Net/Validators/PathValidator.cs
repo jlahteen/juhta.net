@@ -77,7 +77,7 @@ namespace Juhta.Net.Validators
             int i = 0;
             string[] parts = value.Split(new char[]{Path.DirectorySeparatorChar}, StringSplitOptions.None);
 
-            if (OSInfo.IsWindows)
+            if (OperatingSystemInfo.IsWindows)
                 if (Regex.IsMatch(parts[0], "^[A-Za-z]:$"))
                     i++;
 

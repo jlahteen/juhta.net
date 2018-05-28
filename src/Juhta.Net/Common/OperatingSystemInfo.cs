@@ -13,7 +13,7 @@ namespace Juhta.Net.Common
     /// <summary>
     /// Defines a static class that provides information about the underlying operating system.
     /// </summary>
-    public static class OSInfo
+    public static class OperatingSystemInfo
     {
         #region Public Properties
 
