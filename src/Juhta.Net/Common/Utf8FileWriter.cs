@@ -217,7 +217,7 @@ namespace Juhta.Net.Common
         /// <summary>
         /// Writes data to the underlying UTF8-encoded file.
         /// </summary>
-        /// <param name="endWithLineTerminator">If true, a line terminator will be finally written to the file.</param>
+        /// <param name="endWithLineTerminator">If true, a line terminator will be written to the file after the data.</param>
         /// <param name="format">Specifies a string containing zero or more format items.</param>
         /// <param name="args">Specifies an object array containing zero or more objects to format. These objects must
         /// correspond to the format items in <paramref name="format"/>. Can be null.</param>
@@ -292,7 +292,7 @@ namespace Juhta.Net.Common
         private string m_filePath;
 
         /// <summary>
-        /// Specifies a StreamWriter object for writing data to the underlying UTF8-encoded file.
+        /// Specifies a <see cref="StreamWriter"/> object for writing data to the underlying UTF8-encoded file.
         /// </summary>
         private StreamWriter m_fileWriter;
 
