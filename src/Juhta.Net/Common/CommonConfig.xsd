@@ -13,35 +13,6 @@
   xmlns="http://schemas.juhta.net/common-v1.xsd"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
-  <!-- Define assemblyClassFileUriType -->
-  <xs:simpleType name="assemblyClassFileUriType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="((file://)?(([a-zA-Z]:\\)|(\\\\(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z][a-zA-Z0-9_]*\.)*[a-zA-Z][a-zA-Z0-9_]*))\\[^\\/:\*\?\|&lt;&gt;]+\\)))?([^\\/:\*\?\|&lt;&gt;]+\\)*([^\\/:\*\?\|&lt;&gt;]+)\.dll#[a-zA-Z0-9_]*(\.[a-zA-Z0-9_]+)+"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <!-- Define builtInTypeType -->
-  <xs:simpleType name="builtInTypeType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="System.Boolean"/>
-      <xs:enumeration value="System.Byte"/>
-      <xs:enumeration value="System.Char"/>
-      <xs:enumeration value="System.DateTime"/>
-      <xs:enumeration value="System.Decimal"/>
-      <xs:enumeration value="System.Double"/>
-      <xs:enumeration value="System.Int16"/>
-      <xs:enumeration value="System.Int32"/>
-      <xs:enumeration value="System.Int64"/>
-      <xs:enumeration value="System.SByte"/>
-      <xs:enumeration value="System.Single"/>
-      <xs:enumeration value="System.String"/>
-      <xs:enumeration value="System.TimeSpan"/>
-      <xs:enumeration value="System.UInt16"/>
-      <xs:enumeration value="System.UInt32"/>
-      <xs:enumeration value="System.UInt64"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
   <!-- Define classNameType -->
   <xs:simpleType name="classNameType">
     <xs:restriction base="xs:string">
@@ -53,13 +24,6 @@
   <xs:simpleType name="configFileNameType">
     <xs:restriction base="xs:string">
       <xs:pattern value="[a-zA-Z0-9_\-]+(\.[a-zA-Z0-9_\-]+)*\.(json|config|xml|ini)"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <!-- Define directoryPathType -->
-  <xs:simpleType name="directoryPathType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="(?!^ *$)(([a-zA-Z]:\\)|(\\\\(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z][a-zA-Z0-9_]*\.)*[a-zA-Z][a-zA-Z0-9_]*))\\[^\\/:\*\?\|&lt;&gt;]+\\))?([^\\/:\*\?\|&lt;&gt;]+\\)*([^\\/:\*\?\|&lt;&gt;]+(\\)?)?"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -80,13 +44,6 @@
   <!-- Define emptyElementType -->
   <xs:complexType name="emptyElementType">
   </xs:complexType>
-  
-  <!-- Define filePathType -->
-  <xs:simpleType name="filePathType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="(([a-zA-Z]:\\)|(\\\\(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z][a-zA-Z0-9_]*\.)*[a-zA-Z][a-zA-Z0-9_]*))\\[^\\/:\*\?\|&lt;&gt;]+\\))?([^\\/:\*\?\|&lt;&gt;]+\\)*([^\\/:\*\?\|&lt;&gt;]+)"/>
-    </xs:restriction>
-  </xs:simpleType>
   
   <!-- Define fullClassNameType -->
   <xs:simpleType name="fullClassNameType">
@@ -124,13 +81,6 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <!-- shortClassIdType -->
-  <xs:simpleType name="shortClassIdType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[a-zA-Z0-9_\-]+(\.[a-zA-Z0-9_\-]+)*\.dll#(~\.)?[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
   <!-- Define paramNameType -->
   <xs:simpleType name="paramNameType">
     <xs:restriction base="xs:string">
@@ -143,6 +93,13 @@
   <xs:simpleType name="serviceIdType">
     <xs:restriction base="xs:string">
       <xs:pattern value="([a-zA-Z0-9])+:([a-zA-Z0-9\._/-])+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- shortClassIdType -->
+  <xs:simpleType name="shortClassIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_\-]+(\.[a-zA-Z0-9_\-]+)*\.dll#(~\.)?[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*"/>
     </xs:restriction>
   </xs:simpleType>
   

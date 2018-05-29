@@ -801,8 +801,9 @@
         <member name="T:Juhta.Net.Common.TimestampFactory">
             <summary>
             Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
-            Time (UTC). This class is thread-safe.
+            Time (UTC). An example of a timestamp is '201805282026441234567', generated on May 28, 2018 at 20:26:44.
             </summary>
+            <remarks>This class is thread-safe.</remarks>
         </member>
         <member name="M:Juhta.Net.Common.TimestampFactory.#ctor">
             <summary>
@@ -839,8 +840,8 @@
             <summary>
             This exception will be thrown when an unexpected error occurs.
             </summary>
-            <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-
-            sensitive functionality such as network communication or file I/O operations.</remarks>
+            <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-prone
+            functionality such as network communication or file I/O operations.</remarks>
         </member>
         <member name="M:Juhta.Net.Common.UnexpectedException.#ctor(System.String,System.Exception)">
             <summary>
@@ -968,7 +969,7 @@
             <summary>
             Writes data to the underlying UTF8-encoded file.
             </summary>
-            <param name="endWithLineTerminator">If true, a line terminator will be finally written to the file.</param>
+            <param name="endWithLineTerminator">If true, a line terminator will be written to the file after the data.</param>
             <param name="format">Specifies a string containing zero or more format items.</param>
             <param name="args">Specifies an object array containing zero or more objects to format. These objects must
             correspond to the format items in <paramref name="format"/>. Can be null.</param>
@@ -997,7 +998,7 @@
         </member>
         <member name="F:Juhta.Net.Common.Utf8FileWriter.m_fileWriter">
             <summary>
-            Specifies a StreamWriter object for writing data to the underlying UTF8-encoded file.
+            Specifies a <see cref="T:System.IO.StreamWriter"/> object for writing data to the underlying UTF8-encoded file.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.Utf8FileWriter.m_indentLevel">
