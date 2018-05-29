@@ -2627,22 +2627,6 @@
             <param name="value">Specifies a value for the attribute to be set.</param>
             <remarks>If the attribute already exists the function just updates its value.</remarks>
         </member>
-        <member name="M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)">
-            <summary>
-            Converts this XmlNode instance to a built-in type object based on its type and value attributes that are
-            assumed to exist in the node.
-            </summary>
-            <param name="node">Specifies the current XmlNode instance.</param>
-            <returns>Returns the built-in type object, that is, the result of the conversion.</returns>
-        </member>
-        <member name="M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray(System.Xml.XmlNode)">
-            <summary>
-            Converts the child nodes of this XmlNode instance to an array of built-in type objects.
-            </summary>
-            <param name="node">Specifies the current XmlNode instance.</param>
-            <returns>Returns an array of the built-in type objects, that is, the result of the conversion.</returns>
-            <seealso cref="M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)"/>
-        </member>
         <member name="T:Juhta.Net.Extensions.XmlSchemaExtensions">
             <summary>
             A static class that contains extension methods for the <see cref="T:System.Xml.Schema.XmlSchema"/> class.
