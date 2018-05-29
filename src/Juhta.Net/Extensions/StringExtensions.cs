@@ -156,18 +156,20 @@ namespace Juhta.Net.Extensions
         /// replaced with their corresponding entities.</returns>
         public static string ReplaceHtmlSpecialCharacters(this string s)
         {
-            string ret = s;
+            if (s == null)
+                return(s);
 
-            if (ret == null)
-                return(ret);
+            s = s.Replace("&", "&amp;");
 
-            ret = ret.Replace("&", "&amp;");
-            ret = ret.Replace("<", "&lt;");
-            ret = ret.Replace(">", "&gt;");
-            ret = ret.Replace("\"", "&quot;");
-            ret = ret.Replace("'", "&#39;");  // &apos; doesn't work in IE
+            s = s.Replace("<", "&lt;");
 
-            return(ret);
+            s = s.Replace(">", "&gt;");
+
+            s = s.Replace("\"", "&quot;");
+
+            s = s.Replace("'", "&#39;");  // &apos; doesn't work in IE
+
+            return(s);
         }
 
         /// <summary>
@@ -178,18 +180,20 @@ namespace Juhta.Net.Extensions
         /// replaced with their corresponding entities.</returns>
         public static string ReplaceXmlSpecialCharacters(this string s)
         {
-            string ret = s;
+            if (s == null)
+                return(s);
 
-            if (ret == null)
-                return(ret);
+            s = s.Replace("&", "&amp;");
 
-            ret = ret.Replace("&", "&amp;");
-            ret = ret.Replace("<", "&lt;");
-            ret = ret.Replace(">", "&gt;");
-            ret = ret.Replace("\"", "&quot;");
-            ret = ret.Replace("'", "&apos;");
+            s = s.Replace("<", "&lt;");
 
-            return(ret);
+            s = s.Replace(">", "&gt;");
+
+            s = s.Replace("\"", "&quot;");
+
+            s = s.Replace("'", "&apos;");
+
+            return(s);
         }
 
         /// <summary>

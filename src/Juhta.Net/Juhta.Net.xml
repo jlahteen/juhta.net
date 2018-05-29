@@ -2464,7 +2464,7 @@
             <summary>
             Replaces all HTML special characters with their corresponding entities in this string.
             </summary>
-            <param name="s">Specifies the current string instance.</param>
+            <param name="s2">Specifies the current string instance.</param>
             <returns>Returns such copy of this string where all occurrences of HTML special characters have been
             replaced with their corresponding entities.</returns>
         </member>
@@ -2472,7 +2472,7 @@
             <summary>
             Replaces all XML special characters with their corresponding entities in this string.
             </summary>
-            <param name="s">Specifies the current string instance.</param>
+            <param name="s2">Specifies the current string instance.</param>
             <returns>Returns such copy of this string where all occurrences of XML special characters have been
             replaced with their corresponding entities.</returns>
         </member>
