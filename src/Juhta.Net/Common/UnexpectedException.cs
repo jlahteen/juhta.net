@@ -13,8 +13,8 @@ namespace Juhta.Net.Common
     /// <summary>
     /// This exception will be thrown when an unexpected error occurs.
     /// </summary>
-    /// <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-
-    /// sensitive functionality such as network communication or file I/O operations.</remarks>
+    /// <remarks>An error is considered as unexpected when it occurs in a code context that doesn't contain error-prone
+    /// functionality such as network communication or file I/O operations.</remarks>
     public class UnexpectedException : Exception
     {
         #region Public Constructors
