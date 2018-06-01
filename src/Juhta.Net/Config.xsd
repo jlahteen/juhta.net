@@ -246,7 +246,7 @@
       <xs:element name="constructorParams" type="constructorParamsType" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="common:serviceIdType" use="required"/>
-    <xs:attribute name="classId" type="common:shortClassIdType" use="required"/>
+    <xs:attribute name="class" type="common:shortClassIdType" use="required"/>
   </xs:complexType>
   
   <!-- Define shortParamType -->
