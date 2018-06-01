@@ -31,6 +31,24 @@ namespace Juhta.Net.Tests.Validators
 
         [TestMethod]
         [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidFilePath_EmptyDirectoryName_ShouldThrowValidationException()
+        {
+            FilePathValidator validator = new FilePathValidator();
+
+            validator.Validate(ToOSPath(@"C:\My Documents\\Shopping\MyDoc.docx"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidFilePath_EmptyFileName_ShouldThrowValidationException()
+        {
+            FilePathValidator validator = new FilePathValidator();
+
+            validator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDoc.docx\"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
         public void Validate_InvalidFilePath_FileNameEndsWithDot_ShouldThrowValidationException()
         {
             FilePathValidator validator = new FilePathValidator();

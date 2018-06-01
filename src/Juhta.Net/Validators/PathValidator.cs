@@ -56,7 +56,10 @@ namespace Juhta.Net.Validators
         {
             char[] invalidFileNameChars = Path.GetInvalidFileNameChars();
 
-            if (Char.IsWhiteSpace(value[value.Length - 1]) || value[value.Length - 1] == '.')
+            if (String.IsNullOrWhiteSpace(value))
+                return(false);
+
+            else if (Char.IsWhiteSpace(value[value.Length - 1]) || value[value.Length - 1] == '.')
                 return(false);
 
             for (int i = 0; i < value.Length; i++)

@@ -31,6 +31,24 @@ namespace Juhta.Net.Tests.Validators
 
         [TestMethod]
         [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidDirectoryPath_EmptyDirectoryName1_ShouldThrowValidationException()
+        {
+            DirectoryPathValidator validator = new DirectoryPathValidator();
+
+            validator.Validate(ToOSPath(@"C:\My Documents\Shopping\\MyDoc.docx"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidDirectoryPath_EmptyDirectoryName2_ShouldThrowValidationException()
+        {
+            DirectoryPathValidator validator = new DirectoryPathValidator();
+
+            validator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDoc.docx\"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
         public void Validate_InvalidDirectoryPath_IllegalCharacterInDirectoryName_ShouldThrowValidationException()
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
