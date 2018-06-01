@@ -167,6 +167,25 @@ namespace Juhta.Net.Tests.Common
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void NewInstance_InvalidValue_SeparateLibraryDirectory_Directory_ShouldThrowArgumentException()
+        {
+            ClassId classId;
+
+            try
+            {
+                classId = new ClassId(ToOSPath("Temp\\MyLibrary.dll#MyFirstClasses.Shared.MyClass"), ToOSPath("C:\\"));
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10024]"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void NewInstance_ValidValue_Directory_ClassNamespace_ShouldReturn()
         {
             ClassId classId;
@@ -342,6 +361,26 @@ namespace Juhta.Net.Tests.Common
             Assert.AreEqual<string>("MyClass", classId.FullClassName);
 
             Assert.AreEqual<string>(null, classId.ClassNamespace);
+
+            Assert.AreEqual<string>("MyClass", classId.ClassName);
+        }
+
+        [TestMethod]
+        public void NewInstance_ValidValue_SeparateLibraryDirectory_NoDirectory_ClassNamespace_ShouldReturn()
+        {
+            ClassId classId;
+
+            classId = new ClassId(ToOSPath("MyLibrary.dll#MyFirstClasses.Shared.Web.MyClass"), ToOSPath("C:\\WebApps\\Shared\\Bin"));
+
+            Assert.AreEqual<string>(ToOSPath("C:\\WebApps\\Shared\\Bin\\MyLibrary.dll"), classId.LibraryFilePath);
+
+            Assert.AreEqual<string>(ToOSPath("C:\\WebApps\\Shared\\Bin"), classId.LibraryDirectory);
+
+            Assert.AreEqual<string>("MyLibrary.dll", classId.LibraryFileName);
+
+            Assert.AreEqual<string>("MyFirstClasses.Shared.Web.MyClass", classId.FullClassName);
+
+            Assert.AreEqual<string>("MyFirstClasses.Shared.Web", classId.ClassNamespace);
 
             Assert.AreEqual<string>("MyClass", classId.ClassName);
         }

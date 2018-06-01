@@ -245,6 +245,14 @@
             </summary>
             <param name="classId">Specifies a class identifier as a string.</param>
         </member>
+        <member name="M:Juhta.Net.Common.ClassId.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="classId">Specifies a class identifier as a string.</param>
+            <param name="libraryDirectory">Specifies a library directory. Can be null. If non-null,
+            <paramref name="classId"/> must not contain a library directory part.</param>
+        </member>
         <member name="P:Juhta.Net.Common.ClassId.ClassName">
             <summary>
             Gets the name of the class associated with this <see cref="T:Juhta.Net.Common.ClassId"/> instance.
@@ -2464,7 +2472,7 @@
             <summary>
             Replaces all HTML special characters with their corresponding entities in this string.
             </summary>
-            <param name="s2">Specifies the current string instance.</param>
+            <param name="s">Specifies the current string instance.</param>
             <returns>Returns such copy of this string where all occurrences of HTML special characters have been
             replaced with their corresponding entities.</returns>
         </member>
@@ -2472,7 +2480,7 @@
             <summary>
             Replaces all XML special characters with their corresponding entities in this string.
             </summary>
-            <param name="s2">Specifies the current string instance.</param>
+            <param name="s">Specifies the current string instance.</param>
             <returns>Returns such copy of this string where all occurrences of XML special characters have been
             replaced with their corresponding entities.</returns>
         </member>
@@ -3828,7 +3836,8 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error024">
             <summary>
-            This message is free to be redefined.
+            Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library
+            directory part.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error025">

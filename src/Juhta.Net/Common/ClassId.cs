@@ -44,7 +44,16 @@ namespace Juhta.Net.Common
         /// Initializes a new instance.
         /// </summary>
         /// <param name="classId">Specifies a class identifier as a string.</param>
-        public ClassId(string classId)
+        public ClassId(string classId) : this(classId, null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="classId">Specifies a class identifier as a string.</param>
+        /// <param name="libraryDirectory">Specifies a library directory. Can be null. If non-null,
+        /// <paramref name="classId"/> must not contain a library directory part.</param>
+        public ClassId(string classId, string libraryDirectory)
         {
             string originalValue, filePath, fragment;
             int indexOf;
@@ -77,6 +86,16 @@ namespace Juhta.Net.Common
             {
                 // Parse the file path
                 filePath = classId.Substring(0, indexOf);
+
+                // Add the library directory to the file path if necessary
+
+                if (libraryDirectory != null)
+                {
+                    if (!String.IsNullOrEmpty(Path.GetDirectoryName(filePath)))
+                        throw new ArgumentException(LibraryMessages.Error024.FormatMessage(libraryDirectory, originalValue));
+
+                    filePath = libraryDirectory + Path.DirectorySeparatorChar + filePath;
+                }
 
                 // Validate the file path
                 filePathValidator.Validate(filePath);

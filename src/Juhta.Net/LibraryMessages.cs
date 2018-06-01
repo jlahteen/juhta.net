@@ -157,9 +157,10 @@ namespace Juhta.Net
         internal static readonly WarningMessage Warning023 = MessageFactory.CreateWarningMessage("Library '{0}' has already been initialized. This library exists at least twice under the libraries XML node in the root library configuration. Please remove duplicate occurrences.");
 
         /// <summary>
-        /// This message is free to be redefined.
+        /// Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library
+        /// directory part.
         /// </summary>
-        internal static readonly ErrorMessage Error024 = MessageFactory.CreateErrorMessage("<undefined>");
+        internal static readonly ErrorMessage Error024 = MessageFactory.CreateErrorMessage("Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library directory part.");
 
         /// <summary>
         /// This message is free to be redefined.
