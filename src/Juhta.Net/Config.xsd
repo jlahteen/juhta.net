@@ -190,8 +190,7 @@
   
   <!-- Define libraryType -->
   <xs:complexType name="libraryType">
-    <xs:attribute name="fileName" type="common:libraryFileNameType" use="required"/>
-    <xs:attribute name="handleClass" type="common:classNameType" use="optional"/>
+    <xs:attribute name="handleClass" type="common:shortClassIdType" use="required"/>
     <xs:attribute name="configFileName" type="common:configFileNameType" use="optional"/>
   </xs:complexType>
   

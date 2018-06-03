@@ -126,16 +126,14 @@ namespace Juhta.Net.LibraryManagement
         /// <returns>Returns the created <see cref="ILibraryHandle"/> instance.</returns>
         internal static ILibraryHandle CreateInstance(XmlNode libraryNode)
         {
-            string libraryFileName, libraryHandleClass;
+            ClassId libraryHandleClassId;
 
-            libraryFileName = libraryNode.GetAttribute("fileName");
+            libraryHandleClassId = new ClassId(libraryNode.GetAttribute("handleClass"), Application.Instance.BinDirectory);
 
-            if (!File.Exists(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + libraryFileName))
-                throw new FileNotFoundException(LibraryMessages.Error022.FormatMessage(libraryFileName, Application.Instance.BinDirectory));
+            if (!File.Exists(libraryHandleClassId.LibraryFilePath))
+                throw new FileNotFoundException(LibraryMessages.Error022.FormatMessage(libraryHandleClassId.LibraryFileName, libraryHandleClassId.LibraryDirectory));
 
-            libraryHandleClass = libraryNode.GetAttribute("handleClass", ".LibraryHandle");
-
-            return(ObjectFactory.CreateInstance<ILibraryHandle>(Application.Instance.BinDirectory + Path.DirectorySeparatorChar + libraryFileName, libraryHandleClass));
+            return(ObjectFactory.CreateInstance<ILibraryHandle>(libraryHandleClassId));
         }
 
         #endregion
