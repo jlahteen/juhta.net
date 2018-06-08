@@ -1140,38 +1140,36 @@ namespace Juhta.Net.Tests
         }
 
         [TestMethod]
-        public void Start_InitializableLibrary_LibraryHandleClassNamespaceMissing_ShouldReturn()
+        [ExpectedException(typeof(InvalidConfigFileException))]
+        public void Start_InvalidConfig_InvalidHandleClass_ShouldThrowInvalidConfigFileException()
         {
-            LibraryConfig libraryConfig = new LibraryConfig();
+            SetConfigFiles("Root", "InvalidConfig_InvalidHandleClass_");
 
-            SetConfigFiles("Root", "InitializableLibrary_LibraryHandleClassNamespaceMissing_");
+            try
+            {
+                Application.StartInstance(null, s_configDirectory);
+            }
 
-            Application.StartInstance(null, s_configDirectory);
+            catch
+            {
+                AssertDefaultLogFileContent(
+                    "ERROR event",
+                    "[Juhta.Net.Error10006] An error occurred when the application",
+                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Error10002] XML configuration file",
+                    "does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.dll'.",
+                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                    "System.Xml.Schema.XmlSchemaValidationException: The 'handleClass' attribute is invalid - The value '.Initializable.InitializableLibrary' is invalid according to its datatype 'http://schemas.juhta.net/common-v1.xsd:shortClassIdType' - The Pattern constraint failed."
+                );
 
-            Assert.AreEqual<int>(89473537, libraryConfig.GetIntSetting());
-
-            Assert.AreEqual<string>("This is the default value for the StringSetting.", libraryConfig.GetStringSetting());
-        }
-
-        [TestMethod]
-        public void Start_InitializableLibrary_NoLibraryHandleClassSpecified_ShouldReturn()
-        {
-            LibraryConfig libraryConfig = new LibraryConfig();
-
-            SetConfigFiles("Root", "InitializableLibrary_NoLibraryHandleClassSpecified_");
-
-            Application.StartInstance(null, s_configDirectory);
-
-            Assert.AreEqual<int>(121213, libraryConfig.GetIntSetting());
-
-            Assert.AreEqual<string>("This is the default value for the StringSetting set by the default LibraryHandle class.", libraryConfig.GetStringSetting());
+                throw;
+            }
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidConfigFileException))]
-        public void Start_InvalidConfig_ShouldThrowException()
+        public void Start_InvalidConfig_UndefinedElement_ShouldThrowInvalidConfigFileException()
         {
-            SetConfigFiles("Root", "InvalidConfig_", ".");
+            SetConfigFiles("Root", "InvalidConfig_UndefinedElement_", ".");
 
             try
             {
