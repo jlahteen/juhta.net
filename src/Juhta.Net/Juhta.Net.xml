@@ -511,7 +511,7 @@
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
             <param name="assembly">Specifies an <see cref="T:System.Reflection.Assembly"/> object.</param>
-            <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+            <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
             root namespace for the class will be taken from the file name part of the <see cref="P:System.Reflection.Assembly.Location"/>
             property.</param>
             <returns>Returns the created instance casted to the specified type.</returns>
@@ -523,7 +523,7 @@
             <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
             type.</typeparam>
             <param name="assembly">Specifies an <see cref="T:System.Reflection.Assembly"/> object.</param>
-            <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+            <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
             root namespace for the class will be taken from the file name part of the <see cref="P:System.Reflection.Assembly.Location"/>
             property.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
@@ -558,7 +558,7 @@
             type.</typeparam>
             <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
             absolute.</param>
-            <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+            <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
             root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
             <returns>Returns the created instance casted to the requested type.</returns>
         </member>
@@ -570,7 +570,7 @@
             type.</typeparam>
             <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
             absolute.</param>
-            <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+            <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
             root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
             <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
             constructor. Can be null causing the default constructor to be called.</param>

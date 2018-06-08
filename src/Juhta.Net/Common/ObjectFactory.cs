@@ -27,7 +27,7 @@ namespace Juhta.Net.Common
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
         /// <param name="assembly">Specifies an <see cref="Assembly"/> object.</param>
-        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
         /// root namespace for the class will be taken from the file name part of the <see cref="Assembly.Location"/>
         /// property.</param>
         /// <returns>Returns the created instance casted to the specified type.</returns>
@@ -42,7 +42,7 @@ namespace Juhta.Net.Common
         /// <typeparam name="T">Specifies a type for the return value. An instance to create must be castable to this
         /// type.</typeparam>
         /// <param name="assembly">Specifies an <see cref="Assembly"/> object.</param>
-        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
         /// root namespace for the class will be taken from the file name part of the <see cref="Assembly.Location"/>
         /// property.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
@@ -52,8 +52,8 @@ namespace Juhta.Net.Common
         {
             object @object;
 
-            if (className[0] == '.')
-                className = Path.GetFileNameWithoutExtension(assembly.Location) + className;
+            if (className.StartsWith("~."))
+                className = Path.GetFileNameWithoutExtension(assembly.Location) + className.Substring(1);
 
             @object = assembly.CreateInstance(className, false, BindingFlags.CreateInstance, null, parameters, null, null);
 
@@ -96,7 +96,7 @@ namespace Juhta.Net.Common
         /// type.</typeparam>
         /// <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
         /// absolute.</param>
-        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
         /// root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
         /// <returns>Returns the created instance casted to the requested type.</returns>
         public static T CreateInstance<T>(string libraryFile, string className)
@@ -111,15 +111,15 @@ namespace Juhta.Net.Common
         /// type.</typeparam>
         /// <param name="libraryFile">Specifies a library file. The value can have a directory part, either relative or
         /// absolute.</param>
-        /// <param name="className">Specifies a class name. The value can begin with a '.' character in which case the
+        /// <param name="className">Specifies a class name. The value can begin with a '~.' prefix in which case the
         /// root namespace for the class will be taken from the file name part of <paramref name="libraryFile"/>.</param>
         /// <param name="parameters">Specifies an array of parameters that will be passed to the appropriate
         /// constructor. Can be null causing the default constructor to be called.</param>
         /// <returns>Returns the created instance casted to the requested type.</returns>
         public static T CreateInstance<T>(string libraryFile, string className, params object[] parameters)
         {
-            if (className[0] == '.')
-                className = Path.GetFileNameWithoutExtension(libraryFile) + className;
+            if (className.StartsWith("~."))
+                className = Path.GetFileNameWithoutExtension(libraryFile) + className.Substring(1);
 
             return(CreateInstance<T>(Assembly.LoadFrom(libraryFile), className, parameters));
         }
