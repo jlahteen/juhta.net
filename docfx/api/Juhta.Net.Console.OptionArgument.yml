@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/OptionArgument.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: OptionArgument
     path: ../src/Juhta.Net/Console/OptionArgument.cs
@@ -37,6 +37,8 @@ items:
   - Juhta.Net.Console.NameValueArgument
   inheritedMembers:
   - Juhta.Net.Console.NameValueArgument.Name
+  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{{T}})
   - Juhta.Net.Console.CommandLineArgument.Consumed
   - Juhta.Net.Console.CommandLineArgument.Value
   - System.Object.Equals(System.Object)
@@ -66,7 +68,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/OptionArgument.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Console/OptionArgument.cs
@@ -126,6 +128,96 @@ references:
   name: Name
   nameWithType: NameValueArgument.Name
   fullName: Juhta.Net.Console.NameValueArgument.Name
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: GetValueAs<T>()
+  nameWithType: CommandLineArgument.GetValueAs<T>()
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>()
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)()
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)()
+  name.vb: GetValueAs(Of T)()
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{{T}})
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  parent: Juhta.Net.Console.CommandLineArgument
+  definition: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  name: GetValueAs<T>(IValidator<T>)
+  nameWithType: CommandLineArgument.GetValueAs<T>(IValidator<T>)
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validators.IValidator<T>)
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)(IValidator(Of T))
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validators.IValidator(Of T))
+  name.vb: GetValueAs(Of T)(IValidator(Of T))
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Juhta.Net.Console.CommandLineArgument.Consumed
   commentId: P:Juhta.Net.Console.CommandLineArgument.Consumed
   parent: Juhta.Net.Console.CommandLineArgument
@@ -425,6 +517,63 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  isExternal: false
+  name: GetValueAs<T>(IValidator<T>)
+  nameWithType: CommandLineArgument.GetValueAs<T>(IValidator<T>)
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validators.IValidator<T>)
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)(IValidator(Of T))
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validators.IValidator(Of T))
+  name.vb: GetValueAs(Of T)(IValidator(Of T))
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Juhta.Net.Console.OptionArgument.#ctor*
   commentId: Overload:Juhta.Net.Console.OptionArgument.#ctor
   isExternal: false

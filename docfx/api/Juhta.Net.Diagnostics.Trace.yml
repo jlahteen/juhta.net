@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Trace
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DecreaseRelativeIndent
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Flush
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IncreaseRelativeIndent
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Write
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -237,7 +237,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Write
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteBlockStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -384,7 +384,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -455,7 +455,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteConstructorStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteException
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -529,7 +529,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -563,7 +563,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -600,7 +600,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -639,7 +639,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -680,7 +680,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteGetPropertyStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -719,7 +719,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -758,7 +758,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLabeledMessage
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -802,7 +802,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -836,7 +836,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -873,7 +873,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteLine
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -915,7 +915,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -949,7 +949,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -986,7 +986,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1025,7 +1025,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1066,7 +1066,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteMethodStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1105,7 +1105,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteObjectGraph
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1178,7 +1178,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1215,7 +1215,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteOperationStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1252,7 +1252,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1286,7 +1286,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyEnd
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1325,7 +1325,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1364,7 +1364,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: WriteSetPropertyStart
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1405,7 +1405,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AbsoluteIndent
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1444,7 +1444,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IsTracingOn
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1483,7 +1483,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: RelativeIndent
     path: ../src/Juhta.Net.Diagnostics/Trace.cs
@@ -1522,7 +1522,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/Trace.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: TraceDirectory
     path: ../src/Juhta.Net.Diagnostics/Trace.cs

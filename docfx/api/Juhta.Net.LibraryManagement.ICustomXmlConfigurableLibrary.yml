@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ICustomXmlConfigurableLibrary
     path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetConfigSchemas
     path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: InitializeLibrary
     path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs

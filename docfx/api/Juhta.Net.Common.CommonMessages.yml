@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CommonMessages
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error001
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error002
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error003
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error004
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error005
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error006
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error007
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error008
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error009
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error010
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -447,7 +447,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error011
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -484,7 +484,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error012
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -521,7 +521,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error013
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -558,7 +558,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error014
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -595,7 +595,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error015
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -632,7 +632,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error016
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -669,7 +669,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error017
     path: ../src/Juhta.Net/Common/CommonMessages.cs
@@ -706,7 +706,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/CommonMessages.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Error018
     path: ../src/Juhta.Net/Common/CommonMessages.cs

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DynamicLibraryContext
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Dispose
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DynamicLibrary
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryState
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs

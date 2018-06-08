@@ -6,6 +6,7 @@ items:
   parent: Juhta.Net.Common
   children:
   - Juhta.Net.Common.ClassId.#ctor(System.String)
+  - Juhta.Net.Common.ClassId.#ctor(System.String,System.String)
   - Juhta.Net.Common.ClassId.ClassName
   - Juhta.Net.Common.ClassId.ClassNamespace
   - Juhta.Net.Common.ClassId.FullClassName
@@ -87,6 +88,48 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Juhta.Net.Common.ClassId.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.Common.ClassId.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Juhta.Net.Common.ClassId
+  langs:
+  - csharp
+  - vb
+  name: ClassId(String, String)
+  nameWithType: ClassId.ClassId(String, String)
+  fullName: Juhta.Net.Common.ClassId.ClassId(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Common/ClassId.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Common/ClassId.cs
+    startLine: 55
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ClassId(string classId, string libraryDirectory)
+    parameters:
+    - id: classId
+      type: System.String
+      description: Specifies a class identifier as a string.
+    - id: libraryDirectory
+      type: System.String
+      description: >-
+        Specifies a library directory. Can be null. If non-null,
+
+        <code data-dev-comment-type="paramref" class="paramref">classId</code> must not contain a library directory part.
+    content.vb: Public Sub New(classId As String, libraryDirectory As String)
+  overload: Juhta.Net.Common.ClassId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Juhta.Net.Common.ClassId.ClassName
   commentId: P:Juhta.Net.Common.ClassId.ClassName
   id: ClassName
@@ -105,7 +148,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: ClassName
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 140
+    startLine: 159
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -142,7 +185,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: ClassNamespace
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 148
+    startLine: 167
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -179,7 +222,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: FullClassName
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 156
+    startLine: 175
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -216,7 +259,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryDirectory
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 164
+    startLine: 183
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -253,7 +296,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryFileName
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 172
+    startLine: 191
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -290,7 +333,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryFilePath
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 180
+    startLine: 199
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common

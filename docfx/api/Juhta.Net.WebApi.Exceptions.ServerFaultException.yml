@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ServerFaultException
     path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net.WebApi/Exceptions/ServerFaultException.cs

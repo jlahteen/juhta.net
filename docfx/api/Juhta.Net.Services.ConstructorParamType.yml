@@ -19,7 +19,7 @@ items:
   - Juhta.Net.Services.ConstructorParamType.Int64
   - Juhta.Net.Services.ConstructorParamType.Long
   - Juhta.Net.Services.ConstructorParamType.SByte
-  - Juhta.Net.Services.ConstructorParamType.ServiceRef
+  - Juhta.Net.Services.ConstructorParamType.Service
   - Juhta.Net.Services.ConstructorParamType.Short
   - Juhta.Net.Services.ConstructorParamType.Single
   - Juhta.Net.Services.ConstructorParamType.String
@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ConstructorParamType
     path: ../src/Juhta.Net/Services/Types.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Boolean
     path: ../src/Juhta.Net/Services/Types.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Byte
     path: ../src/Juhta.Net/Services/Types.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Char
     path: ../src/Juhta.Net/Services/Types.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Date
     path: ../src/Juhta.Net/Services/Types.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DateTime
     path: ../src/Juhta.Net/Services/Types.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Decimal
     path: ../src/Juhta.Net/Services/Types.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Double
     path: ../src/Juhta.Net/Services/Types.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Float
     path: ../src/Juhta.Net/Services/Types.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Int
     path: ../src/Juhta.Net/Services/Types.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Int16
     path: ../src/Juhta.Net/Services/Types.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Int32
     path: ../src/Juhta.Net/Services/Types.cs
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Int64
     path: ../src/Juhta.Net/Services/Types.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Long
     path: ../src/Juhta.Net/Services/Types.cs
@@ -516,7 +516,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SByte
     path: ../src/Juhta.Net/Services/Types.cs
@@ -536,32 +536,32 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Juhta.Net.Services.ConstructorParamType.ServiceRef
-  commentId: F:Juhta.Net.Services.ConstructorParamType.ServiceRef
-  id: ServiceRef
+- uid: Juhta.Net.Services.ConstructorParamType.Service
+  commentId: F:Juhta.Net.Services.ConstructorParamType.Service
+  id: Service
   parent: Juhta.Net.Services.ConstructorParamType
   langs:
   - csharp
   - vb
-  name: ServiceRef
-  nameWithType: ConstructorParamType.ServiceRef
-  fullName: Juhta.Net.Services.ConstructorParamType.ServiceRef
+  name: Service
+  nameWithType: ConstructorParamType.Service
+  fullName: Juhta.Net.Services.ConstructorParamType.Service
   type: Field
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
-    id: ServiceRef
+    id: Service
     path: ../src/Juhta.Net/Services/Types.cs
     startLine: 90
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Services
-  summary: "\nSpecifies the service reference type.\n"
+  summary: "\nSpecifies the <xref href=\"Juhta.Net.Services.ConstructorParamType.Service\" data-throw-if-not-resolved=\"false\"></xref> type.\n"
   example: []
   syntax:
-    content: ServiceRef = 14
+    content: Service = 14
     return:
       type: Juhta.Net.Services.ConstructorParamType
   modifiers.csharp:
@@ -584,7 +584,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Short
     path: ../src/Juhta.Net/Services/Types.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Single
     path: ../src/Juhta.Net/Services/Types.cs
@@ -652,7 +652,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: String
     path: ../src/Juhta.Net/Services/Types.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Time
     path: ../src/Juhta.Net/Services/Types.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: TimeSpan
     path: ../src/Juhta.Net/Services/Types.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UInt
     path: ../src/Juhta.Net/Services/Types.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UInt16
     path: ../src/Juhta.Net/Services/Types.cs
@@ -822,7 +822,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UInt32
     path: ../src/Juhta.Net/Services/Types.cs
@@ -856,7 +856,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UInt64
     path: ../src/Juhta.Net/Services/Types.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ULong
     path: ../src/Juhta.Net/Services/Types.cs
@@ -924,7 +924,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Types.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UShort
     path: ../src/Juhta.Net/Services/Types.cs
@@ -1016,6 +1016,8 @@ references:
   fullName: System.Int64
 - uid: System.SByte
   commentId: T:System.SByte
+- uid: Juhta.Net.Services.ConstructorParamType.Service
+  commentId: F:Juhta.Net.Services.ConstructorParamType.Service
 - uid: System.String
   commentId: T:System.String
   parent: System

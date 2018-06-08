@@ -5,13 +5,12 @@ items:
   id: ObjectFactory
   parent: Juhta.Net.Common
   children:
-  - Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)
-  - Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])
+  - Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId)
+  - Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId,System.Object[])
   - Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String)
   - Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Reflection.Assembly,System.String,System.Object[])
   - Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)
   - Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String,System.Object[])
-  - Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)
   langs:
   - csharp
   - vb
@@ -22,11 +21,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ObjectFactory
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 21
+    startLine: 19
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -66,11 +65,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 35
+    startLine: 33
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -81,15 +80,15 @@ items:
     parameters:
     - id: assembly
       type: System.Reflection.Assembly
-      description: Specifies an Assembly object.
+      description: Specifies an <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> object.
     - id: className
       type: System.String
       description: >-
-        Specifies an assembly class name. The value can begin with a &apos;.&apos; character in which
+        Specifies a class name. The value can begin with a &apos;~.&apos; prefix in which case the
 
-        case the root namespace for the class will be taken from the file name part of the Assembly object&apos;s
+        root namespace for the class will be taken from the file name part of the <xref href="System.Reflection.Assembly.Location" data-throw-if-not-resolved="false"></xref>
 
-        Location property.
+        property.
     typeParameters:
     - id: T
       description: >-
@@ -98,7 +97,7 @@ items:
         type.
     return:
       type: '{T}'
-      description: Returns the created instance casted to the requested type.
+      description: Returns the created instance casted to the specified type.
     content.vb: Public Shared Function CreateInstance(Of T)(assembly As Assembly, className As String) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
   nameWithType.vb: ObjectFactory.CreateInstance(Of T)(Assembly, String)
@@ -124,11 +123,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 52
+    startLine: 50
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -139,15 +138,15 @@ items:
     parameters:
     - id: assembly
       type: System.Reflection.Assembly
-      description: Specifies an Assembly object.
+      description: Specifies an <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> object.
     - id: className
       type: System.String
       description: >-
-        Specifies an assembly class name. The value can begin with a &apos;.&apos; character in which
+        Specifies a class name. The value can begin with a &apos;~.&apos; prefix in which case the
 
-        case the root namespace for the class will be taken from the file name part of the Assembly object&apos;s
+        root namespace for the class will be taken from the file name part of the <xref href="System.Reflection.Assembly.Location" data-throw-if-not-resolved="false"></xref>
 
-        Location property.
+        property.
     - id: parameters
       type: System.Object[]
       description: >-
@@ -162,7 +161,7 @@ items:
         type.
     return:
       type: '{T}'
-      description: Returns the created instance casted to the requested type.
+      description: Returns the created instance casted to the specified type.
     content.vb: Public Shared Function CreateInstance(Of T)(assembly As Assembly, className As String, ParamArray parameters As Object()) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
   nameWithType.vb: ObjectFactory.CreateInstance(Of T)(Assembly, String, Object())
@@ -174,36 +173,36 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(System.Reflection.Assembly, System.String, System.Object())
   name.vb: CreateInstance(Of T)(Assembly, String, Object())
-- uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)
-  commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)
-  id: CreateInstance``1(Juhta.Net.Common.AssemblyClassUri)
+- uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId)
+  commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId)
+  id: CreateInstance``1(Juhta.Net.Common.ClassId)
   parent: Juhta.Net.Common.ObjectFactory
   langs:
   - csharp
   - vb
-  name: CreateInstance<T>(AssemblyClassUri)
-  nameWithType: ObjectFactory.CreateInstance<T>(AssemblyClassUri)
-  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance<T>(Juhta.Net.Common.AssemblyClassUri)
+  name: CreateInstance<T>(ClassId)
+  nameWithType: ObjectFactory.CreateInstance<T>(ClassId)
+  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance<T>(Juhta.Net.Common.ClassId)
   type: Method
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 74
+    startLine: 72
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nCreates an instance of a specified class by using the default constructor.\n"
   example: []
   syntax:
-    content: public static T CreateInstance<T>(AssemblyClassUri assemblyClassUri)
+    content: public static T CreateInstance<T>(ClassId classId)
     parameters:
-    - id: assemblyClassUri
-      type: Juhta.Net.Common.AssemblyClassUri
-      description: Specifies an AssemblyClassUri object.
+    - id: classId
+      type: Juhta.Net.Common.ClassId
+      description: Specifies a <xref href="Juhta.Net.Common.ClassId" data-throw-if-not-resolved="false"></xref> object.
     typeParameters:
     - id: T
       description: >-
@@ -212,52 +211,48 @@ items:
         type.
     return:
       type: '{T}'
-      description: Returns the created instance casted to the requested type.
-    content.vb: Public Shared Function CreateInstance(Of T)(assemblyClassUri As AssemblyClassUri) As T
+      description: Returns the created instance casted to the specified type.
+    content.vb: Public Shared Function CreateInstance(Of T)(classId As ClassId) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
-  nameWithType.vb: ObjectFactory.CreateInstance(Of T)(AssemblyClassUri)
+  nameWithType.vb: ObjectFactory.CreateInstance(Of T)(ClassId)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(Juhta.Net.Common.AssemblyClassUri)
-  name.vb: CreateInstance(Of T)(AssemblyClassUri)
-- uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])
-  commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])
-  id: CreateInstance``1(Juhta.Net.Common.AssemblyClassUri,System.Object[])
+  fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(Juhta.Net.Common.ClassId)
+  name.vb: CreateInstance(Of T)(ClassId)
+- uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId,System.Object[])
+  commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(Juhta.Net.Common.ClassId,System.Object[])
+  id: CreateInstance``1(Juhta.Net.Common.ClassId,System.Object[])
   parent: Juhta.Net.Common.ObjectFactory
   langs:
   - csharp
   - vb
-  name: CreateInstance<T>(AssemblyClassUri, Object[])
-  nameWithType: ObjectFactory.CreateInstance<T>(AssemblyClassUri, Object[])
-  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance<T>(Juhta.Net.Common.AssemblyClassUri, System.Object[])
+  name: CreateInstance<T>(ClassId, Object[])
+  nameWithType: ObjectFactory.CreateInstance<T>(ClassId, Object[])
+  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance<T>(Juhta.Net.Common.ClassId, System.Object[])
   type: Method
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 90
+    startLine: 86
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nCreates an instance of a specified class.\n"
-  remarks: >-
-    An exception will be thrown if the assembly referenced by <code data-dev-comment-type="paramref" class="paramref">assemblyClassUri</code> has
-
-    not been downloaded to the local machine.
   example: []
   syntax:
-    content: public static T CreateInstance<T>(AssemblyClassUri assemblyClassUri, params object[] parameters)
+    content: public static T CreateInstance<T>(ClassId classId, params object[] parameters)
     parameters:
-    - id: assemblyClassUri
-      type: Juhta.Net.Common.AssemblyClassUri
-      description: Specifies an AssemblyClassUri object.
+    - id: classId
+      type: Juhta.Net.Common.ClassId
+      description: Specifies a <xref href="Juhta.Net.Common.ClassId" data-throw-if-not-resolved="false"></xref> object.
     - id: parameters
       type: System.Object[]
       description: >-
@@ -272,18 +267,18 @@ items:
         type.
     return:
       type: '{T}'
-      description: Returns the created instance casted to the requested type.
-    content.vb: Public Shared Function CreateInstance(Of T)(assemblyClassUri As AssemblyClassUri, ParamArray parameters As Object()) As T
+      description: Returns the created instance casted to the specified type.
+    content.vb: Public Shared Function CreateInstance(Of T)(classId As ClassId, ParamArray parameters As Object()) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
-  nameWithType.vb: ObjectFactory.CreateInstance(Of T)(AssemblyClassUri, Object())
+  nameWithType.vb: ObjectFactory.CreateInstance(Of T)(ClassId, Object())
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(Juhta.Net.Common.AssemblyClassUri, System.Object())
-  name.vb: CreateInstance(Of T)(AssemblyClassUri, Object())
+  fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(Juhta.Net.Common.ClassId, System.Object())
+  name.vb: CreateInstance(Of T)(ClassId, Object())
 - uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)
   commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.String,System.String)
   id: CreateInstance``1(System.String,System.String)
@@ -298,28 +293,31 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 107
+    startLine: 101
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nCreates an instance of a specified class by using the default constructor.\n"
   example: []
   syntax:
-    content: public static T CreateInstance<T>(string assemblyFile, string className)
+    content: public static T CreateInstance<T>(string libraryFile, string className)
     parameters:
-    - id: assemblyFile
+    - id: libraryFile
       type: System.String
-      description: Specifies an assembly file.
+      description: >-
+        Specifies a library file. The value can have a directory part, either relative or
+
+        absolute.
     - id: className
       type: System.String
       description: >-
-        Specifies an assembly class. The value can begin with a &apos;.&apos; character in which case
+        Specifies a class name. The value can begin with a &apos;~.&apos; prefix in which case the
 
-        the root namespace for the class will be taken from the file name of the assembly.
+        root namespace for the class will be taken from the file name part of <code data-dev-comment-type="paramref" class="paramref">libraryFile</code>.
     typeParameters:
     - id: T
       description: >-
@@ -329,7 +327,7 @@ items:
     return:
       type: '{T}'
       description: Returns the created instance casted to the requested type.
-    content.vb: Public Shared Function CreateInstance(Of T)(assemblyFile As String, className As String) As T
+    content.vb: Public Shared Function CreateInstance(Of T)(libraryFile As String, className As String) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
   nameWithType.vb: ObjectFactory.CreateInstance(Of T)(String, String)
   modifiers.csharp:
@@ -354,28 +352,31 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 123
+    startLine: 118
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nCreates an instance of a specified class.\n"
   example: []
   syntax:
-    content: public static T CreateInstance<T>(string assemblyFile, string className, params object[] parameters)
+    content: public static T CreateInstance<T>(string libraryFile, string className, params object[] parameters)
     parameters:
-    - id: assemblyFile
+    - id: libraryFile
       type: System.String
-      description: Specifies an assembly file.
+      description: >-
+        Specifies a library file. The value can have a directory part, either relative or
+
+        absolute.
     - id: className
       type: System.String
       description: >-
-        Specifies an assembly class. The value can begin with a &apos;.&apos; character in which case
+        Specifies a class name. The value can begin with a &apos;~.&apos; prefix in which case the
 
-        the root namespace for the class will be taken from the file name of the assembly.
+        root namespace for the class will be taken from the file name part of <code data-dev-comment-type="paramref" class="paramref">libraryFile</code>.
     - id: parameters
       type: System.Object[]
       description: >-
@@ -391,7 +392,7 @@ items:
     return:
       type: '{T}'
       description: Returns the created instance casted to the requested type.
-    content.vb: Public Shared Function CreateInstance(Of T)(assemblyFile As String, className As String, ParamArray parameters As Object()) As T
+    content.vb: Public Shared Function CreateInstance(Of T)(libraryFile As String, className As String, ParamArray parameters As Object()) As T
   overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
   nameWithType.vb: ObjectFactory.CreateInstance(Of T)(String, String, Object())
   modifiers.csharp:
@@ -402,56 +403,6 @@ items:
   - Shared
   fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(System.String, System.String, System.Object())
   name.vb: CreateInstance(Of T)(String, String, Object())
-- uid: Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)
-  commentId: M:Juhta.Net.Common.ObjectFactory.CreateInstance``1(System.Xml.XmlNode)
-  id: CreateInstance``1(System.Xml.XmlNode)
-  parent: Juhta.Net.Common.ObjectFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateInstance<T>(XmlNode)
-  nameWithType: ObjectFactory.CreateInstance<T>(XmlNode)
-  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance<T>(System.Xml.XmlNode)
-  type: Method
-  source:
-    remote:
-      path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: Dev
-      repo: https://github.com/jlahteen/juhta.net
-    id: CreateInstance
-    path: ../src/Juhta.Net/Common/ObjectFactory.cs
-    startLine: 138
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Common
-  summary: "\nCreates an instance based on a specified object XML node.\n"
-  example: []
-  syntax:
-    content: public static T CreateInstance<T>(XmlNode objectNode)
-    parameters:
-    - id: objectNode
-      type: System.Xml.XmlNode
-      description: Specifies an object XML node.
-    typeParameters:
-    - id: T
-      description: >-
-        Specifies a type for the return value. An instance to create must be castable to this
-
-        type.
-    return:
-      type: '{T}'
-      description: Returns the created instance casted to the requested type.
-    content.vb: Public Shared Function CreateInstance(Of T)(objectNode As XmlNode) As T
-  overload: Juhta.Net.Common.ObjectFactory.CreateInstance*
-  nameWithType.vb: ObjectFactory.CreateInstance(Of T)(XmlNode)
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Juhta.Net.Common.ObjectFactory.CreateInstance(Of T)(System.Xml.XmlNode)
-  name.vb: CreateInstance(Of T)(XmlNode)
 references:
 - uid: Juhta.Net.Common
   commentId: N:Juhta.Net.Common
@@ -751,12 +702,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Common.ObjectFactory.CreateInstance*
-  commentId: Overload:Juhta.Net.Common.ObjectFactory.CreateInstance
-  isExternal: false
-  name: CreateInstance
-  nameWithType: ObjectFactory.CreateInstance
-  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance
 - uid: System.Reflection.Assembly
   commentId: T:System.Reflection.Assembly
   parent: System.Reflection
@@ -764,6 +709,14 @@ references:
   name: Assembly
   nameWithType: Assembly
   fullName: System.Reflection.Assembly
+- uid: System.Reflection.Assembly.Location
+  commentId: P:System.Reflection.Assembly.Location
+- uid: Juhta.Net.Common.ObjectFactory.CreateInstance*
+  commentId: Overload:Juhta.Net.Common.ObjectFactory.CreateInstance
+  isExternal: false
+  name: CreateInstance
+  nameWithType: ObjectFactory.CreateInstance
+  fullName: Juhta.Net.Common.ObjectFactory.CreateInstance
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -813,23 +766,10 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Juhta.Net.Common.AssemblyClassUri
-  commentId: T:Juhta.Net.Common.AssemblyClassUri
+- uid: Juhta.Net.Common.ClassId
+  commentId: T:Juhta.Net.Common.ClassId
   parent: Juhta.Net.Common
   isExternal: false
-  name: AssemblyClassUri
-  nameWithType: AssemblyClassUri
-  fullName: Juhta.Net.Common.AssemblyClassUri
-- uid: System.Xml.XmlNode
-  commentId: T:System.Xml.XmlNode
-  parent: System.Xml
-  isExternal: true
-  name: XmlNode
-  nameWithType: XmlNode
-  fullName: System.Xml.XmlNode
-- uid: System.Xml
-  commentId: N:System.Xml
-  isExternal: false
-  name: System.Xml
-  nameWithType: System.Xml
-  fullName: System.Xml
+  name: ClassId
+  nameWithType: ClassId
+  fullName: Juhta.Net.Common.ClassId

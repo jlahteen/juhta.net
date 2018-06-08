@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Application
     path: ../src/Juhta.Net/Application.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Application.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Application.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Application.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Close
     path: ../src/Juhta.Net/Application.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CloseInstance
     path: ../src/Juhta.Net/Application.cs
@@ -272,7 +272,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetDynamicLibraryContext
     path: ../src/Juhta.Net/Application.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Start
     path: ../src/Juhta.Net/Application.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: StartInstance
     path: ../src/Juhta.Net/Application.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: StartInstance
     path: ../src/Juhta.Net/Application.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: StartInstance
     path: ../src/Juhta.Net/Application.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: BinDirectory
     path: ../src/Juhta.Net/Application.cs
@@ -515,7 +515,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ConfigDirectory
     path: ../src/Juhta.Net/Application.cs
@@ -552,7 +552,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DefaultConfigFileName
     path: ../src/Juhta.Net/Application.cs
@@ -589,7 +589,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IsInitialized
     path: ../src/Juhta.Net/Application.cs
@@ -626,7 +626,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Name
     path: ../src/Juhta.Net/Application.cs
@@ -663,7 +663,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Application.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ServiceFactory
     path: ../src/Juhta.Net/Application.cs

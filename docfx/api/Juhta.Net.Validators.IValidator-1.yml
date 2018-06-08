@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/IValidator.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IValidator
     path: ../src/Juhta.Net/Validators/IValidator.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/IValidator.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Validate
     path: ../src/Juhta.Net/Validators/IValidator.cs

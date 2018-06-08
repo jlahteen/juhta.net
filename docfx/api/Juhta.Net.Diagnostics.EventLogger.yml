@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: EventLogger
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogAlert
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -289,7 +289,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogError
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -503,7 +503,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogEvent
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -553,7 +553,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -591,7 +591,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -629,7 +629,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -679,7 +679,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogInformation
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -726,7 +726,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -764,7 +764,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -802,7 +802,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs
@@ -849,7 +849,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Diagnostics/EventLogger.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LogWarning
     path: ../src/Juhta.Net.Diagnostics/EventLogger.cs

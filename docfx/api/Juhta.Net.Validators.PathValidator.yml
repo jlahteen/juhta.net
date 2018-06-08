@@ -186,7 +186,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: IsValidPath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
-    startLine: 74
+    startLine: 77
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Validators
@@ -228,7 +228,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: m_errorMessage
     path: ../src/Juhta.Net/Validators/PathValidator.cs
-    startLine: 132
+    startLine: 135
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Validators

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CommandLineArgumentException
     path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs

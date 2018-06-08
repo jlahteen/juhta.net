@@ -17,15 +17,16 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: TimestampFactory
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nDefines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal\nTime (UTC). This class is thread-safe.\n"
+  summary: "\nDefines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal\nTime (UTC). An example of a timestamp is &apos;201805282026441234567&apos;, generated on May 28, 2018 at 20:26:44.\n"
+  remarks: This class is thread-safe.
   example: []
   syntax:
     content: public class TimestampFactory
@@ -60,11 +61,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -92,11 +93,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetUniqueTimestamp
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common

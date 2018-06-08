@@ -5,7 +5,7 @@ items:
   id: InternalException
   parent: Juhta.Net.Common
   children:
-  - Juhta.Net.Common.InternalException.#ctor(System.String)
+  - Juhta.Net.Common.InternalException.#ctor
   langs:
   - csharp
   - vb
@@ -16,19 +16,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InternalException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: InternalException
     path: ../src/Juhta.Net/Common/InternalException.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when an internal error occurs.\n"
-  remarks: >-
-    An internal error is typically an error that should &apos;never happen&apos;, and it usually means some kind of
-
-    a bug in the software.
+  summary: "\nThis exception can be thrown when an error occurs in an application but no technical details are wanted to be\nexposed to the caller.\n"
   example: []
   syntax:
     content: 'public class InternalException : Exception, ISerializable'
@@ -39,8 +35,6 @@ items:
   inheritance:
   - System.Object
   - System.Exception
-  derivedClasses:
-  - Juhta.Net.Common.UnimplementedCodeBranchException
   implements:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:
@@ -68,37 +62,33 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Common.InternalException.#ctor(System.String)
-  commentId: M:Juhta.Net.Common.InternalException.#ctor(System.String)
-  id: '#ctor(System.String)'
+- uid: Juhta.Net.Common.InternalException.#ctor
+  commentId: M:Juhta.Net.Common.InternalException.#ctor
+  id: '#ctor'
   parent: Juhta.Net.Common.InternalException
   langs:
   - csharp
   - vb
-  name: InternalException(String)
-  nameWithType: InternalException.InternalException(String)
-  fullName: Juhta.Net.Common.InternalException.InternalException(System.String)
+  name: InternalException()
+  nameWithType: InternalException.InternalException()
+  fullName: Juhta.Net.Common.InternalException.InternalException()
   type: Constructor
   source:
     remote:
       path: src/Juhta.Net/Common/InternalException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Common/InternalException.cs
-    startLine: 25
+    startLine: 23
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public InternalException(string message)
-    parameters:
-    - id: message
-      type: System.String
-      description: Specifies an error message.
-    content.vb: Public Sub New(message As String)
+    content: public InternalException()
+    content.vb: Public Sub New
   overload: Juhta.Net.Common.InternalException.#ctor*
   modifiers.csharp:
   - public
@@ -580,10 +570,3 @@ references:
   name: InternalException
   nameWithType: InternalException.InternalException
   fullName: Juhta.Net.Common.InternalException.InternalException
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/ArrayExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ArrayExtensions
     path: ../src/Juhta.Net/Extensions/ArrayExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/ArrayExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ToStringArray
     path: ../src/Juhta.Net/Extensions/ArrayExtensions.cs

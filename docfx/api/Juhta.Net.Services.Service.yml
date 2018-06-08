@@ -5,11 +5,10 @@ items:
   id: Service
   parent: Juhta.Net.Services
   children:
+  - Juhta.Net.Services.Service.ClassId
   - Juhta.Net.Services.Service.ConstructorParams
   - Juhta.Net.Services.Service.CreateInstance``1
   - Juhta.Net.Services.Service.Id
-  - Juhta.Net.Services.Service.LibraryClass
-  - Juhta.Net.Services.Service.LibraryFileName
   langs:
   - csharp
   - vb
@@ -20,11 +19,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Service
     path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Services
@@ -63,11 +62,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInstance
     path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Services
@@ -90,6 +89,43 @@ items:
   - Public
   fullName.vb: Juhta.Net.Services.Service.CreateInstance(Of TService)()
   name.vb: CreateInstance(Of TService)()
+- uid: Juhta.Net.Services.Service.ClassId
+  commentId: P:Juhta.Net.Services.Service.ClassId
+  id: ClassId
+  parent: Juhta.Net.Services.Service
+  langs:
+  - csharp
+  - vb
+  name: ClassId
+  nameWithType: Service.ClassId
+  fullName: Juhta.Net.Services.Service.ClassId
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Services/Service.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: ClassId
+    path: ../src/Juhta.Net/Services/Service.cs
+    startLine: 50
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Services
+  summary: "\nGets the identifier of the class that implements the dependency injection service.\n"
+  example: []
+  syntax:
+    content: public ClassId ClassId { get; }
+    parameters: []
+    return:
+      type: Juhta.Net.Common.ClassId
+    content.vb: Public ReadOnly Property ClassId As ClassId
+  overload: Juhta.Net.Services.Service.ClassId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: Juhta.Net.Services.Service.ConstructorParams
   commentId: P:Juhta.Net.Services.Service.ConstructorParams
   id: ConstructorParams
@@ -104,11 +140,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ConstructorParams
     path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 50
+    startLine: 59
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Services
@@ -141,11 +177,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Id
     path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 58
+    startLine: 67
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Services
@@ -158,80 +194,6 @@ items:
       type: Juhta.Net.Services.ServiceId
     content.vb: Public ReadOnly Property Id As ServiceId
   overload: Juhta.Net.Services.Service.Id*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: Juhta.Net.Services.Service.LibraryClass
-  commentId: P:Juhta.Net.Services.Service.LibraryClass
-  id: LibraryClass
-  parent: Juhta.Net.Services.Service
-  langs:
-  - csharp
-  - vb
-  name: LibraryClass
-  nameWithType: Service.LibraryClass
-  fullName: Juhta.Net.Services.Service.LibraryClass
-  type: Property
-  source:
-    remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
-      repo: https://github.com/jlahteen/juhta.net
-    id: LibraryClass
-    path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 66
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Services
-  summary: "\nGets the library class that implements the dependency injection service.\n"
-  example: []
-  syntax:
-    content: public string LibraryClass { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property LibraryClass As String
-  overload: Juhta.Net.Services.Service.LibraryClass*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: Juhta.Net.Services.Service.LibraryFileName
-  commentId: P:Juhta.Net.Services.Service.LibraryFileName
-  id: LibraryFileName
-  parent: Juhta.Net.Services.Service
-  langs:
-  - csharp
-  - vb
-  name: LibraryFileName
-  nameWithType: Service.LibraryFileName
-  fullName: Juhta.Net.Services.Service.LibraryFileName
-  type: Property
-  source:
-    remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: Dev
-      repo: https://github.com/jlahteen/juhta.net
-    id: LibraryFileName
-    path: ../src/Juhta.Net/Services/Service.cs
-    startLine: 74
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Services
-  summary: "\nGets the file name of the library that contains the dependency injection service.\n"
-  example: []
-  syntax:
-    content: public string LibraryFileName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property LibraryFileName As String
-  overload: Juhta.Net.Services.Service.LibraryFileName*
   modifiers.csharp:
   - public
   - get
@@ -554,6 +516,25 @@ references:
   name: TService
   nameWithType: TService
   fullName: TService
+- uid: Juhta.Net.Services.Service.ClassId*
+  commentId: Overload:Juhta.Net.Services.Service.ClassId
+  isExternal: false
+  name: ClassId
+  nameWithType: Service.ClassId
+  fullName: Juhta.Net.Services.Service.ClassId
+- uid: Juhta.Net.Common.ClassId
+  commentId: T:Juhta.Net.Common.ClassId
+  parent: Juhta.Net.Common
+  isExternal: false
+  name: ClassId
+  nameWithType: ClassId
+  fullName: Juhta.Net.Common.ClassId
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
 - uid: Juhta.Net.Services.ConstructorParam
   commentId: T:Juhta.Net.Services.ConstructorParam
   isExternal: false
@@ -602,22 +583,3 @@ references:
   name: ServiceId
   nameWithType: ServiceId
   fullName: Juhta.Net.Services.ServiceId
-- uid: Juhta.Net.Services.Service.LibraryClass*
-  commentId: Overload:Juhta.Net.Services.Service.LibraryClass
-  isExternal: false
-  name: LibraryClass
-  nameWithType: Service.LibraryClass
-  fullName: Juhta.Net.Services.Service.LibraryClass
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: Juhta.Net.Services.Service.LibraryFileName*
-  commentId: Overload:Juhta.Net.Services.Service.LibraryFileName
-  isExternal: false
-  name: LibraryFileName
-  nameWithType: Service.LibraryFileName
-  fullName: Juhta.Net.Services.Service.LibraryFileName

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicInitializableLibrary
     path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateDefaultLibraryState
     path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs

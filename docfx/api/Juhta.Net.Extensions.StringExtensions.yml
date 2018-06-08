@@ -9,7 +9,7 @@ items:
   - Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String)
   - Juhta.Net.Extensions.StringExtensions.EnsureEnd(System.String,System.String,System.StringComparison)
   - Juhta.Net.Extensions.StringExtensions.FromBase64String(System.String)
-  - Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
+  - Juhta.Net.Extensions.StringExtensions.IsRegexMatch(System.String,System.String)
   - Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String)
   - Juhta.Net.Extensions.StringExtensions.RemoveEnd(System.String,System.String,System.StringComparison)
   - Juhta.Net.Extensions.StringExtensions.RemoveStart(System.String,System.String)
@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: StringExtensions
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ContainsWhitespaces
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: EnsureEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: EnsureEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: FromBase64String
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
@@ -252,51 +252,48 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
-  commentId: M:Juhta.Net.Extensions.StringExtensions.IsMatch(System.String,System.String)
-  id: IsMatch(System.String,System.String)
+- uid: Juhta.Net.Extensions.StringExtensions.IsRegexMatch(System.String,System.String)
+  commentId: M:Juhta.Net.Extensions.StringExtensions.IsRegexMatch(System.String,System.String)
+  id: IsRegexMatch(System.String,System.String)
   isExtensionMethod: true
   parent: Juhta.Net.Extensions.StringExtensions
   langs:
   - csharp
   - vb
-  name: IsMatch(String, String)
-  nameWithType: StringExtensions.IsMatch(String, String)
-  fullName: Juhta.Net.Extensions.StringExtensions.IsMatch(System.String, System.String)
+  name: IsRegexMatch(String, String)
+  nameWithType: StringExtensions.IsRegexMatch(String, String)
+  fullName: Juhta.Net.Extensions.StringExtensions.IsRegexMatch(System.String, System.String)
   type: Method
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
-    id: IsMatch
+    id: IsRegexMatch
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 88
+    startLine: 87
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
-  summary: "\nChecks whether a specified regular expression matches this string.\n"
+  summary: "\nChecks whether a specified regular expression pattern matches this string.\n"
   example: []
   syntax:
-    content: public static bool IsMatch(this string s, string regex)
+    content: public static bool IsRegexMatch(this string s, string pattern)
     parameters:
     - id: s
       type: System.String
       description: Specifies the current string instance.
-    - id: regex
+    - id: pattern
       type: System.String
-      description: >-
-        Specifies a regular expression. Anchor characters &apos;^&apos; (at the start) and &apos;$&apos; (at the
-
-        end) are not required.
+      description: Specifies a regular expression pattern.
     return:
       type: System.Boolean
-      description: Returns true if the specified regular expression matches this string, otherwise false.
+      description: Returns true if the specified regular expression pattern matches this string, otherwise false.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function IsMatch(s As String, regex As String) As Boolean
-  overload: Juhta.Net.Extensions.StringExtensions.IsMatch*
+      Public Shared Function IsRegexMatch(s As String, pattern As String) As Boolean
+  overload: Juhta.Net.Extensions.StringExtensions.IsRegexMatch*
   modifiers.csharp:
   - public
   - static
@@ -318,11 +315,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 101
+    startLine: 100
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -370,11 +367,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 114
+    startLine: 113
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -424,11 +421,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveStart
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 130
+    startLine: 129
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -476,11 +473,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: RemoveStart
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 143
+    startLine: 142
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -530,11 +527,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ReplaceHtmlSpecialCharacters
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 157
+    startLine: 156
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -578,11 +575,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ReplaceXmlSpecialCharacters
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 179
+    startLine: 180
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -626,11 +623,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringAfter
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 204
+    startLine: 207
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -682,11 +679,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringAfter
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 218
+    startLine: 221
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -738,11 +735,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringBefore
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 242
+    startLine: 245
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -794,11 +791,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SubstringBefore
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 256
+    startLine: 259
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -850,11 +847,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ToBase64String
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 277
+    startLine: 280
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -896,11 +893,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ToBoolean
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
-    startLine: 292
+    startLine: 295
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -1270,12 +1267,12 @@ references:
   name: FromBase64String
   nameWithType: StringExtensions.FromBase64String
   fullName: Juhta.Net.Extensions.StringExtensions.FromBase64String
-- uid: Juhta.Net.Extensions.StringExtensions.IsMatch*
-  commentId: Overload:Juhta.Net.Extensions.StringExtensions.IsMatch
+- uid: Juhta.Net.Extensions.StringExtensions.IsRegexMatch*
+  commentId: Overload:Juhta.Net.Extensions.StringExtensions.IsRegexMatch
   isExternal: false
-  name: IsMatch
-  nameWithType: StringExtensions.IsMatch
-  fullName: Juhta.Net.Extensions.StringExtensions.IsMatch
+  name: IsRegexMatch
+  nameWithType: StringExtensions.IsRegexMatch
+  fullName: Juhta.Net.Extensions.StringExtensions.IsRegexMatch
 - uid: Juhta.Net.Extensions.StringExtensions.RemoveEnd*
   commentId: Overload:Juhta.Net.Extensions.StringExtensions.RemoveEnd
   isExternal: false

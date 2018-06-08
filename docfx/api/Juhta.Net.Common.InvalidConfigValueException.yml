@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: InvalidConfigValueException
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
@@ -24,7 +24,7 @@ items:
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when a configuration file has passed schema validation but in further processing\nan invalid configuration value is encountered.\n"
+  summary: "\nThis exception will be thrown when a configuration file has passed (schema) validation but in further analysis\nan invalid configuration value is encountered.\n"
   example: []
   syntax:
     content: 'public class InvalidConfigValueException : Exception, ISerializable'
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs

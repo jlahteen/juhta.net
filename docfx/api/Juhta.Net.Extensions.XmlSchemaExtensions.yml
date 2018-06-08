@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: XmlSchemaExtensions
     path: ../src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlSchemaExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttributeDefaultValue
     path: ../src/Juhta.Net/Extensions/XmlSchemaExtensions.cs

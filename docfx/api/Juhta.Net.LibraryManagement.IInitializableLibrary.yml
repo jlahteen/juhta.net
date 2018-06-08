@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IInitializableLibrary
     path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: InitializeLibrary
     path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs

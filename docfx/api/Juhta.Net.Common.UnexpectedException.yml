@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: UnexpectedException
     path: ../src/Juhta.Net/Common/UnexpectedException.cs
@@ -26,9 +26,9 @@ items:
   namespace: Juhta.Net.Common
   summary: "\nThis exception will be thrown when an unexpected error occurs.\n"
   remarks: >-
-    An error is considered as unexpected when it occurs in a code context that doesn&apos;t contain error-
+    An error is considered as unexpected when it occurs in a code context that doesn&apos;t contain error-prone
 
-    sensitive functionality such as network communication or file I/O operations.
+    functionality such as network communication or file I/O operations.
   example: []
   syntax:
     content: 'public class UnexpectedException : Exception, ISerializable'
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Common/UnexpectedException.cs

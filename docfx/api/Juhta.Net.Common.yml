@@ -4,24 +4,23 @@ items:
   commentId: N:Juhta.Net.Common
   id: Juhta.Net.Common
   children:
-  - Juhta.Net.Common.AssemblyClassFileUri
-  - Juhta.Net.Common.AssemblyClassUri
-  - Juhta.Net.Common.AssemblyNotLoadedException
+  - Juhta.Net.Common.BlockNotImplementedException
+  - Juhta.Net.Common.ClassId
   - Juhta.Net.Common.CommonMessages
   - Juhta.Net.Common.ConfigException
-  - Juhta.Net.Common.ConsumerThread`1
   - Juhta.Net.Common.InterfaceNotSupportedException
   - Juhta.Net.Common.InternalException
   - Juhta.Net.Common.InvalidConfigFileException
   - Juhta.Net.Common.InvalidConfigValueException
   - Juhta.Net.Common.ObjectFactory
   - Juhta.Net.Common.ObjectQueue`1
-  - Juhta.Net.Common.RegularExpressions
+  - Juhta.Net.Common.OperatingSystemInfo
+  - Juhta.Net.Common.RegexPatterns
   - Juhta.Net.Common.Singleton`1
+  - Juhta.Net.Common.StatementNotImplementedException
   - Juhta.Net.Common.SymmetricCipher
   - Juhta.Net.Common.TimestampFactory
   - Juhta.Net.Common.UnexpectedException
-  - Juhta.Net.Common.UnimplementedCodeBranchException
   - Juhta.Net.Common.Utf8FileWriter
   langs:
   - csharp
@@ -33,25 +32,19 @@ items:
   assemblies:
   - Juhta.Net
 references:
-- uid: Juhta.Net.Common.AssemblyClassFileUri
-  commentId: T:Juhta.Net.Common.AssemblyClassFileUri
+- uid: Juhta.Net.Common.BlockNotImplementedException
+  commentId: T:Juhta.Net.Common.BlockNotImplementedException
   isExternal: false
-  name: AssemblyClassFileUri
-  nameWithType: AssemblyClassFileUri
-  fullName: Juhta.Net.Common.AssemblyClassFileUri
-- uid: Juhta.Net.Common.AssemblyClassUri
-  commentId: T:Juhta.Net.Common.AssemblyClassUri
+  name: BlockNotImplementedException
+  nameWithType: BlockNotImplementedException
+  fullName: Juhta.Net.Common.BlockNotImplementedException
+- uid: Juhta.Net.Common.ClassId
+  commentId: T:Juhta.Net.Common.ClassId
   parent: Juhta.Net.Common
   isExternal: false
-  name: AssemblyClassUri
-  nameWithType: AssemblyClassUri
-  fullName: Juhta.Net.Common.AssemblyClassUri
-- uid: Juhta.Net.Common.AssemblyNotLoadedException
-  commentId: T:Juhta.Net.Common.AssemblyNotLoadedException
-  isExternal: false
-  name: AssemblyNotLoadedException
-  nameWithType: AssemblyNotLoadedException
-  fullName: Juhta.Net.Common.AssemblyNotLoadedException
+  name: ClassId
+  nameWithType: ClassId
+  fullName: Juhta.Net.Common.ClassId
 - uid: Juhta.Net.Common.CommonMessages
   commentId: T:Juhta.Net.Common.CommonMessages
   isExternal: false
@@ -64,43 +57,6 @@ references:
   name: ConfigException
   nameWithType: ConfigException
   fullName: Juhta.Net.Common.ConfigException
-- uid: Juhta.Net.Common.ConsumerThread`1
-  commentId: T:Juhta.Net.Common.ConsumerThread`1
-  isExternal: false
-  name: ConsumerThread<T>
-  nameWithType: ConsumerThread<T>
-  fullName: Juhta.Net.Common.ConsumerThread<T>
-  nameWithType.vb: ConsumerThread(Of T)
-  fullName.vb: Juhta.Net.Common.ConsumerThread(Of T)
-  name.vb: ConsumerThread(Of T)
-  spec.csharp:
-  - uid: Juhta.Net.Common.ConsumerThread`1
-    name: ConsumerThread
-    nameWithType: ConsumerThread
-    fullName: Juhta.Net.Common.ConsumerThread
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Juhta.Net.Common.ConsumerThread`1
-    name: ConsumerThread
-    nameWithType: ConsumerThread
-    fullName: Juhta.Net.Common.ConsumerThread
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Juhta.Net.Common.InterfaceNotSupportedException
   commentId: T:Juhta.Net.Common.InterfaceNotSupportedException
   isExternal: false
@@ -109,7 +65,6 @@ references:
   fullName: Juhta.Net.Common.InterfaceNotSupportedException
 - uid: Juhta.Net.Common.InternalException
   commentId: T:Juhta.Net.Common.InternalException
-  parent: Juhta.Net.Common
   isExternal: false
   name: InternalException
   nameWithType: InternalException
@@ -169,12 +124,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.RegularExpressions
-  commentId: T:Juhta.Net.Common.RegularExpressions
+- uid: Juhta.Net.Common.OperatingSystemInfo
+  commentId: T:Juhta.Net.Common.OperatingSystemInfo
   isExternal: false
-  name: RegularExpressions
-  nameWithType: RegularExpressions
-  fullName: Juhta.Net.Common.RegularExpressions
+  name: OperatingSystemInfo
+  nameWithType: OperatingSystemInfo
+  fullName: Juhta.Net.Common.OperatingSystemInfo
+- uid: Juhta.Net.Common.RegexPatterns
+  commentId: T:Juhta.Net.Common.RegexPatterns
+  isExternal: false
+  name: RegexPatterns
+  nameWithType: RegexPatterns
+  fullName: Juhta.Net.Common.RegexPatterns
 - uid: Juhta.Net.Common.Singleton`1
   commentId: T:Juhta.Net.Common.Singleton`1
   isExternal: false
@@ -212,6 +173,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Juhta.Net.Common.StatementNotImplementedException
+  commentId: T:Juhta.Net.Common.StatementNotImplementedException
+  isExternal: false
+  name: StatementNotImplementedException
+  nameWithType: StatementNotImplementedException
+  fullName: Juhta.Net.Common.StatementNotImplementedException
 - uid: Juhta.Net.Common.SymmetricCipher
   commentId: T:Juhta.Net.Common.SymmetricCipher
   isExternal: false
@@ -230,12 +197,6 @@ references:
   name: UnexpectedException
   nameWithType: UnexpectedException
   fullName: Juhta.Net.Common.UnexpectedException
-- uid: Juhta.Net.Common.UnimplementedCodeBranchException
-  commentId: T:Juhta.Net.Common.UnimplementedCodeBranchException
-  isExternal: false
-  name: UnimplementedCodeBranchException
-  nameWithType: UnimplementedCodeBranchException
-  fullName: Juhta.Net.Common.UnimplementedCodeBranchException
 - uid: Juhta.Net.Common.Utf8FileWriter
   commentId: T:Juhta.Net.Common.Utf8FileWriter
   parent: Juhta.Net.Common

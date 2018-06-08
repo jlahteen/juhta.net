@@ -14,8 +14,6 @@ items:
   - Juhta.Net.Extensions.XmlNodeExtensions.GetAttribute(System.Xml.XmlNode,System.String,System.String)
   - Juhta.Net.Extensions.XmlNodeExtensions.HasAttribute(System.Xml.XmlNode,System.String)
   - Juhta.Net.Extensions.XmlNodeExtensions.SetAttribute(System.Xml.XmlNode,System.String,System.String)
-  - Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-  - Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray(System.Xml.XmlNode)
   langs:
   - csharp
   - vb
@@ -26,7 +24,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: XmlNodeExtensions
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -71,7 +69,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -119,7 +117,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -170,7 +168,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -224,7 +222,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -294,7 +292,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CopyTo
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -340,7 +338,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -388,7 +386,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -439,7 +437,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: HasAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -487,7 +485,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: SetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
@@ -515,99 +513,6 @@ items:
 
       Public Shared Sub SetAttribute(node As XmlNode, name As String, value As String)
   overload: Juhta.Net.Extensions.XmlNodeExtensions.SetAttribute*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-  commentId: M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-  id: ToBuiltInTypeObject(System.Xml.XmlNode)
-  isExtensionMethod: true
-  parent: Juhta.Net.Extensions.XmlNodeExtensions
-  langs:
-  - csharp
-  - vb
-  name: ToBuiltInTypeObject(XmlNode)
-  nameWithType: XmlNodeExtensions.ToBuiltInTypeObject(XmlNode)
-  fullName: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-  type: Method
-  source:
-    remote:
-      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
-      repo: https://github.com/jlahteen/juhta.net
-    id: ToBuiltInTypeObject
-    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 196
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Extensions
-  summary: "\nConverts this XmlNode instance to a built-in type object based on its type and value attributes that are\nassumed to exist in the node.\n"
-  example: []
-  syntax:
-    content: public static object ToBuiltInTypeObject(this XmlNode node)
-    parameters:
-    - id: node
-      type: System.Xml.XmlNode
-      description: Specifies the current XmlNode instance.
-    return:
-      type: System.Object
-      description: Returns the built-in type object, that is, the result of the conversion.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ToBuiltInTypeObject(node As XmlNode) As Object
-  overload: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray(System.Xml.XmlNode)
-  commentId: M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray(System.Xml.XmlNode)
-  id: ToBuiltInTypeObjectArray(System.Xml.XmlNode)
-  isExtensionMethod: true
-  parent: Juhta.Net.Extensions.XmlNodeExtensions
-  langs:
-  - csharp
-  - vb
-  name: ToBuiltInTypeObjectArray(XmlNode)
-  nameWithType: XmlNodeExtensions.ToBuiltInTypeObjectArray(XmlNode)
-  fullName: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray(System.Xml.XmlNode)
-  type: Method
-  source:
-    remote:
-      path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: Dev
-      repo: https://github.com/jlahteen/juhta.net
-    id: ToBuiltInTypeObjectArray
-    path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-    startLine: 307
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Extensions
-  summary: "\nConverts the child nodes of this XmlNode instance to an array of built-in type objects.\n"
-  example: []
-  syntax:
-    content: public static object[] ToBuiltInTypeObjectArray(this XmlNode node)
-    parameters:
-    - id: node
-      type: System.Xml.XmlNode
-      description: Specifies the current XmlNode instance.
-    return:
-      type: System.Object[]
-      description: Returns an array of the built-in type objects, that is, the result of the conversion.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ToBuiltInTypeObjectArray(node As XmlNode) As Object()
-  overload: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray*
-  seealso:
-  - linkId: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-    commentId: M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
   modifiers.csharp:
   - public
   - static
@@ -995,42 +900,3 @@ references:
   name: SetAttribute
   nameWithType: XmlNodeExtensions.SetAttribute
   fullName: Juhta.Net.Extensions.XmlNodeExtensions.SetAttribute
-- uid: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject*
-  commentId: Overload:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject
-  isExternal: false
-  name: ToBuiltInTypeObject
-  nameWithType: XmlNodeExtensions.ToBuiltInTypeObject
-  fullName: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject
-- uid: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-  commentId: M:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObject(System.Xml.XmlNode)
-- uid: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray*
-  commentId: Overload:Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray
-  isExternal: false
-  name: ToBuiltInTypeObjectArray
-  nameWithType: XmlNodeExtensions.ToBuiltInTypeObjectArray
-  fullName: Juhta.Net.Extensions.XmlNodeExtensions.ToBuiltInTypeObjectArray
-- uid: System.Object[]
-  name: Object[]
-  nameWithType: Object[]
-  fullName: System.Object[]
-  nameWithType.vb: Object()
-  fullName.vb: System.Object()
-  name.vb: Object()
-  spec.csharp:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()

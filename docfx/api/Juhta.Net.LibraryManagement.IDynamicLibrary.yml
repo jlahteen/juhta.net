@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicLibrary
     path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GoLive
     path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryState
     path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryStateLock
     path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs

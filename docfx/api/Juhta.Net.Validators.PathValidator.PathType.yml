@@ -21,7 +21,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: PathType
     path: ../src/Juhta.Net/Validators/PathValidator.cs
-    startLine: 112
+    startLine: 115
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Validators
@@ -54,7 +54,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: DirectoryPath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
-    startLine: 117
+    startLine: 120
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Validators
@@ -88,7 +88,7 @@ items:
       repo: https://github.com/jlahteen/juhta.net
     id: FilePath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
-    startLine: 122
+    startLine: 125
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Validators

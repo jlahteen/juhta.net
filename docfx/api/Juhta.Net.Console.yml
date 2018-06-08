@@ -7,6 +7,7 @@ items:
   - Juhta.Net.Console.CommandLineArgument
   - Juhta.Net.Console.CommandLineArgumentException
   - Juhta.Net.Console.CommandLineParser
+  - Juhta.Net.Console.CommandLineParserException
   - Juhta.Net.Console.NamedArgument
   - Juhta.Net.Console.NameValueArgument
   - Juhta.Net.Console.OptionArgument
@@ -40,6 +41,12 @@ references:
   name: CommandLineParser
   nameWithType: CommandLineParser
   fullName: Juhta.Net.Console.CommandLineParser
+- uid: Juhta.Net.Console.CommandLineParserException
+  commentId: T:Juhta.Net.Console.CommandLineParserException
+  isExternal: false
+  name: CommandLineParserException
+  nameWithType: CommandLineParserException
+  fullName: Juhta.Net.Console.CommandLineParserException
 - uid: Juhta.Net.Console.NamedArgument
   commentId: T:Juhta.Net.Console.NamedArgument
   parent: Juhta.Net.Console

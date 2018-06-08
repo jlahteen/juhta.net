@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ILibraryHandle
     path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LibraryFileName
     path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs

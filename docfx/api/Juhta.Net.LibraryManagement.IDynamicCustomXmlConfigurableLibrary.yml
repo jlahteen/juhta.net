@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IDynamicCustomXmlConfigurableLibrary
     path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateLibraryState
     path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetConfigSchemas
     path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs

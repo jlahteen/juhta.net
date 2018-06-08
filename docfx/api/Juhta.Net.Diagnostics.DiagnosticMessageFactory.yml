@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: DiagnosticMessageFactory
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateAlertMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateErrorMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -273,7 +273,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateInformationMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: CreateWarningMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs

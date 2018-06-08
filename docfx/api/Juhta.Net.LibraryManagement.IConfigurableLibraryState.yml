@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: IConfigurableLibraryState
     path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: Initialize
     path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs

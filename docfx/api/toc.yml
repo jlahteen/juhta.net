@@ -13,19 +13,14 @@
 - uid: Juhta.Net.Common
   name: Juhta.Net.Common
   items:
-  - uid: Juhta.Net.Common.AssemblyClassFileUri
-    name: AssemblyClassFileUri
-  - uid: Juhta.Net.Common.AssemblyClassUri
-    name: AssemblyClassUri
-  - uid: Juhta.Net.Common.AssemblyNotLoadedException
-    name: AssemblyNotLoadedException
+  - uid: Juhta.Net.Common.BlockNotImplementedException
+    name: BlockNotImplementedException
+  - uid: Juhta.Net.Common.ClassId
+    name: ClassId
   - uid: Juhta.Net.Common.CommonMessages
     name: CommonMessages
   - uid: Juhta.Net.Common.ConfigException
     name: ConfigException
-  - uid: Juhta.Net.Common.ConsumerThread`1
-    name: ConsumerThread<T>
-    name.vb: ConsumerThread(Of T)
   - uid: Juhta.Net.Common.InterfaceNotSupportedException
     name: InterfaceNotSupportedException
   - uid: Juhta.Net.Common.InternalException
@@ -39,19 +34,21 @@
   - uid: Juhta.Net.Common.ObjectQueue`1
     name: ObjectQueue<T>
     name.vb: ObjectQueue(Of T)
-  - uid: Juhta.Net.Common.RegularExpressions
-    name: RegularExpressions
+  - uid: Juhta.Net.Common.OperatingSystemInfo
+    name: OperatingSystemInfo
+  - uid: Juhta.Net.Common.RegexPatterns
+    name: RegexPatterns
   - uid: Juhta.Net.Common.Singleton`1
     name: Singleton<T>
     name.vb: Singleton(Of T)
+  - uid: Juhta.Net.Common.StatementNotImplementedException
+    name: StatementNotImplementedException
   - uid: Juhta.Net.Common.SymmetricCipher
     name: SymmetricCipher
   - uid: Juhta.Net.Common.TimestampFactory
     name: TimestampFactory
   - uid: Juhta.Net.Common.UnexpectedException
     name: UnexpectedException
-  - uid: Juhta.Net.Common.UnimplementedCodeBranchException
-    name: UnimplementedCodeBranchException
   - uid: Juhta.Net.Common.Utf8FileWriter
     name: Utf8FileWriter
 - uid: Juhta.Net.Console
@@ -63,6 +60,8 @@
     name: CommandLineArgumentException
   - uid: Juhta.Net.Console.CommandLineParser
     name: CommandLineParser
+  - uid: Juhta.Net.Console.CommandLineParserException
+    name: CommandLineParserException
   - uid: Juhta.Net.Console.NamedArgument
     name: NamedArgument
   - uid: Juhta.Net.Console.NameValueArgument
@@ -176,6 +175,12 @@
     name: LibraryInitializationException
   - uid: Juhta.Net.LibraryManagement.LibraryStateException
     name: LibraryStateException
+- uid: Juhta.Net.Processing
+  name: Juhta.Net.Processing
+  items:
+  - uid: Juhta.Net.Processing.ConsumerThread`1
+    name: ConsumerThread<T>
+    name.vb: ConsumerThread(Of T)
 - uid: Juhta.Net.Services
   name: Juhta.Net.Services
   items:
@@ -198,15 +203,19 @@
 - uid: Juhta.Net.Validators
   name: Juhta.Net.Validators
   items:
+  - uid: Juhta.Net.Validators.DirectoryPathValidator
+    name: DirectoryPathValidator
+  - uid: Juhta.Net.Validators.FilePathValidator
+    name: FilePathValidator
   - uid: Juhta.Net.Validators.IStringValidator
     name: IStringValidator
   - uid: Juhta.Net.Validators.IValidator`1
     name: IValidator<T>
     name.vb: IValidator(Of T)
-  - uid: Juhta.Net.Validators.RegexValidator
-    name: RegexValidator
-  - uid: Juhta.Net.Validators.RegexValidator.PatternMatchMode
-    name: RegexValidator.PatternMatchMode
+  - uid: Juhta.Net.Validators.PathValidator
+    name: PathValidator
+  - uid: Juhta.Net.Validators.PathValidator.PathType
+    name: PathValidator.PathType
   - uid: Juhta.Net.Validators.ValidationException
     name: ValidationException
   - uid: Juhta.Net.Validators.XmlDocumentValidator

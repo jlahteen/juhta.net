@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: ClientFaultException
     path: ../src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net.WebApi/Exceptions/ClientFaultException.cs

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: AssemblyExtensions
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetCompany
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetCopyright
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetDescription
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetDirectory
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetProduct
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetProductVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetTitle
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: GetVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs

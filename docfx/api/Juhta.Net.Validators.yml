@@ -4,10 +4,12 @@ items:
   commentId: N:Juhta.Net.Validators
   id: Juhta.Net.Validators
   children:
+  - Juhta.Net.Validators.DirectoryPathValidator
+  - Juhta.Net.Validators.FilePathValidator
   - Juhta.Net.Validators.IStringValidator
   - Juhta.Net.Validators.IValidator`1
-  - Juhta.Net.Validators.RegexValidator
-  - Juhta.Net.Validators.RegexValidator.PatternMatchMode
+  - Juhta.Net.Validators.PathValidator
+  - Juhta.Net.Validators.PathValidator.PathType
   - Juhta.Net.Validators.ValidationException
   - Juhta.Net.Validators.XmlDocumentValidator
   langs:
@@ -20,6 +22,18 @@ items:
   assemblies:
   - Juhta.Net
 references:
+- uid: Juhta.Net.Validators.DirectoryPathValidator
+  commentId: T:Juhta.Net.Validators.DirectoryPathValidator
+  isExternal: false
+  name: DirectoryPathValidator
+  nameWithType: DirectoryPathValidator
+  fullName: Juhta.Net.Validators.DirectoryPathValidator
+- uid: Juhta.Net.Validators.FilePathValidator
+  commentId: T:Juhta.Net.Validators.FilePathValidator
+  isExternal: false
+  name: FilePathValidator
+  nameWithType: FilePathValidator
+  fullName: Juhta.Net.Validators.FilePathValidator
 - uid: Juhta.Net.Validators.IStringValidator
   commentId: T:Juhta.Net.Validators.IStringValidator
   parent: Juhta.Net.Validators
@@ -64,19 +78,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validators.RegexValidator
-  commentId: T:Juhta.Net.Validators.RegexValidator
-  isExternal: false
-  name: RegexValidator
-  nameWithType: RegexValidator
-  fullName: Juhta.Net.Validators.RegexValidator
-- uid: Juhta.Net.Validators.RegexValidator.PatternMatchMode
-  commentId: T:Juhta.Net.Validators.RegexValidator.PatternMatchMode
+- uid: Juhta.Net.Validators.PathValidator
+  commentId: T:Juhta.Net.Validators.PathValidator
   parent: Juhta.Net.Validators
   isExternal: false
-  name: RegexValidator.PatternMatchMode
-  nameWithType: RegexValidator.PatternMatchMode
-  fullName: Juhta.Net.Validators.RegexValidator.PatternMatchMode
+  name: PathValidator
+  nameWithType: PathValidator
+  fullName: Juhta.Net.Validators.PathValidator
+- uid: Juhta.Net.Validators.PathValidator.PathType
+  commentId: T:Juhta.Net.Validators.PathValidator.PathType
+  parent: Juhta.Net.Validators
+  isExternal: false
+  name: PathValidator.PathType
+  nameWithType: PathValidator.PathType
+  fullName: Juhta.Net.Validators.PathValidator.PathType
 - uid: Juhta.Net.Validators.ValidationException
   commentId: T:Juhta.Net.Validators.ValidationException
   isExternal: false

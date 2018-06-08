@@ -5,6 +5,7 @@ items:
   id: InterfaceNotSupportedException
   parent: Juhta.Net.Common
   children:
+  - Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String)
   - Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: InterfaceNotSupportedException
     path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs
@@ -24,7 +25,7 @@ items:
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
-  summary: "\nThis exception will be thrown when an object doesn&apos;t support a requested interface.\n"
+  summary: "\nThis exception will be thrown when an object doesn&apos;t support a required interface.\n"
   example: []
   syntax:
     content: 'public class InterfaceNotSupportedException : Exception, ISerializable'
@@ -62,6 +63,42 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String)
+  commentId: M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.Common.InterfaceNotSupportedException
+  langs:
+  - csharp
+  - vb
+  name: InterfaceNotSupportedException(String)
+  nameWithType: InterfaceNotSupportedException.InterfaceNotSupportedException(String)
+  fullName: Juhta.Net.Common.InterfaceNotSupportedException.InterfaceNotSupportedException(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public InterfaceNotSupportedException(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    content.vb: Public Sub New(message As String)
+  overload: Juhta.Net.Common.InterfaceNotSupportedException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)
   commentId: M:Juhta.Net.Common.InterfaceNotSupportedException.#ctor(System.String,System.InvalidCastException)
   id: '#ctor(System.String,System.InvalidCastException)'
@@ -76,11 +113,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-      branch: Dev
+      branch: develop
       repo: https://github.com/jlahteen/juhta.net
     id: .ctor
     path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-    startLine: 25
+    startLine: 32
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -95,9 +132,9 @@ items:
     - id: innerException
       type: System.InvalidCastException
       description: >-
-        Specifies an InvalidCastException instance that relates to the failed
+        Specifies an <xref href="System.InvalidCastException" data-throw-if-not-resolved="false"></xref> instance that relates to the
 
-        interface cast operation.
+        failed interface cast operation.
     content.vb: Public Sub New(message As String, innerException As InvalidCastException)
   overload: Juhta.Net.Common.InterfaceNotSupportedException.#ctor*
   modifiers.csharp:
