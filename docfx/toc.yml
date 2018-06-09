@@ -1,5 +1,7 @@
-- name: Articles
-  href: articles/
-- name: Api Documentation
+- name: Home
+  href: /
+- name: Documentation
+  href: documentation/
+- name: API Reference
   href: api/
-  homepage: api/index.md
+  homepage: api/Juhta.Net.yml
