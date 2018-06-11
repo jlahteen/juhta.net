@@ -1,7 +1,7 @@
 
-# Juhta.NET Introduction
+# Introduction to Juhta.NET
 
-------------------------
+---------------------------
 
 Juhta.NET is an open-source, general-purpose application framework built on the top of .NET Core 2 and .NET Standard 2 (or later). Juhta.NET is licensed under the MIT License.
 
@@ -15,7 +15,7 @@ You may wonder what the word "juhta" means? It is a Finnish word and means "beas
 
 The author will hope to receive any kind of feedback. Please use the [GitHub](http://github.com/jlahteen/juhta.net) site for the discussion. You can also send email to <support@juhta.net>.
 
-**Disclaimer:** Although Juhta.NET has been designed for production use, the author has no liability of any kind of damage or any kind of problems that its production use may cause, as stated in the MIT License. Furthermore, Juhta.NET has no official support, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
+Please note that although Juhta.NET has been designed for production use, the author has no liability of any kind of damage or any kind of problems that its production use may cause, as stated in the MIT License. Furthermore, Juhta.NET has no official support, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
 
 I hope you will enjoy using Juhta.NET!
 
