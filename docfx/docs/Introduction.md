@@ -13,7 +13,7 @@ Juhta.NET is completely free, now and in the future. The only driver for its dev
 
 You may wonder what the word "juhta" means? It is a Finnish word and means "beast of burden" in English, that is, an animal such as a mule or donkey that is used for carrying loads. Therefore, in the application development world, it is a great metaphor for a solid and robust application framework running workloads. The word is also very close to the author’s first name, which gives it another association.
 
-The author will hope to receive any kind of feedback. Please use the [GitHub](http://github.com/jlahteen/juhta.net) site for the discussion. You can also send email to <support@juhta.net>.
+The author will hope to receive any kind of feedback. Please use [GitHub](http://github.com/jlahteen/juhta.net) or [Twitter](https://twitter.com/juhtanet) for the discussion. You can also send email to <support@juhta.net>.
 
 Please note that although Juhta.NET has been designed for production use, the author has no liability of any kind of damage or any kind of problems that its production use may cause, as stated in the MIT License. Furthermore, Juhta.NET has no official support, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
 
