@@ -1,49 +1,38 @@
-# Juhta.NET
+# Welcome to Juhta.NET
 
-Juhta.NET is an open source, general purpose app framework built on the top of .NET Core.
+Juhta.NET is an open-source, general-purpose application framework built on the top of .NET Core 2 and .NET Standard 2.
 
-The basic idea of Juhta.NET is to provide a modular approach for the application development. You just choose those modules suitable for your application without any unnecessary dependencies to the entire framework.
+The basic idea of Juhta.NET is to provide a modular approach for the application development. You just choose those modules suitable for your application without any unnecessary dependencies to the entire framework. However, please note that the first release of Juhta.NET consists only of one library, the core library.
 
-Juhta.NET is built to support modern architectures. These architectures comprise such buzzwords as microservices, RESTful Web APIs, event sourcing etc.
+The future versions of Juhta.NET will be built to support modern architectures. These architectures comprise such buzzwords as microservices, RESTful Web APIs, event sourcing etc.
 
-And of course, Juhta.NET is free, now and in the future. The only driver for its development is the pure passion for software development and code writing without any goals for economic benefits whatsoever.
+## Motivation
 
-You may wonder what the word ”juhta” means? It’s a Finnish word and means “beast of burden” in English, that is, an animal such as a mule or donkey that is used for carrying loads. Therefore, in the application development world it's a great metaphor for a solid and robust app framework running workloads. The word is also very close to the author’s first name, which gives it another association.
+Juhta.NET is free, now and in the future. The only driver for its development is the pure passion for software development and code writing without any goals for economic benefits whatsoever.
 
-## Juhta.NET Libraries
+## License
 
-### Juhta.Net
+This project is licensed under the MIT License, please see the [LICENSE.md](LICENSE.md) file for more details.
 
-Juhta.Net is the core library of the framework. It contains types, interfaces, classes etc. that are shared between all libraries of Juhta.NET. However, although Juhta.Net is the core of the framework, it's also a standalone library that can be used on its own to boost up app development.
+## Documentation
 
-Juhta.Net contains the following namespaces:
+The documentation of the latest release can be found [here](http://github.jlahteen.io/juhta.net/latest/docs).
 
-* Juhta.Net provides classes for logging (with built-in logger) and managing the framework.
-* Juhta.Net.Common provides a wide set of common classes.
-* Juhta.Net.Extensions provides useful extension classes.
-* Juhta.Net.LibraryManagement provides a comprehensive library management functionalities. With this library management you can start and close your application gracefully by just implementing appropriate library management interfaces. Juhta.NET takes care of all startup and shutdown code for you. The library management supports also so called dynamic libraries, which means you can change the configuration of your libraries on the fly.
+## API Reference
 
+The API Reference of the latest release can be found [here](http://github.jlahteen.io/juhta.net/latest/api).
 
-## On the roadmap (subject to change)
+## Releases
 
-#### Juhta.Net.Diagnostics
+No releases so far.
 
-There is always room for a good logging ang tracing library, and that's exactly what Juhta.Net.Diagnostics aims to be.
+## Roadmap
 
-*To be updated.*
+Here is a roadmap for upcoming versions. Please note that the upcoming versions are subject to change.
 
-#### Juhta.Net.WebApi
-
-*To be updated.*
-
-#### Juhta.Net.WebApi.Gateway
-
-*To be updated.*
-
-#### Juhta.Net.WebApi.Services
-
-*To be updated.*
-
-#### Juhta.Net.Processing
-
-*To be updated.*
+| Version              | Schedule | What's New
+|----------------------|----------|-----------
+| Juhta.NET 1.0.0-rc   | Q3 2018  | The first release of Juhta.NET
+| Juhta.NET 1.0.0      | Q3 2018  | Unit tests will also pass on Linux and MacOS
+| Juhta.NET 1.1.0      | Q4 2018  | Juhta.Net.Diagnostics library included
+| Juhta.NET 1.2.0      | Q4 2018  | Juhta.Net.WebApi library included
