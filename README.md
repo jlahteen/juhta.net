@@ -12,11 +12,11 @@ Juhta.NET is free, now and in the future. The only driver for its development is
 
 ## License
 
-This project is licensed under the permissive MIT License, please see the [LICENSE.txt](LICENSE.txt) file for more details.
+Juhta.NET is licensed under the permissive MIT License, please see the [LICENSE.txt](LICENSE.txt) file for more details.
 
 ## Main Features
 
-The current main features of Juhta.NET are:
+The current main features of Juhta.NET are as follows:
 
 * Process-level configurable application model
 * Library management support for starting and closing any number of libraries with the application
