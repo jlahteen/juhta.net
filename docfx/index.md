@@ -8,7 +8,7 @@ Juhta.NET is an open-source, general-purpose application framework built on the 
 
 - [API Reference](api/Juhta.Net.yml)
 
-- [Source Code](https://github.com/jlahteen/Juhta.NET)
+- [Source Code](https://github.com/jlahteen/juhta.net)
 
 - [Support and Feedback](mailto://support@juhta.net)
 
