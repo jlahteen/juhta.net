@@ -12,7 +12,23 @@ Juhta.NET is free, now and in the future. The only driver for its development is
 
 ## License
 
-This project is licensed under the MIT License, please see the [LICENSE.md](LICENSE.md) file for more details.
+This project is licensed under the MIT License, please see the [LICENSE.txt](LICENSE.txt) file for more details.
+
+## Main Features
+
+The current main features of Juhta.NET are:
+
+* A process-level configurable application model
+* Library management support for starting and closing any number of libraries with the application
+* Diagnostics message model and a built-in logger
+* Versatile and configurable dependency injection support
+* Command line argument parsing support for console applications
+* Useful common classes
+* Data validation model and a set of validation classes
+* Extension classes
+* Helper classes
+
+More details can be found in the [here](http://jlahteen.github.io/juhta.net/latest/docs/main-namespaces.html).
 
 ## Documentation
 
@@ -24,11 +40,13 @@ The API Reference of the latest release can be found [here](http://github.jlahte
 
 ## Releases
 
-No releases so far.
+* Juhta.NET 1.0.0-rc, July xx, 2018
+  * Release notes
+  * Landing page
 
-## Roadmap
+## Future Roadmap
 
-Here is a roadmap for upcoming versions. Please note that the upcoming versions are subject to change.
+Here is the roadmap for upcoming versions. Please note that the upcoming versions are subject to change.
 
 | Version              | Schedule | What's New
 |----------------------|----------|-----------
