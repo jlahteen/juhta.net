@@ -32,6 +32,7 @@ items:
     content: 'public class TraceFile : Utf8FileWriter'
     content.vb: >-
       Public Class TraceFile
+
           Inherits Utf8FileWriter
   inheritance:
   - System.Object

@@ -29,6 +29,7 @@ items:
     content: 'public interface IStringValidator : IValidator<string>'
     content.vb: >-
       Public Interface IStringValidator
+
           Inherits IValidator(Of String)
   inheritedMembers:
   - Juhta.Net.Validators.IValidator{System.String}.Validate(System.String)

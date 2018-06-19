@@ -45,6 +45,7 @@ items:
     content: 'public class Application : Singleton<Application>'
     content.vb: >-
       Public Class Application
+
           Inherits Singleton(Of Application)
   inheritance:
   - System.Object

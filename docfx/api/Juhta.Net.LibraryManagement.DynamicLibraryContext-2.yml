@@ -37,6 +37,7 @@ items:
       description: Specifies a library state type.
     content.vb: >-
       Public Class DynamicLibraryContext(Of TDynamicLibrary As IDynamicLibrary, TLibraryState As ILibraryState)
+
           Implements IDisposable
   inheritance:
   - System.Object

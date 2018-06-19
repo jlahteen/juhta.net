@@ -31,7 +31,9 @@ items:
     content: 'public class CommandLineParserException : Exception, ISerializable'
     content.vb: >-
       Public Class CommandLineParserException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

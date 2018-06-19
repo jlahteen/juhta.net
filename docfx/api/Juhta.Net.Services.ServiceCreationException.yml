@@ -31,7 +31,9 @@ items:
     content: 'public class ServiceCreationException : Exception, ISerializable'
     content.vb: >-
       Public Class ServiceCreationException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

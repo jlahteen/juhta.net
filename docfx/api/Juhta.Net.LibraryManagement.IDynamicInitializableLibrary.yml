@@ -30,6 +30,7 @@ items:
     content: 'public interface IDynamicInitializableLibrary : IDynamicLibrary'
     content.vb: >-
       Public Interface IDynamicInitializableLibrary
+
           Inherits IDynamicLibrary
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)

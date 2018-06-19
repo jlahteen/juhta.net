@@ -31,7 +31,9 @@ items:
     content: 'public class ValidationException : Exception, ISerializable'
     content.vb: >-
       Public Class ValidationException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

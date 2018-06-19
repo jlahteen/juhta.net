@@ -30,7 +30,9 @@ items:
     content: 'public class ConfigException : Exception, ISerializable'
     content.vb: >-
       Public Class ConfigException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

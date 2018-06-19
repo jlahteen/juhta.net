@@ -33,7 +33,9 @@ items:
     content: 'public abstract class DynamicLibraryHandleBase : LibraryHandleBase, ILibraryHandle, IDynamicLibrary'
     content.vb: >-
       Public MustInherit Class DynamicLibraryHandleBase
+
           Inherits LibraryHandleBase
+
           Implements ILibraryHandle, IDynamicLibrary
   inheritance:
   - System.Object

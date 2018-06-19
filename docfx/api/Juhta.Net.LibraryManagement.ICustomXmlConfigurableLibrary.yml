@@ -31,6 +31,7 @@ items:
     content: 'public interface ICustomXmlConfigurableLibrary : IConfigurableLibraryBase'
     content.vb: >-
       Public Interface ICustomXmlConfigurableLibrary
+
           Inherits IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName

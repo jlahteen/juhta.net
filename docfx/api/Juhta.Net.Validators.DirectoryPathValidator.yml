@@ -32,7 +32,9 @@ items:
     content: 'public class DirectoryPathValidator : PathValidator, IStringValidator, IValidator<string>'
     content.vb: >-
       Public Class DirectoryPathValidator
+
           Inherits PathValidator
+
           Implements IStringValidator, IValidator(Of String)
   inheritance:
   - System.Object

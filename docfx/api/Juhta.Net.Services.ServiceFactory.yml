@@ -34,6 +34,7 @@ items:
     content: 'public class ServiceFactory : Singleton<ServiceFactory>'
     content.vb: >-
       Public Class ServiceFactory
+
           Inherits Singleton(Of ServiceFactory)
   inheritance:
   - System.Object

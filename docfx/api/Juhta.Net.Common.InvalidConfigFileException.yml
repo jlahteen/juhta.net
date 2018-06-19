@@ -31,7 +31,9 @@ items:
     content: 'public class InvalidConfigFileException : Exception, ISerializable'
     content.vb: >-
       Public Class InvalidConfigFileException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

@@ -30,6 +30,7 @@ items:
     content: 'public class OptionArgument : NameValueArgument'
     content.vb: >-
       Public Class OptionArgument
+
           Inherits NameValueArgument
   inheritance:
   - System.Object

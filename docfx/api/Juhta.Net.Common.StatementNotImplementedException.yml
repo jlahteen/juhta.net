@@ -38,7 +38,9 @@ items:
     content: 'public class StatementNotImplementedException : Exception, ISerializable'
     content.vb: >-
       Public Class StatementNotImplementedException
+
           Inherits Exception
+
           Implements ISerializable
   seealso:
   - linkId: Juhta.Net.Common.BlockNotImplementedException

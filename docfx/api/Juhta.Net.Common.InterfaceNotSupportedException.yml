@@ -31,7 +31,9 @@ items:
     content: 'public class InterfaceNotSupportedException : Exception, ISerializable'
     content.vb: >-
       Public Class InterfaceNotSupportedException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

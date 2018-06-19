@@ -31,7 +31,9 @@ items:
     content: 'public class ConstructorParamException : Exception, ISerializable'
     content.vb: >-
       Public Class ConstructorParamException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

@@ -31,6 +31,7 @@ items:
     content: 'public abstract class NameValueArgument : CommandLineArgument'
     content.vb: >-
       Public MustInherit Class NameValueArgument
+
           Inherits CommandLineArgument
   inheritance:
   - System.Object

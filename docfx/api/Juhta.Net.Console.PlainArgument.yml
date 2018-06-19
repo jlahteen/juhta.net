@@ -30,6 +30,7 @@ items:
     content: 'public class PlainArgument : CommandLineArgument'
     content.vb: >-
       Public Class PlainArgument
+
           Inherits CommandLineArgument
   inheritance:
   - System.Object

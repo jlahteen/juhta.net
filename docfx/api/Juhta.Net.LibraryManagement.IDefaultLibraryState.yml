@@ -31,6 +31,7 @@ items:
     content: 'public interface IDefaultLibraryState : ILibraryState'
     content.vb: >-
       Public Interface IDefaultLibraryState
+
           Inherits ILibraryState
   modifiers.csharp:
   - public

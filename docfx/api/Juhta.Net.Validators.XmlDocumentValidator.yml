@@ -36,6 +36,7 @@ items:
     content: 'public class XmlDocumentValidator : IValidator<XmlDocument>'
     content.vb: >-
       Public Class XmlDocumentValidator
+
           Implements IValidator(Of XmlDocument)
   inheritance:
   - System.Object

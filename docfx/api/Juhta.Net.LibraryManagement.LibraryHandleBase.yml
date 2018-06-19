@@ -36,6 +36,7 @@ items:
     content: 'public abstract class LibraryHandleBase : ILibraryHandle'
     content.vb: >-
       Public MustInherit Class LibraryHandleBase
+
           Implements ILibraryHandle
   inheritance:
   - System.Object

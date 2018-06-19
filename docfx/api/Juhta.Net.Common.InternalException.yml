@@ -30,7 +30,9 @@ items:
     content: 'public class InternalException : Exception, ISerializable'
     content.vb: >-
       Public Class InternalException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

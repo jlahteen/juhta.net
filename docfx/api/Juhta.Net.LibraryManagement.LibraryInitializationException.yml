@@ -31,7 +31,9 @@ items:
     content: 'public class LibraryInitializationException : Exception, ISerializable'
     content.vb: >-
       Public Class LibraryInitializationException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object

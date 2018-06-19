@@ -30,6 +30,7 @@ items:
     content: 'public interface IConfigurableLibrary : IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IConfigurableLibrary
+
           Inherits IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
