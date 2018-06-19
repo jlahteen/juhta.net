@@ -42,12 +42,12 @@ The API Reference of the latest release can be found [here](https://jlahteen.git
 
 ## How to Play with the Code
 
-Juhta.NET has been developed by using [Visual Studio Community](https://www.visualstudio.com/vs/community/). However, to get started, you just need the following:
+Juhta.NET has been developed by using [Visual Studio Community](https://www.visualstudio.com/vs/community/). However, to get started, you just need to do the following:
 
 * Download and install [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/windows)
-* Clone or download the [source code](https://github.com/jlahteen/juhta.net)
+* Clone or download the source code
 
-By using [Git](https://git-scm.com/), to clone the repo, type:
+By using [Git](https://git-scm.com/), you can clone the repo by typing:
 
 ```batch
 git clone https://github.com/jlahteen/juhta.net.git
@@ -81,6 +81,8 @@ Here is the future roadmap for upcoming versions. Please note that the upcoming 
 | Juhta.NET 1.1.0      | Q4 2018  | Juhta.Net.Diagnostics library included
 | Juhta.NET 1.2.0      | Q4 2018  | Juhta.Net.WebApi library included
 
-## Author
+## Feedback
 
 The author of Juhta.NET is Juha Lähteenmäki. You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).
+
+The author will hope to receive any kind of feedback. Please use [GitHub](http://github.com/jlahteen/juhta.net) or [Twitter](https://twitter.com/juhtanet) for the discussion. You can also send email to <support@juhta.net>. Please note, that the aforementioned email is not an official support email, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
