@@ -8,7 +8,9 @@ The future versions of Juhta.NET will be built to support modern architectures. 
 
 ## Motivation
 
-Juhta.NET is free, now and in the future. The only driver for its development is the pure passion for software development and code writing without any goals for economic benefits whatsoever.
+Juhta.NET is free, now and in the future. The main driver for its development is the pure passion for software development and code writing without any goals for economic benefits whatsoever.
+
+The other important driver is that the author just wants to make himself and the current team more productive and also share this productivity toolbox in an open way.
 
 ## License
 
@@ -38,11 +40,36 @@ The documentation of the latest release can be found [here](https://jlahteen.git
 
 The API Reference of the latest release can be found [here](https://jlahteen.github.io/juhta.net/latest/api).
 
+## How to Play with the Code
+
+Juhta.NET has been developed by using [Visual Studio Community](https://www.visualstudio.com/vs/community/). However, to get started, you just need the following:
+
+* Download and install [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/windows)
+* Clone or download the [source code](https://github.com/jlahteen/juhta.net)
+
+By using [Git](https://git-scm.com/), to clone the repo, type:
+
+```batch
+git clone https://github.com/jlahteen/juhta.net.git
+```
+
+To build Juhta.NET, go to the root directory of the solution and type:
+
+```batch
+dotnet build
+```
+
+To run all the unit tests in the solution, just type:
+
+```batch
+dotnet test
+```
+
 ## Releases
 
 * Juhta.NET 1.0.0-rc, July xx, 2018
   * [Release notes](https://github.com/jlahteen/juhta.net/releases)
-  * [Landing page](https://jlahteen.github.io/juhta.net/latest)
+  * [Home page](https://jlahteen.github.io/juhta.net/latest)
 
 ## Future Roadmap
 
@@ -56,4 +83,4 @@ Here is the future roadmap for upcoming versions. Please note that the upcoming 
 
 ## Author
 
-* **Juha Lähteenmäki**
+The author of Juhta.NET is Juha Lähteenmäki. You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).
