@@ -10,7 +10,7 @@ The future versions of Juhta.NET will be built to support modern architectures. 
 
 Juhta.NET is free, now and in the future. The main driver for its development is the pure passion for software development and code writing without any goals for economic benefits whatsoever.
 
-The other important driver is that the author just wants to make himself and the current team more productive and also share this productivity toolbox in an open way.
+The other important driver is that the author just wants to make himself and his current team more productive and also share this productivity toolbox in an open way.
 
 ## License
 
@@ -28,9 +28,9 @@ The current main features of Juhta.NET are as follows:
 * Data validation model and a set of validation classes
 * Set of useful common classes
 * Set of useful extension classes containing extension methods
-* Helper class for argument validation
+* Helper class for validating method arguments
 
-More details about the main namespaces can be found [here](https://jlahteen.github.io/juhta.net/latest/docs/main-namespaces.html).
+More information about the main namespaces can be found [here](https://jlahteen.github.io/juhta.net/latest/docs/main-namespaces.html).
 
 ## Documentation
 
@@ -85,4 +85,6 @@ Here is the future roadmap for upcoming versions. Please note that the upcoming 
 
 The author of Juhta.NET is Juha Lähteenmäki. You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).
 
-The author will hope to receive any kind of feedback. Please use [GitHub](http://github.com/jlahteen/juhta.net) or [Twitter](https://twitter.com/juhtanet) for the discussion. You can also send email to <support@juhta.net>. Please note, that the aforementioned email is not an official support email, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
+The author will hope to receive any kind of feedback. Please use [GitHub](http://github.com/jlahteen/juhta.net) or [Twitter](https://twitter.com/juhtanet) for the discussion. You can also send email to <support@juhta.net>.
+
+Please note that Juhta.NET has no official support, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
