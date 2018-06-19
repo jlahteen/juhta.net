@@ -1,6 +1,6 @@
 # Welcome to Juhta.NET
 
-Juhta.NET is an open-source, general-purpose application framework built on the top of .NET Core 2 and .NET Standard 2 (or later).
+Juhta.NET is an open-source, general-purpose application framework built on the top of .NET Core 2 and .NET Standard 2.
 
 The basic idea of Juhta.NET is to provide a modular approach for the application development. You just choose those modules suitable for your application without any unnecessary dependencies to the entire framework. However, please note that the first release of Juhta.NET consists of only one library, which is the core library of Juhta.NET.
 
