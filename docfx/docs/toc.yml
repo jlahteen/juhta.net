@@ -1,4 +1,6 @@
 - name: Introduction
   href: introduction.md
+- name: Main Features
+  href: main-features.md
 - name: Main Namespaces
   href: main-namespaces.md
