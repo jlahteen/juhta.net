@@ -23,7 +23,7 @@ namespace Juhta.Net.Tests.Extensions
         {
             Assembly assembly = typeof(Application).Assembly;
 
-            Assert.AreEqual<string>("Copyright © 2017 Juha Lähteenmäki", assembly.GetCopyright());
+            Assert.AreEqual<string>("Copyright © 2018 Juha Lähteenmäki", assembly.GetCopyright());
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace Juhta.Net.Tests.Extensions
         {
             Assembly assembly = typeof(Application).Assembly;
 
-            Assert.AreEqual<string>("1.0.0-beta", assembly.GetProductVersion());
+            Assert.AreEqual<string>("1.0.0-rc", assembly.GetProductVersion());
         }
 
         [TestMethod]
