@@ -1,8 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Juhta.Net\Juhta.Net.csproj" />
-  </ItemGroup>
-</Project>
