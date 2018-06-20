@@ -83,8 +83,12 @@ Here is the future roadmap for upcoming versions. Please note that the upcoming 
 
 ## Feedback
 
-The author of Juhta.NET is Juha Lähteenmäki. You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).
-
 The author will hope to receive any kind of feedback. Please use [GitHub](http://github.com/jlahteen/juhta.net) or [Twitter](https://twitter.com/juhtanet) for the discussion. You can also send email to <support@juhta.net>.
 
 Please note that Juhta.NET has no official support, but the author will react to any findings related to the incorrect functionality or instability of Juhta.NET.
+
+## About the Author
+
+The author of Juhta.NET is Juha Lähteenmäki. He has over 20 years of experience in software development and architectures. Furthermore, the author has been using .NET Framework technologies since they were first released back in 2002.
+
+You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).
