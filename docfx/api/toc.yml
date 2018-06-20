@@ -85,20 +85,12 @@
     name: DiagnosticMessageType
   - uid: Juhta.Net.Diagnostics.ErrorMessage
     name: ErrorMessage
-  - uid: Juhta.Net.Diagnostics.EventLogger
-    name: EventLogger
   - uid: Juhta.Net.Diagnostics.FileLogger
     name: FileLogger
   - uid: Juhta.Net.Diagnostics.ILogger
     name: ILogger
   - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
-  - uid: Juhta.Net.Diagnostics.ITraceWriter
-    name: ITraceWriter
-  - uid: Juhta.Net.Diagnostics.Trace
-    name: Trace
-  - uid: Juhta.Net.Diagnostics.TraceFile
-    name: TraceFile
   - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
 - uid: Juhta.Net.Extensions
@@ -220,20 +212,3 @@
     name: ValidationException
   - uid: Juhta.Net.Validators.XmlDocumentValidator
     name: XmlDocumentValidator
-- uid: Juhta.Net.WebApi.Exceptions
-  name: Juhta.Net.WebApi.Exceptions
-  items:
-  - uid: Juhta.Net.WebApi.Exceptions.BadRequestException
-    name: BadRequestException
-  - uid: Juhta.Net.WebApi.Exceptions.ClientFaultException
-    name: ClientFaultException
-  - uid: Juhta.Net.WebApi.Exceptions.ForbiddenException
-    name: ForbiddenException
-  - uid: Juhta.Net.WebApi.Exceptions.MethodNotAllowedException
-    name: MethodNotAllowedException
-  - uid: Juhta.Net.WebApi.Exceptions.ServerFaultException
-    name: ServerFaultException
-  - uid: Juhta.Net.WebApi.Exceptions.UnauthorizedException
-    name: UnauthorizedException
-  - uid: Juhta.Net.WebApi.Exceptions.WebApiException
-    name: WebApiException

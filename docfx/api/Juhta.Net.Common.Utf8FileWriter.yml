@@ -46,8 +46,6 @@ items:
     content.vb: Public Class Utf8FileWriter
   inheritance:
   - System.Object
-  derivedClasses:
-  - Juhta.Net.Diagnostics.TraceFile
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -990,46 +988,12 @@ references:
   fullName: System.IO
 - uid: Juhta.Net.Common.Utf8FileWriter.Open
   commentId: M:Juhta.Net.Common.Utf8FileWriter.Open
-  parent: Juhta.Net.Common.Utf8FileWriter
-  isExternal: false
-  name: Open()
-  nameWithType: Utf8FileWriter.Open()
-  fullName: Juhta.Net.Common.Utf8FileWriter.Open()
-  spec.csharp:
-  - uid: Juhta.Net.Common.Utf8FileWriter.Open
-    name: Open
-    nameWithType: Utf8FileWriter.Open
-    fullName: Juhta.Net.Common.Utf8FileWriter.Open
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.Utf8FileWriter.Open
-    name: Open
-    nameWithType: Utf8FileWriter.Open
-    fullName: Juhta.Net.Common.Utf8FileWriter.Open
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Juhta.Net.Common.Utf8FileWriter.Close*
   commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Close
   isExternal: false
   name: Close
   nameWithType: Utf8FileWriter.Close
   fullName: Juhta.Net.Common.Utf8FileWriter.Close
-- uid: Juhta.Net.Common.Utf8FileWriter
-  commentId: T:Juhta.Net.Common.Utf8FileWriter
-  parent: Juhta.Net.Common
-  isExternal: false
-  name: Utf8FileWriter
-  nameWithType: Utf8FileWriter
-  fullName: Juhta.Net.Common.Utf8FileWriter
 - uid: Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel*
   commentId: Overload:Juhta.Net.Common.Utf8FileWriter.DecreaseIndentLevel
   isExternal: false
@@ -1050,33 +1014,6 @@ references:
   fullName: Juhta.Net.Common.Utf8FileWriter.IncreaseIndentLevel
 - uid: Juhta.Net.Common.Utf8FileWriter.Close
   commentId: M:Juhta.Net.Common.Utf8FileWriter.Close
-  parent: Juhta.Net.Common.Utf8FileWriter
-  isExternal: false
-  name: Close()
-  nameWithType: Utf8FileWriter.Close()
-  fullName: Juhta.Net.Common.Utf8FileWriter.Close()
-  spec.csharp:
-  - uid: Juhta.Net.Common.Utf8FileWriter.Close
-    name: Close
-    nameWithType: Utf8FileWriter.Close
-    fullName: Juhta.Net.Common.Utf8FileWriter.Close
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Juhta.Net.Common.Utf8FileWriter.Close
-    name: Close
-    nameWithType: Utf8FileWriter.Close
-    fullName: Juhta.Net.Common.Utf8FileWriter.Close
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Juhta.Net.Common.Utf8FileWriter.Open*
   commentId: Overload:Juhta.Net.Common.Utf8FileWriter.Open
   isExternal: false
@@ -1135,18 +1072,8 @@ references:
   fullName: Juhta.Net.Common.Utf8FileWriter.FilePath
 - uid: Juhta.Net.Common.Utf8FileWriter.IndentLevel
   commentId: P:Juhta.Net.Common.Utf8FileWriter.IndentLevel
-  parent: Juhta.Net.Common.Utf8FileWriter
-  isExternal: false
-  name: IndentLevel
-  nameWithType: Utf8FileWriter.IndentLevel
-  fullName: Juhta.Net.Common.Utf8FileWriter.IndentLevel
 - uid: Juhta.Net.Common.Utf8FileWriter.TabSize
   commentId: P:Juhta.Net.Common.Utf8FileWriter.TabSize
-  parent: Juhta.Net.Common.Utf8FileWriter
-  isExternal: false
-  name: TabSize
-  nameWithType: Utf8FileWriter.TabSize
-  fullName: Juhta.Net.Common.Utf8FileWriter.TabSize
 - uid: Juhta.Net.Common.Utf8FileWriter.IndentLevel*
   commentId: Overload:Juhta.Net.Common.Utf8FileWriter.IndentLevel
   isExternal: false

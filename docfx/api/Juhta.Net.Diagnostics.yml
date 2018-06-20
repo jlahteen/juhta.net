@@ -10,13 +10,9 @@ items:
   - Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   - Juhta.Net.Diagnostics.DiagnosticMessageType
   - Juhta.Net.Diagnostics.ErrorMessage
-  - Juhta.Net.Diagnostics.EventLogger
   - Juhta.Net.Diagnostics.FileLogger
   - Juhta.Net.Diagnostics.ILogger
   - Juhta.Net.Diagnostics.InformationMessage
-  - Juhta.Net.Diagnostics.ITraceWriter
-  - Juhta.Net.Diagnostics.Trace
-  - Juhta.Net.Diagnostics.TraceFile
   - Juhta.Net.Diagnostics.WarningMessage
   langs:
   - csharp
@@ -96,30 +92,6 @@ references:
   name: WarningMessage
   nameWithType: WarningMessage
   fullName: Juhta.Net.Diagnostics.WarningMessage
-- uid: Juhta.Net.Diagnostics.EventLogger
-  commentId: T:Juhta.Net.Diagnostics.EventLogger
-  isExternal: false
-  name: EventLogger
-  nameWithType: EventLogger
-  fullName: Juhta.Net.Diagnostics.EventLogger
-- uid: Juhta.Net.Diagnostics.ITraceWriter
-  commentId: T:Juhta.Net.Diagnostics.ITraceWriter
-  isExternal: false
-  name: ITraceWriter
-  nameWithType: ITraceWriter
-  fullName: Juhta.Net.Diagnostics.ITraceWriter
-- uid: Juhta.Net.Diagnostics.Trace
-  commentId: T:Juhta.Net.Diagnostics.Trace
-  isExternal: false
-  name: Trace
-  nameWithType: Trace
-  fullName: Juhta.Net.Diagnostics.Trace
-- uid: Juhta.Net.Diagnostics.TraceFile
-  commentId: T:Juhta.Net.Diagnostics.TraceFile
-  isExternal: false
-  name: TraceFile
-  nameWithType: TraceFile
-  fullName: Juhta.Net.Diagnostics.TraceFile
 - uid: Juhta.Net.Diagnostics
   commentId: N:Juhta.Net.Diagnostics
   isExternal: false

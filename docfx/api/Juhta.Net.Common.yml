@@ -199,7 +199,6 @@ references:
   fullName: Juhta.Net.Common.UnexpectedException
 - uid: Juhta.Net.Common.Utf8FileWriter
   commentId: T:Juhta.Net.Common.Utf8FileWriter
-  parent: Juhta.Net.Common
   isExternal: false
   name: Utf8FileWriter
   nameWithType: Utf8FileWriter
