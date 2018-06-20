@@ -1,4 +1,4 @@
-# Welcome to **Juhta.NET**
+# Welcome to **Juhta.NET** 1.0.0-rc
 
 ***
 
