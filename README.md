@@ -67,9 +67,7 @@ dotnet test
 
 ## Releases
 
-* Juhta.NET 1.0.0-rc, July xx, 2018
-  * [Release notes](https://github.com/jlahteen/juhta.net/releases)
-  * [Home page](https://jlahteen.github.io/juhta.net/latest)
+For all the Juhta.NET releases so far, please go to the [Releases](https://github.com/jlahteen/juhta.net/releases) section.
 
 ## Future Roadmap
 
