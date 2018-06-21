@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ConfigException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigException
     path: ../src/Juhta.Net/Common/ConfigException.cs
     startLine: 17
@@ -78,8 +78,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ConfigException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/ConfigException.cs
     startLine: 25

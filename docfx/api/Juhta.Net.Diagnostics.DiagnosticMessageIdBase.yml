@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DiagnosticMessageIdBase
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 15
@@ -50,8 +50,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RootLibraryMessages
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 20
@@ -84,8 +84,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CommonMessages
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 25

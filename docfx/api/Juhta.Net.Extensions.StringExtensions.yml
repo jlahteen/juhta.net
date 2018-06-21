@@ -32,8 +32,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: StringExtensions
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 17
@@ -77,8 +77,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ContainsWhitespaces
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 26
@@ -122,8 +122,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EnsureEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 41
@@ -170,8 +170,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EnsureEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 53
@@ -221,8 +221,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FromBase64String
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 74
@@ -267,8 +267,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsRegexMatch
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 87
@@ -315,8 +315,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RemoveEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 100
@@ -367,8 +367,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RemoveEnd
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 113
@@ -421,8 +421,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RemoveStart
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 129
@@ -473,8 +473,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RemoveStart
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 142
@@ -527,8 +527,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ReplaceHtmlSpecialCharacters
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 156
@@ -575,8 +575,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ReplaceXmlSpecialCharacters
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 180
@@ -623,8 +623,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SubstringAfter
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 207
@@ -679,8 +679,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SubstringAfter
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 221
@@ -735,8 +735,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SubstringBefore
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 245
@@ -791,8 +791,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SubstringBefore
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 259
@@ -847,8 +847,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToBase64String
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 280
@@ -893,8 +893,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/StringExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToBoolean
     path: ../src/Juhta.Net/Extensions/StringExtensions.cs
     startLine: 295

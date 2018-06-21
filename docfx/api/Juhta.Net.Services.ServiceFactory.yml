@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ServiceFactory
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 18
@@ -71,8 +71,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 27
@@ -112,8 +112,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 38
@@ -157,8 +157,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 54
@@ -202,8 +202,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 67
@@ -250,8 +250,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Services
     path: ../src/Juhta.Net/Services/ServiceFactory.cs
     startLine: 80

@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: PathType
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 115
@@ -50,8 +50,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DirectoryPath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 120
@@ -84,8 +84,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FilePath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 125

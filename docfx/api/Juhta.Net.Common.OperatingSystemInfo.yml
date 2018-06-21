@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/OperatingSystemInfo.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: OperatingSystemInfo
     path: ../src/Juhta.Net/Common/OperatingSystemInfo.cs
     startLine: 15
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/OperatingSystemInfo.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsLinux
     path: ../src/Juhta.Net/Common/OperatingSystemInfo.cs
     startLine: 22
@@ -101,8 +101,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/OperatingSystemInfo.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsMacOS
     path: ../src/Juhta.Net/Common/OperatingSystemInfo.cs
     startLine: 30
@@ -140,8 +140,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/OperatingSystemInfo.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsWindows
     path: ../src/Juhta.Net/Common/OperatingSystemInfo.cs
     startLine: 38

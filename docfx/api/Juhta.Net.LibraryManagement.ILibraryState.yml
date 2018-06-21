@@ -15,8 +15,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/ILibraryState.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ILibraryState
     path: ../src/Juhta.Net/LibraryManagement/ILibraryState.cs
     startLine: 16

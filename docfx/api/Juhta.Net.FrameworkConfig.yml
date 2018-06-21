@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/FrameworkConfig.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FrameworkConfig
     path: ../src/Juhta.Net/FrameworkConfig.cs
     startLine: 17
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/FrameworkConfig.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateNamespaceManager
     path: ../src/Juhta.Net/FrameworkConfig.cs
     startLine: 30
@@ -112,8 +112,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/FrameworkConfig.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateRootConfigNamespaceManager
     path: ../src/Juhta.Net/FrameworkConfig.cs
     startLine: 53
@@ -159,8 +159,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/FrameworkConfig.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetLibraryConfigXmlns
     path: ../src/Juhta.Net/FrameworkConfig.cs
     startLine: 75

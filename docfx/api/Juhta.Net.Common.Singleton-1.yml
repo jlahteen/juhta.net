@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Singleton.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Singleton
     path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 16
@@ -73,8 +73,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Singleton.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Instance
     path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 35
@@ -114,8 +114,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Singleton.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ResetSingletonInstance
     path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 53
@@ -148,8 +148,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Singleton.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SetSingletonInstance
     path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 66
@@ -189,8 +189,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Singleton.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: s_instance
     path: ../src/Juhta.Net/Common/Singleton.cs
     startLine: 84

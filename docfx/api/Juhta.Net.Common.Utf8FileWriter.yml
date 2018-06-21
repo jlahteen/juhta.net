@@ -31,8 +31,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Utf8FileWriter
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 17
@@ -74,8 +74,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 26
@@ -113,8 +113,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 35
@@ -155,8 +155,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Close
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 55
@@ -191,8 +191,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DecreaseIndentLevel
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 72
@@ -223,8 +223,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Flush
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 82
@@ -256,8 +256,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IncreaseIndentLevel
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 91
@@ -288,8 +288,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Open
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 109
@@ -324,8 +324,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Write
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 123
@@ -360,8 +360,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Write
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 134
@@ -405,8 +405,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: WriteLine
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 142
@@ -437,8 +437,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: WriteLine
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 151
@@ -473,8 +473,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: WriteLine
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 160
@@ -509,8 +509,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: WriteLine
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 171
@@ -554,8 +554,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FilePath
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 183
@@ -591,8 +591,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IndentLevel
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 194
@@ -635,8 +635,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/Utf8FileWriter.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TabSize
     path: ../src/Juhta.Net/Common/Utf8FileWriter.cs
     startLine: 205
