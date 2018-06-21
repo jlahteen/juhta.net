@@ -15,8 +15,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/IStringValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IStringValidator
     path: ../src/Juhta.Net/Validators/IStringValidator.cs
     startLine: 13

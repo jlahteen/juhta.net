@@ -22,8 +22,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ConsumerThread
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 19
@@ -73,8 +73,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 26
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Consume
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 44
@@ -146,8 +146,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Start
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 58
@@ -180,8 +180,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Stop
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 71
@@ -214,8 +214,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ConsumeObject
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 92
@@ -254,8 +254,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: OnConsumeObjectFailed
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 99
@@ -297,8 +297,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Processing/ConsumerThread.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: OnWorkerThreadFailed
     path: ../src/Juhta.Net/Processing/ConsumerThread.cs
     startLine: 105

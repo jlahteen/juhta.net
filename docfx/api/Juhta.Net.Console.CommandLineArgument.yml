@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineArgument
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 17
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 26
@@ -109,8 +109,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 46
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Consumed
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 75
@@ -195,8 +195,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Value
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 85
@@ -232,8 +232,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Console/CommandLineArgument.cs
     startLine: 98

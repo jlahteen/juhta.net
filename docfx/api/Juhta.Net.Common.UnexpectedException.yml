@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: UnexpectedException
     path: ../src/Juhta.Net/Common/UnexpectedException.cs
     startLine: 17
@@ -82,8 +82,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/UnexpectedException.cs
     startLine: 26

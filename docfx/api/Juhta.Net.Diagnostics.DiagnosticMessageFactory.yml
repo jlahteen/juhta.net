@@ -22,8 +22,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DiagnosticMessageFactory
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 16
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 25
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 34
@@ -143,8 +143,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 48
@@ -195,8 +195,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateAlertMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 82
@@ -234,8 +234,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateErrorMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 92
@@ -273,8 +273,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInformationMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 102
@@ -312,8 +312,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateWarningMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
     startLine: 112

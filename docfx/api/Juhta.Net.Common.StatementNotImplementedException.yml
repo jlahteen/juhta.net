@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: StatementNotImplementedException
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
     startLine: 19
@@ -89,8 +89,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
     startLine: 26
@@ -121,8 +121,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
     startLine: 33
@@ -157,8 +157,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
     startLine: 40

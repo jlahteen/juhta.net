@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IDefaultLibraryState
     path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
     startLine: 14
@@ -53,8 +53,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Initialize
     path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
     startLine: 26

@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: PathValidator
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 19
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 27
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidDirectoryName
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 41
@@ -143,8 +143,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidFileName
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 54
@@ -182,8 +182,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidPath
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 77
@@ -224,8 +224,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: m_errorMessage
     path: ../src/Juhta.Net/Validators/PathValidator.cs
     startLine: 135

@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DateTimeExtensions
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 15
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToDigitTimestamp
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 26
@@ -114,8 +114,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToTimestamp
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 36
@@ -159,8 +159,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToTimestamp
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 48
@@ -210,8 +210,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToTimestamp
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 61
@@ -264,8 +264,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/DateTimeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ToTimestamp
     path: ../src/Juhta.Net/Extensions/DateTimeExtensions.cs
     startLine: 75

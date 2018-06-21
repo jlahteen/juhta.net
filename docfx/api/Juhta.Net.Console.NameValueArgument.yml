@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/NameValueArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: NameValueArgument
     path: ../src/Juhta.Net/Console/NameValueArgument.cs
     startLine: 13
@@ -73,8 +73,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/NameValueArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Name
     path: ../src/Juhta.Net/Console/NameValueArgument.cs
     startLine: 20
@@ -110,8 +110,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/NameValueArgument.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Console/NameValueArgument.cs
     startLine: 34

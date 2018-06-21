@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ObjectQueue
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 20
@@ -69,8 +69,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 27
@@ -103,8 +103,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Close
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 48
@@ -137,8 +137,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetObject
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 65
@@ -179,8 +179,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: PutObject
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 113
@@ -217,8 +217,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectQueue.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Count
     path: ../src/Juhta.Net/Common/ObjectQueue.cs
     startLine: 142

@@ -26,8 +26,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DiagnosticMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 17
@@ -76,8 +76,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FormatMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 28
@@ -123,8 +123,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetIntegerId
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 60
@@ -166,8 +166,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetIntegerId
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 72
@@ -213,8 +213,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 105
@@ -249,8 +249,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TryGetMessageId
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 125
@@ -303,8 +303,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TryGetMessageId
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 150
@@ -354,8 +354,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Id
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 175
@@ -391,8 +391,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Message
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 184
@@ -429,8 +429,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Type
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 192
@@ -466,8 +466,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 207
@@ -508,8 +508,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessage.cs
     startLine: 217

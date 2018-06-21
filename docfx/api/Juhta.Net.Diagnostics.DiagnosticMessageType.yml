@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DiagnosticMessageType
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 31
@@ -52,8 +52,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Alert
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 36
@@ -86,8 +86,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Error
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 41
@@ -120,8 +120,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Information
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 46
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/Types.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Warning
     path: ../src/Juhta.Net/Diagnostics/Types.cs
     startLine: 51

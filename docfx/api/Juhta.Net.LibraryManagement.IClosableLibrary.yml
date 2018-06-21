@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IClosableLibrary
     path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
     startLine: 13
@@ -49,8 +49,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CloseLibrary
     path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
     startLine: 30

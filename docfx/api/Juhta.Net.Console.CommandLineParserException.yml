@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParserException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineParserException
     path: ../src/Juhta.Net/Console/CommandLineParserException.cs
     startLine: 16
@@ -79,8 +79,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParserException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Console/CommandLineParserException.cs
     startLine: 24
@@ -115,8 +115,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParserException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Console/CommandLineParserException.cs
     startLine: 32

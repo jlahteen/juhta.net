@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IStartableLibrary
     path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
     startLine: 14
@@ -50,8 +50,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: StartProcesses
     path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
     startLine: 21
@@ -78,8 +78,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: StopProcesses
     path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
     startLine: 36
