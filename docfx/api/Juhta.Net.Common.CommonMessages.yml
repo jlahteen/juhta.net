@@ -1,0 +1,1043 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.CommonMessages
+  commentId: T:Juhta.Net.Common.CommonMessages
+  id: CommonMessages
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.CommonMessages.Error001
+  - Juhta.Net.Common.CommonMessages.Error002
+  - Juhta.Net.Common.CommonMessages.Error003
+  - Juhta.Net.Common.CommonMessages.Error004
+  - Juhta.Net.Common.CommonMessages.Error005
+  - Juhta.Net.Common.CommonMessages.Error006
+  - Juhta.Net.Common.CommonMessages.Error007
+  - Juhta.Net.Common.CommonMessages.Error008
+  - Juhta.Net.Common.CommonMessages.Error009
+  - Juhta.Net.Common.CommonMessages.Error010
+  - Juhta.Net.Common.CommonMessages.Error011
+  - Juhta.Net.Common.CommonMessages.Error012
+  - Juhta.Net.Common.CommonMessages.Error013
+  - Juhta.Net.Common.CommonMessages.Error014
+  - Juhta.Net.Common.CommonMessages.Error015
+  - Juhta.Net.Common.CommonMessages.Error016
+  - Juhta.Net.Common.CommonMessages.Error017
+  - Juhta.Net.Common.CommonMessages.Error018
+  langs:
+  - csharp
+  - vb
+  name: CommonMessages
+  nameWithType: CommonMessages
+  fullName: Juhta.Net.Common.CommonMessages
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CommonMessages
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nA static class that defines the common diagnostic messages.\n"
+  example: []
+  syntax:
+    content: public static class CommonMessages
+    content.vb: Public Module CommonMessages
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Common.CommonMessages.Error001
+  commentId: F:Juhta.Net.Common.CommonMessages.Error001
+  id: Error001
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error001
+  nameWithType: CommonMessages.Error001
+  fullName: Juhta.Net.Common.CommonMessages.Error001
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error001
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInvalid &apos;{0}&apos; parameter value was passed to the method &apos;{1}&apos;. The value cannot be null.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error001
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error001 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error002
+  commentId: F:Juhta.Net.Common.CommonMessages.Error002
+  id: Error002
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error002
+  nameWithType: CommonMessages.Error002
+  fullName: Juhta.Net.Common.CommonMessages.Error002
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error002
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 37
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nValue of the parameter &apos;{0}&apos; cannot be an empty string or a string containing nothing but white space\ncharacters.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error002
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error002 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error003
+  commentId: F:Juhta.Net.Common.CommonMessages.Error003
+  id: Error003
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error003
+  nameWithType: CommonMessages.Error003
+  fullName: Juhta.Net.Common.CommonMessages.Error003
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error003
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 42
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nFile &apos;{0}&apos; could not be locked within a {1} millisecond timeout.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error003
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error003 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error004
+  commentId: F:Juhta.Net.Common.CommonMessages.Error004
+  id: Error004
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error004
+  nameWithType: CommonMessages.Error004
+  fullName: Juhta.Net.Common.CommonMessages.Error004
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error004
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 47
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nPortion of the file &apos;{0}&apos; could not be locked within a {1} millisecond timeout.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error004
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error004 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error005
+  commentId: F:Juhta.Net.Common.CommonMessages.Error005
+  id: Error005
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error005
+  nameWithType: CommonMessages.Error005
+  fullName: Juhta.Net.Common.CommonMessages.Error005
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error005
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 53
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nInvalid &apos;{0}&apos; parameter value was passed to the method &apos;{1}&apos;. The value &apos;{2}&apos; does not conform to the\nregex pattern &apos;{3}&apos;.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error005
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error005 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error006
+  commentId: F:Juhta.Net.Common.CommonMessages.Error006
+  id: Error006
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error006
+  nameWithType: CommonMessages.Error006
+  fullName: Juhta.Net.Common.CommonMessages.Error006
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error006
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 59
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nMethod &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the instance doesn&apos;t allow\nit.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error006
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error006 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error007
+  commentId: F:Juhta.Net.Common.CommonMessages.Error007
+  id: Error007
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error007
+  nameWithType: CommonMessages.Error007
+  fullName: Juhta.Net.Common.CommonMessages.Error007
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error007
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 64
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nFile &apos;{0}&apos; does not exist.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error007
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error007 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error008
+  commentId: F:Juhta.Net.Common.CommonMessages.Error008
+  id: Error008
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error008
+  nameWithType: CommonMessages.Error008
+  fullName: Juhta.Net.Common.CommonMessages.Error008
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error008
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 69
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDirectory &apos;{0}&apos; does not exist.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error008
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error008 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error009
+  commentId: F:Juhta.Net.Common.CommonMessages.Error009
+  id: Error009
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error009
+  nameWithType: CommonMessages.Error009
+  fullName: Juhta.Net.Common.CommonMessages.Error009
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error009
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 74
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nMethod &apos;{0}&apos; is not supported by the type &apos;{1}&apos;.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error009
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error009 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error010
+  commentId: F:Juhta.Net.Common.CommonMessages.Error010
+  id: Error010
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error010
+  nameWithType: CommonMessages.Error010
+  fullName: Juhta.Net.Common.CommonMessages.Error010
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error010
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 79
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nProperty &apos;{0}&apos; is not supported by the type &apos;{1}&apos;.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error010
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error010 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error011
+  commentId: F:Juhta.Net.Common.CommonMessages.Error011
+  id: Error011
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error011
+  nameWithType: CommonMessages.Error011
+  fullName: Juhta.Net.Common.CommonMessages.Error011
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error011
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 84
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nAn error occurred in the closing process of the library &apos;{0}&apos;: {1}\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error011
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error011 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error012
+  commentId: F:Juhta.Net.Common.CommonMessages.Error012
+  id: Error012
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error012
+  nameWithType: CommonMessages.Error012
+  fullName: Juhta.Net.Common.CommonMessages.Error012
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error012
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 90
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nStatic method &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the class doesn&apos;t\nallow it.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error012
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error012 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error013
+  commentId: F:Juhta.Net.Common.CommonMessages.Error013
+  id: Error013
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error013
+  nameWithType: CommonMessages.Error013
+  fullName: Juhta.Net.Common.CommonMessages.Error013
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error013
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 95
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nThe lenghts of the arrays &apos;{0}&apos; and &apos;{1}&apos; do not match.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error013
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error013 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error014
+  commentId: F:Juhta.Net.Common.CommonMessages.Error014
+  id: Error014
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error014
+  nameWithType: CommonMessages.Error014
+  fullName: Juhta.Net.Common.CommonMessages.Error014
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error014
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 100
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nOnly one instance of the singleton class &apos;{0}&apos; is allowed to be created at a time.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error014
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error014 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error015
+  commentId: F:Juhta.Net.Common.CommonMessages.Error015
+  id: Error015
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error015
+  nameWithType: CommonMessages.Error015
+  fullName: Juhta.Net.Common.CommonMessages.Error015
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error015
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 105
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nProperty &apos;{0}&apos; of an instance of the class &apos;{1}&apos; cannot be executed because the instance has been disposed.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error015
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error015 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error016
+  commentId: F:Juhta.Net.Common.CommonMessages.Error016
+  id: Error016
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error016
+  nameWithType: CommonMessages.Error016
+  fullName: Juhta.Net.Common.CommonMessages.Error016
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error016
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 110
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nMethod &apos;{0}&apos; of an instance of the class &apos;{1}&apos; cannot be executed because the instance has been disposed.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error016
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error016 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error017
+  commentId: F:Juhta.Net.Common.CommonMessages.Error017
+  id: Error017
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error017
+  nameWithType: CommonMessages.Error017
+  fullName: Juhta.Net.Common.CommonMessages.Error017
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error017
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 115
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nAn instance of the class &apos;{0}&apos; could not be created because the type was not found in the assembly &apos;{1}&apos;.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error017
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error017 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Common.CommonMessages.Error018
+  commentId: F:Juhta.Net.Common.CommonMessages.Error018
+  id: Error018
+  parent: Juhta.Net.Common.CommonMessages
+  langs:
+  - csharp
+  - vb
+  name: Error018
+  nameWithType: CommonMessages.Error018
+  fullName: Juhta.Net.Common.CommonMessages.Error018
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/CommonMessages.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Error018
+    path: ../src/Juhta.Net/Common/CommonMessages.cs
+    startLine: 121
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nProperty &apos;{0}&apos; of the class &apos;{1}&apos; cannot be executed because the current state of the instance doesn&apos;t\nallow it.\n"
+  example: []
+  syntax:
+    content: public static readonly ErrorMessage Error018
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+    content.vb: Public Shared ReadOnly Error018 As ErrorMessage
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics

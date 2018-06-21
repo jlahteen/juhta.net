@@ -1,0 +1,452 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Helpers.ArgumentHelper
+  commentId: T:Juhta.Net.Helpers.ArgumentHelper
+  id: ArgumentHelper
+  parent: Juhta.Net.Helpers
+  children:
+  - Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
+  - Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ArgumentHelper
+  nameWithType: ArgumentHelper
+  fullName: Juhta.Net.Helpers.ArgumentHelper
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Helpers/ArgumentHelper.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: ArgumentHelper
+    path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
+    startLine: 21
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Helpers
+  summary: "\nDefines a static helper class that provides methods for simplifying common argument operations such as\nnull-checking and value validations. These helper methods enable replacing of repetitive code blocks with\none-liners.\n"
+  example: []
+  syntax:
+    content: public static class ArgumentHelper
+    content.vb: Public Module ArgumentHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
+  commentId: M:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
+  id: CheckNotNull(System.String,System.Object)
+  parent: Juhta.Net.Helpers.ArgumentHelper
+  langs:
+  - csharp
+  - vb
+  name: CheckNotNull(String, Object)
+  nameWithType: ArgumentHelper.CheckNotNull(String, Object)
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String, System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Helpers/ArgumentHelper.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CheckNotNull
+    path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
+    startLine: 30
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Helpers
+  summary: "\nChecks that a parameter value is not null.\n"
+  example: []
+  syntax:
+    content: public static void CheckNotNull(string paramName, object paramValue)
+    parameters:
+    - id: paramName
+      type: System.String
+      description: Specifies a parameter name.
+    - id: paramValue
+      type: System.Object
+      description: Specifies a parameter value.
+    content.vb: Public Shared Sub CheckNotNull(paramName As String, paramValue As Object)
+  overload: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)
+  commentId: M:Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)
+  id: CheckValue(System.String,System.String,System.String)
+  parent: Juhta.Net.Helpers.ArgumentHelper
+  langs:
+  - csharp
+  - vb
+  name: CheckValue(String, String, String)
+  nameWithType: ArgumentHelper.CheckValue(String, String, String)
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Helpers/ArgumentHelper.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CheckValue
+    path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
+    startLine: 44
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Helpers
+  summary: "\nChecks that a parameter value conforms to a regex pattern.\n"
+  example: []
+  syntax:
+    content: public static void CheckValue(string paramName, string paramValue, string regexPattern)
+    parameters:
+    - id: paramName
+      type: System.String
+      description: Specifies a parameter name.
+    - id: paramValue
+      type: System.String
+      description: Specifies a parameter value.
+    - id: regexPattern
+      type: System.String
+      description: Specifies a regex pattern.
+    content.vb: Public Shared Sub CheckValue(paramName As String, paramValue As String, regexPattern As String)
+  overload: Juhta.Net.Helpers.ArgumentHelper.CheckValue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Juhta.Net.Helpers
+  commentId: N:Juhta.Net.Helpers
+  isExternal: false
+  name: Juhta.Net.Helpers
+  nameWithType: Juhta.Net.Helpers
+  fullName: Juhta.Net.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull*
+  commentId: Overload:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull
+  isExternal: false
+  name: CheckNotNull
+  nameWithType: ArgumentHelper.CheckNotNull
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckValue*
+  commentId: Overload:Juhta.Net.Helpers.ArgumentHelper.CheckValue
+  isExternal: false
+  name: CheckValue
+  nameWithType: ArgumentHelper.CheckValue
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckValue

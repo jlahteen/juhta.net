@@ -1,0 +1,737 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Diagnostics.AlertMessage
+  commentId: T:Juhta.Net.Diagnostics.AlertMessage
+  id: AlertMessage
+  parent: Juhta.Net.Diagnostics
+  children:
+  - Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String)
+  - Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AlertMessage
+  nameWithType: AlertMessage
+  fullName: Juhta.Net.Diagnostics.AlertMessage
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/AlertMessage.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: AlertMessage
+    path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs
+    startLine: 13
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nDefines a class for alert messages.\n"
+  example: []
+  syntax:
+    content: 'public class AlertMessage : DiagnosticMessage'
+    content.vb: >-
+      Public Class AlertMessage
+
+          Inherits DiagnosticMessage
+  inheritance:
+  - System.Object
+  - Juhta.Net.Diagnostics.DiagnosticMessage
+  inheritedMembers:
+  - Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  - Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  - Juhta.Net.Diagnostics.DiagnosticMessage.Type
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String)
+  commentId: M:Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.Diagnostics.AlertMessage
+  langs:
+  - csharp
+  - vb
+  name: AlertMessage(String)
+  nameWithType: AlertMessage.AlertMessage(String)
+  fullName: Juhta.Net.Diagnostics.AlertMessage.AlertMessage(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/AlertMessage.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs
+    startLine: 22
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public AlertMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: >-
+        Specifies a message that will be associated with the instance. The value can contain
+
+        format items.
+    content.vb: Public Sub New(message As String)
+  overload: Juhta.Net.Diagnostics.AlertMessage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.Diagnostics.AlertMessage.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Juhta.Net.Diagnostics.AlertMessage
+  langs:
+  - csharp
+  - vb
+  name: AlertMessage(String, String)
+  nameWithType: AlertMessage.AlertMessage(String, String)
+  fullName: Juhta.Net.Diagnostics.AlertMessage.AlertMessage(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/AlertMessage.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public AlertMessage(string message, string id)
+    parameters:
+    - id: message
+      type: System.String
+      description: >-
+        Specifies a message that will be associated with the instance. The value can contain
+
+        format items.
+    - id: id
+      type: System.String
+      description: Specifies a value for the <xref href="Juhta.Net.Diagnostics.DiagnosticMessage.Id" data-throw-if-not-resolved="false"></xref> property.
+    content.vb: Public Sub New(message As String, id As String)
+  overload: Juhta.Net.Diagnostics.AlertMessage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: DiagnosticMessage
+  nameWithType: DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: true
+  name: FormatMessage(Object[])
+  nameWithType: DiagnosticMessage.FormatMessage(Object[])
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+  nameWithType.vb: DiagnosticMessage.FormatMessage(Object())
+  fullName.vb: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object())
+  name.vb: FormatMessage(Object())
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+    name: FormatMessage
+    nameWithType: DiagnosticMessage.FormatMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage(System.Object[])
+    name: FormatMessage
+    nameWithType: DiagnosticMessage.FormatMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.FormatMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: false
+  name: GetIntegerId()
+  nameWithType: DiagnosticMessage.GetIntegerId()
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId()
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+    name: GetIntegerId
+    nameWithType: DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+    name: GetIntegerId
+    nameWithType: DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: true
+  name: GetIntegerId(String)
+  nameWithType: DiagnosticMessage.GetIntegerId(String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+    name: GetIntegerId
+    nameWithType: DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId(System.String)
+    name: GetIntegerId
+    nameWithType: DiagnosticMessage.GetIntegerId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetIntegerId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: false
+  name: GetMessage()
+  nameWithType: DiagnosticMessage.GetMessage()
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage()
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+    name: GetMessage
+    nameWithType: DiagnosticMessage.GetMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+    name: GetMessage
+    nameWithType: DiagnosticMessage.GetMessage
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.GetMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: true
+  name: TryGetMessageId(Exception, String)
+  nameWithType: DiagnosticMessage.TryGetMessageId(Exception, String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception, System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+    name: TryGetMessageId
+    nameWithType: DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.Exception,System.String@)
+    name: TryGetMessageId
+    nameWithType: DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: true
+  name: TryGetMessageId(String, String)
+  nameWithType: DiagnosticMessage.TryGetMessageId(String, String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String, System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+    name: TryGetMessageId
+    nameWithType: DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId(System.String,System.String@)
+    name: TryGetMessageId
+    nameWithType: DiagnosticMessage.TryGetMessageId
+    fullName: Juhta.Net.Diagnostics.DiagnosticMessage.TryGetMessageId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Id
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: false
+  name: Id
+  nameWithType: DiagnosticMessage.Id
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Id
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Message
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: false
+  name: Message
+  nameWithType: DiagnosticMessage.Message
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Message
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage.Type
+  commentId: P:Juhta.Net.Diagnostics.DiagnosticMessage.Type
+  parent: Juhta.Net.Diagnostics.DiagnosticMessage
+  isExternal: false
+  name: Type
+  nameWithType: DiagnosticMessage.Type
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage.Type
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Diagnostics.AlertMessage.#ctor*
+  commentId: Overload:Juhta.Net.Diagnostics.AlertMessage.#ctor
+  isExternal: false
+  name: AlertMessage
+  nameWithType: AlertMessage.AlertMessage
+  fullName: Juhta.Net.Diagnostics.AlertMessage.AlertMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

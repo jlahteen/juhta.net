@@ -1,0 +1,571 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Console.PlainArgument
+  commentId: T:Juhta.Net.Console.PlainArgument
+  id: PlainArgument
+  parent: Juhta.Net.Console
+  children:
+  - Juhta.Net.Console.PlainArgument.#ctor(System.String)
+  langs:
+  - csharp
+  - vb
+  name: PlainArgument
+  nameWithType: PlainArgument
+  fullName: Juhta.Net.Console.PlainArgument
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Console/PlainArgument.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: PlainArgument
+    path: ../src/Juhta.Net/Console/PlainArgument.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nDefines a class that represents a plain argument. At the command line level, plain arguments are handled as\nindividual arguments without any parsing. An argument is assumed to be a plain argument if it doesn’t begin\nwith a reserved prefix and it’s not a successor of an argument name argument.\n"
+  example: []
+  syntax:
+    content: 'public class PlainArgument : CommandLineArgument'
+    content.vb: >-
+      Public Class PlainArgument
+
+          Inherits CommandLineArgument
+  inheritance:
+  - System.Object
+  - Juhta.Net.Console.CommandLineArgument
+  inheritedMembers:
+  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{{T}})
+  - Juhta.Net.Console.CommandLineArgument.Consumed
+  - Juhta.Net.Console.CommandLineArgument.Value
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Console.PlainArgument.#ctor(System.String)
+  commentId: M:Juhta.Net.Console.PlainArgument.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.Console.PlainArgument
+  langs:
+  - csharp
+  - vb
+  name: PlainArgument(String)
+  nameWithType: PlainArgument.PlainArgument(String)
+  fullName: Juhta.Net.Console.PlainArgument.PlainArgument(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Console/PlainArgument.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Console/PlainArgument.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Console
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public PlainArgument(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: Specifies a value for the <xref href="Juhta.Net.Console.CommandLineArgument.Value" data-throw-if-not-resolved="false"></xref> property.
+    content.vb: Public Sub New(value As String)
+  overload: Juhta.Net.Console.PlainArgument.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.Console
+  commentId: N:Juhta.Net.Console
+  isExternal: false
+  name: Juhta.Net.Console
+  nameWithType: Juhta.Net.Console
+  fullName: Juhta.Net.Console
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.Console.CommandLineArgument
+  commentId: T:Juhta.Net.Console.CommandLineArgument
+  parent: Juhta.Net.Console
+  isExternal: false
+  name: CommandLineArgument
+  nameWithType: CommandLineArgument
+  fullName: Juhta.Net.Console.CommandLineArgument
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: GetValueAs<T>()
+  nameWithType: CommandLineArgument.GetValueAs<T>()
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>()
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)()
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)()
+  name.vb: GetValueAs(Of T)()
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{{T}})
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  parent: Juhta.Net.Console.CommandLineArgument
+  definition: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  name: GetValueAs<T>(IValidator<T>)
+  nameWithType: CommandLineArgument.GetValueAs<T>(IValidator<T>)
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validators.IValidator<T>)
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)(IValidator(Of T))
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validators.IValidator(Of T))
+  name.vb: GetValueAs(Of T)(IValidator(Of T))
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Console.CommandLineArgument.Consumed
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Consumed
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: Consumed
+  nameWithType: CommandLineArgument.Consumed
+  fullName: Juhta.Net.Console.CommandLineArgument.Consumed
+- uid: Juhta.Net.Console.CommandLineArgument.Value
+  commentId: P:Juhta.Net.Console.CommandLineArgument.Value
+  parent: Juhta.Net.Console.CommandLineArgument
+  isExternal: false
+  name: Value
+  nameWithType: CommandLineArgument.Value
+  fullName: Juhta.Net.Console.CommandLineArgument.Value
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  isExternal: false
+  name: GetValueAs<T>(IValidator<T>)
+  nameWithType: CommandLineArgument.GetValueAs<T>(IValidator<T>)
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validators.IValidator<T>)
+  nameWithType.vb: CommandLineArgument.GetValueAs(Of T)(IValidator(Of T))
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validators.IValidator(Of T))
+  name.vb: GetValueAs(Of T)(IValidator(Of T))
+  spec.csharp:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs<T>
+    nameWithType: CommandLineArgument.GetValueAs<T>
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+    name: GetValueAs(Of T)
+    nameWithType: CommandLineArgument.GetValueAs(Of T)
+    fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Console.PlainArgument.#ctor*
+  commentId: Overload:Juhta.Net.Console.PlainArgument.#ctor
+  isExternal: false
+  name: PlainArgument
+  nameWithType: PlainArgument.PlainArgument
+  fullName: Juhta.Net.Console.PlainArgument.PlainArgument
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

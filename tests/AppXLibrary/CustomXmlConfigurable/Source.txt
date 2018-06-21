@@ -1,0 +1,103 @@
+﻿
+using Juhta.Net.Common;
+using Juhta.Net.LibraryManagement;
+using System;
+using System.Xml;
+using System.Xml.Schema;
+using AppXLibrary;
+
+namespace {{AssemblyFileName}}.CustomXmlConfigurable
+{
+    public class CustomXmlConfigurableLibrary : AppXLibrary.CustomXmlConfigurable.CustomXmlConfigurableLibrary
+    {
+        #region Public Constructors
+
+        public CustomXmlConfigurableLibrary() : base("{{AssemblyFileName}}")
+        {}
+
+        #endregion
+
+        #region Public Methods
+
+        public override void InitializeLibrary(XmlDocument config)
+        {
+            XmlNamespaceManager namespaceManager = new XmlNamespaceManager(config.NameTable);
+            XmlNode node;
+
+            namespaceManager.AddNamespace("ns", "http://tempuri.org/Config.xsd");
+
+            LibraryConfig.IntSetting = Convert.ToInt32(config.SelectSingleNode("/ns:settings/ns:intSetting", namespaceManager).InnerText);
+
+            LibraryConfig.StringSetting = Convert.ToString(config.SelectSingleNode("/ns:settings/ns:stringSetting", namespaceManager).InnerText) + String.Format("_{0:000}", {{Copy}});
+
+            node = config.SelectSingleNode("/ns:settings/ns:closeLibraryReturnValue", namespaceManager);
+
+            if (node != null)
+                LibraryConfig.CloseLibraryReturnValue = Convert.ToBoolean(node.InnerText);
+            else
+                LibraryConfig.CloseLibraryReturnValue = true;
+
+            node = config.SelectSingleNode("/ns:settings/ns:closeLibraryThrowException", namespaceManager);
+
+            if (node != null)
+                LibraryConfig.CloseLibraryThrowException = Convert.ToBoolean(node.InnerText);
+            else
+                LibraryConfig.CloseLibraryThrowException = false;
+
+            if (LibraryConfig.IntSetting == 1234567)
+                throw new InvalidConfigValueException("IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
+        }
+
+        #endregion
+    }
+
+    public class LibraryConfig : AppXLibrary.CustomXmlConfig.ILibraryConfig
+    {
+        #region Public Methods
+
+        public int GetIntSetting()
+        {
+            return(LibraryConfig.IntSetting);
+        }
+
+        public string GetStringSetting()
+        {
+            return(LibraryConfig.StringSetting);
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public static bool CloseLibraryReturnValue {get; set;}
+
+        public static bool CloseLibraryThrowException {get; set;}
+
+        public static int IntSetting {get; set;}
+
+        public static string StringSetting {get; set;}
+
+        #endregion
+    }
+
+    public class LibraryHandle : LibraryHandleBase, IInitializableLibrary
+    {
+        #region Public Constructors
+
+        public LibraryHandle() : base("{{AssemblyFileName}}")
+        {}
+
+        #endregion
+
+        #region Public Methods
+
+        public void InitializeLibrary()
+        {
+            LibraryConfig.IntSetting = 121213;
+
+            LibraryConfig.StringSetting = "This is the default value for the StringSetting set by the default LibraryHandle class.";
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
+  id: IDynamicLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  langs:
+  - csharp
+  - vb
+  name: IDynamicLibrary
+  nameWithType: IDynamicLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: IDynamicLibrary
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically\nchanged at the runtime e.g. by modifying the configuration of the library.\n"
+  example: []
+  syntax:
+    content: public interface IDynamicLibrary
+    content.vb: Public Interface IDynamicLibrary
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  id: GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  langs:
+  - csharp
+  - vb
+  name: GoLive(ILibraryState)
+  nameWithType: IDynamicLibrary.GoLive(ILibraryState)
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GoLive
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    startLine: 29
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGoes live with a specified <xref href=\"Juhta.Net.LibraryManagement.ILibraryState\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  remarks: "\n<p>It can be assumed that the specified <xref href=\"Juhta.Net.LibraryManagement.ILibraryState\" data-throw-if-not-resolved=\"false\"></xref> instance is fully initialized.</p>\n<p>This method makes it possible to encapsulate the final steps that are required to set an initialized\nlibrary state as the effective library state.</p>\n"
+  example: []
+  syntax:
+    content: void GoLive(ILibraryState libraryState)
+    parameters:
+    - id: libraryState
+      type: Juhta.Net.LibraryManagement.ILibraryState
+      description: Specifies an <xref href="Juhta.Net.LibraryManagement.ILibraryState" data-throw-if-not-resolved="false"></xref> instance to go live with.
+    content.vb: Sub GoLive(libraryState As ILibraryState)
+  overload: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive*
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  id: LibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  langs:
+  - csharp
+  - vb
+  name: LibraryState
+  nameWithType: IDynamicLibrary.LibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryState
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    startLine: 38
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets or sets the current state of the library.\n"
+  example: []
+  syntax:
+    content: ILibraryState LibraryState { get; set; }
+    parameters: []
+    return:
+      type: Juhta.Net.LibraryManagement.ILibraryState
+    content.vb: Property LibraryState As ILibraryState
+  overload: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState*
+  modifiers.csharp:
+  - get
+  - set
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  id: LibraryStateLock
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  langs:
+  - csharp
+  - vb
+  name: LibraryStateLock
+  nameWithType: IDynamicLibrary.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryStateLock
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    startLine: 44
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets a <xref href=\"System.Threading.ReaderWriterLockSlim\" data-throw-if-not-resolved=\"false\"></xref> object managing concurrent access to the current state of the\nlibrary.\n"
+  example: []
+  syntax:
+    content: ReaderWriterLockSlim LibraryStateLock { get; }
+    parameters: []
+    return:
+      type: System.Threading.ReaderWriterLockSlim
+    content.vb: ReadOnly Property LibraryStateLock As ReaderWriterLockSlim
+  overload: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.ILibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ILibraryState
+  nameWithType: ILibraryState
+  fullName: Juhta.Net.LibraryManagement.ILibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  isExternal: false
+  name: GoLive
+  nameWithType: IDynamicLibrary.GoLive
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  isExternal: false
+  name: LibraryState
+  nameWithType: IDynamicLibrary.LibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+- uid: System.Threading.ReaderWriterLockSlim
+  commentId: T:System.Threading.ReaderWriterLockSlim
+  parent: System.Threading
+  isExternal: true
+  name: ReaderWriterLockSlim
+  nameWithType: ReaderWriterLockSlim
+  fullName: System.Threading.ReaderWriterLockSlim
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  isExternal: false
+  name: LibraryStateLock
+  nameWithType: IDynamicLibrary.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: false
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading

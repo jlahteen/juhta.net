@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Common.Singleton`1
+  commentId: T:Juhta.Net.Common.Singleton`1
+  id: Singleton`1
+  parent: Juhta.Net.Common
+  children:
+  - Juhta.Net.Common.Singleton`1.Instance
+  - Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  - Juhta.Net.Common.Singleton`1.s_instance
+  - Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
+  langs:
+  - csharp
+  - vb
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: Juhta.Net.Common.Singleton<T>
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Common/Singleton.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Singleton
+    path: ../src/Juhta.Net/Common/Singleton.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nDefines an abstract base class for singleton classes.\n"
+  example: []
+  syntax:
+    content: public abstract class Singleton<T>
+    typeParameters:
+    - id: T
+      description: Specifies a type to make as singleton.
+    content.vb: Public MustInherit Class Singleton(Of T)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Juhta.Net.Application
+  - Juhta.Net.Services.ServiceFactory
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: Singleton(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Juhta.Net.Common.Singleton(Of T)
+  name.vb: Singleton(Of T)
+- uid: Juhta.Net.Common.Singleton`1.Instance
+  commentId: P:Juhta.Net.Common.Singleton`1.Instance
+  id: Instance
+  parent: Juhta.Net.Common.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: Juhta.Net.Common.Singleton<T>.Instance
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Common/Singleton.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Instance
+    path: ../src/Juhta.Net/Common/Singleton.cs
+    startLine: 35
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nGets the singleton instance of <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code>.\n"
+  example: []
+  syntax:
+    content: public static T Instance { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Shared ReadOnly Property Instance As T
+  overload: Juhta.Net.Common.Singleton`1.Instance*
+  nameWithType.vb: Singleton(Of T).Instance
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).Instance
+- uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  commentId: M:Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  id: ResetSingletonInstance
+  parent: Juhta.Net.Common.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: ResetSingletonInstance()
+  nameWithType: Singleton<T>.ResetSingletonInstance()
+  fullName: Juhta.Net.Common.Singleton<T>.ResetSingletonInstance()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Common/Singleton.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: ResetSingletonInstance
+    path: ../src/Juhta.Net/Common/Singleton.cs
+    startLine: 53
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nSets a null value as the singleton instance.\n"
+  example: []
+  syntax:
+    content: protected void ResetSingletonInstance()
+    content.vb: Protected Sub ResetSingletonInstance
+  overload: Juhta.Net.Common.Singleton`1.ResetSingletonInstance*
+  nameWithType.vb: Singleton(Of T).ResetSingletonInstance()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).ResetSingletonInstance()
+- uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
+  commentId: M:Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
+  id: SetSingletonInstance(`0)
+  parent: Juhta.Net.Common.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: SetSingletonInstance(T)
+  nameWithType: Singleton<T>.SetSingletonInstance(T)
+  fullName: Juhta.Net.Common.Singleton<T>.SetSingletonInstance(T)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Common/Singleton.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: SetSingletonInstance
+    path: ../src/Juhta.Net/Common/Singleton.cs
+    startLine: 66
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nSets a specified value as the singleton instance.\n"
+  example: []
+  syntax:
+    content: protected void SetSingletonInstance(T instance)
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: >-
+        Specifies an instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> to be set as the singleton
+
+        instance.
+    content.vb: Protected Sub SetSingletonInstance(instance As T)
+  overload: Juhta.Net.Common.Singleton`1.SetSingletonInstance*
+  nameWithType.vb: Singleton(Of T).SetSingletonInstance(T)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).SetSingletonInstance(T)
+- uid: Juhta.Net.Common.Singleton`1.s_instance
+  commentId: F:Juhta.Net.Common.Singleton`1.s_instance
+  id: s_instance
+  parent: Juhta.Net.Common.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: s_instance
+  nameWithType: Singleton<T>.s_instance
+  fullName: Juhta.Net.Common.Singleton<T>.s_instance
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Common/Singleton.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: s_instance
+    path: ../src/Juhta.Net/Common/Singleton.cs
+    startLine: 84
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Common
+  summary: "\nStores the <xref href=\"Juhta.Net.Common.Singleton%601.Instance\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: protected static T s_instance
+    return:
+      type: '{T}'
+    content.vb: Protected Shared s_instance As T
+  nameWithType.vb: Singleton(Of T).s_instance
+  modifiers.csharp:
+  - protected
+  - static
+  modifiers.vb:
+  - Protected
+  - Shared
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).s_instance
+references:
+- uid: Juhta.Net.Common
+  commentId: N:Juhta.Net.Common
+  isExternal: false
+  name: Juhta.Net.Common
+  nameWithType: Juhta.Net.Common
+  fullName: Juhta.Net.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Common.Singleton`1.Instance*
+  commentId: Overload:Juhta.Net.Common.Singleton`1.Instance
+  isExternal: false
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: Juhta.Net.Common.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).Instance
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance*
+  commentId: Overload:Juhta.Net.Common.Singleton`1.ResetSingletonInstance
+  isExternal: false
+  name: ResetSingletonInstance
+  nameWithType: Singleton<T>.ResetSingletonInstance
+  fullName: Juhta.Net.Common.Singleton<T>.ResetSingletonInstance
+  nameWithType.vb: Singleton(Of T).ResetSingletonInstance
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).ResetSingletonInstance
+- uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance*
+  commentId: Overload:Juhta.Net.Common.Singleton`1.SetSingletonInstance
+  isExternal: false
+  name: SetSingletonInstance
+  nameWithType: Singleton<T>.SetSingletonInstance
+  fullName: Juhta.Net.Common.Singleton<T>.SetSingletonInstance
+  nameWithType.vb: Singleton(Of T).SetSingletonInstance
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).SetSingletonInstance
+- uid: Juhta.Net.Common.Singleton`1.Instance
+  commentId: P:Juhta.Net.Common.Singleton`1.Instance
+  isExternal: false
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: Juhta.Net.Common.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: Juhta.Net.Common.Singleton(Of T).Instance

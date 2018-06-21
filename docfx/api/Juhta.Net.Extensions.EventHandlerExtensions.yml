@@ -1,0 +1,551 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Extensions.EventHandlerExtensions
+  commentId: T:Juhta.Net.Extensions.EventHandlerExtensions
+  id: EventHandlerExtensions
+  parent: Juhta.Net.Extensions
+  children:
+  - Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent(System.EventHandler,System.Object)
+  - Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)
+  langs:
+  - csharp
+  - vb
+  name: EventHandlerExtensions
+  nameWithType: EventHandlerExtensions
+  fullName: Juhta.Net.Extensions.EventHandlerExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: EventHandlerExtensions
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nDefines a static class containing extension methods for the <xref href=\"System.EventHandler\" data-throw-if-not-resolved=\"false\"></xref> delegate.\n"
+  example: []
+  syntax:
+    content: public static class EventHandlerExtensions
+    content.vb: Public Module EventHandlerExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent(System.EventHandler,System.Object)
+  commentId: M:Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent(System.EventHandler,System.Object)
+  id: RaiseEvent(System.EventHandler,System.Object)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.EventHandlerExtensions
+  langs:
+  - csharp
+  - vb
+  name: RaiseEvent(EventHandler, Object)
+  nameWithType: EventHandlerExtensions.RaiseEvent(EventHandler, Object)
+  fullName: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent(System.EventHandler, System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: RaiseEvent
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    startLine: 24
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRaises the event specified by this EventHandler delegate.\n"
+  example: []
+  syntax:
+    content: public static void RaiseEvent(this EventHandler eventHandler, object sender)
+    parameters:
+    - id: eventHandler
+      type: System.EventHandler
+      description: Specifies the current EventHandler delegate.
+    - id: sender
+      type: System.Object
+      description: Specifies an event source.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub RaiseEvent(eventHandler As EventHandler, sender As Object)
+  overload: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)
+  commentId: M:Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)
+  id: RaiseEvent``1(System.EventHandler{``0},System.Object,``0)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.EventHandlerExtensions
+  langs:
+  - csharp
+  - vb
+  name: RaiseEvent<TEventArgs>(EventHandler<TEventArgs>, Object, TEventArgs)
+  nameWithType: EventHandlerExtensions.RaiseEvent<TEventArgs>(EventHandler<TEventArgs>, Object, TEventArgs)
+  fullName: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent<TEventArgs>(System.EventHandler<TEventArgs>, System.Object, TEventArgs)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: RaiseEvent
+    path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
+    startLine: 37
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nRaises the event specified by this EventHandler delegate.\n"
+  example: []
+  syntax:
+    content: 'public static void RaiseEvent<TEventArgs>(this EventHandler<TEventArgs> eventHandler, object sender, TEventArgs eventArgs)where TEventArgs : EventArgs'
+    parameters:
+    - id: eventHandler
+      type: System.EventHandler{{TEventArgs}}
+      description: Specifies the current EventHandler delegate.
+    - id: sender
+      type: System.Object
+      description: Specifies an event source.
+    - id: eventArgs
+      type: '{TEventArgs}'
+      description: Specifies an object containing the event data.
+    typeParameters:
+    - id: TEventArgs
+      description: Specifies the type of the event data.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub RaiseEvent(Of TEventArgs As EventArgs)(eventHandler As EventHandler(Of TEventArgs), sender As Object, eventArgs As TEventArgs)
+  overload: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent*
+  nameWithType.vb: EventHandlerExtensions.RaiseEvent(Of TEventArgs)(EventHandler(Of TEventArgs), Object, TEventArgs)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent(Of TEventArgs)(System.EventHandler(Of TEventArgs), System.Object, TEventArgs)
+  name.vb: RaiseEvent(Of TEventArgs)(EventHandler(Of TEventArgs), Object, TEventArgs)
+references:
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: Juhta.Net.Extensions
+  commentId: N:Juhta.Net.Extensions
+  isExternal: false
+  name: Juhta.Net.Extensions
+  nameWithType: Juhta.Net.Extensions
+  fullName: Juhta.Net.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent*
+  commentId: Overload:Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent
+  isExternal: false
+  name: RaiseEvent
+  nameWithType: EventHandlerExtensions.RaiseEvent
+  fullName: Juhta.Net.Extensions.EventHandlerExtensions.RaiseEvent
+- uid: System.EventHandler{{TEventArgs}}
+  commentId: T:System.EventHandler{``0}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TEventArgs}'
+  commentId: '!:TEventArgs'
+  definition: TEventArgs
+  name: TEventArgs
+  nameWithType: TEventArgs
+  fullName: TEventArgs
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TEventArgs
+  commentId: '!:TEventArgs'
+  isExternal: false
+  name: TEventArgs
+  nameWithType: TEventArgs
+  fullName: TEventArgs

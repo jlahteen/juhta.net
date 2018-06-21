@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  id: ICustomXmlConfigurableLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas
+  - Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)
+  langs:
+  - csharp
+  - vb
+  name: ICustomXmlConfigurableLibrary
+  nameWithType: ICustomXmlConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: ICustomXmlConfigurableLibrary
+    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for custom XML configurable libraries. A library is custom XML configurable if it is\nconfigurable and the configuration is done with a custom XML configuration.\n"
+  example: []
+  syntax:
+    content: 'public interface ICustomXmlConfigurableLibrary : IConfigurableLibraryBase'
+    content.vb: >-
+      Public Interface ICustomXmlConfigurableLibrary
+
+          Inherits IConfigurableLibraryBase
+  inheritedMembers:
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas
+  commentId: M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas
+  id: GetConfigSchemas
+  parent: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  langs:
+  - csharp
+  - vb
+  name: GetConfigSchemas()
+  nameWithType: ICustomXmlConfigurableLibrary.GetConfigSchemas()
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetConfigSchemas
+    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    startLine: 27
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets the XML schemas to which configuration files must conform.\n"
+  remarks: >-
+    The return value null indicates that the configuration of the library is not controlled by XML
+
+    schemas.
+  example: []
+  syntax:
+    content: XmlSchema[] GetConfigSchemas()
+    return:
+      type: System.Xml.Schema.XmlSchema[]
+      description: Returns an array of <xref href="System.Xml.Schema.XmlSchema" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: Function GetConfigSchemas As XmlSchema()
+  overload: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas*
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)
+  commentId: M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)
+  id: InitializeLibrary(System.Xml.XmlDocument)
+  parent: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary
+  langs:
+  - csharp
+  - vb
+  name: InitializeLibrary(XmlDocument)
+  nameWithType: ICustomXmlConfigurableLibrary.InitializeLibrary(XmlDocument)
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: InitializeLibrary
+    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    startLine: 34
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes the library based on a specified XML configuration.\n"
+  example: []
+  syntax:
+    content: void InitializeLibrary(XmlDocument config)
+    parameters:
+    - id: config
+      type: System.Xml.XmlDocument
+      description: >-
+        Specifies an <xref href="System.Xml.XmlDocument" data-throw-if-not-resolved="false"></xref> object containing an XML configuration for the
+
+        library.
+    content.vb: Sub InitializeLibrary(config As XmlDocument)
+  overload: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  isExternal: false
+  name: ConfigFileName
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas*
+  commentId: Overload:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas
+  isExternal: false
+  name: GetConfigSchemas
+  nameWithType: ICustomXmlConfigurableLibrary.GetConfigSchemas
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas
+- uid: System.Xml.Schema.XmlSchema[]
+  name: XmlSchema[]
+  nameWithType: XmlSchema[]
+  fullName: System.Xml.Schema.XmlSchema[]
+  nameWithType.vb: XmlSchema()
+  fullName.vb: System.Xml.Schema.XmlSchema()
+  name.vb: XmlSchema()
+  spec.csharp:
+  - uid: System.Xml.Schema.XmlSchema
+    name: XmlSchema
+    nameWithType: XmlSchema
+    fullName: System.Xml.Schema.XmlSchema
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Xml.Schema.XmlSchema
+    name: XmlSchema
+    nameWithType: XmlSchema
+    fullName: System.Xml.Schema.XmlSchema
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: false
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
+- uid: System.Xml.XmlDocument
+  commentId: T:System.Xml.XmlDocument
+  parent: System.Xml
+  isExternal: true
+  name: XmlDocument
+  nameWithType: XmlDocument
+  fullName: System.Xml.XmlDocument
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary*
+  commentId: Overload:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary
+  isExternal: false
+  name: InitializeLibrary
+  nameWithType: ICustomXmlConfigurableLibrary.InitializeLibrary
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: false
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml

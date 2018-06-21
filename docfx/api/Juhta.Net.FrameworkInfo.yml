@@ -1,0 +1,491 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.FrameworkInfo
+  commentId: T:Juhta.Net.FrameworkInfo
+  id: FrameworkInfo
+  parent: Juhta.Net
+  children:
+  - Juhta.Net.FrameworkInfo.Copyright
+  - Juhta.Net.FrameworkInfo.FrameworkName
+  - Juhta.Net.FrameworkInfo.RootNamespace
+  langs:
+  - csharp
+  - vb
+  name: FrameworkInfo
+  nameWithType: FrameworkInfo
+  fullName: Juhta.Net.FrameworkInfo
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/FrameworkInfo.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: FrameworkInfo
+    path: ../src/Juhta.Net/FrameworkInfo.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nA static class that provides read-only information about the framework.\n"
+  example: []
+  syntax:
+    content: public static class FrameworkInfo
+    content.vb: Public Module FrameworkInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.FrameworkInfo.Copyright
+  commentId: P:Juhta.Net.FrameworkInfo.Copyright
+  id: Copyright
+  parent: Juhta.Net.FrameworkInfo
+  langs:
+  - csharp
+  - vb
+  name: Copyright
+  nameWithType: FrameworkInfo.Copyright
+  fullName: Juhta.Net.FrameworkInfo.Copyright
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/FrameworkInfo.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: Copyright
+    path: ../src/Juhta.Net/FrameworkInfo.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nGets the copyright of the framework.\n"
+  example: []
+  syntax:
+    content: public static string Copyright { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Copyright As String
+  overload: Juhta.Net.FrameworkInfo.Copyright*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.FrameworkInfo.FrameworkName
+  commentId: P:Juhta.Net.FrameworkInfo.FrameworkName
+  id: FrameworkName
+  parent: Juhta.Net.FrameworkInfo
+  langs:
+  - csharp
+  - vb
+  name: FrameworkName
+  nameWithType: FrameworkInfo.FrameworkName
+  fullName: Juhta.Net.FrameworkInfo.FrameworkName
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/FrameworkInfo.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: FrameworkName
+    path: ../src/Juhta.Net/FrameworkInfo.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nGets the name of the framework.\n"
+  example: []
+  syntax:
+    content: public static string FrameworkName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property FrameworkName As String
+  overload: Juhta.Net.FrameworkInfo.FrameworkName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.FrameworkInfo.RootNamespace
+  commentId: P:Juhta.Net.FrameworkInfo.RootNamespace
+  id: RootNamespace
+  parent: Juhta.Net.FrameworkInfo
+  langs:
+  - csharp
+  - vb
+  name: RootNamespace
+  nameWithType: FrameworkInfo.RootNamespace
+  fullName: Juhta.Net.FrameworkInfo.RootNamespace
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/FrameworkInfo.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: RootNamespace
+    path: ../src/Juhta.Net/FrameworkInfo.cs
+    startLine: 39
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net
+  summary: "\nGets the root namespace of the framework.\n"
+  example: []
+  syntax:
+    content: public static string RootNamespace { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RootNamespace As String
+  overload: Juhta.Net.FrameworkInfo.RootNamespace*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Juhta.Net
+  commentId: N:Juhta.Net
+  isExternal: false
+  name: Juhta.Net
+  nameWithType: Juhta.Net
+  fullName: Juhta.Net
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.FrameworkInfo.Copyright*
+  commentId: Overload:Juhta.Net.FrameworkInfo.Copyright
+  isExternal: false
+  name: Copyright
+  nameWithType: FrameworkInfo.Copyright
+  fullName: Juhta.Net.FrameworkInfo.Copyright
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Juhta.Net.FrameworkInfo.FrameworkName*
+  commentId: Overload:Juhta.Net.FrameworkInfo.FrameworkName
+  isExternal: false
+  name: FrameworkName
+  nameWithType: FrameworkInfo.FrameworkName
+  fullName: Juhta.Net.FrameworkInfo.FrameworkName
+- uid: Juhta.Net.FrameworkInfo.RootNamespace*
+  commentId: Overload:Juhta.Net.FrameworkInfo.RootNamespace
+  isExternal: false
+  name: RootNamespace
+  nameWithType: FrameworkInfo.RootNamespace
+  fullName: Juhta.Net.FrameworkInfo.RootNamespace

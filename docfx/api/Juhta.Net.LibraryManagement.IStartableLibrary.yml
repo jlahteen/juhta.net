@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IStartableLibrary
+  id: IStartableLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses
+  - Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses
+  langs:
+  - csharp
+  - vb
+  name: IStartableLibrary
+  nameWithType: IStartableLibrary
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: IStartableLibrary
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for startable libraries. A library is a startable library if it contains at least one\nprocess that has to be started prior to the library services can be used.\n"
+  example: []
+  syntax:
+    content: public interface IStartableLibrary
+    content.vb: Public Interface IStartableLibrary
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses
+  commentId: M:Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses
+  id: StartProcesses
+  parent: Juhta.Net.LibraryManagement.IStartableLibrary
+  langs:
+  - csharp
+  - vb
+  name: StartProcesses()
+  nameWithType: IStartableLibrary.StartProcesses()
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: StartProcesses
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+    startLine: 21
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nStarts the library processes.\n"
+  example: []
+  syntax:
+    content: void StartProcesses()
+    content.vb: Sub StartProcesses
+  overload: Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses*
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses
+  commentId: M:Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses
+  id: StopProcesses
+  parent: Juhta.Net.LibraryManagement.IStartableLibrary
+  langs:
+  - csharp
+  - vb
+  name: StopProcesses()
+  nameWithType: IStartableLibrary.StopProcesses()
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: StopProcesses
+    path: ../src/Juhta.Net/LibraryManagement/IStartableLibrary.cs
+    startLine: 36
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nStops the library processes.\n"
+  remarks: "\n<p>This method should not throw exceptions. It is recommended that, in case of an error, the error is\nlogged and the stopping process is continued for the rest of the processes. In other words, the method\nshould stop the library processes as completely as possible.</p>\n<p>This method will be called even if the initialization process of the library has failed. This means\nthat the method should prepare for such situation where the library processes have not been started at all\nor started only partially.</p>\n"
+  example: []
+  syntax:
+    content: bool StopProcesses()
+    return:
+      type: System.Boolean
+      description: >-
+        Returns true if the library processes were stopped without errors, or false if at least one error
+
+        occurred in the stopping process.
+    content.vb: Function StopProcesses As Boolean
+  overload: Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses*
+  commentId: Overload:Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses
+  isExternal: false
+  name: StartProcesses
+  nameWithType: IStartableLibrary.StartProcesses
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary.StartProcesses
+- uid: Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses*
+  commentId: Overload:Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses
+  isExternal: false
+  name: StopProcesses
+  nameWithType: IStartableLibrary.StopProcesses
+  fullName: Juhta.Net.LibraryManagement.IStartableLibrary.StopProcesses
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Cloning\Source.txt" />
+    <None Remove="Config.xsd" />
+    <None Remove="DynamicCustomXmlConfigurableAndStartable\Source.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CustomXmlConfigurable\Source.txt" />
+    <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Config.xsd" />
+    <EmbeddedResource Include="DynamicCustomXmlConfigurableAndStartable\Source.txt" />
+    <EmbeddedResource Include="DynamicCustomXmlConfigurable\Config.xsd" />
+    <EmbeddedResource Include="CustomXmlConfig\Config.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Juhta.Net\Juhta.Net.csproj" />
+  </ItemGroup>
+
+</Project>

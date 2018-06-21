@@ -1,0 +1,7 @@
+- name: Home
+  href: /
+- name: Documentation
+  href: docs/
+- name: API Reference
+  href: api/
+  homepage: api/Juhta.Net.yml

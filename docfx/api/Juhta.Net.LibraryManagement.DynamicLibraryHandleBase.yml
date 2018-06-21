@@ -1,0 +1,837 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  id: DynamicLibraryHandleBase
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor(System.String)
+  - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+  - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+  langs:
+  - csharp
+  - vb
+  name: DynamicLibraryHandleBase
+  nameWithType: DynamicLibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: DynamicLibraryHandleBase
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an abstract base class for dynamic library handles.\n"
+  example: []
+  syntax:
+    content: 'public abstract class DynamicLibraryHandleBase : LibraryHandleBase, ILibraryHandle, IDynamicLibrary'
+    content.vb: >-
+      Public MustInherit Class DynamicLibraryHandleBase
+
+          Inherits LibraryHandleBase
+
+          Implements ILibraryHandle, IDynamicLibrary
+  inheritance:
+  - System.Object
+  - Juhta.Net.LibraryManagement.LibraryHandleBase
+  implements:
+  - Juhta.Net.LibraryManagement.ILibraryHandle
+  - Juhta.Net.LibraryManagement.IDynamicLibrary
+  inheritedMembers:
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  commentId: M:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  id: GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  parent: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: GoLive(ILibraryState)
+  nameWithType: DynamicLibraryHandleBase.GoLive(ILibraryState)
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GoLive
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    startLine: 22
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public virtual void GoLive(ILibraryState libraryState)
+    parameters:
+    - id: libraryState
+      type: Juhta.Net.LibraryManagement.ILibraryState
+    content.vb: Public Overridable Sub GoLive(libraryState As ILibraryState)
+  overload: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive*
+  implements:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+  commentId: P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+  id: LibraryState
+  parent: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: LibraryState
+  nameWithType: DynamicLibraryHandleBase.LibraryState
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryState
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    startLine: 32
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ILibraryState LibraryState { get; set; }
+    parameters: []
+    return:
+      type: Juhta.Net.LibraryManagement.ILibraryState
+    content.vb: Public Property LibraryState As ILibraryState
+  overload: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState*
+  implements:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+  commentId: P:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+  id: LibraryStateLock
+  parent: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: LibraryStateLock
+  nameWithType: DynamicLibraryHandleBase.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: LibraryStateLock
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    startLine: 42
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ReaderWriterLockSlim LibraryStateLock { get; set; }
+    parameters: []
+    return:
+      type: System.Threading.ReaderWriterLockSlim
+    content.vb: Public Property LibraryStateLock As ReaderWriterLockSlim
+  overload: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock*
+  implements:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor(System.String)
+  commentId: M:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: DynamicLibraryHandleBase(String)
+  nameWithType: DynamicLibraryHandleBase.DynamicLibraryHandleBase(String)
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.DynamicLibraryHandleBase(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    startLine: 58
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: protected DynamicLibraryHandleBase(string libraryFileName)
+    parameters:
+    - id: libraryFileName
+      type: System.String
+      description: >-
+        Specifies a value for the <xref href="Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName" data-throw-if-not-resolved="false"></xref>
+
+        property.
+    content.vb: Protected Sub New(libraryFileName As String)
+  overload: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase
+  commentId: T:Juhta.Net.LibraryManagement.LibraryHandleBase
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: LibraryHandleBase
+  nameWithType: LibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase
+- uid: Juhta.Net.LibraryManagement.ILibraryHandle
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryHandle
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ILibraryHandle
+  nameWithType: ILibraryHandle
+  fullName: Juhta.Net.LibraryManagement.ILibraryHandle
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDynamicLibrary
+  nameWithType: IDynamicLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: false
+  name: ConfigFileName
+  nameWithType: LibraryHandleBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
+  commentId: P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: false
+  name: LibraryFileName
+  nameWithType: LibraryHandleBase.LibraryFileName
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
+  commentId: P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: false
+  name: LibraryRootNamespace
+  nameWithType: LibraryHandleBase.LibraryRootNamespace
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: false
+  name: GetCommonConfigSchema()
+  nameWithType: LibraryHandleBase.GetCommonConfigSchema()
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema()
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+    name: GetCommonConfigSchema
+    nameWithType: LibraryHandleBase.GetCommonConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+    name: GetCommonConfigSchema
+    nameWithType: LibraryHandleBase.GetCommonConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: true
+  name: GetEmbeddedConfigAndCommonSchema(Assembly, String, String)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(Assembly, String, String)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly, System.String, System.String)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+    name: GetEmbeddedConfigAndCommonSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+    name: GetEmbeddedConfigAndCommonSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: true
+  name: GetEmbeddedConfigSchema(Assembly, String, String)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema(Assembly, String, String)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly, System.String, System.String)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
+    name: GetEmbeddedConfigSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
+    name: GetEmbeddedConfigSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: GoLive(ILibraryState)
+  nameWithType: IDynamicLibrary.GoLive(ILibraryState)
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive*
+  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive
+  isExternal: false
+  name: GoLive
+  nameWithType: DynamicLibraryHandleBase.GoLive
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.GoLive
+- uid: Juhta.Net.LibraryManagement.ILibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ILibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ILibraryState
+  nameWithType: ILibraryState
+  fullName: Juhta.Net.LibraryManagement.ILibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryState
+  nameWithType: IDynamicLibrary.LibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState*
+  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+  isExternal: false
+  name: LibraryState
+  nameWithType: DynamicLibraryHandleBase.LibraryState
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryStateLock
+  nameWithType: IDynamicLibrary.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock*
+  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+  isExternal: false
+  name: LibraryStateLock
+  nameWithType: DynamicLibraryHandleBase.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.LibraryStateLock
+- uid: System.Threading.ReaderWriterLockSlim
+  commentId: T:System.Threading.ReaderWriterLockSlim
+  parent: System.Threading
+  isExternal: true
+  name: ReaderWriterLockSlim
+  nameWithType: ReaderWriterLockSlim
+  fullName: System.Threading.ReaderWriterLockSlim
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: false
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor*
+  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.#ctor
+  isExternal: false
+  name: DynamicLibraryHandleBase
+  nameWithType: DynamicLibraryHandleBase.DynamicLibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.DynamicLibraryHandleBase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

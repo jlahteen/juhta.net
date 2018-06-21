@@ -1,0 +1,548 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Extensions.AppDomainExtensions
+  commentId: T:Juhta.Net.Extensions.AppDomainExtensions
+  id: AppDomainExtensions
+  parent: Juhta.Net.Extensions
+  children:
+  - Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName(System.AppDomain,System.String)
+  - Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath(System.AppDomain,System.String)
+  - Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName(System.AppDomain,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AppDomainExtensions
+  nameWithType: AppDomainExtensions
+  fullName: Juhta.Net.Extensions.AppDomainExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: AppDomainExtensions
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nA static class that contains extension methods for the <xref href=\"System.AppDomain\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public static class AppDomainExtensions
+    content.vb: Public Module AppDomainExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName(System.AppDomain,System.String)
+  commentId: M:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName(System.AppDomain,System.String)
+  id: GetAssemblyByFileName(System.AppDomain,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AppDomainExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAssemblyByFileName(AppDomain, String)
+  nameWithType: AppDomainExtensions.GetAssemblyByFileName(AppDomain, String)
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName(System.AppDomain, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetAssemblyByFileName
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
+    startLine: 28
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a loaded assembly by an assembly file name.\n"
+  example: []
+  syntax:
+    content: public static Assembly GetAssemblyByFileName(this AppDomain appDomain, string assemblyFileName)
+    parameters:
+    - id: appDomain
+      type: System.AppDomain
+      description: Specifies the current AppDomain instance.
+    - id: assemblyFileName
+      type: System.String
+      description: Specifies an assembly file name.
+    return:
+      type: System.Reflection.Assembly
+      description: >-
+        Returns the first loaded Assembly instance whose Location property&apos;s file name part matches the
+
+        specified assembly file name, or null, if no match was found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAssemblyByFileName(appDomain As AppDomain, assemblyFileName As String) As Assembly
+  overload: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath(System.AppDomain,System.String)
+  commentId: M:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath(System.AppDomain,System.String)
+  id: GetAssemblyByPath(System.AppDomain,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AppDomainExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAssemblyByPath(AppDomain, String)
+  nameWithType: AppDomainExtensions.GetAssemblyByPath(AppDomain, String)
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath(System.AppDomain, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetAssemblyByPath
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
+    startLine: 47
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a loaded assembly by an assembly path.\n"
+  remarks: The path specified by <code data-dev-comment-type="paramref" class="paramref">assemblyPath</code> does not necessarily have to be absolute.
+  example: []
+  syntax:
+    content: public static Assembly GetAssemblyByPath(this AppDomain appDomain, string assemblyPath)
+    parameters:
+    - id: appDomain
+      type: System.AppDomain
+      description: Specifies the current AppDomain instance.
+    - id: assemblyPath
+      type: System.String
+      description: Specifies an assembly path.
+    return:
+      type: System.Reflection.Assembly
+      description: >-
+        Returns the first loaded Assembly instance whose Location property ends with the specified
+
+        assembly path, or null, if no match was found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAssemblyByPath(appDomain As AppDomain, assemblyPath As String) As Assembly
+  overload: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName(System.AppDomain,System.String)
+  commentId: M:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName(System.AppDomain,System.String)
+  id: GetAssemblyByTypeName(System.AppDomain,System.String)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AppDomainExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAssemblyByTypeName(AppDomain, String)
+  nameWithType: AppDomainExtensions.GetAssemblyByTypeName(AppDomain, String)
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName(System.AppDomain, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetAssemblyByTypeName
+    path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
+    startLine: 65
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets a loaded assembly by a type name.\n"
+  example: []
+  syntax:
+    content: public static Assembly GetAssemblyByTypeName(this AppDomain appDomain, string typeName)
+    parameters:
+    - id: appDomain
+      type: System.AppDomain
+      description: Specifies the current AppDomain instance.
+    - id: typeName
+      type: System.String
+      description: Specifies a full type name.
+    return:
+      type: System.Reflection.Assembly
+      description: >-
+        Returns the first loaded assembly that contains the specified type, or null, if the type was not
+
+        found in any loaded assembly.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAssemblyByTypeName(appDomain As AppDomain, typeName As String) As Assembly
+  overload: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: System.AppDomain
+  commentId: T:System.AppDomain
+  parent: System
+  isExternal: true
+  name: AppDomain
+  nameWithType: AppDomain
+  fullName: System.AppDomain
+- uid: Juhta.Net.Extensions
+  commentId: N:Juhta.Net.Extensions
+  isExternal: false
+  name: Juhta.Net.Extensions
+  nameWithType: Juhta.Net.Extensions
+  fullName: Juhta.Net.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName*
+  commentId: Overload:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName
+  isExternal: false
+  name: GetAssemblyByFileName
+  nameWithType: AppDomainExtensions.GetAssemblyByFileName
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByFileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: false
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath*
+  commentId: Overload:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath
+  isExternal: false
+  name: GetAssemblyByPath
+  nameWithType: AppDomainExtensions.GetAssemblyByPath
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByPath
+- uid: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName*
+  commentId: Overload:Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName
+  isExternal: false
+  name: GetAssemblyByTypeName
+  nameWithType: AppDomainExtensions.GetAssemblyByTypeName
+  fullName: Juhta.Net.Extensions.AppDomainExtensions.GetAssemblyByTypeName

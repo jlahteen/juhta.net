@@ -1,0 +1,724 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  id: DiagnosticMessageFactory
+  parent: Juhta.Net.Diagnostics
+  children:
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageFactory
+  nameWithType: DiagnosticMessageFactory
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: DiagnosticMessageFactory
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 16
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nRepresents a class that can be used to create instances of classes deriving from the <xref href=\"Juhta.Net.Diagnostics.DiagnosticMessage\" data-throw-if-not-resolved=\"false\"></xref>\nclass. The main benefit of using this class is automatic and consistent message ID generation.\n"
+  example: []
+  syntax:
+    content: public class DiagnosticMessageFactory
+    content.vb: Public Class DiagnosticMessageFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
+  id: '#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)'
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageFactory(DiagnosticMessageIdBase, String)
+  nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory(DiagnosticMessageIdBase, String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory(Juhta.Net.Diagnostics.DiagnosticMessageIdBase, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public DiagnosticMessageFactory(DiagnosticMessageIdBase messageIdBase, string messageNamespace)
+    parameters:
+    - id: messageIdBase
+      type: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+      description: Specifies a message ID base.
+    - id: messageNamespace
+      type: System.String
+      description: Specifies a namespace for messages to create.
+    content.vb: Public Sub New(messageIdBase As DiagnosticMessageIdBase, messageNamespace As String)
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
+  id: '#ctor(System.Int32,System.String)'
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageFactory(Int32, String)
+  nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory(Int32, String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory(System.Int32, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 34
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public DiagnosticMessageFactory(int messageIdBase, string messageNamespace)
+    parameters:
+    - id: messageIdBase
+      type: System.Int32
+      description: Specifies a message ID base.
+    - id: messageNamespace
+      type: System.String
+      description: Specifies a namespace for messages to create.
+    content.vb: Public Sub New(messageIdBase As Integer, messageNamespace As String)
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.String)'
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageFactory(Int32, String, String, String, String)
+  nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory(Int32, String, String, String, String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory(System.Int32, System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: .ctor
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 48
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nInitializes a new instance.\n"
+  remarks: >-
+    IDs of created diagnostic messages will start from <code data-dev-comment-type="paramref" class="paramref">messageIdBase</code> + 1 in
+
+    ascending order.
+  example: []
+  syntax:
+    content: public DiagnosticMessageFactory(int messageIdBase, string informationMessageIdPrefix, string warningMessageIdPrefix, string errorMessageIdPrefix, string alertMessageIdPrefix)
+    parameters:
+    - id: messageIdBase
+      type: System.Int32
+      description: Specifies a message ID base.
+    - id: informationMessageIdPrefix
+      type: System.String
+      description: Specifies a prefix for information message IDs. Can be null.
+    - id: warningMessageIdPrefix
+      type: System.String
+      description: Specifies a prefix for warning message IDs. Can be null.
+    - id: errorMessageIdPrefix
+      type: System.String
+      description: Specifies a prefix for error message IDs. Can be null.
+    - id: alertMessageIdPrefix
+      type: System.String
+      description: Specifies a prefix for alert message IDs. Can be null.
+    content.vb: Public Sub New(messageIdBase As Integer, informationMessageIdPrefix As String, warningMessageIdPrefix As String, errorMessageIdPrefix As String, alertMessageIdPrefix As String)
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)
+  id: CreateAlertMessage(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateAlertMessage(String)
+  nameWithType: DiagnosticMessageFactory.CreateAlertMessage(String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateAlertMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 82
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an AlertMessage instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public AlertMessage CreateAlertMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    return:
+      type: Juhta.Net.Diagnostics.AlertMessage
+      description: Returns the created AlertMessage instance.
+    content.vb: Public Function CreateAlertMessage(message As String) As AlertMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)
+  id: CreateErrorMessage(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateErrorMessage(String)
+  nameWithType: DiagnosticMessageFactory.CreateErrorMessage(String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateErrorMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 92
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an ErrorMessage instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public ErrorMessage CreateErrorMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+      description: Returns the created ErrorMessage instance.
+    content.vb: Public Function CreateErrorMessage(message As String) As ErrorMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)
+  id: CreateInformationMessage(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateInformationMessage(String)
+  nameWithType: DiagnosticMessageFactory.CreateInformationMessage(String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateInformationMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 102
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an InformationMessage instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public InformationMessage CreateInformationMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    return:
+      type: Juhta.Net.Diagnostics.InformationMessage
+      description: Returns the created InformationMessage instance.
+    content.vb: Public Function CreateInformationMessage(message As String) As InformationMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)
+  id: CreateWarningMessage(System.String)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateWarningMessage(String)
+  nameWithType: DiagnosticMessageFactory.CreateWarningMessage(String)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateWarningMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 112
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates a WarningMessage instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public WarningMessage CreateWarningMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    return:
+      type: Juhta.Net.Diagnostics.WarningMessage
+      description: Returns the created WarningMessage instance.
+    content.vb: Public Function CreateWarningMessage(message As String) As WarningMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.Diagnostics.DiagnosticMessage
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: DiagnosticMessage
+  nameWithType: DiagnosticMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessage
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor
+  isExternal: false
+  name: DiagnosticMessageFactory
+  nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: DiagnosticMessageIdBase
+  nameWithType: DiagnosticMessageIdBase
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
+  isExternal: false
+  name: CreateAlertMessage
+  nameWithType: DiagnosticMessageFactory.CreateAlertMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
+- uid: Juhta.Net.Diagnostics.AlertMessage
+  commentId: T:Juhta.Net.Diagnostics.AlertMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: AlertMessage
+  nameWithType: AlertMessage
+  fullName: Juhta.Net.Diagnostics.AlertMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
+  isExternal: false
+  name: CreateErrorMessage
+  nameWithType: DiagnosticMessageFactory.CreateErrorMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
+  isExternal: false
+  name: CreateInformationMessage
+  nameWithType: DiagnosticMessageFactory.CreateInformationMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
+- uid: Juhta.Net.Diagnostics.InformationMessage
+  commentId: T:Juhta.Net.Diagnostics.InformationMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: InformationMessage
+  nameWithType: InformationMessage
+  fullName: Juhta.Net.Diagnostics.InformationMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage
+  isExternal: false
+  name: CreateWarningMessage
+  nameWithType: DiagnosticMessageFactory.CreateWarningMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage
+- uid: Juhta.Net.Diagnostics.WarningMessage
+  commentId: T:Juhta.Net.Diagnostics.WarningMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: WarningMessage
+  nameWithType: WarningMessage
+  fullName: Juhta.Net.Diagnostics.WarningMessage

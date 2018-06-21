@@ -1,0 +1,1328 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/JUHA/Documents/Projects/Solutions/juhta.net/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Application.html",
+          "hash": "pCL951hl9ncIzm7S8upL5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.BlockNotImplementedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.BlockNotImplementedException.html",
+          "hash": "QD5b3g/T0kzkgzel98vPgQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.ClassId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.ClassId.html",
+          "hash": "6hlE67Q+VazbQ50OyOoDQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.CommonMessages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.CommonMessages.html",
+          "hash": "cPVfJfVzTS8CdvMIHxvsIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.ConfigException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.ConfigException.html",
+          "hash": "B4/ZpDPfBzMrBwFGRg5aZw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.InterfaceNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.InterfaceNotSupportedException.html",
+          "hash": "Bi5pHtjEDXqICCGKlfR3uQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.InternalException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.InternalException.html",
+          "hash": "geh0aJZHHOtPagl4cr0M+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.InvalidConfigFileException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.InvalidConfigFileException.html",
+          "hash": "2gKEaZeaIshN4eVUvYmnzg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.InvalidConfigValueException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.InvalidConfigValueException.html",
+          "hash": "CbWIWBbtsAlMgmshnmcTHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.ObjectFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.ObjectFactory.html",
+          "hash": "iP2TAfLKSGXDtdR0MPp2Nw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.ObjectQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.ObjectQueue-1.html",
+          "hash": "9P+IfYKGODBM/SKFGVbg6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.OperatingSystemInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.OperatingSystemInfo.html",
+          "hash": "lnqyl/Zelyhx+le4xSfoMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.RegexPatterns.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.RegexPatterns.html",
+          "hash": "nA1DKi0yItWXfiCpBDuU8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.Singleton-1.html",
+          "hash": "pG1Q6dBKjS19vcGpkDh1FQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.StatementNotImplementedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.StatementNotImplementedException.html",
+          "hash": "mfUrySjDDfskNpztdU6hXw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.SymmetricCipher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.SymmetricCipher.html",
+          "hash": "S+Rnm/xa/DxBmmxL4PtcAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.TimestampFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.TimestampFactory.html",
+          "hash": "xQqxUyLPLF0LTC49Nm8Seg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.UnexpectedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.UnexpectedException.html",
+          "hash": "daGVsf4iORnkCnPHhqzmuw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.Utf8FileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.Utf8FileWriter.html",
+          "hash": "v/y0zc6hnQ910IzQ1TXcXA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Common.html",
+          "hash": "zxvtEczmFfHH06s2GsL2oA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.CommandLineArgument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.CommandLineArgument.html",
+          "hash": "5ff/7TnDEa3srtMgQR3M0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.CommandLineArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.CommandLineArgumentException.html",
+          "hash": "PX/7dThBbO0h1xfCeceP7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.CommandLineParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.CommandLineParser.html",
+          "hash": "PYaaKY9f1CVzSwNR3fmMlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.CommandLineParserException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.CommandLineParserException.html",
+          "hash": "AJSZX1AipQuoWuN2pXx+bg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.NameValueArgument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.NameValueArgument.html",
+          "hash": "vaShbayklZ/Tt2vNg1r7tQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.NamedArgument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.NamedArgument.html",
+          "hash": "vzV91wNDUH6FX3SMH+vE6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.OptionArgument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.OptionArgument.html",
+          "hash": "Ey6PmjDGPgahOlFHTgx0qA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.PlainArgument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.PlainArgument.html",
+          "hash": "tCvNb2fLg6M4NzbJnFo5dQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Console.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Console.html",
+          "hash": "Ke2FndQPrdojXs9KNUmYKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.AlertMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.AlertMessage.html",
+          "hash": "zybqon2pbwrt8uzPwwwhBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessage.html",
+          "hash": "5nykrUzl/YA66lGyBYkKBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageFactory.html",
+          "hash": "pGbkcUSFnB/sYCchzx+pcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageIdBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageIdBase.html",
+          "hash": "t53iBFN9MNCFPRHDWgCz/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.DiagnosticMessageType.html",
+          "hash": "PE5czK1ZudjeDGJdTSPVhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.ErrorMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.ErrorMessage.html",
+          "hash": "h3qhm55BAMEE826W0YUH7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.FileLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.FileLogger.html",
+          "hash": "OH1r0/bt944DdH33zYWe4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.ILogger.html",
+          "hash": "UAR1ZCcvz72gLSXplDTtug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.InformationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.InformationMessage.html",
+          "hash": "rMEYX9QwKHGOTxWZW02uvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.WarningMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.WarningMessage.html",
+          "hash": "0W/hGKv6TH+5dksdlcSP/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Diagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Diagnostics.html",
+          "hash": "ueTlrz6+ds6eRWvzQI00UA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.AppDomainExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.AppDomainExtensions.html",
+          "hash": "GOI4vF6o05tN+JGhKrerFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.ArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.ArrayExtensions.html",
+          "hash": "JM3gYFXOglckgU2PfpG//g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.AssemblyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.AssemblyExtensions.html",
+          "hash": "WE2Y1d7eItpAzRGA97qfLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.DateTimeExtensions.html",
+          "hash": "B8JMdj6/43cw/M0zbqXjNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.EventHandlerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.EventHandlerExtensions.html",
+          "hash": "648MN2P3TTqWyvO3iYHkxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.FileStreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.FileStreamExtensions.html",
+          "hash": "WG68xCpckyELOWcYhyillw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.StringExtensions.html",
+          "hash": "5ha23KbsNLHyd9VHk/E9fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.XmlNodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.XmlNodeExtensions.html",
+          "hash": "+fpZMyowscGD2ArYB1nwHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.XmlSchemaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.XmlSchemaExtensions.html",
+          "hash": "/cFNi5KPymGvkymw6PIcVA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Extensions.html",
+          "hash": "tYwz54KKbVQxI3Z4NP/mxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.FrameworkConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.FrameworkConfig.html",
+          "hash": "3jRQa4WYr3P0BDy51WZy6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.FrameworkInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.FrameworkInfo.html",
+          "hash": "3Ld9jLcCgJMDsppWIaUZsg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Helpers.ArgumentHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Helpers.ArgumentHelper.html",
+          "hash": "tp7/xGFVA/wlAwbieOWZ0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Helpers.html",
+          "hash": "iXIX0294a8sxtqNb0UILLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.DynamicLibraryContext-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.DynamicLibraryContext-2.html",
+          "hash": "IWw2qoHAWOLkJj8QiUqgBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.html",
+          "hash": "ULJeOOaJJ61k37RpUNoNCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IClosableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IClosableLibrary.html",
+          "hash": "xBrRoFmaBJ0FFWeisJi5kA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IClosableLibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IClosableLibraryState.html",
+          "hash": "2Tw8I2UIvJI8uUWC7ao2oQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibrary.html",
+          "hash": "uBny/cipFZk7jFNKIngejg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibraryBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibraryBase.html",
+          "hash": "pUYEPG8V0Lsi+rN6gRaPmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IConfigurableLibraryState.html",
+          "hash": "2cFz+MkcsglGWAMPWEfRAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.html",
+          "hash": "wm7TUwMXH+n0E3R69K7kAQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState.html",
+          "hash": "Mhh6/RfNg2b/Q4SUXkrMDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IDefaultLibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IDefaultLibraryState.html",
+          "hash": "NDVQ+fdLFrZCc9aKmx4hJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary.html",
+          "hash": "jlXbXfj7RMGqDQ3RQMymmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.html",
+          "hash": "HFBNUpMJdBE9Zxzj6pMjSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IDynamicInitializableLibrary.html",
+          "hash": "r7aNKeos3nLn6qUudu9sqw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IDynamicLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IDynamicLibrary.html",
+          "hash": "Bsw96pcLPBapMIsMqbNjJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IInitializableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IInitializableLibrary.html",
+          "hash": "UbGLMmLrW5quU/ugudDuMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.ILibraryHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.ILibraryHandle.html",
+          "hash": "5SCa+dzVBRZfrFUZ0+SkNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.ILibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.ILibraryState.html",
+          "hash": "UueLpa3MnLsGgfbN7ziXcw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IStartableLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IStartableLibrary.html",
+          "hash": "pU5orYKZqjpE/n2ONvsMlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.IStartableLibraryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.IStartableLibraryState.html",
+          "hash": "3QACfrIpYRYuHG96po+LtA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.LibraryHandleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.LibraryHandleBase.html",
+          "hash": "OSs25TjxFKu4wut9RYUFAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.LibraryInitializationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.LibraryInitializationException.html",
+          "hash": "kklg290ojS6gEnGCsHM1Qw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.LibraryStateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.LibraryStateException.html",
+          "hash": "MPa1yS1Ch7IJH60LZCgnyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.LibraryManagement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.LibraryManagement.html",
+          "hash": "/rWvP2owl4S2y/ekSVux4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Logger.html",
+          "hash": "xRHUI5LfLrRkfL73nUnQwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Processing.ConsumerThread-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Processing.ConsumerThread-1.html",
+          "hash": "1CJ0ggm5EpqNa94Aj9IDJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Processing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Processing.html",
+          "hash": "kqv4bK4CqAWVdevvhaoL5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ConstructorParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ConstructorParam.html",
+          "hash": "NErSBw1sFSDkI2IUj9Z+eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ConstructorParamException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ConstructorParamException.html",
+          "hash": "x1ubCtkGcj9lM27Y++Z7Mg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ConstructorParamType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ConstructorParamType.html",
+          "hash": "Mt5Uvj6YUKKFnXxMAPnlwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.Service.html",
+          "hash": "WsC1UP5z/UIpJed247Dyjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ServiceCreationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ServiceCreationException.html",
+          "hash": "MEBKD1k2W23lCMmfFtM+lA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ServiceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ServiceFactory.html",
+          "hash": "mXPV+qB4L+t4RvC5gyph8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ServiceId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ServiceId.html",
+          "hash": "/01vOhfV51v/GTiNScyr0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.ServiceInitializationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.ServiceInitializationException.html",
+          "hash": "liELfoMHsXyeiTVBBXjbDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Services.html",
+          "hash": "cMrSQ3M6DPqqGhK3id2AzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.DirectoryPathValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.DirectoryPathValidator.html",
+          "hash": "g186kIe/ruPNc605YPeGzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.FilePathValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.FilePathValidator.html",
+          "hash": "4q3Z33UqG3Dbooqzv3HEig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.IStringValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.IStringValidator.html",
+          "hash": "D2s1oLztB6Q10jCxEHeYMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.IValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.IValidator-1.html",
+          "hash": "/TtQB0xJPVjTrH1xSBgqwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.PathValidator.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.PathValidator.PathType.html",
+          "hash": "ZOHuEt6AVnQTkw5zqPhmIg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.PathValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.PathValidator.html",
+          "hash": "YsV3X3Yta/7QldH1TDipYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.ValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.ValidationException.html",
+          "hash": "QS7sblZDcZM7/gSWCspTtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.XmlDocumentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.XmlDocumentValidator.html",
+          "hash": "Vr47idi3/e8ibnvM+69jVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.Validators.html",
+          "hash": "tDcACRA+ACFK5v3V1G8ofQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Juhta.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Juhta.Net.html",
+          "hash": "4E5+ZxvMvnMdicGc6AvFfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "+nGFYYYaylm/aBx2DuIjjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "wMSOL9+TU0j/zXRhw8DHKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html",
+          "hash": "qC3W8wBsm3HEb5glTm9kIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/main-features.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/main-features.html",
+          "hash": "JXQJOATIc73JWIU5gp+MnA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/main-namespaces.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/main-namespaces.html",
+          "hash": "RJFoL206U0i2c5EzkuZX1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html",
+          "hash": "CIewUWZHDIEUoADSCrSJlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Xn2kOYerf23uEaBfIl97MA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "NDM1105009D3DXfaT4r8qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

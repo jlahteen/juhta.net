@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Helpers
+  commentId: N:Juhta.Net.Helpers
+  id: Juhta.Net.Helpers
+  children:
+  - Juhta.Net.Helpers.ArgumentHelper
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Helpers
+  nameWithType: Juhta.Net.Helpers
+  fullName: Juhta.Net.Helpers
+  type: Namespace
+  assemblies:
+  - Juhta.Net
+references:
+- uid: Juhta.Net.Helpers.ArgumentHelper
+  commentId: T:Juhta.Net.Helpers.ArgumentHelper
+  isExternal: false
+  name: ArgumentHelper
+  nameWithType: ArgumentHelper
+  fullName: Juhta.Net.Helpers.ArgumentHelper

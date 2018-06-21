@@ -1,0 +1,248 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  id: IDynamicCustomXmlConfigurableLibrary
+  parent: Juhta.Net.LibraryManagement
+  children:
+  - Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+  - Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+  langs:
+  - csharp
+  - vb
+  name: IDynamicCustomXmlConfigurableLibrary
+  nameWithType: IDynamicCustomXmlConfigurableLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: IDynamicCustomXmlConfigurableLibrary
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nDefines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML\nconfigurable library if it is dynamic, configurable and the configuration is done with a custom XML\nconfiguration.\n"
+  example: []
+  syntax:
+    content: 'public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase'
+    content.vb: >-
+      Public Interface IDynamicCustomXmlConfigurableLibrary
+
+          Inherits IDynamicLibrary, IConfigurableLibraryBase
+  inheritedMembers:
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  - Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+  id: CreateLibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  langs:
+  - csharp
+  - vb
+  name: CreateLibraryState()
+  nameWithType: IDynamicCustomXmlConfigurableLibrary.CreateLibraryState()
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: CreateLibraryState
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nCreates an uninitialized library state.\n"
+  example: []
+  syntax:
+    content: ICustomXmlConfigurableLibraryState CreateLibraryState()
+    return:
+      type: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+      description: Returns an uninitialized <xref href="Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: Function CreateLibraryState As ICustomXmlConfigurableLibraryState
+  overload: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState*
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+  id: GetConfigSchemas
+  parent: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary
+  langs:
+  - csharp
+  - vb
+  name: GetConfigSchemas()
+  nameWithType: IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas()
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: develop
+      repo: https://github.com/jlahteen/juhta.net
+    id: GetConfigSchemas
+    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    startLine: 33
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets the XML schemas to which configuration files must conform.\n"
+  remarks: >-
+    The return value null indicates that the configuration of the library is not controlled by XML
+
+    schemas.
+  example: []
+  syntax:
+    content: XmlSchema[] GetConfigSchemas()
+    return:
+      type: System.Xml.Schema.XmlSchema[]
+      description: Returns an array of <xref href="System.Xml.Schema.XmlSchema" data-throw-if-not-resolved="false"></xref> objects.
+    content.vb: Function GetConfigSchemas As XmlSchema()
+  overload: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas*
+references:
+- uid: Juhta.Net.LibraryManagement
+  commentId: N:Juhta.Net.LibraryManagement
+  isExternal: false
+  name: Juhta.Net.LibraryManagement
+  nameWithType: Juhta.Net.LibraryManagement
+  fullName: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  commentId: M:Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: GoLive(ILibraryState)
+  nameWithType: IDynamicLibrary.GoLive(ILibraryState)
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
+    name: GoLive
+    nameWithType: IDynamicLibrary.GoLive
+    fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Juhta.Net.LibraryManagement.ILibraryState
+    name: ILibraryState
+    nameWithType: ILibraryState
+    fullName: Juhta.Net.LibraryManagement.ILibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryState
+  nameWithType: IDynamicLibrary.LibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  commentId: P:Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+  parent: Juhta.Net.LibraryManagement.IDynamicLibrary
+  isExternal: false
+  name: LibraryStateLock
+  nameWithType: IDynamicLibrary.LibraryStateLock
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  commentId: P:Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+  parent: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  isExternal: false
+  name: ConfigFileName
+  nameWithType: IConfigurableLibraryBase.ConfigFileName
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
+- uid: Juhta.Net.LibraryManagement.IDynamicLibrary
+  commentId: T:Juhta.Net.LibraryManagement.IDynamicLibrary
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IDynamicLibrary
+  nameWithType: IDynamicLibrary
+  fullName: Juhta.Net.LibraryManagement.IDynamicLibrary
+- uid: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  commentId: T:Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: IConfigurableLibraryBase
+  nameWithType: IConfigurableLibraryBase
+  fullName: Juhta.Net.LibraryManagement.IConfigurableLibraryBase
+- uid: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  commentId: T:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+  parent: Juhta.Net.LibraryManagement
+  isExternal: false
+  name: ICustomXmlConfigurableLibraryState
+  nameWithType: ICustomXmlConfigurableLibraryState
+  fullName: Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibraryState
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+  isExternal: false
+  name: CreateLibraryState
+  nameWithType: IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.CreateLibraryState
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas*
+  commentId: Overload:Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+  isExternal: false
+  name: GetConfigSchemas
+  nameWithType: IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+  fullName: Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary.GetConfigSchemas
+- uid: System.Xml.Schema.XmlSchema[]
+  name: XmlSchema[]
+  nameWithType: XmlSchema[]
+  fullName: System.Xml.Schema.XmlSchema[]
+  nameWithType.vb: XmlSchema()
+  fullName.vb: System.Xml.Schema.XmlSchema()
+  name.vb: XmlSchema()
+  spec.csharp:
+  - uid: System.Xml.Schema.XmlSchema
+    name: XmlSchema
+    nameWithType: XmlSchema
+    fullName: System.Xml.Schema.XmlSchema
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Xml.Schema.XmlSchema
+    name: XmlSchema
+    nameWithType: XmlSchema
+    fullName: System.Xml.Schema.XmlSchema
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: false
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
