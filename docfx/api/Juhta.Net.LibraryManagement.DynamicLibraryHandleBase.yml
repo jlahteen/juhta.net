@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DynamicLibraryHandleBase
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 15
@@ -79,8 +79,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GoLive
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 22
@@ -118,8 +118,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryState
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 32
@@ -157,8 +157,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryStateLock
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 42
@@ -196,8 +196,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 58

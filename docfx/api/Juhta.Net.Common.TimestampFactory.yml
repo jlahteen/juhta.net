@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TimestampFactory
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 18
@@ -61,8 +61,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 25
@@ -93,8 +93,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/TimestampFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetUniqueTimestamp
     path: ../src/Juhta.Net/Common/TimestampFactory.cs
     startLine: 44

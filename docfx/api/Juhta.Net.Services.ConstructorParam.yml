@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParam
     path: ../src/Juhta.Net/Services/ConstructorParam.cs
     startLine: 20
@@ -61,8 +61,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Name
     path: ../src/Juhta.Net/Services/ConstructorParam.cs
     startLine: 27
@@ -98,8 +98,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Type
     path: ../src/Juhta.Net/Services/ConstructorParam.cs
     startLine: 35
@@ -135,8 +135,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Value
     path: ../src/Juhta.Net/Services/ConstructorParam.cs
     startLine: 43

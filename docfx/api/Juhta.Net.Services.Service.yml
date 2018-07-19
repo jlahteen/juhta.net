@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Service
     path: ../src/Juhta.Net/Services/Service.cs
     startLine: 21
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Services/Service.cs
     startLine: 30
@@ -103,8 +103,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ClassId
     path: ../src/Juhta.Net/Services/Service.cs
     startLine: 50
@@ -140,8 +140,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParams
     path: ../src/Juhta.Net/Services/Service.cs
     startLine: 59
@@ -177,8 +177,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Services/Service.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Id
     path: ../src/Juhta.Net/Services/Service.cs
     startLine: 67

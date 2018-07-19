@@ -22,8 +22,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: XmlDocumentValidator
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 18
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 25
@@ -102,8 +102,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 38
@@ -138,8 +138,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 47
@@ -174,8 +174,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 56
@@ -210,8 +210,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 68
@@ -254,8 +254,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 93
@@ -301,8 +301,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
     path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
     startLine: 110

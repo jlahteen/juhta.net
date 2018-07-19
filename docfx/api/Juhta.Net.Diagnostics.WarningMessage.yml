@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/WarningMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: WarningMessage
     path: ../src/Juhta.Net/Diagnostics/WarningMessage.cs
     startLine: 13
@@ -73,8 +73,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/WarningMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/WarningMessage.cs
     startLine: 22
@@ -112,8 +112,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/WarningMessage.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/WarningMessage.cs
     startLine: 31

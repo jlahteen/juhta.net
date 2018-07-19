@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EventHandlerExtensions
     path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 15
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RaiseEvent
     path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 24
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/EventHandlerExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RaiseEvent
     path: ../src/Juhta.Net/Extensions/EventHandlerExtensions.cs
     startLine: 37

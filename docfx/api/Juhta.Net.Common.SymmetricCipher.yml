@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/SymmetricCipher.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SymmetricCipher
     path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 18
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/SymmetricCipher.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 26
@@ -95,8 +95,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/SymmetricCipher.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 33
@@ -131,8 +131,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/SymmetricCipher.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: DecryptData
     path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 55
@@ -176,8 +176,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/SymmetricCipher.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EncryptData
     path: ../src/Juhta.Net/Common/SymmetricCipher.cs
     startLine: 96

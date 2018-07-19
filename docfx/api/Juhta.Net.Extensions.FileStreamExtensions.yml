@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FileStreamExtensions
     path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 17
@@ -64,8 +64,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Lock
     path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 26
@@ -109,8 +109,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: Lock
     path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 38
@@ -160,8 +160,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TryLock
     path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 90
@@ -208,8 +208,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/FileStreamExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: TryLock
     path: ../src/Juhta.Net/Extensions/FileStreamExtensions.cs
     startLine: 114

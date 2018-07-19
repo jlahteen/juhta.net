@@ -25,8 +25,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineParser
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 51
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetNamedArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 61
@@ -108,8 +108,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetNamedArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 74
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetOptionArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 97
@@ -194,8 +194,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetOptionArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 110
@@ -240,8 +240,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetPlainArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 133
@@ -280,8 +280,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetPlainArgument
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 146
@@ -326,8 +326,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetUnconsumedArguments
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 165
@@ -361,8 +361,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ParseArguments
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 177
@@ -400,8 +400,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ParseArguments
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 189
@@ -448,8 +448,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: HasUnconsumedArguments
     path: ../src/Juhta.Net/Console/CommandLineParser.cs
     startLine: 282

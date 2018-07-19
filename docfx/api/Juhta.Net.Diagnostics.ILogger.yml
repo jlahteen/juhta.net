@@ -39,8 +39,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ILogger
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 15
@@ -72,8 +72,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 23
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 29
@@ -136,8 +136,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 38
@@ -180,8 +180,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 46
@@ -221,8 +221,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 52
@@ -253,8 +253,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 59
@@ -288,8 +288,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 65
@@ -320,8 +320,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 74
@@ -364,8 +364,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 81
@@ -399,8 +399,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 88
@@ -434,8 +434,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 96
@@ -475,8 +475,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 106
@@ -522,8 +522,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 115
@@ -566,8 +566,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogEvent
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 121
@@ -598,8 +598,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogEvent
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 130
@@ -642,8 +642,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 136
@@ -674,8 +674,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 142
@@ -706,8 +706,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 151
@@ -750,8 +750,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 159
@@ -791,8 +791,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 165
@@ -823,8 +823,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 171
@@ -855,8 +855,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 179
@@ -896,8 +896,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 188
@@ -940,8 +940,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/ILogger.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: IsThreadSafe
     path: ../src/Juhta.Net/Diagnostics/ILogger.cs
     startLine: 197

@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: ObjectFactory
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 19
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 33
@@ -123,8 +123,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 50
@@ -187,8 +187,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 72
@@ -237,8 +237,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 86
@@ -293,8 +293,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 101
@@ -352,8 +352,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ObjectFactory.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net/Common/ObjectFactory.cs
     startLine: 118

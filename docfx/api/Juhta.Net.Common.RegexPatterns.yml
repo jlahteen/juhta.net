@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/RegexPatterns.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: RegexPatterns
     path: ../src/Juhta.Net/Common/RegexPatterns.cs
     startLine: 13
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/RegexPatterns.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EmailAddress
     path: ../src/Juhta.Net/Common/RegexPatterns.cs
     startLine: 20
@@ -97,8 +97,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/RegexPatterns.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: EmailAddressList
     path: ../src/Juhta.Net/Common/RegexPatterns.cs
     startLine: 25
@@ -132,8 +132,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/RegexPatterns.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: FullClassName
     path: ../src/Juhta.Net/Common/RegexPatterns.cs
     startLine: 30

@@ -24,8 +24,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: XmlNodeExtensions
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 18
@@ -69,8 +69,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 28
@@ -117,8 +117,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 40
@@ -168,8 +168,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 53
@@ -222,8 +222,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: AppendChild
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 78
@@ -292,8 +292,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: CopyTo
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 116
@@ -338,8 +338,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 132
@@ -386,8 +386,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: GetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 149
@@ -437,8 +437,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: HasAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 163
@@ -485,8 +485,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/XmlNodeExtensions.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: SetAttribute
     path: ../src/Juhta.Net/Extensions/XmlNodeExtensions.cs
     startLine: 175

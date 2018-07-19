@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: InvalidConfigValueException
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
     startLine: 16
@@ -78,8 +78,8 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: develop
-      repo: https://github.com/jlahteen/juhta.net
+      branch: release/v1.0.0-rc
+      repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
     startLine: 24

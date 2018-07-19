@@ -1,5 +1,3 @@
-- name: Home
-  href: /
 - name: Documentation
   href: docs/
 - name: API Reference
