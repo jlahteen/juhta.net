@@ -198,6 +198,8 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error031 = MessageFactory.CreateErrorMessage("Execution flow entered a block that is not implemented (hint: {0}).");
 
+        // TODO split: remove this
+
         /// <summary>
         /// XML document cannot be validated because the target namespace '{0}' is not present in the schema collection
         /// of the XML validator.
@@ -230,6 +232,8 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Argument name prefix and option prefix cannot be the same in the command line parser.");
 
+        // TODO split: remove this
+
         /// <summary>
         /// Value '{0}' is not a valid file path.
         /// </summary>
@@ -249,6 +253,8 @@ namespace Juhta.Net
         /// This message is free to be redefined.
         /// </summary>
         internal static readonly ErrorMessage Error041 = MessageFactory.CreateErrorMessage("<undefined>");
+
+        // TODO split: remove this
 
         /// <summary>
         /// Value '{0}' is not a valid directory path.
@@ -468,6 +474,8 @@ namespace Juhta.Net
         /// No dependency injection service was found with the type '{0}'.
         /// </summary>
         internal static readonly ErrorMessage Error081 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the type '{0}'.");
+
+        // TODO split: remove this
 
         /// <summary>
         /// XML document is not valid according to the given schema(s).

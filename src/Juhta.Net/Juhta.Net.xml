@@ -2069,17 +2069,23 @@
         </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase">
             <summary>
-            An enumeration that defines the diagnostic message ID bases used in the framework libraries.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages">
-            <summary>
-            Defines the message ID base for the root library messages.
+            An enumeration that defines the message identifier bases for the diagnostic messages used in the framework
+            libraries.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages">
             <summary>
-            Defines the message ID base for the common messages.
+            Defines the message identifier base for the common messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages">
+            <summary>
+            Defines the message identifier base for the Root Library messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ValidationLibraryMessages">
+            <summary>
+            Defines the message identifier base for the Validation Library messages.
             </summary>
         </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageType">
