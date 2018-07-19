@@ -1,10 +1,8 @@
 ﻿
-using Juhta.Net.Common;
-using Juhta.Net.Validators;
+using Juhta.Net.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
 
-namespace Juhta.Net.Tests.Validators
+namespace Juhta.Net.Validation.Tests
 {
     [TestClass]
     public class FilePathValidatorTests : TestClassBase
