@@ -14,14 +14,13 @@
     <Company />
     <ProductName>Juhta.NET</ProductName>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Title>Juhta.Net</Title>
     <Product>Juhta.NET</Product>
-    <Version>1.0.0-rc</Version>
-    <PackageTags>dotnet dotnetcore dotnetstandard</PackageTags>
+    <Version>1.0.0-rc2</Version>
+    <PackageTags>dotnetcore dotnetstandard</PackageTags>
     <NeutralLanguage></NeutralLanguage>
-    <PackageReleaseNotes>The first release of Juhta.NET</PackageReleaseNotes>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
+    <PackageReleaseNotes>Please visit https://github.com/jlahteen/juhta.net/releases/tag/v1.0.0-rc2 to view the release notes.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Common\CommonConfig.xsd" />
