@@ -21,11 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{509A85AB-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppXLibrary", "tests\AppXLibrary\AppXLibrary.csproj", "{57D83852-CAAA-403B-9335-2E34CD70DE65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Validation", "src\Juhta.Net.Validation\Juhta.Net.Validation.csproj", "{8F83584F-41ED-4DC9-932A-5D82D8DD2629}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Validation", "src\Juhta.Net.Validation\Juhta.Net.Validation.csproj", "{8F83584F-41ED-4DC9-932A-5D82D8DD2629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Validation.Tests", "tests\Juhta.Net.Validation.Tests\Juhta.Net.Validation.Tests.csproj", "{36B1EE5D-73F1-42AD-8B8A-082459E005A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Validation.Tests", "tests\Juhta.Net.Validation.Tests\Juhta.Net.Validation.Tests.csproj", "{36B1EE5D-73F1-42AD-8B8A-082459E005A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Console", "src\Juhta.Net.Console\Juhta.Net.Console.csproj", "{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Console", "src\Juhta.Net.Console\Juhta.Net.Console.csproj", "{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Console.Tests", "tests\Juhta.Net.Console.Tests\Juhta.Net.Console.Tests.csproj", "{354C026E-CDD0-4992-AAB9-484A87E58E05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +111,18 @@ Global
 		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x64.Build.0 = Release|Any CPU
 		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x86.ActiveCfg = Release|Any CPU
 		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x86.Build.0 = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|x64.Build.0 = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Debug|x86.Build.0 = Debug|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|x64.ActiveCfg = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|x64.Build.0 = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|x86.ActiveCfg = Release|Any CPU
+		{354C026E-CDD0-4992-AAB9-484A87E58E05}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +134,7 @@ Global
 		{8F83584F-41ED-4DC9-932A-5D82D8DD2629} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 		{36B1EE5D-73F1-42AD-8B8A-082459E005A2} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
 		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
+		{354C026E-CDD0-4992-AAB9-484A87E58E05} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999057E4-EABA-4C51-A109-2F81255B3B05}

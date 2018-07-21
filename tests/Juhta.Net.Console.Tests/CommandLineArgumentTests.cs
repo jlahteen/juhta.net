@@ -1,10 +1,9 @@
 ﻿
-using Juhta.Net.Console;
-using Juhta.Net.Validators;
+using Juhta.Net.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Juhta.Net.Tests.Console
+namespace Juhta.Net.Console.Tests
 {
     [TestClass]
     public class CommandLineArgumentTests
@@ -279,7 +278,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.AreEqual<string>("[Juhta.Net.Error10047] Command line argument value 'XXXHello' is invalid according to a validator of the type 'Juhta.Net.Tests.Console.TestValidator'.", ex.Message);
+                Assert.AreEqual<string>("[Juhta.Net.Console.Error103002] Command line argument value 'XXXHello' is invalid according to a validator of the type 'Juhta.Net.Console.Tests.TestValidator'.", ex.Message);
 
                 throw;
             }

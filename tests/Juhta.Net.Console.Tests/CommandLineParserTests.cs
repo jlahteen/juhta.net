@@ -1,9 +1,8 @@
 ﻿
-using Juhta.Net.Console;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Juhta.Net.Tests.Console
+namespace Juhta.Net.Console.Tests
 {
     [TestClass]
     public class CommandLineParserTests
@@ -64,7 +63,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10093]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103012]"));
 
                 throw;
             }
@@ -122,7 +121,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10091]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103010]"));
 
                 throw;
             }
@@ -204,7 +203,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10095]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103014]"));
 
                 throw;
             }
@@ -223,7 +222,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineParserException ex)
             {
-                Assert.AreEqual<string>("[Juhta.Net.Error10037] Argument name prefix and option prefix cannot be the same in the command line parser.", ex.Message);
+                Assert.AreEqual<string>("[Juhta.Net.Console.Error103005] Argument name prefix and option prefix cannot be the same in the command line parser.", ex.Message);
 
                 throw;
             }
@@ -251,7 +250,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10094]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103013]"));
 
                 throw;
             }
@@ -351,7 +350,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10092]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103011]"));
 
                 throw;
             }
@@ -370,7 +369,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'argumentNamePrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error100005] Invalid 'argumentNamePrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
 
                 throw;
             }
@@ -389,7 +388,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'optionNameValueSeparator' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error100005] Invalid 'optionNameValueSeparator' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
 
                 throw;
             }
@@ -408,7 +407,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error11005] Invalid 'optionPrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error100005] Invalid 'optionPrefix' parameter value was passed to the method 'Juhta.Net.Console.CommandLineParser.ParseArguments'."));
 
                 throw;
             }
@@ -434,7 +433,7 @@ namespace Juhta.Net.Tests.Console
 
             catch (CommandLineArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10092]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Console.Error103011]"));
 
                 throw;
             }
