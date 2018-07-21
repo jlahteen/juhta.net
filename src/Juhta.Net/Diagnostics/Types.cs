@@ -29,7 +29,12 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Defines the message identifier base for the Validation Library messages.
         /// </summary>
-        ValidationLibraryMessages = 102000
+        ValidationLibraryMessages = 102000,
+
+        /// <summary>
+        /// Defines the message identifier base for the Console Library messages.
+        /// </summary>
+        ConsoleLibraryMessages = 103000
     }
 
     /// <summary>

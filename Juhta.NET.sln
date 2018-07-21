@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Validation", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Validation.Tests", "tests\Juhta.Net.Validation.Tests\Juhta.Net.Validation.Tests.csproj", "{36B1EE5D-73F1-42AD-8B8A-082459E005A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Console", "src\Juhta.Net.Console\Juhta.Net.Console.csproj", "{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,18 @@ Global
 		{36B1EE5D-73F1-42AD-8B8A-082459E005A2}.Release|x64.Build.0 = Release|Any CPU
 		{36B1EE5D-73F1-42AD-8B8A-082459E005A2}.Release|x86.ActiveCfg = Release|Any CPU
 		{36B1EE5D-73F1-42AD-8B8A-082459E005A2}.Release|x86.Build.0 = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|x64.Build.0 = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Debug|x86.Build.0 = Debug|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x64.ActiveCfg = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x64.Build.0 = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x86.ActiveCfg = Release|Any CPU
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +119,7 @@ Global
 		{57D83852-CAAA-403B-9335-2E34CD70DE65} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
 		{8F83584F-41ED-4DC9-932A-5D82D8DD2629} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 		{36B1EE5D-73F1-42AD-8B8A-082459E005A2} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
+		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999057E4-EABA-4C51-A109-2F81255B3B05}

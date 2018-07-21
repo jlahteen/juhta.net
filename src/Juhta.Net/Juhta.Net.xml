@@ -320,7 +320,7 @@
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.MessageFactory">
             <summary>
-            Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+            Gets the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory"/> instance for creating diagnostic messages.
             </summary>
         </member>
         <member name="F:Juhta.Net.Common.CommonMessages.Error001">
@@ -2088,6 +2088,11 @@
             Defines the message identifier base for the Validation Library messages.
             </summary>
         </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ConsoleLibraryMessages">
+            <summary>
+            Defines the message identifier base for the Console Library messages.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageType">
             <summary>
             Defines an enumeration for the diagnostic message types.
@@ -3707,7 +3712,7 @@
         </member>
         <member name="F:Juhta.Net.LibraryMessages.MessageFactory">
             <summary>
-            Gets the DiagnosticMessageFactory instance for creating diagnostic messages.
+            Gets the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory"/> instance for creating diagnostic messages.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error001">
