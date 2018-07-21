@@ -366,39 +366,39 @@
             according to the regex '{1}'.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error009">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error008">
             <summary>
             Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
             immediately after an argument name prefix.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error010">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error009">
             <summary>
             Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
             regex '{1}'.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error011">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error010">
             <summary>
             Option argument '{0}' is not specified in the command line arguments.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error012">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error011">
             <summary>
             Command line argument cannot be null or an empty string.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error013">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error012">
             <summary>
             Named argument '{0}' is not specified in the command line arguments.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error014">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error013">
             <summary>
             Argument name cannot be the last command line argument, it must be followed by an argument value.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Console.LibraryMessages.Error015">
+        <member name="F:Juhta.Net.Console.LibraryMessages.Error014">
             <summary>
             Plain argument #{0} is not specified in the command line arguments.
             </summary>

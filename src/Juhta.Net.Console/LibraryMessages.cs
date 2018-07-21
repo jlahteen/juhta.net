@@ -69,38 +69,38 @@ namespace Juhta.Net.Console
         /// Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
         /// immediately after an argument name prefix.
         /// </summary>
-        internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected immediately after an argument name prefix.");
+        internal static readonly ErrorMessage Error008 = MessageFactory.CreateErrorMessage("Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected immediately after an argument name prefix.");
 
         /// <summary>
         /// Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
         /// regex '{1}'.
         /// </summary>
-        internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the regex '{1}'.");
+        internal static readonly ErrorMessage Error009 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the regex '{1}'.");
 
         /// <summary>
         /// Option argument '{0}' is not specified in the command line arguments.
         /// </summary>
-        internal static readonly ErrorMessage Error011 = MessageFactory.CreateErrorMessage("Option argument '{0}' is not specified in the command line arguments.");
+        internal static readonly ErrorMessage Error010 = MessageFactory.CreateErrorMessage("Option argument '{0}' is not specified in the command line arguments.");
 
         /// <summary>
         /// Command line argument cannot be null or an empty string.
         /// </summary>
-        internal static readonly ErrorMessage Error012 = MessageFactory.CreateErrorMessage("Command line argument cannot be null or an empty string.");
+        internal static readonly ErrorMessage Error011 = MessageFactory.CreateErrorMessage("Command line argument cannot be null or an empty string.");
 
         /// <summary>
         /// Named argument '{0}' is not specified in the command line arguments.
         /// </summary>
-        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Named argument '{0}' is not specified in the command line arguments.");
+        internal static readonly ErrorMessage Error012 = MessageFactory.CreateErrorMessage("Named argument '{0}' is not specified in the command line arguments.");
 
         /// <summary>
         /// Argument name cannot be the last command line argument, it must be followed by an argument value.
         /// </summary>
-        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Argument name cannot be the last command line argument, it must be followed by an argument value.");
+        internal static readonly ErrorMessage Error013 = MessageFactory.CreateErrorMessage("Argument name cannot be the last command line argument, it must be followed by an argument value.");
 
         /// <summary>
         /// Plain argument #{0} is not specified in the command line arguments.
         /// </summary>
-        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Plain argument #{0} is not specified in the command line arguments.");
+        internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Plain argument #{0} is not specified in the command line arguments.");
 
         #endregion
     }

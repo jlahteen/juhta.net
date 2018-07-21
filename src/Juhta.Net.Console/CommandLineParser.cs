@@ -86,7 +86,7 @@ namespace Juhta.Net.Console
                 return(CreateNamedArgument(argumentName, defaultValue));
 
             else
-                throw new CommandLineArgumentException(LibraryMessages.Error013.FormatMessage(argumentName));
+                throw new CommandLineArgumentException(LibraryMessages.Error012.FormatMessage(argumentName));
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Juhta.Net.Console
                 return(CreateOptionArgument(optionName + m_optionNameValueSeparator + defaultValue));
 
             else
-                throw new CommandLineArgumentException(LibraryMessages.Error011.FormatMessage(optionName));
+                throw new CommandLineArgumentException(LibraryMessages.Error010.FormatMessage(optionName));
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Juhta.Net.Console
                 return(CreatePlainArgument(defaultValue));
 
             else
-                throw new CommandLineArgumentException(LibraryMessages.Error015.FormatMessage(index));
+                throw new CommandLineArgumentException(LibraryMessages.Error014.FormatMessage(index));
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace Juhta.Net.Console
                     arguments[i] = arguments[i].Trim();
 
                 if (String.IsNullOrEmpty(arguments[i]))
-                    throw new CommandLineArgumentException(LibraryMessages.Error012.GetMessage());
+                    throw new CommandLineArgumentException(LibraryMessages.Error011.GetMessage());
             }
 
             for (int i = 0; i < arguments.Length; i++)
@@ -251,7 +251,7 @@ namespace Juhta.Net.Console
                     // Create a named argument
 
                     if (i == arguments.Length - 1)
-                        throw new CommandLineArgumentException(LibraryMessages.Error014.GetMessage());
+                        throw new CommandLineArgumentException(LibraryMessages.Error013.GetMessage());
 
                     argument = CreateNamedArgument(arguments[i], arguments[i + 1]);
 
@@ -304,7 +304,7 @@ namespace Juhta.Net.Console
         private NamedArgument CreateNamedArgument(string argumentName, string argumentValue)
         {
             if (!Regex.IsMatch(argumentName, c_regexArgumentName))
-                throw new CommandLineArgumentException(LibraryMessages.Error010.FormatMessage(argumentName, c_regexArgumentName));
+                throw new CommandLineArgumentException(LibraryMessages.Error009.FormatMessage(argumentName, c_regexArgumentName));
 
             return(new NamedArgument(argumentName, argumentValue));
         }
@@ -373,7 +373,7 @@ namespace Juhta.Net.Console
                 argument = argument.Substring(m_argumentNamePrefix.Length);
 
                 if (String.IsNullOrWhiteSpace(argument))
-                    throw new CommandLineArgumentException(LibraryMessages.Error009.FormatMessage(m_argumentNamePrefix));
+                    throw new CommandLineArgumentException(LibraryMessages.Error008.FormatMessage(m_argumentNamePrefix));
 
                 return(m_argumentNamePrefix);
             }
