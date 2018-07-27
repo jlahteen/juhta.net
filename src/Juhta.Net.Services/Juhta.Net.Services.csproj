@@ -26,6 +26,7 @@
     <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Juhta.Net.LibraryManagement\Juhta.Net.LibraryManagement.csproj" />
     <ProjectReference Include="..\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 </Project>

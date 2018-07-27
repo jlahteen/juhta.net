@@ -77,6 +77,21 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an <see cref="T:System.Exception"/> object that relates to the error.</param>
         </member>
+        <member name="T:Juhta.Net.Services.LibraryHandle">
+            <summary>
+            Defines the library handle of Services Library.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.LibraryHandle.GetConfigSchemas">
+            <summary>
+            See <see cref="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Services.LibraryHandle.InitializeLibrary(System.Xml.XmlDocument)">
+            <summary>
+            See <see cref="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.InitializeLibrary(System.Xml.XmlDocument)"/>.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.Services.LibraryMessages">
             <summary>
             A static class that defines the diagnostic messages for this library.
