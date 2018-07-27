@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -10,7 +10,6 @@ using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml;
 
@@ -92,7 +91,7 @@ namespace Juhta.Net.Services
 
             try
             {
-                m_classId = new ClassId(serviceNode.GetAttribute("class"), Application.Instance.BinDirectory);
+                m_classId = new ClassId(serviceNode.GetAttribute("class"), FrameworkInfo.BinDirectory);
 
                 constructorParamsNode = serviceNode.SelectSingleNode("ns:constructorParams", namespaceManager);
 
