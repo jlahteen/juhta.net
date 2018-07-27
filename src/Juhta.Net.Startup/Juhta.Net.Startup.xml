@@ -4,5 +4,1215 @@
         <name>Juhta.Net.Startup</name>
     </assembly>
     <members>
+        <member name="T:Juhta.Net.Startup.Application">
+            <summary>
+            A class that represents an application built on the top of the framework. The class provides basic information
+            about the application and methods for initializing and closing the application.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+            assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+            case the configuration files are assumed to locate in the binary directory.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.Close">
+            <summary>
+            Closes the application by closing all configured startup libraries and the core of the framework.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.CloseInstance">
+            <summary>
+            Closes the possibly created singleton <see cref="T:Juhta.Net.Startup.Application"/> instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.GetDynamicLibraryContext``2">
+            <summary>
+            Creates an instance of <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> corresponding to
+            specified dynamic library type and library state type.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+            <returns>Returns the created <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.Start">
+            <summary>
+            Starts the application by initializing the core of the framework and all configured startup libraries.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.StartInstance">
+            <summary>
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Startup.Application"/> instance.
+            </summary>
+            <remarks>Log events will be written to the current user's temp directory, and the configuration files are
+            assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.StartInstance(System.String)">
+            <summary>
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Startup.Application"/> instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <remarks>The configuration files are assumed to locate in the binary directory.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.StartInstance(System.String,System.String)">
+            <summary>
+            Creates and starts a new singleton <see cref="T:Juhta.Net.Startup.Application"/> instance.
+            </summary>
+            <param name="logFilePath">Specifies a log file path. Can be null in which case the log file will be written
+            to the current user's temp directory. This default location will also be used if <paramref name="logFilePath"/>
+            specifies an invalid log file.</param>
+            <param name="configDirectory">Specifies a directory to search for configuration files. Can be null in which
+            case the configuration files are assumed to locate in the binary directory.</param>
+        </member>
+        <member name="P:Juhta.Net.Startup.Application.BinDirectory">
+            <summary>
+            Gets the binary directory for the framework and application libraries. The return value is null if the
+            application is not initialized.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.Application.ConfigDirectory">
+            <summary>
+            Gets the configuration directory for the framework and application libraries. The return value is null if
+            the application is not initialized.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.Application.DefaultConfigFileName">
+            <summary>
+            Gets the name of the default configuration file for the application. Can be null.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.Application.IsInitialized">
+            <summary>
+            Returns true if the application has been initialized, otherwise false.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.Application.Name">
+            <summary>
+            Gets the name of the application.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.InitializeAttributeFields(System.Xml.XmlNode)">
+            <summary>
+            Initializes those fields that are determined by the attributes of the application XML node.
+            </summary>
+            <param name="applicationNode">Specifies an application XML node based on which to initialize the attribute
+            fields.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.LoadAndValidateRootConfig">
+            <summary>
+            Loads and validates the root configuration file.
+            </summary>
+            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the root configuration. If there is no root
+            configuration file, the return value is null.</returns>
+        </member>
+        <member name="T:Juhta.Net.Startup.Application.State">
+            <summary>
+            Defines an enumeration for the states of the application.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.State.Uninitialized">
+            <summary>
+            The application is uninitialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.State.PartlyInitialized">
+            <summary>
+            The application is only partly initialized, that is, the initialization has not been completed due to
+            an error.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.State.Initialized">
+            <summary>
+            The application has been successfully initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_binDirectory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.Application.BinDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_configDirectory">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.Application.ConfigDirectory"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_defaultConfigFileName">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.Application.DefaultConfigFileName"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_libraryManager">
+            <summary>
+            Specifies the <see cref="T:Juhta.Net.Startup.LibraryManager"/> instance that was created when the application was initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_name">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.Application.Name"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.m_state">
+            <summary>
+            Specifies the current state of the application.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Startup.ConfigFileWatcher">
+            <summary>
+            Defines a class that watches configuration file changes. This class raises an appropriate event every time a
+            configuration file is created, updated, deleted or renamed in the configuration directory.
+            </summary>
+            <remarks>
+            <para>The implementation relies on the <see cref="T:System.IO.FileSystemWatcher"/> class. The reason why this class isn't
+            used as such is the fact that it raises multiple events per a single file system operation causing unnecessary
+            configuration updates to take place.</para>
+            <para>This class queues all file events caused by a single file system operation, which is done by waiting for
+            a certain time period for all these events to occur. After the waiting the class determines which one of the
+            three events, <see cref="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileCreated"/>, <see cref="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileChanged"/> or <see cref="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileDeleted"/>,
+            should be raised for the outside subscribers. Renamed events will be converted to series of deleted and created
+            events.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.StartWatching(System.String)">
+            <summary>
+            Starts an asynchronous watching of configuration file changes.
+            </summary>
+            <param name="configDirectory">Specifies a configuration directory to watch.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.StopWatching">
+            <summary>
+            Stops the asynchronous watching of configuration file changes.
+            </summary>
+        </member>
+        <member name="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileChanged">
+            <summary>
+            Occurs when a configuration file is changed in the configuration directory associated with this
+            <see cref="T:Juhta.Net.Startup.ConfigFileWatcher"/> instance.
+            </summary>
+        </member>
+        <member name="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileCreated">
+            <summary>
+            Occurs when a configuration file is created in the configuration directory associated with this
+            <see cref="T:Juhta.Net.Startup.ConfigFileWatcher"/> instance.
+            </summary>
+        </member>
+        <member name="E:Juhta.Net.Startup.ConfigFileWatcher.ConfigFileDeleted">
+            <summary>
+            Occurs when a configuration file is deleted in the configuration directory associated with this
+            <see cref="T:Juhta.Net.Startup.ConfigFileWatcher"/> instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.IsConfigFileName(System.String)">
+            <summary>
+            Checks whether a specified file name determines a configuration file.
+            </summary>
+            <param name="fileName">Specifies a file name.</param>
+            <returns>Returns true if the specified file name determines a configuration file, otherwise false.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.OnConfigFileEvent(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            Handles the Created, Changed, and Deleted events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/>
+            object.
+            </summary>
+            <param name="source">Specifies the event source.</param>
+            <param name="e">Specifies the event data.</param>
+            <remarks>This method does nothing if the watching has been stopped.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.OnConfigFileRenamed(System.Object,System.IO.RenamedEventArgs)">
+            <summary>
+            Handles the Renamed events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
+            </summary>
+            <param name="source">Specifies the event source.</param>
+            <param name="e">Specifies the event data.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.OnError(System.Object,System.IO.ErrorEventArgs)">
+            <summary>
+            Handles the Error events raised by an internal <see cref="T:System.IO.FileSystemWatcher"/> object.
+            </summary>
+            <param name="sender">Specifies the event source.</param>
+            <param name="e">Specifies the event data.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.ConfigFileWatcher.RaiseConfigFileEvent(System.Object)">
+            <summary>
+            Raises the pending configuration file event for a specified configuration file.
+            </summary>
+            <param name="configFileName">Specifies a configuration file name.</param>
+            <remarks>This method does nothing if the watching has been stopped or there is no pending configuration
+            file event for the specified configuration file.</remarks>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.c_waitTimePeriod">
+            <summary>
+            Specifies the time period in milliseconds to wait for all file events to occur caused by a single file
+            system operation.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.m_configDirectory">
+            <summary>
+            Specifies the configuration directory to watch.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.m_configFileEvents">
+            <summary>
+            Specifies a collection of pending configuration file events. The collection is indexed by the configuration
+            file name.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.m_configFileWatcher">
+            <summary>
+            Specifies a FileSystemWatcher object that watches configuration file changes in the configuration
+            directory.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.m_syncLock">
+            <summary>
+            Specifies a synchronization object to handle concurrent access to the fields of this class.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.ConfigFileWatcher.m_timers">
+            <summary>
+            Specifies a collection of timers corresponding to pending configuration file events. The collection is
+            indexed by the configuration file name.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Startup.DynamicLibraryContext`2">
+            <summary>
+            Defines a class that simplifies the implementation of dynamic library services. The class acquires a read-lock
+            to the state of the dynamic library and provides access both to the handle and state of the library. In other
+            words, the class saves a developer of a dynamic library from storing the instances of the current handle and
+            state within the library.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+        </member>
+        <member name="M:Juhta.Net.Startup.DynamicLibraryContext`2.Dispose">
+            <summary>
+            Disposes the instance, that is, releases the acquired read-lock to the state of the library.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary">
+            <summary>
+            Gets the dynamic library instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState">
+            <summary>
+            Gets the library state instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.DynamicLibraryContext`2.#ctor(`0)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="dynamicLibrary">Specifies a dynamic library instance to be associated with the context.</param>
+        </member>
+        <member name="F:Juhta.Net.Startup.DynamicLibraryContext`2.m_disposed">
+            <summary>
+            Specifies whether this instance has been disposed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.DynamicLibraryContext`2.m_dynamicLibrary">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary"/> property.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.DynamicLibraryContext`2.m_libraryState">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState"/> property.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Startup.LibraryInitializationException">
+            <summary>
+            This exception will be thrown when an error occurs in initialization of a library.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception that is the actual cause for the library
+            initialization error.</param>
+        </member>
+        <member name="T:Juhta.Net.Startup.LibraryManager">
+            <summary>
+            A class that represents a library manager. The library manager is responsible for managing the whole life cycle
+            of libraries including initialization, dynamic configuration changes and closing.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.#ctor(Juhta.Net.Startup.Application)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="application">Specifies an <see cref="T:Juhta.Net.Startup.Application"/> object that will own the instance.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CloseLibraries">
+            <summary>
+            Closes all libraries.
+            </summary>
+            <remarks>
+            <para>After this method has been called, libraries are no longer properly initialized.</para>
+            <para>This method will be called by the framework manager when the framework is closed.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.GetDynamicLibraryContext``2">
+            <summary>
+            Creates an instance of <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> corresponding to
+            specified dynamic library type and library state type.
+            </summary>
+            <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
+            <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
+            <returns>Returns the created <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeLibraries(System.Xml.XmlNode)">
+            <summary>
+            Initializes the libraries listed in a specified libraries XML node.
+            </summary>
+            <param name="librariesNode">Specifies a libraries XML node based on which to initialize the instance. Can
+            be null.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.StartConfigFileWatching">
+            <summary>
+            Starts an asynchronous watching of configuration file changes.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.StopConfigFileWatching">
+            <summary>
+            Stops the asynchronous watching of configuration file changes.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.ChangeLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Changes the state of a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="newLibraryState">Specifies a new library state.</param>
+            <returns>The return value true indicates a successful operation. The return value false means that the
+            operation failed but the current library state was successfully restored as the effective library state.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.ClearLibraryCollections">
+            <summary>
+            Clears all library collections of the class.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CloseDynamicLibrary(Juhta.Net.LibraryManagement.IDynamicLibrary)">
+            <summary>
+            Closes a specified dynamic library.
+            </summary>
+            <param name="library"></param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CloseLibrary(Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Closes a specified non-dynamic library.
+            </summary>
+            <param name="libraryHandle">Specifies a library handle.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CloseLibraryState(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType,System.String)">
+            <summary>
+            Closes a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state. Can be null.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CreateDefaultLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary)">
+            <summary>
+            Creates the default library state for a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <returns>Returns a library state object that holds the default state for the specified library.</returns>
+            <remarks>The default library state will be returned as initialized.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CreateInstance(System.Xml.XmlNode)">
+            <summary>
+            Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> based on a specified library XML node.
+            </summary>
+            <param name="libraryNode">Specifies a library XML node.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary,System.String)">
+            <summary>
+            Creates an initialized library state for a dynamic configurable library based on a specified configuration
+            file.
+            </summary>
+            <param name="library">Specifies a dynamic configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Creates an initialized library state for a dynamic custom XML configurable library based on an XML
+            configuration file.
+            </summary>
+            <param name="library">Specifies a dynamic custom XML configurable library.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.CreateLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,System.String)">
+            <summary>
+            Creates an initialized library state for a dynamic library based on a configuration file.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+            <returns>Returns the created and initialized <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> object.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.GetLibraryFileName(System.Object)">
+            <summary>
+            Gets the file name of a library specified by a library interface.
+            </summary>
+            <param name="libraryInterface">Specifies a library interface object.</param>
+            <returns>Returns the file name of the library specified by the given library interface object.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeConfigurableLibrary(Juhta.Net.LibraryManagement.IConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a configurable library based on a specified configuration.
+            </summary>
+            <param name="library">Specifies a configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a custom XML configurable library based on an XML configuration.
+            </summary>
+            <param name="library">Specifies a custom XML configurable library.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeDynamicConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a dynamic configurable library based on a specified configuration.
+            </summary>
+            <param name="library">Specifies a dynamic configurable library.</param>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeDynamicCustomXmlConfigurableLibrary(Juhta.Net.LibraryManagement.IDynamicCustomXmlConfigurableLibrary,System.String)">
+            <summary>
+            Initializes a dynamic custom XML configurable library based on an XML configuration.
+            </summary>
+            <param name="library">Specifies a dynamic custom XML configurable library.</param>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeDynamicInitializableLibrary(Juhta.Net.LibraryManagement.IDynamicInitializableLibrary)">
+            <summary>
+            Initializes a dynamic initializable library.
+            </summary>
+            <param name="library">Specifies a dynamic initializable library.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.InitializeLibrary(Juhta.Net.LibraryManagement.ILibraryHandle,System.String)">
+            <summary>
+            Initializes the library specified by a library handle.
+            </summary>
+            <param name="libraryHandle">Specifies a library handle.</param>
+            <param name="configFileName">Specifies a configuration file name. Can be null, if the specified library is
+            not configurable.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.IsLibraryInitialized(Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Checks whether the library specified by a library handle is already initialized.
+            </summary>
+            <param name="libraryHandle">Specifies a library handle.</param>
+            <returns>Returns true if the library specified by the library handle is already initialized, otherwise
+            false.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.LoadAndValidateXmlConfigFile(System.String,System.Xml.Schema.XmlSchema[],System.String)">
+            <summary>
+            Loads and validates an XML configuration file againts XML schemas.
+            </summary>
+            <param name="configFilePath">Specifies an XML configuration file path.</param>
+            <param name="configSchemas">Specifies an array of XML schemas. Can be null in which case the validation
+            will be ignored.</param>
+            <param name="libraryFileName">Specifies the file name of a library to which the XML schemas relate.</param>
+            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the validated XML configuration.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.LoadConfigFile(System.String)">
+            <summary>
+            Loads a specified configuration file. The type of the configuration file must be .json, .xml, .config or
+            .ini.
+            </summary>
+            <param name="configFilePath">Specifies a configuration file path.</param>
+            <returns>Returns an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/> object containing the settings defined in the
+            specified configuration file.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.OnConfigFileCreatedOrChanged(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            Defines a event handler that will be fired when a configuration file is changed or created.
+            </summary>
+            <param name="source">Specifies an event source.</param>
+            <param name="e">Specifies event arguments.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.OnConfigFileDeleted(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            Defines a event handler that will be fired when a configuration file is deleted.
+            </summary>
+            <param name="source">Specifies an event source.</param>
+            <param name="e">Specifies event arguments.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.ResolveConfigFileName(System.Xml.XmlNode,Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Resolves the configuration file name for a specified library.
+            </summary>
+            <param name="libraryNode">Specifies a library XML node.</param>
+            <param name="libraryHandle">Specifies an <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> object created based on
+            <paramref name="libraryNode"/>.</param>
+            <returns>Returns the configuration file name for the specified library or null, if the library is not
+            configurable.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.StartLibraryProcesses(Juhta.Net.LibraryManagement.ILibraryHandle)">
+            <summary>
+            Starts the processes of a specified non-dynamic library if necessary.
+            </summary>
+            <param name="libraryHandle">Specifies a library handle.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.StartLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType,System.Boolean,System.String)">
+            <summary>
+            Starts the processes in a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
+            <returns>Returns true if the operation succeeded, otherwise false.</returns>
+            <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.StopLibraryStateProcesses(Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType,System.Boolean,System.String)">
+            <summary>
+            Stops the processes in a library state if necessary.
+            </summary>
+            <param name="libraryState">Specifies a library state. Can be null.</param>
+            <param name="instanceType">Specifies the instance type of <paramref name="libraryState"/>.</param>
+            <param name="throwExceptions">Specifies whether to throw exceptions or not.</param>
+            <param name="libraryFileName">Specifies a library file name for error messages.</param>
+            <returns>Returns true if the operation succeeded, otherwise false.</returns>
+            <remarks>The return value false is possible only if <paramref name="throwExceptions"/> is false.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryManager.TryToRestoreCurrentLibraryState(Juhta.Net.LibraryManagement.IDynamicLibrary,Juhta.Net.LibraryManagement.ILibraryState,Juhta.Net.LibraryManagement.ILibraryState)">
+            <summary>
+            Tries to restore the current state to a specified dynamic library.
+            </summary>
+            <param name="library">Specifies a dynamic library.</param>
+            <param name="currentLibraryState">Specifies the current library state.</param>
+            <param name="newLibraryState">Specifies a new library state.</param>
+            <returns>Returns true, if the restore operation was successful, otherwise false.</returns>
+        </member>
+        <member name="T:Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType">
+            <summary>
+            Defines an enumeration for the logical instance types of <see cref="T:Juhta.Net.LibraryManagement.ILibraryState"/> objects. These types
+            are used in dynamic library state changes.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType.New">
+            <summary>
+            Represents a new state for a dynamic library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.LibraryStateInstanceType.Current">
+            <summary>
+            Represents the current state of a dynamic library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_application">
+            <summary>
+            Specifies the <see cref="T:Juhta.Net.Startup.Application"/> object that owns this <see cref="T:Juhta.Net.Startup.LibraryManager"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_closing">
+            <summary>
+            Specifies whether this <see cref="T:Juhta.Net.Startup.LibraryManager"/> instance is closing libraries.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_configFileWatcher">
+            <summary>
+            A <see cref="T:Juhta.Net.Startup.ConfigFileWatcher"/> object that watches configuration file changes in the configuration
+            directory.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_dynamicLibrariesByConfigFileName">
+            <summary>
+            Specifies the collection of the dynamic libraries indexed by configuration file name.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_dynamicLibrariesByType">
+            <summary>
+            Specifies the collection of the dynamic libraries indexed by type.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryManager.m_libraryHandles">
+            <summary>
+            Specifies the stack of the initialized libraries.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Startup.LibraryMessages">
+            <summary>
+            A static class that defines the diagnostic messages for this library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.MessageFactory">
+            <summary>
+            Gets the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory"/> instance for creating diagnostic messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error001">
+            <summary>
+            Library '{0}' requires a configuration file '{1}' but there is no such file in the configuration directory
+            '{2}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error002">
+            <summary>
+            XML configuration file '{0}' does not conform to the configuration schema(s) of the custom XML configurable
+            library '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error003">
+            <summary>
+            Initialization of the library '{0}' failed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error004">
+            <summary>
+            An unexpected error occurred when the library '{0}' was being closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Alert005">
+            <summary>
+            Library Manager detected changes in the configuration but failed to update the states of the associated
+            dynamic libraries. The state of the process may be unstable. Please refer to the log events for more
+            information.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error006">
+            <summary>
+            An error occurred when the application '{0}' was being started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Alert007">
+            <summary>
+            Application '{0}' failed to start. Please refer to the log events for more information.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error008">
+            <summary>
+            Dynamic library context could not be created because no dynamic library was found with the type '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error009">
+            <summary>
+            Type of the configuration file '{0}' is not supported. Supported configuration file types are .json, .xml,
+            .config and .ini.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning010">
+            <summary>
+            Library Manager detected that it is unable to continue monitoring configuration file changes in the
+            configuration directory '{0}'. Therefore, from now on no configuration changes will come into effect on the
+            fly in the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning011">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but no actions were performed
+            because there were no dynamic libraries associated with this configuration file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Information012">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, and the state of the associated
+            dynamic library '{1}' was initialized successfully.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error013">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but an unexpected error occurred
+            when the states of the associated dynamic libraries were being initialized. NOTE: The state of the process
+            is currently unstable. You should restore the configuration file and possibly restart the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error014">
+            <summary>
+            Configuration file name cannot be null for the configurable library '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error015">
+            <summary>
+            Dependency injection service '{0}' has a duplicate definition in the configuration.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error016">
+            <summary>
+            No dependency injection service was found with the identifier '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning017">
+            <summary>
+            At least one error occurred when the library '{0}' was closed. All resources and services of this library
+            may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error018">
+            <summary>
+            An unexpected error occurred when the application '{0}' was being closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error019">
+            <summary>
+            An error occurred when a pending configuration file event was being created for the configuration file
+            '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning020">
+            <summary>
+            Dynamic configuration changes related to the configuration file '{0}' will probably not come into effect.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error021">
+            <summary>
+            An error occurred when a pending configuration file event related to the configuration file '{0}' was being
+            raised.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error022">
+            <summary>
+            Library '{0}' does not exist in the directory '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning023">
+            <summary>
+            Library '{0}' has already been initialized. This library exists at least twice under the libraries XML node
+            in the root library configuration. Please remove duplicate occurrences.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error024">
+            <summary>
+            Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library
+            directory part.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error025">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error026">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error027">
+            <summary>
+            Consumer thread cannot consume the specified object because the instance has not been started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error028">
+            <summary>
+            Consumer thread cannot consume the specified object because the internal worker thread has stopped due to
+            an unexpected error.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error029">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error030">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error031">
+            <summary>
+            Execution flow entered a block that is not implemented (hint: {0}).
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error032">
+            <summary>
+            XML document cannot be validated because the target namespace '{0}' is not present in the schema collection
+            of the XML validator.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error033">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error034">
+            <summary>
+            Value '{0}' is not a valid class identifier because the fragment part of the file URI is missing or empty.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error035">
+            <summary>
+            Value '{0}' is not a valid class identifier because the file URI doesn't specify a '.DLL' file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error036">
+            <summary>
+            Value '{0}' is not a valid class identifier because the fragment part of the file URI doesn't specify a
+            valid class name.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error037">
+            <summary>
+            Argument name prefix and option prefix cannot be the same in the command line parser.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error038">
+            <summary>
+            Value '{0}' is not a valid file path.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error039">
+            <summary>
+            Value '{0}' is not a valid class identifier.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error040">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error041">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error042">
+            <summary>
+            Value '{0}' is not a valid directory path.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error043">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error044">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error045">
+            <summary>
+            Command line argument value '{0}' cannot be converted to the type '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error046">
+            <summary>
+            Execution flow entered a statement that is not implemented (hint: {0}).
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error047">
+            <summary>
+            Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error048">
+            <summary>
+            Class identifier must be a localhost file URI.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error049">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error050">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error051">
+            <summary>
+            Regular expression pattern cannot be null.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error052">
+            <summary>
+            Value '{0}' is not a valid finnish social security number.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error053">
+            <summary>
+            Value '{0}' is invalid according to the regular expression pattern '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error054">
+            <summary>
+            File '{0}' could not be locked within {1} milliseconds.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error055">
+            <summary>
+            Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error056">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+            dynamic library '{1}' could not be initialized. The state of the library was left unmodified.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error057">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
+            dynamic library '{1}' could not be initialized. NOTE: The state of the library is currently unstable. You
+            should restore the configuration file and possibly restart the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error058">
+            <summary>
+            Default library state could not be created because the library '{0}' does not support the required
+            interface ('{1}').
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error059">
+            <summary>
+            Processes in the {0} state of the library '{1}' could not be completely stopped.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error060">
+            <summary>
+            Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error061">
+            <summary>
+            Processes in the {0} state of the library '{1}' could not be started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error062">
+            <summary>
+            Constructor parameter '{0}' could not be initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning063">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
+            performed because there were no dynamic libraries associated with this configuration file.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error064">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+            associated dynamic library '{1}' could not be updated. The state of the library was left unmodified.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Information065">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, and the state of the
+            associated dynamic library '{1}' was updated successfully.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error066">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
+            associated dynamic library '{1}' could not be updated. NOTE: The state of the library is currently
+            unstable. You should restore the configuration file and possibly restart the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error067">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed, but an unexpected error
+            occurred when the states of the associated dynamic libraries were being updated. NOTE: The state of the
+            process is currently unstable. You should restore the configuration file and possibly restart the process.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error068">
+            <summary>
+            Library state cannot be created for the library '{0}', because the library doesn't implement any of the
+            required dynamic library interfaces.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error069">
+            <summary>
+            Library '{0}' cannot be initialized based on the configuration file '{1}', because the library doesn't
+            implement any of the required configurable library interfaces.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error070">
+            <summary>
+            Processes of the library '{0}' could not be started.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error071">
+            <summary>
+            An unexpected error occurred when the processes of the library '{0}' were being stopped.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning072">
+            <summary>
+            At least one error occurred when the processes of the library '{0}' were being stopped. All resources and
+            services of these processes may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning073">
+            <summary>
+            At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped.
+            All resources and services of these processes may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error074">
+            <summary>
+            Dependency injection service '{0}' could not be initialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error075">
+            <summary>
+            An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning076">
+            <summary>
+            At least one error occurred when the {0} state of the library '{1}' was closed. All resources and services
+            of this library may not have been completely released or shutted down.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error077">
+            <summary>
+            An unexpected error occurred when the {0} state of the library '{1}' was being closed.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning078">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was created or changed but the state of the
+            associated dynamic library '{1}' could not be updated. NOTE: The library continues running with the current
+            state.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Warning079">
+            <summary>
+            Library Manager detected that the configuration file '{0}' was deleted but the state of the associated
+            dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error080">
+            <summary>
+            An instance of the dependency injection service '{0}' could not be created.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error081">
+            <summary>
+            No dependency injection service was found with the type '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error082">
+            <summary>
+            XML document is not valid according to the given schema(s).
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error083">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error084">
+            <summary>
+            Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
+            after an option prefix.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error085">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+            given but the name part is missing.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error086">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
+            given but the value part is missing.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error087">
+            <summary>
+            Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid
+            according to the regex '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error088">
+            <summary>
+            This message is free to be redefined.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error089">
+            <summary>
+            Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
+            immediately after an argument name prefix.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error090">
+            <summary>
+            Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
+            regex '{1}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error091">
+            <summary>
+            Option argument '{0}' is not specified in the command line arguments.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error092">
+            <summary>
+            Command line argument cannot be null or an empty string.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error093">
+            <summary>
+            Named argument '{0}' is not specified in the command line arguments.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error094">
+            <summary>
+            Argument name cannot be the last command line argument, it must be followed by an argument value.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error095">
+            <summary>
+            Plain argument #{0} is not specified in the command line arguments.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Startup.LibraryStateException">
+            <summary>
+            This exception will be thrown in case of library state related errors.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryStateException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.Startup.LibraryStateException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception that is the actual cause for the library state
+            error.</param>
+        </member>
     </members>
 </doc>
