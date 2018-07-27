@@ -1,17 +1,15 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Xml;
 using System.Xml.Schema;
 
 namespace Juhta.Net.LibraryManagement
@@ -113,27 +111,6 @@ namespace Juhta.Net.LibraryManagement
             configSchema = XmlSchema.Read(new StringReader(configSchemaContent), null);
 
             return(configSchema);
-        }
-
-        #endregion
-
-        #region Internal Methods
-
-        /// <summary>
-        /// Creates an instance of <see cref="ILibraryHandle"/> based on a specified library XML node.
-        /// </summary>
-        /// <param name="libraryNode">Specifies a library XML node.</param>
-        /// <returns>Returns the created <see cref="ILibraryHandle"/> instance.</returns>
-        internal static ILibraryHandle CreateInstance(XmlNode libraryNode)
-        {
-            ClassId libraryHandleClassId;
-
-            libraryHandleClassId = new ClassId(libraryNode.GetAttribute("handleClass"), Application.Instance.BinDirectory);
-
-            if (!File.Exists(libraryHandleClassId.LibraryFilePath))
-                throw new FileNotFoundException(LibraryMessages.Error001.FormatMessage(libraryHandleClassId.LibraryFileName, libraryHandleClassId.LibraryDirectory));
-
-            return(ObjectFactory.CreateInstance<ILibraryHandle>(libraryHandleClassId));
         }
 
         #endregion

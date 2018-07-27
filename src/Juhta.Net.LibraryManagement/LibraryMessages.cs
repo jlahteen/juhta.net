@@ -23,14 +23,5 @@ namespace Juhta.Net.LibraryManagement
         private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.LibraryManagementLibraryMessages, typeof(LibraryMessages).Namespace);
 
         #endregion
-
-        #region Internal Properties
-
-        /// <summary>
-        /// Library '{0}' does not exist in the directory '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error001 = MessageFactory.CreateErrorMessage("Library '{0}' does not exist in the directory '{1}'.");
-
-        #endregion
     }
 }

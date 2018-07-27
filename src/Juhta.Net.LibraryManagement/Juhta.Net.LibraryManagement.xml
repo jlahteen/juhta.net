@@ -267,7 +267,7 @@
         <member name="T:Juhta.Net.LibraryManagement.ILibraryHandle">
             <summary>
             Defines an interface for library handle classes. This interface is the core interface for the library
-            management performed by <see cref="T:Juhta.Net.LibraryManagement.LibraryManager"/>.
+            management performed by <see cref="!:LibraryManager"/>.
             </summary>
         </member>
         <member name="P:Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName">
@@ -392,13 +392,6 @@
             <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
             specified file namespace and name.</returns>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.CreateInstance(System.Xml.XmlNode)">
-            <summary>
-            Creates an instance of <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> based on a specified library XML node.
-            </summary>
-            <param name="libraryNode">Specifies a library XML node.</param>
-            <returns>Returns the created <see cref="T:Juhta.Net.LibraryManagement.ILibraryHandle"/> instance.</returns>
-        </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryHandleBase.m_libraryFileName">
             <summary>
             Stores the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/> property.
@@ -412,11 +405,6 @@
         <member name="F:Juhta.Net.LibraryManagement.LibraryMessages.MessageFactory">
             <summary>
             Gets the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory"/> instance for creating diagnostic messages.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.LibraryManagement.LibraryMessages.Error001">
-            <summary>
-            Library '{0}' does not exist in the directory '{1}'.
             </summary>
         </member>
     </members>
