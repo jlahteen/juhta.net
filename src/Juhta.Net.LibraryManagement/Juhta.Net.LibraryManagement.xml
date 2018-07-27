@@ -358,6 +358,11 @@
             Gets the root namespace of the library that this <see cref="T:Juhta.Net.LibraryManagement.LibraryHandleBase"/> instance represents.
             </summary>
         </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor(System.String)">
             <summary>
             Initializes a new instance.
@@ -369,6 +374,15 @@
             Gets the embedded schema for the common configuration.
             </summary>
             <returns>Returns the embedded schema for the common configuration.</returns>
+        </member>
+        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)">
+            <summary>
+            Gets the default embedded configuration schema plus the common configuration schema.
+            </summary>
+            <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
+            be searched for.</param>
+            <returns>Returns an array containing two schemas, the default embedded configuration schema and the common
+            configuration schema.</returns>
         </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)">
             <summary>

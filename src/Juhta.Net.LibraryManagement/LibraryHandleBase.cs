@@ -53,6 +53,14 @@ namespace Juhta.Net.LibraryManagement
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        protected LibraryHandleBase()
+        {
+            m_libraryFileName = this.GetType().Namespace + ".dll";
+        }
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
         /// <param name="libraryFileName">Specifies a value for the <see cref="LibraryFileName"/> property.</param>
         protected LibraryHandleBase(string libraryFileName)
         {
@@ -70,6 +78,18 @@ namespace Juhta.Net.LibraryManagement
         protected XmlSchema GetCommonConfigSchema()
         {
             return(GetEmbeddedConfigSchema(typeof(FrameworkConfig).Assembly, FrameworkConfig.CommonConfigFileNamespace, FrameworkConfig.CommonConfigFileName));
+        }
+
+        /// <summary>
+        /// Gets the default embedded configuration schema plus the common configuration schema.
+        /// </summary>
+        /// <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
+        /// be searched for.</param>
+        /// <returns>Returns an array containing two schemas, the default embedded configuration schema and the common
+        /// configuration schema.</returns>
+        protected XmlSchema[] GetEmbeddedConfigAndCommonSchema(Assembly containingAssembly)
+        {
+            return(GetEmbeddedConfigAndCommonSchema(containingAssembly, this.GetType().Namespace, "Config.xsd"));
         }
 
         /// <summary>
