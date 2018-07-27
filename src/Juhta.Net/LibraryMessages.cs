@@ -145,6 +145,8 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error021 = MessageFactory.CreateErrorMessage("An error occurred when a pending configuration file event related to the configuration file '{0}' was being raised.");
 
+        // TODO split: remove this
+
         /// <summary>
         /// Library '{0}' does not exist in the directory '{1}'.
         /// </summary>

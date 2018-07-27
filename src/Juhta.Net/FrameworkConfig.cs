@@ -94,12 +94,12 @@ namespace Juhta.Net
 
         #endregion
 
-        #region Internal Properties
+        #region Public Properties
 
         /// <summary>
         /// Gets the file name of the common configuration XML schema.
         /// </summary>
-        internal static string CommonConfigFileName
+        public static string CommonConfigFileName
         {
             get {return(c_commonConfigFileName);}
         }
@@ -107,7 +107,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the file namespace of the common configuration XML schema.
         /// </summary>
-        internal static string CommonConfigFileNamespace
+        public static string CommonConfigFileNamespace
         {
             get {return(FrameworkInfo.RootNamespace + ".Common");}
         }
@@ -115,7 +115,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the version of the common configuration XML schema.
         /// </summary>
-        internal static string CommonConfigSchemaVersion
+        public static string CommonConfigSchemaVersion
         {
             get {return(c_commonConfigSchemaVersion);}
         }
@@ -123,7 +123,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the file name of the root configuration XML schema.
         /// </summary>
-        internal static string RootConfigFileName
+        public static string RootConfigFileName
         {
             get {return(c_rootConfigFileName);}
         }
@@ -131,7 +131,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the file namespace of the root configuration XML schema.
         /// </summary>
-        internal static string RootConfigFileNamespace
+        public static string RootConfigFileNamespace
         {
             get {return(FrameworkInfo.RootNamespace);}
         }
@@ -139,7 +139,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the version of the root configuration XML schema.
         /// </summary>
-        internal static string RootConfigSchemaVersion
+        public static string RootConfigSchemaVersion
         {
             get {return(c_rootConfigSchemaVersion);}
         }
@@ -147,7 +147,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the root XML namespace for the configuration schemas of the framework libraries.
         /// </summary>
-        internal static string RootXmlns
+        public static string RootXmlns
         {
             get {return(c_rootXmlns);}
         }

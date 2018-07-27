@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Validation.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Console", "src\Juhta.Net.Console\Juhta.Net.Console.csproj", "{F0955755-AEFD-40DC-9D3F-45ABB95BE84E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Console.Tests", "tests\Juhta.Net.Console.Tests\Juhta.Net.Console.Tests.csproj", "{354C026E-CDD0-4992-AAB9-484A87E58E05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Console.Tests", "tests\Juhta.Net.Console.Tests\Juhta.Net.Console.Tests.csproj", "{354C026E-CDD0-4992-AAB9-484A87E58E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Services", "src\Juhta.Net.Services\Juhta.Net.Services.csproj", "{8B6A1C90-664F-4D9A-9C90-966824C52A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Services", "src\Juhta.Net.Services\Juhta.Net.Services.csproj", "{8B6A1C90-664F-4D9A-9C90-966824C52A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.LibraryManagement", "src\Juhta.Net.LibraryManagement\Juhta.Net.LibraryManagement.csproj", "{12658E4B-6D24-4B3E-9C36-82851AF5AF21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,18 @@ Global
 		{8B6A1C90-664F-4D9A-9C90-966824C52A6E}.Release|x64.Build.0 = Release|Any CPU
 		{8B6A1C90-664F-4D9A-9C90-966824C52A6E}.Release|x86.ActiveCfg = Release|Any CPU
 		{8B6A1C90-664F-4D9A-9C90-966824C52A6E}.Release|x86.Build.0 = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|x64.Build.0 = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Debug|x86.Build.0 = Debug|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|x64.ActiveCfg = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|x64.Build.0 = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|x86.ActiveCfg = Release|Any CPU
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,6 +164,7 @@ Global
 		{F0955755-AEFD-40DC-9D3F-45ABB95BE84E} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 		{354C026E-CDD0-4992-AAB9-484A87E58E05} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
 		{8B6A1C90-664F-4D9A-9C90-966824C52A6E} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
+		{12658E4B-6D24-4B3E-9C36-82851AF5AF21} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999057E4-EABA-4C51-A109-2F81255B3B05}

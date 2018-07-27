@@ -22,19 +22,24 @@ namespace Juhta.Net.Diagnostics
         CommonMessages = 100000,
 
         /// <summary>
-        /// Defines the message identifier base for the Root Library messages.
+        /// Defines the message identifier base for the messages of Root Library.
         /// </summary>
         RootLibraryMessages = 101000,
 
         /// <summary>
-        /// Defines the message identifier base for the Validation Library messages.
+        /// Defines the message identifier base for the messages of Validation Library.
         /// </summary>
         ValidationLibraryMessages = 102000,
 
         /// <summary>
-        /// Defines the message identifier base for the Console Library messages.
+        /// Defines the message identifier base for the messages of Console Library.
         /// </summary>
-        ConsoleLibraryMessages = 103000
+        ConsoleLibraryMessages = 103000,
+
+        /// <summary>
+        /// Defines the message identifier base for the messages of Library Management Library.
+        /// </summary>
+        LibraryManagementLibraryMessages = 104000
     }
 
     /// <summary>
