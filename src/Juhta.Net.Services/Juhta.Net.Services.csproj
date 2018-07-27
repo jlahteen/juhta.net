@@ -23,6 +23,9 @@
     <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Config.xsd" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 </Project>
