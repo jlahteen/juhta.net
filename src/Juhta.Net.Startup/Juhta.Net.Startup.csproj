@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DocumentationFile>Juhta.Net.Startup.xml</DocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Juha Lähteenmäki</Authors>
+    <Title>Juhta.Net.Startup</Title>
+    <Description>Juhta.Net.Startup provides methods for graceful startup and shutdown for any application with any number of libraries through the Juhta.Net.LibraryManagement interfaces. This library is a part of Juhta.NET.</Description>
+    <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>http://juhta.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jlahteen/juhta.net</RepositoryUrl>
+    <Company />
+    <ProductName>Juhta.NET</ProductName>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Product>Juhta.NET</Product>
+    <Version>1.0.0-rc2</Version>
+    <PackageTags>dotnetcore dotnetstandard application library startup shutdown</PackageTags>
+    <NeutralLanguage></NeutralLanguage>
+    <PackageReleaseNotes>Please visit https://github.com/jlahteen/juhta.net/releases/tag/v1.0.0-rc2 to view the release notes.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+  </PropertyGroup>
+</Project>
