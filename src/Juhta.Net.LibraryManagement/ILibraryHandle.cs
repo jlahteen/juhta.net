@@ -10,7 +10,7 @@ namespace Juhta.Net.LibraryManagement
 {
     /// <summary>
     /// Defines an interface for library handle classes. This interface is the core interface for the library
-    /// management performed by <see cref="LibraryManager"/>.
+    /// management.
     /// </summary>
     public interface ILibraryHandle
     {
