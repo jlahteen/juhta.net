@@ -16,9 +16,20 @@ namespace Juhta.Net.Services
     /// <summary>
     /// Defines the library handle of Services Library.
     /// </summary>
-    public class LibraryHandle : LibraryHandleBase, ICustomXmlConfigurableLibrary
+    public class LibraryHandle : LibraryHandleBase, ICustomXmlConfigurableLibrary, IClosableLibrary
     {
         #region Public Methods
+
+        /// <summary>
+        /// See <see cref="IClosableLibrary.CloseLibrary"/>.
+        /// </summary>
+        public bool CloseLibrary()
+        {
+            if (ServiceFactory.Instance != null)
+                ServiceFactory.Instance.Close();
+
+            return(true);
+        }
 
         /// <summary>
         /// See <see cref="ICustomXmlConfigurableLibrary.GetConfigSchemas"/>.

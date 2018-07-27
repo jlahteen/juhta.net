@@ -82,6 +82,11 @@
             Defines the library handle of Services Library.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Services.LibraryHandle.CloseLibrary">
+            <summary>
+            See <see cref="M:Juhta.Net.LibraryManagement.IClosableLibrary.CloseLibrary"/>.
+            </summary>
+        </member>
         <member name="M:Juhta.Net.Services.LibraryHandle.GetConfigSchemas">
             <summary>
             See <see cref="M:Juhta.Net.LibraryManagement.ICustomXmlConfigurableLibrary.GetConfigSchemas"/>.
