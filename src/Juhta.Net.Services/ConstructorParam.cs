@@ -65,7 +65,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ConstructorParamException(LibraryMessages.Error062.FormatMessage(m_name), ex);
+                throw new ConstructorParamException(LibraryMessages.Error002.FormatMessage(m_name), ex);
             }
         }
 
@@ -81,7 +81,7 @@ namespace Juhta.Net.Services
         void RunRegexValidation(string value, string pattern)
         {
             if (!Regex.IsMatch(value, pattern))
-                throw new InvalidConfigValueException(LibraryMessages.Error060.FormatMessage(value, m_name, m_type));
+                throw new InvalidConfigValueException(LibraryMessages.Error003.FormatMessage(value, m_name, m_type));
         }
 
         /// <summary>

@@ -39,7 +39,12 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Defines the message identifier base for the messages of Library Management Library.
         /// </summary>
-        LibraryManagementLibraryMessages = 104000
+        LibraryManagementLibraryMessages = 104000,
+
+        /// <summary>
+        /// Defines the message identifier base for the messages of Services Library.
+        /// </summary>
+        ServicesLibraryMessages = 105000
     }
 
     /// <summary>

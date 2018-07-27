@@ -107,10 +107,14 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Configuration file name cannot be null for the configurable library '{0}'.");
 
+        // TODO split: remove this
+
         /// <summary>
         /// Dependency injection service '{0}' has a duplicate definition in the configuration.
         /// </summary>
         internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' has a duplicate definition in the configuration.");
+
+        // TODO split: remove this
 
         /// <summary>
         /// No dependency injection service was found with the identifier '{0}'.
@@ -358,6 +362,8 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be completely stopped.");
 
+        // TODO split: remove this
+
         /// <summary>
         /// Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
         /// </summary>
@@ -367,6 +373,8 @@ namespace Juhta.Net
         /// Processes in the {0} state of the library '{1}' could not be started.
         /// </summary>
         internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
+
+        // TODO split: remove this
 
         /// <summary>
         /// Constructor parameter '{0}' could not be initialized.
@@ -439,6 +447,8 @@ namespace Juhta.Net
         /// </summary>
         internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
+        // TODO split: remove this
+
         /// <summary>
         /// Dependency injection service '{0}' could not be initialized.
         /// </summary>
@@ -472,6 +482,8 @@ namespace Juhta.Net
         /// dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
         /// </summary>
         internal static readonly WarningMessage Warning079 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.");
+
+        // TODO split: remove this
 
         /// <summary>
         /// An instance of the dependency injection service '{0}' could not be created.

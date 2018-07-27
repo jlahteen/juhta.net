@@ -1704,22 +1704,27 @@
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages">
             <summary>
-            Defines the message identifier base for the Root library messages.
+            Defines the message identifier base for the messages of Root Library.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ValidationLibraryMessages">
             <summary>
-            Defines the message identifier base for the Validation library messages.
+            Defines the message identifier base for the messages of Validation Library.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ConsoleLibraryMessages">
             <summary>
-            Defines the message identifier base for the Console library messages.
+            Defines the message identifier base for the messages of Console Library.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.LibraryManagementLibraryMessages">
             <summary>
-            Defines the message identifier base for the Library Management library messages.
+            Defines the message identifier base for the messages of Library Management Library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ServicesLibraryMessages">
+            <summary>
+            Defines the message identifier base for the messages of Services Library.
             </summary>
         </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageType">

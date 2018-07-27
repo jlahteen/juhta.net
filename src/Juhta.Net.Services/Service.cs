@@ -37,7 +37,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceCreationException(LibraryMessages.Error080.FormatMessage(this.Id.Value), ex);
+                throw new ServiceCreationException(LibraryMessages.Error004.FormatMessage(this.Id.Value), ex);
             }
         }
 
@@ -77,12 +77,16 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        /// <param name="serviceFactory">Specifies a <see cref="ServiceFactory"/> object that will be set to own the
+        /// instance.</param>
         /// <param name="serviceNode">Specifies a service XML node based on which to initialize the instance.</param>
-        internal Service(XmlNode serviceNode)
+        internal Service(ServiceFactory serviceFactory, XmlNode serviceNode)
         {
             XmlNode constructorParamsNode;
             XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
             List<ConstructorParam> constructorParams = new List<ConstructorParam>();
+
+            m_serviceFactory = serviceFactory;
 
             m_id = new ServiceId(serviceNode.GetAttribute("id"));
 
@@ -113,7 +117,7 @@ namespace Juhta.Net.Services
 
             catch (Exception ex)
             {
-                throw new ServiceInitializationException(LibraryMessages.Error074.FormatMessage(this.Id.Value), ex);
+                throw new ServiceInitializationException(LibraryMessages.Error005.FormatMessage(this.Id.Value), ex);
             }
         }
 
@@ -127,13 +131,10 @@ namespace Juhta.Net.Services
         /// <returns>Returns an array of the required constructor parameter objects.</returns>
         private object[] GetConstructorParams()
         {
-            ServiceFactory serviceFactory;
             object[] constructorParams;
 
             if (!m_hasServiceParams)
                 return(m_constructorParamObjs);
-
-            serviceFactory = Application.Instance.ServiceFactory;
 
             constructorParams = new object[m_constructorParams.Length];
 
@@ -141,7 +142,7 @@ namespace Juhta.Net.Services
                 if (m_constructorParams[i].Type != ConstructorParamType.Service)
                     constructorParams[i] = m_constructorParams[i].Value;
                 else
-                    constructorParams[i] = serviceFactory.CreateService<object>((ServiceId)m_constructorParams[i].Value);
+                    constructorParams[i] = m_serviceFactory.CreateService<object>((ServiceId)m_constructorParams[i].Value);
 
             return(constructorParams);
         }
@@ -169,6 +170,11 @@ namespace Juhta.Net.Services
         /// Specifies whether the constructor parameters of this service contain service type parameters.
         /// </summary>
         private bool m_hasServiceParams;
+
+        /// <summary>
+        /// Specifies the <see cref="ServiceFactory"/> object that owns this <see cref="Service"/> instance.
+        /// </summary>
+        private ServiceFactory m_serviceFactory;
 
         /// <summary>
         /// Stores the <see cref="Id"/> property.

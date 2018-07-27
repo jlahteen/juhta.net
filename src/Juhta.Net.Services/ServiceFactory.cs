@@ -43,7 +43,7 @@ namespace Juhta.Net.Services
             if (m_servicesById.TryGetValue(serviceId.Value, out service))
                 return(service.CreateInstance<TService>());
             else
-                throw new KeyNotFoundException(LibraryMessages.Error016.FormatMessage(serviceId.Value));
+                throw new KeyNotFoundException(LibraryMessages.Error001.FormatMessage(serviceId.Value));
         }
 
         /// <summary>
@@ -106,10 +106,10 @@ namespace Juhta.Net.Services
 
             foreach (XmlNode serviceNode in serviceNodes)
             {
-                service = new Service(serviceNode);
+                service = new Service(this, serviceNode);
 
                 if (m_servicesById.ContainsKey(service.Id.Value))
-                    throw new InvalidConfigValueException(LibraryMessages.Error015.FormatMessage(service.Id.Value));
+                    throw new InvalidConfigValueException(LibraryMessages.Error006.FormatMessage(service.Id.Value));
 
                 m_servicesById.Add(service.Id.Value, service);
             }
