@@ -19,6 +19,14 @@ namespace Juhta.Net
         #region Public Properties
 
         /// <summary>
+        /// Gets the directory of the framework binaries.
+        /// </summary>
+        public static string BinDirectory
+        {
+            get {return(Assembly.GetExecutingAssembly().GetDirectory());}
+        }
+
+        /// <summary>
         /// Gets the copyright of the framework.
         /// </summary>
         public static string Copyright
