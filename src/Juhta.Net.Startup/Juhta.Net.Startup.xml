@@ -757,16 +757,6 @@
             Configuration file name cannot be null for the configurable library '{0}'.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error015">
-            <summary>
-            Dependency injection service '{0}' has a duplicate definition in the configuration.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error016">
-            <summary>
-            No dependency injection service was found with the identifier '{0}'.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Warning017">
             <summary>
             At least one error occurred when the library '{0}' was closed. All resources and services of this library
@@ -806,170 +796,6 @@
             in the root library configuration. Please remove duplicate occurrences.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error024">
-            <summary>
-            Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library
-            directory part.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error025">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error026">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error027">
-            <summary>
-            Consumer thread cannot consume the specified object because the instance has not been started.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error028">
-            <summary>
-            Consumer thread cannot consume the specified object because the internal worker thread has stopped due to
-            an unexpected error.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error029">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error030">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error031">
-            <summary>
-            Execution flow entered a block that is not implemented (hint: {0}).
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error032">
-            <summary>
-            XML document cannot be validated because the target namespace '{0}' is not present in the schema collection
-            of the XML validator.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error033">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error034">
-            <summary>
-            Value '{0}' is not a valid class identifier because the fragment part of the file URI is missing or empty.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error035">
-            <summary>
-            Value '{0}' is not a valid class identifier because the file URI doesn't specify a '.DLL' file.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error036">
-            <summary>
-            Value '{0}' is not a valid class identifier because the fragment part of the file URI doesn't specify a
-            valid class name.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error037">
-            <summary>
-            Argument name prefix and option prefix cannot be the same in the command line parser.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error038">
-            <summary>
-            Value '{0}' is not a valid file path.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error039">
-            <summary>
-            Value '{0}' is not a valid class identifier.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error040">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error041">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error042">
-            <summary>
-            Value '{0}' is not a valid directory path.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error043">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error044">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error045">
-            <summary>
-            Command line argument value '{0}' cannot be converted to the type '{1}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error046">
-            <summary>
-            Execution flow entered a statement that is not implemented (hint: {0}).
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error047">
-            <summary>
-            Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error048">
-            <summary>
-            Class identifier must be a localhost file URI.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error049">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error050">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error051">
-            <summary>
-            Regular expression pattern cannot be null.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error052">
-            <summary>
-            Value '{0}' is not a valid finnish social security number.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error053">
-            <summary>
-            Value '{0}' is invalid according to the regular expression pattern '{1}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error054">
-            <summary>
-            File '{0}' could not be locked within {1} milliseconds.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error055">
-            <summary>
-            Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Error056">
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
@@ -994,19 +820,9 @@
             Processes in the {0} state of the library '{1}' could not be completely stopped.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error060">
-            <summary>
-            Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Error061">
             <summary>
             Processes in the {0} state of the library '{1}' could not be started.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error062">
-            <summary>
-            Constructor parameter '{0}' could not be initialized.
             </summary>
         </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Warning063">
@@ -1075,11 +891,6 @@
             All resources and services of these processes may not have been completely released or shutted down.
             </summary>
         </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error074">
-            <summary>
-            Dependency injection service '{0}' could not be initialized.
-            </summary>
-        </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Error075">
             <summary>
             An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
@@ -1107,92 +918,6 @@
             <summary>
             Library Manager detected that the configuration file '{0}' was deleted but the state of the associated
             dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error080">
-            <summary>
-            An instance of the dependency injection service '{0}' could not be created.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error081">
-            <summary>
-            No dependency injection service was found with the type '{0}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error082">
-            <summary>
-            XML document is not valid according to the given schema(s).
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error083">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error084">
-            <summary>
-            Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
-            after an option prefix.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error085">
-            <summary>
-            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
-            given but the name part is missing.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error086">
-            <summary>
-            Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
-            given but the value part is missing.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error087">
-            <summary>
-            Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid
-            according to the regex '{1}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error088">
-            <summary>
-            This message is free to be redefined.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error089">
-            <summary>
-            Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
-            immediately after an argument name prefix.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error090">
-            <summary>
-            Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
-            regex '{1}'.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error091">
-            <summary>
-            Option argument '{0}' is not specified in the command line arguments.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error092">
-            <summary>
-            Command line argument cannot be null or an empty string.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error093">
-            <summary>
-            Named argument '{0}' is not specified in the command line arguments.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error094">
-            <summary>
-            Argument name cannot be the last command line argument, it must be followed by an argument value.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Startup.LibraryMessages.Error095">
-            <summary>
-            Plain argument #{0} is not specified in the command line arguments.
             </summary>
         </member>
         <member name="T:Juhta.Net.Startup.LibraryStateException">

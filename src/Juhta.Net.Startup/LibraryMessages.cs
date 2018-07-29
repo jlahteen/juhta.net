@@ -107,25 +107,13 @@ namespace Juhta.Net.Startup
         /// </summary>
         internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Configuration file name cannot be null for the configurable library '{0}'.");
 
-        // TODO split: remove this
-
-        /// <summary>
-        /// Dependency injection service '{0}' has a duplicate definition in the configuration.
-        /// </summary>
-        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' has a duplicate definition in the configuration.");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// No dependency injection service was found with the identifier '{0}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error016 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the identifier '{0}'.");
+        // Note: Message identifiers 15 and 16 are free.
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library
         /// may not have been completely released or shutted down.
         /// </summary>
-        internal static readonly WarningMessage Warning017 = MessageFactory.CreateWarningMessage("At least one error occurred when the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.");
+        internal static readonly WarningMessage Warning017 = MessageFactory.CreateWarningMessage("At least one error occurred when the library '{0}' was closed. All resources and services of this library may not have been completely released or shutted down.", 17);
 
         /// <summary>
         /// An unexpected error occurred when the application '{0}' was being closed.
@@ -160,187 +148,13 @@ namespace Juhta.Net.Startup
         /// </summary>
         internal static readonly WarningMessage Warning023 = MessageFactory.CreateWarningMessage("Library '{0}' has already been initialized. This library exists at least twice under the libraries XML node in the root library configuration. Please remove duplicate occurrences.");
 
-        /// <summary>
-        /// Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library
-        /// directory part.
-        /// </summary>
-        internal static readonly ErrorMessage Error024 = MessageFactory.CreateErrorMessage("Separate library directory ('{0}') cannot be specified because the value '{1}' already contains a library directory part.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error025 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error026 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// Consumer thread cannot consume the specified object because the instance has not been started.
-        /// </summary>
-        internal static readonly ErrorMessage Error027 = MessageFactory.CreateErrorMessage("Consumer thread cannot consume the specified object because the instance has not been started.");
-
-        /// <summary>
-        /// Consumer thread cannot consume the specified object because the internal worker thread has stopped due to
-        /// an unexpected error.
-        /// </summary>
-        internal static readonly ErrorMessage Error028 = MessageFactory.CreateErrorMessage("Consumer thread cannot consume the specified object because the internal worker thread has stopped due to an unexpected error.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error029 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error030 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// Execution flow entered a block that is not implemented (hint: {0}).
-        /// </summary>
-        internal static readonly ErrorMessage Error031 = MessageFactory.CreateErrorMessage("Execution flow entered a block that is not implemented (hint: {0}).");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// XML document cannot be validated because the target namespace '{0}' is not present in the schema collection
-        /// of the XML validator.
-        /// </summary>
-        internal static readonly ErrorMessage Error032 = MessageFactory.CreateErrorMessage("XML document cannot be validated because the target namespace '{0}' is not present in the schema collection of the XML validator.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error033 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// Value '{0}' is not a valid class identifier because the fragment part of the file URI is missing or empty.
-        /// </summary>
-        internal static readonly ErrorMessage Error034 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class identifier because the fragment part of the file URI is missing or empty.");
-
-        /// <summary>
-        /// Value '{0}' is not a valid class identifier because the file URI doesn't specify a '.DLL' file.
-        /// </summary>
-        internal static readonly ErrorMessage Error035 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class identifier because the file URI doesn't specify a '.DLL' file.");
-
-        /// <summary>
-        /// Value '{0}' is not a valid class identifier because the fragment part of the file URI doesn't specify a
-        /// valid class name.
-        /// </summary>
-        internal static readonly ErrorMessage Error036 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class identifier because the fragment part of the file URI doesn't specify a valid class name.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Argument name prefix and option prefix cannot be the same in the command line parser.
-        /// </summary>
-        internal static readonly ErrorMessage Error037 = MessageFactory.CreateErrorMessage("Argument name prefix and option prefix cannot be the same in the command line parser.");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// Value '{0}' is not a valid file path.
-        /// </summary>
-        internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid file path.");
-
-        /// <summary>
-        /// Value '{0}' is not a valid class identifier.
-        /// </summary>
-        internal static readonly ErrorMessage Error039 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class identifier.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error040 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error041 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// Value '{0}' is not a valid directory path.
-        /// </summary>
-        internal static readonly ErrorMessage Error042 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid directory path.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error043 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error044 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Command line argument value '{0}' cannot be converted to the type '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error045 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' cannot be converted to the type '{1}'.");
-
-        /// <summary>
-        /// Execution flow entered a statement that is not implemented (hint: {0}).
-        /// </summary>
-        internal static readonly ErrorMessage Error046 = MessageFactory.CreateErrorMessage("Execution flow entered a statement that is not implemented (hint: {0}).");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Command line argument value '{0}' is invalid according to a validator of the type '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error047 = MessageFactory.CreateErrorMessage("Command line argument value '{0}' is invalid according to a validator of the type '{1}'.");
-
-        /// <summary>
-        /// Class identifier must be a localhost file URI.
-        /// </summary>
-        internal static readonly ErrorMessage Error048 = MessageFactory.CreateErrorMessage("Class identifier must be a localhost file URI.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error049 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error050 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        /// <summary>
-        /// Regular expression pattern cannot be null.
-        /// </summary>
-        internal static readonly ErrorMessage Error051 = MessageFactory.CreateErrorMessage("Regular expression pattern cannot be null.");
-
-        /// <summary>
-        /// Value '{0}' is not a valid finnish social security number.
-        /// </summary>
-        internal static readonly ErrorMessage Error052 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid finnish social security number.");
-
-        /// <summary>
-        /// Value '{0}' is invalid according to the regular expression pattern '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error053 = MessageFactory.CreateErrorMessage("Value '{0}' is invalid according to the regular expression pattern '{1}'.");
-
-        /// <summary>
-        /// File '{0}' could not be locked within {1} milliseconds.
-        /// </summary>
-        internal static readonly ErrorMessage Error054 = MessageFactory.CreateErrorMessage("File '{0}' could not be locked within {1} milliseconds.");
-
-        /// <summary>
-        /// Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
-        /// </summary>
-        internal static readonly ErrorMessage Error055 = MessageFactory.CreateErrorMessage("Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.");
+        // Note: Message identifiers 24 - 55 are free.
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
         /// dynamic library '{1}' could not be initialized. The state of the library was left unmodified.
         /// </summary>
-        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. The state of the library was left unmodified.");
+        internal static readonly ErrorMessage Error056 = MessageFactory.CreateErrorMessage("Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated dynamic library '{1}' could not be initialized. The state of the library was left unmodified.", 56);
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was deleted, but the state of the associated
@@ -360,30 +174,20 @@ namespace Juhta.Net.Startup
         /// </summary>
         internal static readonly ErrorMessage Error059 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be completely stopped.");
 
-        // TODO split: remove this
-
-        /// <summary>
-        /// Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.
-        /// </summary>
-        internal static readonly ErrorMessage Error060 = MessageFactory.CreateErrorMessage("Value '{0}' of the constructor parameter '{1}' is not a valid '{2}' parameter value.");
+        // Note: Message identifier 60 is free.
 
         /// <summary>
         /// Processes in the {0} state of the library '{1}' could not be started.
         /// </summary>
-        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.");
+        internal static readonly ErrorMessage Error061 = MessageFactory.CreateErrorMessage("Processes in the {0} state of the library '{1}' could not be started.", 61);
 
-        // TODO split: remove this
-
-        /// <summary>
-        /// Constructor parameter '{0}' could not be initialized.
-        /// </summary>
-        internal static readonly ErrorMessage Error062 = MessageFactory.CreateErrorMessage("Constructor parameter '{0}' could not be initialized.");
+        // Note: Message identifier 62 is free.
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but no actions were
         /// performed because there were no dynamic libraries associated with this configuration file.
         /// </summary>
-        internal static readonly WarningMessage Warning063 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.");
+        internal static readonly WarningMessage Warning063 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.", 63);
 
         /// <summary>
         /// Library Manager detected that the configuration file '{0}' was created or changed, but the state of the
@@ -445,17 +249,12 @@ namespace Juhta.Net.Startup
         /// </summary>
         internal static readonly WarningMessage Warning073 = MessageFactory.CreateWarningMessage("At least one error occurred when the processes in the {0} state of the library '{1}' were being stopped. All resources and services of these processes may not have been completely released or shutted down.");
 
-        // TODO split: remove this
-
-        /// <summary>
-        /// Dependency injection service '{0}' could not be initialized.
-        /// </summary>
-        internal static readonly ErrorMessage Error074 = MessageFactory.CreateErrorMessage("Dependency injection service '{0}' could not be initialized.");
+        // Note: Message identifier 74 is free.
 
         /// <summary>
         /// An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.
         /// </summary>
-        internal static readonly ErrorMessage Error075 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.");
+        internal static readonly ErrorMessage Error075 = MessageFactory.CreateErrorMessage("An unexpected error occurred when the processes in the {0} state of the library '{1}' were being stopped.", 75);
 
         /// <summary>
         /// At least one error occurred when the {0} state of the library '{1}' was closed. All resources and services
@@ -480,118 +279,6 @@ namespace Juhta.Net.Startup
         /// dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.
         /// </summary>
         internal static readonly WarningMessage Warning079 = MessageFactory.CreateWarningMessage("Library Manager detected that the configuration file '{0}' was deleted but the state of the associated dynamic library '{1}' could not be initialized. NOTE: The library continues running with the current state.");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// An instance of the dependency injection service '{0}' could not be created.
-        /// </summary>
-        internal static readonly ErrorMessage Error080 = MessageFactory.CreateErrorMessage("An instance of the dependency injection service '{0}' could not be created.");
-
-        /// <summary>
-        /// No dependency injection service was found with the type '{0}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error081 = MessageFactory.CreateErrorMessage("No dependency injection service was found with the type '{0}'.");
-
-        // TODO split: remove this
-
-        /// <summary>
-        /// XML document is not valid according to the given schema(s).
-        /// </summary>
-        internal static readonly ErrorMessage Error082 = MessageFactory.CreateErrorMessage("XML document is not valid according to the given schema(s).");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error083 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately
-        /// after an option prefix.
-        /// </summary>
-        internal static readonly ErrorMessage Error084 = MessageFactory.CreateErrorMessage("Pure option prefix '{0}' was found in the command line arguments. An option name is expected immediately after an option prefix.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
-        /// given but the name part is missing.
-        /// </summary>
-        internal static readonly ErrorMessage Error085 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is given but the name part is missing.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is
-        /// given but the value part is missing.
-        /// </summary>
-        internal static readonly ErrorMessage Error086 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name-value separator is given but the value part is missing.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid
-        /// according to the regex '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error087 = MessageFactory.CreateErrorMessage("Cannot create an instance of OptionArgument based on the value '{0}' because the name part is invalid according to the regex '{1}'.");
-
-        /// <summary>
-        /// This message is free to be redefined.
-        /// </summary>
-        internal static readonly ErrorMessage Error088 = MessageFactory.CreateErrorMessage("<undefined>");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected
-        /// immediately after an argument name prefix.
-        /// </summary>
-        internal static readonly ErrorMessage Error089 = MessageFactory.CreateErrorMessage("Pure argument name prefix '{0}' was found in the command line arguments. An argument name is expected immediately after an argument name prefix.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the
-        /// regex '{1}'.
-        /// </summary>
-        internal static readonly ErrorMessage Error090 = MessageFactory.CreateErrorMessage("Cannot create an instance of NamedArgument because the argument name '{0}' is invalid according to the regex '{1}'.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Option argument '{0}' is not specified in the command line arguments.
-        /// </summary>
-        internal static readonly ErrorMessage Error091 = MessageFactory.CreateErrorMessage("Option argument '{0}' is not specified in the command line arguments.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Command line argument cannot be null or an empty string.
-        /// </summary>
-        internal static readonly ErrorMessage Error092 = MessageFactory.CreateErrorMessage("Command line argument cannot be null or an empty string.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Named argument '{0}' is not specified in the command line arguments.
-        /// </summary>
-        internal static readonly ErrorMessage Error093 = MessageFactory.CreateErrorMessage("Named argument '{0}' is not specified in the command line arguments.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Argument name cannot be the last command line argument, it must be followed by an argument value.
-        /// </summary>
-        internal static readonly ErrorMessage Error094 = MessageFactory.CreateErrorMessage("Argument name cannot be the last command line argument, it must be followed by an argument value.");
-
-        // TODO split: remove
-
-        /// <summary>
-        /// Plain argument #{0} is not specified in the command line arguments.
-        /// </summary>
-        internal static readonly ErrorMessage Error095 = MessageFactory.CreateErrorMessage("Plain argument #{0} is not specified in the command line arguments.");
 
         #endregion
     }
