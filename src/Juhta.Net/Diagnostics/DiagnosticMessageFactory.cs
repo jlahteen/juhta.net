@@ -21,7 +21,7 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message identifier base.</param>
+        /// <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
         /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         public DiagnosticMessageFactory(DiagnosticMessageIdBase messageIdBase, string messageNamespace) :
             this((int)messageIdBase, messageNamespace)
@@ -30,7 +30,7 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message identifier base.</param>
+        /// <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
         /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         public DiagnosticMessageFactory(int messageIdBase, string messageNamespace) : 
             this(messageIdBase, messageNamespace + ".Info", messageNamespace + ".Warning", messageNamespace + ".Error", messageNamespace + ".Alert")
@@ -39,7 +39,7 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message identifier base.</param>
+        /// <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
         /// <param name="informationMessageIdPrefix">Specifies a prefix for information message identifiers. Can be
         /// null.</param>
         /// <param name="warningMessageIdPrefix">Specifies a prefix for warning message identifiers. Can be null.</param>
@@ -49,6 +49,8 @@ namespace Juhta.Net.Diagnostics
         /// ascending order.</remarks>
         public DiagnosticMessageFactory(int messageIdBase, string informationMessageIdPrefix, string warningMessageIdPrefix, string errorMessageIdPrefix, string alertMessageIdPrefix)
         {
+            m_messageIdBase = messageIdBase;
+
             m_nextMessageId = messageIdBase + 1;
 
             if (informationMessageIdPrefix != null)
@@ -77,42 +79,98 @@ namespace Juhta.Net.Diagnostics
         #region Public Methods
 
         /// <summary>
-        /// Creates an AlertMessage instance based on a specified message.
+        /// Creates an <see cref="AlertMessage"/> instance based on a specified message.
         /// </summary>
         /// <param name="message">Specifies a message. The message can contain format items.</param>
-        /// <returns>Returns the created AlertMessage instance.</returns>
+        /// <returns>Returns the created <see cref="AlertMessage"/> instance.</returns>
         public AlertMessage CreateAlertMessage(string message)
         {
             return(new AlertMessage(message, m_alertMessageIdPrefix + (m_nextMessageId++).ToString()));
         }
 
         /// <summary>
-        /// Creates an ErrorMessage instance based on a specified message.
+        /// Creates an <see cref="AlertMessage"/> instance based on a specified message.
         /// </summary>
         /// <param name="message">Specifies a message. The message can contain format items.</param>
-        /// <returns>Returns the created ErrorMessage instance.</returns>
+        /// <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+        /// the <see cref="AlertMessage"/> instance.</param>
+        /// <returns>Returns the created <see cref="AlertMessage"/> instance.</returns>
+        public AlertMessage CreateAlertMessage(string message, int messageIdOffset)
+        {
+            m_nextMessageId = m_messageIdBase + messageIdOffset;
+
+            return(new AlertMessage(message, m_alertMessageIdPrefix + (m_nextMessageId++).ToString()));
+        }
+
+        /// <summary>
+        /// Creates an <see cref="ErrorMessage"/> instance based on a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message. The message can contain format items.</param>
+        /// <returns>Returns the created <see cref="ErrorMessage"/> instance.</returns>
         public ErrorMessage CreateErrorMessage(string message)
         {
             return(new ErrorMessage(message, m_errorMessageIdPrefix + (m_nextMessageId++).ToString()));
         }
 
         /// <summary>
-        /// Creates an InformationMessage instance based on a specified message.
+        /// Creates an <see cref="ErrorMessage"/> instance based on a specified message.
         /// </summary>
         /// <param name="message">Specifies a message. The message can contain format items.</param>
-        /// <returns>Returns the created InformationMessage instance.</returns>
+        /// <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+        /// the <see cref="ErrorMessage"/> instance.</param>
+        /// <returns>Returns the created <see cref="ErrorMessage"/> instance.</returns>
+        public ErrorMessage CreateErrorMessage(string message, int messageIdOffset)
+        {
+            m_nextMessageId = m_messageIdBase + messageIdOffset;
+
+            return(new ErrorMessage(message, m_errorMessageIdPrefix + (m_nextMessageId++).ToString()));
+        }
+
+        /// <summary>
+        /// Creates an <see cref="InformationMessage"/> instance based on a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message. The message can contain format items.</param>
+        /// <returns>Returns the created <see cref="InformationMessage"/> instance.</returns>
         public InformationMessage CreateInformationMessage(string message)
         {
             return(new InformationMessage(message, m_informationMessageIdPrefix + (m_nextMessageId++).ToString()));
         }
 
         /// <summary>
-        /// Creates a WarningMessage instance based on a specified message.
+        /// Creates an <see cref="InformationMessage"/> instance based on a specified message.
         /// </summary>
         /// <param name="message">Specifies a message. The message can contain format items.</param>
-        /// <returns>Returns the created WarningMessage instance.</returns>
+        /// <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+        /// the <see cref="InformationMessage"/> instance.</param>
+        /// <returns>Returns the created <see cref="InformationMessage"/> instance.</returns>
+        public InformationMessage CreateInformationMessage(string message, int messageIdOffset)
+        {
+            m_nextMessageId = m_messageIdBase + messageIdOffset;
+
+            return(new InformationMessage(message, m_informationMessageIdPrefix + (m_nextMessageId++).ToString()));
+        }
+
+        /// <summary>
+        /// Creates a <see cref="WarningMessage"/> instance based on a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message. The message can contain format items.</param>
+        /// <returns>Returns the created <see cref="WarningMessage"/> instance.</returns>
         public WarningMessage CreateWarningMessage(string message)
         {
+            return(new WarningMessage(message, m_warningMessageIdPrefix + (m_nextMessageId++).ToString()));
+        }
+
+        /// <summary>
+        /// Creates a <see cref="WarningMessage"/> instance based on a specified message.
+        /// </summary>
+        /// <param name="message">Specifies a message. The message can contain format items.</param>
+        /// <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+        /// the <see cref="WarningMessage"/> instance.</param>
+        /// <returns>Returns the created <see cref="WarningMessage"/> instance.</returns>
+        public WarningMessage CreateWarningMessage(string message, int messageIdOffset)
+        {
+            m_nextMessageId = m_messageIdBase + messageIdOffset;
+
             return(new WarningMessage(message, m_warningMessageIdPrefix + (m_nextMessageId++).ToString()));
         }
 
@@ -134,6 +192,11 @@ namespace Juhta.Net.Diagnostics
         /// Specifies the prefix for information message identifiers.
         /// </summary>
         private string m_informationMessageIdPrefix;
+
+        /// <summary>
+        /// Specifies the base value for the message identifiers.
+        /// </summary>
+        private int m_messageIdBase;
 
         /// <summary>
         /// Specifies the next message identifier (without a prefix).

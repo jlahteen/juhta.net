@@ -1001,86 +1001,128 @@
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory">
             <summary>
             Represents a class that can be used to create instances of classes deriving from the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessage"/>
-            class. The main benefit of using this class is automatic and consistent message ID generation.
+            class. The main benefit of using this class is automatic and consistent message identifier generation.
             </summary>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
+            <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
             <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
+            <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
             <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="messageIdBase">Specifies a message ID base.</param>
-            <param name="informationMessageIdPrefix">Specifies a prefix for information message IDs. Can be null.</param>
-            <param name="warningMessageIdPrefix">Specifies a prefix for warning message IDs. Can be null.</param>
-            <param name="errorMessageIdPrefix">Specifies a prefix for error message IDs. Can be null.</param>
-            <param name="alertMessageIdPrefix">Specifies a prefix for alert message IDs. Can be null.</param>
-            <remarks>IDs of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
+            <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
+            <param name="informationMessageIdPrefix">Specifies a prefix for information message identifiers. Can be
+            null.</param>
+            <param name="warningMessageIdPrefix">Specifies a prefix for warning message identifiers. Can be null.</param>
+            <param name="errorMessageIdPrefix">Specifies a prefix for error message identifiers. Can be null.</param>
+            <param name="alertMessageIdPrefix">Specifies a prefix for alert message identifiers. Can be null.</param>
+            <remarks>Identifiers of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
             ascending order.</remarks>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)">
             <summary>
-            Creates an AlertMessage instance based on a specified message.
+            Creates an <see cref="T:Juhta.Net.Diagnostics.AlertMessage"/> instance based on a specified message.
             </summary>
             <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created AlertMessage instance.</returns>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.AlertMessage"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String,System.Int32)">
+            <summary>
+            Creates an <see cref="T:Juhta.Net.Diagnostics.AlertMessage"/> instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+            the <see cref="T:Juhta.Net.Diagnostics.AlertMessage"/> instance.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.AlertMessage"/> instance.</returns>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)">
             <summary>
-            Creates an ErrorMessage instance based on a specified message.
+            Creates an <see cref="T:Juhta.Net.Diagnostics.ErrorMessage"/> instance based on a specified message.
             </summary>
             <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created ErrorMessage instance.</returns>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.ErrorMessage"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String,System.Int32)">
+            <summary>
+            Creates an <see cref="T:Juhta.Net.Diagnostics.ErrorMessage"/> instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+            the <see cref="T:Juhta.Net.Diagnostics.ErrorMessage"/> instance.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.ErrorMessage"/> instance.</returns>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)">
             <summary>
-            Creates an InformationMessage instance based on a specified message.
+            Creates an <see cref="T:Juhta.Net.Diagnostics.InformationMessage"/> instance based on a specified message.
             </summary>
             <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created InformationMessage instance.</returns>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.InformationMessage"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String,System.Int32)">
+            <summary>
+            Creates an <see cref="T:Juhta.Net.Diagnostics.InformationMessage"/> instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+            the <see cref="T:Juhta.Net.Diagnostics.InformationMessage"/> instance.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.InformationMessage"/> instance.</returns>
         </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)">
             <summary>
-            Creates a WarningMessage instance based on a specified message.
+            Creates a <see cref="T:Juhta.Net.Diagnostics.WarningMessage"/> instance based on a specified message.
             </summary>
             <param name="message">Specifies a message. The message can contain format items.</param>
-            <returns>Returns the created WarningMessage instance.</returns>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.WarningMessage"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String,System.Int32)">
+            <summary>
+            Creates a <see cref="T:Juhta.Net.Diagnostics.WarningMessage"/> instance based on a specified message.
+            </summary>
+            <param name="message">Specifies a message. The message can contain format items.</param>
+            <param name="messageIdOffset">Specifies an offset that determines the message identifier to associate with
+            the <see cref="T:Juhta.Net.Diagnostics.WarningMessage"/> instance.</param>
+            <returns>Returns the created <see cref="T:Juhta.Net.Diagnostics.WarningMessage"/> instance.</returns>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_alertMessageIdPrefix">
             <summary>
-            Specifies the prefix for alert message IDs.
+            Specifies the prefix for alert message identifiers.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_errorMessageIdPrefix">
             <summary>
-            Specifies the prefix for error message IDs.
+            Specifies the prefix for error message identifiers.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_informationMessageIdPrefix">
             <summary>
-            Specifies the prefix for information message IDs.
+            Specifies the prefix for information message identifiers.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_messageIdBase">
+            <summary>
+            Specifies the base value for the message identifiers.
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_nextMessageId">
             <summary>
-            Specifies the next message ID (without a prefix).
+            Specifies the next message identifier (without a prefix).
             </summary>
         </member>
         <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageFactory.m_warningMessageIdPrefix">
             <summary>
-            Specifies the prefix for warning message IDs.
+            Specifies the prefix for warning message identifiers.
             </summary>
         </member>
         <member name="T:Juhta.Net.Diagnostics.ErrorMessage">
