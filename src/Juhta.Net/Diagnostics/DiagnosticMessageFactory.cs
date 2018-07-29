@@ -1,6 +1,6 @@
 
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -12,7 +12,7 @@ namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Represents a class that can be used to create instances of classes deriving from the <see cref="DiagnosticMessage"/>
-    /// class. The main benefit of using this class is automatic and consistent message ID generation.
+    /// class. The main benefit of using this class is automatic and consistent message identifier generation.
     /// </summary>
     public class DiagnosticMessageFactory
     {
@@ -21,7 +21,7 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message ID base.</param>
+        /// <param name="messageIdBase">Specifies a message identifier base.</param>
         /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         public DiagnosticMessageFactory(DiagnosticMessageIdBase messageIdBase, string messageNamespace) :
             this((int)messageIdBase, messageNamespace)
@@ -30,7 +30,7 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message ID base.</param>
+        /// <param name="messageIdBase">Specifies a message identifier base.</param>
         /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         public DiagnosticMessageFactory(int messageIdBase, string messageNamespace) : 
             this(messageIdBase, messageNamespace + ".Info", messageNamespace + ".Warning", messageNamespace + ".Error", messageNamespace + ".Alert")
@@ -39,12 +39,13 @@ namespace Juhta.Net.Diagnostics
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="messageIdBase">Specifies a message ID base.</param>
-        /// <param name="informationMessageIdPrefix">Specifies a prefix for information message IDs. Can be null.</param>
-        /// <param name="warningMessageIdPrefix">Specifies a prefix for warning message IDs. Can be null.</param>
-        /// <param name="errorMessageIdPrefix">Specifies a prefix for error message IDs. Can be null.</param>
-        /// <param name="alertMessageIdPrefix">Specifies a prefix for alert message IDs. Can be null.</param>
-        /// <remarks>IDs of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
+        /// <param name="messageIdBase">Specifies a message identifier base.</param>
+        /// <param name="informationMessageIdPrefix">Specifies a prefix for information message identifiers. Can be
+        /// null.</param>
+        /// <param name="warningMessageIdPrefix">Specifies a prefix for warning message identifiers. Can be null.</param>
+        /// <param name="errorMessageIdPrefix">Specifies a prefix for error message identifiers. Can be null.</param>
+        /// <param name="alertMessageIdPrefix">Specifies a prefix for alert message identifiers. Can be null.</param>
+        /// <remarks>Identifiers of created diagnostic messages will start from <paramref name="messageIdBase"/> + 1 in
         /// ascending order.</remarks>
         public DiagnosticMessageFactory(int messageIdBase, string informationMessageIdPrefix, string warningMessageIdPrefix, string errorMessageIdPrefix, string alertMessageIdPrefix)
         {
@@ -120,27 +121,27 @@ namespace Juhta.Net.Diagnostics
         #region Private Fields
 
         /// <summary>
-        /// Specifies the prefix for alert message IDs.
+        /// Specifies the prefix for alert message identifiers.
         /// </summary>
         private string m_alertMessageIdPrefix;
 
         /// <summary>
-        /// Specifies the prefix for error message IDs.
+        /// Specifies the prefix for error message identifiers.
         /// </summary>
         private string m_errorMessageIdPrefix;
 
         /// <summary>
-        /// Specifies the prefix for information message IDs.
+        /// Specifies the prefix for information message identifiers.
         /// </summary>
         private string m_informationMessageIdPrefix;
 
         /// <summary>
-        /// Specifies the next message ID (without a prefix).
+        /// Specifies the next message identifier (without a prefix).
         /// </summary>
         private int m_nextMessageId;
 
         /// <summary>
-        /// Specifies the prefix for warning message IDs.
+        /// Specifies the prefix for warning message identifiers.
         /// </summary>
         private string m_warningMessageIdPrefix;
 
