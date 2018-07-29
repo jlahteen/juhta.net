@@ -27,6 +27,5 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Common\CommonConfig.xsd" />
-    <EmbeddedResource Include="Config.xsd" />
   </ItemGroup>
 </Project>
