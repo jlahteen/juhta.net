@@ -80,7 +80,13 @@ namespace Juhta.Net.LibraryManagement
         /// configuration schema.</returns>
         protected XmlSchema[] GetEmbeddedConfigAndCommonSchema(Assembly containingAssembly)
         {
-            return(GetEmbeddedConfigAndCommonSchema(containingAssembly, this.GetType().Namespace, "Config.xsd"));
+            List<XmlSchema> schemas = new List<XmlSchema>();
+
+            schemas.Add(FrameworkConfig.GetEmbeddedConfigSchema(containingAssembly));
+
+            schemas.Add(FrameworkConfig.GetEmbeddedCommonConfigSchema());
+
+            return(schemas.ToArray());
         }
 
         /// <summary>
