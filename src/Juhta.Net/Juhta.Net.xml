@@ -1725,6 +1725,20 @@
             <param name="assembly">Specifies the current assembly.</param>
             <returns>Returns the directory of the current assembly without an ending directory separator.</returns>
         </member>
+        <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetFileName(System.Reflection.Assembly)">
+            <summary>
+            Gets the file name of the current assembly.
+            </summary>
+            <param name="assembly">Specifies the current assembly.</param>
+            <returns>Returns the file name of the current assembly.</returns>
+        </member>
+        <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension(System.Reflection.Assembly)">
+            <summary>
+            Gets the file name of the current assembly without the extension.
+            </summary>
+            <param name="assembly">Specifies the current assembly.</param>
+            <returns>Returns the file name of the current assembly without the extension.</returns>
+        </member>
         <member name="M:Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)">
             <summary>
             Gets the value of the current assembly's Product attribute.
@@ -2177,6 +2191,31 @@
             configuration.</param>
             <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object for the specified root library
             configuration.</returns>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.GetEmbeddedCommonConfigSchema">
+            <summary>
+            Gets the embedded schema for the common configuration.
+            </summary>
+            <returns>Returns the embedded schema for the common configuration.</returns>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.GetEmbeddedConfigSchema(System.Reflection.Assembly)">
+            <summary>
+            Gets the default embedded configuration schema.
+            </summary>
+            <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
+            be searched for.</param>
+            <returns>Returns the default embedded configuration schema from the specified assembly.</returns>
+        </member>
+        <member name="M:Juhta.Net.FrameworkConfig.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)">
+            <summary>
+            Gets an embedded configuration schema.
+            </summary>
+            <param name="containingAssembly">Specifies an assembly where the embedded configuration schema will be
+            searched for.</param>
+            <param name="configSchemaFileNamespace">Specifies the file namespace of an embedded configuration schema.</param>
+            <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
+            <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
+            specified file namespace and name.</returns>
         </member>
         <member name="M:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)">
             <summary>

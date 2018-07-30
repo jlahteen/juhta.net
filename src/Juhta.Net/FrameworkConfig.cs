@@ -1,13 +1,17 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Extensions;
 using System;
+using System.IO;
+using System.Reflection;
 using System.Xml;
+using System.Xml.Schema;
 
 namespace Juhta.Net
 {
@@ -65,6 +69,47 @@ namespace Juhta.Net
             namespaceManager.AddNamespace("common", FrameworkConfig.GetLibraryConfigXmlns("Common", FrameworkConfig.CommonConfigSchemaVersion));
 
             return(namespaceManager);
+        }
+
+        /// <summary>
+        /// Gets the embedded schema for the common configuration.
+        /// </summary>
+        /// <returns>Returns the embedded schema for the common configuration.</returns>
+        public static XmlSchema GetEmbeddedCommonConfigSchema()
+        {
+            return(GetEmbeddedConfigSchema(typeof(FrameworkConfig).Assembly, FrameworkConfig.CommonConfigFileNamespace, FrameworkConfig.CommonConfigFileName));
+        }
+
+        /// <summary>
+        /// Gets the default embedded configuration schema.
+        /// </summary>
+        /// <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
+        /// be searched for.</param>
+        /// <returns>Returns the default embedded configuration schema from the specified assembly.</returns>
+        public static XmlSchema GetEmbeddedConfigSchema(Assembly containingAssembly)
+        {
+            return(GetEmbeddedConfigSchema(containingAssembly, containingAssembly.GetFileNameWithoutExtension(), "Config.xsd"));
+        }
+
+        /// <summary>
+        /// Gets an embedded configuration schema.
+        /// </summary>
+        /// <param name="containingAssembly">Specifies an assembly where the embedded configuration schema will be
+        /// searched for.</param>
+        /// <param name="configSchemaFileNamespace">Specifies the file namespace of an embedded configuration schema.</param>
+        /// <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
+        /// <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
+        /// specified file namespace and name.</returns>
+        public static XmlSchema GetEmbeddedConfigSchema(Assembly containingAssembly, string configSchemaFileNamespace, string configSchemaFileName)
+        {
+            string configSchemaContent;
+            XmlSchema configSchema = null;
+
+            configSchemaContent = containingAssembly.LoadEmbeddedResourceFile(configSchemaFileName, configSchemaFileNamespace);
+
+            configSchema = XmlSchema.Read(new StringReader(configSchemaContent), null);
+
+            return(configSchema);
         }
 
         /// <summary>
