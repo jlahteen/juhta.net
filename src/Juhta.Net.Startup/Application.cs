@@ -62,7 +62,7 @@ namespace Juhta.Net.Startup
             Logger.SetLogger(new FileLogger(logFilePath));
 
             // Set the binary directory
-            m_binDirectory = Assembly.GetExecutingAssembly().GetDirectory();
+            m_binDirectory = FrameworkInfo.BinDirectory;
 
             // Use the binary directory as the configuration directory if necessary
             if (String.IsNullOrEmpty(configDirectory))
@@ -169,7 +169,7 @@ namespace Juhta.Net.Startup
             {
                 // Perform the initialization if necessary
 
-                if ((rootConfig = LoadAndValidateRootConfig()) != null)
+                if ((rootConfig = LoadAndValidateConfig()) != null)
                 {
                     // Create a namespace manager for the configuration
                     namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(rootConfig);
@@ -317,17 +317,17 @@ namespace Juhta.Net.Startup
         }
 
         /// <summary>
-        /// Loads and validates the root configuration file.
+        /// Loads and validates the configuration file.
         /// </summary>
-        /// <returns>Returns an <see cref="XmlDocument"/> object containing the root configuration. If there is no root
+        /// <returns>Returns an <see cref="XmlDocument"/> object containing the configuration. If there is no
         /// configuration file, the return value is null.</returns>
-        private XmlDocument LoadAndValidateRootConfig()
+        private XmlDocument LoadAndValidateConfig()
         {
             string configFilePath;
             XmlDocument config = null;
             XmlDocumentValidator configValidator;
 
-            configFilePath = String.Format("{0}{1}{2}.config", m_configDirectory, Path.DirectorySeparatorChar, FrameworkInfo.RootNamespace);
+            configFilePath = String.Format("{0}{1}{2}.config", m_configDirectory, Path.DirectorySeparatorChar, typeof(Application).Namespace);
 
             if (!File.Exists(configFilePath))
                 return(null);
@@ -338,9 +338,9 @@ namespace Juhta.Net.Startup
 
             configValidator = new XmlDocumentValidator();
 
-            configValidator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.RootConfigFileName, FrameworkConfig.RootConfigFileNamespace));
+            configValidator.AddSchema(FrameworkConfig.GetEmbeddedConfigSchema(Assembly.GetExecutingAssembly()));
 
-            configValidator.AddSchema(Assembly.GetExecutingAssembly().LoadEmbeddedResourceFile(FrameworkConfig.CommonConfigFileName, FrameworkConfig.CommonConfigFileNamespace));
+            configValidator.AddSchema(FrameworkConfig.GetEmbeddedCommonConfigSchema());
 
             try
             {
