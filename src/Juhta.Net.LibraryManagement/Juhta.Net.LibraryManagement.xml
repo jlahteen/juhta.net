@@ -369,12 +369,6 @@
             </summary>
             <param name="libraryFileName">Specifies a value for the <see cref="P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName"/> property.</param>
         </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema">
-            <summary>
-            Gets the embedded schema for the common configuration.
-            </summary>
-            <returns>Returns the embedded schema for the common configuration.</returns>
-        </member>
         <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)">
             <summary>
             Gets the default embedded configuration schema plus the common configuration schema.
@@ -394,17 +388,6 @@
             <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
             <returns>Returns an array containing two schemas, the specified embedded configuration schema and the
             common configuration schema.</returns>
-        </member>
-        <member name="M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)">
-            <summary>
-            Gets an embedded configuration schema.
-            </summary>
-            <param name="containingAssembly">Specifies an assembly where the embedded configuration schema will be
-            searched for.</param>
-            <param name="configSchemaFileNamespace">Specifies the file namespace of an embedded configuration schema.</param>
-            <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
-            <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
-            specified file namespace and name.</returns>
         </member>
         <member name="F:Juhta.Net.LibraryManagement.LibraryHandleBase.m_libraryFileName">
             <summary>

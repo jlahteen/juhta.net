@@ -72,15 +72,6 @@ namespace Juhta.Net.LibraryManagement
         #region Protected Methods
 
         /// <summary>
-        /// Gets the embedded schema for the common configuration.
-        /// </summary>
-        /// <returns>Returns the embedded schema for the common configuration.</returns>
-        protected XmlSchema GetCommonConfigSchema()
-        {
-            return(GetEmbeddedConfigSchema(typeof(FrameworkConfig).Assembly, FrameworkConfig.CommonConfigFileNamespace, FrameworkConfig.CommonConfigFileName));
-        }
-
-        /// <summary>
         /// Gets the default embedded configuration schema plus the common configuration schema.
         /// </summary>
         /// <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
@@ -105,32 +96,11 @@ namespace Juhta.Net.LibraryManagement
         {
             List<XmlSchema> schemas = new List<XmlSchema>();
 
-            schemas.Add(GetEmbeddedConfigSchema(containingAssembly, configSchemaFileNamespace, configSchemaFileName));
+            schemas.Add(FrameworkConfig.GetEmbeddedConfigSchema(containingAssembly, configSchemaFileNamespace, configSchemaFileName));
 
-            schemas.Add(GetCommonConfigSchema());
+            schemas.Add(FrameworkConfig.GetEmbeddedCommonConfigSchema());
 
             return(schemas.ToArray());
-        }
-
-        /// <summary>
-        /// Gets an embedded configuration schema.
-        /// </summary>
-        /// <param name="containingAssembly">Specifies an assembly where the embedded configuration schema will be
-        /// searched for.</param>
-        /// <param name="configSchemaFileNamespace">Specifies the file namespace of an embedded configuration schema.</param>
-        /// <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
-        /// <returns>Returns the embedded configuration schema from the specified assembly corresponding to the
-        /// specified file namespace and name.</returns>
-        protected XmlSchema GetEmbeddedConfigSchema(Assembly containingAssembly, string configSchemaFileNamespace, string configSchemaFileName)
-        {
-            string configSchemaContent;
-            XmlSchema configSchema = null;
-
-            configSchemaContent = containingAssembly.LoadEmbeddedResourceFile(configSchemaFileName, configSchemaFileNamespace);
-
-            configSchema = XmlSchema.Read(new StringReader(configSchemaContent), null);
-
-            return(configSchema);
         }
 
         #endregion
