@@ -1,6 +1,6 @@
 
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -119,6 +119,26 @@ namespace Juhta.Net.Extensions
             directory = Path.GetDirectoryName(assembly.ManifestModule.FullyQualifiedName);
 
             return(directory.TrimEnd(Path.DirectorySeparatorChar));
+        }
+
+        /// <summary>
+        /// Gets the file name of the current assembly.
+        /// </summary>
+        /// <param name="assembly">Specifies the current assembly.</param>
+        /// <returns>Returns the file name of the current assembly.</returns>
+        public static string GetFileName(this Assembly assembly)
+        {
+            return(Path.GetFileName(assembly.ManifestModule.FullyQualifiedName));
+        }
+
+        /// <summary>
+        /// Gets the file name of the current assembly without the extension.
+        /// </summary>
+        /// <param name="assembly">Specifies the current assembly.</param>
+        /// <returns>Returns the file name of the current assembly without the extension.</returns>
+        public static string GetFileNameWithoutExtension(this Assembly assembly)
+        {
+            return(Path.GetFileNameWithoutExtension(assembly.ManifestModule.FullyQualifiedName));
         }
 
         /// <summary>
