@@ -81,7 +81,7 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Gets the default embedded configuration schema.
+        /// Gets the default embedded configuration schema from a specified assembly.
         /// </summary>
         /// <param name="containingAssembly">Specifies an assembly where the default embedded configuration schema will
         /// be searched for.</param>
@@ -92,9 +92,9 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Gets an embedded configuration schema.
+        /// Gets an embedded configuration schema from a specified assembly.
         /// </summary>
-        /// <param name="containingAssembly">Specifies an assembly where the embedded configuration schema will be
+        /// <param name="containingAssembly">Specifies an assembly where an embedded configuration schema will be
         /// searched for.</param>
         /// <param name="configSchemaFileNamespace">Specifies the file namespace of an embedded configuration schema.</param>
         /// <param name="configSchemaFileName">Specifies the file name of an embedded configuration schema.</param>
