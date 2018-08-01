@@ -38,7 +38,7 @@
         </member>
         <member name="M:Juhta.Net.Startup.Application.Close">
             <summary>
-            Closes the application by closing all configured startup libraries and the core of the framework.
+            Closes the application by closing all configured startup libraries.
             </summary>
         </member>
         <member name="M:Juhta.Net.Startup.Application.CloseInstance">
@@ -57,7 +57,7 @@
         </member>
         <member name="M:Juhta.Net.Startup.Application.Start">
             <summary>
-            Starts the application by initializing the core of the framework and all configured startup libraries.
+            Starts the application by initializing all configured startup libraries.
             </summary>
         </member>
         <member name="M:Juhta.Net.Startup.Application.StartInstance">
@@ -124,7 +124,8 @@
             <summary>
             Loads and validates the configuration file.
             </summary>
-            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the configuration. If there is no configuration file, the return value is null.</returns>
+            <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the configuration. If there is no
+            configuration file, the return value is null.</returns>
         </member>
         <member name="T:Juhta.Net.Startup.Application.State">
             <summary>

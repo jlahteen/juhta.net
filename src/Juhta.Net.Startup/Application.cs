@@ -80,7 +80,7 @@ namespace Juhta.Net.Startup
         #region Public Methods
 
         /// <summary>
-        /// Closes the application by closing all configured startup libraries and the core of the framework.
+        /// Closes the application by closing all configured startup libraries.
         /// </summary>
         public void Close()
         {
@@ -154,11 +154,11 @@ namespace Juhta.Net.Startup
         }
 
         /// <summary>
-        /// Starts the application by initializing the core of the framework and all configured startup libraries.
+        /// Starts the application by initializing all configured startup libraries.
         /// </summary>
         public void Start()
         {
-            XmlDocument rootConfig;
+            XmlDocument config;
             XmlNamespaceManager namespaceManager;
 
             // Check the current state of the application
@@ -169,19 +169,19 @@ namespace Juhta.Net.Startup
             {
                 // Perform the initialization if necessary
 
-                if ((rootConfig = LoadAndValidateConfig()) != null)
+                if ((config = LoadAndValidateConfig()) != null)
                 {
                     // Create a namespace manager for the configuration
-                    namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(rootConfig);
+                    namespaceManager = FrameworkConfig.CreateNamespaceManager(this.GetType().Namespace + ".dll", config, "v1");
 
                     // Initialize the attribute fields
-                    InitializeAttributeFields(rootConfig.SelectSingleNode("//ns:application", namespaceManager));
+                    InitializeAttributeFields(config.SelectSingleNode("//ns:application", namespaceManager));
 
                     // Initialize the libraries
 
                     m_libraryManager = new LibraryManager(this);
 
-                    m_libraryManager.InitializeLibraries(rootConfig.SelectSingleNode("//ns:application/ns:startup/ns:libraries", namespaceManager));
+                    m_libraryManager.InitializeLibraries(config.SelectSingleNode("//ns:application/ns:libraries", namespaceManager));
 
                     // Start watching configuration file changes
                     m_libraryManager.StartConfigFileWatching();
