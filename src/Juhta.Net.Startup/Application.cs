@@ -349,7 +349,7 @@ namespace Juhta.Net.Startup
 
             catch (ValidationException ex)
             {
-                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, FrameworkInfo.RootNamespace + ".dll"), ex);
+                throw new InvalidConfigFileException(LibraryMessages.Error002.FormatMessage(configFilePath, typeof(Application).Namespace + ".dll"), ex);
             }
 
             return(config);
