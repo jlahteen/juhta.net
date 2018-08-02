@@ -80,7 +80,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Close_StartableLibrary_StopProcessesReturnsFalse_ShouldReturn()
         {
-            SetConfigFiles("Root", "StartableLibrary_");
+            SetConfigFiles("Startup", "StartableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -92,13 +92,13 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<bool>(false, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AssertDefaultLogFileContent("Juhta.Net.Warning10072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
+            AssertDefaultLogFileContent("Juhta.Net.Startup.Warning101072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
         }
 
         [TestMethod]
         public void Close_StartableLibrary_StopProcessesThrowsException_ShouldReturn()
         {
-            SetConfigFiles("Root", "StartableLibrary_");
+            SetConfigFiles("Startup", "StartableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -110,14 +110,14 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AssertDefaultLogFileContent("Juhta.Net.Error10071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
+            AssertDefaultLogFileContent("Juhta.Net.Startup.Error101071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
         }
 
         [TestMethod]
         [ExpectedException(typeof(XmlException))]
         public void Start_BrokenConfig_ShouldThrowXmlException()
         {
-            SetConfigFiles("Root", "BrokenConfig_", ".");
+            SetConfigFiles("Startup", "BrokenConfig_", ".");
 
             Application.StartInstance();
         }
@@ -127,7 +127,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "ClosableLibrary_");
+            SetConfigFiles("Startup", "ClosableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -147,7 +147,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_ConfigDirectoryGiven_SimpleConfig_ShouldReturn()
         {
-            SetConfigFiles("Root", "SimpleConfig_");
+            SetConfigFiles("Startup", "SimpleConfig_");
 
             Application.StartInstance(null, s_configDirectory);
         }
@@ -157,7 +157,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Ini_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Ini_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -172,7 +172,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Json_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -187,7 +187,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Json_ConfigFileNameOverriddenInConfig_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Json_ConfigFileNameOverriddenInConfig_");
 
             File.Move(s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_configDirectory + Path.DirectorySeparatorChar + "UseThisConfig.json");
 
@@ -203,7 +203,7 @@ namespace Juhta.Net.Startup.Tests
         [ExpectedException(typeof(LibraryInitializationException))]
         public void Start_ConfigurableLibrary_Json_NullConfigFileName_ShouldThrowLibraryInitializationException()
         {
-            SetConfigFiles("Root", "ConfigurableLibrary_Json_NullConfigFileName_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Json_NullConfigFileName_");
 
             try
             {
@@ -212,7 +212,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch (LibraryInitializationException ex)
             {
-                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Error10014] Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
+                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Startup.Error101014] Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
 
                 throw;
             }
@@ -223,7 +223,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Json_NullConfigFileName_ConfigFileNameSpecifiedInConfig_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Json_NullConfigFileName_ConfigFileNameSpecifiedInConfig_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -238,7 +238,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Json_NullConfigFileName_DefaultConfigFileNameSpecifiedInConfig_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Json_NullConfigFileName_DefaultConfigFileNameSpecifiedInConfig_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -253,7 +253,7 @@ namespace Juhta.Net.Startup.Tests
         {
             AppXLibrary.Configurable.StringCache stringCache;
 
-            SetConfigFiles("Root", "ConfigurableLibrary_Xml_");
+            SetConfigFiles("Startup", "ConfigurableLibrary_Xml_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -268,7 +268,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableAndClosableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -288,7 +288,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryReturnsFalse_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -302,7 +302,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("WARNING event", "[Juhta.Net.Warning10017] At least one error occurred when the library 'AppXLibrary.dll' was closed.");
+            AssertDefaultLogFileContent("WARNING event", "[Juhta.Net.Startup.Warning101017] At least one error occurred when the library 'AppXLibrary.dll' was closed.");
         }
 
         [TestMethod]
@@ -310,7 +310,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryThrowsException_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableAndClosableLibrary_CloseLibraryThrowsException_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -324,7 +324,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Error10004] An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
+            AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error101004] An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
         }
 
         [TestMethod]
@@ -332,7 +332,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "CustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -346,7 +346,7 @@ namespace Juhta.Net.Startup.Tests
         {
             ILibraryConfig libraryConfig;
 
-            SetConfigFiles("Root", "CustomXmlConfigurableLibrary100_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableLibrary100_");
 
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.CustomXmlConfigurable");
 
@@ -363,7 +363,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Ini_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Ini_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Ini_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -380,7 +380,7 @@ namespace Juhta.Net.Startup.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.ini";
             string configFileContent;
 
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Ini_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Ini_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -408,7 +408,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Json_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -425,7 +425,7 @@ namespace Juhta.Net.Startup.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.json";
             string configFileContent;
 
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -453,7 +453,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingInConfigDirectory_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -475,10 +475,10 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Warning10063] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning101063] Library Manager detected that the configuration file",
                 "RenamedAppXLibrary.json' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.",
                 "INFORMATION event",
-                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -486,7 +486,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingIntoConfigDirectory_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
 
             File.Move(s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json", s_tempDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json");
 
@@ -510,7 +510,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -518,7 +518,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Json_ConfigFileRenamingOutOfConfigDirectory_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Json_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -540,7 +540,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -548,7 +548,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Xml_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Xml_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Xml_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -565,7 +565,7 @@ namespace Juhta.Net.Startup.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.xml";
             string configFileContent;
 
-            SetConfigFiles("Root", "DynamicConfigurableLibrary_Xml_");
+            SetConfigFiles("Startup", "DynamicConfigurableLibrary_Xml_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -595,7 +595,7 @@ namespace Juhta.Net.Startup.Tests
         {
             string currentGreeting;
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -610,7 +610,7 @@ namespace Juhta.Net.Startup.Tests
             string currentGreeting;
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -628,7 +628,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -639,7 +639,7 @@ namespace Juhta.Net.Startup.Tests
             string currentGreeting;
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -655,7 +655,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<string>("Hello there, what's up?", currentGreeting);
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Thread.Sleep(2000);
 
@@ -665,14 +665,14 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully.",
                 "INFORMATION event",
-                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully.",
                 "WARNING event",
-                "[Juhta.Net.Warning10063] Library Manager detected that the configuration file",
-                "Juhta.Net.config' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file."
+                "[Juhta.Net.Startup.Warning101063] Library Manager detected that the configuration file",
+                "Juhta.Net.Startup.config' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
 
@@ -683,7 +683,7 @@ namespace Juhta.Net.Startup.Tests
             string currentGreeting;
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -705,13 +705,13 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "[Juhta.Net.Error10064] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Error101064] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. The state of the library was left unmodified.",
-                "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Error10002] XML configuration file",
+                "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
                 "AppXLibrary.config' does not conform to the configuration schema(s) of the custom XML configurable library 'AppXLibrary.dll'.",
-                "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error101082] XML document is not valid according to the given schema(s).",
                 "ALERT event",
-                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -722,7 +722,7 @@ namespace Juhta.Net.Startup.Tests
             string currentGreeting;
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -744,7 +744,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -756,7 +756,7 @@ namespace Juhta.Net.Startup.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
             string unknownConfigFilePath = s_configDirectory + "\\Unknown.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableLibrary_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
             File.Copy(appXConfigFilePath, unknownConfigFilePath);
 
@@ -776,7 +776,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Warning10011] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning101011] Library Manager detected that the configuration file",
                 "Unknown.config' was deleted, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
@@ -784,7 +784,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicCustomXmlConfigurableAndStartable_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -799,7 +799,7 @@ namespace Juhta.Net.Startup.Tests
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -821,7 +821,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -834,7 +834,7 @@ namespace Juhta.Net.Startup.Tests
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -868,7 +868,7 @@ namespace Juhta.Net.Startup.Tests
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -890,12 +890,12 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10061] Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
+                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101061] Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
                 "System.InvalidOperationException: Cannot replace with 'XYZ' strings. Please use any other token but not that. Sorry.",
-                "[Juhta.Net.Warning10078] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning101078] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The library continues running with the current state.",
                 "ALERT event",
-                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -908,7 +908,7 @@ namespace Juhta.Net.Startup.Tests
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesReturnsFalse_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesReturnsFalse_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -933,13 +933,13 @@ namespace Juhta.Net.Startup.Tests
             {
                 AssertDefaultLogFileContent(
                     "ERROR event",
-                    "[Juhta.Net.Error10066] Library Manager detected that the configuration file",
+                    "[Juhta.Net.Startup.Error101066] Library Manager detected that the configuration file",
                     "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated.",
                     "NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                    "[Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
-                    "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10059] Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
+                    "[Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                    "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101059] Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
                     "ALERT event",
-                    "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                    "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
                 );
 
                 throw;
@@ -954,7 +954,7 @@ namespace Juhta.Net.Startup.Tests
             XmlDocument appXConfig = new XmlDocument();
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesThrowsException_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesThrowsException_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -977,16 +977,16 @@ namespace Juhta.Net.Startup.Tests
             AssertDefaultLogFileContent(
                 "ERROR event",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                "Juhta.Net.LibraryManagement.LibraryStateException: [Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
+                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
                 "ALERT event",
-                "[Juhta.Net.Alert10005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
         [TestMethod]
         public void Start_DynamicCustomXmlConfigurableAndStartable_StopProcessesReturnsFalse_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_StopProcessesReturnsFalse_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_StopProcessesReturnsFalse_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -996,14 +996,14 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Warning10073] At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
+                "[Juhta.Net.Startup.Warning101073] At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
             );
         }
 
         [TestMethod]
         public void Start_DynamicCustomXmlConfigurableAndStartable_StopProcessesThrowsException_ShouldReturn()
         {
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable_StopProcessesThrowsException_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_StopProcessesThrowsException_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1013,7 +1013,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "[Juhta.Net.Error10075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                "[Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
                 "System.Exception: Processes could not be stopped."
             );
         }
@@ -1024,7 +1024,7 @@ namespace Juhta.Net.Startup.Tests
             IReplaceService replaceService;
             string s;
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_");
 
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempB", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
 
@@ -1049,7 +1049,7 @@ namespace Juhta.Net.Startup.Tests
             string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
             int secondsWaited = 0;
 
-            SetConfigFiles("Root", "DynamicCustomXmlConfigurableAndStartable100_ConfigChange_");
+            SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_ConfigChange_");
 
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempC", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
 
@@ -1095,7 +1095,7 @@ namespace Juhta.Net.Startup.Tests
             for (int i = 1; i <= 100; i++)
                 AssertDefaultLogFileContent(
                     "INFORMATION event",
-                    "[Juhta.Net.Info10065] Library Manager detected that the configuration file",
+                    "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
                     $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibraryTempC{i}.dll' was updated successfully."
                 );
         }
@@ -1106,7 +1106,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "CustomXmlConfigurableLibrary_InvalidConfigValue_");
+            SetConfigFiles("Startup", "CustomXmlConfigurableLibrary_InvalidConfigValue_");
 
             try
             {
@@ -1115,7 +1115,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Error10003] Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
+                AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error101003] Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
 
                 throw;
             }
@@ -1126,7 +1126,7 @@ namespace Juhta.Net.Startup.Tests
         {
             LibraryConfig libraryConfig = new LibraryConfig();
 
-            SetConfigFiles("Root", "InitializableLibrary_");
+            SetConfigFiles("Startup", "InitializableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1139,7 +1139,7 @@ namespace Juhta.Net.Startup.Tests
         [ExpectedException(typeof(InvalidConfigFileException))]
         public void Start_InvalidConfig_InvalidHandleClass_ShouldThrowInvalidConfigFileException()
         {
-            SetConfigFiles("Root", "InvalidConfig_InvalidHandleClass_");
+            SetConfigFiles("Startup", "InvalidConfig_InvalidHandleClass_");
 
             try
             {
@@ -1150,10 +1150,10 @@ namespace Juhta.Net.Startup.Tests
             {
                 AssertDefaultLogFileContent(
                     "ERROR event",
-                    "[Juhta.Net.Error10006] An error occurred when the application",
-                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Error10002] XML configuration file",
-                    "does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.dll'.",
-                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error10082] XML document is not valid according to the given schema(s).",
+                    "[Juhta.Net.Startup.Error101006] An error occurred when the application",
+                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
+                    "does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.Startup.dll'.",
+                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error101082] XML document is not valid according to the given schema(s).",
                     "System.Xml.Schema.XmlSchemaValidationException: The 'handleClass' attribute is invalid - The value '.Initializable.InitializableLibrary' is invalid according to its datatype 'http://schemas.juhta.net/common-v1.xsd:shortClassIdType' - The Pattern constraint failed."
                 );
 
@@ -1165,7 +1165,7 @@ namespace Juhta.Net.Startup.Tests
         [ExpectedException(typeof(InvalidConfigFileException))]
         public void Start_InvalidConfig_UndefinedElement_ShouldThrowInvalidConfigFileException()
         {
-            SetConfigFiles("Root", "InvalidConfig_UndefinedElement_", ".");
+            SetConfigFiles("Startup", "InvalidConfig_UndefinedElement_", ".");
 
             try
             {
@@ -1174,7 +1174,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("[Juhta.Net.Error10002]");
+                AssertDefaultLogFileContent("[Juhta.Net.Startup.Error101002]");
 
                 throw;
             }
@@ -1213,7 +1213,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_NoParameters_SimpleConfig_ShouldReturn()
         {
-            SetConfigFiles("Root", "SimpleConfig_", ".");
+            SetConfigFiles("Startup", "SimpleConfig_", ".");
 
             Application.StartInstance();
 
@@ -1225,7 +1225,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_NoParameters_SimpleConfig2_ShouldReturn()
         {
-            SetConfigFiles("Root", "SimpleConfig2_", ".");
+            SetConfigFiles("Startup", "SimpleConfig2_", ".");
 
             Application.StartInstance();
 
@@ -1237,7 +1237,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_NoParameters_SimpleConfig_NameAndDefaultConfigFileNameSpecified_ShouldReturn()
         {
-            SetConfigFiles("Root", "SimpleConfig_NameAndDefaultConfigFileNameSpecified_", ".");
+            SetConfigFiles("Startup", "SimpleConfig_NameAndDefaultConfigFileNameSpecified_", ".");
 
             Application.StartInstance();
 
@@ -1249,7 +1249,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_StartableLibrary_ShouldReturn()
         {
-            SetConfigFiles("Root", "StartableLibrary_");
+            SetConfigFiles("Startup", "StartableLibrary_");
 
             Application.StartInstance(null, s_configDirectory);
 
