@@ -125,7 +125,7 @@ namespace Juhta.Net
             libraryPart = libraryFileName.ToLower();
 
             if (libraryPart.StartsWith(FrameworkInfo.RootNamespace.ToLower()))
-                libraryPart = libraryPart.Substring(FrameworkInfo.RootNamespace.Length);
+                libraryPart = libraryPart.Substring(FrameworkInfo.RootNamespace.Length + 1);
 
             if (libraryPart.EndsWith(".dll"))
                 libraryPart = libraryPart.Substring(0, libraryPart.Length - ".dll".Length);
