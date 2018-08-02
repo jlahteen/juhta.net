@@ -33,7 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Services", "src\J
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.LibraryManagement", "src\Juhta.Net.LibraryManagement\Juhta.Net.LibraryManagement.csproj", "{12658E4B-6D24-4B3E-9C36-82851AF5AF21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Startup", "src\Juhta.Net.Startup\Juhta.Net.Startup.csproj", "{0EF3DC07-2EBD-435B-AF79-6B1E39C52710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juhta.Net.Startup", "src\Juhta.Net.Startup\Juhta.Net.Startup.csproj", "{0EF3DC07-2EBD-435B-AF79-6B1E39C52710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Startup.Tests", "tests\Juhta.Net.Startup.Tests\Juhta.Net.Startup.Tests.csproj", "{96CE413B-87BE-4972-84FE-C1C164FCBA34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juhta.Net.Services.Tests", "tests\Juhta.Net.Services.Tests\Juhta.Net.Services.Tests.csproj", "{81CA906A-B89A-488D-843E-A7DB6C6458F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +169,30 @@ Global
 		{0EF3DC07-2EBD-435B-AF79-6B1E39C52710}.Release|x64.Build.0 = Release|Any CPU
 		{0EF3DC07-2EBD-435B-AF79-6B1E39C52710}.Release|x86.ActiveCfg = Release|Any CPU
 		{0EF3DC07-2EBD-435B-AF79-6B1E39C52710}.Release|x86.Build.0 = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|x64.Build.0 = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Debug|x86.Build.0 = Debug|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|x64.ActiveCfg = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|x64.Build.0 = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|x86.ActiveCfg = Release|Any CPU
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34}.Release|x86.Build.0 = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|x64.Build.0 = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Debug|x86.Build.0 = Debug|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|x64.ActiveCfg = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|x64.Build.0 = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,6 +208,8 @@ Global
 		{8B6A1C90-664F-4D9A-9C90-966824C52A6E} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 		{12658E4B-6D24-4B3E-9C36-82851AF5AF21} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
 		{0EF3DC07-2EBD-435B-AF79-6B1E39C52710} = {3D37C466-F3DC-40BC-9029-14B3BCC40FF3}
+		{96CE413B-87BE-4972-84FE-C1C164FCBA34} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
+		{81CA906A-B89A-488D-843E-A7DB6C6458F3} = {CF402B9A-1E97-42A0-9276-4F2DF37485D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999057E4-EABA-4C51-A109-2F81255B3B05}
