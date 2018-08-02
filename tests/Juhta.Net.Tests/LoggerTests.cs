@@ -12,16 +12,14 @@ namespace Juhta.Net.Tests
 
         [TestCleanup]
         public void TestCleanup()
-        {
-            Application.CloseInstance();
-        }
+        {}
 
         [TestInitialize]
         public void TestInitialize()
         {
             DeleteConfigFilesAll();
 
-            Application.StartInstance();
+            Logger.SetLogger(new FileLogger());
         }
 
         #endregion

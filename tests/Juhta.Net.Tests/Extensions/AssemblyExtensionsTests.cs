@@ -1,4 +1,5 @@
 ﻿
+using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Reflection;
@@ -13,7 +14,7 @@ namespace Juhta.Net.Tests.Extensions
         [TestMethod]
         public void GetCompany_JuhtaNetAssembly_ShouldReturnCompanyString()
         {
-            Assembly assembly = typeof(Application).Assembly;
+            Assembly assembly = typeof(CommonMessages).Assembly;
 
             Assert.AreEqual<string>("Juha Lähteenmäki", assembly.GetCompany());
         }
@@ -21,7 +22,7 @@ namespace Juhta.Net.Tests.Extensions
         [TestMethod]
         public void GetCopyright_JuhtaNetAssembly_ShouldReturnCopyrightString()
         {
-            Assembly assembly = typeof(Application).Assembly;
+            Assembly assembly = typeof(CommonMessages).Assembly;
 
             Assert.AreEqual<string>("Copyright © 2018 Juha Lähteenmäki", assembly.GetCopyright());
         }
@@ -29,7 +30,7 @@ namespace Juhta.Net.Tests.Extensions
         [TestMethod]
         public void GetProduct_JuhtaNetAssembly_ShouldReturnProductString()
         {
-            Assembly assembly = typeof(Application).Assembly;
+            Assembly assembly = typeof(CommonMessages).Assembly;
 
             Assert.AreEqual<string>("Juhta.NET", assembly.GetProduct());
         }
@@ -37,7 +38,7 @@ namespace Juhta.Net.Tests.Extensions
         [TestMethod]
         public void GetProductVersion_JuhtaNetAssembly_ShouldReturnProductVersionString()
         {
-            Assembly assembly = typeof(Application).Assembly;
+            Assembly assembly = typeof(CommonMessages).Assembly;
 
             Assert.AreEqual<string>("1.0.0-rc", assembly.GetProductVersion());
         }
@@ -45,7 +46,7 @@ namespace Juhta.Net.Tests.Extensions
         [TestMethod]
         public void GetVersion_JuhtaNetAssembly_ShouldReturnVersionString()
         {
-            Assembly assembly = typeof(Application).Assembly;
+            Assembly assembly = typeof(CommonMessages).Assembly;
 
             Assert.AreEqual<string>("1.0.0.1", assembly.GetVersion());
         }
