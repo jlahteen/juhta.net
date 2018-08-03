@@ -86,7 +86,7 @@ namespace Juhta.Net.Startup
         {
             // Check the state of the application
             if (m_state == State.Uninitialized)
-                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Close", typeof(Application)));
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage("Close", typeof(Application)));
 
             try
             {
@@ -163,7 +163,7 @@ namespace Juhta.Net.Startup
 
             // Check the current state of the application
             if (m_state > State.Uninitialized)
-                throw new InvalidOperationException(CommonMessages.Error012.FormatMessage("Start", typeof(Application)));
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage("Start", typeof(Application)));
 
             try
             {
