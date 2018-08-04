@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Juhta.Net.Services\Juhta.Net.Services.csproj" />
+    <ProjectReference Include="..\AppXLibrary\AppXLibrary.csproj" />
     <ProjectReference Include="..\Juhta.Net.Tests\Juhta.Net.Tests.csproj" />
   </ItemGroup>
 
