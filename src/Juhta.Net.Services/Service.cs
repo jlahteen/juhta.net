@@ -82,7 +82,7 @@ namespace Juhta.Net.Services
         internal Service(ServiceFactory serviceFactory, XmlNode serviceNode)
         {
             XmlNode constructorParamsNode;
-            XmlNamespaceManager namespaceManager = FrameworkConfig.CreateRootConfigNamespaceManager(serviceNode.OwnerDocument);
+            XmlNamespaceManager namespaceManager = FrameworkConfig.CreateNamespaceManager(GetType().Assembly.GetFileName(), serviceNode.OwnerDocument, "v1");
             List<ConstructorParam> constructorParams = new List<ConstructorParam>();
 
             m_serviceFactory = serviceFactory;
