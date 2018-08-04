@@ -172,7 +172,7 @@ namespace Juhta.Net.Startup
                 if ((config = LoadAndValidateConfig()) != null)
                 {
                     // Create a namespace manager for the configuration
-                    namespaceManager = FrameworkConfig.CreateNamespaceManager(this.GetType().Namespace + ".dll", config, "v1");
+                    namespaceManager = FrameworkConfig.CreateNamespaceManager(GetType().Assembly.GetFileName(), config, "v1");
 
                     // Initialize the attribute fields
                     InitializeAttributeFields(config.SelectSingleNode("//ns:application", namespaceManager));
