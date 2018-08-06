@@ -243,9 +243,9 @@ namespace Juhta.Net
         // TODO split: remove this
 
         /// <summary>
-        /// Value '{0}' is not a valid file path.
+        /// Value '{0}' is not a valid class identifier because its file path is invalid.
         /// </summary>
-        internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid file path.");
+        internal static readonly ErrorMessage Error038 = MessageFactory.CreateErrorMessage("Value '{0}' is not a valid class identifier because its file path is invalid.");
 
         /// <summary>
         /// Value '{0}' is not a valid class identifier.

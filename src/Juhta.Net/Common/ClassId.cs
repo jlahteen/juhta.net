@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -8,7 +8,6 @@
 
 using Juhta.Net.Extensions;
 using Juhta.Net.Helpers;
-using Juhta.Net.Validators;
 using System;
 using System.IO;
 
@@ -57,7 +56,7 @@ namespace Juhta.Net.Common
         {
             string originalValue, filePath, fragment;
             int indexOf;
-            FilePathValidator filePathValidator = new FilePathValidator();
+            FileInfo fileInfo;
 
             originalValue = classId;
 
@@ -82,71 +81,72 @@ namespace Juhta.Net.Common
             if (indexOf < 0 || indexOf == classId.Length - 1)
                 throw new ArgumentException(LibraryMessages.Error034.FormatMessage(originalValue));
 
-            try
+            // Parse the file path
+            filePath = classId.Substring(0, indexOf);
+
+            // Add the library directory to the file path if necessary
+
+            if (libraryDirectory != null)
             {
-                // Parse the file path
-                filePath = classId.Substring(0, indexOf);
+                if (!String.IsNullOrEmpty(Path.GetDirectoryName(filePath)))
+                    throw new ArgumentException(LibraryMessages.Error024.FormatMessage(libraryDirectory, originalValue));
 
-                // Add the library directory to the file path if necessary
-
-                if (libraryDirectory != null)
-                {
-                    if (!String.IsNullOrEmpty(Path.GetDirectoryName(filePath)))
-                        throw new ArgumentException(LibraryMessages.Error024.FormatMessage(libraryDirectory, originalValue));
-
-                    filePath = libraryDirectory + Path.DirectorySeparatorChar + filePath;
-                }
-
-                // Validate the file path
-                filePathValidator.Validate(filePath);
-
-                // Initialize the library file path
-                m_libraryFilePath = Path.GetFullPath(filePath);
-
-                // Initialize the library directory
-                m_libraryDirectory = Path.GetDirectoryName(m_libraryFilePath);
-
-                // Initialize the library file name
-                m_libraryFileName = Path.GetFileName(m_libraryFilePath);
-
-                // Check the library file extension
-                if (Path.GetExtension(m_libraryFileName).ToLower() != ".dll")
-                    throw new ArgumentException(LibraryMessages.Error035.FormatMessage(originalValue));
-
-                // Parse the fragment
-                fragment = classId.Substring(indexOf + 1);
-
-                // Initialize the full class name
-                if (fragment.StartsWith("~."))
-                    m_fullClassName = Path.GetFileNameWithoutExtension(m_libraryFileName) + fragment.Substring(1);
-                else
-                    m_fullClassName = fragment;
-
-                // Validate the full class name
-                if (!m_fullClassName.IsRegexMatch(RegexPatterns.FullClassName))
-                    throw new ArgumentException(LibraryMessages.Error036.FormatMessage(originalValue));
-
-                // Initialize the class namespace and name
-
-                indexOf = m_fullClassName.LastIndexOf('.');
-
-                if (indexOf > 0)
-                {
-                    m_classNamespace = m_fullClassName.Substring(0, indexOf);
-
-                    m_className = m_fullClassName.Substring(indexOf + 1);
-                }
-                else
-                {
-                    m_classNamespace = null;
-
-                    m_className = m_fullClassName;
-                }
+                filePath = libraryDirectory + Path.DirectorySeparatorChar + filePath;
             }
 
-            catch (ValidationException ex)
+            // Validate the file path
+
+            try
             {
-                throw new ArgumentException(LibraryMessages.Error039.FormatMessage(originalValue), ex);
+                fileInfo = new FileInfo(filePath);
+            }
+
+            catch (Exception ex) when (ex is ArgumentException || ex is PathTooLongException || ex is NotSupportedException)
+            {
+                throw new ArgumentException(LibraryMessages.Error038.FormatMessage(originalValue), ex);
+            }
+
+            // Initialize the library file path
+            m_libraryFilePath = Path.GetFullPath(filePath);
+
+            // Initialize the library directory
+            m_libraryDirectory = Path.GetDirectoryName(m_libraryFilePath);
+
+            // Initialize the library file name
+            m_libraryFileName = Path.GetFileName(m_libraryFilePath);
+
+            // Check the library file extension
+            if (Path.GetExtension(m_libraryFileName).ToLower() != ".dll")
+                throw new ArgumentException(LibraryMessages.Error035.FormatMessage(originalValue));
+
+            // Parse the fragment
+            fragment = classId.Substring(indexOf + 1);
+
+            // Initialize the full class name
+            if (fragment.StartsWith("~."))
+                m_fullClassName = Path.GetFileNameWithoutExtension(m_libraryFileName) + fragment.Substring(1);
+            else
+                m_fullClassName = fragment;
+
+            // Validate the full class name
+            if (!m_fullClassName.IsRegexMatch(RegexPatterns.FullClassName))
+                throw new ArgumentException(LibraryMessages.Error036.FormatMessage(originalValue));
+
+            // Initialize the class namespace and name
+
+            indexOf = m_fullClassName.LastIndexOf('.');
+
+            if (indexOf > 0)
+            {
+                m_classNamespace = m_fullClassName.Substring(0, indexOf);
+
+                m_className = m_fullClassName.Substring(indexOf + 1);
+            }
+            else
+            {
+                m_classNamespace = null;
+
+                m_className = m_fullClassName;
             }
         }
 
