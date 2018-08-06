@@ -40,7 +40,7 @@ namespace Juhta.Net.Tests.Extensions
         {
             Assembly assembly = typeof(CommonMessages).Assembly;
 
-            Assert.AreEqual<string>("1.0.0-rc", assembly.GetProductVersion());
+            Assert.AreEqual<string>("1.0.0-rc2", assembly.GetProductVersion());
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace Juhta.Net.Tests.Extensions
         {
             Assembly assembly = typeof(CommonMessages).Assembly;
 
-            Assert.AreEqual<string>("1.0.0.1", assembly.GetVersion());
+            Assert.AreEqual<string>("1.0.0.2", assembly.GetVersion());
         }
 
         #endregion
