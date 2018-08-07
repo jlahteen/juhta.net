@@ -709,7 +709,7 @@ namespace Juhta.Net.Startup.Tests
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. The state of the library was left unmodified.",
                 "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
                 "AppXLibrary.config' does not conform to the configuration schema(s) of the custom XML configurable library 'AppXLibrary.dll'.",
-                "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error101082] XML document is not valid according to the given schema(s).",
+                "Juhta.Net.Validation.ValidationException: [Juhta.Net.Validation.Error102004] XML document is not valid according to the given schema(s).",
                 "ALERT event",
                 "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
@@ -1153,7 +1153,7 @@ namespace Juhta.Net.Startup.Tests
                     "[Juhta.Net.Startup.Error101006] An error occurred when the application",
                     "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
                     "does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.Startup.dll'.",
-                    "Juhta.Net.Validators.ValidationException: [Juhta.Net.Error101082] XML document is not valid according to the given schema(s).",
+                    "Juhta.Net.Validation.ValidationException: [Juhta.Net.Validation.Error102004] XML document is not valid according to the given schema(s).",
                     "System.Xml.Schema.XmlSchemaValidationException: The 'handleClass' attribute is invalid - The value '.Initializable.InitializableLibrary' is invalid according to its datatype 'http://schemas.juhta.net/common-v1.xsd:shortClassIdType' - The Pattern constraint failed."
                 );
 
