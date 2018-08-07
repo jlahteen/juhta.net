@@ -7,7 +7,6 @@
 //
 
 using Juhta.Net.Extensions;
-using System;
 using System.IO;
 using System.Reflection;
 using System.Xml;
@@ -49,35 +48,12 @@ namespace Juhta.Net
         }
 
         /// <summary>
-        /// Creates an <see cref="XmlNamespaceManager"/> object for a specified root library configuration.
-        /// </summary>
-        /// <param name="anyRootConfigNode">Specifies an <see cref="XmlNode"/> object containing in a root library
-        /// configuration.</param>
-        /// <returns>Returns the created <see cref="XmlNamespaceManager"/> object for the specified root library
-        /// configuration.</returns>
-        public static XmlNamespaceManager CreateRootConfigNamespaceManager(XmlNode anyRootConfigNode)
-        {
-            XmlNamespaceManager namespaceManager;
-
-            if (anyRootConfigNode.OwnerDocument != null)
-                namespaceManager = new XmlNamespaceManager(anyRootConfigNode.OwnerDocument.NameTable);
-            else
-                namespaceManager = new XmlNamespaceManager(((XmlDocument)anyRootConfigNode).NameTable);
-
-            namespaceManager.AddNamespace("ns", String.Format("{0}root-{1}.xsd", FrameworkConfig.RootXmlns, FrameworkConfig.RootConfigSchemaVersion));
-
-            namespaceManager.AddNamespace("common", FrameworkConfig.GetLibraryConfigXmlns("Common", FrameworkConfig.CommonConfigSchemaVersion));
-
-            return(namespaceManager);
-        }
-
-        /// <summary>
         /// Gets the embedded schema for the common configuration.
         /// </summary>
         /// <returns>Returns the embedded schema for the common configuration.</returns>
         public static XmlSchema GetEmbeddedCommonConfigSchema()
         {
-            return(GetEmbeddedConfigSchema(typeof(FrameworkConfig).Assembly, FrameworkConfig.CommonConfigFileNamespace, FrameworkConfig.CommonConfigFileName));
+            return(GetEmbeddedConfigSchema(typeof(FrameworkConfig).Assembly, FrameworkConfig.CommonConfigSchemaFileNamespace, FrameworkConfig.CommonConfigSchemaFileName));
         }
 
         /// <summary>
@@ -144,7 +120,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the file name of the common configuration XML schema.
         /// </summary>
-        public static string CommonConfigFileName
+        public static string CommonConfigSchemaFileName
         {
             get {return(c_commonConfigFileName);}
         }
@@ -152,7 +128,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the file namespace of the common configuration XML schema.
         /// </summary>
-        public static string CommonConfigFileNamespace
+        public static string CommonConfigSchemaFileNamespace
         {
             get {return(FrameworkInfo.RootNamespace + ".Common");}
         }
@@ -163,30 +139,6 @@ namespace Juhta.Net
         public static string CommonConfigSchemaVersion
         {
             get {return(c_commonConfigSchemaVersion);}
-        }
-
-        /// <summary>
-        /// Gets the file name of the root configuration XML schema.
-        /// </summary>
-        public static string RootConfigFileName
-        {
-            get {return(c_rootConfigFileName);}
-        }
-
-        /// <summary>
-        /// Gets the file namespace of the root configuration XML schema.
-        /// </summary>
-        public static string RootConfigFileNamespace
-        {
-            get {return(FrameworkInfo.RootNamespace);}
-        }
-
-        /// <summary>
-        /// Gets the version of the root configuration XML schema.
-        /// </summary>
-        public static string RootConfigSchemaVersion
-        {
-            get {return(c_rootConfigSchemaVersion);}
         }
 
         /// <summary>
@@ -210,16 +162,6 @@ namespace Juhta.Net
         /// Defines the version of the common configuration XML schema.
         /// </summary>
         private const string c_commonConfigSchemaVersion = "v1";
-
-        /// <summary>
-        /// Defines the file name of the root configuration XML schema.
-        /// </summary>
-        private const string c_rootConfigFileName = "Config.xsd";
-
-        /// <summary>
-        /// Defines the version of the root configuration XML schema.
-        /// </summary>
-        private const string c_rootConfigSchemaVersion = "v1";
 
         /// <summary>
         /// Defines the root XML namespace for the configuration schemas of the framework libraries.

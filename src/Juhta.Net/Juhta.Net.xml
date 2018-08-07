@@ -2183,15 +2183,6 @@
             <param name="schemaVersion">Specifies the schema version of the library configuration.</param>
             <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object specified by the parameters.</returns>
         </member>
-        <member name="M:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)">
-            <summary>
-            Creates an <see cref="T:System.Xml.XmlNamespaceManager"/> object for a specified root library configuration.
-            </summary>
-            <param name="anyRootConfigNode">Specifies an <see cref="T:System.Xml.XmlNode"/> object containing in a root library
-            configuration.</param>
-            <returns>Returns the created <see cref="T:System.Xml.XmlNamespaceManager"/> object for the specified root library
-            configuration.</returns>
-        </member>
         <member name="M:Juhta.Net.FrameworkConfig.GetEmbeddedCommonConfigSchema">
             <summary>
             Gets the embedded schema for the common configuration.
@@ -2225,12 +2216,12 @@
             <param name="schemaVersion">Specifies a schema version.</param>
             <returns>Returns the configuration schema namespace for the specified framework library.</returns>
         </member>
-        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigFileName">
+        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigSchemaFileName">
             <summary>
             Gets the file name of the common configuration XML schema.
             </summary>
         </member>
-        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigFileNamespace">
+        <member name="P:Juhta.Net.FrameworkConfig.CommonConfigSchemaFileNamespace">
             <summary>
             Gets the file namespace of the common configuration XML schema.
             </summary>
@@ -2238,21 +2229,6 @@
         <member name="P:Juhta.Net.FrameworkConfig.CommonConfigSchemaVersion">
             <summary>
             Gets the version of the common configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.FrameworkConfig.RootConfigFileName">
-            <summary>
-            Gets the file name of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.FrameworkConfig.RootConfigFileNamespace">
-            <summary>
-            Gets the file namespace of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.FrameworkConfig.RootConfigSchemaVersion">
-            <summary>
-            Gets the version of the root configuration XML schema.
             </summary>
         </member>
         <member name="P:Juhta.Net.FrameworkConfig.RootXmlns">
@@ -2268,16 +2244,6 @@
         <member name="F:Juhta.Net.FrameworkConfig.c_commonConfigSchemaVersion">
             <summary>
             Defines the version of the common configuration XML schema.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigFileName">
-            <summary>
-            Defines the file name of the root configuration XML schema.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.FrameworkConfig.c_rootConfigSchemaVersion">
-            <summary>
-            Defines the version of the root configuration XML schema.
             </summary>
         </member>
         <member name="F:Juhta.Net.FrameworkConfig.c_rootXmlns">
