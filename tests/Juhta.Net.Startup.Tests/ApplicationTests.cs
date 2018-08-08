@@ -2,6 +2,7 @@
 using AppXLibrary.CustomXmlConfig;
 using AppXLibrary.DynamicCustomXmlConfigurableAndStartable;
 using Juhta.Net.Common;
+using Juhta.Net.Diagnostics;
 using Juhta.Net.Extensions;
 using Juhta.Net.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

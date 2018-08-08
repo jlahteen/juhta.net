@@ -6,10 +6,9 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using Juhta.Net.Diagnostics;
 using System;
 
-namespace Juhta.Net
+namespace Juhta.Net.Diagnostics
 {
     /// <summary>
     /// Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="ILogger"/>

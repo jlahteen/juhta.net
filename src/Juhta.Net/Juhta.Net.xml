@@ -1286,7 +1286,7 @@
             <summary>
             See <see cref="P:Juhta.Net.Diagnostics.ILogger.IsThreadSafe"/>.
             </summary>
-            <remarks>This logger is not thread-safe, we let the static <see cref="T:Juhta.Net.Logger"/> class to take care of the
+            <remarks>This logger is not thread-safe, we let the static <see cref="T:Juhta.Net.Diagnostics.Logger"/> class to take care of the
             synchronization.</remarks>
         </member>
         <member name="M:Juhta.Net.Diagnostics.FileLogger.EnsureLogTitle">
@@ -1547,6 +1547,155 @@
             <param name="message">Specifies a message that will be associated with the instance. The value can contain
             format items.</param>
             <param name="id">Specifies a value for the <see cref="P:Juhta.Net.Diagnostics.DiagnosticMessage.Id"/> property.</param>
+        </member>
+        <member name="T:Juhta.Net.Diagnostics.Logger">
+            <summary>
+            Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
+            instance.
+            </summary>
+            <remarks>
+            <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
+            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Diagnostics.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)"/> method.</para>
+            <para>All exceptions thrown by the underlying <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance will be caught without handling,
+            so no exceptions will be thrown by the class.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.#cctor">
+            <summary>
+            Initializes the class.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogAlert(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)"/>.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogAlert(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.Exception)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.Exception,System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogError(System.Exception,System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogInformation(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogInformation(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogWarning(System.String)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogWarning(System.String,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])">
+            <summary>
+            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Diagnostics.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)">
+            <summary>
+            Sets an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance into the class.
+            </summary>
+            <param name="logger">Specifies an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> object.</param>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.Logger.s_logger">
+            <summary>
+            Specifies the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Diagnostics.Logger.s_syncLock">
+            <summary>
+            Specifies a synchronization object for serializing access to non-thread-safe logger instances.
+            </summary>
         </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase">
             <summary>
@@ -2366,155 +2515,6 @@
         <member name="F:Juhta.Net.LibraryMessages.Error055">
             <summary>
             Range between positions {0} - {1} in the file '{2}' could not be locked within {3} milliseconds.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Logger">
-            <summary>
-            Defines a static wrapper class for enabling easy logging through the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
-            instance.
-            </summary>
-            <remarks>
-            <para>This class is also capable for serializing concurrent access to non-thread-safe <see cref="T:Juhta.Net.Diagnostics.ILogger"/>
-            instances. In other words, this class is thread-safe excluding the <see cref="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)"/> method.</para>
-            <para>All exceptions thrown by the underlying <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance will be caught without handling,
-            so no exceptions will be thrown by the class.</para>
-            </remarks>
-        </member>
-        <member name="M:Juhta.Net.Logger.#cctor">
-            <summary>
-            Initializes the class.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String)"/>.
-            </summary>
-            <param name="message"></param>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(Juhta.Net.Diagnostics.AlertMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogAlert(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogAlert(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,Juhta.Net.Diagnostics.ErrorMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogError(System.Exception,System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogError(System.Exception,System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogEvent(Juhta.Net.Diagnostics.DiagnosticMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(Juhta.Net.Diagnostics.InformationMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogInformation(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogInformation(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(System.String)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage)"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(System.String,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(System.String,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])">
-            <summary>
-            See <see cref="M:Juhta.Net.Diagnostics.ILogger.LogWarning(Juhta.Net.Diagnostics.WarningMessage,System.Object[])"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.Logger.SetLogger(Juhta.Net.Diagnostics.ILogger)">
-            <summary>
-            Sets an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance into the class.
-            </summary>
-            <param name="logger">Specifies an <see cref="T:Juhta.Net.Diagnostics.ILogger"/> object.</param>
-        </member>
-        <member name="F:Juhta.Net.Logger.s_logger">
-            <summary>
-            Specifies the encapsulated <see cref="T:Juhta.Net.Diagnostics.ILogger"/> instance.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Logger.s_syncLock">
-            <summary>
-            Specifies a synchronization object for serializing access to non-thread-safe logger instances.
             </summary>
         </member>
     </members>
