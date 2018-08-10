@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Juhta.Net.LibraryManagement\Juhta.Net.LibraryManagement.csproj" />
+    <ProjectReference Include="..\..\src\Juhta.Net.Startup\Juhta.Net.Startup.csproj" />
     <ProjectReference Include="..\..\src\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 

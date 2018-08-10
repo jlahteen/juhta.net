@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net;
+using Juhta.Net.Startup;
 
 namespace AppXLibrary.DynamicCustomXmlConfigurable
 {

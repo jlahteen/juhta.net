@@ -23,7 +23,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10034]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101034]"));
 
                 throw;
             }
@@ -42,7 +42,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10036]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101036]"));
 
                 throw;
             }
@@ -61,9 +61,9 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10039]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101038]"));
 
-                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Error10038]"));
+                Assert.AreEqual<string>(ex.InnerException.Message, "Illegal characters in path.");
 
                 throw;
             }
@@ -82,9 +82,9 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10039]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101038]"));
 
-                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Error10038]"));
+                Assert.AreEqual<string>(ex.InnerException.Message, "Illegal characters in path.");
 
                 throw;
             }
@@ -103,7 +103,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10035]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101035]"));
 
                 throw;
             }
@@ -122,7 +122,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10048]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101048]"));
 
                 throw;
             }
@@ -141,7 +141,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10034]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101034]"));
 
                 throw;
             }
@@ -160,7 +160,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10048]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101048]"));
 
                 throw;
             }
@@ -179,7 +179,7 @@ namespace Juhta.Net.Tests.Common
 
             catch (ArgumentException ex)
             {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error10024]"));
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101024]"));
 
                 throw;
             }

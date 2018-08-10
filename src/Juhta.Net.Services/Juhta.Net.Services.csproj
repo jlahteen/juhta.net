@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DocumentationFile>Juhta.Net.Services.xml</DocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Juha Lähteenmäki</Authors>
+    <Title>Juhta.Net.Services</Title>
+    <Description>Juhta.Net.Services provides versatile and comprehensive dependency injection services for an application. This library is a part of Juhta.NET.</Description>
+    <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>http://juhta.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jlahteen/juhta.net</RepositoryUrl>
+    <Company />
+    <ProductName>Juhta.NET</ProductName>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Product>Juhta.NET</Product>
+    <Version>1.0.0-rc2</Version>
+    <PackageTags>dotnetcore dotnetstandard dependency injection dependencyinjection</PackageTags>
+    <NeutralLanguage></NeutralLanguage>
+    <PackageReleaseNotes>Please visit https://github.com/jlahteen/juhta.net/releases/tag/v1.0.0-rc2 to view the release notes.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Juhta.Net.LibraryManagement\Juhta.Net.LibraryManagement.csproj" />
+    <ProjectReference Include="..\Juhta.Net\Juhta.Net.csproj" />
+  </ItemGroup>
+</Project>
