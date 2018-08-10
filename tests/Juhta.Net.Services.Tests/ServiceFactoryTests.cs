@@ -574,9 +574,9 @@ namespace Juhta.Net.Services.Tests
             catch (Exception ex)
             {
                 AssertDefaultLogFileContent(
-                    "[Juhta.Net.Startup.Error101002]",
-                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
-                    "[Juhta.Net.Startup.Error101002] XML configuration file",
+                    "[Juhta.Net.Startup.Error106002]",
+                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error106002] XML configuration file",
+                    "[Juhta.Net.Startup.Error106002] XML configuration file",
                     "Juhta.Net.Services.config' does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.Services.dll'.",
                     "Juhta.Net.Validation.ValidationException: [Juhta.Net.Validation.Error102004] XML document is not valid according to the given schema(s).",
                     "System.Xml.Schema.XmlSchemaValidationException: The required attribute 'id' is missing."

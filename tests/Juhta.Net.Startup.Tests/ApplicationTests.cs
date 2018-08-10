@@ -93,7 +93,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<bool>(false, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AssertDefaultLogFileContent("Juhta.Net.Startup.Warning101072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
+            AssertDefaultLogFileContent("Juhta.Net.Startup.Warning106072", "At least one error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.");
         }
 
         [TestMethod]
@@ -111,7 +111,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<bool>(true, AppXLibrary.Startable.StartableLibrary.IsStarted);
 
-            AssertDefaultLogFileContent("Juhta.Net.Startup.Error101071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
+            AssertDefaultLogFileContent("Juhta.Net.Startup.Error106071", "An unexpected error occurred when the processes of the library 'AppXLibrary.dll' were being stopped.", "This is an injected exception.");
         }
 
         [TestMethod]
@@ -213,7 +213,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch (LibraryInitializationException ex)
             {
-                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Startup.Error101014] Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
+                Assert.IsTrue(ex.InnerException.Message.StartsWith("[Juhta.Net.Startup.Error106014] Configuration file name cannot be null for the configurable library 'AppXLibrary.dll'."));
 
                 throw;
             }
@@ -303,7 +303,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("WARNING event", "[Juhta.Net.Startup.Warning101017] At least one error occurred when the library 'AppXLibrary.dll' was closed.");
+            AssertDefaultLogFileContent("WARNING event", "[Juhta.Net.Startup.Warning106017] At least one error occurred when the library 'AppXLibrary.dll' was closed.");
         }
 
         [TestMethod]
@@ -325,7 +325,7 @@ namespace Juhta.Net.Startup.Tests
 
             Assert.AreEqual<string>("<closed>", libraryConfig.GetStringSetting());
 
-            AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error101004] An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
+            AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error106004] An unexpected error occurred when the library 'AppXLibrary.dll' was being closed.", "Something went wrong in the closing of AppXLibrary.");
         }
 
         [TestMethod]
@@ -476,10 +476,10 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Startup.Warning101063] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning106063] Library Manager detected that the configuration file",
                 "RenamedAppXLibrary.json' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file.",
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -511,7 +511,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106065] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -541,7 +541,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106012] Library Manager detected that the configuration file",
                 "AppXLibrary.json' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -629,7 +629,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully."
             );
         }
@@ -666,13 +666,13 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101012] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106012] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was deleted, and the state of the associated dynamic library 'AppXLibrary.dll' was initialized successfully.",
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully.",
                 "WARNING event",
-                "[Juhta.Net.Startup.Warning101063] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning106063] Library Manager detected that the configuration file",
                 "Juhta.Net.Startup.config' was created or changed, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
@@ -706,13 +706,13 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "[Juhta.Net.Startup.Error101064] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Error106064] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. The state of the library was left unmodified.",
-                "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
+                "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error106002] XML configuration file",
                 "AppXLibrary.config' does not conform to the configuration schema(s) of the custom XML configurable library 'AppXLibrary.dll'.",
                 "Juhta.Net.Validation.ValidationException: [Juhta.Net.Validation.Error102004] XML document is not valid according to the given schema(s).",
                 "ALERT event",
-                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert106005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -745,7 +745,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -777,7 +777,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Startup.Warning101011] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning106011] Library Manager detected that the configuration file",
                 "Unknown.config' was deleted, but no actions were performed because there were no dynamic libraries associated with this configuration file."
             );
         }
@@ -822,7 +822,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "INFORMATION event",
-                "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Info106065] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibrary.dll' was updated successfully."
             );
         }
@@ -891,12 +891,12 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101061] Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
+                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error106061] Processes in the new state of the library 'AppXLibrary.dll' could not be started.",
                 "System.InvalidOperationException: Cannot replace with 'XYZ' strings. Please use any other token but not that. Sorry.",
-                "[Juhta.Net.Startup.Warning101078] Library Manager detected that the configuration file",
+                "[Juhta.Net.Startup.Warning106078] Library Manager detected that the configuration file",
                 "AppXLibrary.config' was created or changed but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The library continues running with the current state.",
                 "ALERT event",
-                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert106005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -934,13 +934,13 @@ namespace Juhta.Net.Startup.Tests
             {
                 AssertDefaultLogFileContent(
                     "ERROR event",
-                    "[Juhta.Net.Startup.Error101066] Library Manager detected that the configuration file",
+                    "[Juhta.Net.Startup.Error106066] Library Manager detected that the configuration file",
                     "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated.",
                     "NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                    "[Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
-                    "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101059] Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
+                    "[Juhta.Net.Startup.Error106075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                    "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error106059] Processes in the current state of the library 'AppXLibrary.dll' could not be completely stopped.",
                     "ALERT event",
-                    "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                    "[Juhta.Net.Startup.Alert106005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
                 );
 
                 throw;
@@ -978,9 +978,9 @@ namespace Juhta.Net.Startup.Tests
             AssertDefaultLogFileContent(
                 "ERROR event",
                 "AppXLibrary.config' was created or changed, but the state of the associated dynamic library 'AppXLibrary.dll' could not be updated. NOTE: The state of the library is currently unstable. You should restore the configuration file and possibly restart the process.",
-                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
+                "Juhta.Net.Startup.LibraryStateException: [Juhta.Net.Startup.Error106075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped. ---> System.Exception: Processes could not be stopped.",
                 "ALERT event",
-                "[Juhta.Net.Startup.Alert101005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
+                "[Juhta.Net.Startup.Alert106005] Library Manager detected changes in the configuration but failed to update the states of the associated dynamic libraries. The state of the process may be unstable. Please refer to the log events for more information."
             );
         }
 
@@ -997,7 +997,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "WARNING event",
-                "[Juhta.Net.Startup.Warning101073] At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
+                "[Juhta.Net.Startup.Warning106073] At least one error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped."
             );
         }
 
@@ -1014,7 +1014,7 @@ namespace Juhta.Net.Startup.Tests
 
             AssertDefaultLogFileContent(
                 "ERROR event",
-                "[Juhta.Net.Startup.Error101075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
+                "[Juhta.Net.Startup.Error106075] An unexpected error occurred when the processes in the current state of the library 'AppXLibrary.dll' were being stopped.",
                 "System.Exception: Processes could not be stopped."
             );
         }
@@ -1096,7 +1096,7 @@ namespace Juhta.Net.Startup.Tests
             for (int i = 1; i <= 100; i++)
                 AssertDefaultLogFileContent(
                     "INFORMATION event",
-                    "[Juhta.Net.Startup.Info101065] Library Manager detected that the configuration file",
+                    "[Juhta.Net.Startup.Info106065] Library Manager detected that the configuration file",
                     $"AppXLibrary.config' was created or changed, and the state of the associated dynamic library 'AppXLibraryTempC{i}.dll' was updated successfully."
                 );
         }
@@ -1116,7 +1116,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error101003] Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
+                AssertDefaultLogFileContent("ERROR event", "[Juhta.Net.Startup.Error106003] Initialization of the library 'AppXLibrary.dll' failed.", "IntSetting 1234567 is invalid. Please use any other integer value but not this one!");
 
                 throw;
             }
@@ -1151,8 +1151,8 @@ namespace Juhta.Net.Startup.Tests
             {
                 AssertDefaultLogFileContent(
                     "ERROR event",
-                    "[Juhta.Net.Startup.Error101006] An error occurred when the application",
-                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error101002] XML configuration file",
+                    "[Juhta.Net.Startup.Error106006] An error occurred when the application",
+                    "Juhta.Net.Common.InvalidConfigFileException: [Juhta.Net.Startup.Error106002] XML configuration file",
                     "does not conform to the configuration schema(s) of the custom XML configurable library 'Juhta.Net.Startup.dll'.",
                     "Juhta.Net.Validation.ValidationException: [Juhta.Net.Validation.Error102004] XML document is not valid according to the given schema(s).",
                     "System.Xml.Schema.XmlSchemaValidationException: The 'handleClass' attribute is invalid - The value '.Initializable.InitializableLibrary' is invalid according to its datatype 'http://schemas.juhta.net/common-v1.xsd:shortClassIdType' - The Pattern constraint failed."
@@ -1175,7 +1175,7 @@ namespace Juhta.Net.Startup.Tests
 
             catch
             {
-                AssertDefaultLogFileContent("[Juhta.Net.Startup.Error101002]");
+                AssertDefaultLogFileContent("[Juhta.Net.Startup.Error106002]");
 
                 throw;
             }
