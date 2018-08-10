@@ -7,6 +7,7 @@
 //
 
 using Juhta.Net.Diagnostics;
+using Juhta.Net.Framework;
 
 namespace Juhta.Net
 {
@@ -20,7 +21,7 @@ namespace Juhta.Net
         /// <summary>
         /// Gets the <see cref="DiagnosticMessageFactory"/> instance for creating diagnostic messages.
         /// </summary>
-        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.RootLibraryMessages, typeof(LibraryMessages).Namespace);
+        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(FrameworkLibrary.GetMessageIdBase(FrameworkLibraryType.Core), typeof(LibraryMessages).Namespace);
 
         #endregion
 

@@ -1004,13 +1004,6 @@
             class. The main benefit of using this class is automatic and consistent message identifier generation.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
-            <param name="messageNamespace">Specifies a namespace for messages to create.</param>
-        </member>
         <member name="M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)">
             <summary>
             Initializes a new instance.
@@ -1695,42 +1688,6 @@
         <member name="F:Juhta.Net.Diagnostics.Logger.s_syncLock">
             <summary>
             Specifies a synchronization object for serializing access to non-thread-safe logger instances.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase">
-            <summary>
-            An enumeration that defines the message identifier bases for the diagnostic messages used in the framework
-            libraries.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.CommonMessages">
-            <summary>
-            Defines the message identifier base for the common messages.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.RootLibraryMessages">
-            <summary>
-            Defines the message identifier base for the messages of Root Library.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ValidationLibraryMessages">
-            <summary>
-            Defines the message identifier base for the messages of Validation Library.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ConsoleLibraryMessages">
-            <summary>
-            Defines the message identifier base for the messages of Console Library.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.LibraryManagementLibraryMessages">
-            <summary>
-            Defines the message identifier base for the messages of Library Management Library.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.Diagnostics.DiagnosticMessageIdBase.ServicesLibraryMessages">
-            <summary>
-            Defines the message identifier base for the messages of Services Library.
             </summary>
         </member>
         <member name="T:Juhta.Net.Diagnostics.DiagnosticMessageType">
@@ -2423,6 +2380,64 @@
         <member name="P:Juhta.Net.Framework.FrameworkInfo.RootNamespace">
             <summary>
             Gets the root namespace of the framework.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Framework.FrameworkLibrary">
+            <summary>
+            Defines a class that provides common methods related to the framework libraries.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Framework.FrameworkLibrary.GetCommonMessageIdBase">
+            <summary>
+            Gets the message identifier base for the common messages.
+            </summary>
+            <returns>Returns the message identifier base for the common messages.</returns>
+        </member>
+        <member name="M:Juhta.Net.Framework.FrameworkLibrary.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)">
+            <summary>
+            Gets the message identifier base for a specified framework library.
+            </summary>
+            <param name="libraryType">Specifies a framework library type.</param>
+            <returns>Returns the message identifier base for the specified framework library.</returns>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibrary.c_commonMessageIdBase">
+            <summary>
+            Defines the message identifier base for the common messages.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.Framework.FrameworkLibraryType">
+            <summary>
+            Defines an enumeration for the framework library types.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.Core">
+            <summary>
+            Specifies the Core library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.Validation">
+            <summary>
+            Specifies the Validation library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.Console">
+            <summary>
+            Specifies the Console library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.LibraryManagement">
+            <summary>
+            Specifies the Library Management library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.Services">
+            <summary>
+            Specifies the Services library.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Framework.FrameworkLibraryType.Startup">
+            <summary>
+            Specifies the Startup library.
             </summary>
         </member>
         <member name="T:Juhta.Net.Helpers.ArgumentHelper">

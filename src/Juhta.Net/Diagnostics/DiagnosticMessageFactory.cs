@@ -23,15 +23,6 @@ namespace Juhta.Net.Diagnostics
         /// </summary>
         /// <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
         /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
-        public DiagnosticMessageFactory(DiagnosticMessageIdBase messageIdBase, string messageNamespace) :
-            this((int)messageIdBase, messageNamespace)
-        {}
-
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
-        /// <param name="messageIdBase">Specifies a base value for the message identifiers.</param>
-        /// <param name="messageNamespace">Specifies a namespace for messages to create.</param>
         public DiagnosticMessageFactory(int messageIdBase, string messageNamespace) : 
             this(messageIdBase, messageNamespace + ".Info", messageNamespace + ".Warning", messageNamespace + ".Error", messageNamespace + ".Alert")
         {}
