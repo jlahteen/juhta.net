@@ -9,7 +9,7 @@
 using Juhta.Net.Extensions;
 using System.Reflection;
 
-namespace Juhta.Net.Infrastructure
+namespace Juhta.Net.Framework
 {
     /// <summary>
     /// A static class that provides read-only information about the framework.

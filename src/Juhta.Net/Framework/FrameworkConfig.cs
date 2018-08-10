@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace Juhta.Net.Infrastructure
+namespace Juhta.Net.Framework
 {
     /// <summary>
     /// A static class providing common methods and properties related to configuration files of the framework
