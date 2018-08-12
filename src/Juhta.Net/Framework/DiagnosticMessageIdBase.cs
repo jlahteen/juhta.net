@@ -81,7 +81,7 @@ namespace Juhta.Net.Framework
         /// </summary>
         /// <param name="libraryType">Specifies a framework library type.</param>
         /// <returns>Returns the message identifier base for the specified framework library.</returns>
-        public static int GetMessageIdBase(FrameworkLibraryType libraryType)
+        private static int GetMessageIdBase(FrameworkLibraryType libraryType)
         {
             return(c_commonMessageIdBase + (((int)libraryType + 1) * 1000));
         }
