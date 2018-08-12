@@ -21,7 +21,7 @@ namespace Juhta.Net.Services
         /// <summary>
         /// Gets the <see cref="DiagnosticMessageFactory"/> instance for creating diagnostic messages.
         /// </summary>
-        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(FrameworkLibrary.GetMessageIdBase(FrameworkLibraryType.Services), typeof(LibraryMessages).Namespace);
+        private static readonly DiagnosticMessageFactory MessageFactory = new DiagnosticMessageFactory(DiagnosticMessageIdBase.Services, typeof(LibraryMessages).Namespace);
 
         #endregion
 
