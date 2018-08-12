@@ -1,39 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.LibraryManagement.LibraryInitializationException
-  commentId: T:Juhta.Net.LibraryManagement.LibraryInitializationException
-  id: LibraryInitializationException
-  parent: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.Validation.ValidationException
+  commentId: T:Juhta.Net.Validation.ValidationException
+  id: ValidationException
+  parent: Juhta.Net.Validation
   children:
-  - Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String)
-  - Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String,System.Exception)
+  - Juhta.Net.Validation.ValidationException.#ctor(System.String)
+  - Juhta.Net.Validation.ValidationException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
-  name: LibraryInitializationException
-  nameWithType: LibraryInitializationException
-  fullName: Juhta.Net.LibraryManagement.LibraryInitializationException
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: Juhta.Net.Validation.ValidationException
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/ValidationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: LibraryInitializationException
-    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+    id: ValidationException
+    path: ../src/Juhta.Net.Validation/ValidationException.cs
     startLine: 15
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
-  summary: "\nThis exception will be thrown when an error occurs in initialization of a library.\n"
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nThis exception will be thrown by validator classes when a value doesn&apos;t pass validation.\n"
   example: []
   syntax:
-    content: 'public class LibraryInitializationException : Exception, ISerializable'
+    content: 'public class ValidationException : Exception, ISerializable'
     content.vb: >-
-      Public Class LibraryInitializationException
-
+      Public Class ValidationException
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -65,91 +63,88 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String)
-  commentId: M:Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String)
+- uid: Juhta.Net.Validation.ValidationException.#ctor(System.String)
+  commentId: M:Juhta.Net.Validation.ValidationException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.LibraryManagement.LibraryInitializationException
+  parent: Juhta.Net.Validation.ValidationException
   langs:
   - csharp
   - vb
-  name: LibraryInitializationException(String)
-  nameWithType: LibraryInitializationException.LibraryInitializationException(String)
-  fullName: Juhta.Net.LibraryManagement.LibraryInitializationException.LibraryInitializationException(System.String)
+  name: ValidationException(String)
+  nameWithType: ValidationException.ValidationException(String)
+  fullName: Juhta.Net.Validation.ValidationException.ValidationException(System.String)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/ValidationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
+    path: ../src/Juhta.Net.Validation/ValidationException.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public LibraryInitializationException(string message)
+    content: public ValidationException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor*
+  overload: Juhta.Net.Validation.ValidationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String,System.Exception)
-  commentId: M:Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor(System.String,System.Exception)
+- uid: Juhta.Net.Validation.ValidationException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Validation.ValidationException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
-  parent: Juhta.Net.LibraryManagement.LibraryInitializationException
+  parent: Juhta.Net.Validation.ValidationException
   langs:
   - csharp
   - vb
-  name: LibraryInitializationException(String, Exception)
-  nameWithType: LibraryInitializationException.LibraryInitializationException(String, Exception)
-  fullName: Juhta.Net.LibraryManagement.LibraryInitializationException.LibraryInitializationException(System.String, System.Exception)
+  name: ValidationException(String, Exception)
+  nameWithType: ValidationException.ValidationException(String, Exception)
+  fullName: Juhta.Net.Validation.ValidationException.ValidationException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/ValidationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/LibraryInitializationException.cs
-    startLine: 32
+    path: ../src/Juhta.Net.Validation/ValidationException.cs
+    startLine: 31
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public LibraryInitializationException(string message, Exception innerException)
+    content: public ValidationException(string message, Exception innerException)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     - id: innerException
       type: System.Exception
-      description: >-
-        Specifies an inner exception that is the actual cause for the library
-
-        initialization error.
+      description: Specifies an inner exception.
     content.vb: Public Sub New(message As String, innerException As Exception)
-  overload: Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor*
+  overload: Juhta.Net.Validation.ValidationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.LibraryManagement
-  commentId: N:Juhta.Net.LibraryManagement
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
   isExternal: false
-  name: Juhta.Net.LibraryManagement
-  nameWithType: Juhta.Net.LibraryManagement
-  fullName: Juhta.Net.LibraryManagement
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -613,12 +608,12 @@ references:
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-- uid: Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor*
-  commentId: Overload:Juhta.Net.LibraryManagement.LibraryInitializationException.#ctor
+- uid: Juhta.Net.Validation.ValidationException.#ctor*
+  commentId: Overload:Juhta.Net.Validation.ValidationException.#ctor
   isExternal: false
-  name: LibraryInitializationException
-  nameWithType: LibraryInitializationException.LibraryInitializationException
-  fullName: Juhta.Net.LibraryManagement.LibraryInitializationException.LibraryInitializationException
+  name: ValidationException
+  nameWithType: ValidationException.ValidationException
+  fullName: Juhta.Net.Validation.ValidationException.ValidationException
 - uid: System.String
   commentId: T:System.String
   parent: System

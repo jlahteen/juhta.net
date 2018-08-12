@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicInitializableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicInitializableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicInitializableLibrary.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for dynamic initializable libraries. A library is a dynamic initializable library if it is\ndynamic and its state can be initialized at the runtime.\n"
   example: []
@@ -30,7 +30,6 @@ items:
     content: 'public interface IDynamicInitializableLibrary : IDynamicLibrary'
     content.vb: >-
       Public Interface IDynamicInitializableLibrary
-
           Inherits IDynamicLibrary
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
@@ -55,14 +54,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicInitializableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateDefaultLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicInitializableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicInitializableLibrary.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nCreates the default state for the library.\n"
   example: []

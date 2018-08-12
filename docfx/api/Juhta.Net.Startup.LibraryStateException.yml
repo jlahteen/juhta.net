@@ -1,39 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Validators.ValidationException
-  commentId: T:Juhta.Net.Validators.ValidationException
-  id: ValidationException
-  parent: Juhta.Net.Validators
+- uid: Juhta.Net.Startup.LibraryStateException
+  commentId: T:Juhta.Net.Startup.LibraryStateException
+  id: LibraryStateException
+  parent: Juhta.Net.Startup
   children:
-  - Juhta.Net.Validators.ValidationException.#ctor(System.String)
-  - Juhta.Net.Validators.ValidationException.#ctor(System.String,System.Exception)
+  - Juhta.Net.Startup.LibraryStateException.#ctor(System.String)
+  - Juhta.Net.Startup.LibraryStateException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
-  name: ValidationException
-  nameWithType: ValidationException
-  fullName: Juhta.Net.Validators.ValidationException
+  name: LibraryStateException
+  nameWithType: LibraryStateException
+  fullName: Juhta.Net.Startup.LibraryStateException
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Validators/ValidationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryStateException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: ValidationException
-    path: ../src/Juhta.Net/Validators/ValidationException.cs
+    id: LibraryStateException
+    path: ../src/Juhta.Net.Startup/LibraryStateException.cs
     startLine: 15
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
-  summary: "\nThis exception will be thrown by validator classes when a value doesn&apos;t pass validation.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nThis exception will be thrown in case of library state related errors.\n"
   example: []
   syntax:
-    content: 'public class ValidationException : Exception, ISerializable'
+    content: 'public class LibraryStateException : Exception, ISerializable'
     content.vb: >-
-      Public Class ValidationException
-
+      Public Class LibraryStateException
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -65,88 +63,91 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Validators.ValidationException.#ctor(System.String)
-  commentId: M:Juhta.Net.Validators.ValidationException.#ctor(System.String)
+- uid: Juhta.Net.Startup.LibraryStateException.#ctor(System.String)
+  commentId: M:Juhta.Net.Startup.LibraryStateException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Validators.ValidationException
+  parent: Juhta.Net.Startup.LibraryStateException
   langs:
   - csharp
   - vb
-  name: ValidationException(String)
-  nameWithType: ValidationException.ValidationException(String)
-  fullName: Juhta.Net.Validators.ValidationException.ValidationException(System.String)
+  name: LibraryStateException(String)
+  nameWithType: LibraryStateException.LibraryStateException(String)
+  fullName: Juhta.Net.Startup.LibraryStateException.LibraryStateException(System.String)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Validators/ValidationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryStateException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Validators/ValidationException.cs
+    path: ../src/Juhta.Net.Startup/LibraryStateException.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public ValidationException(string message)
+    content: public LibraryStateException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.Validators.ValidationException.#ctor*
+  overload: Juhta.Net.Startup.LibraryStateException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.ValidationException.#ctor(System.String,System.Exception)
-  commentId: M:Juhta.Net.Validators.ValidationException.#ctor(System.String,System.Exception)
+- uid: Juhta.Net.Startup.LibraryStateException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Startup.LibraryStateException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
-  parent: Juhta.Net.Validators.ValidationException
+  parent: Juhta.Net.Startup.LibraryStateException
   langs:
   - csharp
   - vb
-  name: ValidationException(String, Exception)
-  nameWithType: ValidationException.ValidationException(String, Exception)
-  fullName: Juhta.Net.Validators.ValidationException.ValidationException(System.String, System.Exception)
+  name: LibraryStateException(String, Exception)
+  nameWithType: LibraryStateException.LibraryStateException(String, Exception)
+  fullName: Juhta.Net.Startup.LibraryStateException.LibraryStateException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Validators/ValidationException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryStateException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Validators/ValidationException.cs
-    startLine: 31
+    path: ../src/Juhta.Net.Startup/LibraryStateException.cs
+    startLine: 32
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public ValidationException(string message, Exception innerException)
+    content: public LibraryStateException(string message, Exception innerException)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     - id: innerException
       type: System.Exception
-      description: Specifies an inner exception.
+      description: >-
+        Specifies an inner exception that is the actual cause for the library state
+
+        error.
     content.vb: Public Sub New(message As String, innerException As Exception)
-  overload: Juhta.Net.Validators.ValidationException.#ctor*
+  overload: Juhta.Net.Startup.LibraryStateException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.Validators
-  commentId: N:Juhta.Net.Validators
+- uid: Juhta.Net.Startup
+  commentId: N:Juhta.Net.Startup
   isExternal: false
-  name: Juhta.Net.Validators
-  nameWithType: Juhta.Net.Validators
-  fullName: Juhta.Net.Validators
+  name: Juhta.Net.Startup
+  nameWithType: Juhta.Net.Startup
+  fullName: Juhta.Net.Startup
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -610,12 +611,12 @@ references:
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-- uid: Juhta.Net.Validators.ValidationException.#ctor*
-  commentId: Overload:Juhta.Net.Validators.ValidationException.#ctor
+- uid: Juhta.Net.Startup.LibraryStateException.#ctor*
+  commentId: Overload:Juhta.Net.Startup.LibraryStateException.#ctor
   isExternal: false
-  name: ValidationException
-  nameWithType: ValidationException.ValidationException
-  fullName: Juhta.Net.Validators.ValidationException.ValidationException
+  name: LibraryStateException
+  nameWithType: LibraryStateException.LibraryStateException
+  fullName: Juhta.Net.Startup.LibraryStateException.LibraryStateException
 - uid: System.String
   commentId: T:System.String
   parent: System

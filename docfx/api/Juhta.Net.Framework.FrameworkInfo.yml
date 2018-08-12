@@ -1,36 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.FrameworkConfig
-  commentId: T:Juhta.Net.FrameworkConfig
-  id: FrameworkConfig
-  parent: Juhta.Net
+- uid: Juhta.Net.Framework.FrameworkInfo
+  commentId: T:Juhta.Net.Framework.FrameworkInfo
+  id: FrameworkInfo
+  parent: Juhta.Net.Framework
   children:
-  - Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
-  - Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
-  - Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
+  - Juhta.Net.Framework.FrameworkInfo.BinDirectory
+  - Juhta.Net.Framework.FrameworkInfo.Copyright
+  - Juhta.Net.Framework.FrameworkInfo.FrameworkName
+  - Juhta.Net.Framework.FrameworkInfo.RootNamespace
   langs:
   - csharp
   - vb
-  name: FrameworkConfig
-  nameWithType: FrameworkConfig
-  fullName: Juhta.Net.FrameworkConfig
+  name: FrameworkInfo
+  nameWithType: FrameworkInfo
+  fullName: Juhta.Net.Framework.FrameworkInfo
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/FrameworkConfig.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net/Framework/FrameworkInfo.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: FrameworkConfig
-    path: ../src/Juhta.Net/FrameworkConfig.cs
-    startLine: 17
+    id: FrameworkInfo
+    path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
+    startLine: 16
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nA static class providing common methods and properties related to configuration files of the framework\nlibraries.\n"
+  namespace: Juhta.Net.Framework
+  summary: "\nA static class that provides read-only information about the framework.\n"
   example: []
   syntax:
-    content: public static class FrameworkConfig
-    content.vb: Public Module FrameworkConfig
+    content: public static class FrameworkInfo
+    content.vb: Public Module FrameworkInfo
   inheritance:
   - System.Object
   inheritedMembers:
@@ -48,154 +49,169 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
-  commentId: M:Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
-  id: CreateNamespaceManager(System.String,System.Xml.XmlNode,System.String)
-  parent: Juhta.Net.FrameworkConfig
+- uid: Juhta.Net.Framework.FrameworkInfo.BinDirectory
+  commentId: P:Juhta.Net.Framework.FrameworkInfo.BinDirectory
+  id: BinDirectory
+  parent: Juhta.Net.Framework.FrameworkInfo
   langs:
   - csharp
   - vb
-  name: CreateNamespaceManager(String, XmlNode, String)
-  nameWithType: FrameworkConfig.CreateNamespaceManager(String, XmlNode, String)
-  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager(System.String, System.Xml.XmlNode, System.String)
-  type: Method
+  name: BinDirectory
+  nameWithType: FrameworkInfo.BinDirectory
+  fullName: Juhta.Net.Framework.FrameworkInfo.BinDirectory
+  type: Property
   source:
     remote:
-      path: src/Juhta.Net/FrameworkConfig.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net/Framework/FrameworkInfo.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: CreateNamespaceManager
-    path: ../src/Juhta.Net/FrameworkConfig.cs
-    startLine: 30
+    id: BinDirectory
+    path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
+    startLine: 23
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates an <xref href=\"System.Xml.XmlNamespaceManager\" data-throw-if-not-resolved=\"false\"></xref> object corresponding to a specified framework library, XML\nconfiguration and schema version.\n"
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the directory of the framework binaries.\n"
   example: []
   syntax:
-    content: public static XmlNamespaceManager CreateNamespaceManager(string libraryFileName, XmlNode anyConfigNode, string schemaVersion)
-    parameters:
-    - id: libraryFileName
-      type: System.String
-      description: Specifies a framework library file name.
-    - id: anyConfigNode
-      type: System.Xml.XmlNode
-      description: >-
-        Specifies an <xref href="System.Xml.XmlNode" data-throw-if-not-resolved="false"></xref> object containing in a library
-
-        configuration.
-    - id: schemaVersion
-      type: System.String
-      description: Specifies the schema version of the library configuration.
+    content: public static string BinDirectory { get; }
+    parameters: []
     return:
-      type: System.Xml.XmlNamespaceManager
-      description: Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object specified by the parameters.
-    content.vb: Public Shared Function CreateNamespaceManager(libraryFileName As String, anyConfigNode As XmlNode, schemaVersion As String) As XmlNamespaceManager
-  overload: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
+      type: System.String
+    content.vb: Public Shared ReadOnly Property BinDirectory As String
+  overload: Juhta.Net.Framework.FrameworkInfo.BinDirectory*
   modifiers.csharp:
   - public
   - static
+  - get
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
-  commentId: M:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
-  id: CreateRootConfigNamespaceManager(System.Xml.XmlNode)
-  parent: Juhta.Net.FrameworkConfig
+  - ReadOnly
+- uid: Juhta.Net.Framework.FrameworkInfo.Copyright
+  commentId: P:Juhta.Net.Framework.FrameworkInfo.Copyright
+  id: Copyright
+  parent: Juhta.Net.Framework.FrameworkInfo
   langs:
   - csharp
   - vb
-  name: CreateRootConfigNamespaceManager(XmlNode)
-  nameWithType: FrameworkConfig.CreateRootConfigNamespaceManager(XmlNode)
-  fullName: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager(System.Xml.XmlNode)
-  type: Method
+  name: Copyright
+  nameWithType: FrameworkInfo.Copyright
+  fullName: Juhta.Net.Framework.FrameworkInfo.Copyright
+  type: Property
   source:
     remote:
-      path: src/Juhta.Net/FrameworkConfig.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net/Framework/FrameworkInfo.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: CreateRootConfigNamespaceManager
-    path: ../src/Juhta.Net/FrameworkConfig.cs
-    startLine: 53
+    id: Copyright
+    path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
+    startLine: 31
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates an <xref href=\"System.Xml.XmlNamespaceManager\" data-throw-if-not-resolved=\"false\"></xref> object for a specified root library configuration.\n"
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the copyright of the framework.\n"
   example: []
   syntax:
-    content: public static XmlNamespaceManager CreateRootConfigNamespaceManager(XmlNode anyRootConfigNode)
-    parameters:
-    - id: anyRootConfigNode
-      type: System.Xml.XmlNode
-      description: >-
-        Specifies an <xref href="System.Xml.XmlNode" data-throw-if-not-resolved="false"></xref> object containing in a root library
-
-        configuration.
+    content: public static string Copyright { get; }
+    parameters: []
     return:
-      type: System.Xml.XmlNamespaceManager
-      description: >-
-        Returns the created <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> object for the specified root library
-
-        configuration.
-    content.vb: Public Shared Function CreateRootConfigNamespaceManager(anyRootConfigNode As XmlNode) As XmlNamespaceManager
-  overload: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager*
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Copyright As String
+  overload: Juhta.Net.Framework.FrameworkInfo.Copyright*
   modifiers.csharp:
   - public
   - static
+  - get
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
-  commentId: M:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String,System.String)
-  id: GetLibraryConfigXmlns(System.String,System.String)
-  parent: Juhta.Net.FrameworkConfig
+  - ReadOnly
+- uid: Juhta.Net.Framework.FrameworkInfo.FrameworkName
+  commentId: P:Juhta.Net.Framework.FrameworkInfo.FrameworkName
+  id: FrameworkName
+  parent: Juhta.Net.Framework.FrameworkInfo
   langs:
   - csharp
   - vb
-  name: GetLibraryConfigXmlns(String, String)
-  nameWithType: FrameworkConfig.GetLibraryConfigXmlns(String, String)
-  fullName: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns(System.String, System.String)
-  type: Method
+  name: FrameworkName
+  nameWithType: FrameworkInfo.FrameworkName
+  fullName: Juhta.Net.Framework.FrameworkInfo.FrameworkName
+  type: Property
   source:
     remote:
-      path: src/Juhta.Net/FrameworkConfig.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net/Framework/FrameworkInfo.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: GetLibraryConfigXmlns
-    path: ../src/Juhta.Net/FrameworkConfig.cs
-    startLine: 75
+    id: FrameworkName
+    path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
+    startLine: 39
   assemblies:
   - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nGets the configuration schema namespace for a framework library.\n"
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the name of the framework.\n"
   example: []
   syntax:
-    content: public static string GetLibraryConfigXmlns(string libraryFileName, string schemaVersion)
-    parameters:
-    - id: libraryFileName
-      type: System.String
-      description: Specifies a framework library file name.
-    - id: schemaVersion
-      type: System.String
-      description: Specifies a schema version.
+    content: public static string FrameworkName { get; }
+    parameters: []
     return:
       type: System.String
-      description: Returns the configuration schema namespace for the specified framework library.
-    content.vb: Public Shared Function GetLibraryConfigXmlns(libraryFileName As String, schemaVersion As String) As String
-  overload: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns*
+    content.vb: Public Shared ReadOnly Property FrameworkName As String
+  overload: Juhta.Net.Framework.FrameworkInfo.FrameworkName*
   modifiers.csharp:
   - public
   - static
+  - get
   modifiers.vb:
   - Public
   - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.FrameworkInfo.RootNamespace
+  commentId: P:Juhta.Net.Framework.FrameworkInfo.RootNamespace
+  id: RootNamespace
+  parent: Juhta.Net.Framework.FrameworkInfo
+  langs:
+  - csharp
+  - vb
+  name: RootNamespace
+  nameWithType: FrameworkInfo.RootNamespace
+  fullName: Juhta.Net.Framework.FrameworkInfo.RootNamespace
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/FrameworkInfo.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: RootNamespace
+    path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
+    startLine: 47
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the root namespace of the framework.\n"
+  example: []
+  syntax:
+    content: public static string RootNamespace { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RootNamespace As String
+  overload: Juhta.Net.Framework.FrameworkInfo.RootNamespace*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 references:
-- uid: Juhta.Net
-  commentId: N:Juhta.Net
+- uid: Juhta.Net.Framework
+  commentId: N:Juhta.Net.Framework
   isExternal: false
-  name: Juhta.Net
-  nameWithType: Juhta.Net
-  fullName: Juhta.Net
+  name: Juhta.Net.Framework
+  nameWithType: Juhta.Net.Framework
+  fullName: Juhta.Net.Framework
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -488,26 +504,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Xml.XmlNamespaceManager
-  commentId: T:System.Xml.XmlNamespaceManager
-  parent: System.Xml
-  isExternal: true
-  name: XmlNamespaceManager
-  nameWithType: XmlNamespaceManager
-  fullName: System.Xml.XmlNamespaceManager
-- uid: System.Xml.XmlNode
-  commentId: T:System.Xml.XmlNode
-  parent: System.Xml
-  isExternal: true
-  name: XmlNode
-  nameWithType: XmlNode
-  fullName: System.Xml.XmlNode
-- uid: Juhta.Net.FrameworkConfig.CreateNamespaceManager*
-  commentId: Overload:Juhta.Net.FrameworkConfig.CreateNamespaceManager
+- uid: Juhta.Net.Framework.FrameworkInfo.BinDirectory*
+  commentId: Overload:Juhta.Net.Framework.FrameworkInfo.BinDirectory
   isExternal: false
-  name: CreateNamespaceManager
-  nameWithType: FrameworkConfig.CreateNamespaceManager
-  fullName: Juhta.Net.FrameworkConfig.CreateNamespaceManager
+  name: BinDirectory
+  nameWithType: FrameworkInfo.BinDirectory
+  fullName: Juhta.Net.Framework.FrameworkInfo.BinDirectory
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -515,21 +517,21 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System.Xml
-  commentId: N:System.Xml
+- uid: Juhta.Net.Framework.FrameworkInfo.Copyright*
+  commentId: Overload:Juhta.Net.Framework.FrameworkInfo.Copyright
   isExternal: false
-  name: System.Xml
-  nameWithType: System.Xml
-  fullName: System.Xml
-- uid: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager*
-  commentId: Overload:Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager
+  name: Copyright
+  nameWithType: FrameworkInfo.Copyright
+  fullName: Juhta.Net.Framework.FrameworkInfo.Copyright
+- uid: Juhta.Net.Framework.FrameworkInfo.FrameworkName*
+  commentId: Overload:Juhta.Net.Framework.FrameworkInfo.FrameworkName
   isExternal: false
-  name: CreateRootConfigNamespaceManager
-  nameWithType: FrameworkConfig.CreateRootConfigNamespaceManager
-  fullName: Juhta.Net.FrameworkConfig.CreateRootConfigNamespaceManager
-- uid: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns*
-  commentId: Overload:Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns
+  name: FrameworkName
+  nameWithType: FrameworkInfo.FrameworkName
+  fullName: Juhta.Net.Framework.FrameworkInfo.FrameworkName
+- uid: Juhta.Net.Framework.FrameworkInfo.RootNamespace*
+  commentId: Overload:Juhta.Net.Framework.FrameworkInfo.RootNamespace
   isExternal: false
-  name: GetLibraryConfigXmlns
-  nameWithType: FrameworkConfig.GetLibraryConfigXmlns
-  fullName: Juhta.Net.FrameworkConfig.GetLibraryConfigXmlns
+  name: RootNamespace
+  nameWithType: FrameworkInfo.RootNamespace
+  fullName: Juhta.Net.Framework.FrameworkInfo.RootNamespace

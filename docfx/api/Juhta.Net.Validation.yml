@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
+  id: Juhta.Net.Validation
+  children:
+  - Juhta.Net.Validation.DirectoryPathValidator
+  - Juhta.Net.Validation.FilePathValidator
+  - Juhta.Net.Validation.IStringValidator
+  - Juhta.Net.Validation.IValidator`1
+  - Juhta.Net.Validation.PathValidator
+  - Juhta.Net.Validation.PathValidator.PathType
+  - Juhta.Net.Validation.ValidationException
+  - Juhta.Net.Validation.XmlDocumentValidator
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
+  type: Namespace
+  assemblies:
+  - Juhta.Net.Validation
+references:
+- uid: Juhta.Net.Validation.DirectoryPathValidator
+  commentId: T:Juhta.Net.Validation.DirectoryPathValidator
+  isExternal: false
+  name: DirectoryPathValidator
+  nameWithType: DirectoryPathValidator
+  fullName: Juhta.Net.Validation.DirectoryPathValidator
+- uid: Juhta.Net.Validation.FilePathValidator
+  commentId: T:Juhta.Net.Validation.FilePathValidator
+  isExternal: false
+  name: FilePathValidator
+  nameWithType: FilePathValidator
+  fullName: Juhta.Net.Validation.FilePathValidator
+- uid: Juhta.Net.Validation.IStringValidator
+  commentId: T:Juhta.Net.Validation.IStringValidator
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: IStringValidator
+  nameWithType: IStringValidator
+  fullName: Juhta.Net.Validation.IStringValidator
+- uid: Juhta.Net.Validation.IValidator`1
+  commentId: T:Juhta.Net.Validation.IValidator`1
+  isExternal: false
+  name: IValidator<T>
+  nameWithType: IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
+  nameWithType.vb: IValidator(Of T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
+  name.vb: IValidator(Of T)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.PathValidator
+  commentId: T:Juhta.Net.Validation.PathValidator
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: PathValidator
+  nameWithType: PathValidator
+  fullName: Juhta.Net.Validation.PathValidator
+- uid: Juhta.Net.Validation.PathValidator.PathType
+  commentId: T:Juhta.Net.Validation.PathValidator.PathType
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: PathValidator.PathType
+  nameWithType: PathValidator.PathType
+  fullName: Juhta.Net.Validation.PathValidator.PathType
+- uid: Juhta.Net.Validation.ValidationException
+  commentId: T:Juhta.Net.Validation.ValidationException
+  isExternal: false
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: Juhta.Net.Validation.ValidationException
+- uid: Juhta.Net.Validation.XmlDocumentValidator
+  commentId: T:Juhta.Net.Validation.XmlDocumentValidator
+  isExternal: false
+  name: XmlDocumentValidator
+  nameWithType: XmlDocumentValidator
+  fullName: Juhta.Net.Validation.XmlDocumentValidator
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
+  isExternal: false
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation

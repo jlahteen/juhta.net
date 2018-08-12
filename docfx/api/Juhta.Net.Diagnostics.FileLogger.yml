@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: FileLogger
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -55,7 +55,6 @@ items:
     content: 'public class FileLogger : ILogger'
     content.vb: >-
       Public Class FileLogger
-
           Implements ILogger
   inheritance:
   - System.Object
@@ -89,7 +88,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -121,7 +120,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -163,7 +162,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -200,7 +199,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -237,7 +236,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -279,7 +278,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogAlert
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -321,7 +320,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -358,7 +357,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -395,7 +394,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -432,7 +431,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -474,7 +473,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -513,7 +512,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -552,7 +551,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -594,7 +593,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -638,7 +637,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogError
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -682,7 +681,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogEvent
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -719,7 +718,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogEvent
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -761,7 +760,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -798,7 +797,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -835,7 +834,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -877,7 +876,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogInformation
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -919,7 +918,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -956,7 +955,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -993,7 +992,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -1035,7 +1034,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LogWarning
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -1077,7 +1076,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/FileLogger.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsThreadSafe
     path: ../src/Juhta.Net/Diagnostics/FileLogger.cs
@@ -1087,7 +1086,7 @@ items:
   namespace: Juhta.Net.Diagnostics
   summary: "\nSee <xref href=\"Juhta.Net.Diagnostics.ILogger.IsThreadSafe\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   remarks: >-
-    This logger is not thread-safe, we let the static <xref href="Juhta.Net.Logger" data-throw-if-not-resolved="false"></xref> class to take care of the
+    This logger is not thread-safe, we let the static <xref href="Juhta.Net.Diagnostics.Logger" data-throw-if-not-resolved="false"></xref> class to take care of the
 
     synchronization.
   example: []
@@ -2741,12 +2740,12 @@ references:
   name: IsThreadSafe
   nameWithType: ILogger.IsThreadSafe
   fullName: Juhta.Net.Diagnostics.ILogger.IsThreadSafe
-- uid: Juhta.Net.Logger
-  commentId: T:Juhta.Net.Logger
+- uid: Juhta.Net.Diagnostics.Logger
+  commentId: T:Juhta.Net.Diagnostics.Logger
   isExternal: false
   name: Logger
   nameWithType: Logger
-  fullName: Juhta.Net.Logger
+  fullName: Juhta.Net.Diagnostics.Logger
 - uid: Juhta.Net.Diagnostics.FileLogger.IsThreadSafe*
   commentId: Overload:Juhta.Net.Diagnostics.FileLogger.IsThreadSafe
   isExternal: false

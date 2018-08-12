@@ -1,31 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
-  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2
+  commentId: T:Juhta.Net.Startup.DynamicLibraryContext`2
   id: DynamicLibraryContext`2
-  parent: Juhta.Net.LibraryManagement
+  parent: Juhta.Net.Startup
   children:
-  - Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose
-  - Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary
-  - Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState
+  - Juhta.Net.Startup.DynamicLibraryContext`2.Dispose
+  - Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary
+  - Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState
   langs:
   - csharp
   - vb
   name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/DynamicLibraryContext.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: DynamicLibraryContext
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-    startLine: 21
+    path: ../src/Juhta.Net.Startup/DynamicLibraryContext.cs
+    startLine: 22
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nDefines a class that simplifies the implementation of dynamic library services. The class acquires a read-lock\nto the state of the dynamic library and provides access both to the handle and state of the library. In other\nwords, the class saves a developer of a dynamic library from storing the instances of the current handle and\nstate within the library.\n"
   example: []
   syntax:
@@ -37,7 +37,6 @@ items:
       description: Specifies a library state type.
     content.vb: >-
       Public Class DynamicLibraryContext(Of TDynamicLibrary As IDynamicLibrary, TLibraryState As ILibraryState)
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -58,36 +57,36 @@ items:
   modifiers.vb:
   - Public
   - Class
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose
-  commentId: M:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.Dispose
+  commentId: M:Juhta.Net.Startup.DynamicLibraryContext`2.Dispose
   id: Dispose
-  parent: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  parent: Juhta.Net.Startup.DynamicLibraryContext`2
   langs:
   - csharp
   - vb
   name: Dispose()
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose()
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose()
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/DynamicLibraryContext.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Dispose
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-    startLine: 30
+    path: ../src/Juhta.Net.Startup/DynamicLibraryContext.cs
+    startLine: 31
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nDisposes the instance, that is, releases the acquired read-lock to the state of the library.\n"
   example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
-  overload: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose*
+  overload: Juhta.Net.Startup.DynamicLibraryContext`2.Dispose*
   implements:
   - System.IDisposable.Dispose
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose()
@@ -95,29 +94,29 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose()
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary
-  commentId: P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose()
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary
+  commentId: P:Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary
   id: DynamicLibrary
-  parent: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  parent: Juhta.Net.Startup.DynamicLibraryContext`2
   langs:
   - csharp
   - vb
   name: DynamicLibrary
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/DynamicLibraryContext.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: DynamicLibrary
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-    startLine: 45
+    path: ../src/Juhta.Net.Startup/DynamicLibraryContext.cs
+    startLine: 46
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the dynamic library instance.\n"
   example: []
   syntax:
@@ -126,7 +125,7 @@ items:
     return:
       type: '{TDynamicLibrary}'
     content.vb: Public ReadOnly Property DynamicLibrary As TDynamicLibrary
-  overload: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary*
+  overload: Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary*
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
   modifiers.csharp:
   - public
@@ -134,29 +133,29 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState
-  commentId: P:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState
+  commentId: P:Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState
   id: LibraryState
-  parent: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  parent: Juhta.Net.Startup.DynamicLibraryContext`2
   langs:
   - csharp
   - vb
   name: LibraryState
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/DynamicLibraryContext.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryState
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryContext.cs
-    startLine: 59
+    path: ../src/Juhta.Net.Startup/DynamicLibraryContext.cs
+    startLine: 60
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the library state instance.\n"
   example: []
   syntax:
@@ -165,7 +164,7 @@ items:
     return:
       type: '{TLibraryState}'
     content.vb: Public ReadOnly Property LibraryState As TLibraryState
-  overload: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState*
+  overload: Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState*
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
   modifiers.csharp:
   - public
@@ -173,14 +172,14 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
 references:
-- uid: Juhta.Net.LibraryManagement
-  commentId: N:Juhta.Net.LibraryManagement
+- uid: Juhta.Net.Startup
+  commentId: N:Juhta.Net.Startup
   isExternal: false
-  name: Juhta.Net.LibraryManagement
-  nameWithType: Juhta.Net.LibraryManagement
-  fullName: Juhta.Net.LibraryManagement
+  name: Juhta.Net.Startup
+  nameWithType: Juhta.Net.Startup
+  fullName: Juhta.Net.Startup
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -480,14 +479,14 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose*
-  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.Dispose
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.Dispose*
+  commentId: Overload:Juhta.Net.Startup.DynamicLibraryContext`2.Dispose
   isExternal: false
   name: Dispose
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.Dispose
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).Dispose
 - uid: System.IDisposable.Dispose
   commentId: M:System.IDisposable.Dispose
   parent: System.IDisposable
@@ -519,14 +518,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary*
-  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.DynamicLibrary
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary*
+  commentId: Overload:Juhta.Net.Startup.DynamicLibraryContext`2.DynamicLibrary
   isExternal: false
   name: DynamicLibrary
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.DynamicLibrary
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).DynamicLibrary
 - uid: '{TDynamicLibrary}'
   commentId: '!:TDynamicLibrary'
   definition: TDynamicLibrary
@@ -539,14 +538,14 @@ references:
   name: TDynamicLibrary
   nameWithType: TDynamicLibrary
   fullName: TDynamicLibrary
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState*
-  commentId: Overload:Juhta.Net.LibraryManagement.DynamicLibraryContext`2.LibraryState
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState*
+  commentId: Overload:Juhta.Net.Startup.DynamicLibraryContext`2.LibraryState
   isExternal: false
   name: LibraryState
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>.LibraryState
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState).LibraryState
 - uid: '{TLibraryState}'
   commentId: '!:TLibraryState'
   definition: TLibraryState

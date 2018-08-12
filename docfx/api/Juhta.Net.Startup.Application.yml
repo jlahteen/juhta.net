@@ -1,60 +1,58 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Application
-  commentId: T:Juhta.Net.Application
+- uid: Juhta.Net.Startup.Application
+  commentId: T:Juhta.Net.Startup.Application
   id: Application
-  parent: Juhta.Net
+  parent: Juhta.Net.Startup
   children:
-  - Juhta.Net.Application.#ctor
-  - Juhta.Net.Application.#ctor(System.String)
-  - Juhta.Net.Application.#ctor(System.String,System.String)
-  - Juhta.Net.Application.BinDirectory
-  - Juhta.Net.Application.Close
-  - Juhta.Net.Application.CloseInstance
-  - Juhta.Net.Application.ConfigDirectory
-  - Juhta.Net.Application.DefaultConfigFileName
-  - Juhta.Net.Application.GetDynamicLibraryContext``2
-  - Juhta.Net.Application.IsInitialized
-  - Juhta.Net.Application.Name
-  - Juhta.Net.Application.ServiceFactory
-  - Juhta.Net.Application.Start
-  - Juhta.Net.Application.StartInstance
-  - Juhta.Net.Application.StartInstance(System.String)
-  - Juhta.Net.Application.StartInstance(System.String,System.String)
+  - Juhta.Net.Startup.Application.#ctor
+  - Juhta.Net.Startup.Application.#ctor(System.String)
+  - Juhta.Net.Startup.Application.#ctor(System.String,System.String)
+  - Juhta.Net.Startup.Application.BinDirectory
+  - Juhta.Net.Startup.Application.Close
+  - Juhta.Net.Startup.Application.CloseInstance
+  - Juhta.Net.Startup.Application.ConfigDirectory
+  - Juhta.Net.Startup.Application.DefaultConfigFileName
+  - Juhta.Net.Startup.Application.GetDynamicLibraryContext``2
+  - Juhta.Net.Startup.Application.IsInitialized
+  - Juhta.Net.Startup.Application.Name
+  - Juhta.Net.Startup.Application.Start
+  - Juhta.Net.Startup.Application.StartInstance
+  - Juhta.Net.Startup.Application.StartInstance(System.String)
+  - Juhta.Net.Startup.Application.StartInstance(System.String,System.String)
   langs:
   - csharp
   - vb
   name: Application
   nameWithType: Application
-  fullName: Juhta.Net.Application
+  fullName: Juhta.Net.Startup.Application
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Application
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 27
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 26
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nA class that represents an application built on the top of the framework. The class provides basic information\nabout the application and methods for initializing and closing the application.\n"
   example: []
   syntax:
     content: 'public class Application : Singleton<Application>'
     content.vb: >-
       Public Class Application
-
           Inherits Singleton(Of Application)
   inheritance:
   - System.Object
-  - Juhta.Net.Common.Singleton{Juhta.Net.Application}
+  - Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   inheritedMembers:
-  - Juhta.Net.Common.Singleton{Juhta.Net.Application}.Instance
-  - Juhta.Net.Common.Singleton{Juhta.Net.Application}.ResetSingletonInstance
-  - Juhta.Net.Common.Singleton{Juhta.Net.Application}.SetSingletonInstance(Juhta.Net.Application)
-  - Juhta.Net.Common.Singleton{Juhta.Net.Application}.s_instance
+  - Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.Instance
+  - Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.ResetSingletonInstance
+  - Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.SetSingletonInstance(Juhta.Net.Startup.Application)
+  - Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.s_instance
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -68,28 +66,28 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Application.#ctor
-  commentId: M:Juhta.Net.Application.#ctor
+- uid: Juhta.Net.Startup.Application.#ctor
+  commentId: M:Juhta.Net.Startup.Application.#ctor
   id: '#ctor'
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Application()
   nameWithType: Application.Application()
-  fullName: Juhta.Net.Application.Application()
+  fullName: Juhta.Net.Startup.Application.Application()
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 36
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 35
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   remarks: >-
     Log events will be written to the current user&apos;s temp directory, and the configuration files are
@@ -99,33 +97,33 @@ items:
   syntax:
     content: public Application()
     content.vb: Public Sub New
-  overload: Juhta.Net.Application.#ctor*
+  overload: Juhta.Net.Startup.Application.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Application.#ctor(System.String)
-  commentId: M:Juhta.Net.Application.#ctor(System.String)
+- uid: Juhta.Net.Startup.Application.#ctor(System.String)
+  commentId: M:Juhta.Net.Startup.Application.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Application(String)
   nameWithType: Application.Application(String)
-  fullName: Juhta.Net.Application.Application(System.String)
+  fullName: Juhta.Net.Startup.Application.Application(System.String)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 46
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 45
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   remarks: The configuration files are assumed to locate in the binary directory.
   example: []
@@ -141,33 +139,33 @@ items:
 
         specifies an invalid log file.
     content.vb: Public Sub New(logFilePath As String)
-  overload: Juhta.Net.Application.#ctor*
+  overload: Juhta.Net.Startup.Application.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Application.#ctor(System.String,System.String)
-  commentId: M:Juhta.Net.Application.#ctor(System.String,System.String)
+- uid: Juhta.Net.Startup.Application.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.Startup.Application.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Application(String, String)
   nameWithType: Application.Application(String, String)
-  fullName: Juhta.Net.Application.Application(System.String, System.String)
+  fullName: Juhta.Net.Startup.Application.Application(System.String, System.String)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 57
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 56
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -188,100 +186,100 @@ items:
 
         case the configuration files are assumed to locate in the binary directory.
     content.vb: Public Sub New(logFilePath As String, configDirectory As String)
-  overload: Juhta.Net.Application.#ctor*
+  overload: Juhta.Net.Startup.Application.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Application.Close
-  commentId: M:Juhta.Net.Application.Close
+- uid: Juhta.Net.Startup.Application.Close
+  commentId: M:Juhta.Net.Startup.Application.Close
   id: Close
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Close()
   nameWithType: Application.Close()
-  fullName: Juhta.Net.Application.Close()
+  fullName: Juhta.Net.Startup.Application.Close()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Close
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 86
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 85
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCloses the application by closing all configured startup libraries and the core of the framework.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCloses the application by closing all configured startup libraries.\n"
   example: []
   syntax:
     content: public void Close()
     content.vb: Public Sub Close
-  overload: Juhta.Net.Application.Close*
+  overload: Juhta.Net.Startup.Application.Close*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Application.CloseInstance
-  commentId: M:Juhta.Net.Application.CloseInstance
+- uid: Juhta.Net.Startup.Application.CloseInstance
+  commentId: M:Juhta.Net.Startup.Application.CloseInstance
   id: CloseInstance
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: CloseInstance()
   nameWithType: Application.CloseInstance()
-  fullName: Juhta.Net.Application.CloseInstance()
+  fullName: Juhta.Net.Startup.Application.CloseInstance()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CloseInstance
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 135
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 130
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCloses the possibly created singleton <xref href=\"Juhta.Net.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCloses the possibly created singleton <xref href=\"Juhta.Net.Startup.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   example: []
   syntax:
     content: public static void CloseInstance()
     content.vb: Public Shared Sub CloseInstance
-  overload: Juhta.Net.Application.CloseInstance*
+  overload: Juhta.Net.Startup.Application.CloseInstance*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Application.GetDynamicLibraryContext``2
-  commentId: M:Juhta.Net.Application.GetDynamicLibraryContext``2
+- uid: Juhta.Net.Startup.Application.GetDynamicLibraryContext``2
+  commentId: M:Juhta.Net.Startup.Application.GetDynamicLibraryContext``2
   id: GetDynamicLibraryContext``2
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
   nameWithType: Application.GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
-  fullName: Juhta.Net.Application.GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
+  fullName: Juhta.Net.Startup.Application.GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetDynamicLibraryContext
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 154
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 149
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates an instance of <xref href=\"Juhta.Net.LibraryManagement.DynamicLibraryContext%602\" data-throw-if-not-resolved=\"false\"></xref> corresponding to\nspecified dynamic library type and library state type.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCreates an instance of <xref href=\"Juhta.Net.Startup.DynamicLibraryContext%602\" data-throw-if-not-resolved=\"false\"></xref> corresponding to\nspecified dynamic library type and library state type.\n"
   example: []
   syntax:
     content: 'public DynamicLibraryContext<TDynamicLibrary, TLibraryState> GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>()where TDynamicLibrary : IDynamicLibrary where TLibraryState : ILibraryState'
@@ -291,72 +289,72 @@ items:
     - id: TLibraryState
       description: Specifies a library state type.
     return:
-      type: Juhta.Net.LibraryManagement.DynamicLibraryContext{{TDynamicLibrary},{TLibraryState}}
-      description: Returns the created <xref href="Juhta.Net.LibraryManagement.DynamicLibraryContext%602" data-throw-if-not-resolved="false"></xref> instance.
+      type: Juhta.Net.Startup.DynamicLibraryContext{{TDynamicLibrary},{TLibraryState}}
+      description: Returns the created <xref href="Juhta.Net.Startup.DynamicLibraryContext%602" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Function GetDynamicLibraryContext(Of TDynamicLibrary As IDynamicLibrary, TLibraryState As ILibraryState) As DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
-  overload: Juhta.Net.Application.GetDynamicLibraryContext*
+  overload: Juhta.Net.Startup.Application.GetDynamicLibraryContext*
   nameWithType.vb: Application.GetDynamicLibraryContext(Of TDynamicLibrary, TLibraryState)()
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Juhta.Net.Application.GetDynamicLibraryContext(Of TDynamicLibrary, TLibraryState)()
+  fullName.vb: Juhta.Net.Startup.Application.GetDynamicLibraryContext(Of TDynamicLibrary, TLibraryState)()
   name.vb: GetDynamicLibraryContext(Of TDynamicLibrary, TLibraryState)()
-- uid: Juhta.Net.Application.Start
-  commentId: M:Juhta.Net.Application.Start
+- uid: Juhta.Net.Startup.Application.Start
+  commentId: M:Juhta.Net.Startup.Application.Start
   id: Start
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Start()
   nameWithType: Application.Start()
-  fullName: Juhta.Net.Application.Start()
+  fullName: Juhta.Net.Startup.Application.Start()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Start
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 164
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 159
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nStarts the application by initializing the core of the framework and all configured startup libraries.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nStarts the application by initializing all configured startup libraries.\n"
   example: []
   syntax:
     content: public void Start()
     content.vb: Public Sub Start
-  overload: Juhta.Net.Application.Start*
+  overload: Juhta.Net.Startup.Application.Start*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Application.StartInstance
-  commentId: M:Juhta.Net.Application.StartInstance
+- uid: Juhta.Net.Startup.Application.StartInstance
+  commentId: M:Juhta.Net.Startup.Application.StartInstance
   id: StartInstance
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: StartInstance()
   nameWithType: Application.StartInstance()
-  fullName: Juhta.Net.Application.StartInstance()
+  fullName: Juhta.Net.Startup.Application.StartInstance()
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StartInstance
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 223
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 215
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Startup.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   remarks: >-
     Log events will be written to the current user&apos;s temp directory, and the configuration files are
 
@@ -365,36 +363,36 @@ items:
   syntax:
     content: public static void StartInstance()
     content.vb: Public Shared Sub StartInstance
-  overload: Juhta.Net.Application.StartInstance*
+  overload: Juhta.Net.Startup.Application.StartInstance*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Application.StartInstance(System.String)
-  commentId: M:Juhta.Net.Application.StartInstance(System.String)
+- uid: Juhta.Net.Startup.Application.StartInstance(System.String)
+  commentId: M:Juhta.Net.Startup.Application.StartInstance(System.String)
   id: StartInstance(System.String)
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: StartInstance(String)
   nameWithType: Application.StartInstance(String)
-  fullName: Juhta.Net.Application.StartInstance(System.String)
+  fullName: Juhta.Net.Startup.Application.StartInstance(System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StartInstance
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 235
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 227
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Startup.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   remarks: The configuration files are assumed to locate in the binary directory.
   example: []
   syntax:
@@ -409,36 +407,36 @@ items:
 
         specifies an invalid log file.
     content.vb: Public Shared Sub StartInstance(logFilePath As String)
-  overload: Juhta.Net.Application.StartInstance*
+  overload: Juhta.Net.Startup.Application.StartInstance*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Application.StartInstance(System.String,System.String)
-  commentId: M:Juhta.Net.Application.StartInstance(System.String,System.String)
+- uid: Juhta.Net.Startup.Application.StartInstance(System.String,System.String)
+  commentId: M:Juhta.Net.Startup.Application.StartInstance(System.String,System.String)
   id: StartInstance(System.String,System.String)
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: StartInstance(String, String)
   nameWithType: Application.StartInstance(String, String)
-  fullName: Juhta.Net.Application.StartInstance(System.String, System.String)
+  fullName: Juhta.Net.Startup.Application.StartInstance(System.String, System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StartInstance
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 248
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 240
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nCreates and starts a new singleton <xref href=\"Juhta.Net.Startup.Application\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   example: []
   syntax:
     content: public static void StartInstance(string logFilePath, string configDirectory)
@@ -458,35 +456,35 @@ items:
 
         case the configuration files are assumed to locate in the binary directory.
     content.vb: Public Shared Sub StartInstance(logFilePath As String, configDirectory As String)
-  overload: Juhta.Net.Application.StartInstance*
+  overload: Juhta.Net.Startup.Application.StartInstance*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Application.BinDirectory
-  commentId: P:Juhta.Net.Application.BinDirectory
+- uid: Juhta.Net.Startup.Application.BinDirectory
+  commentId: P:Juhta.Net.Startup.Application.BinDirectory
   id: BinDirectory
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: BinDirectory
   nameWithType: Application.BinDirectory
-  fullName: Juhta.Net.Application.BinDirectory
+  fullName: Juhta.Net.Startup.Application.BinDirectory
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: BinDirectory
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 263
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 255
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the binary directory for the framework and application libraries. The return value is null if the\napplication is not initialized.\n"
   example: []
   syntax:
@@ -495,35 +493,35 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property BinDirectory As String
-  overload: Juhta.Net.Application.BinDirectory*
+  overload: Juhta.Net.Startup.Application.BinDirectory*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Juhta.Net.Application.ConfigDirectory
-  commentId: P:Juhta.Net.Application.ConfigDirectory
+- uid: Juhta.Net.Startup.Application.ConfigDirectory
+  commentId: P:Juhta.Net.Startup.Application.ConfigDirectory
   id: ConfigDirectory
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: ConfigDirectory
   nameWithType: Application.ConfigDirectory
-  fullName: Juhta.Net.Application.ConfigDirectory
+  fullName: Juhta.Net.Startup.Application.ConfigDirectory
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigDirectory
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 272
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 264
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the configuration directory for the framework and application libraries. The return value is null if\nthe application is not initialized.\n"
   example: []
   syntax:
@@ -532,35 +530,35 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property ConfigDirectory As String
-  overload: Juhta.Net.Application.ConfigDirectory*
+  overload: Juhta.Net.Startup.Application.ConfigDirectory*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Juhta.Net.Application.DefaultConfigFileName
-  commentId: P:Juhta.Net.Application.DefaultConfigFileName
+- uid: Juhta.Net.Startup.Application.DefaultConfigFileName
+  commentId: P:Juhta.Net.Startup.Application.DefaultConfigFileName
   id: DefaultConfigFileName
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: DefaultConfigFileName
   nameWithType: Application.DefaultConfigFileName
-  fullName: Juhta.Net.Application.DefaultConfigFileName
+  fullName: Juhta.Net.Startup.Application.DefaultConfigFileName
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: DefaultConfigFileName
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 280
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 272
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the name of the default configuration file for the application. Can be null.\n"
   example: []
   syntax:
@@ -569,35 +567,35 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property DefaultConfigFileName As String
-  overload: Juhta.Net.Application.DefaultConfigFileName*
+  overload: Juhta.Net.Startup.Application.DefaultConfigFileName*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Juhta.Net.Application.IsInitialized
-  commentId: P:Juhta.Net.Application.IsInitialized
+- uid: Juhta.Net.Startup.Application.IsInitialized
+  commentId: P:Juhta.Net.Startup.Application.IsInitialized
   id: IsInitialized
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: IsInitialized
   nameWithType: Application.IsInitialized
-  fullName: Juhta.Net.Application.IsInitialized
+  fullName: Juhta.Net.Startup.Application.IsInitialized
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsInitialized
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 288
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 280
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nReturns true if the application has been initialized, otherwise false.\n"
   example: []
   syntax:
@@ -606,35 +604,35 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsInitialized As Boolean
-  overload: Juhta.Net.Application.IsInitialized*
+  overload: Juhta.Net.Startup.Application.IsInitialized*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Juhta.Net.Application.Name
-  commentId: P:Juhta.Net.Application.Name
+- uid: Juhta.Net.Startup.Application.Name
+  commentId: P:Juhta.Net.Startup.Application.Name
   id: Name
-  parent: Juhta.Net.Application
+  parent: Juhta.Net.Startup.Application
   langs:
   - csharp
   - vb
   name: Name
   nameWithType: Application.Name
-  fullName: Juhta.Net.Application.Name
+  fullName: Juhta.Net.Startup.Application.Name
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/Application.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Name
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 296
+    path: ../src/Juhta.Net.Startup/Application.cs
+    startLine: 288
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nGets the name of the application.\n"
   example: []
   syntax:
@@ -643,44 +641,7 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property Name As String
-  overload: Juhta.Net.Application.Name*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: Juhta.Net.Application.ServiceFactory
-  commentId: P:Juhta.Net.Application.ServiceFactory
-  id: ServiceFactory
-  parent: Juhta.Net.Application
-  langs:
-  - csharp
-  - vb
-  name: ServiceFactory
-  nameWithType: Application.ServiceFactory
-  fullName: Juhta.Net.Application.ServiceFactory
-  type: Property
-  source:
-    remote:
-      path: src/Juhta.Net/Application.cs
-      branch: release/v1.0.0-rc
-      repo: https://github.com/jlahteen/juhta.net.git
-    id: ServiceFactory
-    path: ../src/Juhta.Net/Application.cs
-    startLine: 311
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net
-  summary: "\nGets the <xref href=\"Juhta.Net.Application.ServiceFactory\" data-throw-if-not-resolved=\"false\"></xref> singleton instance that provides access to the application&apos;s\ndependency injection services.\n"
-  example: []
-  syntax:
-    content: public ServiceFactory ServiceFactory { get; }
-    parameters: []
-    return:
-      type: Juhta.Net.Services.ServiceFactory
-    content.vb: Public ReadOnly Property ServiceFactory As ServiceFactory
-  overload: Juhta.Net.Application.ServiceFactory*
+  overload: Juhta.Net.Startup.Application.Name*
   modifiers.csharp:
   - public
   - get
@@ -688,12 +649,12 @@ items:
   - Public
   - ReadOnly
 references:
-- uid: Juhta.Net
-  commentId: N:Juhta.Net
+- uid: Juhta.Net.Startup
+  commentId: N:Juhta.Net.Startup
   isExternal: false
-  name: Juhta.Net
-  nameWithType: Juhta.Net
-  fullName: Juhta.Net
+  name: Juhta.Net.Startup
+  nameWithType: Juhta.Net.Startup
+  fullName: Juhta.Net.Startup
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -701,15 +662,15 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Common.Singleton{Juhta.Net.Application}
-  commentId: T:Juhta.Net.Common.Singleton{Juhta.Net.Application}
+- uid: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
+  commentId: T:Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   parent: Juhta.Net.Common
   definition: Juhta.Net.Common.Singleton`1
   name: Singleton<Application>
   nameWithType: Singleton<Application>
-  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>
+  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>
   nameWithType.vb: Singleton(Of Application)
-  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Application)
+  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application)
   name.vb: Singleton(Of Application)
   spec.csharp:
   - uid: Juhta.Net.Common.Singleton`1
@@ -719,10 +680,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Juhta.Net.Application
+  - uid: Juhta.Net.Startup.Application
     name: Application
     nameWithType: Application
-    fullName: Juhta.Net.Application
+    fullName: Juhta.Net.Startup.Application
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -734,36 +695,36 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Juhta.Net.Application
+  - uid: Juhta.Net.Startup.Application
     name: Application
     nameWithType: Application
-    fullName: Juhta.Net.Application
+    fullName: Juhta.Net.Startup.Application
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.Singleton{Juhta.Net.Application}.Instance
-  commentId: P:Juhta.Net.Common.Singleton{Juhta.Net.Application}.Instance
-  parent: Juhta.Net.Common.Singleton{Juhta.Net.Application}
+- uid: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.Instance
+  commentId: P:Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.Instance
+  parent: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   definition: Juhta.Net.Common.Singleton`1.Instance
   name: Instance
   nameWithType: Singleton<Application>.Instance
-  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.Instance
+  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.Instance
   nameWithType.vb: Singleton(Of Application).Instance
-  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).Instance
-- uid: Juhta.Net.Common.Singleton{Juhta.Net.Application}.ResetSingletonInstance
-  commentId: M:Juhta.Net.Common.Singleton{Juhta.Net.Application}.ResetSingletonInstance
-  parent: Juhta.Net.Common.Singleton{Juhta.Net.Application}
+  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).Instance
+- uid: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.ResetSingletonInstance
+  commentId: M:Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.ResetSingletonInstance
+  parent: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   definition: Juhta.Net.Common.Singleton`1.ResetSingletonInstance
   name: ResetSingletonInstance()
   nameWithType: Singleton<Application>.ResetSingletonInstance()
-  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.ResetSingletonInstance()
+  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.ResetSingletonInstance()
   nameWithType.vb: Singleton(Of Application).ResetSingletonInstance()
-  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).ResetSingletonInstance()
+  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).ResetSingletonInstance()
   spec.csharp:
   - uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance
     name: ResetSingletonInstance
     nameWithType: Singleton<Application>.ResetSingletonInstance
-    fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.ResetSingletonInstance
+    fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.ResetSingletonInstance
   - name: (
     nameWithType: (
     fullName: (
@@ -774,34 +735,34 @@ references:
   - uid: Juhta.Net.Common.Singleton`1.ResetSingletonInstance
     name: ResetSingletonInstance
     nameWithType: Singleton(Of Application).ResetSingletonInstance
-    fullName: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).ResetSingletonInstance
+    fullName: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).ResetSingletonInstance
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.Singleton{Juhta.Net.Application}.SetSingletonInstance(Juhta.Net.Application)
-  commentId: M:Juhta.Net.Common.Singleton{Juhta.Net.Application}.SetSingletonInstance(Juhta.Net.Application)
-  parent: Juhta.Net.Common.Singleton{Juhta.Net.Application}
+- uid: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.SetSingletonInstance(Juhta.Net.Startup.Application)
+  commentId: M:Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.SetSingletonInstance(Juhta.Net.Startup.Application)
+  parent: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   definition: Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
   name: SetSingletonInstance(Application)
   nameWithType: Singleton<Application>.SetSingletonInstance(Application)
-  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.SetSingletonInstance(Juhta.Net.Application)
+  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.SetSingletonInstance(Juhta.Net.Startup.Application)
   nameWithType.vb: Singleton(Of Application).SetSingletonInstance(Application)
-  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).SetSingletonInstance(Juhta.Net.Application)
+  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).SetSingletonInstance(Juhta.Net.Startup.Application)
   spec.csharp:
   - uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
     name: SetSingletonInstance
     nameWithType: Singleton<Application>.SetSingletonInstance
-    fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.SetSingletonInstance
+    fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.SetSingletonInstance
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Application
+  - uid: Juhta.Net.Startup.Application
     name: Application
     nameWithType: Application
-    fullName: Juhta.Net.Application
+    fullName: Juhta.Net.Startup.Application
   - name: )
     nameWithType: )
     fullName: )
@@ -809,26 +770,26 @@ references:
   - uid: Juhta.Net.Common.Singleton`1.SetSingletonInstance(`0)
     name: SetSingletonInstance
     nameWithType: Singleton(Of Application).SetSingletonInstance
-    fullName: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).SetSingletonInstance
+    fullName: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).SetSingletonInstance
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Juhta.Net.Application
+  - uid: Juhta.Net.Startup.Application
     name: Application
     nameWithType: Application
-    fullName: Juhta.Net.Application
+    fullName: Juhta.Net.Startup.Application
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Common.Singleton{Juhta.Net.Application}.s_instance
-  commentId: F:Juhta.Net.Common.Singleton{Juhta.Net.Application}.s_instance
-  parent: Juhta.Net.Common.Singleton{Juhta.Net.Application}
+- uid: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.s_instance
+  commentId: F:Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}.s_instance
+  parent: Juhta.Net.Common.Singleton{Juhta.Net.Startup.Application}
   definition: Juhta.Net.Common.Singleton`1.s_instance
   name: s_instance
   nameWithType: Singleton<Application>.s_instance
-  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Application>.s_instance
+  fullName: Juhta.Net.Common.Singleton<Juhta.Net.Startup.Application>.s_instance
   nameWithType.vb: Singleton(Of Application).s_instance
-  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Application).s_instance
+  fullName.vb: Juhta.Net.Common.Singleton(Of Juhta.Net.Startup.Application).s_instance
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1239,12 +1200,12 @@ references:
   fullName: Juhta.Net.Common.Singleton<T>.s_instance
   nameWithType.vb: Singleton(Of T).s_instance
   fullName.vb: Juhta.Net.Common.Singleton(Of T).s_instance
-- uid: Juhta.Net.Application.#ctor*
-  commentId: Overload:Juhta.Net.Application.#ctor
+- uid: Juhta.Net.Startup.Application.#ctor*
+  commentId: Overload:Juhta.Net.Startup.Application.#ctor
   isExternal: false
   name: Application
   nameWithType: Application.Application
-  fullName: Juhta.Net.Application.Application
+  fullName: Juhta.Net.Startup.Application.Application
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1252,38 +1213,38 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Juhta.Net.Application.Close*
-  commentId: Overload:Juhta.Net.Application.Close
+- uid: Juhta.Net.Startup.Application.Close*
+  commentId: Overload:Juhta.Net.Startup.Application.Close
   isExternal: false
   name: Close
   nameWithType: Application.Close
-  fullName: Juhta.Net.Application.Close
-- uid: Juhta.Net.Application
-  commentId: T:Juhta.Net.Application
+  fullName: Juhta.Net.Startup.Application.Close
+- uid: Juhta.Net.Startup.Application
+  commentId: T:Juhta.Net.Startup.Application
   isExternal: false
   name: Application
   nameWithType: Application
-  fullName: Juhta.Net.Application
-- uid: Juhta.Net.Application.CloseInstance*
-  commentId: Overload:Juhta.Net.Application.CloseInstance
+  fullName: Juhta.Net.Startup.Application
+- uid: Juhta.Net.Startup.Application.CloseInstance*
+  commentId: Overload:Juhta.Net.Startup.Application.CloseInstance
   isExternal: false
   name: CloseInstance
   nameWithType: Application.CloseInstance
-  fullName: Juhta.Net.Application.CloseInstance
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
-  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  fullName: Juhta.Net.Startup.Application.CloseInstance
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2
+  commentId: T:Juhta.Net.Startup.DynamicLibraryContext`2
   isExternal: false
   name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   spec.csharp:
-  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
     name: DynamicLibraryContext
     nameWithType: DynamicLibraryContext
-    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
   - name: <
     nameWithType: <
     fullName: <
@@ -1300,10 +1261,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
     name: DynamicLibraryContext
     nameWithType: DynamicLibraryContext
-    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -1319,27 +1280,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Application.GetDynamicLibraryContext*
-  commentId: Overload:Juhta.Net.Application.GetDynamicLibraryContext
+- uid: Juhta.Net.Startup.Application.GetDynamicLibraryContext*
+  commentId: Overload:Juhta.Net.Startup.Application.GetDynamicLibraryContext
   isExternal: false
   name: GetDynamicLibraryContext
   nameWithType: Application.GetDynamicLibraryContext
-  fullName: Juhta.Net.Application.GetDynamicLibraryContext
-- uid: Juhta.Net.LibraryManagement.DynamicLibraryContext{{TDynamicLibrary},{TLibraryState}}
-  commentId: T:Juhta.Net.LibraryManagement.DynamicLibraryContext{``0,``1}
-  parent: Juhta.Net.LibraryManagement
-  definition: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  fullName: Juhta.Net.Startup.Application.GetDynamicLibraryContext
+- uid: Juhta.Net.Startup.DynamicLibraryContext{{TDynamicLibrary},{TLibraryState}}
+  commentId: T:Juhta.Net.Startup.DynamicLibraryContext{``0,``1}
+  parent: Juhta.Net.Startup
+  definition: Juhta.Net.Startup.DynamicLibraryContext`2
   name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
-  fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
   nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
-  fullName.vb: Juhta.Net.LibraryManagement.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   spec.csharp:
-  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
     name: DynamicLibraryContext
     nameWithType: DynamicLibraryContext
-    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
   - name: <
     nameWithType: <
     fullName: <
@@ -1356,10 +1317,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
     name: DynamicLibraryContext
     nameWithType: DynamicLibraryContext
-    fullName: Juhta.Net.LibraryManagement.DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -1375,48 +1336,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.LibraryManagement
-  commentId: N:Juhta.Net.LibraryManagement
-  isExternal: false
-  name: Juhta.Net.LibraryManagement
-  nameWithType: Juhta.Net.LibraryManagement
-  fullName: Juhta.Net.LibraryManagement
-- uid: Juhta.Net.Application.Start*
-  commentId: Overload:Juhta.Net.Application.Start
+- uid: Juhta.Net.Startup.Application.Start*
+  commentId: Overload:Juhta.Net.Startup.Application.Start
   isExternal: false
   name: Start
   nameWithType: Application.Start
-  fullName: Juhta.Net.Application.Start
-- uid: Juhta.Net.Application.StartInstance*
-  commentId: Overload:Juhta.Net.Application.StartInstance
+  fullName: Juhta.Net.Startup.Application.Start
+- uid: Juhta.Net.Startup.Application.StartInstance*
+  commentId: Overload:Juhta.Net.Startup.Application.StartInstance
   isExternal: false
   name: StartInstance
   nameWithType: Application.StartInstance
-  fullName: Juhta.Net.Application.StartInstance
-- uid: Juhta.Net.Application.BinDirectory*
-  commentId: Overload:Juhta.Net.Application.BinDirectory
+  fullName: Juhta.Net.Startup.Application.StartInstance
+- uid: Juhta.Net.Startup.Application.BinDirectory*
+  commentId: Overload:Juhta.Net.Startup.Application.BinDirectory
   isExternal: false
   name: BinDirectory
   nameWithType: Application.BinDirectory
-  fullName: Juhta.Net.Application.BinDirectory
-- uid: Juhta.Net.Application.ConfigDirectory*
-  commentId: Overload:Juhta.Net.Application.ConfigDirectory
+  fullName: Juhta.Net.Startup.Application.BinDirectory
+- uid: Juhta.Net.Startup.Application.ConfigDirectory*
+  commentId: Overload:Juhta.Net.Startup.Application.ConfigDirectory
   isExternal: false
   name: ConfigDirectory
   nameWithType: Application.ConfigDirectory
-  fullName: Juhta.Net.Application.ConfigDirectory
-- uid: Juhta.Net.Application.DefaultConfigFileName*
-  commentId: Overload:Juhta.Net.Application.DefaultConfigFileName
+  fullName: Juhta.Net.Startup.Application.ConfigDirectory
+- uid: Juhta.Net.Startup.Application.DefaultConfigFileName*
+  commentId: Overload:Juhta.Net.Startup.Application.DefaultConfigFileName
   isExternal: false
   name: DefaultConfigFileName
   nameWithType: Application.DefaultConfigFileName
-  fullName: Juhta.Net.Application.DefaultConfigFileName
-- uid: Juhta.Net.Application.IsInitialized*
-  commentId: Overload:Juhta.Net.Application.IsInitialized
+  fullName: Juhta.Net.Startup.Application.DefaultConfigFileName
+- uid: Juhta.Net.Startup.Application.IsInitialized*
+  commentId: Overload:Juhta.Net.Startup.Application.IsInitialized
   isExternal: false
   name: IsInitialized
   nameWithType: Application.IsInitialized
-  fullName: Juhta.Net.Application.IsInitialized
+  fullName: Juhta.Net.Startup.Application.IsInitialized
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1424,30 +1379,9 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: Juhta.Net.Application.Name*
-  commentId: Overload:Juhta.Net.Application.Name
+- uid: Juhta.Net.Startup.Application.Name*
+  commentId: Overload:Juhta.Net.Startup.Application.Name
   isExternal: false
   name: Name
   nameWithType: Application.Name
-  fullName: Juhta.Net.Application.Name
-- uid: Juhta.Net.Application.ServiceFactory
-  commentId: P:Juhta.Net.Application.ServiceFactory
-- uid: Juhta.Net.Application.ServiceFactory*
-  commentId: Overload:Juhta.Net.Application.ServiceFactory
-  isExternal: false
-  name: ServiceFactory
-  nameWithType: Application.ServiceFactory
-  fullName: Juhta.Net.Application.ServiceFactory
-- uid: Juhta.Net.Services.ServiceFactory
-  commentId: T:Juhta.Net.Services.ServiceFactory
-  parent: Juhta.Net.Services
-  isExternal: false
-  name: ServiceFactory
-  nameWithType: ServiceFactory
-  fullName: Juhta.Net.Services.ServiceFactory
-- uid: Juhta.Net.Services
-  commentId: N:Juhta.Net.Services
-  isExternal: false
-  name: Juhta.Net.Services
-  nameWithType: Juhta.Net.Services
-  fullName: Juhta.Net.Services
+  fullName: Juhta.Net.Startup.Application.Name

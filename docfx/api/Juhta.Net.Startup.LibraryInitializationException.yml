@@ -1,39 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.LibraryManagement.LibraryStateException
-  commentId: T:Juhta.Net.LibraryManagement.LibraryStateException
-  id: LibraryStateException
-  parent: Juhta.Net.LibraryManagement
+- uid: Juhta.Net.Startup.LibraryInitializationException
+  commentId: T:Juhta.Net.Startup.LibraryInitializationException
+  id: LibraryInitializationException
+  parent: Juhta.Net.Startup
   children:
-  - Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String)
-  - Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String,System.Exception)
+  - Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String)
+  - Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
-  name: LibraryStateException
-  nameWithType: LibraryStateException
-  fullName: Juhta.Net.LibraryManagement.LibraryStateException
+  name: LibraryInitializationException
+  nameWithType: LibraryInitializationException
+  fullName: Juhta.Net.Startup.LibraryInitializationException
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryStateException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryInitializationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: LibraryStateException
-    path: ../src/Juhta.Net/LibraryManagement/LibraryStateException.cs
+    id: LibraryInitializationException
+    path: ../src/Juhta.Net.Startup/LibraryInitializationException.cs
     startLine: 15
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
-  summary: "\nThis exception will be thrown in case of library state related errors.\n"
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
+  summary: "\nThis exception will be thrown when an error occurs in initialization of a library.\n"
   example: []
   syntax:
-    content: 'public class LibraryStateException : Exception, ISerializable'
+    content: 'public class LibraryInitializationException : Exception, ISerializable'
     content.vb: >-
-      Public Class LibraryStateException
-
+      Public Class LibraryInitializationException
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -65,68 +63,68 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String)
-  commentId: M:Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String)
+- uid: Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String)
+  commentId: M:Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Juhta.Net.LibraryManagement.LibraryStateException
+  parent: Juhta.Net.Startup.LibraryInitializationException
   langs:
   - csharp
   - vb
-  name: LibraryStateException(String)
-  nameWithType: LibraryStateException.LibraryStateException(String)
-  fullName: Juhta.Net.LibraryManagement.LibraryStateException.LibraryStateException(System.String)
+  name: LibraryInitializationException(String)
+  nameWithType: LibraryInitializationException.LibraryInitializationException(String)
+  fullName: Juhta.Net.Startup.LibraryInitializationException.LibraryInitializationException(System.String)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryStateException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryInitializationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/LibraryStateException.cs
+    path: ../src/Juhta.Net.Startup/LibraryInitializationException.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public LibraryStateException(string message)
+    content: public LibraryInitializationException(string message)
     parameters:
     - id: message
       type: System.String
       description: Specifies an error message.
     content.vb: Public Sub New(message As String)
-  overload: Juhta.Net.LibraryManagement.LibraryStateException.#ctor*
+  overload: Juhta.Net.Startup.LibraryInitializationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String,System.Exception)
-  commentId: M:Juhta.Net.LibraryManagement.LibraryStateException.#ctor(System.String,System.Exception)
+- uid: Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String,System.Exception)
+  commentId: M:Juhta.Net.Startup.LibraryInitializationException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
-  parent: Juhta.Net.LibraryManagement.LibraryStateException
+  parent: Juhta.Net.Startup.LibraryInitializationException
   langs:
   - csharp
   - vb
-  name: LibraryStateException(String, Exception)
-  nameWithType: LibraryStateException.LibraryStateException(String, Exception)
-  fullName: Juhta.Net.LibraryManagement.LibraryStateException.LibraryStateException(System.String, System.Exception)
+  name: LibraryInitializationException(String, Exception)
+  nameWithType: LibraryInitializationException.LibraryInitializationException(String, Exception)
+  fullName: Juhta.Net.Startup.LibraryInitializationException.LibraryInitializationException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryStateException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Startup/LibraryInitializationException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/LibraryStateException.cs
+    path: ../src/Juhta.Net.Startup/LibraryInitializationException.cs
     startLine: 32
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.LibraryManagement
+  - Juhta.Net.Startup
+  namespace: Juhta.Net.Startup
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
-    content: public LibraryStateException(string message, Exception innerException)
+    content: public LibraryInitializationException(string message, Exception innerException)
     parameters:
     - id: message
       type: System.String
@@ -134,22 +132,22 @@ items:
     - id: innerException
       type: System.Exception
       description: >-
-        Specifies an inner exception that is the actual cause for the library state
+        Specifies an inner exception that is the actual cause for the library
 
-        error.
+        initialization error.
     content.vb: Public Sub New(message As String, innerException As Exception)
-  overload: Juhta.Net.LibraryManagement.LibraryStateException.#ctor*
+  overload: Juhta.Net.Startup.LibraryInitializationException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Juhta.Net.LibraryManagement
-  commentId: N:Juhta.Net.LibraryManagement
+- uid: Juhta.Net.Startup
+  commentId: N:Juhta.Net.Startup
   isExternal: false
-  name: Juhta.Net.LibraryManagement
-  nameWithType: Juhta.Net.LibraryManagement
-  fullName: Juhta.Net.LibraryManagement
+  name: Juhta.Net.Startup
+  nameWithType: Juhta.Net.Startup
+  fullName: Juhta.Net.Startup
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -613,12 +611,12 @@ references:
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-- uid: Juhta.Net.LibraryManagement.LibraryStateException.#ctor*
-  commentId: Overload:Juhta.Net.LibraryManagement.LibraryStateException.#ctor
+- uid: Juhta.Net.Startup.LibraryInitializationException.#ctor*
+  commentId: Overload:Juhta.Net.Startup.LibraryInitializationException.#ctor
   isExternal: false
-  name: LibraryStateException
-  nameWithType: LibraryStateException.LibraryStateException
-  fullName: Juhta.Net.LibraryManagement.LibraryStateException.LibraryStateException
+  name: LibraryInitializationException
+  nameWithType: LibraryInitializationException.LibraryInitializationException
+  fullName: Juhta.Net.Startup.LibraryInitializationException.LibraryInitializationException
 - uid: System.String
   commentId: T:System.String
   parent: System

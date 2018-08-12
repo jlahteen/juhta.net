@@ -1,33 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Validators.PathValidator
-  commentId: T:Juhta.Net.Validators.PathValidator
+- uid: Juhta.Net.Validation.PathValidator
+  commentId: T:Juhta.Net.Validation.PathValidator
   id: PathValidator
-  parent: Juhta.Net.Validators
+  parent: Juhta.Net.Validation
   children:
-  - Juhta.Net.Validators.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
-  - Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)
-  - Juhta.Net.Validators.PathValidator.IsValidFileName(System.String)
-  - Juhta.Net.Validators.PathValidator.IsValidPath(System.String,Juhta.Net.Validators.PathValidator.PathType)
-  - Juhta.Net.Validators.PathValidator.m_errorMessage
+  - Juhta.Net.Validation.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  - Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  - Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  - Juhta.Net.Validation.PathValidator.m_errorMessage
   langs:
   - csharp
   - vb
   name: PathValidator
   nameWithType: PathValidator
-  fullName: Juhta.Net.Validators.PathValidator
+  fullName: Juhta.Net.Validation.PathValidator
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: PathValidator
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 19
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nDefines an abstract base class for validator classes validating directory or file paths.\n"
   example: []
   syntax:
@@ -36,8 +36,8 @@ items:
   inheritance:
   - System.Object
   derivedClasses:
-  - Juhta.Net.Validators.DirectoryPathValidator
-  - Juhta.Net.Validators.FilePathValidator
+  - Juhta.Net.Validation.DirectoryPathValidator
+  - Juhta.Net.Validation.FilePathValidator
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -54,28 +54,28 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: Juhta.Net.Validators.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
-  commentId: M:Juhta.Net.Validators.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+- uid: Juhta.Net.Validation.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Validation.PathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
   id: '#ctor(Juhta.Net.Diagnostics.ErrorMessage)'
-  parent: Juhta.Net.Validators.PathValidator
+  parent: Juhta.Net.Validation.PathValidator
   langs:
   - csharp
   - vb
   name: PathValidator(ErrorMessage)
   nameWithType: PathValidator.PathValidator(ErrorMessage)
-  fullName: Juhta.Net.Validators.PathValidator.PathValidator(Juhta.Net.Diagnostics.ErrorMessage)
+  fullName: Juhta.Net.Validation.PathValidator.PathValidator(Juhta.Net.Diagnostics.ErrorMessage)
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 27
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
@@ -85,33 +85,33 @@ items:
       type: Juhta.Net.Diagnostics.ErrorMessage
       description: Specifies an error message to associate with the instance.
     content.vb: Protected Sub New(errorMessage As ErrorMessage)
-  overload: Juhta.Net.Validators.PathValidator.#ctor*
+  overload: Juhta.Net.Validation.PathValidator.#ctor*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)
-  commentId: M:Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)
+- uid: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
   id: IsValidDirectoryName(System.String)
-  parent: Juhta.Net.Validators.PathValidator
+  parent: Juhta.Net.Validation.PathValidator
   langs:
   - csharp
   - vb
   name: IsValidDirectoryName(String)
   nameWithType: PathValidator.IsValidDirectoryName(String)
-  fullName: Juhta.Net.Validators.PathValidator.IsValidDirectoryName(System.String)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidDirectoryName
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 41
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nChecks whether a specified value is a valid directory name.\n"
   example: []
   syntax:
@@ -124,33 +124,33 @@ items:
       type: System.Boolean
       description: Returns true if the specified value is a valid directory name, otherwise false.
     content.vb: Protected Function IsValidDirectoryName(value As String) As Boolean
-  overload: Juhta.Net.Validators.PathValidator.IsValidDirectoryName*
+  overload: Juhta.Net.Validation.PathValidator.IsValidDirectoryName*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: Juhta.Net.Validators.PathValidator.IsValidFileName(System.String)
-  commentId: M:Juhta.Net.Validators.PathValidator.IsValidFileName(System.String)
+- uid: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
   id: IsValidFileName(System.String)
-  parent: Juhta.Net.Validators.PathValidator
+  parent: Juhta.Net.Validation.PathValidator
   langs:
   - csharp
   - vb
   name: IsValidFileName(String)
   nameWithType: PathValidator.IsValidFileName(String)
-  fullName: Juhta.Net.Validators.PathValidator.IsValidFileName(System.String)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidFileName
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 54
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nChecks whether a specified value is a valid file name.\n"
   example: []
   syntax:
@@ -163,33 +163,33 @@ items:
       type: System.Boolean
       description: Returns true if the specified value is a valid file name, otherwise false.
     content.vb: Protected Function IsValidFileName(value As String) As Boolean
-  overload: Juhta.Net.Validators.PathValidator.IsValidFileName*
+  overload: Juhta.Net.Validation.PathValidator.IsValidFileName*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: Juhta.Net.Validators.PathValidator.IsValidPath(System.String,Juhta.Net.Validators.PathValidator.PathType)
-  commentId: M:Juhta.Net.Validators.PathValidator.IsValidPath(System.String,Juhta.Net.Validators.PathValidator.PathType)
-  id: IsValidPath(System.String,Juhta.Net.Validators.PathValidator.PathType)
-  parent: Juhta.Net.Validators.PathValidator
+- uid: Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  id: IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  parent: Juhta.Net.Validation.PathValidator
   langs:
   - csharp
   - vb
   name: IsValidPath(String, PathValidator.PathType)
   nameWithType: PathValidator.IsValidPath(String, PathValidator.PathType)
-  fullName: Juhta.Net.Validators.PathValidator.IsValidPath(System.String, Juhta.Net.Validators.PathValidator.PathType)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidPath(System.String, Juhta.Net.Validation.PathValidator.PathType)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidPath
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 77
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nChecks whether a specified value is a valid path.\n"
   example: []
   syntax:
@@ -199,39 +199,39 @@ items:
       type: System.String
       description: Specifies a value to be checked.
     - id: pathType
-      type: Juhta.Net.Validators.PathValidator.PathType
+      type: Juhta.Net.Validation.PathValidator.PathType
       description: Specifies a path type.
     return:
       type: System.Boolean
       description: Returns true if the specified value is a valid path, otherwise false.
     content.vb: Protected Function IsValidPath(value As String, pathType As PathValidator.PathType) As Boolean
-  overload: Juhta.Net.Validators.PathValidator.IsValidPath*
+  overload: Juhta.Net.Validation.PathValidator.IsValidPath*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: Juhta.Net.Validators.PathValidator.m_errorMessage
-  commentId: F:Juhta.Net.Validators.PathValidator.m_errorMessage
+- uid: Juhta.Net.Validation.PathValidator.m_errorMessage
+  commentId: F:Juhta.Net.Validation.PathValidator.m_errorMessage
   id: m_errorMessage
-  parent: Juhta.Net.Validators.PathValidator
+  parent: Juhta.Net.Validation.PathValidator
   langs:
   - csharp
   - vb
   name: m_errorMessage
   nameWithType: PathValidator.m_errorMessage
-  fullName: Juhta.Net.Validators.PathValidator.m_errorMessage
+  fullName: Juhta.Net.Validation.PathValidator.m_errorMessage
   type: Field
   source:
     remote:
-      path: src/Juhta.Net/Validators/PathValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: m_errorMessage
-    path: ../src/Juhta.Net/Validators/PathValidator.cs
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
     startLine: 135
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nSpecifies the error message associated with this validator instance.\n"
   example: []
   syntax:
@@ -246,12 +246,12 @@ items:
   - Protected
   - ReadOnly
 references:
-- uid: Juhta.Net.Validators
-  commentId: N:Juhta.Net.Validators
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
   isExternal: false
-  name: Juhta.Net.Validators
-  nameWithType: Juhta.Net.Validators
-  fullName: Juhta.Net.Validators
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -544,12 +544,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Validators.PathValidator.#ctor*
-  commentId: Overload:Juhta.Net.Validators.PathValidator.#ctor
+- uid: Juhta.Net.Validation.PathValidator.#ctor*
+  commentId: Overload:Juhta.Net.Validation.PathValidator.#ctor
   isExternal: false
   name: PathValidator
   nameWithType: PathValidator.PathValidator
-  fullName: Juhta.Net.Validators.PathValidator.PathValidator
+  fullName: Juhta.Net.Validation.PathValidator.PathValidator
 - uid: Juhta.Net.Diagnostics.ErrorMessage
   commentId: T:Juhta.Net.Diagnostics.ErrorMessage
   parent: Juhta.Net.Diagnostics
@@ -563,12 +563,12 @@ references:
   name: Juhta.Net.Diagnostics
   nameWithType: Juhta.Net.Diagnostics
   fullName: Juhta.Net.Diagnostics
-- uid: Juhta.Net.Validators.PathValidator.IsValidDirectoryName*
-  commentId: Overload:Juhta.Net.Validators.PathValidator.IsValidDirectoryName
+- uid: Juhta.Net.Validation.PathValidator.IsValidDirectoryName*
+  commentId: Overload:Juhta.Net.Validation.PathValidator.IsValidDirectoryName
   isExternal: false
   name: IsValidDirectoryName
   nameWithType: PathValidator.IsValidDirectoryName
-  fullName: Juhta.Net.Validators.PathValidator.IsValidDirectoryName
+  fullName: Juhta.Net.Validation.PathValidator.IsValidDirectoryName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -583,22 +583,22 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: Juhta.Net.Validators.PathValidator.IsValidFileName*
-  commentId: Overload:Juhta.Net.Validators.PathValidator.IsValidFileName
+- uid: Juhta.Net.Validation.PathValidator.IsValidFileName*
+  commentId: Overload:Juhta.Net.Validation.PathValidator.IsValidFileName
   isExternal: false
   name: IsValidFileName
   nameWithType: PathValidator.IsValidFileName
-  fullName: Juhta.Net.Validators.PathValidator.IsValidFileName
-- uid: Juhta.Net.Validators.PathValidator.IsValidPath*
-  commentId: Overload:Juhta.Net.Validators.PathValidator.IsValidPath
+  fullName: Juhta.Net.Validation.PathValidator.IsValidFileName
+- uid: Juhta.Net.Validation.PathValidator.IsValidPath*
+  commentId: Overload:Juhta.Net.Validation.PathValidator.IsValidPath
   isExternal: false
   name: IsValidPath
   nameWithType: PathValidator.IsValidPath
-  fullName: Juhta.Net.Validators.PathValidator.IsValidPath
-- uid: Juhta.Net.Validators.PathValidator.PathType
-  commentId: T:Juhta.Net.Validators.PathValidator.PathType
-  parent: Juhta.Net.Validators
+  fullName: Juhta.Net.Validation.PathValidator.IsValidPath
+- uid: Juhta.Net.Validation.PathValidator.PathType
+  commentId: T:Juhta.Net.Validation.PathValidator.PathType
+  parent: Juhta.Net.Validation
   isExternal: false
   name: PathValidator.PathType
   nameWithType: PathValidator.PathType
-  fullName: Juhta.Net.Validators.PathValidator.PathType
+  fullName: Juhta.Net.Validation.PathValidator.PathType

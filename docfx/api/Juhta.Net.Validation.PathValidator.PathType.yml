@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Validation.PathValidator.PathType
+  commentId: T:Juhta.Net.Validation.PathValidator.PathType
+  id: PathValidator.PathType
+  parent: Juhta.Net.Validation
+  children:
+  - Juhta.Net.Validation.PathValidator.PathType.DirectoryPath
+  - Juhta.Net.Validation.PathValidator.PathType.FilePath
+  langs:
+  - csharp
+  - vb
+  name: PathValidator.PathType
+  nameWithType: PathValidator.PathType
+  fullName: Juhta.Net.Validation.PathValidator.PathType
+  type: Enum
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: PathType
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
+    startLine: 115
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nDefines an enumeration for the path types.\n"
+  example: []
+  syntax:
+    content: protected enum PathType
+    content.vb: Protected Enum PathType
+  modifiers.csharp:
+  - protected
+  - enum
+  modifiers.vb:
+  - Protected
+  - Enum
+- uid: Juhta.Net.Validation.PathValidator.PathType.DirectoryPath
+  commentId: F:Juhta.Net.Validation.PathValidator.PathType.DirectoryPath
+  id: DirectoryPath
+  parent: Juhta.Net.Validation.PathValidator.PathType
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPath
+  nameWithType: PathValidator.PathType.DirectoryPath
+  fullName: Juhta.Net.Validation.PathValidator.PathType.DirectoryPath
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: DirectoryPath
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
+    startLine: 120
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nThe path is a directory path.\n"
+  example: []
+  syntax:
+    content: DirectoryPath = 0
+    return:
+      type: Juhta.Net.Validation.PathValidator.PathType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Validation.PathValidator.PathType.FilePath
+  commentId: F:Juhta.Net.Validation.PathValidator.PathType.FilePath
+  id: FilePath
+  parent: Juhta.Net.Validation.PathValidator.PathType
+  langs:
+  - csharp
+  - vb
+  name: FilePath
+  nameWithType: PathValidator.PathType.FilePath
+  fullName: Juhta.Net.Validation.PathValidator.PathType.FilePath
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/PathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: FilePath
+    path: ../src/Juhta.Net.Validation/PathValidator.cs
+    startLine: 125
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nThe path is a file path.\n"
+  example: []
+  syntax:
+    content: FilePath = 1
+    return:
+      type: Juhta.Net.Validation.PathValidator.PathType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
+  isExternal: false
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
+- uid: Juhta.Net.Validation.PathValidator.PathType
+  commentId: T:Juhta.Net.Validation.PathValidator.PathType
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: PathValidator.PathType
+  nameWithType: PathValidator.PathType
+  fullName: Juhta.Net.Validation.PathValidator.PathType

@@ -17,14 +17,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
     startLine: 16
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines a base interface for dynamic libraries. A dynamic library is a library whose state can be dynamically\nchanged at the runtime e.g. by modifying the configuration of the library.\n"
   example: []
@@ -50,14 +50,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GoLive
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
     startLine: 29
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGoes live with a specified <xref href=\"Juhta.Net.LibraryManagement.ILibraryState\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   remarks: "\n<p>It can be assumed that the specified <xref href=\"Juhta.Net.LibraryManagement.ILibraryState\" data-throw-if-not-resolved=\"false\"></xref> instance is fully initialized.</p>\n<p>This method makes it possible to encapsulate the final steps that are required to set an initialized\nlibrary state as the effective library state.</p>\n"
@@ -83,14 +83,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
     startLine: 38
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets or sets the current state of the library.\n"
   example: []
@@ -117,14 +117,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryStateLock
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicLibrary.cs
     startLine: 44
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets a <xref href=\"System.Threading.ReaderWriterLockSlim\" data-throw-if-not-resolved=\"false\"></xref> object managing concurrent access to the current state of the\nlibrary.\n"
   example: []

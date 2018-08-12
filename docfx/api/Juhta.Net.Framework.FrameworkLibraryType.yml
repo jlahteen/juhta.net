@@ -1,0 +1,260 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Framework.FrameworkLibraryType
+  commentId: T:Juhta.Net.Framework.FrameworkLibraryType
+  id: FrameworkLibraryType
+  parent: Juhta.Net.Framework
+  children:
+  - Juhta.Net.Framework.FrameworkLibraryType.Console
+  - Juhta.Net.Framework.FrameworkLibraryType.Core
+  - Juhta.Net.Framework.FrameworkLibraryType.LibraryManagement
+  - Juhta.Net.Framework.FrameworkLibraryType.Services
+  - Juhta.Net.Framework.FrameworkLibraryType.Startup
+  - Juhta.Net.Framework.FrameworkLibraryType.Validation
+  langs:
+  - csharp
+  - vb
+  name: FrameworkLibraryType
+  nameWithType: FrameworkLibraryType
+  fullName: Juhta.Net.Framework.FrameworkLibraryType
+  type: Enum
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: FrameworkLibraryType
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nDefines an enumeration for the framework library types.\n"
+  example: []
+  syntax:
+    content: public enum FrameworkLibraryType
+    content.vb: Public Enum FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Juhta.Net.Framework.FrameworkLibraryType.Core
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.Core
+  id: Core
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Core
+  nameWithType: FrameworkLibraryType.Core
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.Core
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Core
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 20
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Core library.\n"
+  example: []
+  syntax:
+    content: Core = 0
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Framework.FrameworkLibraryType.Validation
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.Validation
+  id: Validation
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Validation
+  nameWithType: FrameworkLibraryType.Validation
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.Validation
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Validation
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Validation library.\n"
+  example: []
+  syntax:
+    content: Validation = 1
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Framework.FrameworkLibraryType.Console
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.Console
+  id: Console
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Console
+  nameWithType: FrameworkLibraryType.Console
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.Console
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Console
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 30
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Console library.\n"
+  example: []
+  syntax:
+    content: Console = 2
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Framework.FrameworkLibraryType.LibraryManagement
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.LibraryManagement
+  id: LibraryManagement
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: LibraryManagement
+  nameWithType: FrameworkLibraryType.LibraryManagement
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.LibraryManagement
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: LibraryManagement
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 35
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Library Management library.\n"
+  example: []
+  syntax:
+    content: LibraryManagement = 3
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Framework.FrameworkLibraryType.Services
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.Services
+  id: Services
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: FrameworkLibraryType.Services
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.Services
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Services
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 40
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Services library.\n"
+  example: []
+  syntax:
+    content: Services = 4
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Juhta.Net.Framework.FrameworkLibraryType.Startup
+  commentId: F:Juhta.Net.Framework.FrameworkLibraryType.Startup
+  id: Startup
+  parent: Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Startup
+  nameWithType: FrameworkLibraryType.Startup
+  fullName: Juhta.Net.Framework.FrameworkLibraryType.Startup
+  type: Field
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/Types.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Startup
+    path: ../src/Juhta.Net/Framework/Types.cs
+    startLine: 45
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nSpecifies the Startup library.\n"
+  example: []
+  syntax:
+    content: Startup = 5
+    return:
+      type: Juhta.Net.Framework.FrameworkLibraryType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Juhta.Net.Framework
+  commentId: N:Juhta.Net.Framework
+  isExternal: false
+  name: Juhta.Net.Framework
+  nameWithType: Juhta.Net.Framework
+  fullName: Juhta.Net.Framework
+- uid: Juhta.Net.Framework.FrameworkLibraryType
+  commentId: T:Juhta.Net.Framework.FrameworkLibraryType
+  parent: Juhta.Net.Framework
+  isExternal: false
+  name: FrameworkLibraryType
+  nameWithType: FrameworkLibraryType
+  fullName: Juhta.Net.Framework.FrameworkLibraryType

@@ -1,47 +1,46 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Juhta.Net.Validators.XmlDocumentValidator
-  commentId: T:Juhta.Net.Validators.XmlDocumentValidator
+- uid: Juhta.Net.Validation.XmlDocumentValidator
+  commentId: T:Juhta.Net.Validation.XmlDocumentValidator
   id: XmlDocumentValidator
-  parent: Juhta.Net.Validators
+  parent: Juhta.Net.Validation
   children:
-  - Juhta.Net.Validators.XmlDocumentValidator.#ctor
-  - Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.String)
-  - Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Uri)
-  - Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
-  - Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
-  - Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
-  - Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  - Juhta.Net.Validation.XmlDocumentValidator.#ctor
+  - Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.String)
+  - Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Uri)
+  - Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  - Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
+  - Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
+  - Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
   langs:
   - csharp
   - vb
   name: XmlDocumentValidator
   nameWithType: XmlDocumentValidator
-  fullName: Juhta.Net.Validators.XmlDocumentValidator
+  fullName: Juhta.Net.Validation.XmlDocumentValidator
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: XmlDocumentValidator
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 18
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nA validator class that makes easier to validate XML documents against XML schemas.\n"
   example: []
   syntax:
     content: 'public class XmlDocumentValidator : IValidator<XmlDocument>'
     content.vb: >-
       Public Class XmlDocumentValidator
-
           Implements IValidator(Of XmlDocument)
   inheritance:
   - System.Object
   implements:
-  - Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}
+  - Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -56,60 +55,60 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Validators.XmlDocumentValidator.#ctor
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.#ctor
+- uid: Juhta.Net.Validation.XmlDocumentValidator.#ctor
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.#ctor
   id: '#ctor'
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: XmlDocumentValidator()
   nameWithType: XmlDocumentValidator.XmlDocumentValidator()
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.XmlDocumentValidator()
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.XmlDocumentValidator()
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 25
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nInitializes a new instance.\n"
   example: []
   syntax:
     content: public XmlDocumentValidator()
     content.vb: Public Sub New
-  overload: Juhta.Net.Validators.XmlDocumentValidator.#ctor*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
   id: AddSchema(System.Xml.Schema.XmlSchema)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: AddSchema(XmlSchema)
   nameWithType: XmlDocumentValidator.AddSchema(XmlSchema)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Xml.Schema.XmlSchema)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 38
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nAdds an XML schema to this validator instance.\n"
   example: []
   syntax:
@@ -119,33 +118,33 @@ items:
       type: System.Xml.Schema.XmlSchema
       description: Specifies an XmlSchema object.
     content.vb: Public Sub AddSchema(schema As XmlSchema)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.AddSchema*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.AddSchema*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.String)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.String)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.String)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.String)
   id: AddSchema(System.String)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: AddSchema(String)
   nameWithType: XmlDocumentValidator.AddSchema(String)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.String)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 47
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nAdds an XML schema to this validator instance.\n"
   example: []
   syntax:
@@ -155,33 +154,33 @@ items:
       type: System.String
       description: Specifies an XML schema string.
     content.vb: Public Sub AddSchema(schema As String)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.AddSchema*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.AddSchema*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Uri)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Uri)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Uri)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Uri)
   id: AddSchema(System.Uri)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: AddSchema(Uri)
   nameWithType: XmlDocumentValidator.AddSchema(Uri)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.AddSchema(System.Uri)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.AddSchema(System.Uri)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: AddSchema
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 56
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nAdds an XML schema to this validator instance.\n"
   example: []
   syntax:
@@ -191,40 +190,40 @@ items:
       type: System.Uri
       description: Specifies the URI of a schema to be added to the instance.
     content.vb: Public Sub AddSchema(schemaUri As Uri)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.AddSchema*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.AddSchema*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
   id: Validate(System.Xml.XmlDocument)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: Validate(XmlDocument)
   nameWithType: XmlDocumentValidator.Validate(XmlDocument)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 68
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nValidates a specified XML document.\n"
   remarks: >-
     If the XML document contains validation errors, the method collects the corresponding exceptions
 
     to an exception chain of the type <xref href="System.Xml.Schema.XmlSchemaValidationException" data-throw-if-not-resolved="false"></xref>. This exception chain will be
 
-    thrown as an inner exception of <xref href="Juhta.Net.Validators.ValidationException" data-throw-if-not-resolved="false"></xref> after the validation process is finished.
+    thrown as an inner exception of <xref href="Juhta.Net.Validation.ValidationException" data-throw-if-not-resolved="false"></xref> after the validation process is finished.
   example: []
   syntax:
     content: public void Validate(XmlDocument document)
@@ -233,35 +232,35 @@ items:
       type: System.Xml.XmlDocument
       description: Specifies an <xref href="System.Xml.XmlDocument" data-throw-if-not-resolved="false"></xref> object.
     content.vb: Public Sub Validate(document As XmlDocument)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.Validate*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.Validate*
   implements:
-  - Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
+  - Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.String)
   id: Validate(System.Xml.XmlDocument,System.String)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: Validate(XmlDocument, String)
   nameWithType: XmlDocumentValidator.Validate(XmlDocument, String)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument, System.String)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument, System.String)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 93
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nValidates a specified XML document against a specified XML schema.\n"
   remarks: >-
     If the XML document contains validation errors, the function collects the corresponding exceptions
@@ -280,35 +279,35 @@ items:
       type: System.String
       description: Specifies an XML schema as a string.
     content.vb: Public Shared Sub Validate(document As XmlDocument, schema As String)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.Validate*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.Validate*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
-  commentId: M:Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+- uid: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
+  commentId: M:Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
   id: Validate(System.Xml.XmlDocument,System.Xml.Schema.XmlSchema)
-  parent: Juhta.Net.Validators.XmlDocumentValidator
+  parent: Juhta.Net.Validation.XmlDocumentValidator
   langs:
   - csharp
   - vb
   name: Validate(XmlDocument, XmlSchema)
   nameWithType: XmlDocumentValidator.Validate(XmlDocument, XmlSchema)
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.Validate(System.Xml.XmlDocument, System.Xml.Schema.XmlSchema)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.Validate(System.Xml.XmlDocument, System.Xml.Schema.XmlSchema)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Validators/XmlDocumentValidator.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Validation/XmlDocumentValidator.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
-    path: ../src/Juhta.Net/Validators/XmlDocumentValidator.cs
+    path: ../src/Juhta.Net.Validation/XmlDocumentValidator.cs
     startLine: 110
   assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Validators
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
   summary: "\nValidates a specified XML document against a specified XML schema.\n"
   remarks: >-
     If the XML document contains validation errors, the function collects the corresponding exceptions
@@ -327,7 +326,7 @@ items:
       type: System.Xml.Schema.XmlSchema
       description: Specifies an XmlSchema object.
     content.vb: Public Shared Sub Validate(document As XmlDocument, schema As XmlSchema)
-  overload: Juhta.Net.Validators.XmlDocumentValidator.Validate*
+  overload: Juhta.Net.Validation.XmlDocumentValidator.Validate*
   modifiers.csharp:
   - public
   - static
@@ -335,12 +334,12 @@ items:
   - Public
   - Shared
 references:
-- uid: Juhta.Net.Validators
-  commentId: N:Juhta.Net.Validators
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
   isExternal: false
-  name: Juhta.Net.Validators
-  nameWithType: Juhta.Net.Validators
-  fullName: Juhta.Net.Validators
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -348,21 +347,21 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}
-  commentId: T:Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}
-  parent: Juhta.Net.Validators
-  definition: Juhta.Net.Validators.IValidator`1
+- uid: Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}
+  commentId: T:Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}
+  parent: Juhta.Net.Validation
+  definition: Juhta.Net.Validation.IValidator`1
   name: IValidator<XmlDocument>
   nameWithType: IValidator<XmlDocument>
-  fullName: Juhta.Net.Validators.IValidator<System.Xml.XmlDocument>
+  fullName: Juhta.Net.Validation.IValidator<System.Xml.XmlDocument>
   nameWithType.vb: IValidator(Of XmlDocument)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of System.Xml.XmlDocument)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of System.Xml.XmlDocument)
   name.vb: IValidator(Of XmlDocument)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -375,10 +374,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -675,20 +674,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Validators.IValidator`1
-  commentId: T:Juhta.Net.Validators.IValidator`1
+- uid: Juhta.Net.Validation.IValidator`1
+  commentId: T:Juhta.Net.Validation.IValidator`1
   isExternal: false
   name: IValidator<T>
   nameWithType: IValidator<T>
-  fullName: Juhta.Net.Validators.IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
   nameWithType.vb: IValidator(Of T)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
   name.vb: IValidator(Of T)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -699,10 +698,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -712,18 +711,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validators.XmlDocumentValidator.#ctor*
-  commentId: Overload:Juhta.Net.Validators.XmlDocumentValidator.#ctor
+- uid: Juhta.Net.Validation.XmlDocumentValidator.#ctor*
+  commentId: Overload:Juhta.Net.Validation.XmlDocumentValidator.#ctor
   isExternal: false
   name: XmlDocumentValidator
   nameWithType: XmlDocumentValidator.XmlDocumentValidator
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.XmlDocumentValidator
-- uid: Juhta.Net.Validators.XmlDocumentValidator.AddSchema*
-  commentId: Overload:Juhta.Net.Validators.XmlDocumentValidator.AddSchema
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.XmlDocumentValidator
+- uid: Juhta.Net.Validation.XmlDocumentValidator.AddSchema*
+  commentId: Overload:Juhta.Net.Validation.XmlDocumentValidator.AddSchema
   isExternal: false
   name: AddSchema
   nameWithType: XmlDocumentValidator.AddSchema
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.AddSchema
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.AddSchema
 - uid: System.Xml.Schema.XmlSchema
   commentId: T:System.Xml.Schema.XmlSchema
   parent: System.Xml.Schema
@@ -760,32 +759,32 @@ references:
   fullName: System.Xml.XmlDocument
 - uid: System.Xml.Schema.XmlSchemaValidationException
   commentId: T:System.Xml.Schema.XmlSchemaValidationException
-- uid: Juhta.Net.Validators.ValidationException
-  commentId: T:Juhta.Net.Validators.ValidationException
+- uid: Juhta.Net.Validation.ValidationException
+  commentId: T:Juhta.Net.Validation.ValidationException
   isExternal: false
   name: ValidationException
   nameWithType: ValidationException
-  fullName: Juhta.Net.Validators.ValidationException
-- uid: Juhta.Net.Validators.XmlDocumentValidator.Validate*
-  commentId: Overload:Juhta.Net.Validators.XmlDocumentValidator.Validate
+  fullName: Juhta.Net.Validation.ValidationException
+- uid: Juhta.Net.Validation.XmlDocumentValidator.Validate*
+  commentId: Overload:Juhta.Net.Validation.XmlDocumentValidator.Validate
   isExternal: false
   name: Validate
   nameWithType: XmlDocumentValidator.Validate
-  fullName: Juhta.Net.Validators.XmlDocumentValidator.Validate
-- uid: Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
-  commentId: M:Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
-  parent: Juhta.Net.Validators.IValidator{System.Xml.XmlDocument}
-  definition: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  fullName: Juhta.Net.Validation.XmlDocumentValidator.Validate
+- uid: Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
+  commentId: M:Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}.Validate(System.Xml.XmlDocument)
+  parent: Juhta.Net.Validation.IValidator{System.Xml.XmlDocument}
+  definition: Juhta.Net.Validation.IValidator`1.Validate(`0)
   name: Validate(XmlDocument)
   nameWithType: IValidator<XmlDocument>.Validate(XmlDocument)
-  fullName: Juhta.Net.Validators.IValidator<System.Xml.XmlDocument>.Validate(System.Xml.XmlDocument)
+  fullName: Juhta.Net.Validation.IValidator<System.Xml.XmlDocument>.Validate(System.Xml.XmlDocument)
   nameWithType.vb: IValidator(Of XmlDocument).Validate(XmlDocument)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of System.Xml.XmlDocument).Validate(System.Xml.XmlDocument)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of System.Xml.XmlDocument).Validate(System.Xml.XmlDocument)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator<XmlDocument>.Validate
-    fullName: Juhta.Net.Validators.IValidator<System.Xml.XmlDocument>.Validate
+    fullName: Juhta.Net.Validation.IValidator<System.Xml.XmlDocument>.Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -798,10 +797,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator(Of XmlDocument).Validate
-    fullName: Juhta.Net.Validators.IValidator(Of System.Xml.XmlDocument).Validate
+    fullName: Juhta.Net.Validation.IValidator(Of System.Xml.XmlDocument).Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -819,19 +818,19 @@ references:
   name: System.Xml
   nameWithType: System.Xml
   fullName: System.Xml
-- uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
-  commentId: M:Juhta.Net.Validators.IValidator`1.Validate(`0)
+- uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  commentId: M:Juhta.Net.Validation.IValidator`1.Validate(`0)
   isExternal: false
   name: Validate(T)
   nameWithType: IValidator<T>.Validate(T)
-  fullName: Juhta.Net.Validators.IValidator<T>.Validate(T)
+  fullName: Juhta.Net.Validation.IValidator<T>.Validate(T)
   nameWithType.vb: IValidator(Of T).Validate(T)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of T).Validate(T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T).Validate(T)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator<T>.Validate
-    fullName: Juhta.Net.Validators.IValidator<T>.Validate
+    fullName: Juhta.Net.Validation.IValidator<T>.Validate
   - name: (
     nameWithType: (
     fullName: (
@@ -842,10 +841,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1.Validate(`0)
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
     name: Validate
     nameWithType: IValidator(Of T).Validate
-    fullName: Juhta.Net.Validators.IValidator(Of T).Validate
+    fullName: Juhta.Net.Validation.IValidator(Of T).Validate
   - name: (
     nameWithType: (
     fullName: (

@@ -1,15 +1,4 @@
 ### YamlMime:TableOfContent
-- uid: Juhta.Net
-  name: Juhta.Net
-  items:
-  - uid: Juhta.Net.Application
-    name: Application
-  - uid: Juhta.Net.FrameworkConfig
-    name: FrameworkConfig
-  - uid: Juhta.Net.FrameworkInfo
-    name: FrameworkInfo
-  - uid: Juhta.Net.Logger
-    name: Logger
 - uid: Juhta.Net.Common
   name: Juhta.Net.Common
   items:
@@ -79,8 +68,6 @@
     name: DiagnosticMessage
   - uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory
     name: DiagnosticMessageFactory
-  - uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-    name: DiagnosticMessageIdBase
   - uid: Juhta.Net.Diagnostics.DiagnosticMessageType
     name: DiagnosticMessageType
   - uid: Juhta.Net.Diagnostics.ErrorMessage
@@ -91,6 +78,8 @@
     name: ILogger
   - uid: Juhta.Net.Diagnostics.InformationMessage
     name: InformationMessage
+  - uid: Juhta.Net.Diagnostics.Logger
+    name: Logger
   - uid: Juhta.Net.Diagnostics.WarningMessage
     name: WarningMessage
 - uid: Juhta.Net.Extensions
@@ -114,6 +103,17 @@
     name: XmlNodeExtensions
   - uid: Juhta.Net.Extensions.XmlSchemaExtensions
     name: XmlSchemaExtensions
+- uid: Juhta.Net.Framework
+  name: Juhta.Net.Framework
+  items:
+  - uid: Juhta.Net.Framework.DiagnosticMessageIdBase
+    name: DiagnosticMessageIdBase
+  - uid: Juhta.Net.Framework.FrameworkConfig
+    name: FrameworkConfig
+  - uid: Juhta.Net.Framework.FrameworkInfo
+    name: FrameworkInfo
+  - uid: Juhta.Net.Framework.FrameworkLibraryType
+    name: FrameworkLibraryType
 - uid: Juhta.Net.Helpers
   name: Juhta.Net.Helpers
   items:
@@ -122,9 +122,6 @@
 - uid: Juhta.Net.LibraryManagement
   name: Juhta.Net.LibraryManagement
   items:
-  - uid: Juhta.Net.LibraryManagement.DynamicLibraryContext`2
-    name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
-    name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
   - uid: Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
     name: DynamicLibraryHandleBase
   - uid: Juhta.Net.LibraryManagement.IClosableLibrary
@@ -163,16 +160,6 @@
     name: IStartableLibraryState
   - uid: Juhta.Net.LibraryManagement.LibraryHandleBase
     name: LibraryHandleBase
-  - uid: Juhta.Net.LibraryManagement.LibraryInitializationException
-    name: LibraryInitializationException
-  - uid: Juhta.Net.LibraryManagement.LibraryStateException
-    name: LibraryStateException
-- uid: Juhta.Net.Processing
-  name: Juhta.Net.Processing
-  items:
-  - uid: Juhta.Net.Processing.ConsumerThread`1
-    name: ConsumerThread<T>
-    name.vb: ConsumerThread(Of T)
 - uid: Juhta.Net.Services
   name: Juhta.Net.Services
   items:
@@ -182,6 +169,8 @@
     name: ConstructorParamException
   - uid: Juhta.Net.Services.ConstructorParamType
     name: ConstructorParamType
+  - uid: Juhta.Net.Services.LibraryHandle
+    name: LibraryHandle
   - uid: Juhta.Net.Services.Service
     name: Service
   - uid: Juhta.Net.Services.ServiceCreationException
@@ -192,23 +181,35 @@
     name: ServiceId
   - uid: Juhta.Net.Services.ServiceInitializationException
     name: ServiceInitializationException
-- uid: Juhta.Net.Validators
-  name: Juhta.Net.Validators
+- uid: Juhta.Net.Startup
+  name: Juhta.Net.Startup
   items:
-  - uid: Juhta.Net.Validators.DirectoryPathValidator
+  - uid: Juhta.Net.Startup.Application
+    name: Application
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
+    name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+    name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  - uid: Juhta.Net.Startup.LibraryInitializationException
+    name: LibraryInitializationException
+  - uid: Juhta.Net.Startup.LibraryStateException
+    name: LibraryStateException
+- uid: Juhta.Net.Validation
+  name: Juhta.Net.Validation
+  items:
+  - uid: Juhta.Net.Validation.DirectoryPathValidator
     name: DirectoryPathValidator
-  - uid: Juhta.Net.Validators.FilePathValidator
+  - uid: Juhta.Net.Validation.FilePathValidator
     name: FilePathValidator
-  - uid: Juhta.Net.Validators.IStringValidator
+  - uid: Juhta.Net.Validation.IStringValidator
     name: IStringValidator
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator<T>
     name.vb: IValidator(Of T)
-  - uid: Juhta.Net.Validators.PathValidator
+  - uid: Juhta.Net.Validation.PathValidator
     name: PathValidator
-  - uid: Juhta.Net.Validators.PathValidator.PathType
+  - uid: Juhta.Net.Validation.PathValidator.PathType
     name: PathValidator.PathType
-  - uid: Juhta.Net.Validators.ValidationException
+  - uid: Juhta.Net.Validation.ValidationException
     name: ValidationException
-  - uid: Juhta.Net.Validators.XmlDocumentValidator
+  - uid: Juhta.Net.Validation.XmlDocumentValidator
     name: XmlDocumentValidator
