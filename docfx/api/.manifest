@@ -321,7 +321,6 @@
   "Juhta.Net.Framework.DiagnosticMessageIdBase.Common": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
   "Juhta.Net.Framework.DiagnosticMessageIdBase.Console": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
   "Juhta.Net.Framework.DiagnosticMessageIdBase.Core": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
-  "Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
   "Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
   "Juhta.Net.Framework.DiagnosticMessageIdBase.Services": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",
   "Juhta.Net.Framework.DiagnosticMessageIdBase.Startup": "Juhta.Net.Framework.DiagnosticMessageIdBase.yml",

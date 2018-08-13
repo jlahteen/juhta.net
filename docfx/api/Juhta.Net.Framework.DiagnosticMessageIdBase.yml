@@ -8,7 +8,6 @@ items:
   - Juhta.Net.Framework.DiagnosticMessageIdBase.Common
   - Juhta.Net.Framework.DiagnosticMessageIdBase.Console
   - Juhta.Net.Framework.DiagnosticMessageIdBase.Core
-  - Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)
   - Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
   - Juhta.Net.Framework.DiagnosticMessageIdBase.Services
   - Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
@@ -326,47 +325,6 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)
-  commentId: M:Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)
-  id: GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)
-  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
-  langs:
-  - csharp
-  - vb
-  name: GetMessageIdBase(FrameworkLibraryType)
-  nameWithType: DiagnosticMessageIdBase.GetMessageIdBase(FrameworkLibraryType)
-  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase(Juhta.Net.Framework.FrameworkLibraryType)
-  type: Method
-  source:
-    remote:
-      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
-      branch: release/v1.0.0-rc2
-      repo: https://github.com/jlahteen/juhta.net.git
-    id: GetMessageIdBase
-    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
-    startLine: 83
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Framework
-  summary: "\nGets the message identifier base for a specified framework library.\n"
-  example: []
-  syntax:
-    content: public static int GetMessageIdBase(FrameworkLibraryType libraryType)
-    parameters:
-    - id: libraryType
-      type: Juhta.Net.Framework.FrameworkLibraryType
-      description: Specifies a framework library type.
-    return:
-      type: System.Int32
-      description: Returns the message identifier base for the specified framework library.
-    content.vb: Public Shared Function GetMessageIdBase(libraryType As FrameworkLibraryType) As Integer
-  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: Juhta.Net.Framework
   commentId: N:Juhta.Net.Framework
@@ -715,16 +673,3 @@ references:
   name: Validation
   nameWithType: DiagnosticMessageIdBase.Validation
   fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
-- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase*
-  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase
-  isExternal: false
-  name: GetMessageIdBase
-  nameWithType: DiagnosticMessageIdBase.GetMessageIdBase
-  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.GetMessageIdBase
-- uid: Juhta.Net.Framework.FrameworkLibraryType
-  commentId: T:Juhta.Net.Framework.FrameworkLibraryType
-  parent: Juhta.Net.Framework
-  isExternal: false
-  name: FrameworkLibraryType
-  nameWithType: FrameworkLibraryType
-  fullName: Juhta.Net.Framework.FrameworkLibraryType
