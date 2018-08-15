@@ -8,7 +8,7 @@ The current main features of Juhta.NET are as follows:
 
 - Versatile and comprehensive library management interfaces for initializing, dynamic reconfiguring and closing application libraries
 
-- Support for starting and closing an application gracefully with any number of libraries
+- Support for starting and closing any application gracefully with any number of libraries implementing library management interfaces
 
 - Flexible and scalable dependency injection support
 
