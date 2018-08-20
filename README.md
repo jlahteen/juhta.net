@@ -22,7 +22,7 @@ The documentation of the latest release can be found [here](https://jlahteen.git
 
 ## API Reference
 
-The API Reference of the latest release can be found [here](https://jlahteen.github.io/juhta.net/latest/api/Juhta.Net.html).
+The API Reference of the latest release can be found [here](https://jlahteen.github.io/juhta.net/latest/api/Juhta.Net.Common.html).
 
 ## How to Play with the Code
 
