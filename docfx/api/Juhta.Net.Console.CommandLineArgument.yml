@@ -8,7 +8,7 @@ items:
   - Juhta.Net.Console.CommandLineArgument.#ctor(System.String)
   - Juhta.Net.Console.CommandLineArgument.Consumed
   - Juhta.Net.Console.CommandLineArgument.GetValueAs``1
-  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+  - Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validation.IValidator{``0})
   - Juhta.Net.Console.CommandLineArgument.Value
   langs:
   - csharp
@@ -19,14 +19,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineArgument
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 17
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nDefines an abstract base class for command line arguments.\n"
   example: []
@@ -67,14 +67,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 26
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nConverts the value of this command line argument to a specified type.\n"
   example: []
@@ -95,27 +95,27 @@ items:
   - Public
   fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)()
   name.vb: GetValueAs(Of T)()
-- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
-  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
-  id: GetValueAs``1(Juhta.Net.Validators.IValidator{``0})
+- uid: Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validation.IValidator{``0})
+  commentId: M:Juhta.Net.Console.CommandLineArgument.GetValueAs``1(Juhta.Net.Validation.IValidator{``0})
+  id: GetValueAs``1(Juhta.Net.Validation.IValidator{``0})
   parent: Juhta.Net.Console.CommandLineArgument
   langs:
   - csharp
   - vb
   name: GetValueAs<T>(IValidator<T>)
   nameWithType: CommandLineArgument.GetValueAs<T>(IValidator<T>)
-  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validators.IValidator<T>)
+  fullName: Juhta.Net.Console.CommandLineArgument.GetValueAs<T>(Juhta.Net.Validation.IValidator<T>)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 46
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nConverts the value of this command line argument to a specified type and validates the converted value with\na specified validator.\n"
   example: []
@@ -123,7 +123,7 @@ items:
     content: public T GetValueAs<T>(IValidator<T> validator)
     parameters:
     - id: validator
-      type: Juhta.Net.Validators.IValidator{{T}}
+      type: Juhta.Net.Validation.IValidator{{T}}
       description: Specifies a validator.
     typeParameters:
     - id: T
@@ -138,7 +138,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validators.IValidator(Of T))
+  fullName.vb: Juhta.Net.Console.CommandLineArgument.GetValueAs(Of T)(Juhta.Net.Validation.IValidator(Of T))
   name.vb: GetValueAs(Of T)(IValidator(Of T))
 - uid: Juhta.Net.Console.CommandLineArgument.Consumed
   commentId: P:Juhta.Net.Console.CommandLineArgument.Consumed
@@ -153,14 +153,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Consumed
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 75
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets or sets (internal) a boolean value determining whether this <xref href=\"Juhta.Net.Console.CommandLineArgument\" data-throw-if-not-resolved=\"false\"></xref> has been\nconsumed.\n"
   remarks: >-
@@ -194,14 +194,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Value
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 85
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets the value of the command line argument.\n"
   example: []
@@ -231,14 +231,14 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgument.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgument.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Console/CommandLineArgument.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgument.cs
     startLine: 98
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nInitializes a new instance.\n"
   example: []
@@ -570,21 +570,21 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: Juhta.Net.Validators.IValidator{{T}}
-  commentId: T:Juhta.Net.Validators.IValidator{``0}
-  parent: Juhta.Net.Validators
-  definition: Juhta.Net.Validators.IValidator`1
+- uid: Juhta.Net.Validation.IValidator{{T}}
+  commentId: T:Juhta.Net.Validation.IValidator{``0}
+  parent: Juhta.Net.Validation
+  definition: Juhta.Net.Validation.IValidator`1
   name: IValidator<T>
   nameWithType: IValidator<T>
-  fullName: Juhta.Net.Validators.IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
   nameWithType.vb: IValidator(Of T)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
   name.vb: IValidator(Of T)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -595,10 +595,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -608,20 +608,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validators.IValidator`1
-  commentId: T:Juhta.Net.Validators.IValidator`1
+- uid: Juhta.Net.Validation.IValidator`1
+  commentId: T:Juhta.Net.Validation.IValidator`1
   isExternal: false
   name: IValidator<T>
   nameWithType: IValidator<T>
-  fullName: Juhta.Net.Validators.IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
   nameWithType.vb: IValidator(Of T)
-  fullName.vb: Juhta.Net.Validators.IValidator(Of T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
   name.vb: IValidator(Of T)
   spec.csharp:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: <
     nameWithType: <
     fullName: <
@@ -632,10 +632,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Juhta.Net.Validators.IValidator`1
+  - uid: Juhta.Net.Validation.IValidator`1
     name: IValidator
     nameWithType: IValidator
-    fullName: Juhta.Net.Validators.IValidator
+    fullName: Juhta.Net.Validation.IValidator
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -645,12 +645,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Juhta.Net.Validators
-  commentId: N:Juhta.Net.Validators
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
   isExternal: false
-  name: Juhta.Net.Validators
-  nameWithType: Juhta.Net.Validators
-  fullName: Juhta.Net.Validators
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
 - uid: Juhta.Net.Console.CommandLineArgument
   commentId: T:Juhta.Net.Console.CommandLineArgument
   parent: Juhta.Net.Console

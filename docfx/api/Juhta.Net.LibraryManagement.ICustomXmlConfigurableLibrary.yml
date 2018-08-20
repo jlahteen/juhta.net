@@ -16,14 +16,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ICustomXmlConfigurableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
     startLine: 17
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for custom XML configurable libraries. A library is custom XML configurable if it is\nconfigurable and the configuration is done with a custom XML configuration.\n"
   example: []
@@ -31,7 +31,6 @@ items:
     content: 'public interface ICustomXmlConfigurableLibrary : IConfigurableLibraryBase'
     content.vb: >-
       Public Interface ICustomXmlConfigurableLibrary
-
           Inherits IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
@@ -54,14 +53,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetConfigSchemas
-    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
     startLine: 27
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the XML schemas to which configuration files must conform.\n"
   remarks: >-
@@ -89,14 +88,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: InitializeLibrary
-    path: ../src/Juhta.Net/LibraryManagement/ICustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
     startLine: 34
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes the library based on a specified XML configuration.\n"
   example: []

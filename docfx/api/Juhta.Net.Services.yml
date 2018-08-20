@@ -7,6 +7,7 @@ items:
   - Juhta.Net.Services.ConstructorParam
   - Juhta.Net.Services.ConstructorParamException
   - Juhta.Net.Services.ConstructorParamType
+  - Juhta.Net.Services.LibraryHandle
   - Juhta.Net.Services.Service
   - Juhta.Net.Services.ServiceCreationException
   - Juhta.Net.Services.ServiceFactory
@@ -20,7 +21,7 @@ items:
   fullName: Juhta.Net.Services
   type: Namespace
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
 references:
 - uid: Juhta.Net.Services.ConstructorParam
   commentId: T:Juhta.Net.Services.ConstructorParam
@@ -34,6 +35,12 @@ references:
   name: ConstructorParamException
   nameWithType: ConstructorParamException
   fullName: Juhta.Net.Services.ConstructorParamException
+- uid: Juhta.Net.Services.LibraryHandle
+  commentId: T:Juhta.Net.Services.LibraryHandle
+  isExternal: false
+  name: LibraryHandle
+  nameWithType: LibraryHandle
+  fullName: Juhta.Net.Services.LibraryHandle
 - uid: Juhta.Net.Services.Service
   commentId: T:Juhta.Net.Services.Service
   isExternal: false
@@ -48,7 +55,6 @@ references:
   fullName: Juhta.Net.Services.ServiceCreationException
 - uid: Juhta.Net.Services.ServiceFactory
   commentId: T:Juhta.Net.Services.ServiceFactory
-  parent: Juhta.Net.Services
   isExternal: false
   name: ServiceFactory
   nameWithType: ServiceFactory

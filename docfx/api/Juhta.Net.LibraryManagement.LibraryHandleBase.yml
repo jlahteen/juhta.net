@@ -5,10 +5,12 @@ items:
   id: LibraryHandleBase
   parent: Juhta.Net.LibraryManagement
   children:
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor
   - Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor(System.String)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
-  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
   - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
@@ -21,14 +23,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryHandleBase
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 21
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 19
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an abstract base class for library handle classes.\n"
   example: []
@@ -36,12 +38,12 @@ items:
     content: 'public abstract class LibraryHandleBase : ILibraryHandle'
     content.vb: >-
       Public MustInherit Class LibraryHandleBase
-
           Implements ILibraryHandle
   inheritance:
   - System.Object
   derivedClasses:
   - Juhta.Net.LibraryManagement.DynamicLibraryHandleBase
+  - Juhta.Net.Services.LibraryHandle
   implements:
   - Juhta.Net.LibraryManagement.ILibraryHandle
   inheritedMembers:
@@ -73,14 +75,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigFileName
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 29
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 27
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the configuration file name of the library that this <xref href=\"Juhta.Net.LibraryManagement.LibraryHandleBase\" data-throw-if-not-resolved=\"false\"></xref> instance\nrepresents.\n"
   example: []
@@ -112,14 +114,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryFileName
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 37
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 35
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.ILibraryHandle.LibraryFileName\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -153,14 +155,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryRootNamespace
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 45
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 43
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the root namespace of the library that this <xref href=\"Juhta.Net.LibraryManagement.LibraryHandleBase\" data-throw-if-not-resolved=\"false\"></xref> instance represents.\n"
   example: []
@@ -179,6 +181,38 @@ items:
   - Public
   - Overridable
   - ReadOnly
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: LibraryHandleBase()
+  nameWithType: LibraryHandleBase.LibraryHandleBase()
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryHandleBase()
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 55
+  assemblies:
+  - Juhta.Net.LibraryManagement
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: protected LibraryHandleBase()
+    content.vb: Protected Sub New
+  overload: Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor(System.String)
   commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -192,14 +226,14 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 58
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 64
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes a new instance.\n"
   example: []
@@ -215,37 +249,47 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-  id: GetCommonConfigSchema
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
+  id: GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   parent: Juhta.Net.LibraryManagement.LibraryHandleBase
   langs:
   - csharp
   - vb
-  name: GetCommonConfigSchema()
-  nameWithType: LibraryHandleBase.GetCommonConfigSchema()
-  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema()
+  name: GetEmbeddedConfigAndCommonSchema(Assembly)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(Assembly)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
-    id: GetCommonConfigSchema
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 71
+    id: GetEmbeddedConfigAndCommonSchema
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 80
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
-  summary: "\nGets the embedded schema for the common configuration.\n"
+  summary: "\nGets the default embedded configuration schema plus the common configuration schema.\n"
   example: []
   syntax:
-    content: protected XmlSchema GetCommonConfigSchema()
+    content: protected XmlSchema[] GetEmbeddedConfigAndCommonSchema(Assembly containingAssembly)
+    parameters:
+    - id: containingAssembly
+      type: System.Reflection.Assembly
+      description: >-
+        Specifies an assembly where an default embedded configuration schema will
+
+        be searched for.
     return:
-      type: System.Xml.Schema.XmlSchema
-      description: Returns the embedded schema for the common configuration.
-    content.vb: Protected Function GetCommonConfigSchema As XmlSchema
-  overload: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema*
+      type: System.Xml.Schema.XmlSchema[]
+      description: >-
+        Returns an array containing two schemas, the default embedded configuration schema and the common
+
+        configuration schema.
+    content.vb: Protected Function GetEmbeddedConfigAndCommonSchema(containingAssembly As Assembly) As XmlSchema()
+  overload: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema*
   modifiers.csharp:
   - protected
   modifiers.vb:
@@ -263,14 +307,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigAndCommonSchema
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 85
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 100
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets an embedded configuration schema plus the common configuration schema.\n"
   example: []
@@ -280,7 +324,7 @@ items:
     - id: containingAssembly
       type: System.Reflection.Assembly
       description: >-
-        Specifies an assembly where the embedded configuration schema will be
+        Specifies an assembly where an embedded configuration schema will be
 
         searched for.
     - id: configSchemaFileNamespace
@@ -301,6 +345,50 @@ items:
   - protected
   modifiers.vb:
   - Protected
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  id: GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  langs:
+  - csharp
+  - vb
+  name: GetEmbeddedConfigSchema(Assembly)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema(Assembly)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: GetEmbeddedConfigSchema
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 117
+  assemblies:
+  - Juhta.Net.LibraryManagement
+  namespace: Juhta.Net.LibraryManagement
+  summary: "\nGets the default embedded configuration schema from a specified assembly.\n"
+  example: []
+  syntax:
+    content: public static XmlSchema GetEmbeddedConfigSchema(Assembly containingAssembly)
+    parameters:
+    - id: containingAssembly
+      type: System.Reflection.Assembly
+      description: >-
+        Specifies an assembly where an default embedded configuration schema will
+
+        be searched for.
+    return:
+      type: System.Xml.Schema.XmlSchema
+      description: Returns the default embedded configuration schema from the specified assembly.
+    content.vb: Public Shared Function GetEmbeddedConfigSchema(containingAssembly As Assembly) As XmlSchema
+  overload: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
   commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
   id: GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
@@ -314,16 +402,16 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigSchema
-    path: ../src/Juhta.Net/LibraryManagement/LibraryHandleBase.cs
-    startLine: 105
+    path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
+    startLine: 131
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
-  summary: "\nGets an embedded configuration schema.\n"
+  summary: "\nGets an embedded configuration schema from a specified assembly.\n"
   example: []
   syntax:
     content: protected XmlSchema GetEmbeddedConfigSchema(Assembly containingAssembly, string configSchemaFileNamespace, string configSchemaFileName)
@@ -331,7 +419,7 @@ items:
     - id: containingAssembly
       type: System.Reflection.Assembly
       description: >-
-        Specifies an assembly where the embedded configuration schema will be
+        Specifies an assembly where an embedded configuration schema will be
 
         searched for.
     - id: configSchemaFileNamespace
@@ -697,6 +785,12 @@ references:
   name: LibraryRootNamespace
   nameWithType: LibraryHandleBase.LibraryRootNamespace
   fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor*
+  commentId: Overload:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor
+  isExternal: false
+  name: LibraryHandleBase
+  nameWithType: LibraryHandleBase.LibraryHandleBase
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryHandleBase
 - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
   commentId: P:Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
   parent: Juhta.Net.LibraryManagement.LibraryHandleBase
@@ -704,31 +798,6 @@ references:
   name: LibraryFileName
   nameWithType: LibraryHandleBase.LibraryFileName
   fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
-- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor*
-  commentId: Overload:Juhta.Net.LibraryManagement.LibraryHandleBase.#ctor
-  isExternal: false
-  name: LibraryHandleBase
-  nameWithType: LibraryHandleBase.LibraryHandleBase
-  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryHandleBase
-- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema*
-  commentId: Overload:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-  isExternal: false
-  name: GetCommonConfigSchema
-  nameWithType: LibraryHandleBase.GetCommonConfigSchema
-  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-- uid: System.Xml.Schema.XmlSchema
-  commentId: T:System.Xml.Schema.XmlSchema
-  parent: System.Xml.Schema
-  isExternal: true
-  name: XmlSchema
-  nameWithType: XmlSchema
-  fullName: System.Xml.Schema.XmlSchema
-- uid: System.Xml.Schema
-  commentId: N:System.Xml.Schema
-  isExternal: false
-  name: System.Xml.Schema
-  nameWithType: System.Xml.Schema
-  fullName: System.Xml.Schema
 - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema*
   commentId: Overload:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
   isExternal: false
@@ -779,3 +848,16 @@ references:
   name: GetEmbeddedConfigSchema
   nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema
   fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: false
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema

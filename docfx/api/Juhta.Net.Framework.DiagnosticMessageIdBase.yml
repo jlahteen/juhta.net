@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Framework.DiagnosticMessageIdBase
+  id: DiagnosticMessageIdBase
+  parent: Juhta.Net.Framework
+  children:
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+  - Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticMessageIdBase
+  nameWithType: DiagnosticMessageIdBase
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: DiagnosticMessageIdBase
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nA static class that provides properties to get diagnostic message identifier bases for the common messages and\nframework libraries.\n"
+  example: []
+  syntax:
+    content: public static class DiagnosticMessageIdBase
+    content.vb: Public Module DiagnosticMessageIdBase
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+  id: Common
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Common
+  nameWithType: DiagnosticMessageIdBase.Common
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Common
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 21
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the common messages.\n"
+  example: []
+  syntax:
+    content: public static int Common { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Common As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Common*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+  id: Console
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Console
+  nameWithType: DiagnosticMessageIdBase.Console
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Console
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 29
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the Console library.\n"
+  example: []
+  syntax:
+    content: public static int Console { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Console As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Console*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+  id: Core
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Core
+  nameWithType: DiagnosticMessageIdBase.Core
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Core
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 37
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the Core library.\n"
+  example: []
+  syntax:
+    content: public static int Core { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Core As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Core*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+  id: LibraryManagement
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: LibraryManagement
+  nameWithType: DiagnosticMessageIdBase.LibraryManagement
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: LibraryManagement
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 45
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the LibraryManagement library.\n"
+  example: []
+  syntax:
+    content: public static int LibraryManagement { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property LibraryManagement As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+  id: Services
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: DiagnosticMessageIdBase.Services
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Services
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 53
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the Services library.\n"
+  example: []
+  syntax:
+    content: public static int Services { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Services As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Services*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+  id: Startup
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Startup
+  nameWithType: DiagnosticMessageIdBase.Startup
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Startup
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 61
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the Startup library.\n"
+  example: []
+  syntax:
+    content: public static int Startup { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Startup As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Startup*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
+  commentId: P:Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
+  id: Validation
+  parent: Juhta.Net.Framework.DiagnosticMessageIdBase
+  langs:
+  - csharp
+  - vb
+  name: Validation
+  nameWithType: DiagnosticMessageIdBase.Validation
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Validation
+    path: ../src/Juhta.Net/Framework/DiagnosticMessageIdBase.cs
+    startLine: 69
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Framework
+  summary: "\nGets the message identifier base for the Validation library.\n"
+  example: []
+  syntax:
+    content: public static int Validation { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Validation As Integer
+  overload: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Juhta.Net.Framework
+  commentId: N:Juhta.Net.Framework
+  isExternal: false
+  name: Juhta.Net.Framework
+  nameWithType: Juhta.Net.Framework
+  fullName: Juhta.Net.Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Common*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+  isExternal: false
+  name: Common
+  nameWithType: DiagnosticMessageIdBase.Common
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Common
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Console*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+  isExternal: false
+  name: Console
+  nameWithType: DiagnosticMessageIdBase.Console
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Console
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Core*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+  isExternal: false
+  name: Core
+  nameWithType: DiagnosticMessageIdBase.Core
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Core
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+  isExternal: false
+  name: LibraryManagement
+  nameWithType: DiagnosticMessageIdBase.LibraryManagement
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.LibraryManagement
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Services*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+  isExternal: false
+  name: Services
+  nameWithType: DiagnosticMessageIdBase.Services
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Services
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Startup*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: DiagnosticMessageIdBase.Startup
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Startup
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation*
+  commentId: Overload:Juhta.Net.Framework.DiagnosticMessageIdBase.Validation
+  isExternal: false
+  name: Validation
+  nameWithType: DiagnosticMessageIdBase.Validation
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase.Validation

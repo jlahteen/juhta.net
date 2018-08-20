@@ -17,14 +17,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ConstructorParam.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParam
-    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    path: ../src/Juhta.Net.Services/ConstructorParam.cs
     startLine: 20
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nDefines a class that represents a single parameter used in constructors of dependency injection services.\n"
   example: []
@@ -60,14 +60,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ConstructorParam.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Name
-    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    path: ../src/Juhta.Net.Services/ConstructorParam.cs
     startLine: 27
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets the name of the constructor parameter.\n"
   example: []
@@ -97,14 +97,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ConstructorParam.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Type
-    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    path: ../src/Juhta.Net.Services/ConstructorParam.cs
     startLine: 35
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets the type of the constructor parameter.\n"
   example: []
@@ -134,14 +134,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/ConstructorParam.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ConstructorParam.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Value
-    path: ../src/Juhta.Net/Services/ConstructorParam.cs
+    path: ../src/Juhta.Net.Services/ConstructorParam.cs
     startLine: 43
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets the value of the constructor parameter.\n"
   example: []

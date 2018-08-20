@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: UnexpectedException
     path: ../src/Juhta.Net/Common/UnexpectedException.cs
@@ -34,9 +34,7 @@ items:
     content: 'public class UnexpectedException : Exception, ISerializable'
     content.vb: >-
       Public Class UnexpectedException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -82,7 +80,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/UnexpectedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/UnexpectedException.cs

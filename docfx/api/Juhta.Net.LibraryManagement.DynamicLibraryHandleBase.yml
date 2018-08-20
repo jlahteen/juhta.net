@@ -18,14 +18,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: DynamicLibraryHandleBase
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 15
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an abstract base class for dynamic library handles.\n"
   example: []
@@ -33,9 +33,7 @@ items:
     content: 'public abstract class DynamicLibraryHandleBase : LibraryHandleBase, ILibraryHandle, IDynamicLibrary'
     content.vb: >-
       Public MustInherit Class DynamicLibraryHandleBase
-
           Inherits LibraryHandleBase
-
           Implements ILibraryHandle, IDynamicLibrary
   inheritance:
   - System.Object
@@ -47,8 +45,9 @@ items:
   - Juhta.Net.LibraryManagement.LibraryHandleBase.ConfigFileName
   - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryFileName
   - Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
-  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly,System.String,System.String)
+  - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
   - Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly,System.String,System.String)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -78,14 +77,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GoLive
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 22
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -117,14 +116,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryState
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 32
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryState\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -156,14 +155,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryStateLock
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 42
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nSee <xref href=\"Juhta.Net.LibraryManagement.IDynamicLibrary.LibraryStateLock\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -195,14 +194,14 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/LibraryManagement/DynamicLibraryHandleBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/DynamicLibraryHandleBase.cs
     startLine: 58
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes a new instance.\n"
   example: []
@@ -277,32 +276,42 @@ references:
   name: LibraryRootNamespace
   nameWithType: LibraryHandleBase.LibraryRootNamespace
   fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.LibraryRootNamespace
-- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   parent: Juhta.Net.LibraryManagement.LibraryHandleBase
-  isExternal: false
-  name: GetCommonConfigSchema()
-  nameWithType: LibraryHandleBase.GetCommonConfigSchema()
-  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema()
+  isExternal: true
+  name: GetEmbeddedConfigAndCommonSchema(Assembly)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(Assembly)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
   spec.csharp:
-  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-    name: GetCommonConfigSchema
-    nameWithType: LibraryHandleBase.GetCommonConfigSchema
-    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
+    name: GetEmbeddedConfigAndCommonSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
   - name: (
     nameWithType: (
     fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
-    name: GetCommonConfigSchema
-    nameWithType: LibraryHandleBase.GetCommonConfigSchema
-    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetCommonConfigSchema
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema(System.Reflection.Assembly)
+    name: GetEmbeddedConfigAndCommonSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigAndCommonSchema
   - name: (
     nameWithType: (
     fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -373,6 +382,45 @@ references:
     name: String
     nameWithType: String
     fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  parent: Juhta.Net.LibraryManagement.LibraryHandleBase
+  isExternal: true
+  name: GetEmbeddedConfigSchema(Assembly)
+  nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema(Assembly)
+  fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+  spec.csharp:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+    name: GetEmbeddedConfigSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema(System.Reflection.Assembly)
+    name: GetEmbeddedConfigSchema
+    nameWithType: LibraryHandleBase.GetEmbeddedConfigSchema
+    fullName: Juhta.Net.LibraryManagement.LibraryHandleBase.GetEmbeddedConfigSchema
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
     isExternal: true
   - name: )
     nameWithType: )

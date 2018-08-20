@@ -5,13 +5,16 @@ items:
   id: DiagnosticMessageFactory
   parent: Juhta.Net.Diagnostics
   children:
-  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String,System.String,System.String,System.String)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String,System.Int32)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String,System.Int32)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String,System.Int32)
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String)
+  - Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String,System.Int32)
   langs:
   - csharp
   - vb
@@ -22,7 +25,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: DiagnosticMessageFactory
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
@@ -30,7 +33,7 @@ items:
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
-  summary: "\nRepresents a class that can be used to create instances of classes deriving from the <xref href=\"Juhta.Net.Diagnostics.DiagnosticMessage\" data-throw-if-not-resolved=\"false\"></xref>\nclass. The main benefit of using this class is automatic and consistent message ID generation.\n"
+  summary: "\nRepresents a class that can be used to create instances of classes deriving from the <xref href=\"Juhta.Net.Diagnostics.DiagnosticMessage\" data-throw-if-not-resolved=\"false\"></xref>\nclass. The main benefit of using this class is automatic and consistent message identifier generation.\n"
   example: []
   syntax:
     content: public class DiagnosticMessageFactory
@@ -51,45 +54,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
-  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)
-  id: '#ctor(Juhta.Net.Diagnostics.DiagnosticMessageIdBase,System.String)'
-  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
-  langs:
-  - csharp
-  - vb
-  name: DiagnosticMessageFactory(DiagnosticMessageIdBase, String)
-  nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory(DiagnosticMessageIdBase, String)
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory(Juhta.Net.Diagnostics.DiagnosticMessageIdBase, System.String)
-  type: Constructor
-  source:
-    remote:
-      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
-      repo: https://github.com/jlahteen/juhta.net.git
-    id: .ctor
-    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 25
-  assemblies:
-  - Juhta.Net
-  namespace: Juhta.Net.Diagnostics
-  summary: "\nInitializes a new instance.\n"
-  example: []
-  syntax:
-    content: public DiagnosticMessageFactory(DiagnosticMessageIdBase messageIdBase, string messageNamespace)
-    parameters:
-    - id: messageIdBase
-      type: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-      description: Specifies a message ID base.
-    - id: messageNamespace
-      type: System.String
-      description: Specifies a namespace for messages to create.
-    content.vb: Public Sub New(messageIdBase As DiagnosticMessageIdBase, messageNamespace As String)
-  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
   commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor(System.Int32,System.String)
   id: '#ctor(System.Int32,System.String)'
@@ -104,11 +68,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 34
+    startLine: 25
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
@@ -119,7 +83,7 @@ items:
     parameters:
     - id: messageIdBase
       type: System.Int32
-      description: Specifies a message ID base.
+      description: Specifies a base value for the message identifiers.
     - id: messageNamespace
       type: System.String
       description: Specifies a namespace for messages to create.
@@ -143,17 +107,17 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 48
+    startLine: 40
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
   summary: "\nInitializes a new instance.\n"
   remarks: >-
-    IDs of created diagnostic messages will start from <code data-dev-comment-type="paramref" class="paramref">messageIdBase</code> + 1 in
+    Identifiers of created diagnostic messages will start from <code data-dev-comment-type="paramref" class="paramref">messageIdBase</code> + 1 in
 
     ascending order.
   example: []
@@ -162,19 +126,22 @@ items:
     parameters:
     - id: messageIdBase
       type: System.Int32
-      description: Specifies a message ID base.
+      description: Specifies a base value for the message identifiers.
     - id: informationMessageIdPrefix
       type: System.String
-      description: Specifies a prefix for information message IDs. Can be null.
+      description: >-
+        Specifies a prefix for information message identifiers. Can be
+
+        null.
     - id: warningMessageIdPrefix
       type: System.String
-      description: Specifies a prefix for warning message IDs. Can be null.
+      description: Specifies a prefix for warning message identifiers. Can be null.
     - id: errorMessageIdPrefix
       type: System.String
-      description: Specifies a prefix for error message IDs. Can be null.
+      description: Specifies a prefix for error message identifiers. Can be null.
     - id: alertMessageIdPrefix
       type: System.String
-      description: Specifies a prefix for alert message IDs. Can be null.
+      description: Specifies a prefix for alert message identifiers. Can be null.
     content.vb: Public Sub New(messageIdBase As Integer, informationMessageIdPrefix As String, warningMessageIdPrefix As String, errorMessageIdPrefix As String, alertMessageIdPrefix As String)
   overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.#ctor*
   modifiers.csharp:
@@ -195,15 +162,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateAlertMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 82
+    startLine: 76
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
-  summary: "\nCreates an AlertMessage instance based on a specified message.\n"
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.AlertMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
   example: []
   syntax:
     content: public AlertMessage CreateAlertMessage(string message)
@@ -213,8 +180,53 @@ items:
       description: Specifies a message. The message can contain format items.
     return:
       type: Juhta.Net.Diagnostics.AlertMessage
-      description: Returns the created AlertMessage instance.
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.AlertMessage" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Function CreateAlertMessage(message As String) As AlertMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String,System.Int32)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String,System.Int32)
+  id: CreateAlertMessage(System.String,System.Int32)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateAlertMessage(String, Int32)
+  nameWithType: DiagnosticMessageFactory.CreateAlertMessage(String, Int32)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: CreateAlertMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 88
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.AlertMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public AlertMessage CreateAlertMessage(string message, int messageIdOffset)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    - id: messageIdOffset
+      type: System.Int32
+      description: >-
+        Specifies an offset that determines the message identifier to associate with
+
+        the <xref href="Juhta.Net.Diagnostics.AlertMessage" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: Juhta.Net.Diagnostics.AlertMessage
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.AlertMessage" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateAlertMessage(message As String, messageIdOffset As Integer) As AlertMessage
   overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
   modifiers.csharp:
   - public
@@ -234,15 +246,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateErrorMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 92
+    startLine: 100
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
-  summary: "\nCreates an ErrorMessage instance based on a specified message.\n"
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.ErrorMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
   example: []
   syntax:
     content: public ErrorMessage CreateErrorMessage(string message)
@@ -252,8 +264,53 @@ items:
       description: Specifies a message. The message can contain format items.
     return:
       type: Juhta.Net.Diagnostics.ErrorMessage
-      description: Returns the created ErrorMessage instance.
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.ErrorMessage" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Function CreateErrorMessage(message As String) As ErrorMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String,System.Int32)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String,System.Int32)
+  id: CreateErrorMessage(System.String,System.Int32)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateErrorMessage(String, Int32)
+  nameWithType: DiagnosticMessageFactory.CreateErrorMessage(String, Int32)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: CreateErrorMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 112
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.ErrorMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public ErrorMessage CreateErrorMessage(string message, int messageIdOffset)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    - id: messageIdOffset
+      type: System.Int32
+      description: >-
+        Specifies an offset that determines the message identifier to associate with
+
+        the <xref href="Juhta.Net.Diagnostics.ErrorMessage" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: Juhta.Net.Diagnostics.ErrorMessage
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.ErrorMessage" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateErrorMessage(message As String, messageIdOffset As Integer) As ErrorMessage
   overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
   modifiers.csharp:
   - public
@@ -273,15 +330,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInformationMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 102
+    startLine: 124
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
-  summary: "\nCreates an InformationMessage instance based on a specified message.\n"
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.InformationMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
   example: []
   syntax:
     content: public InformationMessage CreateInformationMessage(string message)
@@ -291,8 +348,53 @@ items:
       description: Specifies a message. The message can contain format items.
     return:
       type: Juhta.Net.Diagnostics.InformationMessage
-      description: Returns the created InformationMessage instance.
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.InformationMessage" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Function CreateInformationMessage(message As String) As InformationMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String,System.Int32)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String,System.Int32)
+  id: CreateInformationMessage(System.String,System.Int32)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateInformationMessage(String, Int32)
+  nameWithType: DiagnosticMessageFactory.CreateInformationMessage(String, Int32)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: CreateInformationMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 136
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates an <xref href=\"Juhta.Net.Diagnostics.InformationMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public InformationMessage CreateInformationMessage(string message, int messageIdOffset)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    - id: messageIdOffset
+      type: System.Int32
+      description: >-
+        Specifies an offset that determines the message identifier to associate with
+
+        the <xref href="Juhta.Net.Diagnostics.InformationMessage" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: Juhta.Net.Diagnostics.InformationMessage
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.InformationMessage" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateInformationMessage(message As String, messageIdOffset As Integer) As InformationMessage
   overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
   modifiers.csharp:
   - public
@@ -312,15 +414,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateWarningMessage
     path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
-    startLine: 112
+    startLine: 148
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Diagnostics
-  summary: "\nCreates a WarningMessage instance based on a specified message.\n"
+  summary: "\nCreates a <xref href=\"Juhta.Net.Diagnostics.WarningMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
   example: []
   syntax:
     content: public WarningMessage CreateWarningMessage(string message)
@@ -330,8 +432,53 @@ items:
       description: Specifies a message. The message can contain format items.
     return:
       type: Juhta.Net.Diagnostics.WarningMessage
-      description: Returns the created WarningMessage instance.
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.WarningMessage" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Function CreateWarningMessage(message As String) As WarningMessage
+  overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String,System.Int32)
+  commentId: M:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String,System.Int32)
+  id: CreateWarningMessage(System.String,System.Int32)
+  parent: Juhta.Net.Diagnostics.DiagnosticMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateWarningMessage(String, Int32)
+  nameWithType: DiagnosticMessageFactory.CreateWarningMessage(String, Int32)
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: CreateWarningMessage
+    path: ../src/Juhta.Net/Diagnostics/DiagnosticMessageFactory.cs
+    startLine: 160
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Diagnostics
+  summary: "\nCreates a <xref href=\"Juhta.Net.Diagnostics.WarningMessage\" data-throw-if-not-resolved=\"false\"></xref> instance based on a specified message.\n"
+  example: []
+  syntax:
+    content: public WarningMessage CreateWarningMessage(string message, int messageIdOffset)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies a message. The message can contain format items.
+    - id: messageIdOffset
+      type: System.Int32
+      description: >-
+        Specifies an offset that determines the message identifier to associate with
+
+        the <xref href="Juhta.Net.Diagnostics.WarningMessage" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: Juhta.Net.Diagnostics.WarningMessage
+      description: Returns the created <xref href="Juhta.Net.Diagnostics.WarningMessage" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateWarningMessage(message As String, messageIdOffset As Integer) As WarningMessage
   overload: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
   modifiers.csharp:
   - public
@@ -649,20 +796,6 @@ references:
   name: DiagnosticMessageFactory
   nameWithType: DiagnosticMessageFactory.DiagnosticMessageFactory
   fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.DiagnosticMessageFactory
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-  parent: Juhta.Net.Diagnostics
-  isExternal: false
-  name: DiagnosticMessageIdBase
-  nameWithType: DiagnosticMessageIdBase
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -670,12 +803,13 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
-  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
-  isExternal: false
-  name: CreateAlertMessage
-  nameWithType: DiagnosticMessageFactory.CreateAlertMessage
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Juhta.Net.Diagnostics.AlertMessage
   commentId: T:Juhta.Net.Diagnostics.AlertMessage
   parent: Juhta.Net.Diagnostics
@@ -683,12 +817,12 @@ references:
   name: AlertMessage
   nameWithType: AlertMessage
   fullName: Juhta.Net.Diagnostics.AlertMessage
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
-  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
   isExternal: false
-  name: CreateErrorMessage
-  nameWithType: DiagnosticMessageFactory.CreateErrorMessage
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
+  name: CreateAlertMessage
+  nameWithType: DiagnosticMessageFactory.CreateAlertMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateAlertMessage
 - uid: Juhta.Net.Diagnostics.ErrorMessage
   commentId: T:Juhta.Net.Diagnostics.ErrorMessage
   parent: Juhta.Net.Diagnostics
@@ -696,12 +830,12 @@ references:
   name: ErrorMessage
   nameWithType: ErrorMessage
   fullName: Juhta.Net.Diagnostics.ErrorMessage
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
-  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
   isExternal: false
-  name: CreateInformationMessage
-  nameWithType: DiagnosticMessageFactory.CreateInformationMessage
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
+  name: CreateErrorMessage
+  nameWithType: DiagnosticMessageFactory.CreateErrorMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateErrorMessage
 - uid: Juhta.Net.Diagnostics.InformationMessage
   commentId: T:Juhta.Net.Diagnostics.InformationMessage
   parent: Juhta.Net.Diagnostics
@@ -709,12 +843,12 @@ references:
   name: InformationMessage
   nameWithType: InformationMessage
   fullName: Juhta.Net.Diagnostics.InformationMessage
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
-  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
   isExternal: false
-  name: CreateWarningMessage
-  nameWithType: DiagnosticMessageFactory.CreateWarningMessage
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage
+  name: CreateInformationMessage
+  nameWithType: DiagnosticMessageFactory.CreateInformationMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateInformationMessage
 - uid: Juhta.Net.Diagnostics.WarningMessage
   commentId: T:Juhta.Net.Diagnostics.WarningMessage
   parent: Juhta.Net.Diagnostics
@@ -722,3 +856,9 @@ references:
   name: WarningMessage
   nameWithType: WarningMessage
   fullName: Juhta.Net.Diagnostics.WarningMessage
+- uid: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage*
+  commentId: Overload:Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage
+  isExternal: false
+  name: CreateWarningMessage
+  nameWithType: DiagnosticMessageFactory.CreateWarningMessage
+  fullName: Juhta.Net.Diagnostics.DiagnosticMessageFactory.CreateWarningMessage

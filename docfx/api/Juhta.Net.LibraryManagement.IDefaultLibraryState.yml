@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDefaultLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDefaultLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDefaultLibraryState.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for default library states.\n"
   remarks: Default library states relate to dynamic initializable libraries.
@@ -31,7 +31,6 @@ items:
     content: 'public interface IDefaultLibraryState : ILibraryState'
     content.vb: >-
       Public Interface IDefaultLibraryState
-
           Inherits ILibraryState
   modifiers.csharp:
   - public
@@ -52,14 +51,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDefaultLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Initialize
-    path: ../src/Juhta.Net/LibraryManagement/IDefaultLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDefaultLibraryState.cs
     startLine: 26
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes the library state.\n"
   remarks: "\n<p>Initializing a library state means performing all necessary actions on the objects comprising the\nlibrary state so that the state is ready to be set as the effective library state.</p>\n<p>Default library states don&apos;t require any configuration for initialization.</p>\n"

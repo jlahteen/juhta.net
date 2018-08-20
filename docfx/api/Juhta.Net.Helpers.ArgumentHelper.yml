@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ArgumentHelper
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CheckNotNull
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CheckValue
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs

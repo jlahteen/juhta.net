@@ -19,14 +19,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ServiceFactory
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 18
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nDefines a class that provides methods for getting metadata and creating instances of the configured dependency\ninjection services.\n"
   example: []
@@ -34,7 +34,6 @@ items:
     content: 'public class ServiceFactory : Singleton<ServiceFactory>'
     content.vb: >-
       Public Class ServiceFactory
-
           Inherits Singleton(Of ServiceFactory)
   inheritance:
   - System.Object
@@ -70,14 +69,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 27
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nCreates an instance of a dependency injection service corresponding to a specified service type.\n"
   example: []
@@ -111,14 +110,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 38
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nCreates an instance of a dependency injection service corresponding to a specified service identifier.\n"
   example: []
@@ -156,14 +155,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 54
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nCreates an instance of a dependency injection service corresponding to a specified service name.\n"
   example: []
@@ -201,14 +200,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 67
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nCreates an instance of a dependency injection service corresponding to a specified service identifier\nscheme and specifier.\n"
   example: []
@@ -249,14 +248,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/ServiceFactory.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/ServiceFactory.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Services
-    path: ../src/Juhta.Net/Services/ServiceFactory.cs
+    path: ../src/Juhta.Net.Services/ServiceFactory.cs
     startLine: 80
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets an array of the <xref href=\"Juhta.Net.Services.Service\" data-throw-if-not-resolved=\"false\"></xref> instances created based on the configuration. The array is empty\nif there are no configured dependency injection services.\n"
   example: []

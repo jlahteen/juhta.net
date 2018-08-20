@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Startup
+  commentId: N:Juhta.Net.Startup
+  id: Juhta.Net.Startup
+  children:
+  - Juhta.Net.Startup.Application
+  - Juhta.Net.Startup.DynamicLibraryContext`2
+  - Juhta.Net.Startup.LibraryInitializationException
+  - Juhta.Net.Startup.LibraryStateException
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Startup
+  nameWithType: Juhta.Net.Startup
+  fullName: Juhta.Net.Startup
+  type: Namespace
+  assemblies:
+  - Juhta.Net.Startup
+references:
+- uid: Juhta.Net.Startup.Application
+  commentId: T:Juhta.Net.Startup.Application
+  isExternal: false
+  name: Application
+  nameWithType: Application
+  fullName: Juhta.Net.Startup.Application
+- uid: Juhta.Net.Startup.DynamicLibraryContext`2
+  commentId: T:Juhta.Net.Startup.DynamicLibraryContext`2
+  isExternal: false
+  name: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  nameWithType: DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  fullName: Juhta.Net.Startup.DynamicLibraryContext<TDynamicLibrary, TLibraryState>
+  nameWithType.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  fullName.vb: Juhta.Net.Startup.DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  name.vb: DynamicLibraryContext(Of TDynamicLibrary, TLibraryState)
+  spec.csharp:
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
+    name: DynamicLibraryContext
+    nameWithType: DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDynamicLibrary
+    nameWithType: TDynamicLibrary
+    fullName: TDynamicLibrary
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TLibraryState
+    nameWithType: TLibraryState
+    fullName: TLibraryState
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Startup.DynamicLibraryContext`2
+    name: DynamicLibraryContext
+    nameWithType: DynamicLibraryContext
+    fullName: Juhta.Net.Startup.DynamicLibraryContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDynamicLibrary
+    nameWithType: TDynamicLibrary
+    fullName: TDynamicLibrary
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TLibraryState
+    nameWithType: TLibraryState
+    fullName: TLibraryState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Startup.LibraryInitializationException
+  commentId: T:Juhta.Net.Startup.LibraryInitializationException
+  isExternal: false
+  name: LibraryInitializationException
+  nameWithType: LibraryInitializationException
+  fullName: Juhta.Net.Startup.LibraryInitializationException
+- uid: Juhta.Net.Startup.LibraryStateException
+  commentId: T:Juhta.Net.Startup.LibraryStateException
+  isExternal: false
+  name: LibraryStateException
+  nameWithType: LibraryStateException
+  fullName: Juhta.Net.Startup.LibraryStateException

@@ -7,12 +7,12 @@ items:
   - Juhta.Net.Diagnostics.AlertMessage
   - Juhta.Net.Diagnostics.DiagnosticMessage
   - Juhta.Net.Diagnostics.DiagnosticMessageFactory
-  - Juhta.Net.Diagnostics.DiagnosticMessageIdBase
   - Juhta.Net.Diagnostics.DiagnosticMessageType
   - Juhta.Net.Diagnostics.ErrorMessage
   - Juhta.Net.Diagnostics.FileLogger
   - Juhta.Net.Diagnostics.ILogger
   - Juhta.Net.Diagnostics.InformationMessage
+  - Juhta.Net.Diagnostics.Logger
   - Juhta.Net.Diagnostics.WarningMessage
   langs:
   - csharp
@@ -71,13 +71,12 @@ references:
   name: InformationMessage
   nameWithType: InformationMessage
   fullName: Juhta.Net.Diagnostics.InformationMessage
-- uid: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-  commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageIdBase
-  parent: Juhta.Net.Diagnostics
+- uid: Juhta.Net.Diagnostics.Logger
+  commentId: T:Juhta.Net.Diagnostics.Logger
   isExternal: false
-  name: DiagnosticMessageIdBase
-  nameWithType: DiagnosticMessageIdBase
-  fullName: Juhta.Net.Diagnostics.DiagnosticMessageIdBase
+  name: Logger
+  nameWithType: Logger
+  fullName: Juhta.Net.Diagnostics.Logger
 - uid: Juhta.Net.Diagnostics.DiagnosticMessageType
   commentId: T:Juhta.Net.Diagnostics.DiagnosticMessageType
   parent: Juhta.Net.Diagnostics

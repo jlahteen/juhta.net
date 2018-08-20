@@ -18,14 +18,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/Service.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Service
-    path: ../src/Juhta.Net/Services/Service.cs
+    path: ../src/Juhta.Net.Services/Service.cs
     startLine: 21
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nDefines a class that encapsulates the metadata of a dependency injection service.\n"
   example: []
@@ -61,14 +61,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/Service.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
-    path: ../src/Juhta.Net/Services/Service.cs
+    path: ../src/Juhta.Net.Services/Service.cs
     startLine: 30
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nCreates an instance of the encapsulated dependency injection service.\n"
   example: []
@@ -102,14 +102,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/Service.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ClassId
-    path: ../src/Juhta.Net/Services/Service.cs
+    path: ../src/Juhta.Net.Services/Service.cs
     startLine: 50
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets the identifier of the class that implements the dependency injection service.\n"
   example: []
@@ -139,14 +139,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/Service.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParams
-    path: ../src/Juhta.Net/Services/Service.cs
+    path: ../src/Juhta.Net.Services/Service.cs
     startLine: 59
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets an array of <xref href=\"Juhta.Net.Services.ConstructorParam\" data-throw-if-not-resolved=\"false\"></xref> objects specifying the constructor parameters for the\ndependency injection service. Can be null.\n"
   example: []
@@ -176,14 +176,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Services/Service.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Services/Service.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Id
-    path: ../src/Juhta.Net/Services/Service.cs
+    path: ../src/Juhta.Net.Services/Service.cs
     startLine: 67
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Services
   namespace: Juhta.Net.Services
   summary: "\nGets the identifier of the dependency injection service.\n"
   example: []
