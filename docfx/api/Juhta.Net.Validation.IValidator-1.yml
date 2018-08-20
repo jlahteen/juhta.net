@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Validation.IValidator`1
+  commentId: T:Juhta.Net.Validation.IValidator`1
+  id: IValidator`1
+  parent: Juhta.Net.Validation
+  children:
+  - Juhta.Net.Validation.IValidator`1.Validate(`0)
+  langs:
+  - csharp
+  - vb
+  name: IValidator<T>
+  nameWithType: IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
+  type: Interface
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/IValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: IValidator
+    path: ../src/Juhta.Net.Validation/IValidator.cs
+    startLine: 14
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nDefines a generic interface for validators.\n"
+  example: []
+  syntax:
+    content: public interface IValidator<T>
+    typeParameters:
+    - id: T
+      description: Specifies the type of values to validate.
+    content.vb: Public Interface IValidator(Of T)
+  nameWithType.vb: IValidator(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
+  name.vb: IValidator(Of T)
+- uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  commentId: M:Juhta.Net.Validation.IValidator`1.Validate(`0)
+  id: Validate(`0)
+  parent: Juhta.Net.Validation.IValidator`1
+  langs:
+  - csharp
+  - vb
+  name: Validate(T)
+  nameWithType: IValidator<T>.Validate(T)
+  fullName: Juhta.Net.Validation.IValidator<T>.Validate(T)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/IValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Validate
+    path: ../src/Juhta.Net.Validation/IValidator.cs
+    startLine: 23
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nValidates a specified value. If the specified value doesn&apos;t pass validation, the method must throw a\n<xref href=\"Juhta.Net.Validation.ValidationException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: void Validate(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: Specifies a value to validate.
+    content.vb: Sub Validate(value As T)
+  overload: Juhta.Net.Validation.IValidator`1.Validate*
+  nameWithType.vb: IValidator(Of T).Validate(T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T).Validate(T)
+references:
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
+  isExternal: false
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
+- uid: Juhta.Net.Validation.ValidationException
+  commentId: T:Juhta.Net.Validation.ValidationException
+  isExternal: false
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: Juhta.Net.Validation.ValidationException
+- uid: Juhta.Net.Validation.IValidator`1.Validate*
+  commentId: Overload:Juhta.Net.Validation.IValidator`1.Validate
+  isExternal: false
+  name: Validate
+  nameWithType: IValidator<T>.Validate
+  fullName: Juhta.Net.Validation.IValidator<T>.Validate
+  nameWithType.vb: IValidator(Of T).Validate
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T).Validate
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T

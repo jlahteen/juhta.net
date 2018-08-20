@@ -24,14 +24,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineParser
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 51
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nDefines a class for parsing command line arguments. The following types of command line arguments are\nsupported:\n<table><thead><tr><th>Argument type</th><th>Description</th></tr></thead><tbody><tr><td>Named arguments</td><td>Represents a named command line argument</td></tr><tr><td>Option arguments</td><td>Represents a command line option</td></tr><tr><td>Plain arguments</td><td>Represents any raw command line argument</td></tr></tbody></table>\n<p>A named argument consists of two raw arguments. The first argument determines an argument name and the\nsecond argument an actual argument value. Argument names must be prefixed by an argument name prefix. For\nexample, <code>-workingFolder C:\\Temp</code> is a valid named argument. Character &apos;-&apos; is the default named argument\nprefix.</p>\n<p>An option argument consists of an option prefix, option name, option name-value separator and an actual\noption value. For example, <code>/BufferSize:12345</code> is a valid option argument. Characters &apos;/&apos; and &apos;:&apos; are the\ndefault option prefix and option name-value separator, respectively. If a value part is missing from an option\nargument, it’s assumed to be a boolean option with the default value of true. Thus, the option arguments\n<code>/SaveLog</code> and <code>/SaveLog:true</code> are equivalent.</p>\n<p>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all\nraw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain\narguments.</p>\n"
   example: []
@@ -67,14 +67,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetNamedArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 61
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets a named argument.\n"
   remarks: If the specified named argument is not found, an exception will be thrown.
@@ -107,14 +107,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetNamedArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 74
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets a named argument.\n"
   remarks: >-
@@ -153,14 +153,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetOptionArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 97
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets an option argument.\n"
   remarks: If the specified option is not found, an exception will be thrown.
@@ -193,14 +193,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetOptionArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 110
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets an option argument.\n"
   remarks: >-
@@ -239,14 +239,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetPlainArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 133
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets a plain argument.\n"
   remarks: If the specified plain argument is not found, an exception will be thrown.
@@ -279,14 +279,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetPlainArgument
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 146
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets a plain argument.\n"
   remarks: >-
@@ -325,14 +325,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetUnconsumedArguments
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 165
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets all unconsumed command line arguments.\n"
   example: []
@@ -360,14 +360,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ParseArguments
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 177
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nParses an array of raw command line arguments.\n"
   example: []
@@ -399,14 +399,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ParseArguments
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 189
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nParses an array of raw command line arguments.\n"
   example: []
@@ -447,14 +447,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineParser.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineParser.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: HasUnconsumedArguments
-    path: ../src/Juhta.Net/Console/CommandLineParser.cs
+    path: ../src/Juhta.Net.Console/CommandLineParser.cs
     startLine: 282
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nGets a boolean value determining whether this <xref href=\"Juhta.Net.Console.CommandLineParser\" data-throw-if-not-resolved=\"false\"></xref> instance has unconsumed\narguments.\n"
   example: []

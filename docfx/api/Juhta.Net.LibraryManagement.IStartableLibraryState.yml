@@ -16,14 +16,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IStartableLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for startable library states. A library state is a startable if it contains at least one\nprocess that has to be started prior to the library state services can be used.\n"
   example: []
@@ -49,14 +49,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StartProcesses
-    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
     startLine: 21
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nStarts the library state processes.\n"
   example: []
@@ -77,14 +77,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StopProcesses
-    path: ../src/Juhta.Net/LibraryManagement/IStartableLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IStartableLibraryState.cs
     startLine: 38
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nStops the library state processes.\n"
   remarks: "\n<p>This method should not throw exceptions. It is recommended that, in case of an error, the error is\nlogged and the stopping process is continued for the rest of the processes. In other words, the method\nshould stop the library state processes as completely as possible.</p>\n<p>This method will be called even if the initialization process of the library state has failed. This\nmeans that the method should prepare for such situation where the library state processes have not been\nstarted at all or started only partially.</p>\n"

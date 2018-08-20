@@ -9,6 +9,8 @@ items:
   - Juhta.Net.Extensions.AssemblyExtensions.GetCopyright(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetDescription(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetDirectory(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetFileName(System.Reflection.Assembly)
+  - Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetProductVersion(System.Reflection.Assembly)
   - Juhta.Net.Extensions.AssemblyExtensions.GetTitle(System.Reflection.Assembly)
@@ -25,7 +27,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: AssemblyExtensions
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -70,7 +72,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetCompany
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -115,7 +117,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetCopyright
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -160,7 +162,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetDescription
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -205,7 +207,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetDirectory
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -235,6 +237,96 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetFileName(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetFileName(System.Reflection.Assembly)
+  id: GetFileName(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetFileName(Assembly)
+  nameWithType: AssemblyExtensions.GetFileName(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetFileName(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: GetFileName
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 128
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the file name of the current assembly.\n"
+  example: []
+  syntax:
+    content: public static string GetFileName(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the file name of the current assembly.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetFileName(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetFileName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension(System.Reflection.Assembly)
+  commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension(System.Reflection.Assembly)
+  id: GetFileNameWithoutExtension(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: Juhta.Net.Extensions.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetFileNameWithoutExtension(Assembly)
+  nameWithType: AssemblyExtensions.GetFileNameWithoutExtension(Assembly)
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: GetFileNameWithoutExtension
+    path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
+    startLine: 138
+  assemblies:
+  - Juhta.Net
+  namespace: Juhta.Net.Extensions
+  summary: "\nGets the file name of the current assembly without the extension.\n"
+  example: []
+  syntax:
+    content: public static string GetFileNameWithoutExtension(this Assembly assembly)
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+      description: Specifies the current assembly.
+    return:
+      type: System.String
+      description: Returns the file name of the current assembly without the extension.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetFileNameWithoutExtension(assembly As Assembly) As String
+  overload: Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
   commentId: M:Juhta.Net.Extensions.AssemblyExtensions.GetProduct(System.Reflection.Assembly)
   id: GetProduct(System.Reflection.Assembly)
@@ -250,11 +342,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetProduct
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 128
+    startLine: 148
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -295,11 +387,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetProductVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 143
+    startLine: 163
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -340,11 +432,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetTitle
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 155
+    startLine: 175
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -385,11 +477,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 170
+    startLine: 190
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -430,11 +522,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 190
+    startLine: 210
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -482,11 +574,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
-    startLine: 203
+    startLine: 223
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Extensions
@@ -864,6 +956,18 @@ references:
   name: GetDirectory
   nameWithType: AssemblyExtensions.GetDirectory
   fullName: Juhta.Net.Extensions.AssemblyExtensions.GetDirectory
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetFileName*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetFileName
+  isExternal: false
+  name: GetFileName
+  nameWithType: AssemblyExtensions.GetFileName
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetFileName
+- uid: Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension*
+  commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension
+  isExternal: false
+  name: GetFileNameWithoutExtension
+  nameWithType: AssemblyExtensions.GetFileNameWithoutExtension
+  fullName: Juhta.Net.Extensions.AssemblyExtensions.GetFileNameWithoutExtension
 - uid: Juhta.Net.Extensions.AssemblyExtensions.GetProduct*
   commentId: Overload:Juhta.Net.Extensions.AssemblyExtensions.GetProduct
   isExternal: false

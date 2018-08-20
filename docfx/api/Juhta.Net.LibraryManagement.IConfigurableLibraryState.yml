@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IConfigurableLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryState.cs
     startLine: 16
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for configurable library states.\n"
   remarks: Configurable library states relate to dynamic configurable libraries.
@@ -31,7 +31,6 @@ items:
     content: 'public interface IConfigurableLibraryState : ILibraryState'
     content.vb: >-
       Public Interface IConfigurableLibraryState
-
           Inherits ILibraryState
   modifiers.csharp:
   - public
@@ -52,14 +51,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryState.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: Initialize
-    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryState.cs
+    path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryState.cs
     startLine: 27
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes the library state based on a specified configuration.\n"
   remarks: >-

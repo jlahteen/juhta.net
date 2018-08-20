@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IClosableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IClosableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IClosableLibrary.cs
     startLine: 13
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for closable libraries. A library is closable if it requires specific closing actions.\n"
   example: []
@@ -48,14 +48,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IClosableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CloseLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IClosableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IClosableLibrary.cs
     startLine: 30
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nCloses the library, that is, performs required closing actions to release the library resources gracefully.\n"
   remarks: "\n<p>This method should not throw exceptions. It is recommended that, in case of an error, the error is\nlogged and the closing process is continued for the rest of the closing actions. In other words, the method\nshould close the library as completely as possible.</p>\n<p>This method will be called even if the initialization process of the library has failed. This means\nthat the method should prepare for such situation where the library is not initialized at all or\ninitialized only partially.</p>\n"

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: InvalidConfigValueException
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
@@ -30,9 +30,7 @@ items:
     content: 'public class InvalidConfigValueException : Exception, ISerializable'
     content.vb: >-
       Public Class InvalidConfigValueException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -78,7 +76,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs

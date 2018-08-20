@@ -20,7 +20,7 @@ items:
   fullName: Juhta.Net.Console
   type: Namespace
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
 references:
 - uid: Juhta.Net.Console.CommandLineArgument
   commentId: T:Juhta.Net.Console.CommandLineArgument

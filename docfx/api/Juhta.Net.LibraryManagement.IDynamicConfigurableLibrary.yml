@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicConfigurableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for dynamic configurable libraries. A library is a dynamic configurable library if it is\ndynamic, configurable and the configuration is done with a JSON, XML or INI configuration.\n"
   example: []
@@ -30,7 +30,6 @@ items:
     content: 'public interface IDynamicConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IDynamicConfigurableLibrary
-
           Inherits IDynamicLibrary, IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
@@ -56,14 +55,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
     startLine: 22
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nCreates an uninitialized library state.\n"
   example: []

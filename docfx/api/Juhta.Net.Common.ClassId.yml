@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ClassId
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 38
+    startLine: 37
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -66,11 +66,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 46
+    startLine: 45
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/ClassId.cs
-    startLine: 55
+    startLine: 54
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Common
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ClassName
     path: ../src/Juhta.Net/Common/ClassId.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ClassNamespace
     path: ../src/Juhta.Net/Common/ClassId.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: FullClassName
     path: ../src/Juhta.Net/Common/ClassId.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryDirectory
     path: ../src/Juhta.Net/Common/ClassId.cs
@@ -292,7 +292,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryFileName
     path: ../src/Juhta.Net/Common/ClassId.cs
@@ -329,7 +329,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/ClassId.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryFilePath
     path: ../src/Juhta.Net/Common/ClassId.cs

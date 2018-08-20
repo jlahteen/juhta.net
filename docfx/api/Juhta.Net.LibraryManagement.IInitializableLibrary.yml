@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IInitializableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IInitializableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IInitializableLibrary.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for initializable libraries. A library is initializable if it requires initialization\noperations and those operations don&apos;t need any configuration.\n"
   example: []
@@ -48,14 +48,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IInitializableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: InitializeLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IInitializableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IInitializableLibrary.cs
     startLine: 22
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nInitializes the library, that is, performs required initialization operations to make library services\nproperly available.\n"
   example: []

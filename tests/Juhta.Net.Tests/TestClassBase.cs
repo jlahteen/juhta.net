@@ -1,6 +1,7 @@
 ﻿
 using Juhta.Net.Common;
 using Juhta.Net.Extensions;
+using Juhta.Net.Framework;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;

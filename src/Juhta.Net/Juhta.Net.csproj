@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Juha Lähteenmäki</Authors>
     <Title>Juhta.Net</Title>
-    <Description>Juhta.Net is the core library of Juhta.NET, an open-source and general-purpose application framework built on the top of .NET Core 2 and .NET Standard 2.</Description>
+    <Description>Juhta.Net is the core library of Juhta.NET, and it contains common classes, types and interfaces that are shared between all libraries of Juhta.NET.</Description>
     <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
     <RepositoryType>Git</RepositoryType>
     <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
@@ -14,26 +14,18 @@
     <Company />
     <ProductName>Juhta.NET</ProductName>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Title>Juhta.Net</Title>
     <Product>Juhta.NET</Product>
-    <Version>1.0.0-rc</Version>
-    <PackageTags>dotnet dotnetcore dotnetstandard</PackageTags>
+    <Version>1.0.0-rc2</Version>
+    <PackageTags>dotnetcore dotnetstandard</PackageTags>
     <NeutralLanguage></NeutralLanguage>
-    <PackageReleaseNotes>The first release of Juhta.NET</PackageReleaseNotes>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
+    <PackageReleaseNotes>Please visit https://github.com/jlahteen/juhta.net/releases/tag/v1.0.0-rc2 to view the release notes.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Common\CommonConfig.xsd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Common\CommonConfig.xsd" />
-    <EmbeddedResource Include="Config.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="2.0.0" />
   </ItemGroup>
 </Project>

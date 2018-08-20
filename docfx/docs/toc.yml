@@ -2,5 +2,9 @@
   href: introduction.md
 - name: Main Features
   href: main-features.md
-- name: Main Namespaces
-  href: main-namespaces.md
+- name: Libraries
+  href: libraries.md
+- name: Namespaces
+  href: namespaces.md
+- name: Code Samples
+  href: code-samples.md

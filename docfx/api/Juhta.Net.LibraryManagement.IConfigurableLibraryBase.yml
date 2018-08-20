@@ -15,14 +15,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IConfigurableLibraryBase
-    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines a base interface for configurable libraries. A library is configurable if it requires specific startup\noperations and those operations need configuration.\n"
   example: []
@@ -48,14 +48,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigFileName
-    path: ../src/Juhta.Net/LibraryManagement/IConfigurableLibraryBase.cs
+    path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the name of the configuration file.\n"
   remarks: >-

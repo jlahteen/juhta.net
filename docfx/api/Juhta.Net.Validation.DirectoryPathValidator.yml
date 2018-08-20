@@ -1,0 +1,804 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Validation.DirectoryPathValidator
+  commentId: T:Juhta.Net.Validation.DirectoryPathValidator
+  id: DirectoryPathValidator
+  parent: Juhta.Net.Validation
+  children:
+  - Juhta.Net.Validation.DirectoryPathValidator.#ctor
+  - Juhta.Net.Validation.DirectoryPathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+  - Juhta.Net.Validation.DirectoryPathValidator.Validate(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPathValidator
+  nameWithType: DirectoryPathValidator
+  fullName: Juhta.Net.Validation.DirectoryPathValidator
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: DirectoryPathValidator
+    path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
+    startLine: 15
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nDefines a validator class for validating directory paths.\n"
+  example: []
+  syntax:
+    content: 'public class DirectoryPathValidator : PathValidator, IStringValidator, IValidator<string>'
+    content.vb: >-
+      Public Class DirectoryPathValidator
+          Inherits PathValidator
+          Implements IStringValidator, IValidator(Of String)
+  inheritance:
+  - System.Object
+  - Juhta.Net.Validation.PathValidator
+  implements:
+  - Juhta.Net.Validation.IStringValidator
+  - Juhta.Net.Validation.IValidator{System.String}
+  inheritedMembers:
+  - Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  - Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  - Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  - Juhta.Net.Validation.PathValidator.m_errorMessage
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.Validation.DirectoryPathValidator.#ctor
+  commentId: M:Juhta.Net.Validation.DirectoryPathValidator.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.Validation.DirectoryPathValidator
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPathValidator()
+  nameWithType: DirectoryPathValidator.DirectoryPathValidator()
+  fullName: Juhta.Net.Validation.DirectoryPathValidator.DirectoryPathValidator()
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
+    startLine: 22
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public DirectoryPathValidator()
+    content.vb: Public Sub New
+  overload: Juhta.Net.Validation.DirectoryPathValidator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Validation.DirectoryPathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+  commentId: M:Juhta.Net.Validation.DirectoryPathValidator.#ctor(Juhta.Net.Diagnostics.ErrorMessage)
+  id: '#ctor(Juhta.Net.Diagnostics.ErrorMessage)'
+  parent: Juhta.Net.Validation.DirectoryPathValidator
+  langs:
+  - csharp
+  - vb
+  name: DirectoryPathValidator(ErrorMessage)
+  nameWithType: DirectoryPathValidator.DirectoryPathValidator(ErrorMessage)
+  fullName: Juhta.Net.Validation.DirectoryPathValidator.DirectoryPathValidator(Juhta.Net.Diagnostics.ErrorMessage)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
+    startLine: 29
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public DirectoryPathValidator(ErrorMessage errorMessage)
+    parameters:
+    - id: errorMessage
+      type: Juhta.Net.Diagnostics.ErrorMessage
+      description: Specifies an error message to associate with the instance.
+    content.vb: Public Sub New(errorMessage As ErrorMessage)
+  overload: Juhta.Net.Validation.DirectoryPathValidator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.Validation.DirectoryPathValidator.Validate(System.String)
+  commentId: M:Juhta.Net.Validation.DirectoryPathValidator.Validate(System.String)
+  id: Validate(System.String)
+  parent: Juhta.Net.Validation.DirectoryPathValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(String)
+  nameWithType: DirectoryPathValidator.Validate(String)
+  fullName: Juhta.Net.Validation.DirectoryPathValidator.Validate(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
+      branch: release/v1.0.0-rc2
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Validate
+    path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
+    startLine: 39
+  assemblies:
+  - Juhta.Net.Validation
+  namespace: Juhta.Net.Validation
+  summary: "\nSee <xref href=\"Juhta.Net.Validation.IValidator%601.Validate(%600)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void Validate(string value)
+    parameters:
+    - id: value
+      type: System.String
+    content.vb: Public Sub Validate(value As String)
+  overload: Juhta.Net.Validation.DirectoryPathValidator.Validate*
+  implements:
+  - Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.Validation
+  commentId: N:Juhta.Net.Validation
+  isExternal: false
+  name: Juhta.Net.Validation
+  nameWithType: Juhta.Net.Validation
+  fullName: Juhta.Net.Validation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.Validation.PathValidator
+  commentId: T:Juhta.Net.Validation.PathValidator
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: PathValidator
+  nameWithType: PathValidator
+  fullName: Juhta.Net.Validation.PathValidator
+- uid: Juhta.Net.Validation.IStringValidator
+  commentId: T:Juhta.Net.Validation.IStringValidator
+  parent: Juhta.Net.Validation
+  isExternal: false
+  name: IStringValidator
+  nameWithType: IStringValidator
+  fullName: Juhta.Net.Validation.IStringValidator
+- uid: Juhta.Net.Validation.IValidator{System.String}
+  commentId: T:Juhta.Net.Validation.IValidator{System.String}
+  parent: Juhta.Net.Validation
+  definition: Juhta.Net.Validation.IValidator`1
+  name: IValidator<String>
+  nameWithType: IValidator<String>
+  fullName: Juhta.Net.Validation.IValidator<System.String>
+  nameWithType.vb: IValidator(Of String)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of System.String)
+  name.vb: IValidator(Of String)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  parent: Juhta.Net.Validation.PathValidator
+  isExternal: true
+  name: IsValidDirectoryName(String)
+  nameWithType: PathValidator.IsValidDirectoryName(String)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+    name: IsValidDirectoryName
+    nameWithType: PathValidator.IsValidDirectoryName
+    fullName: Juhta.Net.Validation.PathValidator.IsValidDirectoryName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidDirectoryName(System.String)
+    name: IsValidDirectoryName
+    nameWithType: PathValidator.IsValidDirectoryName
+    fullName: Juhta.Net.Validation.PathValidator.IsValidDirectoryName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  parent: Juhta.Net.Validation.PathValidator
+  isExternal: true
+  name: IsValidFileName(String)
+  nameWithType: PathValidator.IsValidFileName(String)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+    name: IsValidFileName
+    nameWithType: PathValidator.IsValidFileName
+    fullName: Juhta.Net.Validation.PathValidator.IsValidFileName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidFileName(System.String)
+    name: IsValidFileName
+    nameWithType: PathValidator.IsValidFileName
+    fullName: Juhta.Net.Validation.PathValidator.IsValidFileName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  commentId: M:Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+  parent: Juhta.Net.Validation.PathValidator
+  isExternal: true
+  name: IsValidPath(String, PathValidator.PathType)
+  nameWithType: PathValidator.IsValidPath(String, PathValidator.PathType)
+  fullName: Juhta.Net.Validation.PathValidator.IsValidPath(System.String, Juhta.Net.Validation.PathValidator.PathType)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+    name: IsValidPath
+    nameWithType: PathValidator.IsValidPath
+    fullName: Juhta.Net.Validation.PathValidator.IsValidPath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Juhta.Net.Validation.PathValidator.PathType
+    name: PathValidator.PathType
+    nameWithType: PathValidator.PathType
+    fullName: Juhta.Net.Validation.PathValidator.PathType
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Validation.PathValidator.IsValidPath(System.String,Juhta.Net.Validation.PathValidator.PathType)
+    name: IsValidPath
+    nameWithType: PathValidator.IsValidPath
+    fullName: Juhta.Net.Validation.PathValidator.IsValidPath
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Juhta.Net.Validation.PathValidator.PathType
+    name: PathValidator.PathType
+    nameWithType: PathValidator.PathType
+    fullName: Juhta.Net.Validation.PathValidator.PathType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.PathValidator.m_errorMessage
+  commentId: F:Juhta.Net.Validation.PathValidator.m_errorMessage
+  parent: Juhta.Net.Validation.PathValidator
+  isExternal: false
+  name: m_errorMessage
+  nameWithType: PathValidator.m_errorMessage
+  fullName: Juhta.Net.Validation.PathValidator.m_errorMessage
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.Validation.IValidator`1
+  commentId: T:Juhta.Net.Validation.IValidator`1
+  isExternal: false
+  name: IValidator<T>
+  nameWithType: IValidator<T>
+  fullName: Juhta.Net.Validation.IValidator<T>
+  nameWithType.vb: IValidator(Of T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T)
+  name.vb: IValidator(Of T)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Juhta.Net.Validation.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: Juhta.Net.Validation.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.DirectoryPathValidator.#ctor*
+  commentId: Overload:Juhta.Net.Validation.DirectoryPathValidator.#ctor
+  isExternal: false
+  name: DirectoryPathValidator
+  nameWithType: DirectoryPathValidator.DirectoryPathValidator
+  fullName: Juhta.Net.Validation.DirectoryPathValidator.DirectoryPathValidator
+- uid: Juhta.Net.Diagnostics.ErrorMessage
+  commentId: T:Juhta.Net.Diagnostics.ErrorMessage
+  parent: Juhta.Net.Diagnostics
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: ErrorMessage
+  fullName: Juhta.Net.Diagnostics.ErrorMessage
+- uid: Juhta.Net.Diagnostics
+  commentId: N:Juhta.Net.Diagnostics
+  isExternal: false
+  name: Juhta.Net.Diagnostics
+  nameWithType: Juhta.Net.Diagnostics
+  fullName: Juhta.Net.Diagnostics
+- uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  commentId: M:Juhta.Net.Validation.IValidator`1.Validate(`0)
+  isExternal: false
+  name: Validate(T)
+  nameWithType: IValidator<T>.Validate(T)
+  fullName: Juhta.Net.Validation.IValidator<T>.Validate(T)
+  nameWithType.vb: IValidator(Of T).Validate(T)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of T).Validate(T)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+    name: Validate
+    nameWithType: IValidator<T>.Validate
+    fullName: Juhta.Net.Validation.IValidator<T>.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+    name: Validate
+    nameWithType: IValidator(Of T).Validate
+    fullName: Juhta.Net.Validation.IValidator(Of T).Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.Validation.DirectoryPathValidator.Validate*
+  commentId: Overload:Juhta.Net.Validation.DirectoryPathValidator.Validate
+  isExternal: false
+  name: Validate
+  nameWithType: DirectoryPathValidator.Validate
+  fullName: Juhta.Net.Validation.DirectoryPathValidator.Validate
+- uid: Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
+  commentId: M:Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)
+  parent: Juhta.Net.Validation.IValidator{System.String}
+  definition: Juhta.Net.Validation.IValidator`1.Validate(`0)
+  name: Validate(String)
+  nameWithType: IValidator<String>.Validate(String)
+  fullName: Juhta.Net.Validation.IValidator<System.String>.Validate(System.String)
+  nameWithType.vb: IValidator(Of String).Validate(String)
+  fullName.vb: Juhta.Net.Validation.IValidator(Of System.String).Validate(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+    name: Validate
+    nameWithType: IValidator<String>.Validate
+    fullName: Juhta.Net.Validation.IValidator<System.String>.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.Validation.IValidator`1.Validate(`0)
+    name: Validate
+    nameWithType: IValidator(Of String).Validate
+    fullName: Juhta.Net.Validation.IValidator(Of System.String).Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -16,14 +16,14 @@ items:
   type: Class
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgumentException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineArgumentException
-    path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgumentException.cs
     startLine: 15
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nThis exception will be thrown when an invalid argument is encountered in command line parsing.\n"
   example: []
@@ -31,9 +31,7 @@ items:
     content: 'public class CommandLineArgumentException : Exception, ISerializable'
     content.vb: >-
       Public Class CommandLineArgumentException
-
           Inherits Exception
-
           Implements ISerializable
   inheritance:
   - System.Object
@@ -78,14 +76,14 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgumentException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgumentException.cs
     startLine: 23
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nInitializes a new instance.\n"
   example: []
@@ -114,14 +112,14 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Juhta.Net/Console/CommandLineArgumentException.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.Console/CommandLineArgumentException.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
-    path: ../src/Juhta.Net/Console/CommandLineArgumentException.cs
+    path: ../src/Juhta.Net.Console/CommandLineArgumentException.cs
     startLine: 31
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.Console
   namespace: Juhta.Net.Console
   summary: "\nInitializes a new instance.\n"
   example: []

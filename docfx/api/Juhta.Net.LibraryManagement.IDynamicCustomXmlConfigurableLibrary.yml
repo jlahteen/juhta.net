@@ -16,14 +16,14 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicCustomXmlConfigurableLibrary
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 17
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nDefines an interface for dynamic custom XML configurable libraries. A library is a dynamic custom XML\nconfigurable library if it is dynamic, configurable and the configuration is done with a custom XML\nconfiguration.\n"
   example: []
@@ -31,7 +31,6 @@ items:
     content: 'public interface IDynamicCustomXmlConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IDynamicCustomXmlConfigurableLibrary
-
           Inherits IDynamicLibrary, IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
@@ -57,14 +56,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateLibraryState
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 25
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nCreates an uninitialized library state.\n"
   example: []
@@ -88,14 +87,14 @@ items:
   type: Method
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetConfigSchemas
-    path: ../src/Juhta.Net/LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
+    path: ../src/Juhta.Net.LibraryManagement/IDynamicCustomXmlConfigurableLibrary.cs
     startLine: 33
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the XML schemas to which configuration files must conform.\n"
   remarks: >-

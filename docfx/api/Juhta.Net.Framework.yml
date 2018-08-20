@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.Framework
+  commentId: N:Juhta.Net.Framework
+  id: Juhta.Net.Framework
+  children:
+  - Juhta.Net.Framework.DiagnosticMessageIdBase
+  - Juhta.Net.Framework.FrameworkConfig
+  - Juhta.Net.Framework.FrameworkInfo
+  - Juhta.Net.Framework.FrameworkLibraryType
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.Framework
+  nameWithType: Juhta.Net.Framework
+  fullName: Juhta.Net.Framework
+  type: Namespace
+  assemblies:
+  - Juhta.Net
+references:
+- uid: Juhta.Net.Framework.DiagnosticMessageIdBase
+  commentId: T:Juhta.Net.Framework.DiagnosticMessageIdBase
+  isExternal: false
+  name: DiagnosticMessageIdBase
+  nameWithType: DiagnosticMessageIdBase
+  fullName: Juhta.Net.Framework.DiagnosticMessageIdBase
+- uid: Juhta.Net.Framework.FrameworkConfig
+  commentId: T:Juhta.Net.Framework.FrameworkConfig
+  isExternal: false
+  name: FrameworkConfig
+  nameWithType: FrameworkConfig
+  fullName: Juhta.Net.Framework.FrameworkConfig
+- uid: Juhta.Net.Framework.FrameworkInfo
+  commentId: T:Juhta.Net.Framework.FrameworkInfo
+  isExternal: false
+  name: FrameworkInfo
+  nameWithType: FrameworkInfo
+  fullName: Juhta.Net.Framework.FrameworkInfo
+- uid: Juhta.Net.Framework.FrameworkLibraryType
+  commentId: T:Juhta.Net.Framework.FrameworkLibraryType
+  parent: Juhta.Net.Framework
+  isExternal: false
+  name: FrameworkLibraryType
+  nameWithType: FrameworkLibraryType
+  fullName: Juhta.Net.Framework.FrameworkLibraryType
+- uid: Juhta.Net.Framework
+  commentId: N:Juhta.Net.Framework
+  isExternal: false
+  name: Juhta.Net.Framework
+  nameWithType: Juhta.Net.Framework
+  fullName: Juhta.Net.Framework

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: StatementNotImplementedException
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
@@ -38,9 +38,7 @@ items:
     content: 'public class StatementNotImplementedException : Exception, ISerializable'
     content.vb: >-
       Public Class StatementNotImplementedException
-
           Inherits Exception
-
           Implements ISerializable
   seealso:
   - linkId: Juhta.Net.Common.BlockNotImplementedException
@@ -89,7 +87,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
@@ -121,7 +119,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs
@@ -157,7 +155,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/StatementNotImplementedException.cs
-      branch: release/v1.0.0-rc
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/StatementNotImplementedException.cs

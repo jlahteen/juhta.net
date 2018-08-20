@@ -15,16 +15,16 @@ items:
   type: Interface
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/ILibraryHandle.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: ILibraryHandle
-    path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    path: ../src/Juhta.Net.LibraryManagement/ILibraryHandle.cs
     startLine: 14
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
-  summary: "\nDefines an interface for library handle classes. This interface is the core interface for the library\nmanagement performed by <xref href=\"Juhta.Net.LibraryManagement.LibraryManager\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nDefines an interface for library handle classes. This interface is the core interface for the library\nmanagement.\n"
   example: []
   syntax:
     content: public interface ILibraryHandle
@@ -48,14 +48,14 @@ items:
   type: Property
   source:
     remote:
-      path: src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
-      branch: release/v1.0.0-rc
+      path: src/Juhta.Net.LibraryManagement/ILibraryHandle.cs
+      branch: release/v1.0.0-rc2
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryFileName
-    path: ../src/Juhta.Net/LibraryManagement/ILibraryHandle.cs
+    path: ../src/Juhta.Net.LibraryManagement/ILibraryHandle.cs
     startLine: 21
   assemblies:
-  - Juhta.Net
+  - Juhta.Net.LibraryManagement
   namespace: Juhta.Net.LibraryManagement
   summary: "\nGets the file name of the library.\n"
   example: []
@@ -71,8 +71,6 @@ items:
   modifiers.vb:
   - ReadOnly
 references:
-- uid: Juhta.Net.LibraryManagement.LibraryManager
-  commentId: T:Juhta.Net.LibraryManagement.LibraryManager
 - uid: Juhta.Net.LibraryManagement
   commentId: N:Juhta.Net.LibraryManagement
   isExternal: false
