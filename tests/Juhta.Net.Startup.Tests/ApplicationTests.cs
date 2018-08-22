@@ -349,7 +349,15 @@ namespace Juhta.Net.Startup.Tests
 
             SetConfigFiles("Startup", "CustomXmlConfigurableLibrary100_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.CustomXmlConfigurable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempA");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1027,7 +1035,15 @@ namespace Juhta.Net.Startup.Tests
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempB", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempB");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1052,7 +1068,15 @@ namespace Juhta.Net.Startup.Tests
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_ConfigChange_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempC", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempC");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1275,6 +1299,12 @@ namespace Juhta.Net.Startup.Tests
         #endregion
 
         #region Private Methods
+
+        private static void CopyBinFiles(string fileMask)
+        {
+            for (int i = 1; i <= 100; i++)
+                File.Copy($"..\\..\\..\\..\\Bin\\{fileMask}{i}.dll", $".\\{fileMask}{i}.dll", true);
+        }
 
         private void StressTestMain(object paramObj)
         {

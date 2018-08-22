@@ -299,7 +299,7 @@ namespace Juhta.Net.Services.Tests
                     "[Juhta.Net.Services.Error105004]",
                     "Juhta.Net.Services.ServiceCreationException: [Juhta.Net.Services.Error105004] An instance of the dependency injection service 'name:TestService' could not be created.",
                     "System.IO.FileNotFoundException",
-                    "AppXLibrary1234.dll' or one of its dependencies. The system cannot find the file specified."
+                    "AppXLibrary1234.dll'. The system cannot find the file specified."
                 );
 
                 throw;
