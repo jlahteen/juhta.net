@@ -63,7 +63,7 @@ namespace Juhta.Net.Tests.Common
             {
                 Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101038]"));
 
-                Assert.AreEqual<string>(ex.InnerException.Message, "Illegal characters in path.");
+                Assert.IsTrue(ex.InnerException.Message.StartsWith("Illegal characters in path."));
 
                 throw;
             }
@@ -84,7 +84,7 @@ namespace Juhta.Net.Tests.Common
             {
                 Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101038]"));
 
-                Assert.AreEqual<string>(ex.InnerException.Message, "Illegal characters in path.");
+                Assert.IsTrue(ex.InnerException.Message.StartsWith("Illegal characters in path."));
 
                 throw;
             }
@@ -104,25 +104,6 @@ namespace Juhta.Net.Tests.Common
             catch (ArgumentException ex)
             {
                 Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101035]"));
-
-                throw;
-            }
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void NewInstance_InvalidValue_LocalhostFileUri_ShouldThrowArgumentException()
-        {
-            ClassId classId;
-
-            try
-            {
-                classId = new ClassId("file://" + ToOSPath("C:\\Temp\\MyLibrary.dll#MyFirstClasses.Shared.MyClass"));
-            }
-
-            catch (ArgumentException ex)
-            {
-                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101048]"));
 
                 throw;
             }
@@ -156,6 +137,25 @@ namespace Juhta.Net.Tests.Common
             try
             {
                 classId = new ClassId("http://" + ToOSPath("C:\\Temp\\MyLibrary.dll#MyFirstClasses.Shared.MyClass"));
+            }
+
+            catch (ArgumentException ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Error101048]"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void NewInstance_InvalidValue_NonLocalhostFileUri_ShouldThrowArgumentException()
+        {
+            ClassId classId;
+
+            try
+            {
+                classId = new ClassId("file://Something/Temp/MyLibrary.dll#MyFirstClasses.Shared.MyClass");
             }
 
             catch (ArgumentException ex)
