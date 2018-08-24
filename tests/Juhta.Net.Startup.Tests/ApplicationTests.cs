@@ -1302,8 +1302,16 @@ namespace Juhta.Net.Startup.Tests
 
         private static void CopyBinFiles(string fileMask)
         {
+            string sourceFile, destinationFile;
+
             for (int i = 1; i <= 100; i++)
-                File.Copy($"..\\..\\..\\..\\Bin\\{fileMask}{i}.dll", $".\\{fileMask}{i}.dll", true);
+            {
+                sourceFile = $"..\\..\\..\\..\\Bin\\{fileMask}{i}.dll".Replace('\\', Path.DirectorySeparatorChar);
+
+                destinationFile = $".\\{fileMask}{i}.dll".Replace('\\', Path.DirectorySeparatorChar);
+
+                File.Copy(sourceFile, destinationFile, true);
+            }
         }
 
         private void StressTestMain(object paramObj)
