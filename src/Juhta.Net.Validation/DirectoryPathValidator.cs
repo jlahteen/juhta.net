@@ -40,7 +40,7 @@ namespace Juhta.Net.Validation
         /// </summary>
         public void Validate(string value)
         {
-            ArgumentHelper.CheckNotNull(nameof(value), value);
+            ArgumentHelper.CheckNull(nameof(value), value);
 
             if (!IsValidPath(value, PathType.DirectoryPath))
                 throw new ValidationException(m_errorMessage.FormatMessage(value));

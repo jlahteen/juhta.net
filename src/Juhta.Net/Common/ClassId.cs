@@ -60,7 +60,7 @@ namespace Juhta.Net.Common
 
             originalValue = classId;
 
-            ArgumentHelper.CheckNotNull(nameof(classId), classId);
+            ArgumentHelper.CheckNull(nameof(classId), classId);
 
             // Check that the class identifier is a localhost file URI
             if (classId.StartsWith("file://") && !classId.StartsWith("file:///"))

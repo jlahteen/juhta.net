@@ -2477,16 +2477,17 @@
             one-liners.
             </summary>
         </member>
-        <member name="M:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)">
+        <member name="M:Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String,System.Object)">
             <summary>
-            Checks that a parameter value is not null.
+            Checks whether a parameter value is null, and if so, throws an <see cref="T:System.ArgumentNullException"/>.
             </summary>
             <param name="paramName">Specifies a parameter name.</param>
             <param name="paramValue">Specifies a parameter value.</param>
         </member>
         <member name="M:Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)">
             <summary>
-            Checks that a parameter value conforms to a regex pattern.
+            Checks whether a parameter value conforms to a regex pattern, and if it doesn't, throws an
+            <see cref="T:System.ArgumentException"/>.
             </summary>
             <param name="paramName">Specifies a parameter name.</param>
             <param name="paramValue">Specifies a parameter value.</param>
