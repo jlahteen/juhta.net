@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyVersion>10.2.31.4</AssemblyVersion>
+    <FileVersion>10.2.31.4</FileVersion>
+    <Version>1.2.3-eternal-beta</Version>
+    <Company>Juha Lähteenmäki</Company>
+    <Product>AppXLibrary for Testing Purposes</Product>
+    <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,5 +1,4 @@
 ﻿
-using Juhta.Net.Common;
 using Juhta.Net.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Reflection;
@@ -12,43 +11,43 @@ namespace Juhta.Net.Tests.Extensions
         #region Test Methods
 
         [TestMethod]
-        public void GetCompany_JuhtaNetAssembly_ShouldReturnCompanyString()
+        public void GetCompany_AppXLibrary_ShouldReturnCompanyString()
         {
-            Assembly assembly = typeof(CommonMessages).Assembly;
+            Assembly assembly = typeof(AppXLibrary.LibraryHandle).Assembly;
 
             Assert.AreEqual<string>("Juha Lähteenmäki", assembly.GetCompany());
         }
 
         [TestMethod]
-        public void GetCopyright_JuhtaNetAssembly_ShouldReturnCopyrightString()
+        public void GetCopyright_AppXLibrary_ShouldReturnCopyrightString()
         {
-            Assembly assembly = typeof(CommonMessages).Assembly;
+            Assembly assembly = typeof(AppXLibrary.LibraryHandle).Assembly;
 
             Assert.AreEqual<string>("Copyright © 2018 Juha Lähteenmäki", assembly.GetCopyright());
         }
 
         [TestMethod]
-        public void GetProduct_JuhtaNetAssembly_ShouldReturnProductString()
+        public void GetProduct_AppXLibrary_ShouldReturnProductString()
         {
-            Assembly assembly = typeof(CommonMessages).Assembly;
+            Assembly assembly = typeof(AppXLibrary.LibraryHandle).Assembly;
 
-            Assert.AreEqual<string>("Juhta.NET", assembly.GetProduct());
+            Assert.AreEqual<string>("AppXLibrary for Testing Purposes", assembly.GetProduct());
         }
 
         [TestMethod]
-        public void GetProductVersion_JuhtaNetAssembly_ShouldReturnProductVersionString()
+        public void GetProductVersion_AppXLibrary_ShouldReturnProductVersionString()
         {
-            Assembly assembly = typeof(CommonMessages).Assembly;
+            Assembly assembly = typeof(AppXLibrary.LibraryHandle).Assembly;
 
-            Assert.AreEqual<string>("1.0.0-rc2", assembly.GetProductVersion());
+            Assert.AreEqual<string>("1.2.3-eternal-beta", assembly.GetProductVersion());
         }
 
         [TestMethod]
-        public void GetVersion_JuhtaNetAssembly_ShouldReturnVersionString()
+        public void GetVersion_AppXLibrary_ShouldReturnVersionString()
         {
-            Assembly assembly = typeof(CommonMessages).Assembly;
+            Assembly assembly = typeof(AppXLibrary.LibraryHandle).Assembly;
 
-            Assert.AreEqual<string>("1.0.0.2", assembly.GetVersion());
+            Assert.AreEqual<string>("10.2.31.4", assembly.GetVersion());
         }
 
         #endregion
