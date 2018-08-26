@@ -1,0 +1,32 @@
+
+Juhta.NET
+
+Release Steps for a new Version
+===============================
+
+- Update the project settings for all projects excluding test and sample projects:
+  - Version
+  - PackageReleaseNotes
+  - AssemblyVersion
+  - FileVersion
+
+- Generate a Home Page for the new version
+  - Update the version in /docfx/index.md
+  - Update the version in /docfx/docs/code-samples.md
+  - Clear the directory /docfx/_site
+  - Run Build.cmd
+  - Clear the directory /docs/latest
+  - Copy /docfx/_site to /docs/latest
+  - Copy /docfx/_site to /docs/<version>
+  - Commit /docfx changes to Git
+  - Commit /docs changes to Git
+
+- Update README.md if necessary (e.g. future roadmap)
+
+- VSTS: run final tests for the release branch if necessary
+
+- GitHub: merge the release branch into master and develop
+
+- GitHub: make a release (it's a good idea to prepare a release with a draft release, e.g. release notes)
+
+- VSTS: make a NuGet release
