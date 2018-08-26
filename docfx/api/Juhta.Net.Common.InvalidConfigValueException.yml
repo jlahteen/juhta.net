@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InvalidConfigValueException
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InvalidConfigValueException.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InvalidConfigValueException.cs

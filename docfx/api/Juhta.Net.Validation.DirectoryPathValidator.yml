@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: DirectoryPathValidator
     path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Juhta.Net.Validation
   namespace: Juhta.Net.Validation
@@ -72,11 +72,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Juhta.Net.Validation
   namespace: Juhta.Net.Validation
@@ -104,11 +104,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - Juhta.Net.Validation
   namespace: Juhta.Net.Validation
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/DirectoryPathValidator.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Validate
     path: ../src/Juhta.Net.Validation/DirectoryPathValidator.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - Juhta.Net.Validation
   namespace: Juhta.Net.Validation
