@@ -1,4 +1,4 @@
-# Welcome to **Juhta.NET** 1.0.0-rc2
+# Welcome to **Juhta.NET** 1.0.0
 
 ***
 
@@ -8,7 +8,7 @@ Juhta.NET is an open-source, general-purpose application framework built on the 
 
 - [API Reference](api/Juhta.Net.Common.yml)
 
-- [Source Code](https://github.com/jlahteen/juhta.net/tree/release/v1.0.0-rc2)
+- [Source Code](https://github.com/jlahteen/juhta.net/tree/release/v1.0.0)
 
 - [Support and Feedback](mailto://support@juhta.net)
 

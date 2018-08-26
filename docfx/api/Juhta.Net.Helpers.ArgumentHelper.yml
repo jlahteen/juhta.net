@@ -5,7 +5,7 @@ items:
   id: ArgumentHelper
   parent: Juhta.Net.Helpers
   children:
-  - Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
+  - Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String,System.Object)
   - Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ArgumentHelper
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
@@ -47,32 +47,32 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
-  commentId: M:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)
-  id: CheckNotNull(System.String,System.Object)
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String,System.Object)
+  commentId: M:Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String,System.Object)
+  id: CheckNull(System.String,System.Object)
   parent: Juhta.Net.Helpers.ArgumentHelper
   langs:
   - csharp
   - vb
-  name: CheckNotNull(String, Object)
-  nameWithType: ArgumentHelper.CheckNotNull(String, Object)
-  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String, System.Object)
+  name: CheckNull(String, Object)
+  nameWithType: ArgumentHelper.CheckNull(String, Object)
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String, System.Object)
   type: Method
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
-    id: CheckNotNull
+    id: CheckNull
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
     startLine: 30
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Helpers
-  summary: "\nChecks that a parameter value is not null.\n"
+  summary: "\nChecks whether a parameter value is null, and if so, throws an <xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public static void CheckNotNull(string paramName, object paramValue)
+    content: public static void CheckNull(string paramName, object paramValue)
     parameters:
     - id: paramName
       type: System.String
@@ -80,8 +80,8 @@ items:
     - id: paramValue
       type: System.Object
       description: Specifies a parameter value.
-    content.vb: Public Shared Sub CheckNotNull(paramName As String, paramValue As Object)
-  overload: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull*
+    content.vb: Public Shared Sub CheckNull(paramName As String, paramValue As Object)
+  overload: Juhta.Net.Helpers.ArgumentHelper.CheckNull*
   modifiers.csharp:
   - public
   - static
@@ -102,15 +102,15 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Helpers/ArgumentHelper.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CheckValue
     path: ../src/Juhta.Net/Helpers/ArgumentHelper.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - Juhta.Net
   namespace: Juhta.Net.Helpers
-  summary: "\nChecks that a parameter value conforms to a regex pattern.\n"
+  summary: "\nChecks whether a parameter value conforms to a regex pattern, and if it doesn&apos;t, throws an\n<xref href=\"System.ArgumentException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void CheckValue(string paramName, string paramValue, string regexPattern)
@@ -431,12 +431,14 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull*
-  commentId: Overload:Juhta.Net.Helpers.ArgumentHelper.CheckNotNull
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+- uid: Juhta.Net.Helpers.ArgumentHelper.CheckNull*
+  commentId: Overload:Juhta.Net.Helpers.ArgumentHelper.CheckNull
   isExternal: false
-  name: CheckNotNull
-  nameWithType: ArgumentHelper.CheckNotNull
-  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNotNull
+  name: CheckNull
+  nameWithType: ArgumentHelper.CheckNull
+  fullName: Juhta.Net.Helpers.ArgumentHelper.CheckNull
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -444,6 +446,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
 - uid: Juhta.Net.Helpers.ArgumentHelper.CheckValue*
   commentId: Overload:Juhta.Net.Helpers.ArgumentHelper.CheckValue
   isExternal: false

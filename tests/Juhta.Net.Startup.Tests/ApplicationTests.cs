@@ -349,7 +349,15 @@ namespace Juhta.Net.Startup.Tests
 
             SetConfigFiles("Startup", "CustomXmlConfigurableLibrary100_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempA", 100, "AppXLibrary.CustomXmlConfigurable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempA");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -378,7 +386,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Ini_ConfigChange_ShouldReturn()
         {
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.ini";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.ini";
             string configFileContent;
 
             SetConfigFiles("Startup", "DynamicConfigurableLibrary_Ini_");
@@ -423,7 +431,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Json_ConfigChange_ShouldReturn()
         {
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.json";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.json";
             string configFileContent;
 
             SetConfigFiles("Startup", "DynamicConfigurableLibrary_Json_");
@@ -563,7 +571,7 @@ namespace Juhta.Net.Startup.Tests
         [TestMethod]
         public void Start_DynamicConfigurableLibrary_Xml_ConfigChange_ShouldReturn()
         {
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.xml";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.xml";
             string configFileContent;
 
             SetConfigFiles("Startup", "DynamicConfigurableLibrary_Xml_");
@@ -609,7 +617,7 @@ namespace Juhta.Net.Startup.Tests
         public void Start_DynamicCustomXmlConfigurableLibrary_ConfigFileDeletion_ShouldReturn()
         {
             string currentGreeting;
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
@@ -638,7 +646,7 @@ namespace Juhta.Net.Startup.Tests
         public void Start_DynamicCustomXmlConfigurableLibrary_ConfigFileDeletionAndCreation_ShouldReturn()
         {
             string currentGreeting;
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
@@ -682,7 +690,7 @@ namespace Juhta.Net.Startup.Tests
         {
             XmlDocument appXConfig = new XmlDocument();
             string currentGreeting;
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
@@ -721,7 +729,7 @@ namespace Juhta.Net.Startup.Tests
         {
             XmlDocument appXConfig = new XmlDocument();
             string currentGreeting;
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
@@ -754,8 +762,8 @@ namespace Juhta.Net.Startup.Tests
         public void Start_DynamicCustomXmlConfigurableLibrary_UnknownConfigFileDeletion_ShouldReturn()
         {
             string currentGreeting;
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
-            string unknownConfigFilePath = s_configDirectory + "\\Unknown.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
+            string unknownConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "Unknown.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableLibrary_");
 
@@ -798,7 +806,7 @@ namespace Juhta.Net.Startup.Tests
             string s;
             ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
 
@@ -833,7 +841,7 @@ namespace Juhta.Net.Startup.Tests
             Thread[] threads = new Thread[100];
             StressTestParam[] threadParams = new StressTestParam[100];
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_");
 
@@ -867,7 +875,7 @@ namespace Juhta.Net.Startup.Tests
             string s;
             ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StartProcessesThrowsException_");
 
@@ -907,7 +915,7 @@ namespace Juhta.Net.Startup.Tests
             string s;
             ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesReturnsFalse_");
 
@@ -953,7 +961,7 @@ namespace Juhta.Net.Startup.Tests
             string s;
             ReplaceService replaceService = new ReplaceService();
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable_ConfigChange_StopProcessesThrowsException_");
 
@@ -1027,7 +1035,15 @@ namespace Juhta.Net.Startup.Tests
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempB", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempB");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1047,12 +1063,20 @@ namespace Juhta.Net.Startup.Tests
             IReplaceService replaceService;
             string s;
             XmlDocument appXConfig = new XmlDocument();
-            string appXConfigFilePath = s_configDirectory + "\\AppXLibrary.config";
+            string appXConfigFilePath = s_configDirectory + Path.DirectorySeparatorChar + "AppXLibrary.config";
             int secondsWaited = 0;
 
             SetConfigFiles("Startup", "DynamicCustomXmlConfigurableAndStartable100_ConfigChange_");
 
+            #if NET462
+
             AppXLibrary.Cloning.Clone.BuildCopies("AppXLibraryTempC", 100, "AppXLibrary.DynamicCustomXmlConfigurableAndStartable");
+
+            #else
+
+            CopyBinFiles("AppXLibraryTempC");
+
+            #endif
 
             Application.StartInstance(null, s_configDirectory);
 
@@ -1275,6 +1299,20 @@ namespace Juhta.Net.Startup.Tests
         #endregion
 
         #region Private Methods
+
+        private static void CopyBinFiles(string fileMask)
+        {
+            string sourceFile, destinationFile;
+
+            for (int i = 1; i <= 100; i++)
+            {
+                sourceFile = $"..\\..\\..\\..\\Bin\\{fileMask}{i}.dll".Replace('\\', Path.DirectorySeparatorChar);
+
+                destinationFile = $".\\{fileMask}{i}.dll".Replace('\\', Path.DirectorySeparatorChar);
+
+                File.Copy(sourceFile, destinationFile, true);
+            }
+        }
 
         private void StressTestMain(object paramObj)
         {

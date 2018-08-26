@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Juhta.Net.Console
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Juhta.Net.Console
+   ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Juhta.Net.Console">
+  
+  <h1 id="Juhta_Net_Console" data-uid="Juhta.Net.Console" class="text-break">Namespace Juhta.Net.Console
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Juhta.Net.Console.CommandLineArgument.html">CommandLineArgument</a></h4>
+      <section><p>Defines an abstract base class for command line arguments.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.CommandLineArgumentException.html">CommandLineArgumentException</a></h4>
+      <section><p>This exception will be thrown when an invalid argument is encountered in command line parsing.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.CommandLineParser.html">CommandLineParser</a></h4>
+      <section><p>Defines a class for parsing command line arguments. The following types of command line arguments are
+supported:
+<table><thead><tr><th>Argument type</th><th>Description</th></tr></thead><tbody><tr><td>Named arguments</td><td>Represents a named command line argument</td></tr><tr><td>Option arguments</td><td>Represents a command line option</td></tr><tr><td>Plain arguments</td><td>Represents any raw command line argument</td></tr></tbody></table>
+<p>A named argument consists of two raw arguments. The first argument determines an argument name and the
+second argument an actual argument value. Argument names must be prefixed by an argument name prefix. For
+example, <code>-workingFolder C:\Temp</code> is a valid named argument. Character &apos;-&apos; is the default named argument
+prefix.</p>
+<p>An option argument consists of an option prefix, option name, option name-value separator and an actual
+option value. For example, <code>/BufferSize:12345</code> is a valid option argument. Characters &apos;/&apos; and &apos;:&apos; are the
+default option prefix and option name-value separator, respectively. If a value part is missing from an option
+argument, it’s assumed to be a boolean option with the default value of true. Thus, the option arguments
+<code>/SaveLog</code> and <code>/SaveLog:true</code> are equivalent.</p>
+<p>A plain argument is any raw argument that doesn’t fall into the two categories above. In other words, all
+raw arguments that are not prefixed either by an argument name prefix or an option prefix, are treated as plain
+arguments.</p></p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.CommandLineParserException.html">CommandLineParserException</a></h4>
+      <section><p>This exception will be thrown when a command line parser encounters an error not related to command line
+arguments.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.NamedArgument.html">NamedArgument</a></h4>
+      <section><p>Defines a class that represents a named argument. At the command line level, named arguments consist of two
+separate raw arguments. The first argument specifies the name for the argument and the second argument the
+actual argument value. The first argument must begin with a named argument prefix.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.NameValueArgument.html">NameValueArgument</a></h4>
+      <section><p>Defines an abstract base class for command line arguments that consist of name and value pairs.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.OptionArgument.html">OptionArgument</a></h4>
+      <section><p>Defines a class that represents an option argument. At the command line level, option arguments consist of a
+prefix, name and an optional value, which is separated by a name-value separator from the name part. If the
+value part is missing, the option argument is assumed to be a boolean option with a &apos;true&apos; value.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Console.PlainArgument.html">PlainArgument</a></h4>
+      <section><p>Defines a class that represents a plain argument. At the command line level, plain arguments are handled as
+individual arguments without any parsing. An argument is assumed to be a plain argument if it doesn’t begin
+with a reserved prefix and it’s not a successor of an argument name argument.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2017-2018 Juha Lähteenmäki<br>Generated by <b>DocFX</b></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

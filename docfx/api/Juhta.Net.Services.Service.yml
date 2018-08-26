@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Service.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Service
     path: ../src/Juhta.Net.Services/Service.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Service.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateInstance
     path: ../src/Juhta.Net.Services/Service.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Service.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ClassId
     path: ../src/Juhta.Net.Services/Service.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Service.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParams
     path: ../src/Juhta.Net.Services/Service.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Service.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Id
     path: ../src/Juhta.Net.Services/Service.cs

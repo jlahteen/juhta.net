@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicConfigurableLibrary
     path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateLibraryState
     path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs

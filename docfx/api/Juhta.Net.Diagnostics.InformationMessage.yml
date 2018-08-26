@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/InformationMessage.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InformationMessage
     path: ../src/Juhta.Net/Diagnostics/InformationMessage.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/InformationMessage.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/InformationMessage.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/InformationMessage.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/InformationMessage.cs

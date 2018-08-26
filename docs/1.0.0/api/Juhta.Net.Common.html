@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Juhta.Net.Common
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Juhta.Net.Common
+   ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Juhta.Net.Common">
+  
+  <h1 id="Juhta_Net_Common" data-uid="Juhta.Net.Common" class="text-break">Namespace Juhta.Net.Common
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Juhta.Net.Common.BlockNotImplementedException.html">BlockNotImplementedException</a></h4>
+      <section><p>This exception will be thrown when the execution flow enters a block that is not implemented.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.ClassId.html">ClassId</a></h4>
+      <section><p><p>Defines a class identifier. A class identifier is a localhost file URI whose fragment part specifies a
+class name in a referenced library file.</p>
+<p>The fragment part can begin with a &apos;~.&apos; prefix indicating that the library file name specifies the root
+namespace of the class. If a library path is not absolute, the path will be filled according to the current
+directory.</p>
+<p>For example, the following values are valid class identifiers:</p>
+<ul><li><code>MyLibrary.dll#~.MyClass</code></li><li><code>file:///MyLibrary.dll#~.MyClass</code></li><li><code>file:///C:\MyDirectory\MyLibrary.dll#~.MyClass</code></li><li><code>file:///C:\MyDirectory\MyLibrary.dll#MyNamespace.MyClass</code></li></ul></p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.CommonMessages.html">CommonMessages</a></h4>
+      <section><p>A static class that defines the common diagnostic messages.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.ConfigException.html">ConfigException</a></h4>
+      <section><p>This exception will be thrown in a situation where execution cannot be continued for a reason that somehow
+depends on the currently effective configuration. This exception should not be thrown unless the error is
+avoidable by changing the configuration.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.InterfaceNotSupportedException.html">InterfaceNotSupportedException</a></h4>
+      <section><p>This exception will be thrown when an object doesn&apos;t support a required interface.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.InternalException.html">InternalException</a></h4>
+      <section><p>This exception can be thrown when an error occurs in an application but no technical details are wanted to be
+exposed to the caller.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.InvalidConfigFileException.html">InvalidConfigFileException</a></h4>
+      <section><p>This exception will be thrown when a configuration file doesn&apos;t pass (schema) validation.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.InvalidConfigValueException.html">InvalidConfigValueException</a></h4>
+      <section><p>This exception will be thrown when a configuration file has passed (schema) validation but in further analysis
+an invalid configuration value is encountered.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.ObjectFactory.html">ObjectFactory</a></h4>
+      <section><p>A static class that provides services for creating instances of such classes whose type is not directly
+referencable in the current programming context. A typical scenario for using this class is to create instances
+of classes that are not available at the build time but are known to implement a specific interface.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.ObjectQueue-1.html">ObjectQueue&lt;T&gt;</a></h4>
+      <section><p>Represents a first-in, first-out queue for a generic object type. The queue implemented by this class is
+thread-safe, and it also blocks readers in case of an empty queue. This queue has especially been designed to
+act as a work queue in multi-threaded applications.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.OperatingSystemInfo.html">OperatingSystemInfo</a></h4>
+      <section><p>Defines a static class that provides information about the underlying operating system.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.RegexPatterns.html">RegexPatterns</a></h4>
+      <section><p>A static class that defines regular expression patterns.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.Singleton-1.html">Singleton&lt;T&gt;</a></h4>
+      <section><p>Defines an abstract base class for singleton classes.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.StatementNotImplementedException.html">StatementNotImplementedException</a></h4>
+      <section><p>This exception will be thrown when the execution flow enters a statement that is not implemented.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.SymmetricCipher.html">SymmetricCipher</a></h4>
+      <section><p>Defines a class that simplifies the use of symmetric cryptographic service providers.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.TimestampFactory.html">TimestampFactory</a></h4>
+      <section><p>Defines a class for generating unique 21-digit timestamps. Timestamps will be returned in Coordinated Universal
+Time (UTC). An example of a timestamp is &apos;201805282026441234567&apos;, generated on May 28, 2018 at 20:26:44.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.UnexpectedException.html">UnexpectedException</a></h4>
+      <section><p>This exception will be thrown when an unexpected error occurs.</p>
+</section>
+      <h4><a class="xref" href="Juhta.Net.Common.Utf8FileWriter.html">Utf8FileWriter</a></h4>
+      <section><p>Defines a writer class for UTF8-encoded files.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2017-2018 Juha Lähteenmäki<br>Generated by <b>DocFX</b></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
