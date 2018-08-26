@@ -1,8 +1,6 @@
 
-Juhta.NET
-
-Release Steps for a new Version
-===============================
+Steps for Releasing a New Version of Juhta.NET
+==============================================
 
 - Update the project settings for all projects excluding test and sample projects:
   - Version
@@ -25,8 +23,16 @@ Release Steps for a new Version
 
 - VSTS: run final tests for the release branch if necessary
 
-- GitHub: merge the release branch into master and develop
+- GitHub: draft a new release
 
-- GitHub: make a release (it's a good idea to prepare a release with a draft release, e.g. release notes)
+- GitHub: merge the release branch into the master branch
 
-- VSTS: make a NuGet release
+- VSTS: run Juhta.NET Release Build
+
+- VSTS: run Juhta.NET NuGet Release
+
+- GitHub: publish the drafted release
+
+- GitHub: merge the release branch into the develop branch
+
+Congratulations! New version of Juhta.NET is out!
