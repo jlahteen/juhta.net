@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: FrameworkConfig
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateNamespaceManager
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedCommonConfigSchema
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigSchema
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigSchema
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetLibraryConfigXmlns
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommonConfigSchemaFileName
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -335,7 +335,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommonConfigSchemaFileNamespace
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommonConfigSchemaVersion
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs
@@ -413,7 +413,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkConfig.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: RootXmlns
     path: ../src/Juhta.Net/Framework/FrameworkConfig.cs

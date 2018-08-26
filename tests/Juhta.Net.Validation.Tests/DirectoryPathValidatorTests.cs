@@ -1,6 +1,7 @@
 ﻿
 using Juhta.Net.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Juhta.Net.Validation.Tests
 {
@@ -47,11 +48,29 @@ namespace Juhta.Net.Validation.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidDirectoryPath_EmptyDirectoryPath_ShouldThrowValidationException()
+        {
+            DirectoryPathValidator validator = new DirectoryPathValidator();
+
+            validator.Validate("");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
         public void Validate_InvalidDirectoryPath_IllegalCharacterInDirectoryName_ShouldThrowValidationException()
         {
             DirectoryPathValidator filePathValidator = new DirectoryPathValidator();
 
             filePathValidator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDocX"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Validate_InvalidDirectoryPath_NullDirectoryPath_ShouldThrowValidationException()
+        {
+            DirectoryPathValidator validator = new DirectoryPathValidator();
+
+            validator.Validate(null);
         }
 
         [TestMethod]

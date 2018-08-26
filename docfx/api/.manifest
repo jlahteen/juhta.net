@@ -349,7 +349,7 @@
   "Juhta.Net.Framework.FrameworkLibraryType.Validation": "Juhta.Net.Framework.FrameworkLibraryType.yml",
   "Juhta.Net.Helpers": "Juhta.Net.Helpers.yml",
   "Juhta.Net.Helpers.ArgumentHelper": "Juhta.Net.Helpers.ArgumentHelper.yml",
-  "Juhta.Net.Helpers.ArgumentHelper.CheckNotNull(System.String,System.Object)": "Juhta.Net.Helpers.ArgumentHelper.yml",
+  "Juhta.Net.Helpers.ArgumentHelper.CheckNull(System.String,System.Object)": "Juhta.Net.Helpers.ArgumentHelper.yml",
   "Juhta.Net.Helpers.ArgumentHelper.CheckValue(System.String,System.String,System.String)": "Juhta.Net.Helpers.ArgumentHelper.yml",
   "Juhta.Net.LibraryManagement": "Juhta.Net.LibraryManagement.yml",
   "Juhta.Net.LibraryManagement.DynamicLibraryHandleBase": "Juhta.Net.LibraryManagement.DynamicLibraryHandleBase.yml",

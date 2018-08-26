@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -24,11 +24,11 @@ namespace Juhta.Net.Helpers
         #region Public Methods
 
         /// <summary>
-        /// Checks that a parameter value is not null.
+        /// Checks whether a parameter value is null, and if so, throws an <see cref="ArgumentNullException"/>.
         /// </summary>
         /// <param name="paramName">Specifies a parameter name.</param>
         /// <param name="paramValue">Specifies a parameter value.</param>
-        public static void CheckNotNull(string paramName, object paramValue)
+        public static void CheckNull(string paramName, object paramValue)
         {
             StackFrame caller = new StackFrame(1);
 
@@ -37,7 +37,8 @@ namespace Juhta.Net.Helpers
         }
 
         /// <summary>
-        /// Checks that a parameter value conforms to a regex pattern.
+        /// Checks whether a parameter value conforms to a regex pattern, and if it doesn't, throws an
+        /// <see cref="ArgumentException"/>.
         /// </summary>
         /// <param name="paramName">Specifies a parameter name.</param>
         /// <param name="paramValue">Specifies a parameter value.</param>
@@ -46,7 +47,7 @@ namespace Juhta.Net.Helpers
         {
             StackFrame caller = new StackFrame(1);
 
-            CheckNotNull(paramName, paramValue);
+            CheckNull(paramName, paramValue);
 
             if (!Regex.IsMatch(paramValue, regexPattern))
                 throw new ArgumentException(CommonMessages.Error005.FormatMessage(paramName, GetCallingMethod(caller), paramValue, regexPattern));

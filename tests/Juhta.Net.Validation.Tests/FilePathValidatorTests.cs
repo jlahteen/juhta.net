@@ -1,6 +1,7 @@
 ﻿
 using Juhta.Net.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Juhta.Net.Validation.Tests
 {
@@ -47,6 +48,15 @@ namespace Juhta.Net.Validation.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ValidationException))]
+        public void Validate_InvalidFilePath_EmptyFilePath_ShouldThrowValidationException()
+        {
+            FilePathValidator validator = new FilePathValidator();
+
+            validator.Validate("");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException))]
         public void Validate_InvalidFilePath_FileNameEndsWithDot_ShouldThrowValidationException()
         {
             FilePathValidator validator = new FilePathValidator();
@@ -79,6 +89,15 @@ namespace Juhta.Net.Validation.Tests
             FilePathValidator validator = new FilePathValidator();
 
             validator.Validate(ToOSPath(@"C:\My Documents\Shopping\MyDXoc.docx"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Validate_InvalidFilePath_NullFilePath_ShouldThrowValidationException()
+        {
+            FilePathValidator validator = new FilePathValidator();
+
+            validator.Validate(null);
         }
 
         [TestMethod]

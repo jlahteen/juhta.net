@@ -8,6 +8,8 @@ using System.Text;
 
 namespace AppXLibrary.Cloning
 {
+    #if NET462
+
     public static class Clone
     {
         #region Public Methods
@@ -80,4 +82,6 @@ namespace AppXLibrary.Cloning
 
         #endregion
     }
+
+    #endif
 }

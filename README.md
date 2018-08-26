@@ -59,10 +59,10 @@ Below is the future roadmap for upcoming versions. Please note that the upcoming
 
 | Version              | Schedule | What's New
 |----------------------|----------|-----------
-| Juhta.NET 1.0.0      | Q3 2018  | Unit tests will also pass on Linux and MacOS
-| Juhta.NET 1.1.0      | Q4 2018  | Juhta.Net.Diagnostics library included
-| Juhta.NET 1.2.0      | Q4 2018  | Juhta.Net.WebApi library included
-| Juhta.NET 1.3.0      | Q4 2018  | Juhta.Net.Processing library included
+| Juhta.NET 1.1.0      | Q3 2018  | Juhta.Net.WebApi.Exceptions library included
+| Juhta.NET 1.2.0      | Q3 2018  | Juhta.Net.Authorization library included
+| Juhta.NET 1.3.0      | Q4 2018  | Juhta.Net.Diagnostics library included
+| Juhta.NET 1.4.0      | Q4 2018  | Juhta.Net.Processing library included
 
 ## Feedback
 

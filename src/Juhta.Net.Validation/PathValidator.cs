@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -78,11 +78,18 @@ namespace Juhta.Net.Validation
         protected bool IsValidPath(string value, PathType pathType)
         {
             int i = 0;
-            string[] parts = value.Split(new char[]{Path.DirectorySeparatorChar}, StringSplitOptions.None);
+            string[] parts;
 
-            if (OperatingSystemInfo.IsWindows)
-                if (Regex.IsMatch(parts[0], "^[A-Za-z]:$"))
-                    i++;
+            if (String.IsNullOrWhiteSpace(value))
+                return(false);
+
+            parts = value.Split(new char[]{Path.DirectorySeparatorChar}, StringSplitOptions.None);
+
+            if (OperatingSystemInfo.IsWindows && Regex.IsMatch(parts[0], "^[A-Za-z]:$"))
+                i++;
+
+            else if (parts[0] == String.Empty)
+                i++;
 
             for (; i < parts.Length; i++)
                 if (i < parts.Length - 1)

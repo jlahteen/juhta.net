@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkInfo.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: FrameworkInfo
     path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkInfo.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: BinDirectory
     path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkInfo.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Copyright
     path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkInfo.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: FrameworkName
     path: ../src/Juhta.Net/Framework/FrameworkInfo.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/FrameworkInfo.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: RootNamespace
     path: ../src/Juhta.Net/Framework/FrameworkInfo.cs

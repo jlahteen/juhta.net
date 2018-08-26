@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: AssemblyExtensions
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetCompany
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetCopyright
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetDescription
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetDirectory
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetFileName
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetFileNameWithoutExtension
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetProduct
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetProductVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -432,7 +432,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetTitle
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -477,7 +477,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetVersion
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -522,7 +522,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs
@@ -574,7 +574,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AssemblyExtensions.cs
-      branch: release/v1.0.0-rc2
+      branch: release/v1.0.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LoadEmbeddedResourceFile
     path: ../src/Juhta.Net/Extensions/AssemblyExtensions.cs

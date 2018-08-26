@@ -1,6 +1,6 @@
 
 //
-// Juhta.NET, Copyright (c) 2017 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -89,7 +89,7 @@ namespace Juhta.Net.Extensions
 
             if (attributeNames != null)
             {
-                ArgumentHelper.CheckNotNull(nameof(attributeValues), attributeValues);
+                ArgumentHelper.CheckNull(nameof(attributeValues), attributeValues);
 
                 if (attributeNames.Length != attributeValues.Length)
                     throw new ArgumentException(CommonMessages.Error013.FormatMessage("attributeNames", "attributeValues"));
