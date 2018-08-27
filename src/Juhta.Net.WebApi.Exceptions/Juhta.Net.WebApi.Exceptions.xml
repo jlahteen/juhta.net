@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Juhta.Net.WebApi.Exceptions</name>
+    </assembly>
+    <members>
+        <member name="T:Juhta.Net.WebApi.Exceptions.BadRequestException">
+            <summary>
+            Defines an exception class for the HTTP error Bad Request.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.BadRequestException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.BadRequestException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ClientFaultException">
+            <summary>
+            Defines an abstract base class for the client fault Web API exceptions.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientFaultException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientFaultException.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ForbiddenException">
+            <summary>
+            Defines an exception class for the HTTP error Forbidden.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ForbiddenException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ForbiddenException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.MethodNotAllowedException">
+            <summary>
+            Defines an exception class for the HTTP error Method Not Allowed.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.MethodNotAllowedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.MethodNotAllowedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerFaultException">
+            <summary>
+            Defines an abstract base class for the server fault Web API exceptions.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerFaultException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerFaultException.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.UnauthorizedException">
+            <summary>
+            Defines an exception class for the HTTP error Unauthorized.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UnauthorizedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.WebApiException">
+            <summary>
+            Defines an abstract base class for the Web API exceptions.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.HttpStatusCode">
+            <summary>
+            Gets the HTTP status code related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_httpStatusCode">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.HttpStatusCode"/> property.
+            </summary>
+        </member>
+    </members>
+</doc>
