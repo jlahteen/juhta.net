@@ -38,6 +38,38 @@
             <param name="httpStatusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ConflictException">
+            <summary>
+            Defines an exception class for the HTTP error Conflict.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ConflictException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ConflictException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ExpectationFailedException">
+            <summary>
+            Defines an exception class for the HTTP error Expectation Failed.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ExpectationFailedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ExpectationFailedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ForbiddenException">
             <summary>
             Defines an exception class for the HTTP error Forbidden.
@@ -54,6 +86,38 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.GoneException">
+            <summary>
+            Defines an exception class for the HTTP error Gone.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.GoneException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.GoneException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.LengthRequiredException">
+            <summary>
+            Defines an exception class for the HTTP error Length Required.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.LengthRequiredException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.LengthRequiredException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.MethodNotAllowedException">
             <summary>
             Defines an exception class for the HTTP error Method Not Allowed.
@@ -65,6 +129,134 @@
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.MethodNotAllowedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.NotAcceptableException">
+            <summary>
+            Defines an exception class for the HTTP error Not Acceptable.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.NotAcceptableException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.NotAcceptableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.NotFoundException">
+            <summary>
+            Defines an exception class for the HTTP error Not Found.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.NotFoundException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.NotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException">
+            <summary>
+            Defines an exception class for the HTTP error Payload Too Large.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.PreconditionFailedException">
+            <summary>
+            Defines an exception class for the HTTP error Precondition Failed.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PreconditionFailedException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PreconditionFailedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ProxyAuthenticationRequiredException">
+            <summary>
+            Defines an exception class for the HTTP error Proxy Authentication Required.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ProxyAuthenticationRequiredException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ProxyAuthenticationRequiredException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException">
+            <summary>
+            Defines an exception class for the HTTP error Requested Range Not Satisfiable.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.RequestTimeoutException">
+            <summary>
+            Defines an exception class for the HTTP error Request Timeout.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestTimeoutException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestTimeoutException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.RequestUriTooLongException">
+            <summary>
+            Defines an exception class for the HTTP error Request URI Too Long.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestUriTooLongException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestUriTooLongException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -99,6 +291,22 @@
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.UnsupportedMediaTypeException">
+            <summary>
+            Defines an exception class for the HTTP error Unsupported Media Type.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UnsupportedMediaTypeException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UnsupportedMediaTypeException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
