@@ -166,22 +166,6 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException">
-            <summary>
-            Defines an exception class for the HTTP error Payload Too Large.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException.#ctor">
-            <summary>
-            Initializes a new instance.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.PayloadTooLargeException.#ctor(System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.PreconditionFailedException">
             <summary>
             Defines an exception class for the HTTP error Precondition Failed.
@@ -214,17 +198,33 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.RequestedRangeNotSatisfiableException">
             <summary>
             Defines an exception class for the HTTP error Requested Range Not Satisfiable.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestedRangeNotSatisfiableException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.RangeNotSatisfiableException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestedRangeNotSatisfiableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.RequestEntityTooLargeException">
+            <summary>
+            Defines an exception class for the HTTP error Request Entity Too Large.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestEntityTooLargeException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.RequestEntityTooLargeException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -307,6 +307,22 @@
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.UnsupportedMediaTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.UpgradeRequiredException">
+            <summary>
+            Defines an exception class for the HTTP error Upgrade Required.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UpgradeRequiredException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.UpgradeRequiredException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>

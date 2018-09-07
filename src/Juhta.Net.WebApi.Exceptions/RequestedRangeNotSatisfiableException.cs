@@ -13,21 +13,21 @@ namespace Juhta.Net.WebApi.Exceptions
     /// <summary>
     /// Defines an exception class for the HTTP error Requested Range Not Satisfiable.
     /// </summary>
-    public class RangeNotSatisfiableException : ClientErrorException
+    public class RequestedRangeNotSatisfiableException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public RangeNotSatisfiableException() : base(HttpStatusCode.RequestedRangeNotSatisfiable)
+        public RequestedRangeNotSatisfiableException() : base(HttpStatusCode.RequestedRangeNotSatisfiable)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public RangeNotSatisfiableException(string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message)
+        public RequestedRangeNotSatisfiableException(string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message)
         {}
 
         #endregion

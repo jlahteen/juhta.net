@@ -11,23 +11,23 @@ using System.Net;
 namespace Juhta.Net.WebApi.Exceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Payload Too Large.
+    /// Defines an exception class for the HTTP error Upgrade Required.
     /// </summary>
-    public class PayloadTooLargeException : ClientErrorException
+    public class UpgradeRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public PayloadTooLargeException() : base(HttpStatusCode.RequestEntityTooLarge)
+        public UpgradeRequiredException() : base(HttpStatusCode.UpgradeRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public PayloadTooLargeException(string message) : base(HttpStatusCode.RequestEntityTooLarge, message)
+        public UpgradeRequiredException(string message) : base(HttpStatusCode.UpgradeRequired, message)
         {}
 
         #endregion
