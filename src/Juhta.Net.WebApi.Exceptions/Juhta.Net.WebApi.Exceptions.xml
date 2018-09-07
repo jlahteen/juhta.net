@@ -246,6 +246,22 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.PaymentRequiredException">
+            <summary>
+            Defines an exception class for the HTTP error Payment Required.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PaymentRequiredException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.PaymentRequiredException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.PreconditionFailedException">
             <summary>
             Defines an exception class for the HTTP error Precondition Failed.
