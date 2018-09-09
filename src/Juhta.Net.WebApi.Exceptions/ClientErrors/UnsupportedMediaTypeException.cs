@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Payment Required.
+    /// Defines an exception class for the HTTP error Unsupported Media Type.
     /// </summary>
-    public class PaymentRequiredException : ClientErrorException
+    public class UnsupportedMediaTypeException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public PaymentRequiredException() : base(HttpStatusCode.PaymentRequired)
+        public UnsupportedMediaTypeException() : base(HttpStatusCode.UnsupportedMediaType)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public PaymentRequiredException(string message) : base(HttpStatusCode.PaymentRequired, message)
+        public UnsupportedMediaTypeException(string message) : base(HttpStatusCode.UnsupportedMediaType, message)
         {}
 
         #endregion

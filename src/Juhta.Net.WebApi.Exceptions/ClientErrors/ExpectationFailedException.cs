@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Bad Gateway.
+    /// Defines an exception class for the HTTP error Expectation Failed.
     /// </summary>
-    public class BadGatewayException : ServerErrorException
+    public class ExpectationFailedException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public BadGatewayException() : base(HttpStatusCode.BadGateway)
+        public ExpectationFailedException() : base(HttpStatusCode.ExpectationFailed)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public BadGatewayException(string message) : base(HttpStatusCode.BadGateway, message)
+        public ExpectationFailedException(string message) : base(HttpStatusCode.ExpectationFailed, message)
         {}
 
         #endregion

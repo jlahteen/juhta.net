@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Expectation Failed.
+    /// Defines an exception class for the HTTP error Unauthorized.
     /// </summary>
-    public class ExpectationFailedException : ClientErrorException
+    public class UnauthorizedException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public ExpectationFailedException() : base(HttpStatusCode.ExpectationFailed)
+        public UnauthorizedException() : base(HttpStatusCode.Unauthorized)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public ExpectationFailedException(string message) : base(HttpStatusCode.ExpectationFailed, message)
+        public UnauthorizedException(string message) : base(HttpStatusCode.Unauthorized, message)
         {}
 
         #endregion

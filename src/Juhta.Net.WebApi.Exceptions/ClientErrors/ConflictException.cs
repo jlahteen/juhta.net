@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Not Found.
+    /// Defines an exception class for the HTTP error Conflict.
     /// </summary>
-    public class NotFoundException : ClientErrorException
+    public class ConflictException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public NotFoundException() : base(HttpStatusCode.NotFound)
+        public ConflictException() : base(HttpStatusCode.Conflict)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public NotFoundException(string message) : base(HttpStatusCode.NotFound, message)
+        public ConflictException(string message) : base(HttpStatusCode.Conflict, message)
         {}
 
         #endregion

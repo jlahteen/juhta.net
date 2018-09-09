@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Unsupported Media Type.
+    /// Defines an exception class for the HTTP error Upgrade Required.
     /// </summary>
-    public class UnsupportedMediaTypeException : ClientErrorException
+    public class UpgradeRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public UnsupportedMediaTypeException() : base(HttpStatusCode.UnsupportedMediaType)
+        public UpgradeRequiredException() : base(HttpStatusCode.UpgradeRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public UnsupportedMediaTypeException(string message) : base(HttpStatusCode.UnsupportedMediaType, message)
+        public UpgradeRequiredException(string message) : base(HttpStatusCode.UpgradeRequired, message)
         {}
 
         #endregion

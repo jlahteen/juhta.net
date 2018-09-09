@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ServerErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Upgrade Required.
+    /// Defines an exception class for the HTTP error Internal Server Error.
     /// </summary>
-    public class UpgradeRequiredException : ClientErrorException
+    public class InternalServerErrorException : ServerErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public UpgradeRequiredException() : base(HttpStatusCode.UpgradeRequired)
+        public InternalServerErrorException() : base(HttpStatusCode.InternalServerError)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public UpgradeRequiredException(string message) : base(HttpStatusCode.UpgradeRequired, message)
+        public InternalServerErrorException(string message) : base(HttpStatusCode.InternalServerError, message)
         {}
 
         #endregion

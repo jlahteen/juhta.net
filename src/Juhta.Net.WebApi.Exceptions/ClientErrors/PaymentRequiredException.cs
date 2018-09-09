@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Internal Server Error.
+    /// Defines an exception class for the HTTP error Payment Required.
     /// </summary>
-    public class InternalServerErrorException : ServerErrorException
+    public class PaymentRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public InternalServerErrorException() : base(HttpStatusCode.InternalServerError)
+        public PaymentRequiredException() : base(HttpStatusCode.PaymentRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public InternalServerErrorException(string message) : base(HttpStatusCode.InternalServerError, message)
+        public PaymentRequiredException(string message) : base(HttpStatusCode.PaymentRequired, message)
         {}
 
         #endregion

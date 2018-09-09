@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Request Entity Too Large.
+    /// Defines an exception class for the HTTP error Method Not Allowed.
     /// </summary>
-    public class RequestEntityTooLargeException : ClientErrorException
+    public class MethodNotAllowedException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public RequestEntityTooLargeException() : base(HttpStatusCode.RequestEntityTooLarge)
+        public MethodNotAllowedException() : base(HttpStatusCode.MethodNotAllowed)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public RequestEntityTooLargeException(string message) : base(HttpStatusCode.RequestEntityTooLarge, message)
+        public MethodNotAllowedException(string message) : base(HttpStatusCode.MethodNotAllowed, message)
         {}
 
         #endregion

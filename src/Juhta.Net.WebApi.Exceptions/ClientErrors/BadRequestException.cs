@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Precondition Failed.
+    /// Defines an exception class for the HTTP error Bad Request.
     /// </summary>
-    public class PreconditionFailedException : ClientErrorException
+    public class BadRequestException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public PreconditionFailedException() : base(HttpStatusCode.PreconditionFailed)
+        public BadRequestException() : base(HttpStatusCode.BadRequest)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public PreconditionFailedException(string message) : base(HttpStatusCode.PreconditionFailed, message)
+        public BadRequestException(string message) : base(HttpStatusCode.BadRequest, message)
         {}
 
         #endregion

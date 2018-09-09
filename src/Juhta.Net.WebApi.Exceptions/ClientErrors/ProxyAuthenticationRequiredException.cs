@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Unauthorized.
+    /// Defines an exception class for the HTTP error Proxy Authentication Required.
     /// </summary>
-    public class UnauthorizedException : ClientErrorException
+    public class ProxyAuthenticationRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public UnauthorizedException() : base(HttpStatusCode.Unauthorized)
+        public ProxyAuthenticationRequiredException() : base(HttpStatusCode.ProxyAuthenticationRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public UnauthorizedException(string message) : base(HttpStatusCode.Unauthorized, message)
+        public ProxyAuthenticationRequiredException(string message) : base(HttpStatusCode.ProxyAuthenticationRequired, message)
         {}
 
         #endregion

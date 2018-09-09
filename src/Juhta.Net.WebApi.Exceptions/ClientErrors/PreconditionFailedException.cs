@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Service Unavailable.
+    /// Defines an exception class for the HTTP error Precondition Failed.
     /// </summary>
-    public class ServiceUnavailableException : ServerErrorException
+    public class PreconditionFailedException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public ServiceUnavailableException() : base(HttpStatusCode.ServiceUnavailable)
+        public PreconditionFailedException() : base(HttpStatusCode.PreconditionFailed)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public ServiceUnavailableException(string message) : base(HttpStatusCode.ServiceUnavailable, message)
+        public PreconditionFailedException(string message) : base(HttpStatusCode.PreconditionFailed, message)
         {}
 
         #endregion

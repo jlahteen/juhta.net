@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ServerErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Not Implemented.
+    /// Defines an exception class for the HTTP error Gateway Timeout.
     /// </summary>
-    public class NotImplementedException : ServerErrorException
+    public class GatewayTimeoutException : ServerErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public NotImplementedException() : base(HttpStatusCode.NotImplemented)
+        public GatewayTimeoutException() : base(HttpStatusCode.GatewayTimeout)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public NotImplementedException(string message) : base(HttpStatusCode.NotImplemented, message)
+        public GatewayTimeoutException(string message) : base(HttpStatusCode.GatewayTimeout, message)
         {}
 
         #endregion

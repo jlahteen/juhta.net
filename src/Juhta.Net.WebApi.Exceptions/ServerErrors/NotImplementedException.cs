@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ServerErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error HTTP Version Not Supported.
+    /// Defines an exception class for the HTTP error Not Implemented.
     /// </summary>
-    public class HttpVersionNotSupportedException : ServerErrorException
+    public class NotImplementedException : ServerErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public HttpVersionNotSupportedException() : base(HttpStatusCode.HttpVersionNotSupported)
+        public NotImplementedException() : base(HttpStatusCode.NotImplemented)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public HttpVersionNotSupportedException(string message) : base(HttpStatusCode.HttpVersionNotSupported, message)
+        public NotImplementedException(string message) : base(HttpStatusCode.NotImplemented, message)
         {}
 
         #endregion

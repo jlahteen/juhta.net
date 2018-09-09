@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Request Timeout.
+    /// Defines an exception class for the HTTP error Requested Range Not Satisfiable.
     /// </summary>
-    public class RequestTimeoutException : ClientErrorException
+    public class RequestedRangeNotSatisfiableException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public RequestTimeoutException() : base(HttpStatusCode.RequestTimeout)
+        public RequestedRangeNotSatisfiableException() : base(HttpStatusCode.RequestedRangeNotSatisfiable)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public RequestTimeoutException(string message) : base(HttpStatusCode.RequestTimeout, message)
+        public RequestedRangeNotSatisfiableException(string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message)
         {}
 
         #endregion

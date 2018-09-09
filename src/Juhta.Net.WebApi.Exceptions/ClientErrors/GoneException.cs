@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Bad Request.
+    /// Defines an exception class for the HTTP error Gone.
     /// </summary>
-    public class BadRequestException : ClientErrorException
+    public class GoneException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public BadRequestException() : base(HttpStatusCode.BadRequest)
+        public GoneException() : base(HttpStatusCode.Gone)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public BadRequestException(string message) : base(HttpStatusCode.BadRequest, message)
+        public GoneException(string message) : base(HttpStatusCode.Gone, message)
         {}
 
         #endregion

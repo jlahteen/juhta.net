@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Gone.
+    /// Defines an exception class for the HTTP error Not Found.
     /// </summary>
-    public class GoneException : ClientErrorException
+    public class NotFoundException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public GoneException() : base(HttpStatusCode.Gone)
+        public NotFoundException() : base(HttpStatusCode.NotFound)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public GoneException(string message) : base(HttpStatusCode.Gone, message)
+        public NotFoundException(string message) : base(HttpStatusCode.NotFound, message)
         {}
 
         #endregion

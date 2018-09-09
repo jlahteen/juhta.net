@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Method Not Allowed.
+    /// Defines an exception class for the HTTP error Length Required.
     /// </summary>
-    public class MethodNotAllowedException : ClientErrorException
+    public class LengthRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public MethodNotAllowedException() : base(HttpStatusCode.MethodNotAllowed)
+        public LengthRequiredException() : base(HttpStatusCode.LengthRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public MethodNotAllowedException(string message) : base(HttpStatusCode.MethodNotAllowed, message)
+        public LengthRequiredException(string message) : base(HttpStatusCode.LengthRequired, message)
         {}
 
         #endregion

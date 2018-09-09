@@ -8,12 +8,12 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an abstract base class for the server error Web API exceptions.
+    /// Defines an abstract base class for the client error Web API exceptions.
     /// </summary>
-    public abstract class ServerErrorException : WebApiException
+    public abstract class ClientErrorException : WebApiException
     {
         #region Protected Constructors
 
@@ -21,7 +21,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode)
+        protected ClientErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode)
         {}
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode, string message) : base(httpStatusCode, message)
+        protected ClientErrorException(HttpStatusCode httpStatusCode, string message) : base(httpStatusCode, message)
         {}
 
         #endregion

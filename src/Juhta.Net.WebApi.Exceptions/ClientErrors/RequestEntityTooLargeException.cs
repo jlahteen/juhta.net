@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Length Required.
+    /// Defines an exception class for the HTTP error Request Entity Too Large.
     /// </summary>
-    public class LengthRequiredException : ClientErrorException
+    public class RequestEntityTooLargeException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public LengthRequiredException() : base(HttpStatusCode.LengthRequired)
+        public RequestEntityTooLargeException() : base(HttpStatusCode.RequestEntityTooLarge)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public LengthRequiredException(string message) : base(HttpStatusCode.LengthRequired, message)
+        public RequestEntityTooLargeException(string message) : base(HttpStatusCode.RequestEntityTooLarge, message)
         {}
 
         #endregion

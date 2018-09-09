@@ -8,26 +8,26 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ServerErrors
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Requested Range Not Satisfiable.
+    /// Defines an exception class for the HTTP error Bad Gateway.
     /// </summary>
-    public class RequestedRangeNotSatisfiableException : ClientErrorException
+    public class BadGatewayException : ServerErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public RequestedRangeNotSatisfiableException() : base(HttpStatusCode.RequestedRangeNotSatisfiable)
+        public BadGatewayException() : base(HttpStatusCode.BadGateway)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public RequestedRangeNotSatisfiableException(string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message)
+        public BadGatewayException(string message) : base(HttpStatusCode.BadGateway, message)
         {}
 
         #endregion

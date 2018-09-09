@@ -8,7 +8,7 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions
+namespace Juhta.Net.WebApi.Exceptions.ClientErrors
 {
     /// <summary>
     /// Defines an exception class for the HTTP error Request URI Too Long.
