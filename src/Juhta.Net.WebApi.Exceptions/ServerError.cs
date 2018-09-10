@@ -6,19 +6,19 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions
 {
     /// <summary>
-    /// Defines a class for serializing instances of <see cref="ClientErrorException"/>.
+    /// Defines a class for serializing instances of <see cref="ServerErrorException"/>.
     /// </summary>
-    public abstract class ClientError : WebApiError
+    public abstract class ServerError : WebApiError
     {
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets the custom error identifier of the client error.
+        /// Gets or sets the exception stack of the server error.
         /// </summary>
-        public string ErrorId {get; set;}
+        public string ExceptionStack {get; set;}
 
         #endregion
     }

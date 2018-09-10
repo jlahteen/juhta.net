@@ -8,7 +8,7 @@
 
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ServerErrors
+namespace Juhta.Net.WebApi.Exceptions
 {
     /// <summary>
     /// Defines an abstract base class for the server error Web API exceptions.

@@ -4,6 +4,34 @@
         <name>Juhta.Net.WebApi.Exceptions</name>
     </assembly>
     <members>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ClientError">
+            <summary>
+            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.ErrorId">
+            <summary>
+            Gets or sets the custom error identifier of the client error.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrorException">
+            <summary>
+            Defines an abstract base class for the client error Web API exceptions.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException">
             <summary>
             Defines an exception class for the HTTP error Bad Request.
@@ -18,34 +46,6 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientError">
-            <summary>
-            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientErrorException"/>.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientError.ErrorId">
-            <summary>
-            Gets or sets the custom error identifier of the client error.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientErrorException">
-            <summary>
-            Defines an abstract base class for the client error Web API exceptions.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientErrorException.#ctor(System.Net.HttpStatusCode)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="httpStatusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException">
@@ -336,6 +336,34 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerError">
+            <summary>
+            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerError.ExceptionStack">
+            <summary>
+            Gets or sets the exception stack of the server error.
+            </summary>
+        </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorException">
+            <summary>
+            Defines an abstract base class for the server error Web API exceptions.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException">
             <summary>
             Defines an exception class for the HTTP error Bad Gateway.
@@ -414,34 +442,6 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="message">Specifies an error message.</param>
-        </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerError">
-            <summary>
-            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerErrorException"/>.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerError.ExceptionStack">
-            <summary>
-            Gets or sets the exception stack of the server error.
-            </summary>
-        </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerErrorException">
-            <summary>
-            Defines an abstract base class for the server error Web API exceptions.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerErrorException.#ctor(System.Net.HttpStatusCode)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServerErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="httpStatusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException">
