@@ -15,6 +15,18 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class ClientErrorException : WebApiException
     {
+        #region Public Properties
+
+        /// <summary>
+        /// Gets the custom defined identifier of the client error.
+        /// </summary>
+        public string ErrorId
+        {
+            get {return(m_errorId);}
+        }
+
+        #endregion
+
         #region Protected Constructors
 
         /// <summary>
@@ -31,6 +43,26 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="message">Specifies an error message.</param>
         protected ClientErrorException(HttpStatusCode httpStatusCode, string message) : base(httpStatusCode, message)
         {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="errorId">Specifies a custom defined identifier for the client error.</param>
+        protected ClientErrorException(HttpStatusCode httpStatusCode, string message, string errorId) : base(httpStatusCode, message)
+        {
+            m_errorId = errorId;
+        }
+
+        #endregion
+
+        #region Private Fields
+
+        /// <summary>
+        /// Stores the <see cref="ErrorId"/> property.
+        /// </summary>
+        private string m_errorId;
 
         #endregion
     }
