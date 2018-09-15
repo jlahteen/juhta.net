@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using System;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions.ClientErrors
@@ -26,8 +27,23 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        public NotFoundException(Enum errorId) : base(HttpStatusCode.BadRequest, null, errorId.ToString())
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
         /// <param name="message">Specifies an error message.</param>
         public NotFoundException(string message) : base(HttpStatusCode.NotFound, message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="message">Specifies an error message.</param>
+        public NotFoundException(Enum errorId, string message) : base(HttpStatusCode.BadRequest, message, errorId.ToString())
         {}
 
         #endregion
