@@ -6,46 +6,55 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Text;
-using Juhta.Net.Extensions;
-using System.IO;
 
 namespace Juhta.Net.Helpers
 {
     /// <summary>
-    /// TODO
+    /// Defines a static helper class that facilitates getting call stacks through <see cref="StackTrace"/>.
     /// </summary>
-    public static class StackFrameHelper
+    public static class StackTraceHelper
     {
         #region Public Methods
 
         /// <summary>
-        /// TODO
+        /// Gets the current call stack.
         /// </summary>
-        /// <returns></returns>
-        public static List<string> GetCallStack()
+        /// <param name="skipFrames">Specifies the number of stack frames to skip.</param>
+        /// <returns>Returns an array of string each of which representing one line in the call stack from top to
+        /// bottom.</returns>
+        /// <remarks>If you want to ignore the first line in the call stack caused by the call to this method, pass 1
+        /// as a value of <paramref name="skipFrames"/>.</remarks>
+        public static string[] GetCallStack(int skipFrames)
         {
+            StackTrace stackTrace;
             StackFrame[] stackFrames;
-            StackTrace stackTrace = new StackTrace(0, true);
             MethodBase methodInfo;
             StringBuilder callStackLine = new StringBuilder();
+            ParameterInfo[] parameters;
             List<string> callStack = new List<string>();
-
-            ParameterInfo[] parameterInfoArray;
 
             try
             {
+                // Get the stack frames
+
+                stackTrace = new StackTrace(skipFrames, true);
+
                 stackFrames = stackTrace.GetFrames();
 
-                for (int i = 1; i < stackFrames.Length; i++)
+                for (int i = 0; i < stackFrames.Length; i++)
                 {
-                    methodInfo = stackFrames[i].GetMethod();
-
                     callStackLine.Append("at ");
+
+                    // Append the full method name
+
+                    methodInfo = stackFrames[i].GetMethod();
 
                     callStackLine.Append(methodInfo.DeclaringType.FullName + "." + stackFrames[i].GetMethod().Name);
 
@@ -56,24 +65,24 @@ namespace Juhta.Net.Helpers
 
                     callStackLine.Append("(");
 
-                    parameterInfoArray = methodInfo.GetParameters();
+                    parameters = methodInfo.GetParameters();
 
-                    for (int j = 0; j < parameterInfoArray.Length; j++)
+                    for (int j = 0; j < parameters.Length; j++)
                     {
                         // Append the parameter type
 
-                        callStackLine.Append(parameterInfoArray[j].ParameterType.Namespace + ".");
+                        callStackLine.Append(parameters[j].ParameterType.Namespace + ".");
 
-                        callStackLine.Append(parameterInfoArray[j].ParameterType.Name);
+                        callStackLine.Append(parameters[j].ParameterType.Name);
 
                         // Append the generic types if necessary
-                        AppendGenericTypes(callStackLine, parameterInfoArray[j].ParameterType.GenericTypeArguments);
+                        AppendGenericTypes(callStackLine, parameters[j].ParameterType.GenericTypeArguments);
 
                         // Append the parameter name
-                        callStackLine.Append(" " + parameterInfoArray[j].Name);
+                        callStackLine.Append(" " + parameters[j].Name);
 
                         // Append a comma if there are more parameters to come
-                        if (j < parameterInfoArray.Length - 1)
+                        if (j < parameters.Length - 1)
                             callStackLine.Append(", ");
                     }
 
@@ -82,7 +91,7 @@ namespace Juhta.Net.Helpers
                     // Append the assembly file name
                     callStackLine.Append(" in " + methodInfo.DeclaringType.Assembly.GetFileName());
 
-                    // Append the source reference if available
+                    // Append the source code reference if available
 
                     if (stackFrames[i].GetFileName() != null)
                     {
@@ -103,10 +112,10 @@ namespace Juhta.Net.Helpers
 
             catch (Exception)
             {
-                callStack.Add(LibraryMessages.Error001.GetMessage());
+                callStack.Add("<" + LibraryMessages.Error001.GetMessage() + ">");
             }
 
-            return(callStack);
+            return(callStack.ToArray());
         }
 
         #endregion
@@ -114,10 +123,11 @@ namespace Juhta.Net.Helpers
         #region Private Methods
 
         /// <summary>
-        /// todo
+        /// Appends a list of generic types to a call stack line.
         /// </summary>
-        /// <param name="callStackLine"></param>
-        /// <param name="genericTypes"></param>
+        /// <param name="callStackLine">Specifies a call stack line.</param>
+        /// <param name="genericTypes">Specifies an array of generic types. Can be null or an empty array in which case
+        /// the method returns immediately.</param>
         private static void AppendGenericTypes(StringBuilder callStackLine, Type[] genericTypes)
         {
             if (genericTypes == null || genericTypes.Length == 0)
@@ -125,16 +135,16 @@ namespace Juhta.Net.Helpers
 
             callStackLine.Append("<");
 
-            for (int j = 0; j < genericTypes.Length; j++)
+            for (int i = 0; i < genericTypes.Length; i++)
             {
-                callStackLine.Append(genericTypes[j].Namespace + ".");
+                callStackLine.Append(genericTypes[i].Namespace + ".");
 
-                callStackLine.Append(genericTypes[j].Name);
+                callStackLine.Append(genericTypes[i].Name);
 
-                if (genericTypes[j].IsGenericType)
-                    AppendGenericTypes(callStackLine, genericTypes[j].GetGenericArguments());
+                if (genericTypes[i].IsGenericType)
+                    AppendGenericTypes(callStackLine, genericTypes[i].GetGenericArguments());
 
-                if (j < genericTypes.Length - 1)
+                if (i < genericTypes.Length - 1)
                     callStackLine.Append(", ");
             }
 

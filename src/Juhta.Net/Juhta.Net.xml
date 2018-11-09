@@ -2501,6 +2501,29 @@
             <returns>Returns the full method name related to the specified <see cref="T:System.Diagnostics.StackFrame"/> object.</returns>
             <remarks>Full method name means a full type name plus a method name in this context.</remarks>
         </member>
+        <member name="T:Juhta.Net.Helpers.StackTraceHelper">
+            <summary>
+            Defines a static helper class that facilitates getting call stacks through <see cref="T:System.Diagnostics.StackTrace"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.Helpers.StackTraceHelper.GetCallStack(System.Int32)">
+            <summary>
+            Gets the current call stack.
+            </summary>
+            <param name="skipFrames">Specifies the number of stack frames to skip.</param>
+            <returns>Returns an array of string each of which representing one line in the call stack from top to
+            bottom.</returns>
+            <remarks>If you want to ignore the first line in the call stack caused by the call to this method, pass 1
+            as a value of <paramref name="skipFrames"/>.</remarks>
+        </member>
+        <member name="M:Juhta.Net.Helpers.StackTraceHelper.AppendGenericTypes(System.Text.StringBuilder,System.Type[])">
+            <summary>
+            Appends a list of generic types to a call stack line.
+            </summary>
+            <param name="callStackLine">Specifies a call stack line.</param>
+            <param name="genericTypes">Specifies an array of generic types. Can be null or an empty array in which case
+            the method returns immediately.</param>
+        </member>
         <member name="T:Juhta.Net.LibraryMessages">
             <summary>
             A static class that defines the diagnostic messages for this library.
@@ -2509,6 +2532,11 @@
         <member name="F:Juhta.Net.LibraryMessages.MessageFactory">
             <summary>
             Gets the <see cref="T:Juhta.Net.Diagnostics.DiagnosticMessageFactory"/> instance for creating diagnostic messages.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.LibraryMessages.Error001">
+            <summary>
+            The call stack could not be listed.
             </summary>
         </member>
         <member name="F:Juhta.Net.LibraryMessages.Error024">

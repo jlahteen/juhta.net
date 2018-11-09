@@ -28,6 +28,11 @@ namespace Juhta.Net
         #region Internal Properties
 
         /// <summary>
+        /// The call stack could not be listed.
+        /// </summary>
+        internal static readonly ErrorMessage Error001 = MessageFactory.CreateErrorMessage("The call stack could not be listed.");
+
+        /// <summary>
         /// Separate library directory '{0}' cannot be specified to construct an instance of ClassId because the value
         /// '{1}' already contains a library directory part.
         /// </summary>
