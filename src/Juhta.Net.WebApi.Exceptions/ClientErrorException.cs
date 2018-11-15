@@ -15,10 +15,33 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class ClientErrorException : WebApiException
     {
+        #region Public Methods
+
+        /// <summary>
+        /// Converts this <see cref="ClientErrorException"/> object to a <see cref="ClientError"/> object.
+        /// </summary>
+        /// <returns>Returns the resulting <see cref="ClientError"/> object.</returns>
+        public ClientError ToClientError()
+        {
+            ClientError clientError = new ClientError();
+
+            clientError.CallStack = this.CallStack;
+
+            clientError.ErrorId = m_errorId;
+
+            clientError.ErrorMessage = this.ErrorMessage;
+
+            clientError.StatusCode = (int)this.StatusCode;
+
+            return(clientError);
+        }
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
-        /// Gets the custom defined identifier of the client error.
+        /// Gets the custom-defined identifier of the client error.
         /// </summary>
         public string ErrorId
         {
@@ -32,25 +55,34 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        protected ClientErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode)
+        /// <param name="clientError">Specifies a client error.</param>
+        protected ClientErrorException(ClientError clientError) : base(clientError)
+        {
+            m_errorId = clientError.ErrorId;
+        }
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
+        protected ClientErrorException(HttpStatusCode statusCode) : this(statusCode, null, null)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        protected ClientErrorException(HttpStatusCode httpStatusCode, string message) : base(httpStatusCode, message)
+        protected ClientErrorException(HttpStatusCode statusCode, string message) : this(statusCode, message, null)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        /// <param name="errorId">Specifies a custom defined identifier for the client error.</param>
-        protected ClientErrorException(HttpStatusCode httpStatusCode, string message, string errorId) : base(httpStatusCode, message)
+        /// <param name="errorId">Specifies a custom-defined identifier for the client error.</param>
+        protected ClientErrorException(HttpStatusCode statusCode, string message, string errorId) : base(statusCode, message)
         {
             m_errorId = errorId;
         }
