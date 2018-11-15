@@ -16,19 +16,19 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
+        /// Gets or sets the call stack of the Web API error.
+        /// </summary>
+        public string[] CallStack {get; set;}
+
+        /// <summary>
         /// Gets or sets the error message of the Web API error.
         /// </summary>
         public string ErrorMessage {get; set;}
 
         /// <summary>
-        /// Gets or sets the error source of the Web API error.
-        /// </summary>
-        public string ErrorSource {get; set;}
-
-        /// <summary>
         /// Gets or sets the HTTP status code of the Web API error.
         /// </summary>
-        public int HttpStatusCode {get; set;}
+        public int StatusCode {get; set;}
 
         #endregion
     }

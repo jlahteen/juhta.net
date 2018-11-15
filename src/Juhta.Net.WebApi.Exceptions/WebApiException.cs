@@ -6,7 +6,9 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using Juhta.Net.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions
@@ -19,11 +21,27 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
+        /// Gets the call stack related to this <see cref="WebApiException"/> instance.
+        /// </summary>
+        public string[] CallStack
+        {
+            get {return(m_callStack);}
+        }
+
+        /// <summary>
+        /// Gets the error message related to this <see cref="WebApiException"/> instance.
+        /// </summary>
+        public string ErrorMessage
+        {
+            get {return(m_errorMessage);}
+        }
+
+        /// <summary>
         /// Gets the HTTP status code related to this <see cref="WebApiException"/> instance.
         /// </summary>
-        public HttpStatusCode HttpStatusCode
+        public HttpStatusCode StatusCode
         {
-            get {return(m_httpStatusCode);}
+            get {return(m_statusCode);}
         }
 
         #endregion
@@ -33,18 +51,50 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        protected WebApiException(HttpStatusCode httpStatusCode) : this(httpStatusCode, null)
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
+        protected WebApiException(HttpStatusCode statusCode) : this(statusCode, null)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        /// <param name="message">Specifies an error message.</param>
-        protected WebApiException(HttpStatusCode httpStatusCode, string message) : base(message)
+        /// <param name="webApiError">Specifies a Web API error.</param>
+        protected WebApiException(WebApiError webApiError) : base(webApiError.ErrorMessage)
         {
-            m_httpStatusCode = httpStatusCode;
+            List<string> callStack = new List<string>();
+
+            if (webApiError.CallStack != null)
+                callStack.AddRange(webApiError.CallStack);
+
+            callStack.Add($"-- {this.GetType().FullName} deserialized and rethrown --");
+
+            callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1 + 1));
+
+            m_callStack = callStack.ToArray();
+
+            m_errorMessage = webApiError.ErrorMessage;
+
+            m_statusCode = (HttpStatusCode)webApiError.StatusCode;
+        }
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
+        /// <param name="message">Specifies an error message.</param>
+        protected WebApiException(HttpStatusCode statusCode, string message) : base(message)
+        {
+            List<string> callStack = new List<string>();
+
+            m_statusCode = statusCode;
+
+            m_errorMessage = message;
+
+            callStack.Add($"-- {this.GetType().FullName} thrown --");
+
+            callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1));
+
+            m_callStack = callStack.ToArray();
         }
 
         #endregion
@@ -52,9 +102,19 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Private Fields
 
         /// <summary>
-        /// Stores the <see cref="HttpStatusCode"/> property.
+        /// Stores the <see cref="CallStack"/> property.
         /// </summary>
-        private HttpStatusCode m_httpStatusCode;
+        private string[] m_callStack;
+
+        /// <summary>
+        /// Stores the <see cref="ErrorMessage"/> property.
+        /// </summary>
+        private string m_errorMessage;
+
+        /// <summary>
+        /// Stores the <see cref="StatusCode"/> property.
+        /// </summary>
+        private HttpStatusCode m_statusCode;
 
         #endregion
     }
