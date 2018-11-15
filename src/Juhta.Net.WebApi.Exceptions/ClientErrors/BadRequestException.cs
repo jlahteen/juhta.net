@@ -27,6 +27,13 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
+        public BadRequestException(ClientError clientError) : base(clientError)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
         /// <param name="errorId">Specifies a custom defined error identifier.</param>
         public BadRequestException(Enum errorId) : base(HttpStatusCode.BadRequest, null, errorId.ToString())
         {}
