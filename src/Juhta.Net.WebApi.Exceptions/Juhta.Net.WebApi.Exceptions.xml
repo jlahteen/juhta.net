@@ -793,6 +793,7 @@
             <summary>
             Gets the error type related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
+            <remarks>This property returns in practice the textual version of <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode"/>.</remarks>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode">
             <summary>
@@ -820,10 +821,10 @@
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.ToErrorType(System.Net.HttpStatusCode)">
             <summary>
-            Converts an HTTP status code to its textual equivalent.
+            Converts an HTTP status code to its textual version.
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
-            <returns>Returns the textual equivalent of <paramref name="statusCode"/>.</returns>
+            <returns>Returns the textual version of <paramref name="statusCode"/>.</returns>
         </member>
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_callStack">
             <summary>
