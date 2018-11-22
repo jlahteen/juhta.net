@@ -27,13 +27,6 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        public BadRequestException(ClientError clientError) : base(clientError)
-        {}
-
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
         /// <param name="errorId">Specifies a custom defined error identifier.</param>
         public BadRequestException(Enum errorId) : base(HttpStatusCode.BadRequest, null, errorId.ToString())
         {}
@@ -51,6 +44,17 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <param name="errorId">Specifies a custom defined error identifier.</param>
         /// <param name="message">Specifies an error message.</param>
         public BadRequestException(Enum errorId, string message) : base(HttpStatusCode.BadRequest, message, errorId.ToString())
+        {}
+
+        #endregion
+
+        #region Internal Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
+        internal BadRequestException(ClientError clientError) : base(clientError)
         {}
 
         #endregion
