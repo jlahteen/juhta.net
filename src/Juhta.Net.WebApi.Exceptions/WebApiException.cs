@@ -77,6 +77,12 @@ namespace Juhta.Net.WebApi.Exceptions
 
             callStack.Add($"-- {this.GetType().FullName} deserialized and rethrown --");
 
+            // We must ignore 5 call stack lines to get to the line where the actual throw operation happened
+            // - StackTraceHelper.GetCallStack()
+            // - This constructor
+            // - ClientErrorException or ServerErrorException constructor
+            // - Constructor of a class derived from ClientErrorException or ServerErrorException
+            // - ClientError.Throw() or ServerError.Throw()
             callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1 + 1));
 
             m_callStack = callStack.ToArray();
@@ -101,6 +107,11 @@ namespace Juhta.Net.WebApi.Exceptions
 
             callStack.Add($"-- {this.GetType().FullName} thrown --");
 
+            // We must ignore 4 call stack lines to get to the line where the actual throw operation happened
+            // - StackTraceHelper.GetCallStack()
+            // - This constructor
+            // - ClientErrorException or ServerErrorException constructor
+            // - Constructor of a class derived from ClientErrorException or ServerErrorException
             callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1));
 
             m_callStack = callStack.ToArray();
