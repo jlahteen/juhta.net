@@ -26,6 +26,12 @@ namespace Juhta.Net.WebApi.Exceptions
         public string ErrorMessage {get; set;}
 
         /// <summary>
+        /// Gets or sets the error type of the Web API error.
+        /// </summary>
+        /// <remarks>This property is in practice the textual version of the HTTP status code.</remarks>
+        public string ErrorType {get; set;}
+
+        /// <summary>
         /// Gets or sets the HTTP status code of the Web API error.
         /// </summary>
         public int StatusCode {get; set;}

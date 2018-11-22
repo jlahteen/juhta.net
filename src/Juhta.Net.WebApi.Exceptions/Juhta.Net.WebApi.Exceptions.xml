@@ -77,12 +77,6 @@
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.#ctor(System.Enum)">
             <summary>
             Initializes a new instance.
@@ -101,6 +95,12 @@
             </summary>
             <param name="errorId">Specifies a custom defined error identifier.</param>
             <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="clientError">Specifies a client error based on which to create the instance.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException">
             <summary>
@@ -763,6 +763,12 @@
             Gets or sets the error message of the Web API error.
             </summary>
         </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiError.ErrorType">
+            <summary>
+            Gets or sets the error type of the Web API error.
+            </summary>
+            <remarks>This property is in practice the textual version of the HTTP status code.</remarks>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiError.StatusCode">
             <summary>
             Gets or sets the HTTP status code of the Web API error.
@@ -781,6 +787,11 @@
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ErrorMessage">
             <summary>
             Gets the error message related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ErrorType">
+            <summary>
+            Gets the error type related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode">
@@ -806,6 +817,13 @@
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.ToErrorType(System.Net.HttpStatusCode)">
+            <summary>
+            Converts an HTTP status code to its textual equivalent.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <returns>Returns the textual equivalent of <paramref name="statusCode"/>.</returns>
         </member>
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_callStack">
             <summary>
