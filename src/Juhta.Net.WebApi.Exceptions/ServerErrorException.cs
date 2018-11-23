@@ -21,7 +21,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode)
+        protected ServerErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode, null)
         {}
 
         /// <summary>

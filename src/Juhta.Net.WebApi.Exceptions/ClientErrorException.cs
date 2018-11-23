@@ -67,16 +67,20 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
-        protected ClientErrorException(HttpStatusCode statusCode) : this(statusCode, null, null)
-        {}
+        protected ClientErrorException(HttpStatusCode statusCode) : base(statusCode, null)
+        {
+            m_errorId = null;
+        }
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        protected ClientErrorException(HttpStatusCode statusCode, string message) : this(statusCode, message, null)
-        {}
+        protected ClientErrorException(HttpStatusCode statusCode, string message) : base(statusCode, message)
+        {
+            m_errorId = null;
+        }
 
         /// <summary>
         /// Initializes a new instance.

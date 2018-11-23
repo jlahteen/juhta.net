@@ -800,12 +800,6 @@
             Gets the HTTP status code related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(System.Net.HttpStatusCode)">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="statusCode">Specifies an HTTP status code.</param>
-        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(Juhta.Net.WebApi.Exceptions.WebApiError)">
             <summary>
             Initializes a new instance.
