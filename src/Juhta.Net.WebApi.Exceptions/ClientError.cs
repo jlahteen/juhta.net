@@ -29,6 +29,60 @@ namespace Juhta.Net.WebApi.Exceptions
                 case (int)HttpStatusCode.BadRequest:
                     throw new BadRequestException(this);
 
+                case (int)HttpStatusCode.Conflict:
+                    throw new ConflictException(this);
+
+                case (int)HttpStatusCode.ExpectationFailed:
+                    throw new ExpectationFailedException(this);
+
+                case (int)HttpStatusCode.Forbidden:
+                    throw new ForbiddenException(this);
+
+                case (int)HttpStatusCode.Gone:
+                    throw new GoneException(this);
+
+                case (int)HttpStatusCode.LengthRequired:
+                    throw new LengthRequiredException(this);
+
+                case (int)HttpStatusCode.MethodNotAllowed:
+                    throw new MethodNotAllowedException(this);
+
+                case (int)HttpStatusCode.NotAcceptable:
+                    throw new NotAcceptableException(this);
+
+                case (int)HttpStatusCode.NotFound:
+                    throw new NotFoundException(this);
+
+                case (int)HttpStatusCode.PaymentRequired:
+                    throw new PaymentRequiredException(this);
+
+                case (int)HttpStatusCode.PreconditionFailed:
+                    throw new PreconditionFailedException(this);
+
+                case (int)HttpStatusCode.ProxyAuthenticationRequired:
+                    throw new ProxyAuthenticationRequiredException(this);
+
+                case (int)HttpStatusCode.RequestedRangeNotSatisfiable:
+                    throw new RequestedRangeNotSatisfiableException(this);
+
+                case (int)HttpStatusCode.RequestEntityTooLarge:
+                    throw new RequestEntityTooLargeException(this);
+
+                case (int)HttpStatusCode.RequestTimeout:
+                    throw new RequestTimeoutException(this);
+
+                case (int)HttpStatusCode.RequestUriTooLong:
+                    throw new RequestUriTooLongException(this);
+
+                case (int)HttpStatusCode.Unauthorized:
+                    throw new UnauthorizedException(this);
+
+                case (int)HttpStatusCode.UnsupportedMediaType:
+                    throw new UnsupportedMediaTypeException(this);
+
+                case (int)HttpStatusCode.UpgradeRequired:
+                    throw new UpgradeRequiredException(this);
+
                 default:
                     throw new BlockNotImplementedException(this.StatusCode);
             }
