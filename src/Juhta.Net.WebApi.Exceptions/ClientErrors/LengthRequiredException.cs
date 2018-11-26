@@ -28,7 +28,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public LengthRequiredException(Enum errorId) : base(HttpStatusCode.BadRequest, null, errorId.ToString())
+        public LengthRequiredException(Enum errorId) : base(HttpStatusCode.LengthRequired, null, errorId.ToString())
         {}
 
         /// <summary>
@@ -43,7 +43,18 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorId">Specifies a custom defined error identifier.</param>
         /// <param name="message">Specifies an error message.</param>
-        public LengthRequiredException(Enum errorId, string message) : base(HttpStatusCode.BadRequest, message, errorId.ToString())
+        public LengthRequiredException(Enum errorId, string message) : base(HttpStatusCode.LengthRequired, message, errorId.ToString())
+        {}
+
+        #endregion
+
+        #region Internal Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
+        internal LengthRequiredException(ClientError clientError) : base(clientError)
         {}
 
         #endregion
