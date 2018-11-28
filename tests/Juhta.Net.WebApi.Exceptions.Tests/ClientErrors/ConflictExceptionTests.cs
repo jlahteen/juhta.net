@@ -4,33 +4,33 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.Tests
+namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 {
     [TestClass]
-    public class BadRequestExceptionTests : WebApiExceptionTests
+    public class ConflictExceptionTests : WebApiExceptionTests
     {
         #region Test Methods
 
         [TestMethod]
-        public void ThrowAndSerialize_BadRequestException1_ShouldReturn()
+        public void ThrowAndSerialize_ConflictException1_ShouldReturn()
         {
             ClientError clientError1, clientError2;
-            BadRequestException exception1 = null, exception2 = null;
+            ConflictException exception1 = null, exception2 = null;
 
             try
             {
-                throw new BadRequestException();
+                throw new ConflictException();
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 AssertException(
                     ex,
-                    "ThrowAndSerialize_BadRequestException1_ShouldReturn",
+                    "ThrowAndSerialize_ConflictException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.BadRequest.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException' was thrown.",
-                    HttpStatusCode.BadRequest
+                    "ClientError." + HttpStatusCode.Conflict.ToString(),
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException' was thrown.",
+                    HttpStatusCode.Conflict
                 );
 
                 clientError1 = ex.ToClientError();
@@ -45,7 +45,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
                 clientError2.Throw();
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 exception2 = ex;
             }
@@ -54,25 +54,25 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         }
 
         [TestMethod]
-        public void ThrowAndSerialize_BadRequestException2_ShouldReturn()
+        public void ThrowAndSerialize_ConflictException2_ShouldReturn()
         {
             ClientError clientError1, clientError2;
-            BadRequestException exception1 = null, exception2 = null;
+            ConflictException exception1 = null, exception2 = null;
 
             try
             {
-                throw new BadRequestException(MyApiError.InvalidOrderNumber);
+                throw new ConflictException(MyApiError.InvalidOrderNumber);
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 AssertException(
                     ex,
-                    "ThrowAndSerialize_BadRequestException2_ShouldReturn",
+                    "ThrowAndSerialize_ConflictException2_ShouldReturn",
                     MyApiError.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.BadRequest.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException' was thrown.",
-                    HttpStatusCode.BadRequest
+                    "ClientError." + HttpStatusCode.Conflict.ToString(),
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException' was thrown.",
+                    HttpStatusCode.Conflict
                 );
 
                 clientError1 = ex.ToClientError();
@@ -87,7 +87,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
                 clientError2.Throw();
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 exception2 = ex;
             }
@@ -96,25 +96,25 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         }
 
         [TestMethod]
-        public void ThrowAndSerialize_BadRequestException3_ShouldReturn()
+        public void ThrowAndSerialize_ConflictException3_ShouldReturn()
         {
             ClientError clientError1, clientError2;
-            BadRequestException exception1 = null, exception2 = null;
+            ConflictException exception1 = null, exception2 = null;
 
             try
             {
-                throw new BadRequestException("BadRequestException Specified order number is invalid.");
+                throw new ConflictException("ConflictException Specified order number is invalid.");
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 AssertException(
                     ex,
-                    "ThrowAndSerialize_BadRequestException3_ShouldReturn",
+                    "ThrowAndSerialize_ConflictException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.BadRequest.ToString(),
-                    "BadRequestException Specified order number is invalid.",
-                    HttpStatusCode.BadRequest
+                    "ClientError." + HttpStatusCode.Conflict.ToString(),
+                    "ConflictException Specified order number is invalid.",
+                    HttpStatusCode.Conflict
                 );
 
                 clientError1 = ex.ToClientError();
@@ -129,7 +129,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
                 clientError2.Throw();
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 exception2 = ex;
             }
@@ -138,25 +138,25 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         }
 
         [TestMethod]
-        public void ThrowAndSerialize_BadRequestException4_ShouldReturn()
+        public void ThrowAndSerialize_ConflictException4_ShouldReturn()
         {
             ClientError clientError1, clientError2;
-            BadRequestException exception1 = null, exception2 = null;
+            ConflictException exception1 = null, exception2 = null;
 
             try
             {
-                throw new BadRequestException(MyApiError.InvalidOrderNumber, "BadRequestException Specified order number is invalid.");
+                throw new ConflictException(MyApiError.InvalidOrderNumber, "ConflictException Specified order number is invalid.");
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 AssertException(
                     ex,
-                    "ThrowAndSerialize_BadRequestException4_ShouldReturn",
+                    "ThrowAndSerialize_ConflictException4_ShouldReturn",
                     MyApiError.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.BadRequest.ToString(),
-                    "BadRequestException Specified order number is invalid.",
-                    HttpStatusCode.BadRequest
+                    "ClientError." + HttpStatusCode.Conflict.ToString(),
+                    "ConflictException Specified order number is invalid.",
+                    HttpStatusCode.Conflict
                 );
 
                 clientError1 = ex.ToClientError();
@@ -171,7 +171,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
                 clientError2.Throw();
             }
 
-            catch (BadRequestException ex)
+            catch (ConflictException ex)
             {
                 exception2 = ex;
             }
