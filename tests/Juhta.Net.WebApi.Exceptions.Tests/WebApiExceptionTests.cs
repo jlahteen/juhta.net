@@ -8,13 +8,13 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
     {
         #region Protected Methods
 
-        protected void AssertException(ClientErrorException exception, string methodName, string errorId, string errorType, string errorMessage, HttpStatusCode statusCode)
+        protected void AssertException(ClientErrorException exception, string methodName, string errorCode, string errorType, string errorMessage, HttpStatusCode statusCode)
         {
             Assert.IsNotNull(exception.CallStack);
 
             Assert.IsTrue(exception.CallStack[1].Contains(methodName));
 
-            Assert.AreEqual<string>(errorId, exception.ErrorId);
+            Assert.AreEqual<string>(errorCode, exception.ErrorCode);
 
             Assert.AreEqual<string>(errorType, exception.ErrorType);
 
@@ -28,7 +28,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
             for (int i = 0; i < c_maxCallStackLinesToAssert; i++)
                 Assert.AreEqual(exception1.CallStack[i], exception2.CallStack[i]);
 
-            Assert.AreEqual<string>(exception1.ErrorId, exception2.ErrorId);
+            Assert.AreEqual<string>(exception1.ErrorCode, exception2.ErrorCode);
 
             Assert.AreEqual<string>(exception1.ErrorMessage, exception2.ErrorMessage);
 
