@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public ConflictException(Enum errorId) : base(HttpStatusCode.Conflict, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public ConflictException(Enum errorCode) : base(HttpStatusCode.Conflict, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public ConflictException(Enum errorId, string message) : base(HttpStatusCode.Conflict, message, errorId.ToString())
+        public ConflictException(Enum errorCode, string message) : base(HttpStatusCode.Conflict, message, errorCode.ToString())
         {}
 
         #endregion

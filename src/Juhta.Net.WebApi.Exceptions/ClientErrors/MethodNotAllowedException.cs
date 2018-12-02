@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public MethodNotAllowedException(Enum errorId) : base(HttpStatusCode.MethodNotAllowed, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public MethodNotAllowedException(Enum errorCode) : base(HttpStatusCode.MethodNotAllowed, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public MethodNotAllowedException(Enum errorId, string message) : base(HttpStatusCode.MethodNotAllowed, message, errorId.ToString())
+        public MethodNotAllowedException(Enum errorCode, string message) : base(HttpStatusCode.MethodNotAllowed, message, errorCode.ToString())
         {}
 
         #endregion

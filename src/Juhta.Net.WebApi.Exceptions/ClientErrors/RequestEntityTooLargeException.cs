@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public RequestEntityTooLargeException(Enum errorId) : base(HttpStatusCode.RequestEntityTooLarge, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public RequestEntityTooLargeException(Enum errorCode) : base(HttpStatusCode.RequestEntityTooLarge, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public RequestEntityTooLargeException(Enum errorId, string message) : base(HttpStatusCode.RequestEntityTooLarge, message, errorId.ToString())
+        public RequestEntityTooLargeException(Enum errorCode, string message) : base(HttpStatusCode.RequestEntityTooLarge, message, errorCode.ToString())
         {}
 
         #endregion

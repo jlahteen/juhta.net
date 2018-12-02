@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public RequestUriTooLongException(Enum errorId) : base(HttpStatusCode.RequestUriTooLong, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public RequestUriTooLongException(Enum errorCode) : base(HttpStatusCode.RequestUriTooLong, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public RequestUriTooLongException(Enum errorId, string message) : base(HttpStatusCode.RequestUriTooLong, message, errorId.ToString())
+        public RequestUriTooLongException(Enum errorCode, string message) : base(HttpStatusCode.RequestUriTooLong, message, errorCode.ToString())
         {}
 
         #endregion

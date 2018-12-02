@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public UnsupportedMediaTypeException(Enum errorId) : base(HttpStatusCode.UnsupportedMediaType, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public UnsupportedMediaTypeException(Enum errorCode) : base(HttpStatusCode.UnsupportedMediaType, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public UnsupportedMediaTypeException(Enum errorId, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorId.ToString())
+        public UnsupportedMediaTypeException(Enum errorCode, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString())
         {}
 
         #endregion

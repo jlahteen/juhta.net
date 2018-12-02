@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public RequestTimeoutException(Enum errorId) : base(HttpStatusCode.RequestTimeout, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public RequestTimeoutException(Enum errorCode) : base(HttpStatusCode.RequestTimeout, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public RequestTimeoutException(Enum errorId, string message) : base(HttpStatusCode.RequestTimeout, message, errorId.ToString())
+        public RequestTimeoutException(Enum errorCode, string message) : base(HttpStatusCode.RequestTimeout, message, errorCode.ToString())
         {}
 
         #endregion

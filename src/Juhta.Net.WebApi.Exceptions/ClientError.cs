@@ -93,9 +93,9 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets the custom-defined identifier of the client error.
+        /// Gets or sets the custom-defined code of the client error.
         /// </summary>
-        public string ErrorId {get; set;}
+        public string ErrorCode {get; set;}
 
         #endregion
     }

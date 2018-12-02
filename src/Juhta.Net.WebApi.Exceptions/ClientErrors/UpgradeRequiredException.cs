@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public UpgradeRequiredException(Enum errorId) : base(HttpStatusCode.UpgradeRequired, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public UpgradeRequiredException(Enum errorCode) : base(HttpStatusCode.UpgradeRequired, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public UpgradeRequiredException(Enum errorId, string message) : base(HttpStatusCode.UpgradeRequired, message, errorId.ToString())
+        public UpgradeRequiredException(Enum errorCode, string message) : base(HttpStatusCode.UpgradeRequired, message, errorCode.ToString())
         {}
 
         #endregion

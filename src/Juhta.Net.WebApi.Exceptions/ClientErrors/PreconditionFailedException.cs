@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public PreconditionFailedException(Enum errorId) : base(HttpStatusCode.PreconditionFailed, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public PreconditionFailedException(Enum errorCode) : base(HttpStatusCode.PreconditionFailed, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public PreconditionFailedException(Enum errorId, string message) : base(HttpStatusCode.PreconditionFailed, message, errorId.ToString())
+        public PreconditionFailedException(Enum errorCode, string message) : base(HttpStatusCode.PreconditionFailed, message, errorCode.ToString())
         {}
 
         #endregion

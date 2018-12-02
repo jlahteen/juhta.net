@@ -27,7 +27,7 @@ namespace Juhta.Net.WebApi.Exceptions
 
             clientError.CallStack = this.CallStack;
 
-            clientError.ErrorId = m_errorId;
+            clientError.ErrorCode = m_errorCode;
 
             clientError.ErrorMessage = this.ErrorMessage;
 
@@ -43,11 +43,11 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
-        /// Gets the custom-defined identifier of the client error.
+        /// Gets the custom-defined code of the client error.
         /// </summary>
-        public string ErrorId
+        public string ErrorCode
         {
-            get {return(m_errorId);}
+            get {return(m_errorCode);}
         }
 
         #endregion
@@ -60,7 +60,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="clientError">Specifies a client error.</param>
         protected ClientErrorException(ClientError clientError) : base(clientError)
         {
-            m_errorId = clientError.ErrorId;
+            m_errorCode = clientError.ErrorCode;
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         protected ClientErrorException(HttpStatusCode statusCode) : base(statusCode, null)
         {
-            m_errorId = null;
+            m_errorCode = null;
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="message">Specifies an error message.</param>
         protected ClientErrorException(HttpStatusCode statusCode, string message) : base(statusCode, message)
         {
-            m_errorId = null;
+            m_errorCode = null;
         }
 
         /// <summary>
@@ -87,10 +87,10 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        /// <param name="errorId">Specifies a custom-defined identifier for the client error.</param>
-        protected ClientErrorException(HttpStatusCode statusCode, string message, string errorId) : base(statusCode, message)
+        /// <param name="errorCode">Specifies a custom-defined code for the client error.</param>
+        protected ClientErrorException(HttpStatusCode statusCode, string message, string errorCode) : base(statusCode, message)
         {
-            m_errorId = errorId;
+            m_errorCode = errorCode;
         }
 
         #endregion
@@ -98,9 +98,9 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Private Fields
 
         /// <summary>
-        /// Stores the <see cref="ErrorId"/> property.
+        /// Stores the <see cref="ErrorCode"/> property.
         /// </summary>
-        private string m_errorId;
+        private string m_errorCode;
 
         #endregion
     }

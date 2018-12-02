@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public ProxyAuthenticationRequiredException(Enum errorId) : base(HttpStatusCode.ProxyAuthenticationRequired, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public ProxyAuthenticationRequiredException(Enum errorCode) : base(HttpStatusCode.ProxyAuthenticationRequired, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public ProxyAuthenticationRequiredException(Enum errorId, string message) : base(HttpStatusCode.ProxyAuthenticationRequired, message, errorId.ToString())
+        public ProxyAuthenticationRequiredException(Enum errorCode, string message) : base(HttpStatusCode.ProxyAuthenticationRequired, message, errorCode.ToString())
         {}
 
         #endregion

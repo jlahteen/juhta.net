@@ -14,9 +14,9 @@
             Throws this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> as a corresponding exception derived from <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.ErrorId">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.ErrorCode">
             <summary>
-            Gets or sets the custom-defined identifier of the client error.
+            Gets or sets the custom-defined code of the client error.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrorException">
@@ -30,9 +30,9 @@
             </summary>
             <returns>Returns the resulting <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> object.</returns>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorId">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorCode">
             <summary>
-            Gets the custom-defined identifier of the client error.
+            Gets the custom-defined code of the client error.
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -60,11 +60,11 @@
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
-            <param name="errorId">Specifies a custom-defined identifier for the client error.</param>
+            <param name="errorCode">Specifies a custom-defined code for the client error.</param>
         </member>
-        <member name="F:Juhta.Net.WebApi.Exceptions.ClientErrorException.m_errorId">
+        <member name="F:Juhta.Net.WebApi.Exceptions.ClientErrorException.m_errorCode">
             <summary>
-            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorId"/> property.
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorCode"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException">
@@ -81,7 +81,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.#ctor(System.String)">
             <summary>
@@ -93,7 +93,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -116,7 +116,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException.#ctor(System.String)">
             <summary>
@@ -128,7 +128,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -151,7 +151,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ExpectationFailedException.#ctor(System.String)">
             <summary>
@@ -163,7 +163,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ExpectationFailedException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -186,7 +186,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String)">
             <summary>
@@ -198,7 +198,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -221,7 +221,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException.#ctor(System.String)">
             <summary>
@@ -233,7 +233,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -256,7 +256,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException.#ctor(System.String)">
             <summary>
@@ -268,7 +268,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -291,7 +291,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException.#ctor(System.String)">
             <summary>
@@ -303,7 +303,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -326,7 +326,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException.#ctor(System.String)">
             <summary>
@@ -338,7 +338,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -361,7 +361,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException.#ctor(System.String)">
             <summary>
@@ -373,7 +373,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -396,7 +396,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.PaymentRequiredException.#ctor(System.String)">
             <summary>
@@ -408,7 +408,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.PaymentRequiredException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -431,7 +431,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException.#ctor(System.String)">
             <summary>
@@ -443,7 +443,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -466,7 +466,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException.#ctor(System.String)">
             <summary>
@@ -478,7 +478,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -501,7 +501,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException.#ctor(System.String)">
             <summary>
@@ -513,7 +513,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -536,7 +536,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException.#ctor(System.String)">
             <summary>
@@ -548,7 +548,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -571,7 +571,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException.#ctor(System.String)">
             <summary>
@@ -583,7 +583,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -606,7 +606,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException.#ctor(System.String)">
             <summary>
@@ -618,7 +618,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -641,7 +641,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException.#ctor(System.String)">
             <summary>
@@ -653,7 +653,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -676,7 +676,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException.#ctor(System.String)">
             <summary>
@@ -688,7 +688,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
@@ -711,7 +711,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException.#ctor(System.String)">
             <summary>
@@ -723,7 +723,7 @@
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorId">Specifies a custom defined error identifier.</param>
+            <param name="errorCode">Specifies a custom defined error code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">

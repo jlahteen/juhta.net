@@ -27,8 +27,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
-        public RequestedRangeNotSatisfiableException(Enum errorId) : base(HttpStatusCode.RequestedRangeNotSatisfiable, null, errorId.ToString())
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        public RequestedRangeNotSatisfiableException(Enum errorCode) : base(HttpStatusCode.RequestedRangeNotSatisfiable, null, errorCode.ToString())
         {}
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorId">Specifies a custom defined error identifier.</param>
+        /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public RequestedRangeNotSatisfiableException(Enum errorId, string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message, errorId.ToString())
+        public RequestedRangeNotSatisfiableException(Enum errorCode, string message) : base(HttpStatusCode.RequestedRangeNotSatisfiable, message, errorCode.ToString())
         {}
 
         #endregion
