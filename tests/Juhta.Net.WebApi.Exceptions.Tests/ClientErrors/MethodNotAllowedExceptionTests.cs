@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new MethodNotAllowedException(MyApiError.InvalidOrderNumber);
+                throw new MethodNotAllowedException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (MethodNotAllowedException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException' was thrown.",
                     HttpStatusCode.MethodNotAllowed
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new MethodNotAllowedException(MyApiError.InvalidOrderNumber, "MethodNotAllowedException Specified order number is invalid.");
+                throw new MethodNotAllowedException(ErrorCode.InvalidOrderNumber, "MethodNotAllowedException Specified order number is invalid.");
             }
 
             catch (MethodNotAllowedException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "MethodNotAllowedException Specified order number is invalid.",
                     HttpStatusCode.MethodNotAllowed

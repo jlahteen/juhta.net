@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new BadRequestException(MyApiError.InvalidOrderNumber);
+                throw new BadRequestException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (BadRequestException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_BadRequestException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.BadRequest.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException' was thrown.",
                     HttpStatusCode.BadRequest
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new BadRequestException(MyApiError.InvalidOrderNumber, "BadRequestException Specified order number is invalid.");
+                throw new BadRequestException(ErrorCode.InvalidOrderNumber, "BadRequestException Specified order number is invalid.");
             }
 
             catch (BadRequestException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_BadRequestException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.BadRequest.ToString(),
                     "BadRequestException Specified order number is invalid.",
                     HttpStatusCode.BadRequest

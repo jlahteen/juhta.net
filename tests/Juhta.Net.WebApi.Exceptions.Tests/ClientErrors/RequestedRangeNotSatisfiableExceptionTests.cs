@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new RequestedRangeNotSatisfiableException(MyApiError.InvalidOrderNumber);
+                throw new RequestedRangeNotSatisfiableException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (RequestedRangeNotSatisfiableException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException' was thrown.",
                     HttpStatusCode.RequestedRangeNotSatisfiable
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new RequestedRangeNotSatisfiableException(MyApiError.InvalidOrderNumber, "RequestedRangeNotSatisfiableException Specified order number is invalid.");
+                throw new RequestedRangeNotSatisfiableException(ErrorCode.InvalidOrderNumber, "RequestedRangeNotSatisfiableException Specified order number is invalid.");
             }
 
             catch (RequestedRangeNotSatisfiableException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "RequestedRangeNotSatisfiableException Specified order number is invalid.",
                     HttpStatusCode.RequestedRangeNotSatisfiable

@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new NotAcceptableException(MyApiError.InvalidOrderNumber);
+                throw new NotAcceptableException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (NotAcceptableException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_NotAcceptableException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException' was thrown.",
                     HttpStatusCode.NotAcceptable
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new NotAcceptableException(MyApiError.InvalidOrderNumber, "NotAcceptableException Specified order number is invalid.");
+                throw new NotAcceptableException(ErrorCode.InvalidOrderNumber, "NotAcceptableException Specified order number is invalid.");
             }
 
             catch (NotAcceptableException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_NotAcceptableException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "NotAcceptableException Specified order number is invalid.",
                     HttpStatusCode.NotAcceptable

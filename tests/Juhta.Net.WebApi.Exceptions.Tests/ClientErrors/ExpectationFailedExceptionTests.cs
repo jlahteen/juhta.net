@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ExpectationFailedException(MyApiError.InvalidOrderNumber);
+                throw new ExpectationFailedException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (ExpectationFailedException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ExpectationFailedException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.ExpectationFailed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ExpectationFailedException' was thrown.",
                     HttpStatusCode.ExpectationFailed
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ExpectationFailedException(MyApiError.InvalidOrderNumber, "ExpectationFailedException Specified order number is invalid.");
+                throw new ExpectationFailedException(ErrorCode.InvalidOrderNumber, "ExpectationFailedException Specified order number is invalid.");
             }
 
             catch (ExpectationFailedException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ExpectationFailedException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.ExpectationFailed.ToString(),
                     "ExpectationFailedException Specified order number is invalid.",
                     HttpStatusCode.ExpectationFailed

@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ProxyAuthenticationRequiredException(MyApiError.InvalidOrderNumber);
+                throw new ProxyAuthenticationRequiredException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (ProxyAuthenticationRequiredException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException' was thrown.",
                     HttpStatusCode.ProxyAuthenticationRequired
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ProxyAuthenticationRequiredException(MyApiError.InvalidOrderNumber, "ProxyAuthenticationRequiredException Specified order number is invalid.");
+                throw new ProxyAuthenticationRequiredException(ErrorCode.InvalidOrderNumber, "ProxyAuthenticationRequiredException Specified order number is invalid.");
             }
 
             catch (ProxyAuthenticationRequiredException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "ProxyAuthenticationRequiredException Specified order number is invalid.",
                     HttpStatusCode.ProxyAuthenticationRequired

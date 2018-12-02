@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new RequestEntityTooLargeException(MyApiError.InvalidOrderNumber);
+                throw new RequestEntityTooLargeException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (RequestEntityTooLargeException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException' was thrown.",
                     HttpStatusCode.RequestEntityTooLarge
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new RequestEntityTooLargeException(MyApiError.InvalidOrderNumber, "RequestEntityTooLargeException Specified order number is invalid.");
+                throw new RequestEntityTooLargeException(ErrorCode.InvalidOrderNumber, "RequestEntityTooLargeException Specified order number is invalid.");
             }
 
             catch (RequestEntityTooLargeException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "RequestEntityTooLargeException Specified order number is invalid.",
                     HttpStatusCode.RequestEntityTooLarge

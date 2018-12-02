@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new PaymentRequiredException(MyApiError.InvalidOrderNumber);
+                throw new PaymentRequiredException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (PaymentRequiredException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_PaymentRequiredException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.PaymentRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.PaymentRequiredException' was thrown.",
                     HttpStatusCode.PaymentRequired
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new PaymentRequiredException(MyApiError.InvalidOrderNumber, "PaymentRequiredException Specified order number is invalid.");
+                throw new PaymentRequiredException(ErrorCode.InvalidOrderNumber, "PaymentRequiredException Specified order number is invalid.");
             }
 
             catch (PaymentRequiredException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_PaymentRequiredException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.PaymentRequired.ToString(),
                     "PaymentRequiredException Specified order number is invalid.",
                     HttpStatusCode.PaymentRequired

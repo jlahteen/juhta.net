@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ForbiddenException(MyApiError.InvalidOrderNumber);
+                throw new ForbiddenException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (ForbiddenException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ForbiddenException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.Forbidden.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException' was thrown.",
                     HttpStatusCode.Forbidden
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ForbiddenException(MyApiError.InvalidOrderNumber, "ForbiddenException Specified order number is invalid.");
+                throw new ForbiddenException(ErrorCode.InvalidOrderNumber, "ForbiddenException Specified order number is invalid.");
             }
 
             catch (ForbiddenException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ForbiddenException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.Forbidden.ToString(),
                     "ForbiddenException Specified order number is invalid.",
                     HttpStatusCode.Forbidden

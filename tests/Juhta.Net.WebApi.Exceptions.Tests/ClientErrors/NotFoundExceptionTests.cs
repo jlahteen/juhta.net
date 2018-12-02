@@ -61,7 +61,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new NotFoundException(MyApiError.InvalidOrderNumber);
+                throw new NotFoundException(ErrorCode.InvalidOrderNumber);
             }
 
             catch (NotFoundException ex)
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_NotFoundException2_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.NotFound.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException' was thrown.",
                     HttpStatusCode.NotFound
@@ -145,7 +145,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new NotFoundException(MyApiError.InvalidOrderNumber, "NotFoundException Specified order number is invalid.");
+                throw new NotFoundException(ErrorCode.InvalidOrderNumber, "NotFoundException Specified order number is invalid.");
             }
 
             catch (NotFoundException ex)
@@ -153,7 +153,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_NotFoundException4_ShouldReturn",
-                    MyApiError.InvalidOrderNumber.ToString(),
+                    ErrorCode.InvalidOrderNumber.ToString(),
                     "ClientError." + HttpStatusCode.NotFound.ToString(),
                     "NotFoundException Specified order number is invalid.",
                     HttpStatusCode.NotFound
