@@ -41,7 +41,7 @@ namespace Juhta.Net.Tests.Helpers
 
             Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.CallMe1(System.Collections.Generic.SortedList`2<System.Int32, System.String> sortedList) in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:40:13", callStack[0]);
 
-            Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeArgument_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:17:13", callStack[1]);
+            Assert.IsTrue(callStack[1].StartsWith("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeArgument_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:"));
 
             return(null);
         }
@@ -54,7 +54,7 @@ namespace Juhta.Net.Tests.Helpers
 
             Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.CallMe2<Juhta.Net.Tests.Helpers.TKey, Juhta.Net.Tests.Helpers.TValue>(System.Collections.Generic.SortedList`2<Juhta.Net.Tests.Helpers.TKey, Juhta.Net.Tests.Helpers.TValue> sortedList) in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:53:13", callStack[0]);
 
-            Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeMethodAndArgument_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:23:13", callStack[1]);
+            Assert.IsTrue(callStack[1].StartsWith("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeMethodAndArgument_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:"));
 
             return(null);
         }
@@ -67,7 +67,7 @@ namespace Juhta.Net.Tests.Helpers
 
             Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.CallMe3<Juhta.Net.Tests.Helpers.TKey, Juhta.Net.Tests.Helpers.TValue>(System.Collections.Generic.SortedList`2<Juhta.Net.Tests.Helpers.TKey, System.Collections.Generic.List`1<Juhta.Net.Tests.Helpers.TValue>> sortedList) in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:66:13", callStack[0]);
 
-            Assert.AreEqual<string>("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeMethodAndArgument2_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:29:13", callStack[1]);
+            Assert.IsTrue(callStack[1].StartsWith("at Juhta.Net.Tests.Helpers.StackTraceHelperTests.GetCallStack_GenericTypeMethodAndArgument2_ShouldReturnListOfString() in Juhta.Net.Tests.dll:StackTraceHelperTests.cs:"));
 
             return(null);
         }
