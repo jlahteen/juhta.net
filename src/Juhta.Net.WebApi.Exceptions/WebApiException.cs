@@ -7,6 +7,8 @@
 //
 
 using Juhta.Net.Helpers;
+using Juhta.Net.WebApi.Exceptions.ClientErrors;
+using Juhta.Net.WebApi.Exceptions.ServerErrors;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -70,13 +72,7 @@ namespace Juhta.Net.WebApi.Exceptions
 
             callStack.Add($"-- {this.GetType().FullName} deserialized and rethrown --");
 
-            // We must ignore 5 call stack lines to get to the line where the actual throw operation happened
-            // - StackTraceHelper.GetCallStack()
-            // - This constructor
-            // - ClientErrorException or ServerErrorException constructor
-            // - Constructor of a class derived from ClientErrorException or ServerErrorException
-            // - ClientError.Throw() or ServerError.Throw()
-            callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1 + 1));
+            AppendCurrentCallStack(callStack);
 
             m_callStack = callStack.ToArray();
 
@@ -100,12 +96,7 @@ namespace Juhta.Net.WebApi.Exceptions
 
             callStack.Add($"-- {this.GetType().FullName} thrown --");
 
-            // We must ignore 4 call stack lines to get to the line where the actual throw operation happened
-            // - StackTraceHelper.GetCallStack()
-            // - This constructor
-            // - ClientErrorException or ServerErrorException constructor
-            // - Constructor of a class derived from ClientErrorException or ServerErrorException
-            callStack.AddRange(StackTraceHelper.GetCallStack(1 + 1 + 1 + 1));
+            AppendCurrentCallStack(callStack);
 
             m_callStack = callStack.ToArray();
         }
@@ -113,6 +104,36 @@ namespace Juhta.Net.WebApi.Exceptions
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Appends the current call stack to a specified call stack.
+        /// </summary>
+        /// <param name="callStack">Specifies a call stack.</param>
+        /// <remarks>The method ignores all call stack lines that are caused by the internal activity of this library.
+        /// These calls are not relevant to trace with the context of Web API exceptions.</remarks>
+        private static void AppendCurrentCallStack(List<string> callStack)
+        {
+            string[] currentCallStack;
+            int i;
+
+            currentCallStack = StackTraceHelper.GetCallStack(1);
+
+            for (i = 0; i < currentCallStack.Length;)
+            {
+                if ((currentCallStack[i].StartsWith("at " + typeof(WebApiException).FullName + ".")) ||
+                    (currentCallStack[i].StartsWith("at " + typeof(ClientErrorException).FullName + ".")) ||
+                    (currentCallStack[i].StartsWith("at " + typeof(ServerErrorException).FullName + ".")) ||
+                    (currentCallStack[i].StartsWith("at " + typeof(BadRequestException).Namespace + ".")) ||
+                    (currentCallStack[i].StartsWith("at " + typeof(BadGatewayException).Namespace + ".")))
+
+                    i++;
+                else
+                    break;
+            }
+
+            for (; i < currentCallStack.Length; i++)
+                callStack.Add(currentCallStack[i]);
+        }
 
         /// <summary>
         /// Converts an HTTP status code to its textual version.

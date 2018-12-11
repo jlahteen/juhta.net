@@ -921,6 +921,14 @@
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.AppendCurrentCallStack(System.Collections.Generic.List{System.String})">
+            <summary>
+            Appends the current call stack to a specified call stack.
+            </summary>
+            <param name="callStack">Specifies a call stack.</param>
+            <remarks>The method ignores all call stack lines that are caused by the internal activity of this library.
+            These calls are not relevant to trace with the context of Web API exceptions.</remarks>
+        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.ToErrorType(System.Net.HttpStatusCode)">
             <summary>
             Converts an HTTP status code to its textual version.
