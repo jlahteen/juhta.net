@@ -8,6 +8,7 @@
 
 using Juhta.Net.Common;
 using Juhta.Net.WebApi.Exceptions.ClientErrors;
+using System;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions
@@ -24,63 +25,67 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         public void Throw()
         {
-            switch (this.StatusCode)
+            HttpStatusCode statusCode;
+
+            statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), this.StatusCode.Substring(this.StatusCode.IndexOf('.') + 1));
+
+            switch (statusCode)
             {
-                case (int)HttpStatusCode.BadRequest:
+                case HttpStatusCode.BadRequest:
                     throw new BadRequestException(this);
 
-                case (int)HttpStatusCode.Conflict:
+                case HttpStatusCode.Conflict:
                     throw new ConflictException(this);
 
-                case (int)HttpStatusCode.ExpectationFailed:
+                case HttpStatusCode.ExpectationFailed:
                     throw new ExpectationFailedException(this);
 
-                case (int)HttpStatusCode.Forbidden:
+                case HttpStatusCode.Forbidden:
                     throw new ForbiddenException(this);
 
-                case (int)HttpStatusCode.Gone:
+                case HttpStatusCode.Gone:
                     throw new GoneException(this);
 
-                case (int)HttpStatusCode.LengthRequired:
+                case HttpStatusCode.LengthRequired:
                     throw new LengthRequiredException(this);
 
-                case (int)HttpStatusCode.MethodNotAllowed:
+                case HttpStatusCode.MethodNotAllowed:
                     throw new MethodNotAllowedException(this);
 
-                case (int)HttpStatusCode.NotAcceptable:
+                case HttpStatusCode.NotAcceptable:
                     throw new NotAcceptableException(this);
 
-                case (int)HttpStatusCode.NotFound:
+                case HttpStatusCode.NotFound:
                     throw new NotFoundException(this);
 
-                case (int)HttpStatusCode.PaymentRequired:
+                case HttpStatusCode.PaymentRequired:
                     throw new PaymentRequiredException(this);
 
-                case (int)HttpStatusCode.PreconditionFailed:
+                case HttpStatusCode.PreconditionFailed:
                     throw new PreconditionFailedException(this);
 
-                case (int)HttpStatusCode.ProxyAuthenticationRequired:
+                case HttpStatusCode.ProxyAuthenticationRequired:
                     throw new ProxyAuthenticationRequiredException(this);
 
-                case (int)HttpStatusCode.RequestedRangeNotSatisfiable:
+                case HttpStatusCode.RequestedRangeNotSatisfiable:
                     throw new RequestedRangeNotSatisfiableException(this);
 
-                case (int)HttpStatusCode.RequestEntityTooLarge:
+                case HttpStatusCode.RequestEntityTooLarge:
                     throw new RequestEntityTooLargeException(this);
 
-                case (int)HttpStatusCode.RequestTimeout:
+                case HttpStatusCode.RequestTimeout:
                     throw new RequestTimeoutException(this);
 
-                case (int)HttpStatusCode.RequestUriTooLong:
+                case HttpStatusCode.RequestUriTooLong:
                     throw new RequestUriTooLongException(this);
 
-                case (int)HttpStatusCode.Unauthorized:
+                case HttpStatusCode.Unauthorized:
                     throw new UnauthorizedException(this);
 
-                case (int)HttpStatusCode.UnsupportedMediaType:
+                case HttpStatusCode.UnsupportedMediaType:
                     throw new UnsupportedMediaTypeException(this);
 
-                case (int)HttpStatusCode.UpgradeRequired:
+                case HttpStatusCode.UpgradeRequired:
                     throw new UpgradeRequiredException(this);
 
                 default:

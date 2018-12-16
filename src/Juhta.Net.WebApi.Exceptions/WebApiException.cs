@@ -78,7 +78,7 @@ namespace Juhta.Net.WebApi.Exceptions
 
             m_errorMessage = webApiError.ErrorMessage;
 
-            m_statusCode = (HttpStatusCode)webApiError.StatusCode;
+            m_statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), webApiError.StatusCode.Substring(webApiError.StatusCode.IndexOf('.') + 1));
         }
 
         /// <summary>

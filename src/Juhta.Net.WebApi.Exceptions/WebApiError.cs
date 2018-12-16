@@ -6,6 +6,8 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using System.Net;
+
 namespace Juhta.Net.WebApi.Exceptions
 {
     /// <summary>
@@ -34,7 +36,10 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Gets or sets the HTTP status code of the Web API error.
         /// </summary>
-        public int StatusCode {get; set;}
+        /// <remarks>HTTP status codes will be serialized into this field by using textual values of the enumeration
+        /// <see cref="HttpStatusCode"/>. Values will also be prefixed by 'ClientError.' or 'ServerError.'. For
+        /// example, 'ClientError.BadRequest' and 'ServerError.BadGateway' are possible values.</remarks>
+        public string StatusCode {get; set;}
 
         #endregion
     }
