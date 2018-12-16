@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnsupportedMediaTypeException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.UnsupportedMediaType.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException' was thrown.",
                     HttpStatusCode.UnsupportedMediaType
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnsupportedMediaTypeException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.UnsupportedMediaType.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException' was thrown.",
                     HttpStatusCode.UnsupportedMediaType
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnsupportedMediaTypeException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.UnsupportedMediaType.ToString(),
                     "UnsupportedMediaTypeException Specified order number is invalid.",
                     HttpStatusCode.UnsupportedMediaType
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnsupportedMediaTypeException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.UnsupportedMediaType.ToString(),
                     "UnsupportedMediaTypeException Specified order number is invalid.",
                     HttpStatusCode.UnsupportedMediaType
                 );

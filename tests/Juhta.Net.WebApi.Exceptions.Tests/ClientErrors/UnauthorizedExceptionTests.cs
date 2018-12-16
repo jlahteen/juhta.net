@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Unauthorized.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException' was thrown.",
                     HttpStatusCode.Unauthorized
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Unauthorized.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException' was thrown.",
                     HttpStatusCode.Unauthorized
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Unauthorized.ToString(),
                     "UnauthorizedException Specified order number is invalid.",
                     HttpStatusCode.Unauthorized
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Unauthorized.ToString(),
                     "UnauthorizedException Specified order number is invalid.",
                     HttpStatusCode.Unauthorized
                 );

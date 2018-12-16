@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_GoneException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Gone.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException' was thrown.",
                     HttpStatusCode.Gone
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_GoneException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Gone.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException' was thrown.",
                     HttpStatusCode.Gone
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_GoneException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Gone.ToString(),
                     "GoneException Specified order number is invalid.",
                     HttpStatusCode.Gone
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_GoneException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Gone.ToString(),
                     "GoneException Specified order number is invalid.",
                     HttpStatusCode.Gone
                 );

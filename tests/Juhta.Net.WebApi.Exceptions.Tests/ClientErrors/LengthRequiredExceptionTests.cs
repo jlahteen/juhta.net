@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_LengthRequiredException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.LengthRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException' was thrown.",
                     HttpStatusCode.LengthRequired
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_LengthRequiredException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.LengthRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException' was thrown.",
                     HttpStatusCode.LengthRequired
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_LengthRequiredException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.LengthRequired.ToString(),
                     "LengthRequiredException Specified order number is invalid.",
                     HttpStatusCode.LengthRequired
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_LengthRequiredException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.LengthRequired.ToString(),
                     "LengthRequiredException Specified order number is invalid.",
                     HttpStatusCode.LengthRequired
                 );

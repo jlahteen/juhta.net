@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestUriTooLongException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestUriTooLong.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException' was thrown.",
                     HttpStatusCode.RequestUriTooLong
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestUriTooLongException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestUriTooLong.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException' was thrown.",
                     HttpStatusCode.RequestUriTooLong
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestUriTooLongException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestUriTooLong.ToString(),
                     "RequestUriTooLongException Specified order number is invalid.",
                     HttpStatusCode.RequestUriTooLong
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestUriTooLongException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestUriTooLong.ToString(),
                     "RequestUriTooLongException Specified order number is invalid.",
                     HttpStatusCode.RequestUriTooLong
                 );

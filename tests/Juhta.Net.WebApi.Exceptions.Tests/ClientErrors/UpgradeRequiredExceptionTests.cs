@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UpgradeRequiredException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.UpgradeRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException' was thrown.",
                     HttpStatusCode.UpgradeRequired
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UpgradeRequiredException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.UpgradeRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException' was thrown.",
                     HttpStatusCode.UpgradeRequired
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UpgradeRequiredException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.UpgradeRequired.ToString(),
                     "UpgradeRequiredException Specified order number is invalid.",
                     HttpStatusCode.UpgradeRequired
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UpgradeRequiredException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.UpgradeRequired.ToString(),
                     "UpgradeRequiredException Specified order number is invalid.",
                     HttpStatusCode.UpgradeRequired
                 );

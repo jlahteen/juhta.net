@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException' was thrown.",
                     HttpStatusCode.RequestedRangeNotSatisfiable
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException' was thrown.",
                     HttpStatusCode.RequestedRangeNotSatisfiable
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "RequestedRangeNotSatisfiableException Specified order number is invalid.",
                     HttpStatusCode.RequestedRangeNotSatisfiable
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestedRangeNotSatisfiableException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestedRangeNotSatisfiable.ToString(),
                     "RequestedRangeNotSatisfiableException Specified order number is invalid.",
                     HttpStatusCode.RequestedRangeNotSatisfiable
                 );

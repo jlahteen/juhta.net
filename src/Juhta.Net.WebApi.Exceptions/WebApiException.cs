@@ -39,15 +39,6 @@ namespace Juhta.Net.WebApi.Exceptions
         }
 
         /// <summary>
-        /// Gets the error type related to this <see cref="WebApiException"/> instance.
-        /// </summary>
-        /// <remarks>This property returns in practice the textual version of <see cref="StatusCode"/>.</remarks>
-        public string ErrorType
-        {
-            get {return(ToErrorType(m_statusCode));}
-        }
-
-        /// <summary>
         /// Gets the HTTP status code related to this <see cref="WebApiException"/> instance.
         /// </summary>
         public HttpStatusCode StatusCode
@@ -133,23 +124,6 @@ namespace Juhta.Net.WebApi.Exceptions
 
             for (; i < currentCallStack.Length; i++)
                 callStack.Add(currentCallStack[i]);
-        }
-
-        /// <summary>
-        /// Converts an HTTP status code to its textual version.
-        /// </summary>
-        /// <param name="statusCode">Specifies an HTTP status code.</param>
-        /// <returns>Returns the textual version of <paramref name="statusCode"/>.</returns>
-        private static string ToErrorType(HttpStatusCode statusCode)
-        {
-            if (statusCode >= HttpStatusCode.InternalServerError)
-                return("ServerError." + statusCode.ToString());
-
-            else if (statusCode >= HttpStatusCode.BadRequest)
-                return("ClientError." + statusCode.ToString());
-
-            else
-                return("HttpError." + statusCode.ToString());
         }
 
         #endregion

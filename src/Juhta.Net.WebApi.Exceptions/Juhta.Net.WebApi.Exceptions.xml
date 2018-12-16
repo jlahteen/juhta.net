@@ -871,16 +871,13 @@
             Gets or sets the error message of the Web API error.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiError.ErrorType">
-            <summary>
-            Gets or sets the error type of the Web API error.
-            </summary>
-            <remarks>This property is in practice the textual version of the HTTP status code.</remarks>
-        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiError.StatusCode">
             <summary>
             Gets or sets the HTTP status code of the Web API error.
             </summary>
+            <remarks>HTTP status codes will be serialized into this field by using textual values of the enumeration
+            <see cref="T:System.Net.HttpStatusCode"/>. Values will also be prefixed by 'ClientError.' or 'ServerError.'. For
+            example, 'ClientError.BadRequest' and 'ServerError.BadGateway' are possible values.</remarks>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.WebApiException">
             <summary>
@@ -896,12 +893,6 @@
             <summary>
             Gets the error message related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
-        </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ErrorType">
-            <summary>
-            Gets the error type related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
-            </summary>
-            <remarks>This property returns in practice the textual version of <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode"/>.</remarks>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode">
             <summary>
@@ -928,13 +919,6 @@
             <param name="callStack">Specifies a call stack.</param>
             <remarks>The method ignores all call stack lines that are caused by the internal activity of this library.
             These calls are not relevant to trace with the context of Web API exceptions.</remarks>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.ToErrorType(System.Net.HttpStatusCode)">
-            <summary>
-            Converts an HTTP status code to its textual version.
-            </summary>
-            <param name="statusCode">Specifies an HTTP status code.</param>
-            <returns>Returns the textual version of <paramref name="statusCode"/>.</returns>
         </member>
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_callStack">
             <summary>

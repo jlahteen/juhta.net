@@ -31,8 +31,6 @@ namespace Juhta.Net.WebApi.Exceptions
 
             clientError.ErrorMessage = this.ErrorMessage;
 
-            clientError.ErrorType = this.ErrorType;
-
             clientError.StatusCode = "ClientError." + this.StatusCode.ToString();
 
             return(clientError);

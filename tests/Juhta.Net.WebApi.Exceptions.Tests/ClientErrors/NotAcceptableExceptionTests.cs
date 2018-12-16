@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotAcceptableException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException' was thrown.",
                     HttpStatusCode.NotAcceptable
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotAcceptableException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException' was thrown.",
                     HttpStatusCode.NotAcceptable
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotAcceptableException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "NotAcceptableException Specified order number is invalid.",
                     HttpStatusCode.NotAcceptable
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotAcceptableException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.NotAcceptable.ToString(),
                     "NotAcceptableException Specified order number is invalid.",
                     HttpStatusCode.NotAcceptable
                 );

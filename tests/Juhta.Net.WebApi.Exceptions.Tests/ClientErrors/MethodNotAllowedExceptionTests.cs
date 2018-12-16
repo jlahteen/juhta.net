@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException' was thrown.",
                     HttpStatusCode.MethodNotAllowed
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException' was thrown.",
                     HttpStatusCode.MethodNotAllowed
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "MethodNotAllowedException Specified order number is invalid.",
                     HttpStatusCode.MethodNotAllowed
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.MethodNotAllowed.ToString(),
                     "MethodNotAllowedException Specified order number is invalid.",
                     HttpStatusCode.MethodNotAllowed
                 );

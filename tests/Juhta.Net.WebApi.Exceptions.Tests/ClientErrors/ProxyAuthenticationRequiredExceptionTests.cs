@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException' was thrown.",
                     HttpStatusCode.ProxyAuthenticationRequired
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException' was thrown.",
                     HttpStatusCode.ProxyAuthenticationRequired
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "ProxyAuthenticationRequiredException Specified order number is invalid.",
                     HttpStatusCode.ProxyAuthenticationRequired
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ProxyAuthenticationRequiredException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.ProxyAuthenticationRequired.ToString(),
                     "ProxyAuthenticationRequiredException Specified order number is invalid.",
                     HttpStatusCode.ProxyAuthenticationRequired
                 );

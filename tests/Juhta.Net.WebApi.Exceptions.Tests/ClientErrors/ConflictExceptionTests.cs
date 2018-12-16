@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ConflictException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Conflict.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException' was thrown.",
                     HttpStatusCode.Conflict
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ConflictException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Conflict.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException' was thrown.",
                     HttpStatusCode.Conflict
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ConflictException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.Conflict.ToString(),
                     "ConflictException Specified order number is invalid.",
                     HttpStatusCode.Conflict
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_ConflictException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.Conflict.ToString(),
                     "ConflictException Specified order number is invalid.",
                     HttpStatusCode.Conflict
                 );

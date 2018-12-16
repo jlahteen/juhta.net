@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.PreconditionFailed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException' was thrown.",
                     HttpStatusCode.PreconditionFailed
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.PreconditionFailed.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException' was thrown.",
                     HttpStatusCode.PreconditionFailed
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.PreconditionFailed.ToString(),
                     "PreconditionFailedException Specified order number is invalid.",
                     HttpStatusCode.PreconditionFailed
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.PreconditionFailed.ToString(),
                     "PreconditionFailedException Specified order number is invalid.",
                     HttpStatusCode.PreconditionFailed
                 );

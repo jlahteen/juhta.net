@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestTimeoutException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestTimeout.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException' was thrown.",
                     HttpStatusCode.RequestTimeout
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestTimeoutException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestTimeout.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException' was thrown.",
                     HttpStatusCode.RequestTimeout
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestTimeoutException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestTimeout.ToString(),
                     "RequestTimeoutException Specified order number is invalid.",
                     HttpStatusCode.RequestTimeout
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestTimeoutException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestTimeout.ToString(),
                     "RequestTimeoutException Specified order number is invalid.",
                     HttpStatusCode.RequestTimeout
                 );

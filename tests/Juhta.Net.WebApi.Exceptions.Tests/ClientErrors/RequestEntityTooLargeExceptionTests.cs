@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException1_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException' was thrown.",
                     HttpStatusCode.RequestEntityTooLarge
                 );
@@ -70,7 +69,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException' was thrown.",
                     HttpStatusCode.RequestEntityTooLarge
                 );
@@ -112,7 +110,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException3_ShouldReturn",
                     null,
-                    "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "RequestEntityTooLargeException Specified order number is invalid.",
                     HttpStatusCode.RequestEntityTooLarge
                 );
@@ -154,7 +151,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_RequestEntityTooLargeException4_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "ClientError." + HttpStatusCode.RequestEntityTooLarge.ToString(),
                     "RequestEntityTooLargeException Specified order number is invalid.",
                     HttpStatusCode.RequestEntityTooLarge
                 );
