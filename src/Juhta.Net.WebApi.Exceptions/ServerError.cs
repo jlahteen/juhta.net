@@ -16,9 +16,10 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets the exception stack of the server error.
+        /// Gets or sets the inner exception that relates to the server error.
         /// </summary>
-        public string ExceptionStack {get; set;}
+        /// <remarks>Please note that an inner exception will be set as a string.</remarks>
+        public string InnerException {get; set;}
 
         #endregion
     }
