@@ -737,6 +737,11 @@
             Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
             </summary>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerError.Throw">
+            <summary>
+            Throws this <see cref="T:Juhta.Net.WebApi.Exceptions.ServerError"/> as a corresponding exception derived from <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ServerError.InnerException">
             <summary>
             Gets or sets the inner exception that relates to the server error.
@@ -758,6 +763,12 @@
             Initializes a new instance.
             </summary>
             <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
             <summary>
@@ -802,6 +813,12 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException">
             <summary>
             Defines an exception class for the HTTP error Gateway Timeout.
@@ -824,6 +841,12 @@
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException">
             <summary>
@@ -848,6 +871,12 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException">
             <summary>
             Defines an exception class for the HTTP error Internal Server Error.
@@ -870,6 +899,12 @@
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException">
             <summary>
@@ -894,6 +929,12 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException">
             <summary>
             Defines an exception class for the HTTP error Service Unavailable.
@@ -916,6 +957,12 @@
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException.#ctor(Juhta.Net.WebApi.Exceptions.ServerError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="serverError">Specifies a server error based on which to create the instance.</param>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.WebApiError">
             <summary>
