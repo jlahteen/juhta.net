@@ -737,14 +737,20 @@
             Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ServerError.ExceptionStack">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerError.InnerException">
             <summary>
-            Gets or sets the exception stack of the server error.
+            Gets or sets the inner exception that relates to the server error.
             </summary>
+            <remarks>Please note that an inner exception will be set as a string.</remarks>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorException">
             <summary>
             Defines an abstract base class for the server error Web API exceptions.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.InnerException">
+            <summary>
+            Gets the inner exception that relates to the server error.
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode)">
@@ -759,6 +765,19 @@
             </summary>
             <param name="httpStatusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="httpStatusCode">Specifies an HTTP status code.</param>
+            <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception.</param>
+        </member>
+        <member name="F:Juhta.Net.WebApi.Exceptions.ServerErrorException.m_innerException">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.InnerException"/> property.
+            </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException">
             <summary>

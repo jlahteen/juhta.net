@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using System;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions
@@ -15,13 +16,25 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class ServerErrorException : WebApiException
     {
+        #region Public Properties
+
+        /// <summary>
+        /// Gets the inner exception that relates to the server error.
+        /// </summary>
+        public new string InnerException
+        {
+            get {return(m_innerException);}
+        }
+
+        #endregion
+
         #region Protected Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode) : base(httpStatusCode, null)
+        protected ServerErrorException(HttpStatusCode httpStatusCode) : this(httpStatusCode, null, null)
         {}
 
         /// <summary>
@@ -29,8 +42,29 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode, string message) : base(httpStatusCode, message)
+        protected ServerErrorException(HttpStatusCode httpStatusCode, string message) : this(httpStatusCode, message, null)
         {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="innerException">Specifies an inner exception.</param>
+        protected ServerErrorException(HttpStatusCode httpStatusCode, string message, Exception innerException) : base(httpStatusCode, message)
+        {
+            if (innerException != null)
+                m_innerException = innerException.ToString();
+        }
+
+        #endregion
+
+        #region Private Fields
+
+        /// <summary>
+        /// Stores the <see cref="InnerException"/> property.
+        /// </summary>
+        private string m_innerException;
 
         #endregion
     }
