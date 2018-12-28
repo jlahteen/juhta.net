@@ -6,6 +6,7 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
+using System;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions.ServerErrors
@@ -28,6 +29,14 @@ namespace Juhta.Net.WebApi.Exceptions.ServerErrors
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
         public BadGatewayException(string message) : base(HttpStatusCode.BadGateway, message)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="innerException">Specifies an inner exception.</param>
+        public BadGatewayException(string message, Exception innerException) : base(HttpStatusCode.BadGateway, message, innerException)
         {}
 
         #endregion
