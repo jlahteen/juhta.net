@@ -40,5 +40,16 @@ namespace Juhta.Net.WebApi.Exceptions.ServerErrors
         {}
 
         #endregion
+
+        #region Internal Constructors
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="serverError">Specifies a server error based on which to create the instance.</param>
+        internal InternalServerErrorException(ServerError serverError) : base(serverError)
+        {}
+
+        #endregion
     }
 }

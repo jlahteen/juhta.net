@@ -40,6 +40,15 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        /// <param name="serverError">Specifies a server error.</param>
+        protected ServerErrorException(ServerError serverError) : base(serverError)
+        {
+            m_innerException = serverError.InnerException;
+        }
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
         protected ServerErrorException(HttpStatusCode httpStatusCode, string message) : this(httpStatusCode, message, null)
