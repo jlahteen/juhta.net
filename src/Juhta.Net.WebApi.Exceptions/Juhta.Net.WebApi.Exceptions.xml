@@ -753,6 +753,12 @@
             Defines an abstract base class for the server error Web API exceptions.
             </summary>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.ToServerError">
+            <summary>
+            Converts this <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/> object to a <see cref="T:Juhta.Net.WebApi.Exceptions.ServerError"/> object.
+            </summary>
+            <returns>Returns the resulting <see cref="T:Juhta.Net.WebApi.Exceptions.ServerError"/> object.</returns>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.InnerException">
             <summary>
             Gets the inner exception that relates to the server error.

@@ -16,6 +16,29 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class ServerErrorException : WebApiException
     {
+        #region Public Methods
+
+        /// <summary>
+        /// Converts this <see cref="ServerErrorException"/> object to a <see cref="ServerError"/> object.
+        /// </summary>
+        /// <returns>Returns the resulting <see cref="ServerError"/> object.</returns>
+        public ServerError ToServerError()
+        {
+            ServerError serverError = new ServerError();
+
+            serverError.CallStack = this.CallStack;
+
+            serverError.ErrorMessage = this.ErrorMessage;
+
+            serverError.InnerException = this.InnerException;
+
+            serverError.StatusCode = "ServerError." + this.StatusCode.ToString();
+
+            return(serverError);
+        }
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
