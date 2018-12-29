@@ -23,7 +23,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Throws this <see cref="ClientError"/> as a corresponding exception derived from <see cref="ClientErrorException"/>.
         /// </summary>
-        public void Throw()
+        public override void Throw()
         {
             HttpStatusCode statusCode;
 

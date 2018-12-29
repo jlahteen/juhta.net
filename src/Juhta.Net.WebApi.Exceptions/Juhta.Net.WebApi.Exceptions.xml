@@ -969,6 +969,11 @@
             Defines an abstract base class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/>.
             </summary>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiError.Throw">
+            <summary>
+            Throws this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiError"/> as a corresponding exception derived from <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/>.
+            </summary>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiError.CallStack">
             <summary>
             Gets or sets the call stack of the Web API error.

@@ -15,6 +15,15 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class WebApiError
     {
+        #region Public Methods
+
+        /// <summary>
+        /// Throws this <see cref="WebApiError"/> as a corresponding exception derived from <see cref="WebApiException"/>.
+        /// </summary>
+        public abstract void Throw();
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
