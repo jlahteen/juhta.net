@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,33 +9,33 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Forbidden.
+    /// Defines an exception class for the HTTP error Method Not Allowed.
     /// </summary>
-    public class ForbiddenException : ClientErrorException
+    public class MethodNotAllowedException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public ForbiddenException() : base(HttpStatusCode.Forbidden)
+        public MethodNotAllowedException() : base(HttpStatusCode.MethodNotAllowed)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public ForbiddenException(Enum errorCode) : base(HttpStatusCode.Forbidden, null, errorCode.ToString())
+        public MethodNotAllowedException(Enum errorCode) : base(HttpStatusCode.MethodNotAllowed, null, errorCode.ToString())
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public ForbiddenException(string message) : base(HttpStatusCode.Forbidden, message)
+        public MethodNotAllowedException(string message) : base(HttpStatusCode.MethodNotAllowed, message)
         {}
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public ForbiddenException(Enum errorCode, string message) : base(HttpStatusCode.Forbidden, message, errorCode.ToString())
+        public MethodNotAllowedException(Enum errorCode, string message) : base(HttpStatusCode.MethodNotAllowed, message, errorCode.ToString())
         {}
 
         #endregion
@@ -54,7 +54,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal ForbiddenException(ClientError clientError) : base(clientError)
+        internal MethodNotAllowedException(ClientError clientError) : base(clientError)
         {}
 
         #endregion

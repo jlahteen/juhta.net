@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,33 +9,33 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Proxy Authentication Required.
+    /// Defines an exception class for the HTTP error Length Required.
     /// </summary>
-    public class ProxyAuthenticationRequiredException : ClientErrorException
+    public class LengthRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public ProxyAuthenticationRequiredException() : base(HttpStatusCode.ProxyAuthenticationRequired)
+        public LengthRequiredException() : base(HttpStatusCode.LengthRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public ProxyAuthenticationRequiredException(Enum errorCode) : base(HttpStatusCode.ProxyAuthenticationRequired, null, errorCode.ToString())
+        public LengthRequiredException(Enum errorCode) : base(HttpStatusCode.LengthRequired, null, errorCode.ToString())
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public ProxyAuthenticationRequiredException(string message) : base(HttpStatusCode.ProxyAuthenticationRequired, message)
+        public LengthRequiredException(string message) : base(HttpStatusCode.LengthRequired, message)
         {}
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public ProxyAuthenticationRequiredException(Enum errorCode, string message) : base(HttpStatusCode.ProxyAuthenticationRequired, message, errorCode.ToString())
+        public LengthRequiredException(Enum errorCode, string message) : base(HttpStatusCode.LengthRequired, message, errorCode.ToString())
         {}
 
         #endregion
@@ -54,7 +54,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal ProxyAuthenticationRequiredException(ClientError clientError) : base(clientError)
+        internal LengthRequiredException(ClientError clientError) : base(clientError)
         {}
 
         #endregion

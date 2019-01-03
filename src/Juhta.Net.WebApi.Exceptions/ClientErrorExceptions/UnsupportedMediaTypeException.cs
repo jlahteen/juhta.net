@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,33 +9,33 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Request URI Too Long.
+    /// Defines an exception class for the HTTP error Unsupported Media Type.
     /// </summary>
-    public class RequestUriTooLongException : ClientErrorException
+    public class UnsupportedMediaTypeException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public RequestUriTooLongException() : base(HttpStatusCode.RequestUriTooLong)
+        public UnsupportedMediaTypeException() : base(HttpStatusCode.UnsupportedMediaType)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public RequestUriTooLongException(Enum errorCode) : base(HttpStatusCode.RequestUriTooLong, null, errorCode.ToString())
+        public UnsupportedMediaTypeException(Enum errorCode) : base(HttpStatusCode.UnsupportedMediaType, null, errorCode.ToString())
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public RequestUriTooLongException(string message) : base(HttpStatusCode.RequestUriTooLong, message)
+        public UnsupportedMediaTypeException(string message) : base(HttpStatusCode.UnsupportedMediaType, message)
         {}
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public RequestUriTooLongException(Enum errorCode, string message) : base(HttpStatusCode.RequestUriTooLong, message, errorCode.ToString())
+        public UnsupportedMediaTypeException(Enum errorCode, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString())
         {}
 
         #endregion
@@ -54,7 +54,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal RequestUriTooLongException(ClientError clientError) : base(clientError)
+        internal UnsupportedMediaTypeException(ClientError clientError) : base(clientError)
         {}
 
         #endregion

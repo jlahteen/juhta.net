@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,33 +9,33 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Payment Required.
+    /// Defines an exception class for the HTTP error Gone.
     /// </summary>
-    public class PaymentRequiredException : ClientErrorException
+    public class GoneException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public PaymentRequiredException() : base(HttpStatusCode.PaymentRequired)
+        public GoneException() : base(HttpStatusCode.Gone)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public PaymentRequiredException(Enum errorCode) : base(HttpStatusCode.PaymentRequired, null, errorCode.ToString())
+        public GoneException(Enum errorCode) : base(HttpStatusCode.Gone, null, errorCode.ToString())
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public PaymentRequiredException(string message) : base(HttpStatusCode.PaymentRequired, message)
+        public GoneException(string message) : base(HttpStatusCode.Gone, message)
         {}
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public PaymentRequiredException(Enum errorCode, string message) : base(HttpStatusCode.PaymentRequired, message, errorCode.ToString())
+        public GoneException(Enum errorCode, string message) : base(HttpStatusCode.Gone, message, errorCode.ToString())
         {}
 
         #endregion
@@ -54,7 +54,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal PaymentRequiredException(ClientError clientError) : base(clientError)
+        internal GoneException(ClientError clientError) : base(clientError)
         {}
 
         #endregion

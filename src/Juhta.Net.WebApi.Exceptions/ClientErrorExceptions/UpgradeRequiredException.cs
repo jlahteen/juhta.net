@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,33 +9,33 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ClientErrors
+namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
 {
     /// <summary>
-    /// Defines an exception class for the HTTP error Precondition Failed.
+    /// Defines an exception class for the HTTP error Upgrade Required.
     /// </summary>
-    public class PreconditionFailedException : ClientErrorException
+    public class UpgradeRequiredException : ClientErrorException
     {
         #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public PreconditionFailedException() : base(HttpStatusCode.PreconditionFailed)
+        public UpgradeRequiredException() : base(HttpStatusCode.UpgradeRequired)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public PreconditionFailedException(Enum errorCode) : base(HttpStatusCode.PreconditionFailed, null, errorCode.ToString())
+        public UpgradeRequiredException(Enum errorCode) : base(HttpStatusCode.UpgradeRequired, null, errorCode.ToString())
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public PreconditionFailedException(string message) : base(HttpStatusCode.PreconditionFailed, message)
+        public UpgradeRequiredException(string message) : base(HttpStatusCode.UpgradeRequired, message)
         {}
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// </summary>
         /// <param name="errorCode">Specifies a custom defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public PreconditionFailedException(Enum errorCode, string message) : base(HttpStatusCode.PreconditionFailed, message, errorCode.ToString())
+        public UpgradeRequiredException(Enum errorCode, string message) : base(HttpStatusCode.UpgradeRequired, message, errorCode.ToString())
         {}
 
         #endregion
@@ -54,7 +54,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrors
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal PreconditionFailedException(ClientError clientError) : base(clientError)
+        internal UpgradeRequiredException(ClientError clientError) : base(clientError)
         {}
 
         #endregion
