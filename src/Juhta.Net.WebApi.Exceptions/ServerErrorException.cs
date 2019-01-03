@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -19,22 +19,22 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Methods
 
         /// <summary>
-        /// Converts this <see cref="ServerErrorException"/> object to a <see cref="ServerError"/> object.
+        /// Converts this <see cref="ServerErrorException"/> object to a <see cref="ServerErrorResponse"/> object.
         /// </summary>
-        /// <returns>Returns the resulting <see cref="ServerError"/> object.</returns>
-        public ServerError ToServerError()
+        /// <returns>Returns the resulting <see cref="ServerErrorResponse"/> object.</returns>
+        public ServerErrorResponse ToServerErrorResponse()
         {
-            ServerError serverError = new ServerError();
+            ServerErrorResponse serverErrorResponse = new ServerErrorResponse();
 
-            serverError.CallStack = this.CallStack;
+            serverErrorResponse.CallStack = this.CallStack;
 
-            serverError.ErrorMessage = this.ErrorMessage;
+            serverErrorResponse.ErrorMessage = this.ErrorMessage;
 
-            serverError.InnerException = this.InnerException;
+            serverErrorResponse.InnerException = this.InnerException;
 
-            serverError.StatusCode = "ServerError." + this.StatusCode.ToString();
+            serverErrorResponse.StatusCode = "ServerError." + this.StatusCode.ToString();
 
-            return(serverError);
+            return(serverErrorResponse);
         }
 
         #endregion
@@ -63,10 +63,10 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="serverError">Specifies a server error.</param>
-        protected ServerErrorException(ServerError serverError) : base(serverError)
+        /// <param name="serverErrorResponse">Specifies a server error.</param>
+        protected ServerErrorException(ServerErrorResponse serverErrorResponse) : base(serverErrorResponse)
         {
-            m_innerException = serverError.InnerException;
+            m_innerException = serverErrorResponse.InnerException;
         }
 
         /// <summary>

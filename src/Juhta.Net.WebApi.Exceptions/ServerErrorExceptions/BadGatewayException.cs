@@ -46,8 +46,8 @@ namespace Juhta.Net.WebApi.Exceptions.ServerErrorExceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="serverError">Specifies a server error based on which to create the instance.</param>
-        internal BadGatewayException(ServerError serverError) : base(serverError)
+        /// <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
+        internal BadGatewayException(ServerErrorResponse serverErrorResponse) : base(serverErrorResponse)
         {}
 
         #endregion
