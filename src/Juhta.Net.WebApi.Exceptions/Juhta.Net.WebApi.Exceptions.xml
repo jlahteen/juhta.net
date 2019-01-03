@@ -4,6 +4,31 @@
         <name>Juhta.Net.WebApi.Exceptions</name>
     </assembly>
     <members>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ClientError">
+            <summary>
+            Defines a class for storing information about client errors.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.Code">
+            <summary>
+            Gets or sets the identifier code of the client error.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.Field">
+            <summary>
+            Gets or sets the field in the incoming request to which the client error relates.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.HelpUrl">
+            <summary>
+            Gets or sets a URL that provides extra information about the client error.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.Message">
+            <summary>
+            Gets or sets the message of the client error.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrorException">
             <summary>
             Defines an abstract base class for the client error Web API exceptions.
