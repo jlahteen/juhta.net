@@ -11,7 +11,7 @@
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.Code">
             <summary>
-            Gets or sets the identifier code of the client error.
+            Gets or sets the identifier of the client error.
             </summary>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ClientError.Field">
@@ -40,9 +40,16 @@
             </summary>
             <returns>Returns the resulting <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorResponse"/> object.</returns>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorCode">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Error">
             <summary>
-            Gets the custom-defined code of the client error.
+            Gets the first <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> object that relates to this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>
+            instance. Returns null if there are no <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> objects.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors">
+            <summary>
+            Gets an array of the <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> objects that relate to this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>
+            instance. Returns null if there are no <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> objects.
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ClientErrorResponse)">
@@ -57,24 +64,65 @@
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,Juhta.Net.WebApi.Exceptions.ClientError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <param name="clientError">Specifies a client error.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <param name="clientErrors">Specifies a collection of client errors.</param>
+        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
-            <param name="message">Specifies an error message.</param>
+            <param name="errorMessage">Specifies an error message.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
-            <param name="message">Specifies an error message.</param>
-            <param name="errorCode">Specifies a custom-defined code for the client error.</param>
+            <param name="errorMessage">Specifies an error message.</param>
+            <param name="errorCode">Specifies an error identifier.</param>
         </member>
-        <member name="F:Juhta.Net.WebApi.Exceptions.ClientErrorException.m_errorCode">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String,System.String)">
             <summary>
-            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.ErrorCode"/> property.
+            Initializes a new instance.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <param name="errorMessage">Specifies an error message.</param>
+            <param name="errorCode">Specifies an error identifier.</param>
+            <param name="field">Specifies a field in the incoming request to which the error relates.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <param name="errorMessage">Specifies an error message.</param>
+            <param name="errorCode">Specifies an error identifier.</param>
+            <param name="field">Specifies a field in the incoming request to which the error relates.</param>
+            <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.GetErrorMessage(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">
+            <summary>
+            Gets an error message from a specified client error collection.
+            </summary>
+            <param name="clientErrors">Specifies a client error collection.</param>
+            <returns>Returns the error message of the first client error in <paramref name="clientErrors"/>. If the
+            collection is empty, the return value is null.</returns>
+        </member>
+        <member name="F:Juhta.Net.WebApi.Exceptions.ClientErrorException.m_errors">
+            <summary>
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException">
@@ -753,9 +801,9 @@
             <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorResponse.ErrorCode">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorResponse.Errors">
             <summary>
-            Gets or sets the custom-defined code of the client error.
+            Gets or sets an array of the client errors.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorException">
