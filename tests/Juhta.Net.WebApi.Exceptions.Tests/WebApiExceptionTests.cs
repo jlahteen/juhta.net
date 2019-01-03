@@ -15,7 +15,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
 
             Assert.IsTrue(exception.CallStack[1].Contains(methodName));
 
-            Assert.AreEqual<string>(errorCode, exception.ErrorCode);
+            Assert.AreEqual<string>(errorCode, exception.Error?.Code);
 
             Assert.AreEqual<string>(errorMessage, exception.Message);
 
@@ -40,7 +40,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
             for (int i = 0; i < c_maxCallStackLinesToAssert; i++)
                 Assert.AreEqual(exception1.CallStack[i], exception2.CallStack[i]);
 
-            Assert.AreEqual<string>(exception1.ErrorCode, exception2.ErrorCode);
+            Assert.AreEqual<string>(exception1.Error?.Code, exception2.Error?.Code);
 
             Assert.AreEqual<string>(exception1.ErrorMessage, exception2.ErrorMessage);
 

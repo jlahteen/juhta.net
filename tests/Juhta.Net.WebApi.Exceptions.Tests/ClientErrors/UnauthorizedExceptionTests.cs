@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.WebApi.Exceptions.ClientErrors;
+using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Net;
@@ -14,7 +14,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_UnauthorizedException1_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             UnauthorizedException exception1 = null, exception2 = null;
 
             try
@@ -28,20 +28,20 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException1_ShouldReturn",
                     null,
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.UnauthorizedException' was thrown.",
                     HttpStatusCode.Unauthorized
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (UnauthorizedException ex)
@@ -55,7 +55,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_UnauthorizedException2_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             UnauthorizedException exception1 = null, exception2 = null;
 
             try
@@ -69,20 +69,20 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_UnauthorizedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.UnauthorizedException' was thrown.",
                     HttpStatusCode.Unauthorized
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (UnauthorizedException ex)
@@ -96,7 +96,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_UnauthorizedException3_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             UnauthorizedException exception1 = null, exception2 = null;
 
             try
@@ -114,16 +114,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.Unauthorized
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (UnauthorizedException ex)
@@ -137,7 +137,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_UnauthorizedException4_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             UnauthorizedException exception1 = null, exception2 = null;
 
             try
@@ -155,16 +155,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.Unauthorized
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (UnauthorizedException ex)

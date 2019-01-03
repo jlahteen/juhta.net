@@ -1,5 +1,5 @@
 
-using Juhta.Net.WebApi.Exceptions.ServerErrors;
+using Juhta.Net.WebApi.Exceptions.ServerErrorExceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -15,7 +15,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
         [TestMethod]
         public void ThrowAndSerialize_BadGatewayException1_ShouldReturn()
         {
-            ServerError serverError1, serverError2;
+            ServerErrorResponse serverErrorResponse1, serverErrorResponse2;
             BadGatewayException exception1 = null, exception2 = null;
 
             try
@@ -29,20 +29,20 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                     ex,
                     "ThrowAndSerialize_BadGatewayException1_ShouldReturn",
                     null,
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException' was thrown.",
                     HttpStatusCode.BadGateway
                 );
 
-                serverError1 = ex.ToServerError();
+                serverErrorResponse1 = ex.ToServerErrorResponse();
 
                 exception1 = ex;
             }
 
-            serverError2 = JsonConvert.DeserializeObject<ServerError>(JsonConvert.SerializeObject(serverError1));
+            serverErrorResponse2 = JsonConvert.DeserializeObject<ServerErrorResponse>(JsonConvert.SerializeObject(serverErrorResponse1));
 
             try
             {
-                serverError2.Throw();
+                serverErrorResponse2.Throw();
             }
 
             catch (BadGatewayException ex)
@@ -56,7 +56,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
         [TestMethod]
         public void ThrowAndSerialize_BadGatewayException2_ShouldReturn()
         {
-            ServerError serverError1, serverError2;
+            ServerErrorResponse serverErrorResponse1, serverErrorResponse2;
             BadGatewayException exception1 = null, exception2 = null;
 
             try
@@ -74,16 +74,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                     HttpStatusCode.BadGateway
                 );
 
-                serverError1 = ex.ToServerError();
+                serverErrorResponse1 = ex.ToServerErrorResponse();
 
                 exception1 = ex;
             }
 
-            serverError2 = JsonConvert.DeserializeObject<ServerError>(JsonConvert.SerializeObject(serverError1));
+            serverErrorResponse2 = JsonConvert.DeserializeObject<ServerErrorResponse>(JsonConvert.SerializeObject(serverErrorResponse1));
 
             try
             {
-                serverError2.Throw();
+                serverErrorResponse2.Throw();
             }
 
             catch (BadGatewayException ex)
@@ -98,7 +98,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
         public void ThrowAndSerialize_BadGatewayException3_ShouldReturn()
         {
             Exception innerException = null;
-            ServerError serverError1, serverError2;
+            ServerErrorResponse serverErrorResponse1, serverErrorResponse2;
             BadGatewayException exception1 = null, exception2 = null;
 
             try
@@ -126,16 +126,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                     HttpStatusCode.BadGateway
                 );
 
-                serverError1 = ex.ToServerError();
+                serverErrorResponse1 = ex.ToServerErrorResponse();
 
                 exception1 = ex;
             }
 
-            serverError2 = JsonConvert.DeserializeObject<ServerError>(JsonConvert.SerializeObject(serverError1));
+            serverErrorResponse2 = JsonConvert.DeserializeObject<ServerErrorResponse>(JsonConvert.SerializeObject(serverErrorResponse1));
 
             try
             {
-                serverError2.Throw();
+                serverErrorResponse2.Throw();
             }
 
             catch (BadGatewayException ex)

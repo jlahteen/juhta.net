@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.WebApi.Exceptions.ClientErrors;
+using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Net;
@@ -14,7 +14,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_NotFoundException1_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             NotFoundException exception1 = null, exception2 = null;
 
             try
@@ -28,20 +28,20 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotFoundException1_ShouldReturn",
                     null,
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.NotFoundException' was thrown.",
                     HttpStatusCode.NotFound
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (NotFoundException ex)
@@ -55,7 +55,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_NotFoundException2_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             NotFoundException exception1 = null, exception2 = null;
 
             try
@@ -69,20 +69,20 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_NotFoundException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.NotFoundException' was thrown.",
                     HttpStatusCode.NotFound
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (NotFoundException ex)
@@ -96,7 +96,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_NotFoundException3_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             NotFoundException exception1 = null, exception2 = null;
 
             try
@@ -114,16 +114,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.NotFound
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (NotFoundException ex)
@@ -137,7 +137,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
         [TestMethod]
         public void ThrowAndSerialize_NotFoundException4_ShouldReturn()
         {
-            ClientError clientError1, clientError2;
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
             NotFoundException exception1 = null, exception2 = null;
 
             try
@@ -155,16 +155,16 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.NotFound
                 );
 
-                clientError1 = ex.ToClientError();
+                clientErrorResponse1 = ex.ToClientErrorResponse();
 
                 exception1 = ex;
             }
 
-            clientError2 = JsonConvert.DeserializeObject<ClientError>(JsonConvert.SerializeObject(clientError1));
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
 
             try
             {
-                clientError2.Throw();
+                clientErrorResponse2.Throw();
             }
 
             catch (NotFoundException ex)
