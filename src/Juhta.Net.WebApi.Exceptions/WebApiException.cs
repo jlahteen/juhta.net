@@ -8,7 +8,7 @@
 
 using Juhta.Net.Helpers;
 using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
-using Juhta.Net.WebApi.Exceptions.ServerErrors;
+using Juhta.Net.WebApi.Exceptions.ServerErrorExceptions;
 using System;
 using System.Collections.Generic;
 using System.Net;

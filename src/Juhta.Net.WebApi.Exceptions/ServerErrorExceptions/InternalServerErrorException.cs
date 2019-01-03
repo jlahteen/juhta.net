@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -9,7 +9,7 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ServerErrors
+namespace Juhta.Net.WebApi.Exceptions.ServerErrorExceptions
 {
     /// <summary>
     /// Defines an exception class for the HTTP error Internal Server Error.
