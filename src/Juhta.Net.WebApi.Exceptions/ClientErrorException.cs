@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -18,22 +18,22 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Methods
 
         /// <summary>
-        /// Converts this <see cref="ClientErrorException"/> object to a <see cref="ClientError"/> object.
+        /// Converts this <see cref="ClientErrorException"/> object to a <see cref="ClientErrorResponse"/> object.
         /// </summary>
-        /// <returns>Returns the resulting <see cref="ClientError"/> object.</returns>
-        public ClientError ToClientError()
+        /// <returns>Returns the resulting <see cref="ClientErrorResponse"/> object.</returns>
+        public ClientErrorResponse ToClientErrorResponse()
         {
-            ClientError clientError = new ClientError();
+            ClientErrorResponse clientErrorResponse = new ClientErrorResponse();
 
-            clientError.CallStack = this.CallStack;
+            clientErrorResponse.CallStack = this.CallStack;
 
-            clientError.ErrorCode = m_errorCode;
+            clientErrorResponse.ErrorCode = m_errorCode;
 
-            clientError.ErrorMessage = this.ErrorMessage;
+            clientErrorResponse.ErrorMessage = this.ErrorMessage;
 
-            clientError.StatusCode = "ClientError." + this.StatusCode.ToString();
+            clientErrorResponse.StatusCode = "ClientError." + this.StatusCode.ToString();
 
-            return(clientError);
+            return(clientErrorResponse);
         }
 
         #endregion
@@ -55,10 +55,10 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="clientError">Specifies a client error.</param>
-        protected ClientErrorException(ClientError clientError) : base(clientError)
+        /// <param name="clientErrorResponse">Specifies a client error response.</param>
+        protected ClientErrorException(ClientErrorResponse clientErrorResponse) : base(clientErrorResponse)
         {
-            m_errorCode = clientError.ErrorCode;
+            m_errorCode = clientErrorResponse.ErrorCode;
         }
 
         /// <summary>

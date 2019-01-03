@@ -16,12 +16,13 @@ namespace Juhta.Net.WebApi.Exceptions
     /// <summary>
     /// Defines a class for serializing exceptions derived from <see cref="ClientErrorException"/>.
     /// </summary>
-    public class ClientError : WebApiErrorResponse
+    public class ClientErrorResponse : WebApiErrorResponse
     {
         #region Public Methods
 
         /// <summary>
-        /// Throws this <see cref="ClientError"/> as a corresponding exception derived from <see cref="ClientErrorException"/>.
+        /// Throws this <see cref="ClientErrorResponse"/> as a corresponding exception derived from
+        /// <see cref="ClientErrorException"/>.
         /// </summary>
         public override void Throw()
         {

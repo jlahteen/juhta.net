@@ -53,8 +53,8 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="clientError">Specifies a client error based on which to create the instance.</param>
-        internal ProxyAuthenticationRequiredException(ClientError clientError) : base(clientError)
+        /// <param name="clientErrorResponse">Specifies a client error response based on which to create the instance.</param>
+        internal ProxyAuthenticationRequiredException(ClientErrorResponse clientErrorResponse) : base(clientErrorResponse)
         {}
 
         #endregion
