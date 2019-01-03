@@ -53,13 +53,13 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="webApiError">Specifies a Web API error.</param>
-        protected WebApiException(WebApiError webApiError) : base(webApiError.ErrorMessage)
+        /// <param name="webApiErrorResponse">Specifies a Web API error response.</param>
+        protected WebApiException(WebApiErrorResponse webApiErrorResponse) : base(webApiErrorResponse.ErrorMessage)
         {
             List<string> callStack = new List<string>();
 
-            if (webApiError.CallStack != null)
-                callStack.AddRange(webApiError.CallStack);
+            if (webApiErrorResponse.CallStack != null)
+                callStack.AddRange(webApiErrorResponse.CallStack);
 
             callStack.Add($"-- {this.GetType().FullName} deserialized and rethrown --");
 
@@ -67,9 +67,9 @@ namespace Juhta.Net.WebApi.Exceptions
 
             m_callStack = callStack.ToArray();
 
-            m_errorMessage = webApiError.ErrorMessage;
+            m_errorMessage = webApiErrorResponse.ErrorMessage;
 
-            m_statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), webApiError.StatusCode.Substring(webApiError.StatusCode.IndexOf('.') + 1));
+            m_statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), webApiErrorResponse.StatusCode.Substring(webApiErrorResponse.StatusCode.IndexOf('.') + 1));
         }
 
         /// <summary>

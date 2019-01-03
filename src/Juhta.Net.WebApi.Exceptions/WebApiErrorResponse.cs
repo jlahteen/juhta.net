@@ -1,6 +1,6 @@
 ﻿
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -13,12 +13,13 @@ namespace Juhta.Net.WebApi.Exceptions
     /// <summary>
     /// Defines an abstract base class for serializing instances of <see cref="WebApiException"/>.
     /// </summary>
-    public abstract class WebApiError
+    public abstract class WebApiErrorResponse
     {
         #region Public Methods
 
         /// <summary>
-        /// Throws this <see cref="WebApiError"/> as a corresponding exception derived from <see cref="WebApiException"/>.
+        /// Throws this <see cref="WebApiErrorResponse"/> as a corresponding exception derived from
+        /// <see cref="WebApiException"/>.
         /// </summary>
         public abstract void Throw();
 
