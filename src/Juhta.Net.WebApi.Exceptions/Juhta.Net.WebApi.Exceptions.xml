@@ -803,7 +803,7 @@
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorResponse.Errors">
             <summary>
-            Gets or sets an array of the client errors.
+            Gets or sets an array of <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> objects.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorException">
