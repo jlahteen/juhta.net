@@ -113,7 +113,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="errorMessage">Specifies an error message.</param>
-        /// <param name="errorCode">Specifies an error identifier.</param>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
         protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode) : this(statusCode, errorMessage, errorCode, null, null)
         {}
 
@@ -122,7 +122,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="errorMessage">Specifies an error message.</param>
-        /// <param name="errorCode">Specifies an error identifier.</param>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="field">Specifies a field in the incoming request to which the error relates.</param>
         protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field) : this(statusCode, errorMessage, errorCode, field, null)
         {}
@@ -132,7 +132,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="errorMessage">Specifies an error message.</param>
-        /// <param name="errorCode">Specifies an error identifier.</param>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="field">Specifies a field in the incoming request to which the error relates.</param>
         /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
         protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field, string helpUrl) : base(statusCode, errorMessage)
