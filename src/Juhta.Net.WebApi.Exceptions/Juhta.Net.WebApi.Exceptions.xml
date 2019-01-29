@@ -135,11 +135,23 @@
             Initializes a new instance.
             </summary>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="clientError">Specifies a client error.</param>
+        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorCode">Specifies a custom defined error code.</param>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="clientErrors">Specifies a collection of client errors.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.String)">
             <summary>
@@ -147,12 +159,51 @@
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum,System.Enum)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
+            <param name="field">Specifies a field to which the error relates.</param>
+        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
-            <param name="errorCode">Specifies a custom defined error code.</param>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
             <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="message">Specifies an error message.</param>
+            <param name="helpUrl">Specifies a URL for further information about the error.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum,System.Enum,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
+            <param name="field">Specifies a field to which the error relates.</param>
+            <param name="message">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum,System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
+            <param name="message">Specifies an error message.</param>
+            <param name="helpUrl">Specifies a URL for further information about the error.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(System.Enum,System.Enum,System.String,System.String)">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="errorCode">Specifies a custom-defined error code.</param>
+            <param name="field">Specifies a field to which the error relates.</param>
+            <param name="message">Specifies an error message.</param>
+            <param name="helpUrl">Specifies a URL for further information about the error.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.BadRequestException.#ctor(Juhta.Net.WebApi.Exceptions.ClientErrorResponse)">
             <summary>
