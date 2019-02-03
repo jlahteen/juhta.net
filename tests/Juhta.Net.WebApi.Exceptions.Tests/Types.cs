@@ -8,5 +8,10 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         InvalidOrderNumber
     }
 
+    internal enum Field
+    {
+        CustomerName
+    }
+
     #endregion
 }
