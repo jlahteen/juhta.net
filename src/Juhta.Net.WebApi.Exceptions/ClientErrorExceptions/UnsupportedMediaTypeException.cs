@@ -7,6 +7,7 @@
 //
 
 using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
@@ -21,29 +22,87 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public UnsupportedMediaTypeException() : base(HttpStatusCode.UnsupportedMediaType)
+        public UnsupportedMediaTypeException() : base(HttpStatusCode.UnsupportedMediaType, null, null, null, null)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorCode">Specifies a custom defined error code.</param>
-        public UnsupportedMediaTypeException(Enum errorCode) : base(HttpStatusCode.UnsupportedMediaType, null, errorCode.ToString())
+        /// <param name="clientError">Specifies a client error.</param>
+        public UnsupportedMediaTypeException(ClientError clientError) : base(HttpStatusCode.UnsupportedMediaType, clientError)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        public UnsupportedMediaTypeException(Enum errorCode) : base(HttpStatusCode.UnsupportedMediaType, null, errorCode.ToString(), null, null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="clientErrors">Specifies a collection of client errors.</param>
+        public UnsupportedMediaTypeException(IEnumerable<ClientError> clientErrors) : base(HttpStatusCode.UnsupportedMediaType, clientErrors)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public UnsupportedMediaTypeException(string message) : base(HttpStatusCode.UnsupportedMediaType, message)
+        public UnsupportedMediaTypeException(string message) : base(HttpStatusCode.UnsupportedMediaType, message, null, null, null)
         {}
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="errorCode">Specifies a custom defined error code.</param>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        /// <param name="field">Specifies a field to which the error relates.</param>
+        public UnsupportedMediaTypeException(Enum errorCode, Enum field) : base(HttpStatusCode.UnsupportedMediaType, null, errorCode.ToString(), field.ToString(), null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public UnsupportedMediaTypeException(Enum errorCode, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString())
+        public UnsupportedMediaTypeException(Enum errorCode, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString(), null, null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
+        public UnsupportedMediaTypeException(string message, string helpUrl) : base(HttpStatusCode.UnsupportedMediaType, message, null, null, helpUrl)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        /// <param name="field">Specifies a field to which the error relates.</param>
+        /// <param name="message">Specifies an error message.</param>
+        public UnsupportedMediaTypeException(Enum errorCode, Enum field, string message) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString(), field.ToString(), null)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
+        public UnsupportedMediaTypeException(Enum errorCode, string message, string helpUrl) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString(), null, helpUrl)
+        {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        /// <param name="field">Specifies a field to which the error relates.</param>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
+        public UnsupportedMediaTypeException(Enum errorCode, Enum field, string message, string helpUrl) : base(HttpStatusCode.UnsupportedMediaType, message, errorCode.ToString(), field.ToString(), helpUrl)
         {}
 
         #endregion
