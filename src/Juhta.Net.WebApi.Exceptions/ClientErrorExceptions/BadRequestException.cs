@@ -22,7 +22,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public BadRequestException() : base(HttpStatusCode.BadRequest)
+        public BadRequestException() : base(HttpStatusCode.BadRequest, null, null, null, null)
         {}
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="errorCode">Specifies a custom-defined error code.</param>
-        public BadRequestException(Enum errorCode) : base(HttpStatusCode.BadRequest, null, errorCode.ToString())
+        public BadRequestException(Enum errorCode) : base(HttpStatusCode.BadRequest, null, errorCode.ToString(), null, null)
         {}
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
-        public BadRequestException(string message) : base(HttpStatusCode.BadRequest, message)
+        public BadRequestException(string message) : base(HttpStatusCode.BadRequest, message, null, null, null)
         {}
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// </summary>
         /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="field">Specifies a field to which the error relates.</param>
-        public BadRequestException(Enum errorCode, Enum field) : base(HttpStatusCode.BadRequest, null, errorCode.ToString(), field.ToString())
+        public BadRequestException(Enum errorCode, Enum field) : base(HttpStatusCode.BadRequest, null, errorCode.ToString(), field.ToString(), null)
         {}
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// </summary>
         /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="message">Specifies an error message.</param>
-        public BadRequestException(Enum errorCode, string message) : base(HttpStatusCode.BadRequest, message, errorCode.ToString())
+        public BadRequestException(Enum errorCode, string message) : base(HttpStatusCode.BadRequest, message, errorCode.ToString(), null, null)
         {}
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="field">Specifies a field to which the error relates.</param>
         /// <param name="message">Specifies an error message.</param>
-        public BadRequestException(Enum errorCode, Enum field, string message) : base(HttpStatusCode.BadRequest, message, errorCode.ToString(), field.ToString())
+        public BadRequestException(Enum errorCode, Enum field, string message) : base(HttpStatusCode.BadRequest, message, errorCode.ToString(), field.ToString(), null)
         {}
 
         /// <summary>
