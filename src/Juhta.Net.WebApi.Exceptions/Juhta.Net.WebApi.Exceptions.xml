@@ -71,19 +71,19 @@
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="clientError">Specifies a client error.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">
-            <summary>
-            Initializes a new instance.
-            </summary>
-            <param name="statusCode">Specifies an HTTP status code.</param>
-            <param name="clientErrors">Specifies a collection of client errors.</param>
-        </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="errorMessage">Specifies an error message.</param>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">
+            <summary>
+            Initializes a new instance.
+            </summary>
+            <param name="statusCode">Specifies an HTTP status code.</param>
+            <param name="clientErrors">Specifies a collection of client errors.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String)">
             <summary>
@@ -1786,9 +1786,9 @@
             </summary>
             <returns>Returns the resulting <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse"/> object.</returns>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.InnerException">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.ErrorMessage">
             <summary>
-            Gets the inner exception that relates to the server error.
+            Gets the error message related to this <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/> instance.
             </summary>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorException.#ctor(System.Net.HttpStatusCode)">
@@ -1818,9 +1818,9 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="F:Juhta.Net.WebApi.Exceptions.ServerErrorException.m_innerException">
+        <member name="F:Juhta.Net.WebApi.Exceptions.ServerErrorException.m_errorMessage">
             <summary>
-            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.InnerException"/> property.
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.ErrorMessage"/> property.
             </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException">
@@ -2008,11 +2008,10 @@
             <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.InnerException">
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage">
             <summary>
-            Gets or sets the inner exception that relates to the server error.
+            Gets or sets the error message that relates to the server error.
             </summary>
-            <remarks>Please note that an inner exception will be set as a string.</remarks>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse">
             <summary>
@@ -2028,11 +2027,6 @@
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.CallStack">
             <summary>
             Gets or sets the call stack of the Web API error.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ErrorMessage">
-            <summary>
-            Gets or sets the error message of the Web API error.
             </summary>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode">
@@ -2053,28 +2047,25 @@
             Gets the call stack related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ErrorMessage">
-            <summary>
-            Gets the error message related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
-            </summary>
-        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode">
             <summary>
             Gets the HTTP status code related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(Juhta.Net.WebApi.Exceptions.WebApiErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(Juhta.Net.WebApi.Exceptions.WebApiErrorResponse,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="webApiErrorResponse">Specifies a Web API error response.</param>
+            <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(System.Net.HttpStatusCode,System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#ctor(System.Net.HttpStatusCode,System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="statusCode">Specifies an HTTP status code.</param>
             <param name="message">Specifies an error message.</param>
+            <param name="innerException">Specifies an inner exception.</param>
         </member>
         <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.AppendCurrentCallStack(System.Collections.Generic.List{System.String})">
             <summary>
@@ -2087,11 +2078,6 @@
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_callStack">
             <summary>
             Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.CallStack"/> property.
-            </summary>
-        </member>
-        <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_errorMessage">
-            <summary>
-            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.ErrorMessage"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_statusCode">
