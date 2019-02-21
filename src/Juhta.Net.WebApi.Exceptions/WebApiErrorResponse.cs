@@ -33,11 +33,6 @@ namespace Juhta.Net.WebApi.Exceptions
         public string[] CallStack {get; set;}
 
         /// <summary>
-        /// Gets or sets the error message of the Web API error.
-        /// </summary>
-        public string ErrorMessage {get; set;}
-
-        /// <summary>
         /// Gets or sets the HTTP status code of the Web API error.
         /// </summary>
         /// <remarks>HTTP status codes will be serialized into this field by using textual values of the enumeration
