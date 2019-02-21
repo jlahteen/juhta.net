@@ -31,14 +31,6 @@ namespace Juhta.Net.WebApi.Exceptions
         }
 
         /// <summary>
-        /// Gets the error message related to this <see cref="WebApiException"/> instance.
-        /// </summary>
-        public string ErrorMessage
-        {
-            get {return(m_errorMessage);}
-        }
-
-        /// <summary>
         /// Gets the HTTP status code related to this <see cref="WebApiException"/> instance.
         /// </summary>
         public HttpStatusCode StatusCode
@@ -54,7 +46,8 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="webApiErrorResponse">Specifies a Web API error response.</param>
-        protected WebApiException(WebApiErrorResponse webApiErrorResponse) : base(webApiErrorResponse.ErrorMessage)
+        /// <param name="message">Specifies an error message.</param>
+        protected WebApiException(WebApiErrorResponse webApiErrorResponse, string message) : base(message)
         {
             List<string> callStack = new List<string>();
 
@@ -67,8 +60,6 @@ namespace Juhta.Net.WebApi.Exceptions
 
             m_callStack = callStack.ToArray();
 
-            m_errorMessage = webApiErrorResponse.ErrorMessage;
-
             m_statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), webApiErrorResponse.StatusCode.Substring(webApiErrorResponse.StatusCode.IndexOf('.') + 1));
         }
 
@@ -77,13 +68,12 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
-        protected WebApiException(HttpStatusCode statusCode, string message) : base(message)
+        /// <param name="innerException">Specifies an inner exception.</param>
+        protected WebApiException(HttpStatusCode statusCode, string message, Exception innerException) : base(message, innerException)
         {
             List<string> callStack = new List<string>();
 
             m_statusCode = statusCode;
-
-            m_errorMessage = message;
 
             callStack.Add($"-- {this.GetType().FullName} thrown --");
 
@@ -134,11 +124,6 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Stores the <see cref="CallStack"/> property.
         /// </summary>
         private string[] m_callStack;
-
-        /// <summary>
-        /// Stores the <see cref="ErrorMessage"/> property.
-        /// </summary>
-        private string m_errorMessage;
 
         /// <summary>
         /// Stores the <see cref="StatusCode"/> property.
