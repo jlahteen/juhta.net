@@ -28,7 +28,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_BadGatewayException1_ShouldReturn",
-                    null,
                     "Exception of type 'Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException' was thrown.",
                     HttpStatusCode.BadGateway
                 );
@@ -69,7 +68,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_BadGatewayException2_ShouldReturn",
-                    null,
                     "This is a server exception of the type BadGatewayException!",
                     HttpStatusCode.BadGateway
                 );
@@ -121,7 +119,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_BadGatewayException3_ShouldReturn",
-                    innerException.ToString(),
                     "This is a server exception of the type BadGatewayException!",
                     HttpStatusCode.BadGateway
                 );

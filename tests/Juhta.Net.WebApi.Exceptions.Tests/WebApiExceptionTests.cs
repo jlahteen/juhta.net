@@ -22,13 +22,11 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
             Assert.AreEqual<HttpStatusCode>(statusCode, exception.StatusCode);
         }
 
-        protected void AssertException(ServerErrorException exception, string methodName, string innerException, string errorMessage, HttpStatusCode statusCode)
+        protected void AssertException(ServerErrorException exception, string methodName, string errorMessage, HttpStatusCode statusCode)
         {
             Assert.IsNotNull(exception.CallStack);
 
             Assert.IsTrue(exception.CallStack[1].Contains(methodName));
-
-            Assert.AreEqual<string>(innerException, exception.InnerException);
 
             Assert.AreEqual<string>(errorMessage, exception.Message);
 
@@ -84,8 +82,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
 
             Assert.AreEqual<string>(exception1.Error?.Code, exception2.Error?.Code);
 
-            Assert.AreEqual<string>(exception1.ErrorMessage, exception2.ErrorMessage);
-
             Assert.AreEqual<HttpStatusCode>(exception1.StatusCode, exception2.StatusCode);
 
             Assert.AreEqual<int?>(exception1.Errors?.Length, exception2.Errors?.Length);
@@ -108,8 +104,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         {
             for (int i = 0; i < c_maxCallStackLinesToAssert; i++)
                 Assert.AreEqual(exception1.CallStack[i], exception2.CallStack[i]);
-
-            Assert.AreEqual<string>(exception1.InnerException, exception2.InnerException);
 
             Assert.AreEqual<string>(exception1.ErrorMessage, exception2.ErrorMessage);
 
