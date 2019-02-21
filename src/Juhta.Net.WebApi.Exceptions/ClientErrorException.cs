@@ -31,8 +31,6 @@ namespace Juhta.Net.WebApi.Exceptions
 
             clientErrorResponse.Errors = m_errors;
 
-            clientErrorResponse.ErrorMessage = this.ErrorMessage;
-
             clientErrorResponse.StatusCode = "ClientError." + this.StatusCode.ToString();
 
             return(clientErrorResponse);
@@ -68,7 +66,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="clientErrorResponse">Specifies a client error response.</param>
-        protected ClientErrorException(ClientErrorResponse clientErrorResponse) : base(clientErrorResponse)
+        protected ClientErrorException(ClientErrorResponse clientErrorResponse) : base(clientErrorResponse, GetErrorMessage(clientErrorResponse.Errors))
         {
             m_errors = clientErrorResponse.Errors;
         }
@@ -85,19 +83,9 @@ namespace Juhta.Net.WebApi.Exceptions
         /// </summary>
         /// <param name="statusCode">Specifies an HTTP status code.</param>
         /// <param name="clientError">Specifies a client error.</param>
-        protected ClientErrorException(HttpStatusCode statusCode, ClientError clientError) : base(statusCode, clientError?.Message)
+        protected ClientErrorException(HttpStatusCode statusCode, ClientError clientError) : base(statusCode, clientError?.Message, null)
         {
             m_errors = new ClientError[1]{clientError};
-        }
-
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
-        /// <param name="statusCode">Specifies an HTTP status code.</param>
-        /// <param name="clientErrors">Specifies a collection of client errors.</param>
-        protected ClientErrorException(HttpStatusCode statusCode, IEnumerable<ClientError> clientErrors) : base(statusCode, GetErrorMessage(clientErrors))
-        {
-            m_errors = (ClientError[])clientErrors;
         }
 
         /// <summary>
@@ -107,6 +95,16 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="errorMessage">Specifies an error message.</param>
         protected ClientErrorException(HttpStatusCode statusCode, string errorMessage) : this(statusCode, errorMessage, null, null, null)
         {}
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="statusCode">Specifies an HTTP status code.</param>
+        /// <param name="clientErrors">Specifies a collection of client errors.</param>
+        protected ClientErrorException(HttpStatusCode statusCode, IEnumerable<ClientError> clientErrors) : base(statusCode, GetErrorMessage(clientErrors), null)
+        {
+            m_errors = (ClientError[])clientErrors;
+        }
 
         /// <summary>
         /// Initializes a new instance.
@@ -135,7 +133,7 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="errorCode">Specifies a custom-defined error code.</param>
         /// <param name="field">Specifies a field in the incoming request to which the error relates.</param>
         /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
-        protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field, string helpUrl) : base(statusCode, errorMessage)
+        protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field, string helpUrl) : base(statusCode, errorMessage, null)
         {
             ClientError clientError;
 
