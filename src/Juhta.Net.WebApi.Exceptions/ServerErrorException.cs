@@ -30,8 +30,6 @@ namespace Juhta.Net.WebApi.Exceptions
 
             serverErrorResponse.ErrorMessage = this.ErrorMessage;
 
-            serverErrorResponse.InnerException = this.InnerException;
-
             serverErrorResponse.StatusCode = "ServerError." + this.StatusCode.ToString();
 
             return(serverErrorResponse);
@@ -42,11 +40,11 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Public Properties
 
         /// <summary>
-        /// Gets the inner exception that relates to the server error.
+        /// Gets the error message related to this <see cref="ServerErrorException"/> instance.
         /// </summary>
-        public new string InnerException
+        public string ErrorMessage
         {
-            get {return(m_innerException);}
+            get {return(m_errorMessage);}
         }
 
         #endregion
@@ -64,9 +62,9 @@ namespace Juhta.Net.WebApi.Exceptions
         /// Initializes a new instance.
         /// </summary>
         /// <param name="serverErrorResponse">Specifies a server error.</param>
-        protected ServerErrorException(ServerErrorResponse serverErrorResponse) : base(serverErrorResponse)
+        protected ServerErrorException(ServerErrorResponse serverErrorResponse) : base(serverErrorResponse, serverErrorResponse.ErrorMessage)
         {
-            m_innerException = serverErrorResponse.InnerException;
+            m_errorMessage = serverErrorResponse.ErrorMessage;
         }
 
         /// <summary>
@@ -83,10 +81,9 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="httpStatusCode">Specifies an HTTP status code.</param>
         /// <param name="message">Specifies an error message.</param>
         /// <param name="innerException">Specifies an inner exception.</param>
-        protected ServerErrorException(HttpStatusCode httpStatusCode, string message, Exception innerException) : base(httpStatusCode, message)
+        protected ServerErrorException(HttpStatusCode httpStatusCode, string message, Exception innerException) : base(httpStatusCode, message, innerException)
         {
-            if (innerException != null)
-                m_innerException = innerException.ToString();
+            m_errorMessage = message;
         }
 
         #endregion
@@ -94,9 +91,9 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Private Fields
 
         /// <summary>
-        /// Stores the <see cref="InnerException"/> property.
+        /// Stores the <see cref="ErrorMessage"/> property.
         /// </summary>
-        private string m_innerException;
+        private string m_errorMessage;
 
         #endregion
     }
