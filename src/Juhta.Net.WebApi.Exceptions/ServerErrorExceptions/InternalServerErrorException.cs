@@ -36,7 +36,7 @@ namespace Juhta.Net.WebApi.Exceptions.ServerErrorExceptions
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
         /// <param name="innerException">Specifies an inner exception.</param>
-        public InternalServerErrorException(string message, Exception innerException) : base(HttpStatusCode.BadGateway, message, innerException)
+        public InternalServerErrorException(string message, Exception innerException) : base(HttpStatusCode.InternalServerError, message, innerException)
         {}
 
         #endregion
