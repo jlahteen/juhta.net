@@ -36,7 +36,7 @@ namespace Juhta.Net.WebApi.Exceptions.ServerErrorExceptions
         /// </summary>
         /// <param name="message">Specifies an error message.</param>
         /// <param name="innerException">Specifies an inner exception.</param>
-        public ServiceUnavailableException(string message, Exception innerException) : base(HttpStatusCode.BadGateway, message, innerException)
+        public ServiceUnavailableException(string message, Exception innerException) : base(HttpStatusCode.ServiceUnavailable, message, innerException)
         {}
 
         #endregion
