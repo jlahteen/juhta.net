@@ -6,12 +6,11 @@
 // the MIT license. Please refer to the LICENSE.txt file for details.
 //
 
-using Juhta.Net.Helpers;
-using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
-using Juhta.Net.WebApi.Exceptions.ServerErrorExceptions;
+using Juhta.Net.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Reflection;
 
 namespace Juhta.Net.WebApi.Exceptions
 {
@@ -20,14 +19,42 @@ namespace Juhta.Net.WebApi.Exceptions
     /// </summary>
     public abstract class WebApiException : Exception
     {
+        #region Static Constructor
+
+        /// <summary>
+        /// Initializes the class.
+        /// </summary>
+        static WebApiException()
+        {
+            s_serviceName = Assembly.GetEntryAssembly().GetFileNameWithoutExtension();
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Sets the name of the service that the process represents.
+        /// </summary>
+        /// <param name="serviceName">Specifies a service name.</param>
+        /// <remarks>The service name appears in the values of the <see cref="ServiceStack"/> property of the instances
+        /// of this class. The default value for the service name is the file name (without extension) of the entry
+        /// assembly.</remarks>
+        public static void SetServiceName(string serviceName)
+        {
+            s_serviceName = serviceName;
+        }
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
-        /// Gets the call stack related to this <see cref="WebApiException"/> instance.
+        /// Gets the service stack related to this <see cref="WebApiException"/> instance.
         /// </summary>
-        public string[] CallStack
+        public string[] ServiceStack
         {
-            get {return(m_callStack);}
+            get {return(m_serviceStack);}
         }
 
         /// <summary>
@@ -49,16 +76,14 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="message">Specifies an error message.</param>
         protected WebApiException(WebApiErrorResponse webApiErrorResponse, string message) : base(message)
         {
-            List<string> callStack = new List<string>();
+            List<string> serviceStack = new List<string>();
 
-            if (webApiErrorResponse.CallStack != null)
-                callStack.AddRange(webApiErrorResponse.CallStack);
+            if (webApiErrorResponse.ServiceStack != null)
+                serviceStack.AddRange(webApiErrorResponse.ServiceStack);
 
-            callStack.Add($"-- {this.GetType().FullName} deserialized and rethrown --");
+            serviceStack.Add(s_serviceName);
 
-            AppendCurrentCallStack(callStack);
-
-            m_callStack = callStack.ToArray();
+            m_serviceStack = serviceStack.ToArray();
 
             m_statusCode = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), webApiErrorResponse.StatusCode.Substring(webApiErrorResponse.StatusCode.IndexOf('.') + 1));
         }
@@ -71,49 +96,9 @@ namespace Juhta.Net.WebApi.Exceptions
         /// <param name="innerException">Specifies an inner exception.</param>
         protected WebApiException(HttpStatusCode statusCode, string message, Exception innerException) : base(message, innerException)
         {
-            List<string> callStack = new List<string>();
-
             m_statusCode = statusCode;
 
-            callStack.Add($"-- {this.GetType().FullName} thrown --");
-
-            AppendCurrentCallStack(callStack);
-
-            m_callStack = callStack.ToArray();
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        /// <summary>
-        /// Appends the current call stack to a specified call stack.
-        /// </summary>
-        /// <param name="callStack">Specifies a call stack.</param>
-        /// <remarks>The method ignores all call stack lines that are caused by the internal activity of this library.
-        /// These calls are not relevant to trace with the context of Web API exceptions.</remarks>
-        private static void AppendCurrentCallStack(List<string> callStack)
-        {
-            string[] currentCallStack;
-            int i;
-
-            currentCallStack = StackTraceHelper.GetCallStack(1);
-
-            for (i = 0; i < currentCallStack.Length;)
-            {
-                if ((currentCallStack[i].StartsWith("at " + typeof(WebApiException).FullName + ".")) ||
-                    (currentCallStack[i].StartsWith("at " + typeof(ClientErrorException).FullName + ".")) ||
-                    (currentCallStack[i].StartsWith("at " + typeof(ServerErrorException).FullName + ".")) ||
-                    (currentCallStack[i].StartsWith("at " + typeof(BadRequestException).Namespace + ".")) ||
-                    (currentCallStack[i].StartsWith("at " + typeof(BadGatewayException).Namespace + ".")))
-
-                    i++;
-                else
-                    break;
-            }
-
-            for (; i < currentCallStack.Length; i++)
-                callStack.Add(currentCallStack[i]);
+            m_serviceStack = new string[]{s_serviceName};
         }
 
         #endregion
@@ -121,9 +106,14 @@ namespace Juhta.Net.WebApi.Exceptions
         #region Private Fields
 
         /// <summary>
-        /// Stores the <see cref="CallStack"/> property.
+        /// Stores the name of the service that the process represents.
         /// </summary>
-        private string[] m_callStack;
+        private static string s_serviceName;
+
+        /// <summary>
+        /// Stores the <see cref="ServiceStack"/> property.
+        /// </summary>
+        private string[] m_serviceStack;
 
         /// <summary>
         /// Stores the <see cref="StatusCode"/> property.

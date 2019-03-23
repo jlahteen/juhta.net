@@ -2024,9 +2024,9 @@
             <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/>.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.CallStack">
+        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ServiceStack">
             <summary>
-            Gets or sets the call stack of the Web API error.
+            Gets or sets the service stack of the Web API error.
             </summary>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode">
@@ -2042,9 +2042,23 @@
             Defines an abstract base class for the Web API exceptions.
             </summary>
         </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.CallStack">
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.#cctor">
             <summary>
-            Gets the call stack related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
+            Initializes the class.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)">
+            <summary>
+            Sets the name of the service that the process represents.
+            </summary>
+            <param name="serviceName">Specifies a service name.</param>
+            <remarks>The service name appears in the values of the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack"/> property of the instances
+            of this class. The default value for the service name is the file name (without extension) of the entry
+            assembly.</remarks>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack">
+            <summary>
+            Gets the service stack related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.
             </summary>
         </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode">
@@ -2067,17 +2081,14 @@
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.AppendCurrentCallStack(System.Collections.Generic.List{System.String})">
+        <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.s_serviceName">
             <summary>
-            Appends the current call stack to a specified call stack.
+            Stores the name of the service that the process represents.
             </summary>
-            <param name="callStack">Specifies a call stack.</param>
-            <remarks>The method ignores all call stack lines that are caused by the internal activity of this library.
-            These calls are not relevant to trace with the context of Web API exceptions.</remarks>
         </member>
-        <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_callStack">
+        <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_serviceStack">
             <summary>
-            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.CallStack"/> property.
+            Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack"/> property.
             </summary>
         </member>
         <member name="F:Juhta.Net.WebApi.Exceptions.WebApiException.m_statusCode">

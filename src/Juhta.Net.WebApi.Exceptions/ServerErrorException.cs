@@ -26,7 +26,7 @@ namespace Juhta.Net.WebApi.Exceptions
         {
             ServerErrorResponse serverErrorResponse = new ServerErrorResponse();
 
-            serverErrorResponse.CallStack = this.CallStack;
+            serverErrorResponse.ServiceStack = this.ServiceStack;
 
             serverErrorResponse.ErrorMessage = this.ErrorMessage;
 

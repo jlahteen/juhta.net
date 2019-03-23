@@ -1,7 +1,9 @@
 ﻿
+using Juhta.Net.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Net;
+using System.Reflection;
 
 namespace Juhta.Net.WebApi.Exceptions.Tests
 {
@@ -9,11 +11,11 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
     {
         #region Protected Methods
 
-        protected void AssertException(ClientErrorException exception, string methodName, string errorCode, string errorMessage, HttpStatusCode statusCode)
+        protected void AssertException(ClientErrorException exception, string notUsed, string errorCode, string errorMessage, HttpStatusCode statusCode)
         {
-            Assert.IsNotNull(exception.CallStack);
+            Assert.IsNotNull(exception.ServiceStack);
 
-            Assert.IsTrue(exception.CallStack[1].Contains(methodName));
+            Assert.AreEqual<string>(Assembly.GetEntryAssembly().GetFileNameWithoutExtension(), exception.ServiceStack[0]);
 
             Assert.AreEqual<string>(errorCode, exception.Error?.Code);
 
@@ -22,22 +24,22 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
             Assert.AreEqual<HttpStatusCode>(statusCode, exception.StatusCode);
         }
 
-        protected void AssertException(ServerErrorException exception, string methodName, string errorMessage, HttpStatusCode statusCode)
+        protected void AssertException(ServerErrorException exception, string notUsed, string errorMessage, HttpStatusCode statusCode)
         {
-            Assert.IsNotNull(exception.CallStack);
+            Assert.IsNotNull(exception.ServiceStack);
 
-            Assert.IsTrue(exception.CallStack[1].Contains(methodName));
+            Assert.AreEqual<string>(Assembly.GetEntryAssembly().GetFileNameWithoutExtension(), exception.ServiceStack[0]);
 
             Assert.AreEqual<string>(errorMessage, exception.Message);
 
             Assert.AreEqual<HttpStatusCode>(statusCode, exception.StatusCode);
         }
 
-        protected void AssertException(ClientErrorException exception, string methodName, HttpStatusCode statusCode, string errorCode, string errorMessage, string field, string helpUrl)
+        protected void AssertException(ClientErrorException exception, string notUsed, HttpStatusCode statusCode, string errorCode, string errorMessage, string field, string helpUrl)
         {
-            Assert.IsNotNull(exception.CallStack);
+            Assert.IsNotNull(exception.ServiceStack);
 
-            Assert.IsTrue(exception.CallStack[1].Contains(methodName));
+            Assert.AreEqual<string>(Assembly.GetEntryAssembly().GetFileNameWithoutExtension(), exception.ServiceStack[0]);
 
             Assert.AreEqual<HttpStatusCode>(statusCode, exception.StatusCode);
 
@@ -50,11 +52,11 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
             Assert.AreEqual<string>(helpUrl, exception.Errors[0].HelpUrl);
         }
 
-        protected void AssertException(ClientErrorException exception, string methodName, HttpStatusCode statusCode, string errorCode1, string errorMessage1, string field1, string helpUrl1, string errorCode2, string errorMessage2, string field2, string helpUrl2)
+        protected void AssertException(ClientErrorException exception, string notUsed, HttpStatusCode statusCode, string errorCode1, string errorMessage1, string field1, string helpUrl1, string errorCode2, string errorMessage2, string field2, string helpUrl2)
         {
-            Assert.IsNotNull(exception.CallStack);
+            Assert.IsNotNull(exception.ServiceStack);
 
-            Assert.IsTrue(exception.CallStack[1].Contains(methodName));
+            Assert.AreEqual<string>(Assembly.GetEntryAssembly().GetFileNameWithoutExtension(), exception.ServiceStack[0]);
 
             Assert.AreEqual<HttpStatusCode>(statusCode, exception.StatusCode);
 
@@ -77,8 +79,11 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
 
         protected void AssertExceptions(ClientErrorException exception1, ClientErrorException exception2)
         {
-            for (int i = 0; i < c_maxCallStackLinesToAssert; i++)
-                Assert.AreEqual(exception1.CallStack[i], exception2.CallStack[i]);
+            Assert.IsTrue(exception1.ServiceStack.Length <= exception2.ServiceStack.Length);
+
+            if (exception1.ServiceStack.Length > 0)
+                for (int i = 0; i < exception1.ServiceStack.Length; i++)
+                    Assert.AreEqual(exception1.ServiceStack[i], exception2.ServiceStack[i]);
 
             Assert.AreEqual<string>(exception1.Error?.Code, exception2.Error?.Code);
 
@@ -102,8 +107,11 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
 
         protected void AssertExceptions(ServerErrorException exception1, ServerErrorException exception2)
         {
-            for (int i = 0; i < c_maxCallStackLinesToAssert; i++)
-                Assert.AreEqual(exception1.CallStack[i], exception2.CallStack[i]);
+            Assert.IsTrue(exception1.ServiceStack.Length <= exception2.ServiceStack.Length);
+
+            if (exception1.ServiceStack.Length > 0)
+                for (int i = 0; i < exception1.ServiceStack.Length; i++)
+                    Assert.AreEqual(exception1.ServiceStack[i], exception2.ServiceStack[i]);
 
             Assert.AreEqual<string>(exception1.ErrorMessage, exception2.ErrorMessage);
 
@@ -114,12 +122,6 @@ namespace Juhta.Net.WebApi.Exceptions.Tests
         {
             DoThrowException();
         }
-
-        #endregion
-
-        #region Protected Constants
-
-        protected const int c_maxCallStackLinesToAssert = 20;
 
         #endregion
 
