@@ -410,7 +410,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new ProxyAuthenticationRequiredException(ErrorCode.InvalidOrderNumber, "The field content is not allowed at all. Please do better. At least check out the help URL!", "http://juhta.net/helpurls/1233333");
+                throw new ProxyAuthenticationRequiredException(ErrorCode.InvalidOrderNumber, "ProxyAuthenticationRequiredExceptionField", "The field content is not allowed at all. Please do better. At least check out the help URL!");
             }
 
             catch (ProxyAuthenticationRequiredException ex)
@@ -421,8 +421,8 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.ProxyAuthenticationRequired,
                     ErrorCode.InvalidOrderNumber.ToString(),
                     "The field content is not allowed at all. Please do better. At least check out the help URL!",
-                    null,
-                    "http://juhta.net/helpurls/1233333"
+                    "ProxyAuthenticationRequiredExceptionField",
+                    null
                 );
 
                 clientErrorResponse1 = ex.ToClientErrorResponse();

@@ -410,7 +410,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new LengthRequiredException(ErrorCode.InvalidOrderNumber, "The field content is not allowed at all. Please do better. At least check out the help URL!", "http://juhta.net/helpurls/1233333");
+                throw new LengthRequiredException(ErrorCode.InvalidOrderNumber, "LengthRequiredExceptionField", "The field content is not allowed at all. Please do better. At least check out the help URL!");
             }
 
             catch (LengthRequiredException ex)
@@ -421,8 +421,8 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.LengthRequired,
                     ErrorCode.InvalidOrderNumber.ToString(),
                     "The field content is not allowed at all. Please do better. At least check out the help URL!",
-                    null,
-                    "http://juhta.net/helpurls/1233333"
+                    "LengthRequiredExceptionField",
+                    null
                 );
 
                 clientErrorResponse1 = ex.ToClientErrorResponse();

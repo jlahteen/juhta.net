@@ -410,7 +410,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
 
             try
             {
-                throw new NotAcceptableException(ErrorCode.InvalidOrderNumber, "The field content is not allowed at all. Please do better. At least check out the help URL!", "http://juhta.net/helpurls/1233333");
+                throw new NotAcceptableException(ErrorCode.InvalidOrderNumber, "NotAcceptableExceptionField", "The field content is not allowed at all. Please do better. At least check out the help URL!");
             }
 
             catch (NotAcceptableException ex)
@@ -421,8 +421,8 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     HttpStatusCode.NotAcceptable,
                     ErrorCode.InvalidOrderNumber.ToString(),
                     "The field content is not allowed at all. Please do better. At least check out the help URL!",
-                    null,
-                    "http://juhta.net/helpurls/1233333"
+                    "NotAcceptableExceptionField",
+                    null
                 );
 
                 clientErrorResponse1 = ex.ToClientErrorResponse();
