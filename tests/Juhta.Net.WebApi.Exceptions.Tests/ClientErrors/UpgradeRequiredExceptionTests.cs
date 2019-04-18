@@ -488,6 +488,49 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
             AssertExceptions(exception1, exception2);
         }
 
+        [TestMethod]
+        public void ThrowAndSerialize_UpgradeRequiredException12_ShouldReturn()
+        {
+            ClientErrorResponse clientErrorResponse1, clientErrorResponse2;
+            UpgradeRequiredException exception1 = null, exception2 = null;
+
+            try
+            {
+                throw new UpgradeRequiredException(ErrorCode.InvalidOrderNumber, "Field.CustomerName", "The field content is not valid. Please consult the help URL!", "http://juhta.net/helpurls/125533");
+            }
+
+            catch (UpgradeRequiredException ex)
+            {
+                AssertException(
+                    ex,
+                    "ThrowAndSerialize_UpgradeRequiredException11_ShouldReturn",
+                    HttpStatusCode.UpgradeRequired,
+                    ErrorCode.InvalidOrderNumber.ToString(),
+                    "The field content is not valid. Please consult the help URL!",
+                    "Field.CustomerName",
+                    "http://juhta.net/helpurls/125533"
+                );
+
+                clientErrorResponse1 = ex.ToClientErrorResponse();
+
+                exception1 = ex;
+            }
+
+            clientErrorResponse2 = JsonConvert.DeserializeObject<ClientErrorResponse>(JsonConvert.SerializeObject(clientErrorResponse1));
+
+            try
+            {
+                clientErrorResponse2.Throw();
+            }
+
+            catch (UpgradeRequiredException ex)
+            {
+                exception2 = ex;
+            }
+
+            AssertExceptions(exception1, exception2);
+        }
+
         #endregion
     }
 }
