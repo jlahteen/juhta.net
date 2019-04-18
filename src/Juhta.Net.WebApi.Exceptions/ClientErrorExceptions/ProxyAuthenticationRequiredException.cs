@@ -105,6 +105,16 @@ namespace Juhta.Net.WebApi.Exceptions.ClientErrorExceptions
         public ProxyAuthenticationRequiredException(Enum errorCode, Enum field, string message, string helpUrl) : base(HttpStatusCode.ProxyAuthenticationRequired, message, errorCode.ToString(), field.ToString(), helpUrl)
         {}
 
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        /// <param name="errorCode">Specifies a custom-defined error code.</param>
+        /// <param name="field">Specifies a field to which the error relates.</param>
+        /// <param name="message">Specifies an error message.</param>
+        /// <param name="helpUrl">Specifies a URL that provides extra information about the error.</param>
+        public ProxyAuthenticationRequiredException(Enum errorCode, string field, string message, string helpUrl) : base(HttpStatusCode.ProxyAuthenticationRequired, message, errorCode.ToString(), field, helpUrl)
+        {}
+
         #endregion
 
         #region Internal Constructors
