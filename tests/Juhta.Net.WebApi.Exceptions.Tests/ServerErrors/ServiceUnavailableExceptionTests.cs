@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.WebApi.Exceptions.ServerErrorExceptions;
+using Juhta.Net.WebApi.Exceptions.ServerErrors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -28,7 +28,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
                 AssertException(
                     ex,
                     "ThrowAndSerialize_ServiceUnavailableException1_ShouldReturn",
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException' was thrown.",
                     HttpStatusCode.ServiceUnavailable
                 );
 
