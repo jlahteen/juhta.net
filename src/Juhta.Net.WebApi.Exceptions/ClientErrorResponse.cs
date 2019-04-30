@@ -7,7 +7,7 @@
 //
 
 using Juhta.Net.Common;
-using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
+using Juhta.Net.WebApi.Exceptions.ClientErrors;
 using System;
 using System.Net;
 
