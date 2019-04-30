@@ -1,9 +1,11 @@
 
+using Juhta.Net.Extensions;
 using Juhta.Net.WebApi.Exceptions.ServerErrors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
 using System.Net;
+using System.Reflection;
 
 namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
 {
@@ -141,6 +143,63 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ServerErrors
             }
 
             AssertExceptions(exception1, exception2);
+        }
+
+        [TestMethod]
+        public void ToString_InnerException_ShouldReturn()
+        {
+            Exception innerException = null;
+            string[] lines;
+            string serviceName = Assembly.GetEntryAssembly().GetFileNameWithoutExtension();
+
+            try
+            {
+                ThrowException();
+            }
+
+            catch (Exception ex)
+            {
+                innerException = ex;
+            }
+
+            try
+            {
+                throw new BadGatewayException("This is a server exception of the type BadGatewayException!", innerException);
+            }
+
+            catch (BadGatewayException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- WebApiException properties ---", lines[lines.Length - 3]);
+
+                Assert.AreEqual<string>("     \"StatusCode\": \"BadGateway\"", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     \"ServiceStack\": [\"" + serviceName + "\"]", lines[lines.Length - 1]);
+            }
+        }
+
+        [TestMethod]
+        public void ToString_NoInnerException_ShouldReturn()
+        {
+            string[] lines;
+            string serviceName = Assembly.GetEntryAssembly().GetFileNameWithoutExtension();
+
+            try
+            {
+                throw new BadGatewayException("This is a server exception of the type BadGatewayException!");
+            }
+
+            catch (BadGatewayException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- WebApiException properties ---", lines[lines.Length - 3]);
+
+                Assert.AreEqual<string>("     \"StatusCode\": \"BadGateway\"", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     \"ServiceStack\": [\"" + serviceName + "\"]", lines[lines.Length - 1]);
+            }
         }
 
         #endregion

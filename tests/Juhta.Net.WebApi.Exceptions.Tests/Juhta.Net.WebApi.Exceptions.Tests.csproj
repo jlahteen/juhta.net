@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Juhta.Net.WebApi.Exceptions\Juhta.Net.WebApi.Exceptions.csproj" />
+    <ProjectReference Include="..\..\src\Juhta.Net\Juhta.Net.csproj" />
   </ItemGroup>
 
 </Project>
