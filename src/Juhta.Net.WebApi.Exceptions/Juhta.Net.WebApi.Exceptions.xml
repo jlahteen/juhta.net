@@ -2227,6 +2227,12 @@
             of this class. The default value for the service name is the file name (without extension) of the entry
             assembly.</remarks>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.WebApiException.ToString">
+            <summary>
+            Converts this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance to a string.
+            </summary>
+            <returns>Returns this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/>instance as a string.</returns>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack">
             <summary>
             Gets the service stack related to this <see cref="T:Juhta.Net.WebApi.Exceptions.WebApiException"/> instance.

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
+using System.Text;
 
 namespace Juhta.Net.WebApi.Exceptions
 {
@@ -43,6 +44,30 @@ namespace Juhta.Net.WebApi.Exceptions
         public static void SetServiceName(string serviceName)
         {
             s_serviceName = serviceName;
+        }
+
+        /// <summary>
+        /// Converts this <see cref="WebApiException"/> instance to a string.
+        /// </summary>
+        /// <returns>Returns this <see cref="WebApiException"/>instance as a string.</returns>
+        public override string ToString()
+        {
+            StringBuilder value = new StringBuilder(base.ToString());
+
+            value.AppendLine();
+
+            value.AppendLine($"   --- {nameof(WebApiException)} properties ---");
+
+            value.AppendFormat("     \"{0}\": \"{1}\"", nameof(this.StatusCode), m_statusCode.ToString());
+
+            value.AppendLine();
+
+            value.AppendFormat("     \"{0}\": [", nameof(this.ServiceStack));
+
+            for (int i = 0; i < m_serviceStack.Length; i++)
+                value.AppendFormat("\"{0}\"{1}", m_serviceStack[i], i < m_serviceStack.Length - 1 ? ", " : "]");
+
+            return(value.ToString());
         }
 
         #endregion
