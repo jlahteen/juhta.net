@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
+using Juhta.Net.WebApi.Exceptions.ClientErrors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Net;
@@ -28,7 +28,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException1_ShouldReturn",
                     null,
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.MethodNotAllowedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException' was thrown.",
                     HttpStatusCode.MethodNotAllowed
                 );
 
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_MethodNotAllowedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.MethodNotAllowedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException' was thrown.",
                     HttpStatusCode.MethodNotAllowed
                 );
 

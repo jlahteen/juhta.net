@@ -1,5 +1,5 @@
 ﻿
-using Juhta.Net.WebApi.Exceptions.ClientErrorExceptions;
+using Juhta.Net.WebApi.Exceptions.ClientErrors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Net;
@@ -28,7 +28,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException1_ShouldReturn",
                     null,
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.PreconditionFailedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException' was thrown.",
                     HttpStatusCode.PreconditionFailed
                 );
 
@@ -69,7 +69,7 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
                     ex,
                     "ThrowAndSerialize_PreconditionFailedException2_ShouldReturn",
                     ErrorCode.InvalidOrderNumber.ToString(),
-                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrorExceptions.PreconditionFailedException' was thrown.",
+                    "Exception of type 'Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException' was thrown.",
                     HttpStatusCode.PreconditionFailed
                 );
 
