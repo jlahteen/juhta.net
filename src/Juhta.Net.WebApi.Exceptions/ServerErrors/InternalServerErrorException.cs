@@ -9,7 +9,7 @@
 using System;
 using System.Net;
 
-namespace Juhta.Net.WebApi.Exceptions.ServerErrorExceptions
+namespace Juhta.Net.WebApi.Exceptions.ServerErrors
 {
     /// <summary>
     /// Defines an exception class for the HTTP error Internal Server Error.

@@ -2010,175 +2010,175 @@
             Gets or sets the error message that relates to the server error.
             </summary>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException">
             <summary>
             Defines an exception class for the HTTP error Bad Gateway.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.GatewayTimeoutException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException">
             <summary>
             Defines an exception class for the HTTP error Gateway Timeout.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.GatewayTimeoutException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.GatewayTimeoutException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.GatewayTimeoutException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.GatewayTimeoutException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.HttpVersionNotSupportedException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException">
             <summary>
             Defines an exception class for the HTTP error HTTP Version Not Supported.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.HttpVersionNotSupportedException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.HttpVersionNotSupportedException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.HttpVersionNotSupportedException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.HttpVersionNotSupportedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.InternalServerErrorException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException">
             <summary>
             Defines an exception class for the HTTP error Internal Server Error.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.InternalServerErrorException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.InternalServerErrorException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.InternalServerErrorException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.InternalServerErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.NotImplementedException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException">
             <summary>
             Defines an exception class for the HTTP error Not Implemented.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.NotImplementedException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.NotImplementedException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.NotImplementedException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.NotImplementedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
         </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException">
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException">
             <summary>
             Defines an exception class for the HTTP error Service Unavailable.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException.#ctor">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException.#ctor">
             <summary>
             Initializes a new instance.
             </summary>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException.#ctor(System.String)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException.#ctor(System.String)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException.#ctor(System.String,System.Exception)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException.#ctor(System.String,System.Exception)">
             <summary>
             Initializes a new instance.
             </summary>
             <param name="message">Specifies an error message.</param>
             <param name="innerException">Specifies an inner exception.</param>
         </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.ServiceUnavailableException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException.#ctor(Juhta.Net.WebApi.Exceptions.ServerErrorResponse)">
             <summary>
             Initializes a new instance.
             </summary>
