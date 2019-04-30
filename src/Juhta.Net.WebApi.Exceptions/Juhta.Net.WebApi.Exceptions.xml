@@ -1994,6 +1994,22 @@
             Stores the <see cref="P:Juhta.Net.WebApi.Exceptions.ServerErrorException.ErrorMessage"/> property.
             </summary>
         </member>
+        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse">
+            <summary>
+            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
+            </summary>
+        </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw">
+            <summary>
+            Throws this <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse"/> as a corresponding exception derived from
+            <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
+            </summary>
+        </member>
+        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage">
+            <summary>
+            Gets or sets the error message that relates to the server error.
+            </summary>
+        </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorExceptions.BadGatewayException">
             <summary>
             Defines an exception class for the HTTP error Bad Gateway.
@@ -2167,22 +2183,6 @@
             Initializes a new instance.
             </summary>
             <param name="serverErrorResponse">Specifies a server error response based on which to create the instance.</param>
-        </member>
-        <member name="T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse">
-            <summary>
-            Defines a class for serializing instances of <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
-            </summary>
-        </member>
-        <member name="M:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw">
-            <summary>
-            Throws this <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse"/> as a corresponding exception derived from
-            <see cref="T:Juhta.Net.WebApi.Exceptions.ServerErrorException"/>.
-            </summary>
-        </member>
-        <member name="P:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage">
-            <summary>
-            Gets or sets the error message that relates to the server error.
-            </summary>
         </member>
         <member name="T:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse">
             <summary>
