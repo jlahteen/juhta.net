@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Text;
 
 namespace Juhta.Net.WebApi.Exceptions
 {
@@ -34,6 +35,65 @@ namespace Juhta.Net.WebApi.Exceptions
             clientErrorResponse.StatusCode = "ClientError." + this.StatusCode.ToString();
 
             return(clientErrorResponse);
+        }
+
+        /// <summary>
+        /// Converts this <see cref="ClientErrorException"/> instance to a string.
+        /// </summary>
+        /// <returns>Returns this <see cref="ClientErrorException"/>instance as a string.</returns>
+        public override string ToString()
+        {
+            StringBuilder value = new StringBuilder(base.ToString());
+
+            value.AppendLine();
+
+            value.AppendLine($"   --- {nameof(ClientErrorException)} properties ---");
+
+            value.AppendFormat("     \"{0}\": ", nameof(this.Errors));
+
+            if (m_errors != null)
+            {
+                value.AppendLine("[");
+
+                for (int i = 0; i < m_errors.Length; i++)
+                {
+                    if (m_errors[i] != null)
+                    {
+                        value.AppendLine("       {");
+
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Code), m_errors[i].Code ?? "null");
+
+                        value.AppendLine(",");
+
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Field), m_errors[i].Field ?? "null");
+
+                        value.AppendLine(",");
+
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Message), m_errors[i].Message ?? "null");
+
+                        value.AppendLine(",");
+
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.HelpUrl), m_errors[i].HelpUrl ?? "null");
+
+                        value.AppendLine();
+
+                        value.Append("       }");
+                    }
+                    else
+                        value.Append("       null");
+
+                    if (i < m_errors.Length - 1)
+                        value.AppendLine(",");
+                    else
+                        value.AppendLine();
+                }
+
+                value.Append("     ]");
+            }
+            else
+                value.Append("null");
+
+            return(value.ToString());
         }
 
         #endregion

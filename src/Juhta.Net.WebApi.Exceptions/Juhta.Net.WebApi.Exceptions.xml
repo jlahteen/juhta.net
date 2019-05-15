@@ -40,6 +40,12 @@
             </summary>
             <returns>Returns the resulting <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorResponse"/> object.</returns>
         </member>
+        <member name="M:Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString">
+            <summary>
+            Converts this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/> instance to a string.
+            </summary>
+            <returns>Returns this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>instance as a string.</returns>
+        </member>
         <member name="P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Error">
             <summary>
             Gets the first <see cref="T:Juhta.Net.WebApi.Exceptions.ClientError"/> object that relates to this <see cref="T:Juhta.Net.WebApi.Exceptions.ClientErrorException"/>
