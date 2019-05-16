@@ -61,19 +61,19 @@ namespace Juhta.Net.WebApi.Exceptions
                     {
                         value.AppendLine("       {");
 
-                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Code), m_errors[i].Code ?? "null");
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Code), m_errors[i].Code != null ? "\"" + m_errors[i].Code + "\"" : "null");
 
                         value.AppendLine(",");
 
-                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Field), m_errors[i].Field ?? "null");
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Field), m_errors[i].Field != null ? "\"" + m_errors[i].Field + "\"" : "null");
 
                         value.AppendLine(",");
 
-                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Message), m_errors[i].Message ?? "null");
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.Message), m_errors[i].Message != null ? "\"" + m_errors[i].Message + "\"" : "null");
 
                         value.AppendLine(",");
 
-                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.HelpUrl), m_errors[i].HelpUrl ?? "null");
+                        value.AppendFormat("         \"{0}\": {1}", nameof(ClientError.HelpUrl), m_errors[i].HelpUrl != null ? "\"" + m_errors[i].HelpUrl + "\"" : "null");
 
                         value.AppendLine();
 
