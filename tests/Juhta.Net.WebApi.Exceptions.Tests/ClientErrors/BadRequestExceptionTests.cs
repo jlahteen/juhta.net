@@ -2,6 +2,7 @@
 using Juhta.Net.WebApi.Exceptions.ClientErrors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using System;
 using System.Net;
 
 namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
@@ -529,6 +530,135 @@ namespace Juhta.Net.WebApi.Exceptions.Tests.ClientErrors
             }
 
             AssertExceptions(exception1, exception2);
+        }
+
+        [TestMethod]
+        public void ToString_ClientErrorArrayConstructor_ShouldReturn()
+        {
+            ClientError[] clientErrors;
+            string[] lines;
+
+            try
+            {
+                clientErrors = new ClientError[]{new ClientError(), new ClientError {Code = "CodeValue", Field = "FieldValue", HelpUrl = "HelpUrlValue", Message = "MessageValue"}};
+
+                throw new BadRequestException(clientErrors);
+            }
+
+            catch (BadRequestException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- ClientErrorException properties ---", lines[lines.Length - 15]);
+
+                Assert.AreEqual<string>("     \"Errors\": [", lines[lines.Length - 14]);
+
+                Assert.AreEqual<string>("       {", lines[lines.Length - 13]);
+
+                Assert.AreEqual<string>("         \"Code\": null,", lines[lines.Length - 12]);
+
+                Assert.AreEqual<string>("         \"Field\": null,", lines[lines.Length - 11]);
+
+                Assert.AreEqual<string>("         \"Message\": null,", lines[lines.Length - 10]);
+
+                Assert.AreEqual<string>("         \"HelpUrl\": null", lines[lines.Length - 9]);
+
+                Assert.AreEqual<string>("       },", lines[lines.Length - 8]);
+
+                Assert.AreEqual<string>("       {", lines[lines.Length - 7]);
+
+                Assert.AreEqual<string>("         \"Code\": \"CodeValue\",", lines[lines.Length - 6]);
+
+                Assert.AreEqual<string>("         \"Field\": \"FieldValue\",", lines[lines.Length - 5]);
+
+                Assert.AreEqual<string>("         \"Message\": \"MessageValue\",", lines[lines.Length - 4]);
+
+                Assert.AreEqual<string>("         \"HelpUrl\": \"HelpUrlValue\"", lines[lines.Length - 3]);
+
+                Assert.AreEqual<string>("       }", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     ]", lines[lines.Length - 1]);
+            }
+        }
+
+        [TestMethod]
+        public void ToString_DefaultConstructor_ShouldReturn()
+        {
+            string[] lines;
+
+            try
+            {
+                throw new BadRequestException();
+            }
+
+            catch (BadRequestException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- ClientErrorException properties ---", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     \"Errors\": null", lines[lines.Length - 1]);
+            }
+        }
+
+        [TestMethod]
+        public void ToString_NullClientErrorConstructor_ShouldReturn()
+        {
+            ClientError clientError = null;
+            string[] lines;
+
+            try
+            {
+                throw new BadRequestException(clientError);
+            }
+
+            catch (BadRequestException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- ClientErrorException properties ---", lines[lines.Length - 4]);
+
+                Assert.AreEqual<string>("     \"Errors\": [", lines[lines.Length - 3]);
+
+                Assert.AreEqual<string>("       null", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     ]", lines[lines.Length - 1]);
+            }
+        }
+
+        [TestMethod]
+        public void ToString_SimpleClientErrorConstructor_ShouldReturn()
+        {
+            ClientError clientError = new ClientError();
+            string[] lines;
+
+            try
+            {
+                throw new BadRequestException(clientError);
+            }
+
+            catch (BadRequestException ex)
+            {
+                lines = ex.ToString().Split(Environment.NewLine);
+
+                Assert.AreEqual<string>("   --- ClientErrorException properties ---", lines[lines.Length - 9]);
+
+                Assert.AreEqual<string>("     \"Errors\": [", lines[lines.Length - 8]);
+
+                Assert.AreEqual<string>("       {", lines[lines.Length - 7]);
+
+                Assert.AreEqual<string>("         \"Code\": null,", lines[lines.Length - 6]);
+
+                Assert.AreEqual<string>("         \"Field\": null,", lines[lines.Length - 5]);
+
+                Assert.AreEqual<string>("         \"Message\": null,", lines[lines.Length - 4]);
+
+                Assert.AreEqual<string>("         \"HelpUrl\": null", lines[lines.Length - 3]);
+
+                Assert.AreEqual<string>("       }", lines[lines.Length - 2]);
+
+                Assert.AreEqual<string>("     ]", lines[lines.Length - 1]);
+            }
         }
 
         #endregion
