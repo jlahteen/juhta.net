@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Juha Lähteenmäki</Authors>
     <Title>Juhta.Net.WebApi.Exceptions</Title>
-    <Description>Juhta.Net.WebApi.Exceptions defines Web API exception classes and serialization classes for all HTTP client errors and server errors. This library is a part of Juhta.NET.</Description>
+    <Description>Juhta.Net.WebApi.Exceptions defines Web API exception classes and error response classes for all HTTP client errors (4xx) and server errors (5xx) defined in the System.Net.HttpStatusCode enumeration. This library is a part of Juhta.NET.</Description>
     <Copyright>Copyright © 2017-2018 Juha Lähteenmäki</Copyright>
     <RepositoryType>Git</RepositoryType>
     <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
