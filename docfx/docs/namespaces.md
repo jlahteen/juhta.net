@@ -67,3 +67,21 @@ Juhta.Net.Startup is implemented by the Juhta.Net.Startup library.
 Juhta.Net.Validation defines common data validation interfaces and provides a set of validator classes. The goal of this namespace is to introduce a uniform model for validating any kind of data from scalar values to aggregate objects. The other important goal is to provide ready validator classes for the most common business data validation needs.
 
 Juhta.Net.Validation is implemented by the Juhta.Net.Validation library.
+
+## Juhta.Net.WebApi.Exceptions
+
+Juhta.Net.WebApi.Exceptions defines base classes for the Web API client error and server error exceptions and for the corresponding error response classes.
+
+Juhta.Net.WebApi.Exceptions is implemented by the Juhta.Net.WebApi.Exceptions library.
+
+## Juhta.Net.WebApi.Exceptions.Client
+
+Juhta.Net.WebApi.Exceptions.Client defines exception classes for all HTTP client errors (4xx) defined in the [System.Net.HttpStatusCode](https://docs.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode?view=netstandard-2.0) enumeration.
+
+Juhta.Net.WebApi.Exceptions.Client is implemented by the Juhta.Net.WebApi.Exceptions library.
+
+## Juhta.Net.WebApi.Exceptions.Server
+
+Juhta.Net.WebApi.Exceptions.Server defines exception classes for all HTTP server errors (5xx) defined in the [System.Net.HttpStatusCode](https://docs.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode?view=netstandard-2.0) enumeration.
+
+Juhta.Net.WebApi.Exceptions.Server is implemented by the Juhta.Net.WebApi.Exceptions library.
