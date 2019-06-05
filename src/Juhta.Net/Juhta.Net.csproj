@@ -6,7 +6,7 @@
     <Authors>Juha Lähteenmäki</Authors>
     <Title>Juhta.Net</Title>
     <Description>Juhta.Net is the core library of Juhta.NET, and it contains common classes, types and interfaces that are shared between all libraries of Juhta.NET.</Description>
-    <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
+    <Copyright>Copyright © 2017-2018 Juha Lähteenmäki</Copyright>
     <RepositoryType>Git</RepositoryType>
     <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageProjectUrl>http://juhta.net</PackageProjectUrl>

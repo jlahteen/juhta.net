@@ -6,7 +6,7 @@
     <Authors>Juha Lähteenmäki</Authors>
     <Title>Juhta.Net.Console</Title>
     <Description>Juhta.Net.Console contains classes that help building console applications. This library is a part of Juhta.NET.</Description>
-    <Copyright>Copyright © 2018 Juha Lähteenmäki</Copyright>
+    <Copyright>Copyright © 2017-2018 Juha Lähteenmäki</Copyright>
     <RepositoryType>Git</RepositoryType>
     <PackageLicenseUrl>https://github.com/jlahteen/juhta.net/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageProjectUrl>http://juhta.net</PackageProjectUrl>
