@@ -2,6 +2,10 @@
 Steps for Releasing a New Version of Juhta.NET
 ==============================================
 
+- Update the documentation in the /docfx/docs directory
+
+- Create a release branch for the new version
+
 - Update the project settings for all projects excluding test and sample projects:
   - Version
   - PackageReleaseNotes
