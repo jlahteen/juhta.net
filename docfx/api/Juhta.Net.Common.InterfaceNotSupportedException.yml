@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InterfaceNotSupportedException
     path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs
@@ -31,7 +31,9 @@ items:
     content: 'public class InterfaceNotSupportedException : Exception, ISerializable'
     content.vb: >-
       Public Class InterfaceNotSupportedException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object
@@ -77,7 +79,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs
@@ -113,7 +115,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InterfaceNotSupportedException.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InterfaceNotSupportedException.cs

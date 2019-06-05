@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/AlertMessage.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: AlertMessage
     path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs
@@ -31,6 +31,7 @@ items:
     content: 'public class AlertMessage : DiagnosticMessage'
     content.vb: >-
       Public Class AlertMessage
+
           Inherits DiagnosticMessage
   inheritance:
   - System.Object
@@ -72,7 +73,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/AlertMessage.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs
@@ -111,7 +112,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Diagnostics/AlertMessage.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Diagnostics/AlertMessage.cs

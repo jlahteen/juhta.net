@@ -5,6 +5,7 @@ items:
   id: Juhta.Net.Helpers
   children:
   - Juhta.Net.Helpers.ArgumentHelper
+  - Juhta.Net.Helpers.StackTraceHelper
   langs:
   - csharp
   - vb
@@ -21,3 +22,9 @@ references:
   name: ArgumentHelper
   nameWithType: ArgumentHelper
   fullName: Juhta.Net.Helpers.ArgumentHelper
+- uid: Juhta.Net.Helpers.StackTraceHelper
+  commentId: T:Juhta.Net.Helpers.StackTraceHelper
+  isExternal: false
+  name: StackTraceHelper
+  nameWithType: StackTraceHelper
+  fullName: Juhta.Net.Helpers.StackTraceHelper

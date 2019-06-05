@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: AppDomainExtensions
     path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetAssemblyByFileName
     path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetAssemblyByPath
     path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Extensions/AppDomainExtensions.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetAssemblyByTypeName
     path: ../src/Juhta.Net/Extensions/AppDomainExtensions.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CommandLineArgument
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetValueAs
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Consumed
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Value
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/CommandLineArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Console/CommandLineArgument.cs

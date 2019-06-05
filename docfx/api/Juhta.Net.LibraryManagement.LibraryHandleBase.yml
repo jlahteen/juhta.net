@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryHandleBase
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -38,6 +38,7 @@ items:
     content: 'public abstract class LibraryHandleBase : ILibraryHandle'
     content.vb: >-
       Public MustInherit Class LibraryHandleBase
+
           Implements ILibraryHandle
   inheritance:
   - System.Object
@@ -76,7 +77,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigFileName
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -115,7 +116,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryFileName
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -156,7 +157,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryRootNamespace
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -195,7 +196,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -227,7 +228,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -263,7 +264,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigAndCommonSchema
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -308,7 +309,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigAndCommonSchema
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -359,7 +360,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigSchema
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
@@ -403,7 +404,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetEmbeddedConfigSchema
     path: ../src/Juhta.Net.LibraryManagement/LibraryHandleBase.cs

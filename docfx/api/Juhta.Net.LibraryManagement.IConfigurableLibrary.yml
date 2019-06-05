@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IConfigurableLibrary
     path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibrary.cs
@@ -30,6 +30,7 @@ items:
     content: 'public interface IConfigurableLibrary : IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IConfigurableLibrary
+
           Inherits IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
@@ -53,7 +54,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InitializeLibrary
     path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibrary.cs
