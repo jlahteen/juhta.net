@@ -20,8 +20,8 @@ Steps for Releasing a New Version of Juhta.NET
   - Clear the directory /docs/latest
   - Copy /docfx/_site to /docs/latest
   - Copy /docfx/_site to /docs/<version>
-  - Commit /docfx changes to Git
-  - Commit /docs changes to Git
+  - Commit /docfx changes to Git (comment "DocFX documentation regenerated for v<version>")
+  - Commit /docs changes to Git (comment "DocFX documentation published for v<version>")
 
 - Update README.md if necessary (e.g. future roadmap)
 
