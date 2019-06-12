@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/IStringValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IStringValidator
     path: ../src/Juhta.Net.Validation/IStringValidator.cs
@@ -29,6 +29,7 @@ items:
     content: 'public interface IStringValidator : IValidator<string>'
     content.vb: >-
       Public Interface IStringValidator
+
           Inherits IValidator(Of String)
   inheritedMembers:
   - Juhta.Net.Validation.IValidator{System.String}.Validate(System.String)

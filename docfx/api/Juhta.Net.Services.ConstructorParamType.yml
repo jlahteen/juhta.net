@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConstructorParamType
     path: ../src/Juhta.Net.Services/Types.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Boolean
     path: ../src/Juhta.Net.Services/Types.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Byte
     path: ../src/Juhta.Net.Services/Types.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Char
     path: ../src/Juhta.Net.Services/Types.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Date
     path: ../src/Juhta.Net.Services/Types.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: DateTime
     path: ../src/Juhta.Net.Services/Types.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Decimal
     path: ../src/Juhta.Net.Services/Types.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Double
     path: ../src/Juhta.Net.Services/Types.cs
@@ -312,7 +312,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Float
     path: ../src/Juhta.Net.Services/Types.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Int
     path: ../src/Juhta.Net.Services/Types.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Int16
     path: ../src/Juhta.Net.Services/Types.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Int32
     path: ../src/Juhta.Net.Services/Types.cs
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Int64
     path: ../src/Juhta.Net.Services/Types.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Long
     path: ../src/Juhta.Net.Services/Types.cs
@@ -516,7 +516,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: SByte
     path: ../src/Juhta.Net.Services/Types.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Service
     path: ../src/Juhta.Net.Services/Types.cs
@@ -584,7 +584,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Short
     path: ../src/Juhta.Net.Services/Types.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Single
     path: ../src/Juhta.Net.Services/Types.cs
@@ -652,7 +652,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: String
     path: ../src/Juhta.Net.Services/Types.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Time
     path: ../src/Juhta.Net.Services/Types.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: TimeSpan
     path: ../src/Juhta.Net.Services/Types.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: UInt
     path: ../src/Juhta.Net.Services/Types.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: UInt16
     path: ../src/Juhta.Net.Services/Types.cs
@@ -822,7 +822,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: UInt32
     path: ../src/Juhta.Net.Services/Types.cs
@@ -856,7 +856,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: UInt64
     path: ../src/Juhta.Net.Services/Types.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ULong
     path: ../src/Juhta.Net.Services/Types.cs
@@ -924,7 +924,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: UShort
     path: ../src/Juhta.Net.Services/Types.cs

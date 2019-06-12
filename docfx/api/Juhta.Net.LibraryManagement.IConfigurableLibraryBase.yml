@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IConfigurableLibraryBase
     path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ConfigFileName
     path: ../src/Juhta.Net.LibraryManagement/IConfigurableLibraryBase.cs

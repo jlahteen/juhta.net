@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ServiceFactory
     path: ../src/Juhta.Net.Services/ServiceFactory.cs
@@ -34,6 +34,7 @@ items:
     content: 'public class ServiceFactory : Singleton<ServiceFactory>'
     content.vb: >-
       Public Class ServiceFactory
+
           Inherits Singleton(Of ServiceFactory)
   inheritance:
   - System.Object
@@ -70,7 +71,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net.Services/ServiceFactory.cs
@@ -111,7 +112,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net.Services/ServiceFactory.cs
@@ -156,7 +157,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net.Services/ServiceFactory.cs
@@ -201,7 +202,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateService
     path: ../src/Juhta.Net.Services/ServiceFactory.cs
@@ -249,7 +250,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceFactory.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Services
     path: ../src/Juhta.Net.Services/ServiceFactory.cs

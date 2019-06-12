@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/LibraryHandle.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryHandle
     path: ../src/Juhta.Net.Services/LibraryHandle.cs
@@ -32,7 +32,9 @@ items:
     content: 'public class LibraryHandle : LibraryHandleBase, ILibraryHandle, ICustomXmlConfigurableLibrary, IConfigurableLibraryBase, IClosableLibrary'
     content.vb: >-
       Public Class LibraryHandle
+
           Inherits LibraryHandleBase
+
           Implements ILibraryHandle, ICustomXmlConfigurableLibrary, IConfigurableLibraryBase, IClosableLibrary
   inheritance:
   - System.Object
@@ -77,7 +79,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/LibraryHandle.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CloseLibrary
     path: ../src/Juhta.Net.Services/LibraryHandle.cs
@@ -113,7 +115,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/LibraryHandle.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetConfigSchemas
     path: ../src/Juhta.Net.Services/LibraryHandle.cs
@@ -149,7 +151,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/LibraryHandle.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InitializeLibrary
     path: ../src/Juhta.Net.Services/LibraryHandle.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ICustomXmlConfigurableLibrary
     path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
@@ -31,6 +31,7 @@ items:
     content: 'public interface ICustomXmlConfigurableLibrary : IConfigurableLibraryBase'
     content.vb: >-
       Public Interface ICustomXmlConfigurableLibrary
+
           Inherits IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IConfigurableLibraryBase.ConfigFileName
@@ -54,7 +55,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: GetConfigSchemas
     path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
@@ -89,7 +90,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InitializeLibrary
     path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibrary.cs

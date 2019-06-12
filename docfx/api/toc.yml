@@ -119,6 +119,8 @@
   items:
   - uid: Juhta.Net.Helpers.ArgumentHelper
     name: ArgumentHelper
+  - uid: Juhta.Net.Helpers.StackTraceHelper
+    name: StackTraceHelper
 - uid: Juhta.Net.LibraryManagement
   name: Juhta.Net.LibraryManagement
   items:
@@ -213,3 +215,76 @@
     name: ValidationException
   - uid: Juhta.Net.Validation.XmlDocumentValidator
     name: XmlDocumentValidator
+- uid: Juhta.Net.WebApi.Exceptions
+  name: Juhta.Net.WebApi.Exceptions
+  items:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientError
+    name: ClientError
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorException
+    name: ClientErrorException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorResponse
+    name: ClientErrorResponse
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrorException
+    name: ServerErrorException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+    name: ServerErrorResponse
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+    name: WebApiErrorResponse
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiException
+    name: WebApiException
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors
+  name: Juhta.Net.WebApi.Exceptions.ClientErrors
+  items:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException
+    name: BadRequestException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException
+    name: ConflictException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ExpectationFailedException
+    name: ExpectationFailedException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+    name: ForbiddenException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException
+    name: GoneException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException
+    name: LengthRequiredException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException
+    name: MethodNotAllowedException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException
+    name: NotAcceptableException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException
+    name: NotFoundException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.PaymentRequiredException
+    name: PaymentRequiredException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException
+    name: PreconditionFailedException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException
+    name: ProxyAuthenticationRequiredException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException
+    name: RequestedRangeNotSatisfiableException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException
+    name: RequestEntityTooLargeException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException
+    name: RequestTimeoutException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException
+    name: RequestUriTooLongException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException
+    name: UnauthorizedException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException
+    name: UnsupportedMediaTypeException
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException
+    name: UpgradeRequiredException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors
+  name: Juhta.Net.WebApi.Exceptions.ServerErrors
+  items:
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException
+    name: BadGatewayException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException
+    name: GatewayTimeoutException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException
+    name: HttpVersionNotSupportedException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException
+    name: InternalServerErrorException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException
+    name: NotImplementedException
+  - uid: Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException
+    name: ServiceUnavailableException

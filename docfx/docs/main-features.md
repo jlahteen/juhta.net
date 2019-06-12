@@ -12,6 +12,8 @@ The current main features of Juhta.NET are as follows:
 
 - Flexible and scalable dependency injection support
 
+- Web API exception classes and error response classes for all HTTP client errors (4xx) and server errors (5xx) defined in [System.Net.HttpStatusCode](https://docs.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode?view=netstandard-2.0)
+
 - Command line argument parsing support for console applications
 
 - Common data validation model and a set of validator classes

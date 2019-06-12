@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/OptionArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: OptionArgument
     path: ../src/Juhta.Net.Console/OptionArgument.cs
@@ -30,6 +30,7 @@ items:
     content: 'public class OptionArgument : NameValueArgument'
     content.vb: >-
       Public Class OptionArgument
+
           Inherits NameValueArgument
   inheritance:
   - System.Object
@@ -68,7 +69,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Console/OptionArgument.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Console/OptionArgument.cs

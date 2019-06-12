@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors
+  commentId: N:Juhta.Net.WebApi.Exceptions.ServerErrors
+  id: Juhta.Net.WebApi.Exceptions.ServerErrors
+  children:
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException
+  - Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException
+  langs:
+  - csharp
+  - vb
+  name: Juhta.Net.WebApi.Exceptions.ServerErrors
+  nameWithType: Juhta.Net.WebApi.Exceptions.ServerErrors
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors
+  type: Namespace
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+references:
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException
+  isExternal: false
+  name: BadGatewayException
+  nameWithType: BadGatewayException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.BadGatewayException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException
+  isExternal: false
+  name: GatewayTimeoutException
+  nameWithType: GatewayTimeoutException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.GatewayTimeoutException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException
+  isExternal: false
+  name: HttpVersionNotSupportedException
+  nameWithType: HttpVersionNotSupportedException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.HttpVersionNotSupportedException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException
+  isExternal: false
+  name: InternalServerErrorException
+  nameWithType: InternalServerErrorException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.InternalServerErrorException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException
+  isExternal: false
+  name: NotImplementedException
+  nameWithType: NotImplementedException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.NotImplementedException
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException
+  isExternal: false
+  name: ServiceUnavailableException
+  nameWithType: ServiceUnavailableException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrors.ServiceUnavailableException

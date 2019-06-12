@@ -28,7 +28,7 @@ The API Reference of the latest release can be found [here](https://jlahteen.git
 
 Juhta.NET has been developed by using [Visual Studio Community](https://www.visualstudio.com/vs/community/). However, to get started, you just need to do the following:
 
-* Download and install [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/windows)
+* Download and install [.NET Core SDK](https://www.microsoft.com/net/download/windows)
 * Clone or download the source code
 
 By using [Git](https://git-scm.com/), you can clone the repo by typing:
@@ -59,10 +59,10 @@ Below is the future roadmap for upcoming versions. Please note that the upcoming
 
 | Version              | Schedule | What's New
 |----------------------|----------|-----------
-| Juhta.NET 1.1.0      | Q3 2018  | Juhta.Net.WebApi.Exceptions library included
-| Juhta.NET 1.2.0      | Q3 2018  | Juhta.Net.Authorization library included
-| Juhta.NET 1.3.0      | Q4 2018  | Juhta.Net.Diagnostics library included
-| Juhta.NET 1.4.0      | Q4 2018  | Juhta.Net.Processing library included
+| Juhta.NET vTBD       | TBD      | Juhta.Net.AspNetCore library included
+| Juhta.NET vTBD       | TBD      | Juhta.Net.Authorization library included
+| Juhta.NET vTBD       | TBD      | Juhta.Net.Diagnostics library included
+| Juhta.NET vTBD       | TBD      | Juhta.Net.Processing library included
 
 ## Feedback
 
@@ -72,6 +72,6 @@ Please note that Juhta.NET has no official support, but the author will react to
 
 ## About the Author
 
-The author of Juhta.NET is Juha Lähteenmäki. He has over 20 years of experience in software development and architectures. Furthermore, the author has been using .NET Framework technologies since they were first released back in 2002.
+The author of Juhta.NET is Juha Lähteenmäki. He has 20+ years of experience in software development and architectures. Furthermore, the author has been using .NET Framework technologies since they were first released back in 2002.
 
 You can connect with the author on [Twitter](https://twitter.com/jlahteen) or [LinkedIn](https://fi.linkedin.com/in/juhalahteenmaki).

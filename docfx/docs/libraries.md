@@ -23,3 +23,5 @@ Here is a list of the current libraries of Juhta.NET:
 * **Juhta.Net.Startup** provides methods for graceful startup and shutdown for any application with any number of libraries through the Juhta.Net.LibraryManagement interfaces.
 
 * **Juhta.Net.Validation** defines common data validation interfaces and provides a set of validator classes.
+
+* **Juhta.Net.WebApi.Exceptions** defines Web API exception classes and error response classes for all HTTP client errors (4xx) and server errors (5xx) defined in the [System.Net.HttpStatusCode](https://docs.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode?view=netstandard-2.0) enumeration.
