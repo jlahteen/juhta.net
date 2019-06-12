@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: PathValidator
     path: ../src/Juhta.Net.Validation/PathValidator.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Validation/PathValidator.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidDirectoryName
     path: ../src/Juhta.Net.Validation/PathValidator.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidFileName
     path: ../src/Juhta.Net.Validation/PathValidator.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IsValidPath
     path: ../src/Juhta.Net.Validation/PathValidator.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Validation/PathValidator.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: m_errorMessage
     path: ../src/Juhta.Net.Validation/PathValidator.cs

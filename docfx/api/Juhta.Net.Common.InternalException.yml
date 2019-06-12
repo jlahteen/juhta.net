@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InternalException.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: InternalException
     path: ../src/Juhta.Net/Common/InternalException.cs
@@ -30,7 +30,9 @@ items:
     content: 'public class InternalException : Exception, ISerializable'
     content.vb: >-
       Public Class InternalException
+
           Inherits Exception
+
           Implements ISerializable
   inheritance:
   - System.Object
@@ -76,7 +78,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Common/InternalException.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net/Common/InternalException.cs

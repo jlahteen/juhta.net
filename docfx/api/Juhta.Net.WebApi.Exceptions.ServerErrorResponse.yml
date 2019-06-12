@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  id: ServerErrorResponse
+  parent: Juhta.Net.WebApi.Exceptions
+  children:
+  - Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+  - Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw
+  langs:
+  - csharp
+  - vb
+  name: ServerErrorResponse
+  nameWithType: ServerErrorResponse
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: ServerErrorResponse
+    path: ../src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions
+  summary: "\nDefines a class for serializing instances of <xref href=\"Juhta.Net.WebApi.Exceptions.ServerErrorException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class ServerErrorResponse : WebApiErrorResponse'
+    content.vb: >-
+      Public Class ServerErrorResponse
+
+          Inherits WebApiErrorResponse
+  inheritance:
+  - System.Object
+  - Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  inheritedMembers:
+  - Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ServiceStack
+  - Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw
+  commentId: M:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw
+  id: Throw
+  parent: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  langs:
+  - csharp
+  - vb
+  name: Throw()
+  nameWithType: ServerErrorResponse.Throw()
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw()
+  type: Method
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: Throw
+    path: ../src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+    startLine: 25
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions
+  summary: "\nThrows this <xref href=\"Juhta.Net.WebApi.Exceptions.ServerErrorResponse\" data-throw-if-not-resolved=\"false\"></xref> as a corresponding exception derived from\n<xref href=\"Juhta.Net.WebApi.Exceptions.ServerErrorException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public override void Throw()
+    content.vb: Public Overrides Sub Throw
+  overridden: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+  overload: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+  commentId: P:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+  id: ErrorMessage
+  parent: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessage
+  nameWithType: ServerErrorResponse.ErrorMessage
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+  type: Property
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: ErrorMessage
+    path: ../src/Juhta.Net.WebApi.Exceptions/ServerErrorResponse.cs
+    startLine: 63
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions
+  summary: "\nGets or sets the error message that relates to the server error.\n"
+  example: []
+  syntax:
+    content: public string ErrorMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ErrorMessage As String
+  overload: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrorException
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: ServerErrorException
+  nameWithType: ServerErrorException
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorException
+- uid: Juhta.Net.WebApi.Exceptions
+  commentId: N:Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: Juhta.Net.WebApi.Exceptions
+  nameWithType: Juhta.Net.WebApi.Exceptions
+  fullName: Juhta.Net.WebApi.Exceptions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  commentId: T:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: WebApiErrorResponse
+  nameWithType: WebApiErrorResponse
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+- uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ServiceStack
+  commentId: P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ServiceStack
+  parent: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  isExternal: false
+  name: ServiceStack
+  nameWithType: WebApiErrorResponse.ServiceStack
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.ServiceStack
+- uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode
+  commentId: P:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode
+  parent: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  isExternal: false
+  name: StatusCode
+  nameWithType: WebApiErrorResponse.StatusCode
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.StatusCode
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  commentId: T:Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: ServerErrorResponse
+  nameWithType: ServerErrorResponse
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse
+- uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+  commentId: M:Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+  parent: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse
+  isExternal: false
+  name: Throw()
+  nameWithType: WebApiErrorResponse.Throw()
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw()
+  spec.csharp:
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+    name: Throw
+    nameWithType: WebApiErrorResponse.Throw
+    fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+    name: Throw
+    nameWithType: WebApiErrorResponse.Throw
+    fullName: Juhta.Net.WebApi.Exceptions.WebApiErrorResponse.Throw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw*
+  commentId: Overload:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw
+  isExternal: false
+  name: Throw
+  nameWithType: ServerErrorResponse.Throw
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.Throw
+- uid: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage*
+  commentId: Overload:Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: ServerErrorResponse.ErrorMessage
+  fullName: Juhta.Net.WebApi.Exceptions.ServerErrorResponse.ErrorMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

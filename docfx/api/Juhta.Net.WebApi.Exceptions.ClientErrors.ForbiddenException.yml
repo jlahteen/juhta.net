@@ -1,0 +1,1253 @@
+### YamlMime:ManagedReference
+items:
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  id: ForbiddenException
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors
+  children:
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String,System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String,System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String)
+  - Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException
+  nameWithType: ForbiddenException
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  type: Class
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: ForbiddenException
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 17
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nDefines an exception class for the HTTP error Forbidden.\n"
+  example: []
+  syntax:
+    content: 'public class ForbiddenException : ClientErrorException, ISerializable'
+    content.vb: >-
+      Public Class ForbiddenException
+
+          Inherits ClientErrorException
+
+          Implements ISerializable
+  inheritance:
+  - System.Object
+  - System.Exception
+  - Juhta.Net.WebApi.Exceptions.WebApiException
+  - Juhta.Net.WebApi.Exceptions.ClientErrorException
+  implements:
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+  - Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+  - Juhta.Net.WebApi.Exceptions.ClientErrorException.Error
+  - Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors
+  - Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+  - Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack
+  - Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode
+  - System.Exception.GetBaseException
+  - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.GetType
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Message
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor
+  id: '#ctor'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException()
+  nameWithType: ForbiddenException.ForbiddenException()
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException()
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 24
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException()
+    content.vb: Public Sub New
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(Juhta.Net.WebApi.Exceptions.ClientError)
+  id: '#ctor(Juhta.Net.WebApi.Exceptions.ClientError)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(ClientError)
+  nameWithType: ForbiddenException.ForbiddenException(ClientError)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(Juhta.Net.WebApi.Exceptions.ClientError)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 31
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(ClientError clientError)
+    parameters:
+    - id: clientError
+      type: Juhta.Net.WebApi.Exceptions.ClientError
+      description: Specifies a client error.
+    content.vb: Public Sub New(clientError As ClientError)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum)
+  id: '#ctor(System.Enum)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum)
+  nameWithType: ForbiddenException.ForbiddenException(Enum)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 38
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    content.vb: Public Sub New(errorCode As  Enum)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(IEnumerable<ClientError>)
+  nameWithType: ForbiddenException.ForbiddenException(IEnumerable<ClientError>)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Collections.Generic.IEnumerable<Juhta.Net.WebApi.Exceptions.ClientError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 45
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(IEnumerable<ClientError> clientErrors)
+    parameters:
+    - id: clientErrors
+      type: System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError}
+      description: Specifies a collection of client errors.
+    content.vb: Public Sub New(clientErrors As IEnumerable(Of ClientError))
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  nameWithType.vb: ForbiddenException.ForbiddenException(IEnumerable(Of ClientError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Collections.Generic.IEnumerable(Of Juhta.Net.WebApi.Exceptions.ClientError))
+  name.vb: ForbiddenException(IEnumerable(Of ClientError))
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(String)
+  nameWithType: ForbiddenException.ForbiddenException(String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 52
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    content.vb: Public Sub New(message As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum)
+  id: '#ctor(System.Enum,System.Enum)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, Enum)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, Enum)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.Enum)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 60
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, Enum field)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: field
+      type: System.Enum
+      description: Specifies a field to which the error relates.
+    content.vb: Public Sub New(errorCode As  Enum, field As  Enum)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String)
+  id: '#ctor(System.Enum,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, String)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 68
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, string message)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    content.vb: Public Sub New(errorCode As  Enum, message As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(String, String)
+  nameWithType: ForbiddenException.ForbiddenException(String, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 76
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(string message, string helpUrl)
+    parameters:
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    - id: helpUrl
+      type: System.String
+      description: Specifies a URL that provides extra information about the error.
+    content.vb: Public Sub New(message As String, helpUrl As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String)
+  id: '#ctor(System.Enum,System.Enum,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, Enum, String)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, Enum, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.Enum, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 85
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, Enum field, string message)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: field
+      type: System.Enum
+      description: Specifies a field to which the error relates.
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    content.vb: Public Sub New(errorCode As  Enum, field As  Enum, message As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String)
+  id: '#ctor(System.Enum,System.String,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, String, String)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, String, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 94
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, string field, string message)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: field
+      type: System.String
+      description: Specifies a field to which the error relates.
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    content.vb: Public Sub New(errorCode As  Enum, field As String, message As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.Enum,System.String,System.String)
+  id: '#ctor(System.Enum,System.Enum,System.String,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, Enum, String, String)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, Enum, String, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.Enum, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 104
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, Enum field, string message, string helpUrl)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: field
+      type: System.Enum
+      description: Specifies a field to which the error relates.
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    - id: helpUrl
+      type: System.String
+      description: Specifies a URL that provides extra information about the error.
+    content.vb: Public Sub New(errorCode As  Enum, field As  Enum, message As String, helpUrl As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String,System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor(System.Enum,System.String,System.String,System.String)
+  id: '#ctor(System.Enum,System.String,System.String,System.String)'
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException
+  langs:
+  - csharp
+  - vb
+  name: ForbiddenException(Enum, String, String, String)
+  nameWithType: ForbiddenException.ForbiddenException(Enum, String, String, String)
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException(System.Enum, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+      branch: release/v1.1.0
+      repo: https://github.com/jlahteen/juhta.net.git
+    id: .ctor
+    path: ../src/Juhta.Net.WebApi.Exceptions/ClientErrors/ForbiddenException.cs
+    startLine: 114
+  assemblies:
+  - Juhta.Net.WebApi.Exceptions
+  namespace: Juhta.Net.WebApi.Exceptions.ClientErrors
+  summary: "\nInitializes a new instance.\n"
+  example: []
+  syntax:
+    content: public ForbiddenException(Enum errorCode, string field, string message, string helpUrl)
+    parameters:
+    - id: errorCode
+      type: System.Enum
+      description: Specifies a custom-defined error code.
+    - id: field
+      type: System.String
+      description: Specifies a field to which the error relates.
+    - id: message
+      type: System.String
+      description: Specifies an error message.
+    - id: helpUrl
+      type: System.String
+      description: Specifies a URL that provides extra information about the error.
+    content.vb: Public Sub New(errorCode As  Enum, field As String, message As String, helpUrl As String)
+  overload: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors
+  commentId: N:Juhta.Net.WebApi.Exceptions.ClientErrors
+  isExternal: false
+  name: Juhta.Net.WebApi.Exceptions.ClientErrors
+  nameWithType: Juhta.Net.WebApi.Exceptions.ClientErrors
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Juhta.Net.WebApi.Exceptions.WebApiException
+  commentId: T:Juhta.Net.WebApi.Exceptions.WebApiException
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: WebApiException
+  nameWithType: WebApiException
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiException
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrorException
+  commentId: T:Juhta.Net.WebApi.Exceptions.ClientErrorException
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: ClientErrorException
+  nameWithType: ClientErrorException
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrorException
+  isExternal: false
+  name: ToClientErrorResponse()
+  nameWithType: ClientErrorException.ToClientErrorResponse()
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse()
+  spec.csharp:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+    name: ToClientErrorResponse
+    nameWithType: ClientErrorException.ToClientErrorResponse
+    fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+    name: ToClientErrorResponse
+    nameWithType: ClientErrorException.ToClientErrorResponse
+    fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+  commentId: M:Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrorException
+  isExternal: false
+  name: ToString()
+  nameWithType: ClientErrorException.ToString()
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString()
+  spec.csharp:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+    name: ToString
+    nameWithType: ClientErrorException.ToString
+    fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+    name: ToString
+    nameWithType: ClientErrorException.ToString
+    fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.Error
+  commentId: P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Error
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrorException
+  isExternal: false
+  name: Error
+  nameWithType: ClientErrorException.Error
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.Error
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors
+  commentId: P:Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors
+  parent: Juhta.Net.WebApi.Exceptions.ClientErrorException
+  isExternal: false
+  name: Errors
+  nameWithType: ClientErrorException.Errors
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors
+- uid: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+  commentId: M:Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+  parent: Juhta.Net.WebApi.Exceptions.WebApiException
+  isExternal: true
+  name: SetServiceName(String)
+  nameWithType: WebApiException.SetServiceName(String)
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+  spec.csharp:
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+    name: SetServiceName
+    nameWithType: WebApiException.SetServiceName
+    fullName: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName(System.String)
+    name: SetServiceName
+    nameWithType: WebApiException.SetServiceName
+    fullName: Juhta.Net.WebApi.Exceptions.WebApiException.SetServiceName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack
+  commentId: P:Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack
+  parent: Juhta.Net.WebApi.Exceptions.WebApiException
+  isExternal: false
+  name: ServiceStack
+  nameWithType: WebApiException.ServiceStack
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiException.ServiceStack
+- uid: Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode
+  commentId: P:Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode
+  parent: Juhta.Net.WebApi.Exceptions.WebApiException
+  isExternal: false
+  name: StatusCode
+  nameWithType: WebApiException.StatusCode
+  fullName: Juhta.Net.WebApi.Exceptions.WebApiException.StatusCode
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Exception
+  isExternal: true
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Message
+  commentId: P:System.Exception.Message
+  parent: System.Exception
+  isExternal: true
+  name: Message
+  nameWithType: Exception.Message
+  fullName: System.Exception.Message
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Juhta.Net.WebApi.Exceptions
+  commentId: N:Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: Juhta.Net.WebApi.Exceptions
+  nameWithType: Juhta.Net.WebApi.Exceptions
+  fullName: Juhta.Net.WebApi.Exceptions
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: false
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor*
+  commentId: Overload:Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.#ctor
+  isExternal: false
+  name: ForbiddenException
+  nameWithType: ForbiddenException.ForbiddenException
+  fullName: Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.ForbiddenException
+- uid: Juhta.Net.WebApi.Exceptions.ClientError
+  commentId: T:Juhta.Net.WebApi.Exceptions.ClientError
+  parent: Juhta.Net.WebApi.Exceptions
+  isExternal: false
+  name: ClientError
+  nameWithType: ClientError
+  fullName: Juhta.Net.WebApi.Exceptions.ClientError
+- uid: System.Enum
+  commentId: T:System.Enum
+  parent: System
+  isExternal: true
+  name: Enum
+  nameWithType: Enum
+  fullName: System.Enum
+- uid: System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError}
+  commentId: T:System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ClientError>
+  nameWithType: IEnumerable<ClientError>
+  fullName: System.Collections.Generic.IEnumerable<Juhta.Net.WebApi.Exceptions.ClientError>
+  nameWithType.vb: IEnumerable(Of ClientError)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Juhta.Net.WebApi.Exceptions.ClientError)
+  name.vb: IEnumerable(Of ClientError)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Juhta.Net.WebApi.Exceptions.ClientError
+    name: ClientError
+    nameWithType: ClientError
+    fullName: Juhta.Net.WebApi.Exceptions.ClientError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Juhta.Net.WebApi.Exceptions.ClientError
+    name: ClientError
+    nameWithType: ClientError
+    fullName: Juhta.Net.WebApi.Exceptions.ClientError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

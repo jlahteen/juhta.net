@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: FrameworkLibraryType
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Core
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Validation
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Console
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: LibraryManagement
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Services
     path: ../src/Juhta.Net/Framework/Types.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net/Framework/Types.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Startup
     path: ../src/Juhta.Net/Framework/Types.cs

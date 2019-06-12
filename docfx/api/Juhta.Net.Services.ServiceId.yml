@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ServiceId
     path: ../src/Juhta.Net.Services/ServiceId.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Services/ServiceId.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: .ctor
     path: ../src/Juhta.Net.Services/ServiceId.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Scheme
     path: ../src/Juhta.Net.Services/ServiceId.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Specifier
     path: ../src/Juhta.Net.Services/ServiceId.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.Services/ServiceId.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Value
     path: ../src/Juhta.Net.Services/ServiceId.cs

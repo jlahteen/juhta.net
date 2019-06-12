@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClientErrorException
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClientErrorException
+   ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException">
+  
+  
+  <h1 id="Juhta_Net_WebApi_Exceptions_ClientErrorException" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException" class="text-break">Class ClientErrorException
+  </h1>
+  <div class="markdown level0 summary"><p>Defines an abstract base class for the client error Web API exceptions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level2"><a class="xref" href="Juhta.Net.WebApi.Exceptions.WebApiException.html">WebApiException</a></div>
+    <div class="level3"><span class="xref">ClientErrorException</span></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.BadRequestException.html">BadRequestException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.ConflictException.html">ConflictException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.ExpectationFailedException.html">ExpectationFailedException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.ForbiddenException.html">ForbiddenException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.GoneException.html">GoneException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.LengthRequiredException.html">LengthRequiredException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.MethodNotAllowedException.html">MethodNotAllowedException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.NotAcceptableException.html">NotAcceptableException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.NotFoundException.html">NotFoundException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.PaymentRequiredException.html">PaymentRequiredException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.PreconditionFailedException.html">PreconditionFailedException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.ProxyAuthenticationRequiredException.html">ProxyAuthenticationRequiredException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.RequestedRangeNotSatisfiableException.html">RequestedRangeNotSatisfiableException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.RequestEntityTooLargeException.html">RequestEntityTooLargeException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.RequestTimeoutException.html">RequestTimeoutException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.RequestUriTooLongException.html">RequestUriTooLongException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.UnauthorizedException.html">UnauthorizedException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.UnsupportedMediaTypeException.html">UnsupportedMediaTypeException</a></div>
+      <div class="level4"><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrors.UpgradeRequiredException.html">UpgradeRequiredException</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Juhta.Net.WebApi.Exceptions.WebApiException.html#Juhta_Net_WebApi_Exceptions_WebApiException_SetServiceName_System_String_">WebApiException.SetServiceName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Juhta.Net.WebApi.Exceptions.WebApiException.html#Juhta_Net_WebApi_Exceptions_WebApiException_ServiceStack">WebApiException.ServiceStack</a>
+    </div>
+    <div>
+      <a class="xref" href="Juhta.Net.WebApi.Exceptions.WebApiException.html#Juhta_Net_WebApi_Exceptions_WebApiException_StatusCode">WebApiException.StatusCode</a>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Data</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HelpLink</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HResult</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.InnerException</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Message</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Source</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.StackTrace</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Juhta.Net.WebApi.Exceptions.html">Juhta.Net.WebApi.Exceptions</a></h6>
+  <h6><strong>Assembly</strong>: Juhta.Net.WebApi.Exceptions.dll</h6>
+  <h5 id="Juhta_Net_WebApi_Exceptions_ClientErrorException_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ClientErrorException : WebApiException, ISerializable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_Juhta_Net_WebApi_Exceptions_ClientErrorResponse_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(Juhta.Net.WebApi.Exceptions.ClientErrorResponse)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L129">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_Juhta_Net_WebApi_Exceptions_ClientErrorResponse_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(Juhta.Net.WebApi.Exceptions.ClientErrorResponse)">ClientErrorException(ClientErrorResponse)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(ClientErrorResponse clientErrorResponse)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorResponse.html">ClientErrorResponse</a></td>
+        <td><span class="parametername">clientErrorResponse</span></td>
+        <td><p>Specifies a client error response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L138">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode)">ClientErrorException(HttpStatusCode)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_Juhta_Net_WebApi_Exceptions_ClientError_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CJuhta.Net.WebApi.Exceptions.ClientError)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L146">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_Juhta_Net_WebApi_Exceptions_ClientError_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,Juhta.Net.WebApi.Exceptions.ClientError)">ClientErrorException(HttpStatusCode, ClientError)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, ClientError clientError)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a></td>
+        <td><span class="parametername">clientError</span></td>
+        <td><p>Specifies a client error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_Collections_Generic_IEnumerable_Juhta_Net_WebApi_Exceptions_ClientError__.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CSystem.Collections.Generic.IEnumerable%7BJuhta.Net.WebApi.Exceptions.ClientError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L164">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_Collections_Generic_IEnumerable_Juhta_Net_WebApi_Exceptions_ClientError__" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{Juhta.Net.WebApi.Exceptions.ClientError})">ClientErrorException(HttpStatusCode, IEnumerable&lt;ClientError&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, IEnumerable&lt;ClientError&gt; clientErrors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a>&gt;</td>
+        <td><span class="parametername">clientErrors</span></td>
+        <td><p>Specifies a collection of client errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L156">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String)">ClientErrorException(HttpStatusCode, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, string errorMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorMessage</span></td>
+        <td><p>Specifies an error message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L175">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String)">ClientErrorException(HttpStatusCode, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorMessage</span></td>
+        <td><p>Specifies an error message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorCode</span></td>
+        <td><p>Specifies a custom-defined error code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L185">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_System_String_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String,System.String)">ClientErrorException(HttpStatusCode, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorMessage</span></td>
+        <td><p>Specifies an error message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorCode</span></td>
+        <td><p>Specifies a custom-defined error code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>Specifies a field in the incoming request to which the error relates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.%23ctor(System.Net.HttpStatusCode%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L196">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException__ctor_System_Net_HttpStatusCode_System_String_System_String_System_String_System_String_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.#ctor(System.Net.HttpStatusCode,System.String,System.String,System.String,System.String)">ClientErrorException(HttpStatusCode, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClientErrorException(HttpStatusCode statusCode, string errorMessage, string errorCode, string field, string helpUrl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>Specifies an HTTP status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorMessage</span></td>
+        <td><p>Specifies an error message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">errorCode</span></td>
+        <td><p>Specifies a custom-defined error code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>Specifies a field in the incoming request to which the error relates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">helpUrl</span></td>
+        <td><p>Specifies a URL that provides extra information about the error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException_Error.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L107">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException_Error_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.Error*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException_Error" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.Error">Error</h4>
+  <div class="markdown level1 summary"><p>Gets the first <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a> object that relates to this <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorException.html">ClientErrorException</a>
+instance. Returns null if there are no <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientError Error { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException_Errors.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L116">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException_Errors_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException_Errors" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.Errors">Errors</h4>
+  <div class="markdown level1 summary"><p>Gets an array of the <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a> objects that relate to this <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorException.html">ClientErrorException</a>
+instance. Returns null if there are no <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientError[] Errors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientError.html">ClientError</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException_ToClientErrorResponse.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L27">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException_ToClientErrorResponse_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException_ToClientErrorResponse" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.ToClientErrorResponse">ToClientErrorResponse()</h4>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorException.html">ClientErrorException</a> object to a <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorResponse.html">ClientErrorResponse</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientErrorResponse ToClientErrorResponse()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorResponse.html">ClientErrorResponse</a></td>
+        <td><p>Returns the resulting <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorResponse.html">ClientErrorResponse</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException_ToString.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L44">View Source</a>
+  </span>
+  <a id="Juhta_Net_WebApi_Exceptions_ClientErrorException_ToString_" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString*"></a>
+  <h4 id="Juhta_Net_WebApi_Exceptions_ClientErrorException_ToString" data-uid="Juhta.Net.WebApi.Exceptions.ClientErrorException.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorException.html">ClientErrorException</a> instance to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Returns this <a class="xref" href="Juhta.Net.WebApi.Exceptions.ClientErrorException.html">ClientErrorException</a>instance as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Juhta.Net.WebApi.Exceptions.WebApiException.html#Juhta_Net_WebApi_Exceptions_WebApiException_ToString">WebApiException.ToString()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jlahteen/juhta.net/new/release/v1.1.0/apiSpec/new?filename=Juhta_Net_WebApi_Exceptions_ClientErrorException.md&amp;value=---%0Auid%3A%20Juhta.Net.WebApi.Exceptions.ClientErrorException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jlahteen/juhta.net/blob/release/v1.1.0/src/Juhta.Net.WebApi.Exceptions/ClientErrorException.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2017-2019 Juha Lähteenmäki<br>Generated by <b>DocFX</b></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

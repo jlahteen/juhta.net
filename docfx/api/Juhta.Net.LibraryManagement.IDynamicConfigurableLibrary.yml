@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: IDynamicConfigurableLibrary
     path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
@@ -30,6 +30,7 @@ items:
     content: 'public interface IDynamicConfigurableLibrary : IDynamicLibrary, IConfigurableLibraryBase'
     content.vb: >-
       Public Interface IDynamicConfigurableLibrary
+
           Inherits IDynamicLibrary, IConfigurableLibraryBase
   inheritedMembers:
   - Juhta.Net.LibraryManagement.IDynamicLibrary.GoLive(Juhta.Net.LibraryManagement.ILibraryState)
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: CreateLibraryState
     path: ../src/Juhta.Net.LibraryManagement/IDynamicConfigurableLibrary.cs

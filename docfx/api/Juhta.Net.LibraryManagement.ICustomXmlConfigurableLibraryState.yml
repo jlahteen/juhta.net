@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibraryState.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: ICustomXmlConfigurableLibraryState
     path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibraryState.cs
@@ -31,6 +31,7 @@ items:
     content: 'public interface ICustomXmlConfigurableLibraryState : ILibraryState'
     content.vb: >-
       Public Interface ICustomXmlConfigurableLibraryState
+
           Inherits ILibraryState
   modifiers.csharp:
   - public
@@ -52,7 +53,7 @@ items:
   source:
     remote:
       path: src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibraryState.cs
-      branch: release/v1.0.0
+      branch: release/v1.1.0
       repo: https://github.com/jlahteen/juhta.net.git
     id: Initialize
     path: ../src/Juhta.Net.LibraryManagement/ICustomXmlConfigurableLibraryState.cs
