@@ -1,6 +1,6 @@
 
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -108,7 +108,12 @@ namespace Juhta.Net.Startup
         /// </summary>
         internal static readonly ErrorMessage Error014 = MessageFactory.CreateErrorMessage("Configuration file name cannot be null for the configurable library '{0}'.");
 
-        // Note: Message identifiers 15 and 16 are free.
+        /// <summary>
+        /// Application name cannot be null, an empty string or a string containing nothing but white space characters.
+        /// </summary>
+        internal static readonly ErrorMessage Error015 = MessageFactory.CreateErrorMessage("Application name cannot be null, an empty string or a string containing nothing but white space characters.");
+
+        // Note: Message identifier 16 is free.
 
         /// <summary>
         /// At least one error occurred when the library '{0}' was closed. All resources and services of this library
