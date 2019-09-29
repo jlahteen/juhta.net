@@ -115,6 +115,127 @@ namespace Juhta.Net.Startup.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void CreateInstance_DoubleCreateInstanceCall_ShouldThrowInvalidOperationException()
+        {
+            try
+            {
+                Application.CreateInstance();
+
+                Application.CreateInstance();
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("[Juhta.Net.Common.Error100014] Only one instance of the singleton class 'Juhta.Net.Startup.Application'"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void CreateInstance_NewApplicationAfterCreateInstanceCall_ShouldThrowInvalidOperationException()
+        {
+            Application application;
+
+            try
+            {
+                Application.CreateInstance();
+
+                application = new Application();
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("[Juhta.Net.Common.Error100014] Only one instance of the singleton class 'Juhta.Net.Startup.Application'"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Ready_ReadyCallAfterReady_ShouldThrowInvalidOperationException()
+        {
+            try
+            {
+                Application.
+                    CreateInstance().
+                    Ready();
+
+                Application.Instance.Ready();
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error100006] Method 'Ready' of the class 'Juhta.Net.Startup.Application' cannot be executed"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Ready_SetNameCallAfterReady_ShouldThrowInvalidOperationException()
+        {
+            try
+            {
+                Application.
+                    CreateInstance().
+                    Ready();
+
+                Application.Instance.SetName("NewAppName");
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Common.Error100006] Method 'SetName' of the class 'Juhta.Net.Startup.Application' cannot be executed"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        public void Ready_ShouldReturn()
+        {
+            Application.
+                CreateInstance().
+                Ready();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SetName_InvalidName_ShouldReturn()
+        {
+            try
+            {
+                Application.
+                    CreateInstance().
+                    SetName(" ").
+                    Ready();
+            }
+
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message.StartsWith("[Juhta.Net.Startup.Error106015] Application name cannot be null, an empty string"));
+
+                throw;
+            }
+        }
+
+        [TestMethod]
+        public void SetName_ValidName_ShouldReturn()
+        {
+            Application.
+                CreateInstance().
+                SetName("MyLittleApp").
+                Ready();
+
+            Assert.AreEqual<string>("MyLittleApp", Application.Instance.Name);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(XmlException))]
         public void Start_BrokenConfig_ShouldThrowXmlException()
         {
