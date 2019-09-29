@@ -1,6 +1,6 @@
 
 //
-// Juhta.NET, Copyright (c) 2017-2018 Juha Lähteenmäki
+// Juhta.NET, Copyright (c) 2017-2019 Juha Lähteenmäki
 //
 // This source code may be used, modified and distributed under the terms of
 // the MIT license. Please refer to the LICENSE.txt file for details.
@@ -141,6 +141,15 @@ namespace Juhta.Net.Startup
         }
 
         /// <summary>
+        /// Creates an instance of the singleton <see cref="Application"/> class.
+        /// </summary>
+        /// <returns>Returns the created instance of <see cref="Application"/>.</returns>
+        public static Application CreateInstance()
+        {
+            return(new Application());
+        }
+
+        /// <summary>
         /// Creates an instance of <see cref="DynamicLibraryContext{TDynamicLibrary, TLibraryState}"/> corresponding to
         /// specified dynamic library type and library state type.
         /// </summary>
@@ -152,6 +161,44 @@ namespace Juhta.Net.Startup
             where TLibraryState : ILibraryState
         {
             return(m_libraryManager.GetDynamicLibraryContext<TDynamicLibrary, TLibraryState>());
+        }
+
+        /// <summary>
+        /// Sets the state of the application as <see cref="State.Initialized"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method is used for marking the application 'ready' after calling one or more initialization
+        /// methods typically with method chaining.</para>
+        /// <para>This method is not allowed if the application has already been initialized.</para>
+        /// </remarks>
+        public void Ready()
+        {
+            // Check the state of the application
+            if (m_state > State.Initializing)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(nameof(Ready), typeof(Application)));
+
+            m_state = State.Initialized;
+        }
+
+        /// <summary>
+        /// Sets the name of the application.
+        /// </summary>
+        /// <param name="name">Specifies an application name.</param>
+        /// <returns>Returns the current <see cref="Application"/> instance allowing startups with method chaining.</returns>
+        /// <remarks>
+        /// <para>The new name always replaces any previously set name.</para>
+        /// <para>This method is not allowed if the application has already been initialized.</para>
+        /// </remarks>
+        public Application SetName(string name)
+        {
+            SetStateInitializing(nameof(SetName));
+
+            if (String.IsNullOrWhiteSpace(name))
+                throw new ArgumentException(LibraryMessages.Error015.GetMessage());
+
+            m_name = name.Trim();
+
+            return(this);
         }
 
         /// <summary>
@@ -356,6 +403,20 @@ namespace Juhta.Net.Startup
             return(config);
         }
 
+        /// <summary>
+        /// Sets the state of the application as <see cref="State.Initializing"/>.
+        /// </summary>
+        /// <param name="callingMethod">Specifies the name of a calling method.</param>
+        /// <remarks>If the current state of the application is greater than <see cref="State.Initializing"/>, an
+        /// <see cref="InvalidOperationException"/> will be thrown.</remarks>
+        private void SetStateInitializing(string callingMethod)
+        {
+            if (m_state > State.Initializing)
+                throw new InvalidOperationException(CommonMessages.Error006.FormatMessage(callingMethod, typeof(Application)));
+
+            m_state = State.Initializing;
+        }
+
         #endregion
 
         #region Private Types
@@ -369,6 +430,11 @@ namespace Juhta.Net.Startup
             /// The application is uninitialized.
             /// </summary>
             Uninitialized,
+
+            /// <summary>
+            /// The application is currently being initialized (typically with method chaining).
+            /// </summary>
+            Initializing,
 
             /// <summary>
             /// The application is only partly initialized, that is, the initialization has not been completed due to

@@ -46,6 +46,12 @@
             Closes the possibly created singleton <see cref="T:Juhta.Net.Startup.Application"/> instance.
             </summary>
         </member>
+        <member name="M:Juhta.Net.Startup.Application.CreateInstance">
+            <summary>
+            Creates an instance of the singleton <see cref="T:Juhta.Net.Startup.Application"/> class.
+            </summary>
+            <returns>Returns the created instance of <see cref="T:Juhta.Net.Startup.Application"/>.</returns>
+        </member>
         <member name="M:Juhta.Net.Startup.Application.GetDynamicLibraryContext``2">
             <summary>
             Creates an instance of <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> corresponding to
@@ -54,6 +60,27 @@
             <typeparam name="TDynamicLibrary">Specifies a dynamic library type.</typeparam>
             <typeparam name="TLibraryState">Specifies a library state type.</typeparam>
             <returns>Returns the created <see cref="T:Juhta.Net.Startup.DynamicLibraryContext`2"/> instance.</returns>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.Ready">
+            <summary>
+            Sets the state of the application as <see cref="F:Juhta.Net.Startup.Application.State.Initialized"/>.
+            </summary>
+            <remarks>
+            <para>This method is used for marking the application 'ready' after calling one or more initialization
+            methods typically with method chaining.</para>
+            <para>This method is not allowed if the application has already been initialized.</para>
+            </remarks>
+        </member>
+        <member name="M:Juhta.Net.Startup.Application.SetName(System.String)">
+            <summary>
+            Sets the name of the application.
+            </summary>
+            <param name="name">Specifies an application name.</param>
+            <returns>Returns the current <see cref="T:Juhta.Net.Startup.Application"/> instance allowing startups with method chaining.</returns>
+            <remarks>
+            <para>The new name always replaces any previously set name.</para>
+            <para>This method is not allowed if the application has already been initialized.</para>
+            </remarks>
         </member>
         <member name="M:Juhta.Net.Startup.Application.Start">
             <summary>
@@ -127,6 +154,14 @@
             <returns>Returns an <see cref="T:System.Xml.XmlDocument"/> object containing the configuration. If there is no
             configuration file, the return value is null.</returns>
         </member>
+        <member name="M:Juhta.Net.Startup.Application.SetStateInitializing(System.String)">
+            <summary>
+            Sets the state of the application as <see cref="F:Juhta.Net.Startup.Application.State.Initializing"/>.
+            </summary>
+            <param name="callingMethod">Specifies the name of a calling method.</param>
+            <remarks>If the current state of the application is greater than <see cref="F:Juhta.Net.Startup.Application.State.Initializing"/>, an
+            <see cref="T:System.InvalidOperationException"/> will be thrown.</remarks>
+        </member>
         <member name="T:Juhta.Net.Startup.Application.State">
             <summary>
             Defines an enumeration for the states of the application.
@@ -135,6 +170,11 @@
         <member name="F:Juhta.Net.Startup.Application.State.Uninitialized">
             <summary>
             The application is uninitialized.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.Application.State.Initializing">
+            <summary>
+            The application is currently being initialized (typically with method chaining).
             </summary>
         </member>
         <member name="F:Juhta.Net.Startup.Application.State.PartlyInitialized">
@@ -755,6 +795,11 @@
         <member name="F:Juhta.Net.Startup.LibraryMessages.Error014">
             <summary>
             Configuration file name cannot be null for the configurable library '{0}'.
+            </summary>
+        </member>
+        <member name="F:Juhta.Net.Startup.LibraryMessages.Error015">
+            <summary>
+            Application name cannot be null, an empty string or a string containing nothing but white space characters.
             </summary>
         </member>
         <member name="F:Juhta.Net.Startup.LibraryMessages.Warning017">
